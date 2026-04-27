@@ -1,6 +1,6 @@
 # BOOK_STRUCTURE
 
-> 이 문서는 `Hermes Agent 업무 자동화: AI 팀 만들기`의 전체 책 설계 문서다.  
+> 이 문서는 `에르메스 에이전트(Hermes Agent) 업무 자동화: 나만의 AI 팀 만들기`의 전체 책 설계 문서다.  
 > GitHub repo를 원본으로 두고, WikiDocs와 전자책/PDF로 확장할 때 흔들리지 않기 위한 기준으로 사용한다.
 
 ## 1. 책의 한 문장 약속
