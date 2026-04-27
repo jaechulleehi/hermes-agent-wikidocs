@@ -242,5 +242,4 @@
 ## 시리즈 이동
 
 - [← 이전 글](07-why-we-write-the-wiki-first.md)
-- [구축 과정 허브로 돌아가기](/build-journey/)
-- [다음 글 →](09-hermes-is-an-operating-system-not-just-a-chatbot.md)
+- [다음 글 → 이미지형 에이전트로 WikiDocs 본문 이미지를 만드는 법](28-how-image-agent-creates-wikidocs-visuals.md)

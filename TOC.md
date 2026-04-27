@@ -31,6 +31,7 @@
   * [06-1. Obsidian LLM Wiki를 실제 운영에 어떻게 활용할 것인가](pages/11-how-to-use-obsidian-llm-wiki-in-real-operations.md)
   * [06-2. 왜 우리는 위키를 먼저 쓰고 블로그와 강의를 나중에 뽑을까](pages/07-why-we-write-the-wiki-first.md)
   * [06-3. 좋은 조사 결과가 자동으로 좋은 블로그가 되지 않는 이유](pages/08-why-good-research-does-not-automatically-become-a-good-blog.md)
+  * [06-4. 이미지형 에이전트로 WikiDocs 본문 이미지를 만드는 법](pages/28-how-image-agent-creates-wikidocs-visuals.md)
 * [07. 운영 FAQ, 실패 패턴, 멀티봇 규칙](pages/07-chapter-7.md)
   * [07-1. 에르메스 운영에서 제일 자주 나오는 질문들](pages/14-most-common-hermes-ops-questions-and-how-to-think.md)
   * [07-2. 멀티봇 스레드는 왜 쉽게 시끄러워질까](pages/15-why-multibot-threads-get-noisy.md)
