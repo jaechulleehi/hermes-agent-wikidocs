@@ -1,9 +1,9 @@
 # 목차
 
-* [01. 하비와 소환수들로 만드는 AI 개인비서 워크플로우](pages/01-chapter-1.md)
+* [01. 에르메스 에이전트 운영 시스템과 AI 업무 자동화](pages/01-chapter-1.md)
   * [01-1. 왜 우리는 OpenClaw에서 Hermes로 넘어왔나](pages/01-why-we-moved-from-openclaw-to-hermes.md)
   * [01-2. 에르메스는 단순 챗봇이 아니라 운영 시스템이다](pages/09-hermes-is-an-operating-system-not-just-a-chatbot.md)
-* [02. 하비 메인 창구와 소환수 역할 분리](pages/02-chapter-2.md)
+* [02. 하비 메인 창구와 역할형 에이전트 분리](pages/02-chapter-2.md)
   * [02-1. 왜 우리는 하비를 메인 창구로 두었나](pages/02-why-harvey-is-the-front-door.md)
   * [02-2. 하비가 언제 직접 처리하고 언제 위임해야 할까](pages/18-when-harvey-should-handle-directly-vs-delegate.md)
   * [02-3. 하비 메인 창구 구조는 왜 강력하고 어디서 병목이 생길까](pages/22-why-harvey-main-window-is-powerful-and-where-it-bottlenecks.md)
