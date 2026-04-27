@@ -74,7 +74,7 @@
 | Working with Skills | 5장 | 재사용 절차 관리 | 스킬을 만들지 cron/자동화로 만들지 판단하는 기준 | 스킬 판단표 보강 |
 | Messaging Platforms | 2장/7장 | Telegram/Discord 등 메시징 연결 | 메인 창구, delivery target, 멀티봇 호출 규칙 | 메시징 운영 페이지 필요 |
 | Memory | 4장 | 지속 기억 | session/memory/skill/wiki/source of truth의 경계 | 기억 경계 페이지 보강 |
-| Migrate from OpenClaw | 1장/8장 | OpenClaw에서 Hermes로 전환 | 왜 옮겼고 어떻게 이사·검증·복구했는지 | 마이그레이션 체크리스트 보강 |
+| Migrate from OpenClaw | 1장/8장 | OpenClaw에서 Hermes로 전환 | 왜 옮겼고 어떻게 이사/검증/복구했는지 | 마이그레이션 체크리스트 보강 |
 | Tips & Best Practices | 전 장 | 운영 팁 | 좋은 프롬프트보다 좋은 운영 구조가 먼저라는 기준 | 각 장 FAQ/체크리스트에 분산 |
 | Team Telegram Assistant | 2장/7장/9장 | 팀용 메신저 assistant | 개인 AI 비서가 팀 채널로 확장될 때의 권한/호출 규칙 | 조직 도입 장 보강 |
 | Use Voice Mode with Hermes | 2장/9장 | 음성 인터페이스 | 메인 창구가 텍스트 밖으로 확장될 때의 기준 | 후순위 |

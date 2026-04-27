@@ -82,4 +82,4 @@ Hermes Agent의 delegation은 이 역할 분리를 실제 작업 흐름으로 �
 
 다음 글에서는 이 책에 등장하는 AI 팀 구성과 친구 이름을 먼저 정리한다.
 
-[다음 글: 하비·방울이·뽀동이는 어떻게 읽어야 할까](00-agent-team-reading-guide.md)
+[다음 글: 하비/방울이/뽀동이는 어떻게 읽어야 할까](00-agent-team-reading-guide.md)

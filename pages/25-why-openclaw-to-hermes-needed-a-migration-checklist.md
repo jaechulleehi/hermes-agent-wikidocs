@@ -5,7 +5,7 @@
 
 ## TL;DR
 
-OpenClaw에서 Hermes로의 전환은 이름만 바꾸는 작업이 아니었습니다. 새 시스템을 켜는 동시에, old runtime·profile 경계·문서 기준점·LaunchAgent 같은 자동 실행 흔적까지 함께 정리해야 하는 운영 마이그레이션이었습니다. 그래서 이 전환에는 막연한 감각이 아니라 체크리스트가 필요했습니다.
+OpenClaw에서 Hermes로의 전환은 이름만 바꾸는 작업이 아니었습니다. 새 시스템을 켜는 동시에, old runtime/profile 경계/문서 기준점/LaunchAgent 같은 자동 실행 흔적까지 함께 정리해야 하는 운영 마이그레이션이었습니다. 그래서 이 전환에는 막연한 감각이 아니라 체크리스트가 필요했습니다.
 
 ## 이 글의 답
 
@@ -66,7 +66,7 @@ OpenClaw에서 Hermes로 넘어올 때 체크리스트가 필요했던 이유는
 
 좋은 전환의 기준은 생각보다 선명합니다.
 
-current active docs와 메인 창구를 Hermes 기준으로 고정하고, 유산은 archive/history/skill 층으로 적절히 밀어내고, 문서·프로세스·autostart를 같이 봐야 합니다.
+current active docs와 메인 창구를 Hermes 기준으로 고정하고, 유산은 archive/history/skill 층으로 적절히 밀어내고, 문서/프로세스/autostart를 같이 봐야 합니다.
 
 그리고 실제 OpenClaw 프로세스가 사라졌는지, Hermes만 응답하는지, 기대 profile이 맞는지까지 검증해야 합니다.
 
