@@ -1,4 +1,4 @@
-## 에르메스는 단순 챗봇이 아니라 운영 시스템이다
+## Hermes Agent는 왜 운영 시스템인가
 
 > 이 글은 **에르메스 에이전트(Hermes Agent)**를 실제 업무 시스템으로 운영하며 정리한 실전 기록입니다.
 
@@ -236,4 +236,6 @@ config, state DB, session history, installed skills가 실제로 달라질 수 �
 
 ## 다음 글
 
-이제 Hermes를 운영 시스템으로 보는 관점은 잡혔다. 다음 글에서는 왜 우리가 OpenClaw에서 Hermes로 넘어왔는지, 그리고 그 전환이 단순 리브랜딩이 아니라 운영 기준점 재정리였는지 살펴본다.
+이제 Hermes를 운영 시스템으로 보는 관점은 잡혔다. 다음 글에서는 OpenClaw에서 Hermes로 넘어온 이유와, 그 전환이 단순 리브랜딩이 아니라 운영 기준점 재정리였던 이유를 다룬다.
+
+[다음 글: OpenClaw에서 Hermes로 왜 넘어왔나](01-why-we-moved-from-openclaw-to-hermes.md)

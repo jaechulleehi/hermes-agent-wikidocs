@@ -1,11 +1,11 @@
 # 목차
 
-* [01. 왜 챗봇이 아니라 AI 팀인가](pages/01-chapter-1.md)
-  * [01-1. AI 챗봇과 AI 개인비서는 무엇이 다를까](pages/00-ai-chatbot-vs-ai-personal-assistant.md)
-  * [01-2. 이 책에서 말하는 나만의 AI 팀이란 무엇인가](pages/00-what-is-my-ai-team.md)
-  * [01-3. 이 책의 AI 팀 구성과 읽는 법](pages/00-agent-team-reading-guide.md)
-  * [01-4. 에르메스는 단순 챗봇이 아니라 운영 시스템이다](pages/09-hermes-is-an-operating-system-not-just-a-chatbot.md)
-  * [01-5. 왜 우리는 OpenClaw에서 Hermes로 넘어왔나](pages/01-why-we-moved-from-openclaw-to-hermes.md)
+* [01. 왜 AI 챗봇이 아니라 AI 팀인가](pages/01-chapter-1.md)
+  * [01-1. AI 챗봇과 AI 개인비서는 어떻게 다를까](pages/00-ai-chatbot-vs-ai-personal-assistant.md)
+  * [01-2. 나만의 AI 팀은 어떻게 구성할까](pages/00-what-is-my-ai-team.md)
+  * [01-3. 하비·방울이·뽀동이는 어떻게 읽어야 할까](pages/00-agent-team-reading-guide.md)
+  * [01-4. Hermes Agent는 왜 운영 시스템인가](pages/09-hermes-is-an-operating-system-not-just-a-chatbot.md)
+  * [01-5. OpenClaw에서 Hermes로 왜 넘어왔나](pages/01-why-we-moved-from-openclaw-to-hermes.md)
 * [02. AI 개인비서 메인 창구 만들기](pages/02-chapter-2.md)
   * [02-1. 왜 AI 개인비서에는 메인 창구가 필요할까](pages/02-why-harvey-is-the-front-door.md)
   * [02-2. AI 개인비서는 언제 직접 처리하고 언제 위임해야 할까](pages/18-when-harvey-should-handle-directly-vs-delegate.md)
