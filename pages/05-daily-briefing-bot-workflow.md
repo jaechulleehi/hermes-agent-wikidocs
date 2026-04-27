@@ -1,82 +1,55 @@
+![Daily Briefing Bot이 cron fresh session delivery로 이어지는 자동화 패턴](../assets/how-image-agent-creates-wikidocs-visuals/ch5-4-daily-briefing-bot-pattern-codex.png)
+
 ## Daily Briefing Bot은 어떤 업무 자동화 패턴일까
 
-Daily Briefing Bot은 [Hermes Agent](https://wikidocs.net/346055)에서 cron 기반 업무 자동화를 이해하기 좋은 예시다. 정해진 시간에 fresh session을 열고, 필요한 정보를 모으고, 요약한 뒤, Slack이나 다른 채널로 전달한다. 겉으로는 “아침 브리핑 봇”이지만 실제로는 반복 자동화의 기본형이다.
+Daily Briefing Bot은 단순한 뉴스 요약 예제가 아니다. Hermes Agent에서 반복 업무를 자동화할 때 필요한 기본 패턴을 보여준다. 정해진 시간에 fresh session이 열리고, 필요한 자료를 찾고, 판단 기준에 맞게 요약하고, 정해진 대상에게 전달한다.
 
-이 패턴을 이해하면 뉴스 요약, 경쟁사 모니터링, [WikiDocs](https://wikidocs.net/345908) 업데이트 후보 수집, OpenAI 사용량 점검, 일정 브리핑 같은 작업도 같은 구조로 설계할 수 있다.
+이 패턴은 HaloX 운영에서도 그대로 쓰인다. 구체적인 흐름은 [크론 조사에서 WikiDocs 발행까지 이어지는 AI 업무 자동화 케이스](https://wikidocs.net/345992)에서 더 자세히 볼 수 있다. 방울이의 매일 아침 SEO/GEO 모니터링은 “새로운 변화가 있는지 찾고, 강한 신호만 골라, 필요한 곳으로 넘기는” 자동화다. 로이드가 `넘겨`라고 판단하면 뽀동이/하비/하망이까지 이어지는 콘텐츠 제작 흐름이 시작된다.
 
 ## 이 예제가 중요한 이유
 
-Daily Briefing Bot은 여러 Hermes Agent 기능이 한 번에 만나는 지점이다.
+| 구성 요소 | Daily Briefing Bot에서의 의미 | 실제 운영 확장 |
+|---|---|---|
+| cron | 정해진 시간 실행 | 매일 모니터링/주간 리뷰/정기 요약 |
+| fresh session | 이전 대화에 의존하지 않음 | prompt 안에 필요한 맥락 포함 |
+| search/tool | 새 정보 수집 | 웹, Slack, Obsidian, GitHub 확인 |
+| summarization | 읽을 수 있게 압축 | 보고서/브리프/콘텐츠 초안 |
+| delivery | 결과 전달 | Slack thread, home channel, local output |
 
-| 단계 | 의미 |
-|---|---|
-| cron | 정해진 시간에 작업을 실행한다 |
-| fresh session | 이전 대화에 의존하지 않고 새로 시작한다 |
-| self-contained prompt | 작업 지시가 그 자체로 완결되어야 한다 |
-| 도구 호출 | 웹 검색, Slack, 파일, WikiDocs 같은 도구를 쓴다 |
-| 요약/정리 | 수집한 정보를 읽을 수 있는 결과로 바꾼다 |
-| delivery | 결과를 Slack, local, origin 등으로 보낸다 |
-| 검증 | 실패했을 때 로그와 설정을 확인한다 |
+## 실제 운영 장면: 크론 조사에서 콘텐츠 제작으로
 
-이 구조는 Hermes Agent 업무 자동화의 축소판이다.
+방울이의 정기 조사는 매일 같은 질문을 반복하지 않는다. watchlist와 기존 인덱스를 보고, 전일 기준 새로 생긴 변화 중 의미 있는 신호만 고른다. 제품 신호와 콘텐츠 신호도 분리한다. 이 분리는 단순한 보고 양식이 아니라 후속 실행을 바꾸는 기준이다.
+
+콘텐츠 신호가 강하면 뽀동이가 글 구조를 만들고, 하비가 최종 통합하며, 하망이가 이미지 제작 방향을 맡는다. 이 흐름은 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)과 연결된다. 자동화는 “요약 보내기”에서 끝나는 것이 아니라 다음 역할에게 넘길 수 있어야 한다.
 
 ## fresh session이 핵심이다
 
-cron 작업은 보통 현재 대화 맥락을 그대로 이어받지 않는다. 그래서 prompt가 스스로 완결되어야 한다. “아까 말한 기준대로 해줘” 같은 지시는 cron에 맞지 않는다.
+cron job은 사람이 옆에서 설명해 주지 않는다. 그래서 prompt는 self-contained해야 한다. 어떤 파일을 먼저 볼지, 어떤 기준으로 신호를 고를지, 결과를 어디로 보낼지, 민감정보를 어떻게 다룰지까지 포함해야 한다.
 
-좋은 cron prompt는 아래를 포함한다.
-
-- 무엇을 수집할지
-- 어떤 출처를 볼지
-- 어떤 형식으로 정리할지
-- 어디로 보낼지
-- 실패하면 무엇을 남길지
-- 민감정보를 어떻게 처리할지
-
-이 기준이 없으면 자동화는 실행은 되지만 결과 품질이 흔들린다.
-
-## 실제 운영 예시
-
-로이드의 운영에 맞추면 Daily Briefing Bot 패턴은 이렇게 바꿀 수 있다.
-
-```text
-매일 오전, Hermes Agent 관련 공식 문서와 주요 업데이트를 확인한다.
-방울이식으로 근거를 모으고,
-뽀동이식으로 WikiDocs 반영 후보를 정리한다.
-결과는 Slack에 짧게 보내고,
-책에 반영할 항목은 SOURCE_MAP이나 CHANGELOG 후보로 남긴다.
-```
-
-여기서 중요한 것은 봇 이름이 아니다. cron, fresh [session](https://wikidocs.net/345899), 조사, 정리, 전달, 기록이 하나의 흐름으로 묶인다는 점이다.
+나쁜 cron prompt는 “오늘도 정리해줘”처럼 짧다. 좋은 cron prompt는 목적, 입력 출처, 제외 기준, 출력 형식, delivery target, 실패 시 보고 기준을 갖는다.
 
 ## 실패할 때 먼저 볼 것
 
-Daily Briefing Bot이 실패하면 아래 순서로 본다.
-
-1. cron schedule이 맞는지 확인한다.
-2. [gateway](https://wikidocs.net/345906)가 실행 중인지 확인한다.
-3. delivery target이 맞는지 확인한다.
-4. prompt가 self-contained인지 확인한다.
-5. 필요한 API key와 MCP 도구가 profile에 붙어 있는지 본다.
-6. 결과가 너무 길거나 형식이 깨지지 않았는지 본다.
-7. 실패 로그를 남기고 반복되는 문제는 skill이나 체크리스트로 옮긴다.
+1. schedule이 의도한 시간대와 맞는가?
+2. prompt가 fresh session에서도 이해될 만큼 충분한가?
+3. 필요한 도구와 credential이 현재 profile에서 접근 가능한가?
+4. gateway가 실행 중이고 delivery target이 맞는가?
+5. 결과가 없을 때도 운영 확인 메시지를 남기도록 되어 있는가?
 
 ## FAQ
 
 ### Daily Briefing Bot은 뉴스 요약에만 쓰나요?
 
-아니다. 정해진 시간에 정보를 모으고 정리해 전달하는 모든 작업에 쓸 수 있다. 사용량 점검, 콘텐츠 후보 수집, 일정 요약, 시장 모니터링도 같은 패턴이다.
+아니다. 모니터링, 제품 신호 분류, 콘텐츠 아이디어 수집, 주간 리뷰 같은 반복 업무의 기본 틀로 볼 수 있다.
 
 ### cron prompt는 왜 길어야 하나요?
 
-길어야 하는 것이 아니라 스스로 완결되어야 한다. 사람과 대화하듯 “그거 해줘”라고 쓰면 fresh session에서 기준을 잃는다.
+cron은 독립 실행된다. 현재 대화 맥락을 기대하면 실패한다. 필요한 기준은 prompt 안에 있어야 한다.
 
 ### 결과를 어디로 보내야 하나요?
 
-업무 흐름에 따라 다르다. 바로 봐야 하는 요약은 Slack, 나중에 쌓아둘 기록은 local 파일이나 WikiDocs 후보 문서가 맞다.
+작업 성격에 따라 다르다. 즉시 사람이 볼 것은 Slack, 장기 원장은 Obsidian/shared-memory, 테스트 결과는 local output이 맞을 수 있다.
 
 ## 다음 글
 
-다음 장에서는 이 자동화 결과를 WikiDocs, 블로그, 강의로 이어지는 콘텐츠 시스템으로 연결하는 방법을 다룬다.
-
-[다음 장: 위키, 블로그, 강의로 이어지는 콘텐츠 시스템](https://wikidocs.net/345911)
+다음은 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)으로 넘어가서 자동화 결과가 어떻게 공개 콘텐츠 자산으로 바뀌는지 본다.

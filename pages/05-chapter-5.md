@@ -1,41 +1,44 @@
+![5장 외부 도구 MCP 자동화 운영 구조](../assets/images/chapter-heroes/ch05-tools-mcp-automation-ops-codex.png)
+
 ## 5장. 외부 도구/MCP/자동화 운영
 
-[Hermes Agent](https://wikidocs.net/346055)가 AI 개인비서에서 업무 자동화 시스템으로 넘어가는 순간은 외부 도구를 붙일 때다. Google Workspace, Slack, WikiDocs, MCP, cron, gateway, skill이 연결되면 하비는 단순히 답변하는 창이 아니라 실제 업무 흐름을 움직이는 운영 창구가 된다.
+Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 도구와 연결되어 실제 업무를 움직일 때다. Google Workspace, MCP, skill, cron, gateway, Daily Briefing Bot은 모두 “기능 목록”이 아니라 업무 흐름을 이어주는 연결 장치다.
 
-하지만 도구가 많아질수록 문제도 늘어난다. 인증은 어디서 관리하는지, 상시 실행이 필요한지, skill로 남길지, cron으로 돌릴지, [gateway](https://wikidocs.net/345906)가 실제로 살아 있는지부터 나눠야 한다. 5장은 “붙일 수 있다”가 아니라 “운영 가능한 방식으로 붙인다”에 초점을 둔다.
+하지만 외부 도구는 붙였다고 끝나지 않는다. 계정이 맞는지, 권한 범위가 맞는지, gateway가 살아 있는지, cron prompt가 혼자 실행될 만큼 충분한지, 결과가 어디로 전달되는지까지 봐야 한다. 5장은 바로 이 운영 기준을 다룬다.
 
 ## 이 장에서 다루는 문제
 
-| 순서 | 글 | 핵심 질문 |
+| 기능 | 흔한 착각 | 실제 운영 기준 |
 |---|---|---|
-| 05-1 | Google Workspace와 MCP 연동은 왜 오래 걸릴까 | 외부 도구 연동에서 기능보다 먼저 봐야 할 운영 조건은 무엇인가 |
-| 05-2 | Hermes Agent 스킬은 언제 만들고 어떻게 관리할까 | 반복 절차는 언제 skill로 남기고 언제 그냥 실행할까 |
-| 05-3 | always-on gateway는 왜 자주 헷갈릴까 | 상시 실행 구조에서 실제로 살아 있는 프로세스를 어떻게 확인할까 |
-| 05-4 | Daily Briefing Bot은 어떤 업무 자동화 패턴일까 | cron, fresh session, 요약, 전달을 어떻게 하나의 패턴으로 볼까 |
+| MCP | 연결만 되면 자동화가 끝난다 | 어떤 업무 흐름에 붙을지 먼저 정한다 |
+| Google Workspace | API 인증만 되면 된다 | 계정/권한/삭제 위험/공유 범위를 분리한다 |
+| skill | 많이 만들수록 좋다 | 반복 절차와 검증 기준이 있을 때 만든다 |
+| gateway | status가 OK면 끝이다 | 메시징 delivery, cron 실행, 로그를 함께 본다 |
+| Daily Briefing Bot | 뉴스 요약 예제다 | fresh session 기반 자동화 패턴이다 |
 
-## 처음에 생기는 착각
+## 실제 운영 장면
 
-외부 도구 자동화는 “API가 있으면 된다”로 끝나지 않는다. 실제로는 인증, 권한, 실행 위치, 실패 시 알림, 민감정보 처리, 반복 검증이 더 큰 문제다.
+WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. GitHub가 source of truth였기 때문에 파일 수정 후 commit/push가 필요했고, WikiDocs는 공개 배포 채널로 동기화됐다. 본문 링크가 `.md`로 남아 WikiDocs에서 제대로 동작하지 않자, WikiDocs page ID를 확인해 공개 URL로 바꾸는 작업도 필요했다.
 
-MCP도 마찬가지다. MCP 서버가 붙었다고 해서 바로 업무 자동화가 안정되는 것은 아니다. 어떤 도구가 어떤 [profile](https://wikidocs.net/345899)에서 호출되는지, 어떤 정보가 memory에 남아야 하는지, 어떤 작업이 cron으로 돌아도 되는지 구분해야 한다.
+또 다른 장면은 콘텐츠 자동화다. 방울이의 크론 조사는 매일 신호를 찾고, 좋은 신호만 shared-memory와 Obsidian으로 이어진다. 로이드가 “넘겨”라고 판단하면 뽀동이가 본문 구조를 만들고, 하비가 최종 통합하며, 필요하면 하망이가 이미지를 만든다. 이것은 단일 기능이 아니라 [역할형 에이전트](https://wikidocs.net/345925)와 도구가 연결된 운영 흐름이다.
 
 ## 이 장에서 얻을 기준
 
-- 외부 도구는 연결 가능성보다 운영 리스크를 먼저 본다.
-- 반복 절차는 skill로 남기고, 시간 기반 반복 작업은 cron으로 돌린다.
-- 상시 응답이 필요하면 gateway 상태와 실제 프로세스를 함께 본다.
-- fresh session에서 도는 자동화는 prompt가 스스로 완결되어야 한다.
-- 민감정보, 토큰, 웹훅 URL은 문서와 요약에 원문으로 남기지 않는다.
-- Slack, [WikiDocs](https://wikidocs.net/345908), Google Workspace 같은 도구는 기능이 아니라 workflow connector로 본다.
+- MCP는 “도구 연결”이지 “운영 완성”이 아니다.
+- cron은 혼자 실행되는 fresh session이므로 prompt 안에 필요한 맥락이 있어야 한다.
+- skill은 반복 가능한 절차, 실패 패턴, 검증 방법이 생겼을 때 만든다.
+- gateway는 항상 켜져 있다는 느낌보다 실제 전달/로그/상태를 함께 봐야 한다.
+- 외부 도구 작업에는 삭제/공개/권한 변경 같은 위험 작업을 분리하는 승인 기준이 필요하다.
+
+이 기준은 [기억/컨텍스트/프로필 경계](https://wikidocs.net/345902)와 이어진다. 도구 자동화가 실패할 때도 많은 원인은 모델이 아니라 profile, 권한, 경로, source of truth 경계에 있다.
 
 ## 다음 장으로 가기 전 체크 질문
 
-지금 붙이려는 것은 한 번 실행할 도구인가, 반복할 절차인가, 정해진 시간에 돌아야 할 자동화인가, 상시 대기해야 할 gateway인가?
-
-이 구분이 잡히면 다음 장의 WikiDocs, 블로그, 강의 콘텐츠 시스템도 훨씬 안정적으로 이어진다.
+1. 이 일은 on-demand 도구 호출인가, cron 자동화인가?
+2. 반복 절차가 skill로 남길 만큼 안정됐는가?
+3. gateway가 살아 있는 것과 실제 메시지 delivery가 되는 것을 구분했는가?
+4. 권한 변경/삭제/외부 공개처럼 승인 필요한 작업을 분리했는가?
 
 ## 이어서 읽기
 
-- 외부 도구 연동의 첫 기준은 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)에서 확인한다.
-- 반복 절차와 자동화의 경계는 [Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](https://wikidocs.net/345904), [Daily Briefing Bot은 어떤 업무 자동화 패턴일까](https://wikidocs.net/345926)를 이어서 보면 좋다.
-- 실제 자동화가 콘텐츠 발행으로 이어지는 흐름은 [크론 조사에서 WikiDocs 발행까지 이어지는 AI 업무 자동화 케이스](https://wikidocs.net/345992)에서 확인할 수 있다.
+먼저 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)를 읽고, 이어서 [Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](https://wikidocs.net/345904)로 넘어가면 도구 연결과 절차 재사용의 차이가 보인다.
