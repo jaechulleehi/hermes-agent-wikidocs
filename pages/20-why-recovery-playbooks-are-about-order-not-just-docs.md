@@ -1,12 +1,14 @@
-# 복구 플레이북은 왜 문서보다 순서가 중요할까
+## 복구 플레이북은 왜 문서보다 순서가 중요할까
 
 > 이 글은 **에르메스 에이전트(Hermes Agent)**를 실제 업무 시스템으로 운영하며 정리한 실전 기록입니다.
 
 
 ## TL;DR
+
 복구 문서는 길수록 좋아 보일 수 있습니다. 체크리스트도 많고, 명령도 많고, 경우의 수도 많으니까요. 하지만 실제 복구 실패는 문서 부족보다 **순서를 잘못 잡아서** 생기는 경우가 훨씬 많습니다. status만 보고 재시작하거나, profile/runtime 경계를 확인하기 전에 전체를 다시 띄우거나, autostart 충돌을 나중에 보는 식이 대표적입니다. 그래서 좋은 복구 플레이북의 핵심은 정보량보다 **무엇을 어떤 순서로 볼 것인가**입니다.
 
 ## 이 글의 답
+
 답부터 말하면 이렇습니다.
 
 복구 플레이북이 문서보다 순서가 중요한 이유는,
@@ -24,9 +26,9 @@
 
 ![복구 플레이북은 왜 문서보다 순서가 중요할까](../assets/why-recovery-playbooks-are-about-order-not-just-docs/og-card-final.png)
 
----
 
 ## 왜 복구는 문서가 있어도 실패하나
+
 복구 문서가 없는 팀도 문제지만,
 문서가 있는데도 실패하는 팀도 많습니다.
 
@@ -41,9 +43,9 @@
 문제가 명령 부족이 아니라
 **진단 순서 오판**인 경우가 많습니다.
 
----
 
 ## 왜 process를 먼저 봐야 하나
+
 여기서 첫 번째 핵심이 나옵니다.
 복구는 늘 “실제로 무엇이 살아 있는가”부터 시작해야 합니다.
 
@@ -62,9 +64,9 @@ status는 참고값일 뿐이고,
 
 ![status보다 process를 먼저 봐야 하는 이유](../assets/why-recovery-playbooks-are-about-order-not-just-docs/article-figure-01-process-first.png)
 
----
 
 ## 왜 profile/runtime 경계를 먼저 확인해야 하나
+
 두 번째 핵심은 경계입니다.
 게이트웨이 복구에서 자주 생기는 오판은,
 현재 끊긴 profile과 다른 살아 있는 profile을 구분하지 못하는 데서 나옵니다.
@@ -81,9 +83,9 @@ status는 참고값일 뿐이고,
 이 구분 없이 재시작만 하면,
 복구가 아니라 혼선 증폭이 됩니다.
 
----
 
 ## 왜 복구는 최소 침습이 중요한가
+
 세 번째 핵심은 범위입니다.
 복구가 잘 안 되는 팀일수록 자꾸 전체 재시작에 기대기 쉽습니다.
 
@@ -99,27 +101,33 @@ status는 참고값일 뿐이고,
 
 ![좋은 복구는 최소 침습이다](../assets/why-recovery-playbooks-are-about-order-not-just-docs/article-figure-02-minimal-recovery-order.png)
 
----
 
 ## 그럼 좋은 복구 플레이북은 어떻게 생겨야 하나
+
 우리 기준에선 보통 이 순서가 핵심입니다.
 
 ### 1. 증상 분류
+
 응답 없음 / 이상 응답 / 특정 profile 문제 / status-process 불일치
 
 ### 2. 실제 프로세스 확인
+
 gateway process, PID, 실행 profile, 중복 runtime 여부
 
 ### 3. profile / runtime 경계 확인
+
 어느 profile이 실제 죽었는지 구분
 
 ### 4. 최소 복구 시도
+
 끊긴 profile만 살리는 쪽 우선
 
 ### 5. autostart / legacy 충돌 점검
+
 다시 old runtime을 띄우는 요인 확인
 
 ### 6. 복구 후 검증
+
 실제 응답, 기대 profile, 중복 runtime 여부 확인
 
 핵심은,
@@ -128,42 +136,49 @@ gateway process, PID, 실행 profile, 중복 runtime 여부
 
 ![좋은 플레이북은 순서를 강제한다](../assets/why-recovery-playbooks-are-about-order-not-just-docs/article-figure-03-order-beats-volume.png)
 
----
 
 ## 우리가 실제로 세운 운영 원칙
+
 ### 원칙 1. status보다 process를 먼저 본다
+
 ### 원칙 2. profile과 runtime을 같이 본다
+
 ### 원칙 3. 전체 재시작은 마지막 수단
+
 ### 원칙 4. autostart/legacy 충돌을 반드시 본다
+
 ### 원칙 5. 복구는 항상 검증까지 포함한다
 
----
 
 ## 결론
+
 복구 플레이북이 문서보다 순서가 중요한 이유는,
 문제 성질을 잘못 보면 같은 명령도 오히려 혼선을 키우기 때문입니다.
 
 핵심은 이겁니다.
 **좋은 복구는 많은 명령을 아는 것이 아니라, 무엇을 어떤 순서로 확인하고 어디를 최소 침습적으로 살릴지 아는 것이다.**
 
----
 
 ## FAQ
+
 ### 1. 왜 status만 보고 복구하면 안 되나요?
+
 status는 참고값일 뿐 실제 process와 어긋날 수 있기 때문입니다.
 
 ### 2. 전체 재시작이 왜 위험한가요?
+
 살아 있는 다른 profile까지 흔들고 중복 runtime을 만들 수 있기 때문입니다.
 
 ### 3. 가장 먼저 바꿔야 할 습관은 무엇인가요?
+
 재시작 전에 실제 process와 profile을 먼저 보는 습관입니다.
 
 ## 내부 링크 포인트
+
 - 원천 기준은 Topic - 게이트웨이 끊김 복구 플레이북으로 연결한다.
 - always-on 혼선은 Topic - always on gateway 운영에서 흔히 생기는 오해로 연결한다.
 - profile 경계는 Topic - profile 경계와 state db를 실무에서 어떻게 봐야 하는가로 연결한다.
 
----
 
 ## 시리즈 이동
 

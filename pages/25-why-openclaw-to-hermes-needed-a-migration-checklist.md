@@ -1,12 +1,14 @@
-# OpenClaw에서 Hermes로 넘어올 때 체크리스트는 왜 필요했을까
+## OpenClaw에서 Hermes로 넘어올 때 체크리스트는 왜 필요했을까
 
 > 이 글은 **에르메스 에이전트(Hermes Agent)**를 실제 업무 시스템으로 운영하며 정리한 실전 기록입니다.
 
 
 ## TL;DR
+
 OpenClaw에서 Hermes로의 전환은 이름만 바꾸는 작업이 아니었습니다. 새 시스템을 켜는 동시에, old runtime·profile 경계·문서 기준점·LaunchAgent 같은 자동 실행 흔적까지 함께 정리해야 하는 운영 마이그레이션이었습니다. 그래서 이 전환에는 막연한 감각이 아니라 체크리스트가 필요했습니다.
 
 ## 이 글의 답
+
 답부터 말하면 이렇습니다.
 OpenClaw에서 Hermes로 넘어올 때 체크리스트가 필요했던 이유는, 전환의 핵심이 새 시스템 켜기보다 옛 기준과 옛 흔적을 어디까지 정리할지 결정하는 일에 있었기 때문입니다.
 핵심은 다섯 가지입니다.
@@ -18,7 +20,6 @@ OpenClaw에서 Hermes로 넘어올 때 체크리스트가 필요했던 이유는
 
 ![OpenClaw에서 Hermes로 넘어올 때 체크리스트는 왜 필요했을까](../assets/why-openclaw-to-hermes-needed-a-migration-checklist/og-card-final.png)
 
----
 
 ## 왜 시스템 전환은 자꾸 감으로 처리되나
 
@@ -34,7 +35,6 @@ OpenClaw에서 Hermes로 넘어올 때 체크리스트가 필요했던 이유는
 
 ![시스템 전환이 감으로 처리되면 생기는 문제](../assets/why-openclaw-to-hermes-needed-a-migration-checklist/article-figure-01-why-openclaw-to-hermes-needed-a-migration-checklist.png)
 
----
 
 ## 체크리스트가 꼭 필요했던 이유
 
@@ -48,7 +48,6 @@ OpenClaw에서 Hermes로 넘어올 때 체크리스트가 필요했던 이유는
 
 ![전환 체크리스트가 다루는 층](../assets/why-openclaw-to-hermes-needed-a-migration-checklist/article-figure-02-why-openclaw-to-hermes-needed-a-migration-checklist.png)
 
----
 
 ## 가장 흔한 실패는 무엇이었나
 
@@ -62,7 +61,6 @@ OpenClaw에서 Hermes로 넘어올 때 체크리스트가 필요했던 이유는
 
 ![OpenClaw → Hermes 전환에서 자주 나온 실패](../assets/why-openclaw-to-hermes-needed-a-migration-checklist/article-figure-03-why-openclaw-to-hermes-needed-a-migration-checklist.png)
 
----
 
 ## 그럼 좋은 전환은 어떻게 해야 하나
 
@@ -76,34 +74,42 @@ current active docs와 메인 창구를 Hermes 기준으로 고정하고, 유산
 
 그래서 이 전환에는 체크리스트가 필요했습니다.
 
----
 
 ## 우리가 실제로 세운 운영 원칙
+
 ### 원칙 1. 현재 운영 기준점은 하나로 세운다.
+
 ### 원칙 2. 유산은 지우기보다 적절한 층으로 옮긴다.
+
 ### 원칙 3. 문서와 프로세스와 autostart를 같이 본다.
+
 ### 원칙 4. profile과 state.db 차이를 반드시 설명 가능해야 한다.
+
 ### 원칙 5. 전환은 실행 후 검증까지 끝내야 한다.
 
----
 
 ## 결론
+
 OpenClaw에서 Hermes로 넘어올 때 체크리스트가 필요했던 이유는, 전환의 핵심이 새 시스템 켜기보다 옛 기준과 옛 흔적을 어디까지 정리할지 결정하는 일에 있었기 때문입니다.
 
 핵심은 이겁니다.
 **현재 운영 기준점은 하나로 세운다.**
 
----
 
 ## FAQ
+
 ### 1. 왜 문서만 Hermes로 바꾸면 안 되나요?
+
 실제 runtime이나 LaunchAgent가 OpenClaw 기준으로 남아 있으면 사용자가 보는 체감과 문서 기준이 어긋나기 때문입니다.
+
 ### 2. 유산은 다 지우는 게 맞나요?
+
 반드시 그렇지는 않습니다. archive/history/skill 층으로 적절히 밀어내되, active 운영 문서에서는 current 기준이 먼저 보여야 합니다.
+
 ### 3. 체크리스트에서 가장 먼저 봐야 할 것은 무엇인가요?
+
 지금 실제로 무엇이 돌고 있는지, 어느 profile이 응답 중인지부터 확인하는 것입니다.
 
----
 
 ## 시리즈 이동
 

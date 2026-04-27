@@ -1,12 +1,14 @@
-# 뽀동이 정리형 에이전트는 어디서 강해지고 어디서 흔들릴까
+## 뽀동이 정리형 에이전트는 어디서 강해지고 어디서 흔들릴까
 
 > 이 글은 **에르메스 에이전트(Hermes Agent)**를 실제 업무 시스템으로 운영하며 정리한 실전 기록입니다.
 
 
 ## TL;DR
+
 뽀동이는 글쓰기 담당이 아니라, 흩어진 재료를 전달 가능한 결과물로 바꾸는 정리형 에이전트입니다. 문서화, 초안화, 발표용 구조화, 보고용 재구성처럼 이미 있는 것을 읽히게 바꾸는 일에 강합니다. 반대로 재료 없이 완성본을 기대하거나, 조사까지 같이 맡기면 겉보기는 그럴듯하지만 속이 약한 결과가 나오기 쉽습니다.
 
 ## 이 글의 답
+
 답부터 말하면 이렇습니다.
 뽀동이는 새 사실을 발굴하는 역할보다, 이미 확보한 재료를 목적에 맞는 구조로 바꾸는 역할일 때 가장 강합니다.
 핵심은 다섯 가지입니다.
@@ -18,7 +20,6 @@
 
 ![뽀동이 정리형 에이전트는 어디서 강해지고 어디서 흔들릴까](../assets/where-ppodongi-organization-agent-is-strong-and-where-it-wobbles/og-card-final.png)
 
----
 
 ## 뽀동이는 무엇을 잘하나
 
@@ -32,7 +33,6 @@
 
 ![뽀동이가 강한 구간](../assets/where-ppodongi-organization-agent-is-strong-and-where-it-wobbles/article-figure-01-where-ppodongi-organization-agent-is-strong-and-where-it-wobbles.png)
 
----
 
 ## 어디서 흔들리나
 
@@ -46,7 +46,6 @@
 
 ![뽀동이가 흔들리는 패턴](../assets/where-ppodongi-organization-agent-is-strong-and-where-it-wobbles/article-figure-02-where-ppodongi-organization-agent-is-strong-and-where-it-wobbles.png)
 
----
 
 ## 어떻게 요청해야 품질이 오르나
 
@@ -60,7 +59,6 @@
 
 ![뽀동이에게 잘 요청하는 법](../assets/where-ppodongi-organization-agent-is-strong-and-where-it-wobbles/article-figure-03-where-ppodongi-organization-agent-is-strong-and-where-it-wobbles.png)
 
----
 
 ## 좋은 흐름은 어떻게 생기나
 
@@ -72,34 +70,42 @@
 
 정리가 강한 에이전트를 따로 두면 정보는 같은데도 이해도와 실행도가 달라집니다.
 
----
 
 ## 우리가 실제로 세운 운영 원칙
+
 ### 원칙 1. 뽀동이는 재료를 받아 구조로 바꾼다.
+
 ### 원칙 2. 목적 없는 정리는 하지 않는다.
+
 ### 원칙 3. 입력이 약하면 출력도 약해진다.
+
 ### 원칙 4. 정리와 판단은 다르다.
+
 ### 원칙 5. 최종 전달 책임은 하비가 진다.
 
----
 
 ## 결론
+
 뽀동이는 새 사실을 발굴하는 역할보다, 이미 확보한 재료를 목적에 맞는 구조로 바꾸는 역할일 때 가장 강합니다.
 
 핵심은 이겁니다.
 **뽀동이는 재료를 받아 구조로 바꾼다.**
 
----
 
 ## FAQ
+
 ### 1. 뽀동이에게 바로 블로그 완성본을 맡겨도 되나요?
+
 재료와 목적이 충분히 주어졌다면 가능하지만, 조사까지 비어 있는 상태라면 그럴듯하지만 약한 글이 나오기 쉽습니다.
+
 ### 2. 뽀동이와 방울이의 차이는 무엇인가요?
+
 방울이는 재료를 모으는 조사형, 뽀동이는 그 재료를 전달 가능한 구조로 바꾸는 정리형에 가깝습니다.
+
 ### 3. 뽀동이에게 가장 중요한 요청 요소는 무엇인가요?
+
 입력 재료와 출력 목적입니다. 이 둘이 선명해야 품질이 오릅니다.
 
----
 
 ## 시리즈 이동
 
