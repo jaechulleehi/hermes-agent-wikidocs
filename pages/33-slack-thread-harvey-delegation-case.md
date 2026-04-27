@@ -75,4 +75,6 @@ Slack 대화가 곧바로 WikiDocs 글이 되지는 않는다. 스레드에는 �
 
 ## 다음 글
 
-다음 장에서는 이런 실제 운영 케이스가 쌓일 때 자주 나오는 질문, 실패 패턴, 멀티봇 규칙을 정리한다.
+다음 글에서는 Slack 요청 하나가 SEO/GEO 치트시트, LinkedIn 본문, 반복 skill로 확장된 실제 흐름을 살펴본다.
+
+[다음 글: Hermes Agent로 SEO/GEO 치트시트를 콘텐츠 자산으로 만드는 법](34-hermes-seo-geo-cheatsheet-content-asset-case.md)

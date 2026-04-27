@@ -73,3 +73,5 @@
 ## 다음 글
 
 다음 글에서는 이렇게 만들어진 글을 GitHub와 WikiDocs를 통해 어떻게 발행하고 수정 이력을 남기는지 살펴본다.
+
+[다음 글: GitHub와 WikiDocs로 콘텐츠를 발행하고 수정하는 흐름](32-github-wikidocs-content-publishing-workflow.md)
