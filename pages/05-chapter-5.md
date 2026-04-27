@@ -1,8 +1,8 @@
 ## 5장. 외부 도구/MCP/자동화 운영
 
-Hermes Agent가 AI 개인비서에서 업무 자동화 시스템으로 넘어가는 순간은 외부 도구를 붙일 때다. Google Workspace, Slack, WikiDocs, MCP, cron, gateway, skill이 연결되면 하비는 단순히 답변하는 창이 아니라 실제 업무 흐름을 움직이는 운영 창구가 된다.
+[Hermes Agent](00-hermes-agent-core-concepts.md)가 AI 개인비서에서 업무 자동화 시스템으로 넘어가는 순간은 외부 도구를 붙일 때다. Google Workspace, Slack, WikiDocs, MCP, cron, gateway, skill이 연결되면 하비는 단순히 답변하는 창이 아니라 실제 업무 흐름을 움직이는 운영 창구가 된다.
 
-하지만 도구가 많아질수록 문제도 늘어난다. 인증은 어디서 관리하는지, 상시 실행이 필요한지, skill로 남길지, cron으로 돌릴지, gateway가 실제로 살아 있는지부터 나눠야 한다. 5장은 “붙일 수 있다”가 아니라 “운영 가능한 방식으로 붙인다”에 초점을 둔다.
+하지만 도구가 많아질수록 문제도 늘어난다. 인증은 어디서 관리하는지, 상시 실행이 필요한지, skill로 남길지, cron으로 돌릴지, [gateway](12-always-on-gateway-is-more-confusing-than-it-looks.md)가 실제로 살아 있는지부터 나눠야 한다. 5장은 “붙일 수 있다”가 아니라 “운영 가능한 방식으로 붙인다”에 초점을 둔다.
 
 ## 이 장에서 다루는 문제
 
@@ -17,7 +17,7 @@ Hermes Agent가 AI 개인비서에서 업무 자동화 시스템으로 넘어가
 
 외부 도구 자동화는 “API가 있으면 된다”로 끝나지 않는다. 실제로는 인증, 권한, 실행 위치, 실패 시 알림, 민감정보 처리, 반복 검증이 더 큰 문제다.
 
-MCP도 마찬가지다. MCP 서버가 붙었다고 해서 바로 업무 자동화가 안정되는 것은 아니다. 어떤 도구가 어떤 profile에서 호출되는지, 어떤 정보가 memory에 남아야 하는지, 어떤 작업이 cron으로 돌아도 되는지 구분해야 한다.
+MCP도 마찬가지다. MCP 서버가 붙었다고 해서 바로 업무 자동화가 안정되는 것은 아니다. 어떤 도구가 어떤 [profile](03-why-same-harvey-feels-like-different-memory.md)에서 호출되는지, 어떤 정보가 memory에 남아야 하는지, 어떤 작업이 cron으로 돌아도 되는지 구분해야 한다.
 
 ## 이 장에서 얻을 기준
 
@@ -26,7 +26,7 @@ MCP도 마찬가지다. MCP 서버가 붙었다고 해서 바로 업무 자동�
 - 상시 응답이 필요하면 gateway 상태와 실제 프로세스를 함께 본다.
 - fresh session에서 도는 자동화는 prompt가 스스로 완결되어야 한다.
 - 민감정보, 토큰, 웹훅 URL은 문서와 요약에 원문으로 남기지 않는다.
-- Slack, WikiDocs, Google Workspace 같은 도구는 기능이 아니라 workflow connector로 본다.
+- Slack, [WikiDocs](07-why-we-write-the-wiki-first.md), Google Workspace 같은 도구는 기능이 아니라 workflow connector로 본다.
 
 ## 다음 장으로 가기 전 체크 질문
 

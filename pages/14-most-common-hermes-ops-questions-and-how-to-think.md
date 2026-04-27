@@ -1,8 +1,8 @@
 ## Hermes Agent 운영 질문은 어떻게 분류할까
 
-Hermes Agent 운영 질문은 대부분 새로운 문제가 아니라 이미 있는 혼선의 변형이다. 같은 하비인데 기억이 다르게 느껴지는 문제, profile이 다른 문제, 도구가 파일을 못 읽는 문제, gateway가 살아 있는지 헷갈리는 문제는 모두 다른 층에서 생긴다.
+[Hermes Agent](00-hermes-agent-core-concepts.md) 운영 질문은 대부분 새로운 문제가 아니라 이미 있는 혼선의 변형이다. 같은 하비인데 기억이 다르게 느껴지는 문제, profile이 다른 문제, 도구가 파일을 못 읽는 문제, gateway가 살아 있는지 헷갈리는 문제는 모두 다른 층에서 생긴다.
 
-그래서 FAQ를 만들 때는 답변을 많이 모으는 것보다 질문을 분류하는 기준이 먼저다. 질문을 잘 분류하면 하비가 직접 답할지, 방울이에게 조사시킬지, 뽀동이가 문서로 정리할지, 봉구가 실행 검증을 맡을지 판단하기 쉬워진다.
+그래서 FAQ를 만들 때는 답변을 많이 모으는 것보다 질문을 분류하는 기준이 먼저다. 질문을 잘 분류하면 하비가 직접 답할지, [방울이](23-where-bangwooli-research-agent-is-strong-and-where-it-wobbles.md)에게 조사시킬지, 뽀동이가 문서로 정리할지, 봉구가 실행 검증을 맡을지 판단하기 쉬워진다.
 
 ## FAQ가 약해지는 이유
 
@@ -41,9 +41,9 @@ Hermes Agent 운영 질문은 대부분 새로운 문제가 아니라 이미 있
 
 이건 바로 사과하고 끝낼 문제가 아니다. 먼저 레이어를 봐야 한다.
 
-- 현재 session에만 있던 규칙인가?
+- 현재 [session](03-why-same-harvey-feels-like-different-memory.md)에만 있던 규칙인가?
 - memory에 저장된 선호인가?
-- AGENTS.md나 skill에 반영된 절차인가?
+- AGENTS.md나 [skill](10-when-and-how-to-manage-skills-in-hermes.md)에 반영된 절차인가?
 - 다른 profile이 실행 중인가?
 - 압축 과정에서 세부 규칙이 약해졌나?
 

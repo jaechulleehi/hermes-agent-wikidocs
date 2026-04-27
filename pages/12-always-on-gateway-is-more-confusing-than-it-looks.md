@@ -1,8 +1,8 @@
 ## always-on gateway는 왜 자주 헷갈릴까
 
-always-on gateway는 AI 개인비서를 상시 대기 상태로 만드는 장치처럼 보인다. 하지만 실제 운영에서는 “켜져 있다”와 “제대로 응답할 준비가 됐다”가 다르다. 그래서 gateway는 생각보다 자주 헷갈린다.
+always-on gateway는 [AI 개인비서](00-ai-chatbot-vs-ai-personal-assistant.md)를 상시 대기 상태로 만드는 장치처럼 보인다. 하지만 실제 운영에서는 “켜져 있다”와 “제대로 응답할 준비가 됐다”가 다르다. 그래서 gateway는 생각보다 자주 헷갈린다.
 
-Hermes Agent에서 gateway를 다룰 때는 status 한 줄만 믿으면 안 된다. 어떤 profile이 떠 있는지, 실제 프로세스가 살아 있는지, autostart가 예전 설정을 물고 있지 않은지, 메시징 플랫폼과 연결이 살아 있는지까지 함께 봐야 한다.
+[Hermes Agent](00-hermes-agent-core-concepts.md)에서 gateway를 다룰 때는 status 한 줄만 믿으면 안 된다. 어떤 profile이 떠 있는지, 실제 프로세스가 살아 있는지, autostart가 예전 설정을 물고 있지 않은지, 메시징 플랫폼과 연결이 살아 있는지까지 함께 봐야 한다.
 
 ## 왜 켜져 있는데도 헷갈릴까
 
@@ -21,9 +21,9 @@ Hermes Agent에서 gateway를 다룰 때는 status 한 줄만 믿으면 안 된�
 
 ## heartbeat와 status를 그대로 믿으면 안 되는 이유
 
-heartbeat는 좋은 신호지만, 항상 충분한 증거는 아니다. heartbeat가 찍혀도 실제 메시지 전달이 막혀 있을 수 있고, status가 좋아 보여도 예전 profile이 떠 있을 수 있다.
+heartbeat는 좋은 신호지만, 항상 충분한 증거는 아니다. heartbeat가 찍혀도 실제 메시지 전달이 막혀 있을 수 있고, status가 좋아 보여도 예전 [profile](03-why-same-harvey-feels-like-different-memory.md)이 떠 있을 수 있다.
 
-그래서 운영에서는 “상태 출력”과 “실제 동작”을 함께 확인해야 한다. 예를 들어 Slack에서 응답이 필요한 구조라면 gateway status뿐 아니라 실제 Slack thread 응답, 로그, 프로세스, config를 같이 본다.
+그래서 운영에서는 “상태 출력”과 “실제 동작”을 함께 확인해야 한다. 예를 들어 [Slack](33-slack-thread-harvey-delegation-case.md)에서 응답이 필요한 구조라면 gateway status뿐 아니라 실제 Slack thread 응답, 로그, 프로세스, config를 같이 본다.
 
 ## 실제 운영 예시
 

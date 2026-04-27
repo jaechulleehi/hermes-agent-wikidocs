@@ -1,12 +1,12 @@
 ## 과거 유산과 현재 기준은 어떻게 나눌까
 
-과거 유산은 무조건 지울 필요도, 현재 운영 문서에 계속 섞어둘 필요도 없다. 핵심은 archive/history에는 남기고, 현재 기준 문서에서는 Hermes Agent 기준을 먼저 보이게 하는 것이다.
+과거 유산은 무조건 지울 필요도, 현재 운영 문서에 계속 섞어둘 필요도 없다. 핵심은 archive/history에는 남기고, 현재 기준 문서에서는 [Hermes Agent](00-hermes-agent-core-concepts.md) 기준을 먼저 보이게 하는 것이다.
 
-OpenClaw에서 Hermes로 넘어올 때도 이 문제가 있었다. 이름은 Hermes로 바뀌었지만 과거 파일, autostart 흔적, profile 이름, skill 설명, 문서 링크가 남아 있으면 사용자는 지금 기준이 무엇인지 헷갈린다.
+[OpenClaw에서 Hermes로](01-why-we-moved-from-openclaw-to-hermes.md) 넘어올 때도 이 문제가 있었다. 이름은 Hermes로 바뀌었지만 과거 파일, autostart 흔적, profile 이름, skill 설명, 문서 링크가 남아 있으면 사용자는 지금 기준이 무엇인지 헷갈린다.
 
 ## 왜 과거 흔적이 현재 규칙을 흔들까
 
-운영 문서는 사람이 읽는 기준이면서 에이전트가 따르는 기준이기도 하다. 현재 문서에 과거 명칭과 예전 절차가 섞이면 하비, 방울이, 뽀동이도 어느 기준을 따라야 할지 흐려진다.
+운영 문서는 사람이 읽는 기준이면서 에이전트가 따르는 기준이기도 하다. 현재 문서에 과거 명칭과 예전 절차가 섞이면 하비, [방울이](23-where-bangwooli-research-agent-is-strong-and-where-it-wobbles.md), 뽀동이도 어느 기준을 따라야 할지 흐려진다.
 
 문제는 과거 유산 자체가 아니다. 과거 유산이 현재 기준처럼 보이는 순간이 문제다.
 
@@ -42,7 +42,7 @@ OpenClaw 흔적을 모두 지우면 전환사가 사라진다. 반대로 모든 
 - 과거 이름은 전환 설명이나 비교 문맥에서만 쓴다.
 - archive/history와 active docs를 섞지 않는다.
 - 민감정보는 원문으로 남기지 않는다.
-- 전환에서 배운 기준은 skill이나 체크리스트로 옮긴다.
+- 전환에서 배운 기준은 skill이나 [체크리스트](21-how-to-make-hermes-operation-checklists-actually-useful.md)로 옮긴다.
 - 현재 source of truth가 무엇인지 문서 상단에서 분명히 한다.
 
 ## FAQ

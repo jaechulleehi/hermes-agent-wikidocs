@@ -1,8 +1,8 @@
 ## Daily Briefing Bot은 어떤 업무 자동화 패턴일까
 
-Daily Briefing Bot은 Hermes Agent에서 cron 기반 업무 자동화를 이해하기 좋은 예시다. 정해진 시간에 fresh session을 열고, 필요한 정보를 모으고, 요약한 뒤, Slack이나 다른 채널로 전달한다. 겉으로는 “아침 브리핑 봇”이지만 실제로는 반복 자동화의 기본형이다.
+Daily Briefing Bot은 [Hermes Agent](00-hermes-agent-core-concepts.md)에서 cron 기반 업무 자동화를 이해하기 좋은 예시다. 정해진 시간에 fresh session을 열고, 필요한 정보를 모으고, 요약한 뒤, Slack이나 다른 채널로 전달한다. 겉으로는 “아침 브리핑 봇”이지만 실제로는 반복 자동화의 기본형이다.
 
-이 패턴을 이해하면 뉴스 요약, 경쟁사 모니터링, WikiDocs 업데이트 후보 수집, OpenAI 사용량 점검, 일정 브리핑 같은 작업도 같은 구조로 설계할 수 있다.
+이 패턴을 이해하면 뉴스 요약, 경쟁사 모니터링, [WikiDocs](07-why-we-write-the-wiki-first.md) 업데이트 후보 수집, OpenAI 사용량 점검, 일정 브리핑 같은 작업도 같은 구조로 설계할 수 있다.
 
 ## 이 예제가 중요한 이유
 
@@ -47,14 +47,14 @@ cron 작업은 보통 현재 대화 맥락을 그대로 이어받지 않는다. 
 책에 반영할 항목은 SOURCE_MAP이나 CHANGELOG 후보로 남긴다.
 ```
 
-여기서 중요한 것은 봇 이름이 아니다. cron, fresh session, 조사, 정리, 전달, 기록이 하나의 흐름으로 묶인다는 점이다.
+여기서 중요한 것은 봇 이름이 아니다. cron, fresh [session](03-why-same-harvey-feels-like-different-memory.md), 조사, 정리, 전달, 기록이 하나의 흐름으로 묶인다는 점이다.
 
 ## 실패할 때 먼저 볼 것
 
 Daily Briefing Bot이 실패하면 아래 순서로 본다.
 
 1. cron schedule이 맞는지 확인한다.
-2. gateway가 실행 중인지 확인한다.
+2. [gateway](12-always-on-gateway-is-more-confusing-than-it-looks.md)가 실행 중인지 확인한다.
 3. delivery target이 맞는지 확인한다.
 4. prompt가 self-contained인지 확인한다.
 5. 필요한 API key와 MCP 도구가 profile에 붙어 있는지 본다.

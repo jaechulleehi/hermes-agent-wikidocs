@@ -5,13 +5,16 @@
 
 ## 1. 내부 링크 원칙
 
-내부 링크는 세 종류로 나눈다.
+내부 링크는 단순히 페이지 끝에 `이어서 읽기`를 붙이는 작업이 아니다. 독자가 본문을 읽는 중에 핵심 개념, 기능, 실제 케이스로 자연스럽게 이동할 수 있어야 한다.
 
-1. **순차 링크**: 다음 글로 자연스럽게 넘어가는 링크
-2. **개념 링크**: 앞에서 설명한 핵심 개념으로 돌아가는 링크
-3. **케이스 링크**: 개념을 실제 운영 사례로 확인하는 링크
+내부 링크는 네 종류로 나눈다.
 
-각 페이지에는 최소 1개 이상의 내부 링크를 둔다. 핵심 본문 페이지는 2개 이상을 권장한다.
+1. **본문 맥락 링크**: 문장 안에서 처음 등장하는 주요 개념/기능을 관련 페이지로 연결하는 링크
+2. **순차 링크**: 다음 글로 자연스럽게 넘어가는 링크
+3. **개념 링크**: 앞에서 설명한 핵심 개념으로 돌아가는 링크
+4. **케이스 링크**: 개념을 실제 운영 사례로 확인하는 링크
+
+각 페이지에는 본문 맥락 링크를 최소 2개 이상 두는 것을 기본으로 한다. `이어서 읽기`는 보조 동선이고, 핵심은 본문 안의 개념 연결이다.
 
 권장 문구는 다음과 같다.
 
@@ -36,7 +39,8 @@
 | `01-chapter-1.md` | `00-ai-chatbot-vs-ai-personal-assistant.md` |
 | `00-ai-chatbot-vs-ai-personal-assistant.md` | `00-what-is-my-ai-team.md` |
 | `00-what-is-my-ai-team.md` | `00-agent-team-reading-guide.md` |
-| `00-agent-team-reading-guide.md` | `09-hermes-is-an-operating-system-not-just-a-chatbot.md` |
+| `00-agent-team-reading-guide.md` | `00-hermes-agent-core-concepts.md` |
+| `00-hermes-agent-core-concepts.md` | `09-hermes-is-an-operating-system-not-just-a-chatbot.md` |
 | `09-hermes-is-an-operating-system-not-just-a-chatbot.md` | `01-why-we-moved-from-openclaw-to-hermes.md` |
 | `01-why-we-moved-from-openclaw-to-hermes.md` | `02-chapter-2.md` |
 
@@ -45,6 +49,7 @@
 - `AI 개인비서` → `00-ai-chatbot-vs-ai-personal-assistant.md`
 - `나만의 AI 팀` → `00-what-is-my-ai-team.md`
 - `하비/방울이/뽀동이` → `00-agent-team-reading-guide.md`
+- `Hermes Agent 주요 개념/기능` → `00-hermes-agent-core-concepts.md`
 - `운영 시스템` → `09-hermes-is-an-operating-system-not-just-a-chatbot.md`
 - `OpenClaw 전환` → `01-why-we-moved-from-openclaw-to-hermes.md`
 

@@ -2,7 +2,7 @@
 
 긴 대화가 쌓이면 에이전트의 판단은 조금씩 흐려질 수 있다. 이유는 단순하다. 중요한 결정, 임시 작업, 오래 유지할 규칙, 감정 섞인 피드백, 파일 경로, 다음 액션이 한 대화 안에 함께 쌓이기 때문이다.
 
-Hermes Agent는 session, memory, skill, profile, search, context compaction 같은 장치로 이 문제를 줄일 수 있다. 하지만 장치가 있다고 자동으로 안정되는 것은 아니다. 어떤 정보는 memory로, 어떤 절차는 skill로, 어떤 결과는 repo 문서로 옮겨야 한다.
+[Hermes Agent](00-hermes-agent-core-concepts.md)는 session, memory, skill, profile, search, context compaction 같은 장치로 이 문제를 줄일 수 있다. 하지만 장치가 있다고 자동으로 안정되는 것은 아니다. 어떤 정보는 memory로, 어떤 절차는 skill로, 어떤 결과는 repo 문서로 옮겨야 한다.
 
 ## 컨텍스트가 흐려지는 순간
 
@@ -22,11 +22,11 @@ Hermes Agent는 session, memory, skill, profile, search, context compaction 같�
 
 Hermes Agent는 긴 대화를 버티기 위한 여러 장치를 갖고 있다.
 
-- session search로 과거 대화를 다시 찾을 수 있다.
+- [session](03-why-same-harvey-feels-like-different-memory.md) search로 과거 대화를 다시 찾을 수 있다.
 - memory로 오래 유지할 사용자 선호와 규칙을 남길 수 있다.
-- skill로 반복 절차를 저장할 수 있다.
+- [skill](10-when-and-how-to-manage-skills-in-hermes.md)로 반복 절차를 저장할 수 있다.
 - profile로 역할과 도구 경계를 나눌 수 있다.
-- cron이나 delegation처럼 fresh session에서 실행되는 작업은 self-contained prompt가 필요하다.
+- [cron](05-daily-briefing-bot-workflow.md)이나 delegation처럼 fresh session에서 실행되는 작업은 self-contained prompt가 필요하다.
 - GitHub repo와 WikiDocs를 source of truth로 두면 대화 밖에도 결과물이 남는다.
 
 하지만 이 장치들은 운영 기준이 있어야 힘을 낸다.
