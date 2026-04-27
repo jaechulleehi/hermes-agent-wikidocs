@@ -1,6 +1,6 @@
 ## 7장. 운영 FAQ/실패 패턴/멀티봇 규칙
 
-[Hermes Agent](00-hermes-agent-core-concepts.md)를 AI 개인비서와 역할형 에이전트 팀으로 운영하면 질문은 반복된다. “이건 하비가 답해야 하나?”, “방울이와 뽀동이를 같이 불러도 되나?”, “왜 같은 문제가 또 생기나?” 같은 질문이다.
+[Hermes Agent](https://wikidocs.net/346055)를 AI 개인비서와 역할형 에이전트 팀으로 운영하면 질문은 반복된다. “이건 하비가 답해야 하나?”, “방울이와 뽀동이를 같이 불러도 되나?”, “왜 같은 문제가 또 생기나?” 같은 질문이다.
 
 7장은 기능 설명보다 운영 혼선을 줄이는 기준을 다룬다. FAQ는 단순한 질문 모음이 아니라 문제를 어느 레이어에서 볼지 정하는 분류 체계다. 멀티봇 규칙은 여러 에이전트가 한 스레드에서 동시에 말하며 흐름을 망치지 않게 하는 안전장치다.
 
@@ -15,12 +15,12 @@
 
 운영 FAQ를 답변 모음으로만 만들면 금방 약해진다. 질문은 계속 조금씩 바뀌기 때문이다. 중요한 것은 질문 하나하나의 답이 아니라, 비슷한 질문을 같은 기준으로 분류하는 방법이다.
 
-멀티봇도 마찬가지다. [역할형 에이전트](03-role-based-agent-splitting.md)가 많으면 좋아 보이지만, 호출 규칙이 없으면 답변이 겹치고 스레드가 시끄러워진다. AI 팀은 말 잘하는 에이전트가 많은 구조가 아니라, 필요한 순간에 필요한 역할만 나오는 구조여야 한다.
+멀티봇도 마찬가지다. [역할형 에이전트](https://wikidocs.net/345925)가 많으면 좋아 보이지만, 호출 규칙이 없으면 답변이 겹치고 스레드가 시끄러워진다. AI 팀은 말 잘하는 에이전트가 많은 구조가 아니라, 필요한 순간에 필요한 역할만 나오는 구조여야 한다.
 
 ## 이 장에서 얻을 기준
 
-- 운영 질문은 identity, profile, memory, role, tool, runtime, [source of truth](13-what-to-do-with-legacy-while-keeping-current-truth-clear.md) 중 어느 층인지 먼저 나눈다.
-- 기본 창구는 [AI 개인비서](00-ai-chatbot-vs-ai-personal-assistant.md) 하비로 둔다.
+- 운영 질문은 identity, profile, memory, role, tool, runtime, [source of truth](https://wikidocs.net/345915) 중 어느 층인지 먼저 나눈다.
+- 기본 창구는 [AI 개인비서](https://wikidocs.net/345923) 하비로 둔다.
 - 방울이/뽀동이/봉구/하망이 같은 역할형 에이전트는 명시 호출을 기본으로 한다.
 - 같은 Slack 스레드에 봇이 둘 이상 있을 수 있으면 explicit mention only로 본다.
 - 사람 대화가 끼면 역할형 에이전트는 자동 응답을 멈춘다.
@@ -34,6 +34,6 @@
 
 ## 이어서 읽기
 
-- 반복 질문을 분류하는 기준은 [Hermes Agent 운영 질문은 어떻게 분류할까](14-most-common-hermes-ops-questions-and-how-to-think.md)에서 먼저 본다.
-- 멀티봇 호출 규칙은 [멀티봇 스레드는 왜 쉽게 시끄러워질까](15-why-multibot-threads-get-noisy.md)에서 이어진다.
-- 실제 Slack 분배 사례는 [Slack 스레드에서 하비가 일을 분배하는 방식](33-slack-thread-harvey-delegation-case.md)과 함께 보면 흐름이 더 선명하다.
+- 반복 질문을 분류하는 기준은 [Hermes Agent 운영 질문은 어떻게 분류할까](https://wikidocs.net/345912)에서 먼저 본다.
+- 멀티봇 호출 규칙은 [멀티봇 스레드는 왜 쉽게 시끄러워질까](https://wikidocs.net/345913)에서 이어진다.
+- 실제 Slack 분배 사례는 [Slack 스레드에서 하비가 일을 분배하는 방식](https://wikidocs.net/345995)과 함께 보면 흐름이 더 선명하다.

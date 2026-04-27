@@ -1,8 +1,8 @@
 ## Slack 스레드에서 하비가 일을 분배하는 방식
 
-Slack 스레드는 [Hermes Agent](00-hermes-agent-core-concepts.md) 운영에서 실제 요청이 시작되는 곳이다. 로이드는 하비에게 한 줄로 요청하고, 하비는 그 요청을 바로 처리할지, 방울이/뽀동이/하망이/봉구 같은 역할형 에이전트에게 나눌지 판단한다.
+Slack 스레드는 [Hermes Agent](https://wikidocs.net/346055) 운영에서 실제 요청이 시작되는 곳이다. 로이드는 하비에게 한 줄로 요청하고, 하비는 그 요청을 바로 처리할지, 방울이/뽀동이/하망이/봉구 같은 역할형 에이전트에게 나눌지 판단한다.
 
-이 케이스의 핵심은 멀티봇이 동시에 말하게 만드는 것이 아니다. 하비를 [AI 개인비서 메인 창구](02-why-harvey-is-the-front-door.md)로 두고, 필요한 역할만 불러서 결과를 다시 하나로 묶는 것이다.
+이 케이스의 핵심은 멀티봇이 동시에 말하게 만드는 것이 아니다. 하비를 [AI 개인비서 메인 창구](https://wikidocs.net/345892)로 두고, 필요한 역할만 불러서 결과를 다시 하나로 묶는 것이다.
 
 ## 실제 업무 상황
 
@@ -16,7 +16,7 @@ Slack 스레드는 [Hermes Agent](00-hermes-agent-core-concepts.md) 운영에서
 하비: 최종 방향과 다음 액션을 묶어 보고한다.
 ```
 
-반대로 호출 규칙이 없으면 봇들이 동시에 답하고 스레드가 시끄러워진다. 7장에서 정리한 [멀티봇](15-why-multibot-threads-get-noisy.md) 규칙이 여기서 필요해진다.
+반대로 호출 규칙이 없으면 봇들이 동시에 답하고 스레드가 시끄러워진다. 7장에서 정리한 [멀티봇](https://wikidocs.net/345913) 규칙이 여기서 필요해진다.
 
 ## 하비가 판단하는 기준
 
@@ -34,7 +34,7 @@ Slack 스레드는 [Hermes Agent](00-hermes-agent-core-concepts.md) 운영에서
 ## 운영 기준
 
 1. 기본 창구는 하비로 둔다.
-2. [역할형 에이전트](03-role-based-agent-splitting.md)는 명시 호출 또는 하비의 명시 위임이 있을 때 답한다.
+2. [역할형 에이전트](https://wikidocs.net/345925)는 명시 호출 또는 하비의 명시 위임이 있을 때 답한다.
 3. 사람 대화가 끼면 역할형 에이전트는 자동 응답을 멈춘다.
 4. 하비는 위임 결과를 마지막에 하나로 묶는다.
 5. 공개 콘텐츠로 바꿀 내용은 뽀동이가 독자 기준으로 다시 쓴다.
@@ -58,4 +58,4 @@ Slack 스레드는 [Hermes Agent](00-hermes-agent-core-concepts.md) 운영에서
 
 다음 글에서는 SEO/GEO 치트시트 제작 요청이 어떻게 이미지, skill, LinkedIn 본문, WikiDocs 케이스로 이어졌는지 본다.
 
-[다음 글: SEO/GEO 치트시트를 콘텐츠 자산으로 만든 실제 케이스](34-hermes-seo-geo-cheatsheet-content-asset-case.md)
+[다음 글: SEO/GEO 치트시트를 콘텐츠 자산으로 만든 실제 케이스](https://wikidocs.net/345996)

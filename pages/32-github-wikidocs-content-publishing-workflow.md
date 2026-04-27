@@ -1,14 +1,14 @@
 ## GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름
 
-이 책에서 GitHub는 원본이고 [WikiDocs](07-why-we-write-the-wiki-first.md)는 공개 배포 채널이다. 뽀동이가 원고를 고치고, 검증을 통과시키고, GitHub에 커밋/푸시하면 WikiDocs가 독자에게 보이는 형태로 배포한다.
+이 책에서 GitHub는 원본이고 [WikiDocs](https://wikidocs.net/345908)는 공개 배포 채널이다. 뽀동이가 원고를 고치고, 검증을 통과시키고, GitHub에 커밋/푸시하면 WikiDocs가 독자에게 보이는 형태로 배포한다.
 
 이 구조를 쓰는 이유는 단순하다. 공개 글은 한 번 쓰고 끝나지 않는다. 제목, TOC, 이미지, SEO/GEO, 전자책 규칙, 다음 링크가 계속 바뀐다. 이력과 기준이 남아야 안전하게 고칠 수 있다.
 
 ## 실제 업무 상황
 
-로이드가 “이 장 가자”라고 하면 [뽀동이](24-where-ppodongi-organization-agent-is-strong-and-where-it-wobbles.md)는 해당 장의 TOC와 본문을 확인하고, 책형 구조로 다시 쓰고, 전자책/WikiDocs 규칙을 검증한 뒤 커밋/푸시한다. WikiDocs 화면은 GitHub에 연결된 공개 배포 결과다.
+로이드가 “이 장 가자”라고 하면 [뽀동이](https://wikidocs.net/345896)는 해당 장의 TOC와 본문을 확인하고, 책형 구조로 다시 쓰고, 전자책/WikiDocs 규칙을 검증한 뒤 커밋/푸시한다. WikiDocs 화면은 GitHub에 연결된 공개 배포 결과다.
 
-이때 WikiDocs에서 바로 수정하는 것보다 GitHub에서 수정하는 편이 좋다. [source of truth](13-what-to-do-with-legacy-while-keeping-current-truth-clear.md)가 하나로 남기 때문이다.
+이때 WikiDocs에서 바로 수정하는 것보다 GitHub에서 수정하는 편이 좋다. [source of truth](https://wikidocs.net/345915)가 하나로 남기 때문이다.
 
 ## 발행 전 확인할 것
 
@@ -53,6 +53,6 @@
 
 ## 다음 글
 
-다음 글에서는 Slack 스레드에서 [하비](02-why-harvey-is-the-front-door.md)가 어떻게 일을 분배하고 최종 흐름을 묶는지 본다.
+다음 글에서는 Slack 스레드에서 [하비](https://wikidocs.net/345892)가 어떻게 일을 분배하고 최종 흐름을 묶는지 본다.
 
-[다음 글: Slack 스레드에서 하비가 일을 분배하는 방식](33-slack-thread-harvey-delegation-case.md)
+[다음 글: Slack 스레드에서 하비가 일을 분배하는 방식](https://wikidocs.net/345995)

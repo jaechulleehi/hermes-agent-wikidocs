@@ -1,6 +1,6 @@
 ## 복구 플레이북은 왜 문서보다 순서가 중요할까
 
-복구 플레이북의 핵심은 문서가 많다는 것이 아니라 순서가 분명하다는 것이다. [Hermes Agent](00-hermes-agent-core-concepts.md) 운영에서 문제가 생기면 당장 재시작하고 싶지만, 먼저 봐야 할 것은 증상, process, profile/runtime 경계, 최근 변경이다.
+복구 플레이북의 핵심은 문서가 많다는 것이 아니라 순서가 분명하다는 것이다. [Hermes Agent](https://wikidocs.net/346055) 운영에서 문제가 생기면 당장 재시작하고 싶지만, 먼저 봐야 할 것은 증상, process, profile/runtime 경계, 최근 변경이다.
 
 복구는 “아는 명령을 많이 실행하는 일”이 아니다. 잘못된 순서로 건드리면 원인을 더 흐리게 만든다. 그래서 복구 플레이북은 최소한의 확인으로 현재 상태를 보존하면서 문제를 좁히는 문서여야 한다.
 
@@ -10,7 +10,7 @@
 
 첫째, 문서가 기능 설명에 가깝고 실제 장애 순서를 말하지 않는다. 둘째, 확인 전에 수정부터 한다. 이러면 원래 문제와 새로 만든 문제가 섞인다.
 
-예를 들어 [gateway](12-always-on-gateway-is-more-confusing-than-it-looks.md)가 응답하지 않을 때 바로 재설치부터 하면 process 문제인지, 환경 변수 문제인지, profile 문제인지 구분하기 어려워진다. 복구는 빠르게 고치는 일이지만, 처음 1분은 오히려 천천히 봐야 한다.
+예를 들어 [gateway](https://wikidocs.net/345906)가 응답하지 않을 때 바로 재설치부터 하면 process 문제인지, 환경 변수 문제인지, profile 문제인지 구분하기 어려워진다. 복구는 빠르게 고치는 일이지만, 처음 1분은 오히려 천천히 봐야 한다.
 
 ## 먼저 봐야 할 순서
 
@@ -28,7 +28,7 @@
 
 ## 실제 운영 예시
 
-Slack에서 하비가 응답하지 않는다고 가정해보자. 이때 바로 모든 프로세스를 죽이면 안 된다. 먼저 어느 gateway가 Slack을 받고 있는지, 해당 [profile](03-why-same-harvey-feels-like-different-memory.md)이 맞는지, 최근 config 변경이 있었는지 봐야 한다.
+Slack에서 하비가 응답하지 않는다고 가정해보자. 이때 바로 모든 프로세스를 죽이면 안 된다. 먼저 어느 gateway가 Slack을 받고 있는지, 해당 [profile](https://wikidocs.net/345899)이 맞는지, 최근 config 변경이 있었는지 봐야 한다.
 
 좋은 복구 흐름은 이렇다.
 
@@ -51,7 +51,7 @@ Slack에서 하비가 응답하지 않는다고 가정해보자. 이때 바로 �
 3. profile/runtime 경계를 확인하기 전에는 큰 수정을 하지 않는다.
 4. 재설치, 전체 초기화, 강제 삭제는 마지막으로 미룬다.
 5. 복구 후에는 사용자가 실제로 쓰는 경로로 검증한다.
-6. 같은 문제가 반복되면 체크리스트나 [skill](10-when-and-how-to-manage-skills-in-hermes.md)로 승격한다.
+6. 같은 문제가 반복되면 체크리스트나 [skill](https://wikidocs.net/345904)로 승격한다.
 
 ## FAQ
 
@@ -71,4 +71,4 @@ Slack에서 하비가 응답하지 않는다고 가정해보자. 이때 바로 �
 
 다음 글에서는 Hermes Agent 운영 체크리스트가 실제 작업 속도를 높이려면 어떤 모양이어야 하는지 다룬다.
 
-[다음 글: Hermes Agent 운영 체크리스트는 어떻게 써야 할까](21-how-to-make-hermes-operation-checklists-actually-useful.md)
+[다음 글: Hermes Agent 운영 체크리스트는 어떻게 써야 할까](https://wikidocs.net/345919)

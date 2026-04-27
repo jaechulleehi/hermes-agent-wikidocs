@@ -1,8 +1,8 @@
 ## Obsidian LLM Wiki는 운영 기록을 어떻게 살릴까
 
-Obsidian LLM Wiki는 단순한 노트 저장소가 아니다. [Hermes Agent](00-hermes-agent-core-concepts.md)로 일하면서 생긴 조사, 판단, 실패, 발행 기준을 다시 꺼내 쓸 수 있게 만드는 운영 기록층이다.
+Obsidian LLM Wiki는 단순한 노트 저장소가 아니다. [Hermes Agent](https://wikidocs.net/346055)로 일하면서 생긴 조사, 판단, 실패, 발행 기준을 다시 꺼내 쓸 수 있게 만드는 운영 기록층이다.
 
-AI 개인비서와 [역할형 에이전트](03-role-based-agent-splitting.md)를 오래 쓰면 대화는 빠르게 쌓인다. 하지만 대화에만 남은 지식은 다음 작업에서 다시 찾기 어렵다. 그래서 중요한 운영 경험은 WikiDocs, Obsidian, repo 문서처럼 다시 읽을 수 있는 위치로 옮겨야 한다.
+AI 개인비서와 [역할형 에이전트](https://wikidocs.net/345925)를 오래 쓰면 대화는 빠르게 쌓인다. 하지만 대화에만 남은 지식은 다음 작업에서 다시 찾기 어렵다. 그래서 중요한 운영 경험은 WikiDocs, Obsidian, repo 문서처럼 다시 읽을 수 있는 위치로 옮겨야 한다.
 
 ## 문서를 많이 쌓아도 다시 못 쓰는 이유
 
@@ -18,7 +18,7 @@ LLM Wiki는 기록을 많이 쌓는 도구라기보다, 다시 회수할 수 있
 
 ## memory와 wiki는 다르다
 
-[memory](03-why-same-harvey-feels-like-different-memory.md)에는 오래 유지할 사용자 선호와 운영 규칙을 넣는다. 반면 wiki에는 맥락, 사례, 근거, 흐름, 시행착오를 담는다.
+[memory](https://wikidocs.net/345899)에는 오래 유지할 사용자 선호와 운영 규칙을 넣는다. 반면 wiki에는 맥락, 사례, 근거, 흐름, 시행착오를 담는다.
 
 예를 들어 “로이드는 구분할 때 /를 선호한다”는 memory에 가깝다. 하지만 왜 WikiDocs 글에서 구분자 규칙이 필요했는지, 어떤 파일을 고쳤는지, 이후 검증 기준이 어떻게 바뀌었는지는 wiki나 repo 문서에 남기는 편이 좋다.
 
@@ -27,7 +27,7 @@ LLM Wiki는 기록을 많이 쌓는 도구라기보다, 다시 회수할 수 있
 운영에서 LLM Wiki는 아래 순서로 쓰는 편이 안정적이다.
 
 1. 새 질문이나 시행착오가 생긴다.
-2. [방울이](23-where-bangwooli-research-agent-is-strong-and-where-it-wobbles.md)가 관련 근거와 기존 기록을 찾는다.
+2. [방울이](https://wikidocs.net/345895)가 관련 근거와 기존 기록을 찾는다.
 3. 하비가 현재 작업과 연결되는지 판단한다.
 4. 뽀동이가 WikiDocs나 운영 문서 구조로 정리한다.
 5. 반복 기준이 생기면 skill이나 체크리스트로 옮긴다.
@@ -60,4 +60,4 @@ Obsidian은 내부 운영 기록과 원천 노트에 가깝다. WikiDocs는 독�
 
 다음 글에서는 왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑는지 다룬다.
 
-[다음 글: 왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까](07-why-we-write-the-wiki-first.md)
+[다음 글: 왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까](https://wikidocs.net/345908)

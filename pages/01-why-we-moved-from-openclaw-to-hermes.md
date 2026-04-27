@@ -2,12 +2,12 @@
 
 ![OpenClaw에서 Hermes로 구조 전환한 이유](../assets/how-image-agent-creates-wikidocs-visuals/ch1-5-openclaw-to-hermes-codex.png)
 
-> 이 글은 **에르메스 에이전트([Hermes Agent](00-hermes-agent-core-concepts.md))**를 실제 업무 시스템으로 운영하며 정리한 실전 기록입니다.
+> 이 글은 **에르메스 에이전트([Hermes Agent](https://wikidocs.net/346055))**를 실제 업무 시스템으로 운영하며 정리한 실전 기록입니다.
 
 
 ## 이름만 바꾼 일이 아니었다
 
-OpenClaw에서 Hermes로 넘어온 건 이름만 바꾼 일이 아니었습니다. 핵심은 더 멋진 에이전트 페르소나를 만드는 게 아니라, **에이전트를 실제로 운영 가능한 시스템으로 다시 세우는 것**이었습니다. AI 개인비서가 요청을 받는 메인 창구, 조사형/정리형/실행형으로 나뉘는 [역할형 에이전트](03-role-based-agent-splitting.md), 프로필 경계, 기억 레이어, 도구 연결, 기록 자산화까지 한 번에 보려면 OpenClaw 감각만으로는 부족했고, 에르메스 에이전트(Hermes Agent)라는 더 선명한 업무 자동화 기준점이 필요했습니다.
+OpenClaw에서 Hermes로 넘어온 건 이름만 바꾼 일이 아니었습니다. 핵심은 더 멋진 에이전트 페르소나를 만드는 게 아니라, **에이전트를 실제로 운영 가능한 시스템으로 다시 세우는 것**이었습니다. AI 개인비서가 요청을 받는 메인 창구, 조사형/정리형/실행형으로 나뉘는 [역할형 에이전트](https://wikidocs.net/345925), 프로필 경계, 기억 레이어, 도구 연결, 기록 자산화까지 한 번에 보려면 OpenClaw 감각만으로는 부족했고, 에르메스 에이전트(Hermes Agent)라는 더 선명한 업무 자동화 기준점이 필요했습니다.
 
 ## 이 글의 답
 
@@ -16,8 +16,8 @@ OpenClaw에서 Hermes로 넘어온 건 이름만 바꾼 일이 아니었습니�
 
 조금 더 풀면 세 가지입니다.
 - 사용자가 여러 에이전트를 직접 관리하지 않게 만들 **메인 창구**가 필요했습니다.
-- session, memory, skill, [profile](03-why-same-harvey-feels-like-different-memory.md), identity를 한 덩어리 감각이 아니라 **운영 가능한 층**으로 봐야 했습니다.
-- 대화에서 끝나지 않고, 도구 실행과 [Obsidian](11-how-to-use-obsidian-llm-wiki-in-real-operations.md) 기록, 블로그/강의 자산화까지 이어지는 **운영 흐름**이 필요했습니다.
+- session, memory, skill, [profile](https://wikidocs.net/345899), identity를 한 덩어리 감각이 아니라 **운영 가능한 층**으로 봐야 했습니다.
+- 대화에서 끝나지 않고, 도구 실행과 [Obsidian](https://wikidocs.net/345905) 기록, 블로그/강의 자산화까지 이어지는 **운영 흐름**이 필요했습니다.
 
 그래서 Hermes는 OpenClaw의 부정이 아니라, **그 유산 위에서 현재 운영 기준을 더 선명하게 만든 다음 단계**에 가깝습니다.
 
@@ -256,4 +256,4 @@ OpenClaw에서 Hermes로 넘어온 건 더 화려한 이름을 찾은 일이 아
 
 OpenClaw에서 Hermes로 넘어오며 가장 먼저 선명해진 것은 메인 창구의 필요성이었다. 다음 장에서는 왜 AI 개인비서에는 하나의 메인 창구가 필요한지 다룬다.
 
-[다음 장: AI 개인비서 메인 창구 만들기](02-chapter-2.md)
+[다음 장: AI 개인비서 메인 창구 만들기](https://wikidocs.net/345891)

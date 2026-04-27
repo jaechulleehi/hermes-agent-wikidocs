@@ -1,14 +1,14 @@
 ## 크론 조사에서 WikiDocs 발행까지 이어지는 AI 업무 자동화 케이스
 
-cron 자동화는 [Hermes Agent](00-hermes-agent-core-concepts.md)에서 마법처럼 보이지만, 실제 운영에서는 시작점일 뿐이다. 예약된 조사가 곧바로 좋은 글이 되는 것은 아니다. 조사 결과를 하비가 판단하고, 방울이가 확장조사하고, 뽀동이가 WikiDocs 구조로 다시 쓰고, GitHub에 커밋되어야 공개 자산이 된다.
+cron 자동화는 [Hermes Agent](https://wikidocs.net/346055)에서 마법처럼 보이지만, 실제 운영에서는 시작점일 뿐이다. 예약된 조사가 곧바로 좋은 글이 되는 것은 아니다. 조사 결과를 하비가 판단하고, 방울이가 확장조사하고, 뽀동이가 WikiDocs 구조로 다시 쓰고, GitHub에 커밋되어야 공개 자산이 된다.
 
-이 케이스는 AI 업무 자동화를 “자동 실행”이 아니라 “자동 시작 후 [역할형 에이전트](03-role-based-agent-splitting.md)가 이어받는 흐름”으로 보는 방법을 보여준다.
+이 케이스는 AI 업무 자동화를 “자동 실행”이 아니라 “자동 시작 후 [역할형 에이전트](https://wikidocs.net/345925)가 이어받는 흐름”으로 보는 방법을 보여준다.
 
 ## 실제 업무 상황
 
-주기적으로 확인해야 하는 주제는 [cron](05-daily-briefing-bot-workflow.md)에 잘 맞는다. 예를 들어 Hermes Agent 공식 문서 변화, AI 에이전트 운영 사례, SEO/GEO 관련 자료처럼 반복적으로 살펴볼 주제가 있다.
+주기적으로 확인해야 하는 주제는 [cron](https://wikidocs.net/345926)에 잘 맞는다. 예를 들어 Hermes Agent 공식 문서 변화, AI 에이전트 운영 사례, SEO/GEO 관련 자료처럼 반복적으로 살펴볼 주제가 있다.
 
-하지만 cron은 fresh session에서 돈다. 그래서 프롬프트가 self-contained여야 하고, 결과를 어디로 보낼지, 사람이 무엇을 검토할지, 어떤 기준이면 [WikiDocs](07-why-we-write-the-wiki-first.md) 후보가 되는지 명확해야 한다.
+하지만 cron은 fresh session에서 돈다. 그래서 프롬프트가 self-contained여야 하고, 결과를 어디로 보낼지, 사람이 무엇을 검토할지, 어떤 기준이면 [WikiDocs](https://wikidocs.net/345908) 후보가 되는지 명확해야 한다.
 
 ## 역할 분리
 
@@ -49,4 +49,4 @@ cron 자동화는 [Hermes Agent](00-hermes-agent-core-concepts.md)에서 마법�
 
 다음 글에서는 방울이가 모은 조사 결과를 뽀동이가 어떻게 이어받아 글로 바꾸는지 본다.
 
-[다음 글: 방울이 확장조사와 뽀동이 글쓰기는 어떻게 이어질까](31-bangwooli-ppodongi-content-handoff.md)
+[다음 글: 방울이 확장조사와 뽀동이 글쓰기는 어떻게 이어질까](https://wikidocs.net/345993)

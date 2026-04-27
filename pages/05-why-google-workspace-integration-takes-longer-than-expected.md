@@ -1,8 +1,8 @@
 ## Google Workspace와 MCP 연동은 왜 오래 걸릴까
 
-Google Workspace와 MCP 연동은 기능보다 운영 조건 때문에 오래 걸린다. Calendar, Gmail, Drive, Sheets를 [AI 개인비서](00-ai-chatbot-vs-ai-personal-assistant.md)에 붙이는 일은 겉으로는 단순해 보이지만 실제로는 인증, 권한, 데이터 범위, 실패 알림, 실행 주기를 함께 설계해야 한다.
+Google Workspace와 MCP 연동은 기능보다 운영 조건 때문에 오래 걸린다. Calendar, Gmail, Drive, Sheets를 [AI 개인비서](https://wikidocs.net/345923)에 붙이는 일은 겉으로는 단순해 보이지만 실제로는 인증, 권한, 데이터 범위, 실패 알림, 실행 주기를 함께 설계해야 한다.
 
-[Hermes Agent](00-hermes-agent-core-concepts.md)에서 외부 도구를 붙일 때 핵심 질문은 “붙일 수 있나?”가 아니다. “누가 어떤 권한으로, 언제, 어떤 결과를 만들고, 실패하면 어디에 알려줄 것인가?”다. 이 질문에 답하지 않으면 도구는 붙어도 workflow는 오래 못 간다.
+[Hermes Agent](https://wikidocs.net/346055)에서 외부 도구를 붙일 때 핵심 질문은 “붙일 수 있나?”가 아니다. “누가 어떤 권한으로, 언제, 어떤 결과를 만들고, 실패하면 어디에 알려줄 것인가?”다. 이 질문에 답하지 않으면 도구는 붙어도 workflow는 오래 못 간다.
 
 ## 처음에 단순하게 보는 지점
 
@@ -35,9 +35,9 @@ MCP는 외부 도구를 Hermes Agent에 붙이는 좋은 방식이다. 하지만
 
 외부 도구는 처음부터 상시 자동화로 만들 필요가 없다. 초반에는 on-demand가 더 안전한 경우가 많다.
 
-- 가끔 확인하는 일: [하비](02-why-harvey-is-the-front-door.md)에게 직접 요청한다.
+- 가끔 확인하는 일: [하비](https://wikidocs.net/345892)에게 직접 요청한다.
 - 반복되지만 위험이 낮은 일: skill로 절차를 남긴다.
-- 정해진 시간에 필요한 일: [cron](05-daily-briefing-bot-workflow.md)으로 돌린다.
+- 정해진 시간에 필요한 일: [cron](https://wikidocs.net/345926)으로 돌린다.
 - 계속 대기해야 하는 일: gateway 상태와 autostart를 관리한다.
 - 여러 도구를 엮는 일: 실패 지점과 알림 채널을 먼저 정한다.
 
@@ -87,4 +87,4 @@ Google Workspace나 MCP 연동을 시작할 때는 아래 순서로 본다.
 
 다음 글에서는 반복 절차를 언제 Hermes Agent skill로 남겨야 하는지 다룬다.
 
-[다음 글: Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](10-when-and-how-to-manage-skills-in-hermes.md)
+[다음 글: Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](https://wikidocs.net/345904)

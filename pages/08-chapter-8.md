@@ -1,6 +1,6 @@
 ## 8장. 체크리스트/마이그레이션/복구 플레이북
 
-[Hermes Agent](00-hermes-agent-core-concepts.md)를 AI 개인비서와 역할형 에이전트 팀으로 오래 운영하려면 좋은 원고보다 먼저 필요한 것이 있다. 다시 막히지 않게 만드는 체크리스트, 시스템을 옮길 때 기준을 잃지 않게 하는 마이그레이션 절차, 문제가 생겼을 때 순서대로 회복하는 복구 플레이북이다.
+[Hermes Agent](https://wikidocs.net/346055)를 AI 개인비서와 역할형 에이전트 팀으로 오래 운영하려면 좋은 원고보다 먼저 필요한 것이 있다. 다시 막히지 않게 만드는 체크리스트, 시스템을 옮길 때 기준을 잃지 않게 하는 마이그레이션 절차, 문제가 생겼을 때 순서대로 회복하는 복구 플레이북이다.
 
 8장은 앞 장에서 정리한 운영 FAQ와 실패 패턴을 실행 가능한 순서로 바꾼다. 질문이 반복되면 FAQ가 되고, FAQ가 반복되면 체크리스트가 되고, 체크리스트가 실제 장애를 만났을 때 복구 플레이북이 된다.
 
@@ -15,16 +15,16 @@
 
 ## 왜 체크리스트가 필요한가
 
-AI 업무 자동화는 한 번 성공했다고 끝나지 않는다. 오늘은 잘 된 cron이 내일은 gateway 문제로 멈출 수 있고, 같은 하비라도 profile이 다르면 다른 기억처럼 느껴질 수 있다. [WikiDocs](07-why-we-write-the-wiki-first.md) 발행도 글만 잘 쓰면 끝나는 것이 아니라 TOC, 이미지, 전자책 규칙, GitHub push까지 이어진다.
+AI 업무 자동화는 한 번 성공했다고 끝나지 않는다. 오늘은 잘 된 cron이 내일은 gateway 문제로 멈출 수 있고, 같은 하비라도 profile이 다르면 다른 기억처럼 느껴질 수 있다. [WikiDocs](https://wikidocs.net/345908) 발행도 글만 잘 쓰면 끝나는 것이 아니라 TOC, 이미지, 전자책 규칙, GitHub push까지 이어진다.
 
 이럴 때 필요한 것은 긴 설명서가 아니라 먼저 볼 순서다. 체크리스트와 복구 플레이북은 “무엇이 중요한가”를 설명하기보다 “지금 무엇부터 확인할 것인가”를 정한다.
 
 ## 이 장에서 얻을 기준
 
 - 시행착오는 사건 기록으로 끝내지 않고 재사용 가능한 체크리스트로 바꾼다.
-- 복구는 감으로 하지 않고 증상 분류, process 확인, [profile](03-why-same-harvey-feels-like-different-memory.md)/runtime 경계 확인 순서로 진행한다.
+- 복구는 감으로 하지 않고 증상 분류, process 확인, [profile](https://wikidocs.net/345899)/runtime 경계 확인 순서로 진행한다.
 - 체크리스트는 길게 만들지 않고 실제 작업자가 바로 움직일 수 있게 쓴다.
-- [OpenClaw에서 Hermes로](01-why-we-moved-from-openclaw-to-hermes.md) 넘어올 때는 이름 변경보다 source of truth 정리가 먼저다.
+- [OpenClaw에서 Hermes로](https://wikidocs.net/345889) 넘어올 때는 이름 변경보다 source of truth 정리가 먼저다.
 - 실행 후에는 반드시 검증, 커밋, 공유 위치 업데이트까지 확인한다.
 
 ## 다음 장으로 가기 전 체크 질문
@@ -35,6 +35,6 @@ AI 업무 자동화는 한 번 성공했다고 끝나지 않는다. 오늘은 �
 
 ## 이어서 읽기
 
-- 시행착오를 재사용 기준으로 바꾸는 방법은 [시행착오를 운영 체크리스트로 바꾸는 법](06-how-to-turn-stumbles-into-checklists.md)에서 시작한다.
-- 장애와 복구의 순서는 [복구 플레이북은 왜 문서보다 순서가 중요할까](20-why-recovery-playbooks-are-about-order-not-just-docs.md), [Hermes Agent 운영 체크리스트는 어떻게 써야 할까](21-how-to-make-hermes-operation-checklists-actually-useful.md)를 이어서 본다.
-- OpenClaw 전환의 실제 점검 기준은 [OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](25-why-openclaw-to-hermes-needed-a-migration-checklist.md)에서 확인한다.
+- 시행착오를 재사용 기준으로 바꾸는 방법은 [시행착오를 운영 체크리스트로 바꾸는 법](https://wikidocs.net/345917)에서 시작한다.
+- 장애와 복구의 순서는 [복구 플레이북은 왜 문서보다 순서가 중요할까](https://wikidocs.net/345918), [Hermes Agent 운영 체크리스트는 어떻게 써야 할까](https://wikidocs.net/345919)를 이어서 본다.
+- OpenClaw 전환의 실제 점검 기준은 [OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](https://wikidocs.net/345920)에서 확인한다.

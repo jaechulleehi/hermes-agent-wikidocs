@@ -1,6 +1,6 @@
 ## 6장. WikiDocs/블로그/강의 콘텐츠 시스템
 
-[Hermes Agent](00-hermes-agent-core-concepts.md) 업무 자동화가 진짜 힘을 내는 지점은 결과물이 한 번 쓰고 사라지지 않을 때다. 조사 결과는 WikiDocs 원고가 되고, WikiDocs 원고는 블로그와 강의로 재구성되고, 실제 운영에서 생긴 시행착오는 다시 위키로 돌아와야 한다.
+[Hermes Agent](https://wikidocs.net/346055) 업무 자동화가 진짜 힘을 내는 지점은 결과물이 한 번 쓰고 사라지지 않을 때다. 조사 결과는 WikiDocs 원고가 되고, WikiDocs 원고는 블로그와 강의로 재구성되고, 실제 운영에서 생긴 시행착오는 다시 위키로 돌아와야 한다.
 
 6장은 이 콘텐츠 순환 구조를 다룬다. Obsidian LLM Wiki, WikiDocs, 블로그, 강의, 이미지 제작을 따로 보지 않고 하나의 콘텐츠 시스템으로 묶는다. 핵심은 “많이 발행하기”가 아니라 “한 번 얻은 지식과 시행착오를 여러 채널에서 다시 쓸 수 있게 구조화하기”다.
 
@@ -17,7 +17,7 @@
 
 콘텐츠 자동화는 “조사한 내용을 바로 블로그로 바꾸면 된다”로 끝나지 않는다. 조사 결과는 넓고, 블로그는 선명해야 하며, WikiDocs는 오래 읽혀야 하고, 강의는 순서와 장면이 필요하다.
 
-그래서 역할을 나눠야 한다. 방울이는 근거와 후보를 넓게 모으고, 뽀동이는 WikiDocs 구조로 정리하고, [하망이](28-how-image-agent-creates-wikidocs-visuals.md)는 필요한 이미지를 만들고, 하비는 전체 흐름과 발행 위치를 판단한다.
+그래서 역할을 나눠야 한다. 방울이는 근거와 후보를 넓게 모으고, 뽀동이는 WikiDocs 구조로 정리하고, [하망이](https://wikidocs.net/345989)는 필요한 이미지를 만들고, 하비는 전체 흐름과 발행 위치를 판단한다.
 
 ## 이 장에서 얻을 기준
 
@@ -31,10 +31,10 @@
 
 지금 만든 콘텐츠는 한 번 쓰고 끝나는 산출물인가, 아니면 WikiDocs/블로그/강의/이미지로 다시 쓰일 수 있는 운영 자산인가?
 
-다음 장에서는 이렇게 쌓인 운영 과정에서 자주 나오는 FAQ, 실패 패턴, [멀티봇](15-why-multibot-threads-get-noisy.md) 규칙을 정리한다.
+다음 장에서는 이렇게 쌓인 운영 과정에서 자주 나오는 FAQ, 실패 패턴, [멀티봇](https://wikidocs.net/345913) 규칙을 정리한다.
 
 ## 이어서 읽기
 
-- 운영 기록을 지식 자산으로 바꾸는 기준은 [Obsidian LLM Wiki는 운영 기록을 어떻게 살릴까](11-how-to-use-obsidian-llm-wiki-in-real-operations.md)에서 시작한다.
-- 공개 원본과 채널별 재구성의 기준은 [왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까](07-why-we-write-the-wiki-first.md), [좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](08-why-good-research-does-not-automatically-become-a-good-blog.md)를 이어서 본다.
-- 발행 흐름의 실제 사례는 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](32-github-wikidocs-content-publishing-workflow.md)에서 확인할 수 있다.
+- 운영 기록을 지식 자산으로 바꾸는 기준은 [Obsidian LLM Wiki는 운영 기록을 어떻게 살릴까](https://wikidocs.net/345905)에서 시작한다.
+- 공개 원본과 채널별 재구성의 기준은 [왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까](https://wikidocs.net/345908), [좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](https://wikidocs.net/345909)를 이어서 본다.
+- 발행 흐름의 실제 사례는 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서 확인할 수 있다.

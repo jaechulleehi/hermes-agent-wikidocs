@@ -1,8 +1,8 @@
 ## 왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까
 
-우리는 [Hermes Agent](00-hermes-agent-core-concepts.md) 콘텐츠를 만들 때 WikiDocs를 먼저 쓰고, 블로그와 강의는 나중에 뽑는 흐름을 기준으로 둔다. 이유는 간단하다. WikiDocs는 책의 구조를 만들고, 블로그는 유입과 메시지를 만들고, 강의는 학습 순서를 만든다.
+우리는 [Hermes Agent](https://wikidocs.net/346055) 콘텐츠를 만들 때 WikiDocs를 먼저 쓰고, 블로그와 강의는 나중에 뽑는 흐름을 기준으로 둔다. 이유는 간단하다. WikiDocs는 책의 구조를 만들고, 블로그는 유입과 메시지를 만들고, 강의는 학습 순서를 만든다.
 
-처음부터 블로그나 강의로 시작하면 빠르게 보일 수 있다. 하지만 시간이 지나면 원본이 흩어지고, 같은 설명을 여러 채널에서 다시 고쳐야 한다. GitHub 연동 WikiDocs를 [source of truth](13-what-to-do-with-legacy-while-keeping-current-truth-clear.md)로 두면 이 문제를 줄일 수 있다.
+처음부터 블로그나 강의로 시작하면 빠르게 보일 수 있다. 하지만 시간이 지나면 원본이 흩어지고, 같은 설명을 여러 채널에서 다시 고쳐야 한다. GitHub 연동 WikiDocs를 [source of truth](https://wikidocs.net/345915)로 두면 이 문제를 줄일 수 있다.
 
 ## 왜 강의부터 만들면 남는 게 적을까
 
@@ -28,13 +28,13 @@ WikiDocs를 먼저 쓰면 같은 원천을 여러 채널로 바꿀 수 있다.
 
 Hermes Agent 책 작업도 처음에는 블로그 1~27편이 있었다. 그대로 WikiDocs에 옮기면 페이지는 채워진다. 하지만 책으로 읽히려면 순서, 제목, 첫 문단, FAQ, 다음 링크를 다시 잡아야 했다.
 
-그래서 로이드는 [GitHub](32-github-wikidocs-content-publishing-workflow.md) 연동 WikiDocs를 메인으로 두고, 기존 블로그는 아카이브와 유입용 허브에 가깝게 두는 방향을 골랐다. 뽀동이는 장별로 원고를 책형으로 다시 정리하고, 검증 후 커밋/푸시하는 흐름을 맡았다.
+그래서 로이드는 [GitHub](https://wikidocs.net/345994) 연동 WikiDocs를 메인으로 두고, 기존 블로그는 아카이브와 유입용 허브에 가깝게 두는 방향을 골랐다. 뽀동이는 장별로 원고를 책형으로 다시 정리하고, 검증 후 커밋/푸시하는 흐름을 맡았다.
 
 ## 운영 기준
 
 콘텐츠를 만들 때는 아래 순서가 안정적이다.
 
-1. 원천 기록을 [Obsidian](11-how-to-use-obsidian-llm-wiki-in-real-operations.md)이나 session에서 찾는다.
+1. 원천 기록을 [Obsidian](https://wikidocs.net/345905)이나 session에서 찾는다.
 2. WikiDocs 장과 페이지 구조로 정리한다.
 3. 독자 문제와 첫 답변을 선명하게 만든다.
 4. FAQ와 체크리스트를 넣어 검색/AI 인용에 강하게 만든다.
@@ -56,4 +56,4 @@ WikiDocs에서 장 흐름과 독자 질문이 어느 정도 잡힌 뒤가 좋다
 
 다음 글에서는 좋은 조사 결과가 왜 바로 좋은 글이 되지 않는지 다룬다.
 
-[다음 글: 좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](08-why-good-research-does-not-automatically-become-a-good-blog.md)
+[다음 글: 좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](https://wikidocs.net/345909)

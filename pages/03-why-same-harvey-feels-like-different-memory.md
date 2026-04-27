@@ -1,8 +1,8 @@
 ## 같은 AI 개인비서인데 기억은 왜 다르게 느껴질까
 
-같은 하비처럼 보여도 기억이 다르게 느껴질 수 있다. 이유는 단순하다. [Hermes Agent](00-hermes-agent-core-concepts.md)에서 기억은 하나의 통이 아니라 session, memory, skill, profile, state가 나뉜 구조로 움직이기 때문이다.
+같은 하비처럼 보여도 기억이 다르게 느껴질 수 있다. 이유는 단순하다. [Hermes Agent](https://wikidocs.net/346055)에서 기억은 하나의 통이 아니라 session, memory, skill, profile, state가 나뉜 구조로 움직이기 때문이다.
 
-사용자는 보통 “하비가 기억하겠지”라고 생각한다. 하지만 실제 운영에서는 어떤 대화에서 나온 정보인지, 장기 memory로 저장됐는지, [skill](10-when-and-how-to-manage-skills-in-hermes.md)로 남았는지, 현재 profile이 같은지에 따라 결과가 달라진다. 그래서 기억 문제는 성격 문제가 아니라 경계 문제로 봐야 한다.
+사용자는 보통 “하비가 기억하겠지”라고 생각한다. 하지만 실제 운영에서는 어떤 대화에서 나온 정보인지, 장기 memory로 저장됐는지, [skill](https://wikidocs.net/345904)로 남았는지, 현재 profile이 같은지에 따라 결과가 달라진다. 그래서 기억 문제는 성격 문제가 아니라 경계 문제로 봐야 한다.
 
 ## 기억은 하나가 아니라 층이다
 
@@ -14,11 +14,11 @@
 | profile | 에이전트의 정체성, 도구, 상태 경계 | 이름이 같으면 같은 상태라고 생각함 |
 | state | 실제 실행 기록과 내부 상태 | 눈에 보이지 않아 문제 원인을 놓침 |
 
-이 층을 구분해야 “왜 같은 [AI 개인비서](00-ai-chatbot-vs-ai-personal-assistant.md)인데 다르게 답하지?”라는 질문이 풀린다.
+이 층을 구분해야 “왜 같은 [AI 개인비서](https://wikidocs.net/345923)인데 다르게 답하지?”라는 질문이 풀린다.
 
 ## 실제로 헷갈리는 순간
 
-예를 들어 로이드가 [하비](02-why-harvey-is-the-front-door.md)에게 이렇게 말했다고 하자.
+예를 들어 로이드가 [하비](https://wikidocs.net/345892)에게 이렇게 말했다고 하자.
 
 ```text
 앞으로 WikiDocs 글에서는 구분할 때 /를 써.
@@ -61,4 +61,4 @@ memory는 기억해야 할 사실이고, skill은 반복해서 수행할 절차�
 
 다음 글에서는 파일은 분명 있는데 도구가 못 읽는 문제를 다룬다.
 
-[다음 글: 파일은 있는데 도구는 왜 못 읽을까](04-why-tools-cannot-read-files-that-exist.md)
+[다음 글: 파일은 있는데 도구는 왜 못 읽을까](https://wikidocs.net/345900)

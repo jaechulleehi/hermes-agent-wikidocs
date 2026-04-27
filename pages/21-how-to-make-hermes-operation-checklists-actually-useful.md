@@ -1,8 +1,8 @@
 ## Hermes Agent 운영 체크리스트는 어떻게 써야 할까
 
-[Hermes Agent](00-hermes-agent-core-concepts.md) 운영 체크리스트는 길게 쓰는 문서가 아니다. AI 개인비서, 역할형 에이전트, MCP, cron, WikiDocs 발행처럼 여러 요소가 얽힐 때 먼저 확인할 순서를 짧게 고정하는 도구다.
+[Hermes Agent](https://wikidocs.net/346055) 운영 체크리스트는 길게 쓰는 문서가 아니다. AI 개인비서, 역할형 에이전트, MCP, cron, WikiDocs 발행처럼 여러 요소가 얽힐 때 먼저 확인할 순서를 짧게 고정하는 도구다.
 
-체크리스트가 실제로 도움이 되려면 설명보다 행동이 보여야 한다. “메모리를 확인한다”보다 “[session](03-why-same-harvey-feels-like-different-memory.md) 내용인지 memory 저장 대상인지 나눈다”가 낫고, “발행을 확인한다”보다 “TOC 링크, 이미지 경로, H1 사용 여부를 검증한다”가 낫다.
+체크리스트가 실제로 도움이 되려면 설명보다 행동이 보여야 한다. “메모리를 확인한다”보다 “[session](https://wikidocs.net/345899) 내용인지 memory 저장 대상인지 나눈다”가 낫고, “발행을 확인한다”보다 “TOC 링크, 이미지 경로, H1 사용 여부를 검증한다”가 낫다.
 
 ## 왜 체크리스트는 많은데도 잘 안 쓰일까
 
@@ -12,7 +12,7 @@
 - 설명은 많은데 실제 확인 항목이 없다.
 - 누가, 언제, 어떤 도구로 확인할지 빠져 있다.
 
-Hermes Agent 운영에서는 이 문제가 더 크게 드러난다. 하비가 메인 창구인지, [방울이](23-where-bangwooli-research-agent-is-strong-and-where-it-wobbles.md)에게 조사시킬지, 뽀동이가 문서화할지, 봉구가 실행 검증할지에 따라 체크리스트의 모양도 달라진다.
+Hermes Agent 운영에서는 이 문제가 더 크게 드러난다. 하비가 메인 창구인지, [방울이](https://wikidocs.net/345895)에게 조사시킬지, 뽀동이가 문서화할지, 봉구가 실행 검증할지에 따라 체크리스트의 모양도 달라진다.
 
 ## 좋은 체크리스트의 조건
 
@@ -28,7 +28,7 @@ Hermes Agent 운영에서는 이 문제가 더 크게 드러난다. 하비가 �
 
 ## 실제 운영 체크리스트 예시
 
-[WikiDocs](07-why-we-write-the-wiki-first.md) 페이지를 고칠 때는 이렇게 쓴다.
+[WikiDocs](https://wikidocs.net/345908) 페이지를 고칠 때는 이렇게 쓴다.
 
 ```text
 1. 요청한 장과 관련된 파일만 수정했는가
@@ -72,4 +72,4 @@ Hermes Agent 운영에서는 이 문제가 더 크게 드러난다. 하비가 �
 
 다음 글에서는 OpenClaw에서 Hermes로 넘어올 때 왜 전환 체크리스트가 필요했는지 다룬다.
 
-[다음 글: OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](25-why-openclaw-to-hermes-needed-a-migration-checklist.md)
+[다음 글: OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](https://wikidocs.net/345920)

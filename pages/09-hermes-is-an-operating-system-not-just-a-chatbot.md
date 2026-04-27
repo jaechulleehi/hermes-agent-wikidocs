@@ -2,12 +2,12 @@
 
 ![Hermes Agent는 단순 챗봇이 아니라 운영 시스템이다](../assets/how-image-agent-creates-wikidocs-visuals/ch1-4-hermes-operating-system-codex.png)
 
-> 이 글은 **에르메스 에이전트([Hermes Agent](00-hermes-agent-core-concepts.md))**를 실제 업무 시스템으로 운영하며 정리한 실전 기록입니다.
+> 이 글은 **에르메스 에이전트([Hermes Agent](https://wikidocs.net/346055))**를 실제 업무 시스템으로 운영하며 정리한 실전 기록입니다.
 
 
 ## 처음에는 챗봇처럼 보였다
 
-겉으로 보면 Hermes도 그냥 대화를 잘하는 AI처럼 보일 수 있습니다. 질문을 받고 답하고, 도구를 쓰고, 메모를 남기니까요. 그런데 실제로는 이걸 챗봇이라고만 보면 중요한 걸 놓칩니다. 에르메스 에이전트(Hermes Agent)의 핵심은 답변 한 번의 품질보다 **요청을 어떻게 해석하고, 누가 조사하고, 누가 정리하고, 어떤 프로필과 기억을 쓰고, 무엇을 검증하고, 무엇을 기록으로 남길지**를 하나의 업무 자동화 구조로 묶었다는 데 있습니다. 그래서 Hermes는 단순 챗봇이라기보다 **AI 개인비서와 [역할형 에이전트](03-role-based-agent-splitting.md)가 함께 움직이는 운영 시스템**에 더 가깝습니다.
+겉으로 보면 Hermes도 그냥 대화를 잘하는 AI처럼 보일 수 있습니다. 질문을 받고 답하고, 도구를 쓰고, 메모를 남기니까요. 그런데 실제로는 이걸 챗봇이라고만 보면 중요한 걸 놓칩니다. 에르메스 에이전트(Hermes Agent)의 핵심은 답변 한 번의 품질보다 **요청을 어떻게 해석하고, 누가 조사하고, 누가 정리하고, 어떤 프로필과 기억을 쓰고, 무엇을 검증하고, 무엇을 기록으로 남길지**를 하나의 업무 자동화 구조로 묶었다는 데 있습니다. 그래서 Hermes는 단순 챗봇이라기보다 **AI 개인비서와 [역할형 에이전트](https://wikidocs.net/345925)가 함께 움직이는 운영 시스템**에 더 가깝습니다.
 
 ## 이 글의 답
 
@@ -18,7 +18,7 @@ Hermes를 운영 시스템으로 봐야 하는 이유는,
 - 메인 창구가 요청 해석과 라우팅을 책임진다.
 - 역할 분리형 구조가 조사/정리/최종 판단을 나눈다.
 - 프로필은 캐릭터가 아니라 상태 저장 단위다.
-- 기억은 [session](03-why-same-harvey-feels-like-different-memory.md) / memory / skill / identity로 레이어가 나뉜다.
+- 기억은 [session](https://wikidocs.net/345899) / memory / skill / identity로 레이어가 나뉜다.
 - 도구 실행과 기록 자산화까지 연결되어야 실제 운영이 된다.
 
 즉,
@@ -39,7 +39,7 @@ Hermes를 운영 시스템으로 봐야 하는 이유는,
 - 누가 이 요청을 먼저 받는가
 - 조사와 정리를 같은 방식으로 처리해도 되는가
 - 어떤 profile이 살아 있는가
-- 지금의 답이 session 때문인가 memory 때문인가 [skill](10-when-and-how-to-manage-skills-in-hermes.md) 때문인가
+- 지금의 답이 session 때문인가 memory 때문인가 [skill](https://wikidocs.net/345904) 때문인가
 - 실제로 확인하고 실행했는가
 - 이 결과를 나중에 다시 찾을 수 있게 남겼는가
 
@@ -238,4 +238,4 @@ config, state DB, session history, installed skills가 실제로 달라질 수 �
 
 이제 Hermes를 운영 시스템으로 보는 관점은 잡혔다. 다음 글에서는 OpenClaw에서 Hermes로 넘어온 이유와, 그 전환이 단순 리브랜딩이 아니라 운영 기준점 재정리였던 이유를 다룬다.
 
-[다음 글: OpenClaw에서 Hermes로 왜 넘어왔나](01-why-we-moved-from-openclaw-to-hermes.md)
+[다음 글: OpenClaw에서 Hermes로 왜 넘어왔나](https://wikidocs.net/345889)

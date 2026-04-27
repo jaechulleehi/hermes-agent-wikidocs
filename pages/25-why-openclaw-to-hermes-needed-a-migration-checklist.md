@@ -1,16 +1,16 @@
 ## OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까
 
-[OpenClaw에서 Hermes로](01-why-we-moved-from-openclaw-to-hermes.md) 넘어오는 일은 이름만 바꾸는 작업이 아니었다. AI 개인비서 운영 기준, 역할형 에이전트 분리, memory/profile/runtime 경계, GitHub/WikiDocs source of truth까지 함께 정리해야 하는 마이그레이션이었다.
+[OpenClaw에서 Hermes로](https://wikidocs.net/345889) 넘어오는 일은 이름만 바꾸는 작업이 아니었다. AI 개인비서 운영 기준, 역할형 에이전트 분리, memory/profile/runtime 경계, GitHub/WikiDocs source of truth까지 함께 정리해야 하는 마이그레이션이었다.
 
-그래서 전환에는 [체크리스트](21-how-to-make-hermes-operation-checklists-actually-useful.md)가 필요했다. “이제 Hermes를 쓴다”는 선언보다 중요한 것은 무엇이 어디에 남아 있고, 어떤 프로세스가 실제로 돌고 있으며, 어떤 문서를 기준으로 믿을지 정하는 일이었다.
+그래서 전환에는 [체크리스트](https://wikidocs.net/345919)가 필요했다. “이제 Hermes를 쓴다”는 선언보다 중요한 것은 무엇이 어디에 남아 있고, 어떤 프로세스가 실제로 돌고 있으며, 어떤 문서를 기준으로 믿을지 정하는 일이었다.
 
 ## 왜 시스템 전환은 감으로 처리되기 쉬울까
 
 전환 작업은 겉으로 보면 간단해 보인다. 이름을 바꾸고, 설정을 옮기고, 새 도구를 실행하면 된다고 느끼기 쉽다. 하지만 실제 운영에서는 이전 시스템의 흔적이 곳곳에 남는다.
 
 - 예전 이름이 문서에 남아 있다.
-- [profile](03-why-same-harvey-feels-like-different-memory.md)과 state가 새 기준으로 정리되지 않았다.
-- autostart나 [gateway](12-always-on-gateway-is-more-confusing-than-it-looks.md)가 이전 흐름을 보고 있다.
+- [profile](https://wikidocs.net/345899)과 state가 새 기준으로 정리되지 않았다.
+- autostart나 [gateway](https://wikidocs.net/345906)가 이전 흐름을 보고 있다.
 - memory에 남길 것과 skill로 옮길 것이 섞여 있다.
 - GitHub, WikiDocs, Obsidian 중 무엇이 원본인지 불분명하다.
 
@@ -67,4 +67,4 @@ OpenClaw에서 Hermes로 넘어올 때는 아래 순서로 본다.
 
 다음 장에서는 개인 운영을 넘어 조직에서 AI 개인비서와 역할형 에이전트 구조를 어떻게 도입하고 확장할 수 있는지 다룬다.
 
-[다음 장: 조직 도입과 운영 확장](09-chapter-9.md)
+[다음 장: 조직 도입과 운영 확장](https://wikidocs.net/345927)
