@@ -1,5 +1,7 @@
 ## 같은 AI 개인비서인데 기억은 왜 다르게 느껴질까
 
+![session memory skill profile로 나뉘는 기억 구조](../assets/how-image-agent-creates-wikidocs-visuals/ch4-1-memory-layers-codex.png)
+
 같은 하비처럼 보여도 기억이 다르게 느껴질 수 있다. 이유는 단순하다. [Hermes Agent](https://wikidocs.net/346055)에서 기억은 하나의 통이 아니라 session, memory, skill, profile, state가 나뉜 구조로 움직이기 때문이다.
 
 사용자는 보통 “하비가 기억하겠지”라고 생각한다. 하지만 실제 운영에서는 어떤 대화에서 나온 정보인지, 장기 memory로 저장됐는지, [skill](https://wikidocs.net/345904)로 남았는지, 현재 profile이 같은지에 따라 결과가 달라진다. 그래서 기억 문제는 성격 문제가 아니라 경계 문제로 봐야 한다.

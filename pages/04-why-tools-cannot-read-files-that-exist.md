@@ -1,5 +1,7 @@
 ## 파일은 있는데 도구는 왜 못 읽을까
 
+![사람 화면과 도구 경로 권한 동기화 차이](../assets/how-image-agent-creates-wikidocs-visuals/ch4-2-file-tool-path-boundary-codex.png)
+
 파일이 눈에 보이는데 도구가 못 읽는 일은 이상해 보인다. 하지만 [Hermes Agent](https://wikidocs.net/346055) 업무 자동화에서는 자주 생기는 문제다. 사람이 Finder, Obsidian, iCloud에서 보는 파일 위치와 에이전트 도구가 접근하는 실행 경로가 다를 수 있기 때문이다.
 
 이 문제는 “파일이 없다”와 “파일은 있는데 도구가 접근하지 못한다”를 나눠야 풀린다. 같은 증상처럼 보여도 원인은 경로, 권한, 동기화, 실행 환경, [profile](https://wikidocs.net/345899) 설정으로 갈린다.

@@ -1,5 +1,7 @@
 ## 4장. 기억/컨텍스트/프로필 경계
 
+![4장 기억 컨텍스트 프로필 경계를 나누는 구조](../assets/images/chapter-heroes/ch04-memory-context-profile-boundary-codex.png)
+
 AI 개인비서와 [역할형 에이전트](https://wikidocs.net/345925)를 나누기 시작하면 다음 문제는 기억이다. 같은 하비처럼 보여도 어떤 profile을 쓰는지, 어떤 session을 보고 있는지, 어떤 memory와 skill을 갖고 있는지에 따라 답이 달라진다.
 
 4장은 이 차이를 감정이나 성격 문제가 아니라 운영 경계 문제로 다룬다. [Hermes Agent](https://wikidocs.net/346055) 업무 자동화에서 기억/컨텍스트/프로필 경계가 흐려지면 사용자는 “분명 아까 말했는데 왜 모르지?”, “파일은 있는데 왜 못 읽지?”, “예전 OpenClaw 흔적은 지워야 하나?” 같은 문제를 반복해서 겪는다.

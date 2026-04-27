@@ -1,5 +1,7 @@
 ## 과거 유산과 현재 기준은 어떻게 나눌까
 
+![과거 유산을 보관하고 현재 기준 문서를 분리하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch4-3-legacy-vs-current-standard-codex.png)
+
 과거 유산은 무조건 지울 필요도, 현재 운영 문서에 계속 섞어둘 필요도 없다. 핵심은 archive/history에는 남기고, 현재 기준 문서에서는 [Hermes Agent](https://wikidocs.net/346055) 기준을 먼저 보이게 하는 것이다.
 
 [OpenClaw에서 Hermes로](https://wikidocs.net/345889) 넘어올 때도 이 문제가 있었다. 이름은 Hermes로 바뀌었지만 과거 파일, autostart 흔적, profile 이름, skill 설명, 문서 링크가 남아 있으면 사용자는 지금 기준이 무엇인지 헷갈린다.

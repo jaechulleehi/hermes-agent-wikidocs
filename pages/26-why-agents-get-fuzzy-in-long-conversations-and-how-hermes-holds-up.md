@@ -1,5 +1,7 @@
 ## 긴 대화에서 컨텍스트는 왜 흐려질까
 
+![긴 대화를 압축 회수 기록으로 정리하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch4-4-long-context-compaction-codex.png)
+
 긴 대화가 쌓이면 에이전트의 판단은 조금씩 흐려질 수 있다. 이유는 단순하다. 중요한 결정, 임시 작업, 오래 유지할 규칙, 감정 섞인 피드백, 파일 경로, 다음 액션이 한 대화 안에 함께 쌓이기 때문이다.
 
 [Hermes Agent](https://wikidocs.net/346055)는 session, memory, skill, profile, search, context compaction 같은 장치로 이 문제를 줄일 수 있다. 하지만 장치가 있다고 자동으로 안정되는 것은 아니다. 어떤 정보는 memory로, 어떤 절차는 skill로, 어떤 결과는 repo 문서로 옮겨야 한다.
