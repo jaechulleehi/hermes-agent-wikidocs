@@ -1,5 +1,7 @@
 ## 조사형 에이전트는 어디서 강하고 어디서 흔들릴까
 
+![조사형 에이전트가 근거와 출처를 모으고 결론을 보류하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch3-2-research-agent-strength-risk-codex.png)
+
 조사형 에이전트는 모르는 것을 넓히는 데 강하다. 공식 문서, 기존 블로그, 관련 사례, 반례를 빠르게 모을 수 있다. 우리 운영에서는 방울이가 이 역할에 가깝다.
 
 하지만 조사형 에이전트는 최종 판단자가 아니다. 근거를 모아야 할 때 결론부터 내리면 위험하다. 특히 [Hermes Agent](https://wikidocs.net/346055)처럼 공식 docs, 실제 운영 경험, 과거 OpenClaw 흔적이 섞인 주제에서는 조사 결과와 해석을 분리해야 한다.
