@@ -11,7 +11,7 @@
 
 ### 책 제목
 
-에르메스 에이전트(Hermes Agent) 업무 자동화: 나만의 AI 팀 만들기
+Hermes Agent 업무 자동화: AI 팀 만들기
 
 ### 부제
 
@@ -27,7 +27,7 @@ hermes-agent-wikidocs
 
 ### 책 설명
 
-에르메스 에이전트(Hermes Agent)를 기반으로 업무 자동화와 나만의 AI 팀을 만드는 실전 기록입니다. AI 개인비서를 메인 창구로 두고 조사·정리·실행 같은 역할형 에이전트와 함께 일하며, 메모리·세션·스킬·프로필 경계, Slack·Obsidian·Google Workspace·WikiDocs 연동, 반복 업무의 체크리스트화와 복구 흐름까지 정리합니다.
+에르메스 에이전트(Hermes Agent)를 기반으로 업무 자동화와 나만의 AI 팀을 만드는 실전 기록입니다. AI 개인비서를 메인 창구로 두고 조사/정리/실행 같은 역할형 에이전트와 함께 일하며, 메모리·세션·스킬·프로필 경계, Slack·Obsidian·Google Workspace·WikiDocs 연동, 반복 업무의 체크리스트화와 복구 흐름까지 정리합니다.
 
 ## 연결 후 로컬 작업
 
