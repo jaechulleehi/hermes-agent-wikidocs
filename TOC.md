@@ -1,6 +1,6 @@
 # 목차
 
-* [01. 왜 에르메스 에이전트(Hermes Agent)인가](pages/01-chapter-1.md)
+* [01. 왜 에르메스 에이전트 Ops(Hermes Agent Ops)인가](pages/01-chapter-1.md)
   * [01-1. 왜 우리는 OpenClaw에서 Hermes로 넘어왔나](pages/01-why-we-moved-from-openclaw-to-hermes.md)
   * [01-2. 에르메스는 단순 챗봇이 아니라 운영 시스템이다](pages/09-hermes-is-an-operating-system-not-just-a-chatbot.md)
 * [02. 메인 창구와 멀티 에이전트 역할 구조](pages/02-chapter-2.md)
