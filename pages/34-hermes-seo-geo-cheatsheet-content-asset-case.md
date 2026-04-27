@@ -73,3 +73,9 @@ Hermes Agent가 단순히 이미지를 만든 것이 아니라, 요청을 역할
 10장의 실제 운영 케이스들은 모두 같은 메시지로 이어진다. Hermes Agent는 한 번의 답변을 잘 만드는 도구가 아니라, 요청을 역할로 나누고, 결과를 검증하고, 반복 기준을 남기는 운영 시스템이다.
 
 이 책을 읽은 뒤 바로 시작할 수 있는 가장 작은 행동은 하나다. 지금 반복해서 하는 업무 하나를 골라 하비에게 맡기고, 방울이/뽀동이/하망이/봉구 중 어떤 역할이 필요한지 나눈 뒤, 결과를 체크리스트나 WikiDocs 페이지로 남기는 것이다.
+
+## 관련해서 이어서 읽기
+
+- 콘텐츠 자산화의 기본 기준은 [좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](08-why-good-research-does-not-automatically-become-a-good-blog.md)에서 먼저 잡을 수 있다.
+- GitHub와 WikiDocs를 source of truth와 공개 채널로 나누는 흐름은 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](32-github-wikidocs-content-publishing-workflow.md)에서 이어진다.
+- 이미지 제작 자체의 운영 기준은 [하망이와 WikiDocs 본문 이미지를 만드는 법](28-how-image-agent-creates-wikidocs-visuals.md)과 [하망이와 WikiDocs 이미지를 만든 실제 운영 케이스](29-hamangi-wikidocs-image-production-case.md)를 함께 보면 좋다.

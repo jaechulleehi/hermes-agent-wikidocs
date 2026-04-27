@@ -34,3 +34,9 @@ Hermes Agent는 기능 목록으로만 보면 잘 와닿지 않는다. 실제로
 이 책의 핵심은 “AI를 잘 쓰는 법”보다 “AI가 일하는 구조를 운영하는 법”에 가깝다. 좋은 AI 개인비서 하나로 시작해도, 실제 업무에서는 기억, 역할, 도구, 검증, 발행, 복구가 함께 움직인다.
 
 다음 요청이 들어오면 이 장의 케이스처럼 보면 된다. 어떤 흐름으로 나눌 것인가. 어떤 기준으로 검증할 것인가. 어디에 남겨 다음 사람이 다시 쓸 수 있게 할 것인가.
+
+## 이어서 읽기
+
+- 첫 케이스는 [하망이와 WikiDocs 이미지를 만든 실제 운영 케이스](29-hamangi-wikidocs-image-production-case.md)다. 이미지 요청이 제작/검수/발행 흐름으로 바뀌는 과정을 본다.
+- 자동화와 콘텐츠 발행이 이어지는 흐름은 [크론 조사에서 WikiDocs 발행까지 이어지는 AI 업무 자동화 케이스](30-cron-research-to-agent-content-workflow.md)에서 확인한다.
+- 책 전체의 핵심 사례 흐름은 [방울이 확장조사와 뽀동이 글쓰기는 어떻게 이어질까](31-bangwooli-ppodongi-content-handoff.md), [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](32-github-wikidocs-content-publishing-workflow.md), [Slack 스레드에서 하비가 일을 분배하는 방식](33-slack-thread-harvey-delegation-case.md)으로 이어진다.

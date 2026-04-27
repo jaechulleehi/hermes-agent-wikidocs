@@ -31,3 +31,9 @@ Hermes Agent를 AI 개인비서와 역할형 에이전트 팀으로 운영하면
 지금 겪는 문제는 새로운 문제가 아니라, 이미 있는 운영 질문의 변형인가?
 
 이 질문을 분류할 수 있으면 다음 장의 체크리스트, 마이그레이션, 복구 플레이북으로 이어갈 수 있다.
+
+## 이어서 읽기
+
+- 반복 질문을 분류하는 기준은 [Hermes Agent 운영 질문은 어떻게 분류할까](14-most-common-hermes-ops-questions-and-how-to-think.md)에서 먼저 본다.
+- 멀티봇 호출 규칙은 [멀티봇 스레드는 왜 쉽게 시끄러워질까](15-why-multibot-threads-get-noisy.md)에서 이어진다.
+- 실제 Slack 분배 사례는 [Slack 스레드에서 하비가 일을 분배하는 방식](33-slack-thread-harvey-delegation-case.md)과 함께 보면 흐름이 더 선명하다.

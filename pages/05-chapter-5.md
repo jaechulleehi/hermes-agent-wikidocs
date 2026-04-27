@@ -33,3 +33,9 @@ MCP도 마찬가지다. MCP 서버가 붙었다고 해서 바로 업무 자동�
 지금 붙이려는 것은 한 번 실행할 도구인가, 반복할 절차인가, 정해진 시간에 돌아야 할 자동화인가, 상시 대기해야 할 gateway인가?
 
 이 구분이 잡히면 다음 장의 WikiDocs, 블로그, 강의 콘텐츠 시스템도 훨씬 안정적으로 이어진다.
+
+## 이어서 읽기
+
+- 외부 도구 연동의 첫 기준은 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](05-why-google-workspace-integration-takes-longer-than-expected.md)에서 확인한다.
+- 반복 절차와 자동화의 경계는 [Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](10-when-and-how-to-manage-skills-in-hermes.md), [Daily Briefing Bot은 어떤 업무 자동화 패턴일까](05-daily-briefing-bot-workflow.md)를 이어서 보면 좋다.
+- 실제 자동화가 콘텐츠 발행으로 이어지는 흐름은 [크론 조사에서 WikiDocs 발행까지 이어지는 AI 업무 자동화 케이스](30-cron-research-to-agent-content-workflow.md)에서 확인할 수 있다.

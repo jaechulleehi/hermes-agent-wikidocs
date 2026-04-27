@@ -36,3 +36,9 @@ AI 개인비서 메인 창구가 잡히면 다음 문제는 역할 분리다. �
 지금 맡기려는 일은 조사, 정리, 실행 중 어디에 가까운가?
 
 이 질문에 답할 수 있어야 역할형 에이전트를 제대로 나눌 수 있다. 다음 장에서는 이 역할들이 안정적으로 일하려면 기억, 컨텍스트, 프로필 경계를 어떻게 나눠야 하는지 다룬다.
+
+## 이어서 읽기
+
+- 먼저 [역할형 에이전트는 어떤 기준으로 나눌까](03-role-based-agent-splitting.md)에서 역할 분리의 기준을 잡는다.
+- 조사형과 정리형의 차이는 [조사형 에이전트는 어디서 강하고 어디서 흔들릴까](23-where-bangwooli-research-agent-is-strong-and-where-it-wobbles.md), [정리형 에이전트는 어디서 강하고 어디서 흔들릴까](24-where-ppodongi-organization-agent-is-strong-and-where-it-wobbles.md)를 이어서 본다.
+- 실제 handoff 흐름은 [방울이 확장조사와 뽀동이 글쓰기는 어떻게 이어질까](31-bangwooli-ppodongi-content-handoff.md)에서 확인할 수 있다.

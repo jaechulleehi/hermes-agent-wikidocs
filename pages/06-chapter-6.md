@@ -32,3 +32,9 @@ Hermes Agent 업무 자동화가 진짜 힘을 내는 지점은 결과물이 한
 지금 만든 콘텐츠는 한 번 쓰고 끝나는 산출물인가, 아니면 WikiDocs/블로그/강의/이미지로 다시 쓰일 수 있는 운영 자산인가?
 
 다음 장에서는 이렇게 쌓인 운영 과정에서 자주 나오는 FAQ, 실패 패턴, 멀티봇 규칙을 정리한다.
+
+## 이어서 읽기
+
+- 운영 기록을 지식 자산으로 바꾸는 기준은 [Obsidian LLM Wiki는 운영 기록을 어떻게 살릴까](11-how-to-use-obsidian-llm-wiki-in-real-operations.md)에서 시작한다.
+- 공개 원본과 채널별 재구성의 기준은 [왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까](07-why-we-write-the-wiki-first.md), [좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](08-why-good-research-does-not-automatically-become-a-good-blog.md)를 이어서 본다.
+- 발행 흐름의 실제 사례는 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](32-github-wikidocs-content-publishing-workflow.md)에서 확인할 수 있다.

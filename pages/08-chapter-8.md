@@ -32,3 +32,9 @@ AI 업무 자동화는 한 번 성공했다고 끝나지 않는다. 오늘은 �
 지금 남긴 문서는 다음 사람이 같은 문제를 만났을 때 바로 순서대로 따라갈 수 있는가?
 
 이 질문에 답할 수 있으면 9장에서 조직 도입과 운영 확장으로 넘어갈 수 있다.
+
+## 이어서 읽기
+
+- 시행착오를 재사용 기준으로 바꾸는 방법은 [시행착오를 운영 체크리스트로 바꾸는 법](06-how-to-turn-stumbles-into-checklists.md)에서 시작한다.
+- 장애와 복구의 순서는 [복구 플레이북은 왜 문서보다 순서가 중요할까](20-why-recovery-playbooks-are-about-order-not-just-docs.md), [Hermes Agent 운영 체크리스트는 어떻게 써야 할까](21-how-to-make-hermes-operation-checklists-actually-useful.md)를 이어서 본다.
+- OpenClaw 전환의 실제 점검 기준은 [OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](25-why-openclaw-to-hermes-needed-a-migration-checklist.md)에서 확인한다.

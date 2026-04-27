@@ -33,3 +33,9 @@ AI 개인비서와 역할형 에이전트를 나누기 시작하면 다음 문�
 지금 문제는 기억 부족인가, 컨텍스트 혼선인가, 프로필 경계 문제인가?
 
 이 질문을 구분할 수 있어야 Hermes Agent를 안정적으로 운영할 수 있다. 다음 장에서는 이 경계 위에 MCP, cron, 외부 도구 자동화를 붙이는 방법을 다룬다.
+
+## 이어서 읽기
+
+- 먼저 [같은 AI 개인비서인데 기억은 왜 다르게 느껴질까](03-why-same-harvey-feels-like-different-memory.md)에서 session, memory, skill, profile의 차이를 잡는다.
+- 파일 접근 문제는 [파일은 있는데 도구는 왜 못 읽을까](04-why-tools-cannot-read-files-that-exist.md)에서 이어서 본다.
+- source of truth와 과거 유산 정리는 [과거 유산과 현재 기준은 어떻게 나눌까](13-what-to-do-with-legacy-while-keeping-current-truth-clear.md)를 함께 읽으면 좋다.
