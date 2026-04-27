@@ -22,7 +22,7 @@ Hermes를 운영 시스템으로 봐야 하는 이유는,
 즉,
 이건 똑똑한 답변 하나의 문제가 아니라 **지속적으로 굴러가는 운영 구조를 어떻게 만들 것인가**의 문제입니다.
 
-![에르메스는 단순 챗봇이 아니라 운영 시스템이다](../assets/hermes-is-an-operating-system-not-just-a-chatbot/og-card-final.png)
+![Hermes Agent는 단순 챗봇이 아니라 운영 시스템이다](../assets/how-image-agent-creates-wikidocs-visuals/ch1-4-hermes-operating-system-codex.png)
 
 
 ## 왜 챗봇이라고만 보면 자꾸 설명이 어긋날까
