@@ -1,118 +1,70 @@
-## OpenClaw에서 Hermes로 넘어올 때 체크리스트는 왜 필요했을까
+## OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까
 
-> 이 글은 **에르메스 에이전트(Hermes Agent)**를 실제 업무 시스템으로 운영하며 정리한 실전 기록입니다.
+OpenClaw에서 Hermes로 넘어오는 일은 이름만 바꾸는 작업이 아니었다. AI 개인비서 운영 기준, 역할형 에이전트 분리, memory/profile/runtime 경계, GitHub/WikiDocs source of truth까지 함께 정리해야 하는 마이그레이션이었다.
 
+그래서 전환에는 체크리스트가 필요했다. “이제 Hermes를 쓴다”는 선언보다 중요한 것은 무엇이 어디에 남아 있고, 어떤 프로세스가 실제로 돌고 있으며, 어떤 문서를 기준으로 믿을지 정하는 일이었다.
 
-## TL;DR
+## 왜 시스템 전환은 감으로 처리되기 쉬울까
 
-OpenClaw에서 Hermes로의 전환은 이름만 바꾸는 작업이 아니었습니다. 새 시스템을 켜는 동시에, old runtime/profile 경계/문서 기준점/LaunchAgent 같은 자동 실행 흔적까지 함께 정리해야 하는 운영 마이그레이션이었습니다. 그래서 이 전환에는 막연한 감각이 아니라 체크리스트가 필요했습니다.
+전환 작업은 겉으로 보면 간단해 보인다. 이름을 바꾸고, 설정을 옮기고, 새 도구를 실행하면 된다고 느끼기 쉽다. 하지만 실제 운영에서는 이전 시스템의 흔적이 곳곳에 남는다.
 
-## 이 글의 답
+- 예전 이름이 문서에 남아 있다.
+- profile과 state가 새 기준으로 정리되지 않았다.
+- autostart나 gateway가 이전 흐름을 보고 있다.
+- memory에 남길 것과 skill로 옮길 것이 섞여 있다.
+- GitHub, WikiDocs, Obsidian 중 무엇이 원본인지 불분명하다.
 
-답부터 말하면 이렇습니다.
-OpenClaw에서 Hermes로 넘어올 때 체크리스트가 필요했던 이유는, 전환의 핵심이 새 시스템 켜기보다 옛 기준과 옛 흔적을 어디까지 정리할지 결정하는 일에 있었기 때문입니다.
-핵심은 다섯 가지입니다.
-- 전환은 문서만 바꾸는 작업이 아니다.
-- 현재 실제로 무엇이 돌고 있는지부터 봐야 한다.
-- profile과 state.db 경계를 함께 봐야 체감 차이를 설명할 수 있다.
-- active source of truth와 legacy 보관층을 분리해야 한다.
-- LaunchAgent 같은 자동 실행 흔적을 안 정리하면 old runtime이 다시 살아난다.
+이 상태에서 전환을 끝냈다고 말하면 나중에 같은 문제가 다시 나온다.
 
-![OpenClaw에서 Hermes로 넘어올 때 체크리스트는 왜 필요했을까](../assets/why-openclaw-to-hermes-needed-a-migration-checklist/og-card-final.png)
+## 전환 체크리스트의 핵심
 
+| 영역 | 점검 질문 |
+|---|---|
+| 이름/정체성 | 현재 운영 기준 이름은 Hermes Agent로 통일됐는가 |
+| profile | 하비/방울이/뽀동이 같은 역할형 에이전트 profile이 분리됐는가 |
+| memory | 장기 선호와 임시 작업 기록이 섞이지 않았는가 |
+| skill | 반복 절차가 memory가 아니라 skill에 들어갔는가 |
+| runtime | 실제로 떠 있는 process와 gateway가 새 기준을 보고 있는가 |
+| source of truth | GitHub, WikiDocs, Obsidian, shared-memory의 역할이 정리됐는가 |
+| 발행 | 공개 문서와 전자책 기준이 새 구조에 맞는가 |
 
-## 왜 시스템 전환은 자꾸 감으로 처리되나
+이 표는 OpenClaw에서 Hermes로 넘어올 때뿐 아니라, 어떤 AI 업무 자동화 시스템을 바꿀 때도 쓸 수 있다.
 
-시스템 전환은 겉으로 보면 새 걸 켜고 옛 걸 끄는 일처럼 보입니다.
+## 실제 운영에서 중요했던 점
 
-하지만 실제 운영에서는 그렇게 단순하지 않습니다.
+가장 중요한 것은 기존 흔적을 무조건 지우지 않는 것이었다. OpenClaw 시절의 경험과 문서는 버릴 대상이 아니라, Hermes 운영 기준으로 다시 배치할 대상이었다.
 
-특히 OpenClaw에서 Hermes로 넘어갈 때는 문서, 프로필, 런타임, 자동 실행, memory/skill, shared-memory 기준점이 서로 얽혀 있었습니다.
+예를 들어 과거 블로그 초안은 그대로 두면 오래된 글 묶음이지만, GitHub 연동 WikiDocs 책 구조로 옮기면 AI 개인비서와 역할형 에이전트 운영서의 원천 자료가 된다. 기존 시행착오도 마찬가지다. 감으로 넘기면 과거 실수지만, 체크리스트로 바꾸면 다음 전환의 안전장치가 된다.
 
-이 상태에서 감으로 전환하면 active 문서는 Hermes인데 실제 runtime은 old system이 남아 있거나, profile 차이를 설명하지 못하거나, LaunchAgent가 old gateway를 다시 띄우는 식의 혼선이 생깁니다.
+## 마이그레이션 기준
 
-즉, 전환은 교체가 아니라 기준점 재정렬 작업에 가깝습니다.
+OpenClaw에서 Hermes로 넘어올 때는 아래 순서로 본다.
 
-![시스템 전환이 감으로 처리되면 생기는 문제](../assets/why-openclaw-to-hermes-needed-a-migration-checklist/article-figure-01-why-openclaw-to-hermes-needed-a-migration-checklist.png)
-
-
-## 체크리스트가 꼭 필요했던 이유
-
-이 전환에서 체크리스트가 필요했던 이유는 확인해야 할 층이 많았기 때문입니다.
-
-현재 상태 파악, 현재 운영 기준점 정하기, 프로필/저장소 경계 점검, identity 문서와 유산 정리, 런타임 흔적 정리까지 함께 봐야 했습니다.
-
-특히 state.db, sessions, skills, AGENTS/SOUL 차이를 봐야 체감 차이를 설명할 수 있었고, old dashboard나 LaunchAgent까지 같이 봐야 했습니다.
-
-즉, 체크리스트가 없으면 일부만 바꾸고 일부는 그대로 남는 반쪽 전환이 되기 쉬웠습니다.
-
-![전환 체크리스트가 다루는 층](../assets/why-openclaw-to-hermes-needed-a-migration-checklist/article-figure-02-why-openclaw-to-hermes-needed-a-migration-checklist.png)
-
-
-## 가장 흔한 실패는 무엇이었나
-
-가장 흔한 실패는 대체로 비슷했습니다.
-
-문서만 Hermes로 바꾸고 프로세스를 안 정리하거나, LaunchAgent를 남겨 두어 OpenClaw가 다시 뜨거나, profile/state.db 차이를 설명하지 못해 하비가 달라졌다고 오해하거나, current source of truth를 하나로 못 박지 못하는 경우였습니다.
-
-즉, 전환 실패의 본질은 기술 부족보다 층별 정리 순서 부족에 있었습니다.
-
-새 시스템을 세우는 일만 보고 old runtime과 기준점을 같이 정리하지 않으면 같은 혼선이 반복됩니다.
-
-![OpenClaw → Hermes 전환에서 자주 나온 실패](../assets/why-openclaw-to-hermes-needed-a-migration-checklist/article-figure-03-why-openclaw-to-hermes-needed-a-migration-checklist.png)
-
-
-## 그럼 좋은 전환은 어떻게 해야 하나
-
-좋은 전환의 기준은 생각보다 선명합니다.
-
-current active docs와 메인 창구를 Hermes 기준으로 고정하고, 유산은 archive/history/skill 층으로 적절히 밀어내고, 문서/프로세스/autostart를 같이 봐야 합니다.
-
-그리고 실제 OpenClaw 프로세스가 사라졌는지, Hermes만 응답하는지, 기대 profile이 맞는지까지 검증해야 합니다.
-
-좋은 전환은 새 이름을 붙이는 일이 아니라, 새 기준이 실제로 작동하는지 검증하는 일입니다.
-
-그래서 이 전환에는 체크리스트가 필요했습니다.
-
-
-## 우리가 실제로 세운 운영 원칙
-
-### 원칙 1. 현재 운영 기준점은 하나로 세운다.
-
-### 원칙 2. 유산은 지우기보다 적절한 층으로 옮긴다.
-
-### 원칙 3. 문서와 프로세스와 autostart를 같이 본다.
-
-### 원칙 4. profile과 state.db 차이를 반드시 설명 가능해야 한다.
-
-### 원칙 5. 전환은 실행 후 검증까지 끝내야 한다.
-
-
-## 결론
-
-OpenClaw에서 Hermes로 넘어올 때 체크리스트가 필요했던 이유는, 전환의 핵심이 새 시스템 켜기보다 옛 기준과 옛 흔적을 어디까지 정리할지 결정하는 일에 있었기 때문입니다.
-
-핵심은 이겁니다.
-**현재 운영 기준점은 하나로 세운다.**
-
+1. 현재 운영 기준 이름과 공개 표현을 정한다.
+2. profile, memory, skill, session의 경계를 다시 나눈다.
+3. 실제 실행 중인 process와 gateway를 확인한다.
+4. 기존 문서와 새 문서의 source of truth를 정한다.
+5. 역할형 에이전트의 책임을 다시 배치한다.
+6. 공개 콘텐츠의 제목, TOC, 첫 문단, FAQ를 새 기준으로 고친다.
+7. 전자책/WikiDocs 검증을 통과시킨다.
+8. 커밋/푸시 후 실제 배포 경로에서 확인한다.
 
 ## FAQ
 
-### 1. 왜 문서만 Hermes로 바꾸면 안 되나요?
+### 이름만 Hermes로 바꾸면 안 되나요?
 
-실제 runtime이나 LaunchAgent가 OpenClaw 기준으로 남아 있으면 사용자가 보는 체감과 문서 기준이 어긋나기 때문입니다.
+안 된다. 이름은 입구일 뿐이다. profile, memory, runtime, source of truth가 그대로 섞여 있으면 운영은 여전히 이전 구조에 묶인다.
 
-### 2. 유산은 다 지우는 게 맞나요?
+### 이전 OpenClaw 기록은 지우는 게 좋나요?
 
-반드시 그렇지는 않습니다. archive/history/skill 층으로 적절히 밀어내되, active 운영 문서에서는 current 기준이 먼저 보여야 합니다.
+무조건 지우지 않는다. 시행착오와 운영 기준은 Hermes 관점으로 재배치하고, 오래된 실행 흔적이나 혼란을 만드는 문서만 정리한다.
 
-### 3. 체크리스트에서 가장 먼저 봐야 할 것은 무엇인가요?
+### 마이그레이션은 언제 끝났다고 볼 수 있나요?
 
-지금 실제로 무엇이 돌고 있는지, 어느 profile이 응답 중인지부터 확인하는 것입니다.
+새 이름으로 실행되는 것만으로는 부족하다. 실제 작업 요청, 도구 실행, 문서 발행, 복구 절차가 모두 새 기준으로 검증되면 끝났다고 볼 수 있다.
 
+## 다음 장
 
-## 시리즈 이동
+다음 장에서는 개인 운영을 넘어 조직에서 AI 개인비서와 역할형 에이전트 구조를 어떻게 도입하고 확장할 수 있는지 다룬다.
 
-- [← 이전 글](24-where-ppodongi-organization-agent-is-strong-and-where-it-wobbles.md)
-- [구축 과정 허브로 돌아가기](/build-journey/)
-- [다음 글 →](26-why-agents-get-fuzzy-in-long-conversations-and-how-hermes-holds-up.md)
+[다음 장: 조직 도입과 운영 확장](09-chapter-9.md)
