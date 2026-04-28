@@ -43,6 +43,26 @@ HaloX 운영에서는 memory, shared-memory, HALOX Brain을 나눠 쓴다. memor
 - Obsidian 원장과 shared-memory 작업 패키지는 서로 추적 가능해야 한다.
 - 공개 글로 바꿀 때는 내부 경로와 운영값을 제거하고 판단 기준만 남긴다.
 
+## shared-memory 예시 구조
+
+shared-memory는 개인 기억보다 크고, Obsidian보다 작업 원본에 가깝다. 운영에서는 여러 에이전트가 같은 기준을 봐야 할 때 이 층이 필요하다.
+
+```text
+shared-memory/
+  team-rules.md          # 팀 공통 규칙
+  decisions.md           # 반복되는 운영 결정
+  handoff/               # 이어받기 기록
+  content-packages/      # 글/이미지/발행 작업 원본
+  indexes/               # 어디에 무엇이 있는지 알려주는 색인
+```
+
+| 질문 | shared-memory로 보낼까? |
+|---|---|
+| 한 에이전트만 알면 되는 선호인가 | 아니오, memory가 더 맞다 |
+| 여러 에이전트가 같이 따라야 하는가 | 예 |
+| 계속 갱신되는 작업 원본인가 | 예 |
+| 누적 지식으로 오래 탐색해야 하는가 | Obsidian이 더 맞다 |
+
 ## 자주 헷갈리는 질문
 
 ### shared-memory와 memory의 가장 큰 차이는 무엇인가요?

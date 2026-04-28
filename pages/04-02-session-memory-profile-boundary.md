@@ -35,6 +35,23 @@ profile은 말투만 나누는 것이 아니다. HOME, 권한, token, 연결된 
 5. 작업 로그는 memory가 아니라 session_search, GitHub log, shared-memory handoff로 회수한다.
 6. source of truth가 따로 있으면 memory보다 원본을 먼저 본다.
 
+## Before/After: 기억층을 섞었을 때
+
+같은 요청도 어디에 남기느냐에 따라 다음 결과가 달라진다. 문제는 기억이 없는 것이 아니라, 임시 상태와 장기 기준이 같은 곳에 들어가는 것이다.
+
+| 구분 | 잘못된 운영 | 더 나은 운영 |
+|---|---|---|
+| 작업 진행 | memory에 “4장 수정 중”을 저장 | session/todo/GitHub log에서 확인 |
+| 말투 선호 | 대화 끝나면 사라짐 | memory/USER.md에 짧게 저장 |
+| 에이전트 역할 | 매번 프롬프트로 설명 | profile/AGENTS.md에 고정 |
+| 팀 공통 기준 | 개인 memory에만 저장 | shared-memory로 승격 |
+
+```text
+session = 지금 이어지는 대화의 작업대
+memory = 다음에도 반복 적용할 짧은 기준
+profile = 에이전트가 어떤 주체로 행동할지 정하는 역할 기억
+```
+
 ## 자주 헷갈리는 질문
 
 ### session이 길어지면 memory가 되나요?
