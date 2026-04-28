@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent)는 단순 챗봇이 아니라 AI 개인비서, 역할형 에이전트, 메모리, 스킬, 외부 도구, 자동화가 함께 움직이는 운영 시스템이다. 질문에 답하는 것에서 끝나지 않고, 요청을 해석하고, 일을 나누고, 실행을 검증하고, 결과를 기록으로 남기는 구조까지 다룬다.
 
-![Hermes Agent는 단순 챗봇이 아니라 운영 시스템이다](../assets/how-image-agent-creates-wikidocs-visuals/ch1-4-hermes-operating-system-codex.png)
+![Hermes Agent는 단순 챗봇이 아니라 운영 시스템이다](../assets/how-image-agent-creates-wikidocs-visuals/ch1-4-hermes-operating-system-codex.webp)
 
 처음에는 챗봇처럼 보일 수 있다. 질문을 받고 답하고, 도구를 쓰고, 메모를 남기기 때문이다. 하지만 실제 업무에 붙여보면 중요한 지점은 답변 한 번의 품질이 아니다. 누가 요청을 받고, 누가 조사하고, 누가 정리하고, 어떤 프로필과 기억을 쓰고, 무엇을 공유 자산으로 남길지가 더 중요해진다.
 
@@ -71,7 +71,7 @@ Hermes는 여러 역할이 있어도 사용자 앞에서는 하비 같은 메인
 
 좋은 운영 시스템은 기능이 많아 보이는 것보다 **입구가 단순한 것**이 더 중요할 때가 많다. 그래서 Hermes를 챗봇보다 운영 시스템이라고 보는 순간, 하비는 캐릭터가 아니라 **front door이자 orchestrator**로 이해된다.
 
-![메인 창구는 시스템의 front door다](../assets/hermes-is-an-operating-system-not-just-a-chatbot/article-figure-01-front-door-system.png)
+![메인 창구는 시스템의 front door다](../assets/hermes-is-an-operating-system-not-just-a-chatbot/article-figure-01-front-door-system.webp)
 
 ## 왜 역할 분리와 프로필 경계가 같이 중요할까
 
@@ -118,7 +118,7 @@ Hermes는 기억을 마법처럼 한 덩어리로 보지 않는다. 보통 이�
 
 Hermes는 기억을 똑똑해 보이게 포장하기보다 **운영 가능한 층으로 분해**해서 다룬다.
 
-![운영 시스템은 기억을 레이어로 본다](../assets/hermes-is-an-operating-system-not-just-a-chatbot/article-figure-02-layers-and-boundaries.png)
+![운영 시스템은 기억을 레이어로 본다](../assets/hermes-is-an-operating-system-not-just-a-chatbot/article-figure-02-layers-and-boundaries.webp)
 
 ## 도구 실행과 기록 자산화까지 붙어야 왜 운영이 되나
 
@@ -161,7 +161,7 @@ session, memory, skill, docs를 분리해서 본다.
 
 핵심은 Hermes를 챗봇으로만 설명하면 구조가 사라지고, 운영 시스템으로 설명해야 왜 이런 설계를 했는지가 보인다는 점이다.
 
-![답변 시스템이 아니라 운영 시스템이다](../assets/hermes-is-an-operating-system-not-just-a-chatbot/article-figure-03-operating-loop.png)
+![답변 시스템이 아니라 운영 시스템이다](../assets/hermes-is-an-operating-system-not-just-a-chatbot/article-figure-03-operating-loop.webp)
 
 ## 운영 사례를 책에 담을 때의 원칙
 

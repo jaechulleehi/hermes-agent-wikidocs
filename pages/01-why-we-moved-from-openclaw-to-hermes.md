@@ -4,7 +4,7 @@
 
 ![OpenClaw에서 Hermes로 구조를 전환하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-4-openclaw-hermes-comparison-codex.webp)
 
-![OpenClaw에서 Hermes로 구조 전환한 이유](../assets/how-image-agent-creates-wikidocs-visuals/ch1-5-openclaw-to-hermes-codex.png)
+![OpenClaw에서 Hermes로 구조 전환한 이유](../assets/how-image-agent-creates-wikidocs-visuals/ch1-5-openclaw-to-hermes-codex.webp)
 
 이 글은 전환의 세부 설정을 설명하기 위한 글이 아니다. 실제 운영에서 어떤 혼선이 있었고, 왜 현재 기준점을 다시 세워야 했는지 설명하기 위한 글이다. 중요한 것은 내부값이 아니라 “전환할 때 무엇을 분리해서 봐야 하는가”다.
 
@@ -42,7 +42,7 @@ OpenClaw는 이 문제를 발견하게 만든 중요한 출발점이었고, Herm
 
 ## OpenClaw에서 Hermes로 넘어오며 실제로 바뀐 것
 
-![이름 변경이 아니라 구조 전환](../assets/why-we-moved-from-openclaw-to-hermes/article-figure-01-transition-structure.png)
+![이름 변경이 아니라 구조 전환](../assets/why-we-moved-from-openclaw-to-hermes/article-figure-01-transition-structure.webp)
 
 ### 1. 멀티 에이전트보다 단일 창구가 중요해졌다
 
@@ -92,7 +92,7 @@ Hermes에서 중요한 건 예쁜 답변 하나가 아니다.
 
 ## 겉으로는 단순 교체처럼 보였지만, 실제 전환은 훨씬 복잡했다
 
-![체감 변화는 경계 문제로 번역된다](../assets/why-we-moved-from-openclaw-to-hermes/article-figure-02-boundary-translation.png)
+![체감 변화는 경계 문제로 번역된다](../assets/why-we-moved-from-openclaw-to-hermes/article-figure-02-boundary-translation.webp)
 
 OpenClaw에서 Hermes로 넘어오는 일은 “옛날 이름 지우고 새 이름 붙이기”처럼 깔끔하게 끝나지 않는다. 실제 시스템 전환에는 흔적이 남는다.
 
@@ -143,7 +143,7 @@ shared-memory → 팀 공통 기준과 handoff
 
 ## 그래서 OpenClaw를 버린 게 아니라, 위치를 다시 정리한 것이다
 
-![과거를 지우는 게 아니라 기준점을 다시 세우는 일](../assets/why-we-moved-from-openclaw-to-hermes/article-figure-03-legacy-governance.png)
+![과거를 지우는 게 아니라 기준점을 다시 세우는 일](../assets/why-we-moved-from-openclaw-to-hermes/article-figure-03-legacy-governance.webp)
 
 여기서 자주 나오는 오해가 있다.
 
