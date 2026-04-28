@@ -8,7 +8,7 @@
 
 주기적으로 확인해야 하는 주제는 [cron](https://wikidocs.net/345926)에 잘 맞는다. 예를 들어 Hermes Agent 공식 문서 변화, AI 에이전트 운영 사례, SEO/GEO 관련 자료처럼 반복적으로 살펴볼 주제가 있다.
 
-하지만 cron은 fresh session에서 돈다. 그래서 프롬프트가 self-contained여야 하고, 결과를 어디로 보낼지, 사람이 무엇을 검토할지, 어떤 기준이면 [WikiDocs](https://wikidocs.net/345908) 본문 후보가 되는지까지 적어야 한다.
+하지만 cron은 fresh session에서 돈다. 그래서 프롬프트가 self-contained여야 하고, 결과를 어디로 보낼지, 사람이 무엇을 검토할지, 어떤 기준이면 [WikiDocs](https://wikidocs.net/345908) 본문 후보가 되는지까지 적어야 한다. 이 사례는 [좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](https://wikidocs.net/345909)를 실제 업무 자동화로 보여준다.
 
 ## 역할 분리
 
