@@ -1,6 +1,6 @@
 ## 0장. 에르메스 에이전트(Hermes Agent) 기초 가이드
 
-에르메스 에이전트(Hermes Agent)를 처음 찾는 독자는 보통 세 가지를 먼저 묻는다. [공식 GitHub](https://github.com/NousResearch/hermes-agent)와 [공식 문서](https://hermes-agent.nousresearch.com/docs/)는 어디에 있는지, 설치와 세팅은 어떻게 시작하는지, OpenClaw나 Claude Code/Codex 같은 다른 AI 에이전트와 무엇이 다른지다. 0장은 그 기초 질문을 먼저 정리하는 입문 장이다.
+에르메스 에이전트(Hermes Agent)를 처음 찾는 독자는 보통 네 가지를 먼저 묻는다. [공식 GitHub](https://github.com/NousResearch/hermes-agent)와 [공식 문서](https://hermes-agent.nousresearch.com/docs/)는 어디에 있는지, 설치와 세팅은 어떻게 시작하는지, OpenClaw나 Claude Code/Codex 같은 다른 AI 에이전트와 무엇이 다른지, Slack/Telegram/Discord 같은 채널에서 어떻게 쓸 수 있는지다. 0장은 그 기초 질문을 먼저 정리하는 입문 장이다.
 
 이 장은 공식 문서를 그대로 번역하지 않는다. 공식 문서의 기준은 확인하되, 독자가 실제로 에르메스 에이전트를 AI 개인비서, AI 자동화, 업무 자동화, 나만의 AI 팀 운영에 붙일 때 먼저 알아야 할 판단 기준으로 바꿔 설명한다.
 
@@ -29,7 +29,7 @@ Hermes Agent는 Nous Research가 공개한 오픈소스 AI 에이전트다. 공�
 3. gateway, cron, skill, MCP는 기능명이 아니라 업무 흐름의 연결 지점이다.
 4. Slack, Telegram, Discord 같은 채널은 Hermes Agent를 어디서 호출하고 어디로 결과를 돌려받을지 정하는 운영 입구다.
 5. Claude Code/Codex는 강한 코딩 에이전트이고, Hermes Agent는 그것들을 포함해 여러 실행 방식을 조율할 수 있는 운영 환경에 가깝다.
-5. OpenClaw에서 Hermes로 넘어오는 일은 도구 교체보다 기억/스킬/프로필/자동화 기준을 다시 세우는 일이다.
+6. OpenClaw에서 Hermes로 넘어오는 일은 도구 교체보다 기억/스킬/프로필/자동화 기준을 다시 세우는 일이다.
 
 ## 이어서 읽기
 
