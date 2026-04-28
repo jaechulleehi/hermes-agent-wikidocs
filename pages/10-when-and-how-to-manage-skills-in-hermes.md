@@ -22,6 +22,8 @@ Hermes Agent의 skill은 “자주 쓰는 프롬프트 모음”이 아니다. �
 
 이 경험은 단순한 작업 로그가 아니라 재발 방지 규칙이었다. 같은 기준은 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서도 반복된다. 그래서 skill에 “본문 내부 링크는 WikiDocs page ID URL을 써야 한다”는 기준을 추가했다. 이후 장별 리라이트에서는 이 기준이 매번 검증 항목으로 들어간다.
 
+구체적으로는 세 가지가 skill로 들어갔다. 첫째, pages 본문에는 H1을 쓰지 않는다. 둘째, 이미지 경로는 페이지 위치 기준으로 실제 파일 존재까지 확인한다. 셋째, GitHub에서는 자연스러운 `.md` 링크라도 WikiDocs 공개 본문에는 page ID URL을 쓴다. 이 정도로 반복 조건과 검증 방법이 생기면 프롬프트가 아니라 skill로 남길 만하다.
+
 ## skill, memory, cron을 나누는 기준
 
 | 남길 곳 | 질문 | 예시 |
@@ -45,13 +47,13 @@ Hermes Agent의 skill은 “다음에도 같은 방식으로 처리해야 하는
 2. skill에는 “무엇을 할지”보다 “어떤 순서로 검증할지”를 넣는다.
 3. 실제 운영과 skill이 어긋나면 즉시 고친다.
 4. cron job은 skill을 불러 쓸 수 있지만, cron prompt 자체도 self-contained해야 한다.
-5. 공개 콘텐츠 skill에는 민감정보 제거 기준을 포함한다.
+5. 공개 콘텐츠 skill에는 내부값 제거 기준을 포함한다.
 
 ## FAQ
 
 ### memory와 skill 중 어디에 남겨야 하나요?
 
-짧고 안정적인 선호는 memory, 반복 절차와 도구 사용법은 skill이다. 예를 들어 “Slack 보고는 짧게”는 memory에 가깝고, “WikiDocs push 전 검증 순서”는 skill에 가깝다.
+짧고 안정적인 선호는 memory, 반복 절차와 도구 사용법은 skill이다. 예를 들어 “Slack 보고는 짧게”는 memory에 가깝고, “WikiDocs 발행 전 검증 순서”는 skill에 가깝다.
 
 ### skill이 많아지면 더 똑똑해지나요?
 
