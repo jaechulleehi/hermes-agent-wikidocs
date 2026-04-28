@@ -61,4 +61,4 @@ API는 개발자가 직접 호출 규칙을 다루는 방식이고, MCP는 에�
 
 ## 다음 글
 
-MCP의 역할을 이해했다면 [GitHub CLI와 MCP/API 연결 방식](https://wikidocs.net/346124)을 비교해 보면 된다. 같은 GitHub 작업도 CLI, MCP, API 중 무엇을 쓰는지에 따라 인증, 로그, 검증 방식이 달라진다.
+MCP의 역할을 이해했다면 [GitHub CLI와 MCP/API 연결 방식](https://wikidocs.net/346232)을 비교해 보면 된다. 같은 GitHub 작업도 CLI, MCP, API 중 무엇을 쓰는지에 따라 인증, 로그, 검증 방식이 달라진다.

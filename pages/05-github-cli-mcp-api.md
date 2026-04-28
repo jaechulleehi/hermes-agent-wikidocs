@@ -63,4 +63,4 @@ WikiDocs 원고를 고칠 때는 먼저 로컬 파일을 수정하고 검증한�
 
 ## 다음 글
 
-GitHub 연결 방식을 봤다면, 다음에는 Notion, Google Workspace, WikiDocs처럼 성격이 다른 업무 도구를 어떤 기준으로 연결할지 보면 된다.
+GitHub 연결 방식을 봤다면, 다음에는 [Notion, Google Workspace, WikiDocs처럼 성격이 다른 업무 도구](https://wikidocs.net/346233)를 어떤 기준으로 연결할지 보면 된다.

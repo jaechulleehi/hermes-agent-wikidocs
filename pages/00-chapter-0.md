@@ -14,7 +14,7 @@
 | [00-4](https://wikidocs.net/345889) | Hermes Agent와 OpenClaw는 무엇이 다른가 | 이름 변경이 아니라 memory/profile/skill/cron/gateway 중심의 운영 전환이다 |
 | [00-5](https://wikidocs.net/346138) | Hermes Agent와 Claude Code/Codex는 어떻게 다른가 | 코딩 에이전트와 업무 자동화 운영 환경의 차이를 구분한다 |
 | [00-6](https://wikidocs.net/346139) | Hermes Agent Docker/Gateway는 언제 필요한가 | 컨테이너 실행과 메시징 gateway를 항상 켜진 운영 구조로 이해한다 |
-| 00-7 | Hermes Agent는 어떤 채널에서 쓸 수 있는가 | CLI, Slack, Telegram, Discord, Email, Webhook을 호출 채널과 운영 규칙으로 구분한다 |
+| [00-7](https://wikidocs.net/346230) | Hermes Agent는 어떤 채널에서 쓸 수 있는가 | CLI, Slack, Telegram, Discord, Email, Webhook을 호출 채널과 운영 규칙으로 구분한다 |
 
 ## 공식 문서를 먼저 봐야 하는 이유
 
