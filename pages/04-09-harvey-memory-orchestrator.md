@@ -1,5 +1,7 @@
 ## 하비는 기억 오케스트레이터로 무엇을 판단할까
 
+![하비 기억 오케스트레이터 판단](../assets/images/chapter-heroes/ch4-9-harvey-memory-orchestrator-codex.webp)
+
 하비는 단순히 요청을 받아 다른 에이전트에게 넘기는 라우터가 아니다. [긴 대화와 context compaction](https://wikidocs.net/346132)이 단기 맥락 관리라면, 하비의 역할은 모든 기억층을 보고 어디에 무엇을 둘지 판단하는 것이다. Hermes Agent 운영에서 하비는 메인 창구이자 최종 통합자이고, 동시에 기억 오케스트레이터다. 새 정보가 들어오면 그것이 memory, shared-memory, Obsidian, skill, session_search 중 어디에 있어야 하는지 판단한다.
 
 이 역할이 없으면 AI 팀은 많은 정보를 갖고도 매번 다시 묻는다. 누가 무엇을 기억해야 하는지, 어떤 원본을 먼저 봐야 하는지, 어떤 정보는 책이나 팀 문서로 정리해도 되는지 판단되지 않기 때문이다. 기억층이 정리된 다음에는 [외부 도구/MCP/자동화 운영](https://wikidocs.net/345907)이 더 안정적으로 붙는다.

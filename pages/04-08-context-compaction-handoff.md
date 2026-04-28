@@ -1,5 +1,7 @@
 ## 긴 대화와 context compaction은 어떻게 관리할까
 
+![context compaction과 handoff 관리](../assets/images/chapter-heroes/ch4-8-context-compaction-handoff-codex.webp)
+
 긴 대화는 편하지만 위험하다. [OpenViking/RAG](https://wikidocs.net/346131)가 외부 지식 회수층이라면, context compaction과 handoff는 현재 대화의 단기 맥락을 잃지 않게 만드는 운영 장치다. 앞에서 합의한 기준, 완료한 작업, 남은 범위가 계속 쌓이면 AI 개인비서는 모든 것을 기억하는 것처럼 보이다가 어느 순간 흐려진다. 이때 필요한 것은 더 긴 대화가 아니라 handoff, source of truth, 검증 기준이다.
 
 에르메스 에이전트(Hermes Agent)의 context compaction은 긴 대화를 이어가게 도와준다. 하지만 압축은 마법이 아니다. 무엇을 남기고 무엇을 버릴지 기준이 없으면, 압축된 요약도 잘못된 방향을 오래 유지할 수 있다. 이 기준을 실제로 적용하는 주체가 [하비 기억 오케스트레이터](https://wikidocs.net/346133)다.

@@ -1,5 +1,7 @@
 ## AGENTS.md와 USER.md는 기억에서 어떤 역할을 할까
 
+![AGENTS.md와 USER.md의 기억 역할](../assets/images/chapter-heroes/ch4-3-agents-user-md-memory-role-codex.webp)
+
 AI 에이전트의 기억은 사용자 선호만으로 만들어지지 않는다. [session/memory/profile 경계](https://wikidocs.net/346126)가 내부 기억층을 나눈다면, 이 글은 문서가 그 기억층을 어떻게 고정하는지 설명한다. 누가 어떤 역할을 맡는지, 어떤 톤으로 말하는지, 어떤 도구를 쓸 수 있는지도 기억의 일부다. Hermes Agent에서는 이 역할을 AGENTS.md, SOUL.md, USER.md, profile이 나눠 맡는다.
 
 이 구분이 없으면 에이전트가 “사용자를 기억하는 것”과 “자기 역할을 아는 것”이 섞인다. 하비가 해야 할 판단을 뽀동이가 하거나, 뽀동이가 지켜야 할 글쓰기 기준이 하비의 라우팅 규칙 속에 묻히는 식이다. 개인 역할이 정리된 뒤에는 팀 전체가 함께 보는 [shared-memory](https://wikidocs.net/346128)가 필요해진다.

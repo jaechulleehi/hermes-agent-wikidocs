@@ -1,5 +1,7 @@
 ## Hermes Agent checkpoint와 rollback은 복구 흐름에서 어떻게 쓸까
 
+![checkpoint와 rollback 복구 흐름](../assets/images/chapter-heroes/ch9-7-checkpoint-rollback-recovery-codex.webp)
+
 Hermes Agent 복구에서 가장 좋은 상황은 “문제가 생기기 전 상태로 돌아갈 수 있는 길이 이미 있는 것”이다. [공식 Checkpoints and rollback 문서](https://hermes-agent.nousresearch.com/docs/user-guide/checkpoints-and-rollback)는 Hermes Agent가 destructive operation 전 project snapshot을 만들고, `/rollback`으로 되돌릴 수 있다고 설명한다. 이 기능은 복구 플레이북의 마지막 보험이 아니라, 실행 전부터 확인해야 할 안전망이다. 되돌리기 전에 [복구 플레이북](https://wikidocs.net/345918)처럼 증상, 영향 범위, 판단 순서를 먼저 확인해야 한다.
 
 중요한 점은 checkpoint가 있다고 해서 아무렇게나 실행해도 되는 것은 아니라는 점이다. checkpoint는 실수를 줄이는 장치가 아니라, 실수 후 복구 범위를 좁히는 장치다. 실행 전 승인, 실행 환경 격리, credential 최소화가 먼저이고, rollback은 그다음이다.

@@ -1,5 +1,7 @@
 ## OpenClaw에서 Hermes로 기억을 옮길 때 무엇을 버릴까
 
+![OpenClaw에서 Hermes로 기억 이관](../assets/images/chapter-heroes/ch4-6-openclaw-memory-migration-codex.webp)
+
 Hermes Agent 같은 AI 운영 시스템을 오래 쓰면 과거 문서가 자산이면서 동시에 위험이 된다. 특히 [Obsidian LLM Wiki](https://wikidocs.net/346129)처럼 누적되는 지식층이 생기면, 과거 유산과 현재 기준을 더 명확히 나눠야 한다. OpenClaw에서 Hermes로 넘어올 때도 그랬다. 예전 SOUL, IDENTITY, memory, cron, gateway, agent binding은 운영 경험을 담고 있었지만, Hermes의 현재 구조와 1:1로 맞지는 않았다.
 
 그래서 기억 이관은 파일 복사가 아니라 기준 재구성이다. 무엇을 살리고, 무엇을 archive로 두고, 무엇을 현재 Hermes의 memory/shared-memory/Obsidian/profile/skill 구조로 다시 배치할지 판단해야 한다. 이 정리가 끝나야 [OpenViking/RAG](https://wikidocs.net/346131) 같은 회수층도 낡은 기준을 반복하지 않는다.

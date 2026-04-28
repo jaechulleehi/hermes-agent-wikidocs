@@ -1,5 +1,7 @@
 ## Hermes Agent Skill은 무엇이고 언제 만들까
 
+![Hermes Agent Skill 생성 기준](../assets/images/chapter-heroes/ch6-1-when-to-create-skill-codex.webp)
+
 Hermes Agent Skill은 반복 업무를 처리하는 작업법이다. “앞으로 이런 요청이 오면 어떤 순서로 확인하고, 어떤 도구를 쓰고, 어디서 멈춰야 하는지”를 남겨 다음 세션에서도 같은 품질을 재현하게 만든다.
 
 Skill은 [memory](https://wikidocs.net/346126)와 다르다. memory는 오래 유지할 선호, 규칙, 사용자 맥락을 담는다. Skill은 일을 수행하는 절차와 검증 기준을 담는다. 예를 들어 “보고는 짧게 받는 것을 선호한다”는 memory에 가깝고, “[WikiDocs 발행 전 검증](https://wikidocs.net/345994)처럼 H1, 이미지, TOC, 본문 링크, SEO 첫 문단을 확인한다”는 Skill에 가깝다.

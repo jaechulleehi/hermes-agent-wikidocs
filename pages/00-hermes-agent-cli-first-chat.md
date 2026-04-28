@@ -1,5 +1,7 @@
 ## 에르메스 에이전트(Hermes Agent) CLI 첫 대화는 어떻게 시작할까
 
+![Hermes Agent CLI 첫 대화 흐름](../assets/images/chapter-heroes/ch00-4-cli-first-chat-codex.webp)
+
 Hermes Agent CLI 첫 대화는 설치가 끝났는지 확인하는 절차가 아니다. 공식 Quickstart는 install, provider 선택, working chat 검증, session 확인, key features 체험 순서로 안내한다. 이 흐름을 따라야 나중에 Slack/gateway/cron/MCP에서 문제가 생겼을 때 “모델이 안 되는지, 설정이 안 되는지, 메시징 연결이 안 되는지”를 분리할 수 있다. 모델 연결이 흔들리면 [provider/model/config 설정](https://wikidocs.net/346252)부터 다시 확인하는 편이 빠르다.
 
 CLI는 Hermes Agent의 기본 조종석이다. [공식 CLI 문서](https://hermes-agent.nousresearch.com/docs/user-guide/cli)는 Hermes Agent CLI를 web UI가 아니라 multiline editing, slash-command autocomplete, conversation history, interrupt/redirect, streaming tool output을 갖춘 terminal UI로 설명한다. 그래서 첫 대화에서는 답변 품질보다 실행/중단/세션/명령 흐름을 확인해야 한다.

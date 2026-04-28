@@ -1,5 +1,7 @@
 ## GitHub CLI와 MCP/API 연결은 어떻게 다를까
 
+![GitHub CLI MCP API 연결 차이](../assets/images/chapter-heroes/ch5-6-github-cli-mcp-api-codex.webp)
+
 에르메스 에이전트(Hermes Agent)에서 GitHub 작업을 자동화할 때는 GitHub CLI, MCP, API를 구분해야 한다. 셋 다 GitHub와 연결할 수 있지만, `GitHub CLI MCP API`, `Hermes Agent GitHub CLI`, `Hermes Agent MCP API` 관점에서 보면 실행 방식과 검증 기준이 다르다.
 
 GitHub는 source of truth가 되기 쉽다. [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서도 원고를 고치고, 검증하고, GitHub 원본에 반영한 뒤 공개 페이지를 확인하는 흐름은 GitHub가 중심이었다. 그래서 GitHub 연결은 “편의 기능”이 아니라 발행/검증/복구 기준과 함께 설계해야 한다.

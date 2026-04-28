@@ -1,5 +1,7 @@
 ## Hermes Agent 도구 실행 결과는 어떻게 검증할까
 
+![Hermes Agent 도구 실행 결과 검증](../assets/images/chapter-heroes/ch5-10-tool-result-verification-codex.webp)
+
 Hermes Agent 도구 실행의 끝은 “명령이 성공했다”가 아니다. 독자가 실제로 필요한 것은 실행 결과가 의도한 범위 안에서 반영됐고, 공개/전달/복구 기준까지 확인됐다는 확신이다. 그래서 5장의 마지막 기준은 도구 검증이다.
 
 도구 검증은 단순한 테스트가 아니다. MCP tool 호출, CLI 실행, API 조회, cron 결과, gateway delivery, WikiDocs 공개 반영은 서로 다른 실패 지점을 가진다. 같은 “성공” 메시지라도 실제 사용자가 보는 결과는 아직 틀릴 수 있다.

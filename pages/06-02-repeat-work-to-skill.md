@@ -1,5 +1,7 @@
 ## 반복 업무는 어떻게 Skill이 되는가
 
+![반복 업무가 Skill이 되는 과정](../assets/images/chapter-heroes/ch6-2-repeat-work-to-skill-codex.webp)
+
 에르메스 에이전트(Hermes Agent)에서 반복 업무가 Skill이 되는 순간은 “또 시켰다”가 아니라 “같은 기준으로 다시 처리해야 한다”가 보일 때다. 반복 횟수보다 중요한 것은 절차, 판단 기준, 실패 패턴, 검증 방법이 함께 생겼는지다.
 
 Skill은 최신 정보를 저장하는 곳이 아니다. 오늘의 조사 결과, 일회성 링크, 임시 작업 로그는 session이나 source of truth에 남기는 편이 맞다. Skill에는 다음에 같은 종류의 일을 할 때 어떤 순서로 확인하고 어떤 도구를 써야 하는지 남긴다.

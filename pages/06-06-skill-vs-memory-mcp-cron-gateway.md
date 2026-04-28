@@ -1,5 +1,7 @@
 ## Skill과 memory/MCP/cron/gateway는 어떻게 다를까
 
+![Skill memory MCP cron gateway 차이](../assets/images/chapter-heroes/ch6-6-skill-memory-mcp-cron-gateway-codex.webp)
+
 에르메스 에이전트(Hermes Agent)를 운영하다 보면 Skill, memory, MCP, cron, gateway가 모두 “자동화를 돕는 기능”처럼 보인다. 하지만 역할은 다르다. 이 차이를 모르면 모든 것을 memory에 넣거나, 모든 반복 작업을 cron으로 만들거나, 도구 연결을 Skill이라고 착각하기 쉽다.
 
 Skill은 반복 업무의 실행 절차와 검증 기준이다. [memory](https://wikidocs.net/346126)는 장기 맥락과 선호를 기억한다. MCP는 외부 도구를 대화 흐름에 연결한다. [cron](https://wikidocs.net/345926)은 정해진 시간에 작업을 실행한다. gateway는 Slack, Telegram, Discord 같은 채널에서 Hermes Agent를 부르는 입구다. 도구 연결 기준은 [Hermes Agent MCP 연결](https://wikidocs.net/346231)과 함께 읽으면 차이가 더 선명하다.
