@@ -32,6 +32,12 @@
 - Hermes Agent 설치 방법
 - 에르메스 에이전트 설치
 - 에르메스 에이전트 세팅
+- 에르메스 에이전트 초보
+- Hermes Agent 입문
+- Hermes Agent 윈도우 WSL2
+- Hermes Agent 맥미니
+- 맥미니 AI 비서
+- 전용 머신 AI 에이전트
 - Hermes Agent CLI
 - Hermes Agent 첫 대화
 - Hermes Agent config
@@ -50,9 +56,14 @@
 - Hermes Agent rollback
 - Hermes Agent sandbox
 - Hermes Agent Slack
+- 슬랙 AI 비서
 - Hermes Agent Telegram
+- 텔레그램 AI 비서
 - Hermes Agent Discord
+- 디스코드 AI 봇
 - Hermes Agent messaging
+- Hermes Agent Webhook
+- Hermes Agent 이메일
 - Hermes Agent vs OpenClaw
 - Hermes Agent Claude Code 비교
 - Hermes Agent Codex 비교
@@ -64,6 +75,8 @@
 - AI 자동화 사례
 - AI 자동화 시스템
 - AI 업무 자동화 책
+- AI 업무 자동화 교육
+- AI 업무 자동화 강의
 - AI 워크플로우
 - AI 워크플로우 자동화
 - 나만의 AI 팀 만들기
@@ -90,6 +103,7 @@
 - Model Context Protocol
 - MCP AI agent
 - MCP AI agent protocol
+- MCP AI agent tutorial
 - AI 에이전트 MCP 연동
 - Hermes Agent MCP
 - Hermes Agent MCP server
@@ -106,6 +120,8 @@
 - Hermes Agent 터미널
 - Hermes Agent Skill
 - Hermes Agent skills
+- 공개 AI 에이전트 Skill
+- GitHub Skill 보안
 - Hermes Agent skill management
 - AI agent skills
 - 업무 자동화 Skill

@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent) 설치와 세팅은 어떻게 시작할까
 
-에르메스 에이전트(Hermes Agent) 설치는 공식 docs 기준으로 짧다. Linux, macOS, WSL2, Android Termux에서는 one-line installer로 시작할 수 있고, 공식 설치 문서는 “under two minutes” 안에 실행 가능한 상태를 만드는 흐름을 안내한다. 하지만 실제 업무 자동화에 쓰려면 설치 명령보다 설치 후 검증 순서가 더 중요하다. 설치가 끝난 뒤에는 [CLI 첫 대화](https://wikidocs.net/346251)와 provider/model/config 설정을 이어서 확인해야 한다.
+에르메스 에이전트(Hermes Agent) 설치는 공식 docs 기준으로 짧다. Linux, macOS, WSL2, Android Termux에서는 one-line installer로 시작할 수 있고, 윈도우 사용자는 보통 WSL2 경로를 먼저 본다. 하지만 실제 업무 자동화에 쓰려면 설치 명령보다 설치 후 검증 순서가 더 중요하다. 설치가 끝난 뒤에는 [CLI 첫 대화](https://wikidocs.net/346251)와 provider/model/config 설정을 이어서 확인해야 한다.
 
 ![에르메스 에이전트 설치와 기본 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-3-install-setup-flow-codex.webp)
 
@@ -36,7 +36,7 @@ OpenClaw 커뮤니티 대화에서 가장 많이 반복된 질문은 “어디�
 |---|---|---|
 | 개인 노트북/macOS | CLI 실습, 짧은 개인 업무, 파일 기반 실험 | 개인 로그인 정보와 업무 파일이 많다면 위험 명령 범위를 좁힌다 |
 | WSL2 | Windows 사용자가 공식 지원 경로로 시작할 때 | Windows native와 WSL 경로/HOME이 섞이지 않게 한다 |
-| Mac mini/전용 머신 | Slack AI 비서, gateway, cron을 오래 켜둘 때 | 별도 계정, 별도 작업 폴더, 재시작 정책을 둔다 |
+| Mac mini/맥미니/전용 머신 | Slack AI 비서, gateway, cron을 오래 켜둘 때 | 별도 계정, 별도 작업 폴더, 재시작 정책을 둔다 |
 | VPS/클라우드 | 팀 채널, 상시 gateway, 외부 webhook 운영 | secret/env 전달, 방화벽, 비용 알림을 먼저 잡는다 |
 | Docker | 위험한 terminal 작업이나 재현 가능한 실행 환경이 필요할 때 | container에 넘기는 credential을 최소화한다 |
 
