@@ -1,5 +1,7 @@
 ## 10장. Hermes Agent AI 업무 자동화 사례
 
+![Hermes Agent 실제 운영 케이스 흐름](../assets/images/chapter-heroes/ch10-real-ops-cases-tool-badges-codex.png)
+
 에르메스 에이전트(Hermes Agent)로 실제 AI 업무 자동화 사례를 어떻게 만들 수 있을까? 10장은 그 질문에 답하는 사례 모음이다. Slack 요청, cron 조사, 역할형 에이전트 분업, GitHub/WikiDocs 발행이 어떻게 하나의 운영 흐름으로 이어지는지 보여준다.
 
 [Hermes Agent](https://wikidocs.net/346055)는 기능 목록으로만 보면 잘 와닿지 않는다. 실제 가치는 하비가 요청을 해석하고, 방울이/뽀동이/하망이 같은 [역할형 에이전트](https://wikidocs.net/345925)가 이어받고, 결과가 공개 문서와 반복 가능한 기준으로 남을 때 드러난다. 성공담을 모으는 장이 아니라, 요청이 운영 자산으로 바뀌는 과정을 남기는 장이다.

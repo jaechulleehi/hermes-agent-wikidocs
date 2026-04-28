@@ -1,5 +1,7 @@
 ## Slack 스레드에서 하비가 일을 분배하는 방식
 
+![Slack 스레드에서 하비가 역할을 분배하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-5-slack-thread-delegation-tool-badges-codex.png)
+
 Slack 스레드는 에르메스 에이전트(Hermes Agent) 업무 자동화에서 실제 요청이 시작되는 입구다. 사용자는 한 줄로 요청하고, 하비는 그 요청을 바로 처리할지, 방울이/뽀동이/하망이/봉구 같은 역할형 에이전트에게 나눌지 판단한다.
 
 이 케이스의 핵심은 멀티봇이 동시에 말하게 만드는 것이 아니다. 하비를 [AI 개인비서 메인 창구](https://wikidocs.net/345892)로 두고, 필요한 역할만 불러서 결과를 다시 하나로 묶는 것이다. Slack은 빠른 대화 공간이지만, 기준 없이 쓰면 작업 지시, 조사 결과, 실행 보고, 사람 대화가 한곳에 섞인다.
