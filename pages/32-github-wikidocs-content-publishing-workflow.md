@@ -10,7 +10,7 @@
 
 사용자가 “이 장 가자”라고 하면 뽀동이는 해당 장의 TOC와 본문을 확인하고, 세션 기록, 협업 기록, 팀 공통 기억, 원본 자료 목록에서 근거를 찾고, 책형 구조로 다시 쓴다. 그다음 전자책/WikiDocs 규칙을 검증한 뒤 검증을 통과한 변경을 발행한다. WikiDocs 화면은 GitHub에 연결된 공개 배포 결과다.
 
-이때 WikiDocs에서 바로 수정하는 것보다 GitHub에서 수정하는 편이 좋다. [source of truth](https://wikidocs.net/345915)가 하나로 남기 때문이다.
+이때 WikiDocs에서 바로 수정하는 것보다 GitHub에서 수정하는 편이 좋다. [source of truth](https://wikidocs.net/345902)가 하나로 남기 때문이다.
 
 ## 발행 전 확인할 것
 

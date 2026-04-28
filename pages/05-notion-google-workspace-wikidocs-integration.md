@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent)에서 Notion, Google Workspace, WikiDocs를 연결할 때는 도구 이름보다 역할을 먼저 나눠야 한다. `Hermes Agent Notion`, `Hermes Agent Google Workspace`, `Hermes Agent WikiDocs`, `MCP API CLI 연동`을 찾는 독자라면 “어떤 서비스를 붙일까”보다 “어떤 정보가 어디의 source of truth인가”를 먼저 정해야 한다.
 
-같은 문서 도구처럼 보여도 세 서비스의 역할은 다르다. Notion은 팀 문서/업무 DB가 되기 쉽고, Google Workspace는 메일/일정/드라이브/문서 협업의 중심이 되기 쉽다. WikiDocs는 공개 책/전자책으로 읽히는 발행 채널이다.
+같은 문서 도구처럼 보여도 세 서비스의 역할은 다르다. Notion은 팀 문서/업무 DB가 되기 쉽고, Google Workspace는 메일/일정/드라이브/문서 협업의 중심이 되기 쉽다. WikiDocs는 공개 책/전자책으로 읽히는 발행 채널이다. 이 구분은 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)에서 말하는 source of truth 경계와도 연결된다.
 
 ## 도구별 역할을 먼저 나누기
 
@@ -42,7 +42,7 @@ WikiDocs는 우리 책에서 공개 배포 채널이다. 원고의 source of tru
 2. GitHub 원본에 변경 이력을 남기고 갱신한다.
 3. WikiDocs 공개 페이지에서 링크, 이미지, 본문 반영을 확인한다.
 
-이 구조 덕분에 전자책/PDF 호환성, SEO/GEO 키워드, 내부 링크, 이미지 경로를 한 번에 관리할 수 있다. 반대로 GitHub와 WikiDocs 중 어디가 원본인지 헷갈리면 같은 글을 두 곳에서 다르게 고치는 문제가 생긴다.
+이 구조 덕분에 전자책/PDF 호환성, SEO/GEO 키워드, 내부 링크, 이미지 경로를 한 번에 관리할 수 있다. 반대로 GitHub와 WikiDocs 중 어디가 원본인지 헷갈리면 같은 글을 두 곳에서 다르게 고치는 문제가 생긴다. 실제 발행 흐름은 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서, 콘텐츠 채널 기준은 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)에서 이어서 볼 수 있다.
 
 ## API/MCP/CLI 선택 기준
 

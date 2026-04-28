@@ -27,7 +27,7 @@ WikiDocs 작업 스레드는 좋은 예다. 사용자는 한 스레드에서 “
 |---|---|---|
 | identity | 지금 누구에게 말하는지 헷갈린다 | [AI 팀 읽는 법](https://wikidocs.net/345935) |
 | role | 조사형/정리형/실행형의 일이 섞인다 | [역할형 에이전트 분리](https://wikidocs.net/345925) |
-| memory | 기억해야 할 것과 작업 로그가 섞인다 | [기억 경계](https://wikidocs.net/345899) |
+| memory | 기억해야 할 것과 작업 로그가 섞인다 | [기억 경계](https://wikidocs.net/346126) |
 | tool | 파일, MCP, gateway, cron 문제가 보인다 | [외부 도구 운영](https://wikidocs.net/345907) |
 | source of truth | GitHub, WikiDocs, Obsidian 중 무엇을 믿을지 모른다 | [WikiDocs 콘텐츠 시스템](https://wikidocs.net/345911) |
 | recovery | 고치기 전에 무엇부터 봐야 할지 모른다 | [복구 플레이북](https://wikidocs.net/345918) |

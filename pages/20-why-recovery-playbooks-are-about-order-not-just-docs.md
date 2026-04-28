@@ -28,7 +28,7 @@
 
 OpenClaw에서 Hermes로 넘어온 뒤에는 과거 설정이 모두 새 구조에 1:1로 들어오지 않았다. 일부 cron, gateway, hooks, agent routing, skill registry는 archive/manual review 대상으로 남았다. 여기서 바로 “왜 예전처럼 안 되지?”라고 보면 복구가 꼬인다.
 
-올바른 순서는 먼저 현재 Hermes에서 무엇이 source of truth인지 확인하고, 그다음 archived record를 참고 자료로 본 뒤, 필요한 것만 새 Hermes 구조에 맞게 다시 만든다. 과거 유산은 버리는 것이 아니라 검토 대상으로 내려놓아야 한다. 이 기준은 [과거 유산과 현재 기준을 나누는 법](https://wikidocs.net/345915)과도 연결된다.
+올바른 순서는 먼저 현재 Hermes에서 무엇이 source of truth인지 확인하고, 그다음 archived record를 참고 자료로 본 뒤, 필요한 것만 새 Hermes 구조에 맞게 다시 만든다. 과거 유산은 버리는 것이 아니라 검토 대상으로 내려놓아야 한다. 이 기준은 [과거 유산과 현재 기준을 나누는 법](https://wikidocs.net/345920)과도 연결된다.
 
 ## 복구 플레이북 템플릿
 

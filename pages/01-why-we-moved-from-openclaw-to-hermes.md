@@ -15,8 +15,8 @@
 조금 더 풀면 세 가지다.
 
 - 사용자가 여러 에이전트를 직접 관리하지 않게 만들 **메인 창구**가 필요했다.
-- session, memory, skill, [profile](https://wikidocs.net/345899), identity를 한 덩어리 감각이 아니라 **운영 가능한 층**으로 봐야 했다.
-- 대화에서 끝나지 않고, 도구 실행과 [Obsidian](https://wikidocs.net/345905) 기록, 블로그/강의 자산화까지 이어지는 **운영 흐름**이 필요했다.
+- session, memory, skill, [profile](https://wikidocs.net/346126), identity를 한 덩어리 감각이 아니라 **운영 가능한 층**으로 봐야 했다.
+- 대화에서 끝나지 않고, 도구 실행과 [Obsidian](https://wikidocs.net/346129) 기록, 블로그/강의 자산화까지 이어지는 **운영 흐름**이 필요했다.
 
 그래서 Hermes는 OpenClaw의 부정이 아니라, **그 유산 위에서 현재 운영 기준을 더 선명하게 만든 다음 단계**에 가깝다.
 

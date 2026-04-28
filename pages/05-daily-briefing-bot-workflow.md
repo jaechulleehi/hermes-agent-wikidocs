@@ -34,7 +34,7 @@ cron job은 사람이 옆에서 설명해 주지 않는다. 그래서 prompt는 
 
 Hermes Agent cron은 정해진 시간이나 주기에 작업을 실행하는 예약 자동화다. 중요한 점은 cron이 기존 대화의 연장이 아니라 fresh session으로 열린다는 것이다.
 
-따라서 cron을 만들 때는 schedule, prompt, 필요한 도구, context source, delivery target, 실패 시 보고 기준을 한 세트로 설계해야 한다. Daily Briefing Bot은 이 기준을 가장 단순하게 보여주는 예제다. 정해진 시간에 새 정보를 찾고, 기준에 맞게 요약하고, 메시징 플랫폼으로 전달한다.
+따라서 cron을 만들 때는 schedule, prompt, 필요한 도구, context source, delivery target, 실패 시 보고 기준을 한 세트로 설계해야 한다. Daily Briefing Bot은 이 기준을 가장 단순하게 보여주는 예제다. 정해진 시간에 새 정보를 찾고, 기준에 맞게 요약하고, 메시징 플랫폼으로 전달한다. 이 패턴이 반복되면 [반복 업무를 Skill로 바꾸는 기준](https://wikidocs.net/346236)을 적용해 prompt, 검증, 보고 형식을 재사용 가능하게 남긴다.
 
 ## 실패할 때 먼저 볼 것
 

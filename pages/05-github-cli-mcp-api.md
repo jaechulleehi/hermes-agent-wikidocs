@@ -12,7 +12,7 @@ GitHub는 source of truth가 되기 쉽다. [GitHub와 WikiDocs로 콘텐츠를 
 | MCP | 에이전트가 tool 목록으로 이해하기 쉽다 | server 설정, scope, tool permission을 관리해야 한다 | 이슈/PR/파일 정보를 대화 흐름에 붙이기 |
 | API | 세밀한 제어와 배치 자동화에 좋다 | token scope, pagination, rate limit, 응답 파싱을 직접 봐야 한다 | 대량 조회, custom report, 운영 대시보드 |
 
-이 셋은 경쟁 관계가 아니다. 같은 운영에서도 함께 쓰일 수 있다. 예를 들어 로컬 repo 검증은 CLI가 빠르고, 이슈/PR 요약은 MCP가 자연스럽고, 대량 통계 수집은 API가 안정적일 수 있다.
+이 셋은 경쟁 관계가 아니다. 같은 운영에서도 함께 쓰일 수 있다. 예를 들어 로컬 repo 검증은 CLI가 빠르고, 이슈/PR 요약은 [MCP 연결](https://wikidocs.net/346231)이 자연스럽고, 대량 통계 수집은 API가 안정적일 수 있다. 반복되는 발행/검증 순서는 [Skill 운영](https://wikidocs.net/346235)으로 남겨야 다음 작업에서 같은 확인을 다시 설명하지 않는다.
 
 ## GitHub CLI가 좋은 경우
 
@@ -45,7 +45,7 @@ API는 반복 조회와 세밀한 자동화에 좋다. 예를 들어 여러 repo
 
 WikiDocs 원고를 고칠 때는 먼저 로컬 파일을 수정하고 검증한다. 그다음 GitHub 원본에 변경 이력을 남기고 source of truth를 갱신한다. 마지막으로 WikiDocs 공개 페이지가 sync됐는지 확인한다. 이 과정에서 CLI는 파일과 git 상태를 확인하고, API나 MCP는 공개/원격 상태 확인을 도울 수 있다.
 
-중요한 것은 한 도구로 모든 것을 하려는 태도가 아니다. 로컬 검증, 원격 반영, 공개 화면 확인을 나눠 보는 것이다.
+중요한 것은 한 도구로 모든 것을 하려는 태도가 아니다. 로컬 검증, 원격 반영, 공개 화면 확인을 나눠 보는 것이다. 이 순서가 흔들릴 때는 [운영 체크리스트](https://wikidocs.net/345919)와 [복구 플레이북](https://wikidocs.net/345918)으로 돌아가 무엇을 먼저 확인할지 정한다.
 
 ## FAQ
 

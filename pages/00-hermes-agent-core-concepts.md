@@ -28,7 +28,7 @@
 | 정리형 에이전트 | 자료를 독자에게 읽히는 구조와 문장으로 바꾸는 역할 | [정리형 에이전트는 어디서 강하고 어디서 흔들릴까](https://wikidocs.net/345896) |
 | 실행형 에이전트 | 파일 수정, 명령 실행, 검증처럼 상태를 바꾸는 역할 | [역할형 에이전트는 어떤 기준으로 나눌까](https://wikidocs.net/345925) |
 | memory | 오래 유지해야 할 사용자 선호와 기준 | [AI 에이전트 기억 시스템](https://wikidocs.net/345902) |
-| profile | 역할과 상태를 분리하는 실행 단위 | [같은 AI 개인비서인데 기억은 왜 다르게 느껴질까](https://wikidocs.net/345899) |
+| profile | 역할과 상태를 분리하는 실행 단위 | [같은 AI 개인비서인데 기억은 왜 다르게 느껴질까](https://wikidocs.net/346126) |
 | skill | 반복 절차를 재사용 가능한 작업 기준으로 남기는 기능 | [Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](https://wikidocs.net/345904) |
 | cron | 정해진 시간에 작업을 시작하는 자동화 방식 | [Daily Briefing Bot은 어떤 업무 자동화 패턴일까](https://wikidocs.net/345926) |
 | MCP | 외부 도구와 업무 시스템을 연결하는 방식 | [외부 도구/MCP/자동화 운영](https://wikidocs.net/345907) |
