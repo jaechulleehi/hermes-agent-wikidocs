@@ -42,6 +42,20 @@ gateway는 Hermes Agent를 메시징 플랫폼과 예약 실행 흐름에 붙여
 
 특히 delivery는 별도 검증 대상이다. gateway가 켜져 있어도 `origin`, home channel, explicit target이 어긋나면 사용자는 결과를 받지 못한다. 그래서 cron troubleshooting은 “실행됐는가”와 “도착했는가”를 반드시 나눠 본다.
 
+## 봇이 갑자기 답하지 않을 때의 분리 진단
+
+실제 운영 질문에서 가장 흔한 형태는 “어느 순간 봇이 아무 답도 안 한다”였다. 이때 바로 모델 문제로 보면 원인을 놓치기 쉽다.
+
+| 증상 | 먼저 볼 것 | 다음 확인 |
+|---|---|---|
+| CLI는 되는데 Slack에서 답이 없다 | gateway process/profile | bot token, app token, socket 연결, 채널 권한 |
+| 특정 스레드에서만 답이 없다 | mention/trigger 규칙 | thread_ts, require_mention, 멀티봇 침묵 규칙 |
+| cron 결과가 오지 않는다 | job 실행 결과 | deliver target, home channel, thread target |
+| 재시작 후 성격/규칙이 안 바뀐다 | profile/AGENTS/SOUL 로딩 | gateway가 같은 profile로 재시작됐는지 |
+| 파일 첨부를 못 읽는다 | 지원 확장자/크기/권한 | Slack private file download와 document cache |
+
+복구 순서는 `model → gateway → channel permission → thread/trigger → delivery`가 아니라, 현재 증상에 따라 나눠야 한다. CLI가 정상이라면 모델보다 gateway/channel을 먼저 보는 편이 빠르다.
+
 ## 운영 기준
 
 - gateway는 process, log, delivery를 함께 확인한다.

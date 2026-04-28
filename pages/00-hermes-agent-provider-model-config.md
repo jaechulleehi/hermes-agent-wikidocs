@@ -49,6 +49,19 @@ hermes chat --model "provider/model-name" -q "지금 설정이 어떤 의미인�
 
 routing은 최적화 도구다. 기본 대화와 도구 호출이 안정되기 전에 routing부터 복잡하게 만들면 실패 원인이 늘어난다.
 
+## OAuth/API/구독제 비용을 먼저 분리한다
+
+입문자가 자주 헷갈리는 지점은 provider 설정을 “로그인 방식”으로만 보는 것이다. 실제 운영에서는 인증 방식이 곧 비용/한도/복구 기준이 된다.
+
+| 방식 | 장점 | 먼저 확인할 것 |
+|---|---|---|
+| API key | 서버/gateway/cron에서 쓰기 쉽다 | 사용량 과금, 월 한도, key 노출 범위 |
+| OAuth/구독 기반 연결 | 개인 구독을 활용할 수 있다 | third-party 사용 가능 여부, 세션 만료, provider 정책 변경 |
+| custom endpoint/proxy | 여러 모델을 한 인터페이스로 묶을 수 있다 | 호환 API 범위, 로그에 남는 요청/응답, 장애 시 우회 경로 |
+| fallback/routing | 특정 provider 장애나 한도 초과에 대응할 수 있다 | 어떤 요청이 어느 provider로 갔는지 추적 가능해야 한다 |
+
+그래서 provider/model/config 페이지는 모델 추천표가 아니라 “비용과 권한이 어디서 발생하는지”를 확인하는 장이어야 한다. API 비용이 터지거나 OAuth 정책이 바뀌어도 원인을 좁히려면 provider, model, auth, gateway process를 분리해서 기록해야 한다.
+
 ## terminal backend 설정도 같이 본다
 
 Hermes Agent는 terminal backend를 local, Docker, SSH 등으로 구성할 수 있다. 공식 configuration docs는 Docker backend와 SSH backend 설정, 환경변수 전달, sandbox 격리 기준을 함께 설명한다.

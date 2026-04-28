@@ -28,6 +28,20 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 
 설치 전 단계에서 모든 것을 완벽히 결정할 필요는 없다. 다만 “CLI 실습”인지 “상시 gateway 운영”인지가 다르면 검증 순서가 달라진다는 점은 알아야 한다.
 
+## 설치 환경을 고르는 기준
+
+OpenClaw 커뮤니티 대화에서 가장 많이 반복된 질문은 “어디에 설치해야 안전하고 오래 쓸 수 있는가”였다. Hermes Agent도 마찬가지다. 설치 명령보다 먼저 운영 환경을 정해야 한다.
+
+| 환경 | 좋은 경우 | 조심할 점 |
+|---|---|---|
+| 개인 노트북/macOS | CLI 실습, 짧은 개인 업무, 파일 기반 실험 | 개인 로그인 정보와 업무 파일이 많다면 위험 명령 범위를 좁힌다 |
+| WSL2 | Windows 사용자가 공식 지원 경로로 시작할 때 | Windows native와 WSL 경로/HOME이 섞이지 않게 한다 |
+| Mac mini/전용 머신 | Slack AI 비서, gateway, cron을 오래 켜둘 때 | 별도 계정, 별도 작업 폴더, 재시작 정책을 둔다 |
+| VPS/클라우드 | 팀 채널, 상시 gateway, 외부 webhook 운영 | secret/env 전달, 방화벽, 비용 알림을 먼저 잡는다 |
+| Docker | 위험한 terminal 작업이나 재현 가능한 실행 환경이 필요할 때 | container에 넘기는 credential을 최소화한다 |
+
+초보자는 “내 컴퓨터에 설치할 수 있나”보다 “이 에이전트가 내 파일과 계정에 어디까지 접근해도 되는가”를 먼저 묻는 편이 안전하다.
+
 ## 설치보다 중요한 첫 검증 순서
 
 | 순서 | 할 일 | 확인할 것 |

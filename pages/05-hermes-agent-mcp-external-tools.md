@@ -38,6 +38,19 @@ MCP server를 추가하기 전에는 기능보다 경계를 먼저 봐야 한다
 
 GitHub도 마찬가지다. 이슈 목록 조회나 PR diff 검토는 낮은 위험 작업이다. 하지만 branch push, release 생성, issue close, 권한 변경은 실행 전 기준이 필요하다. MCP 연결 여부보다 “어디까지 자동 실행해도 되는가”가 먼저다.
 
+## CLI/API/MCP를 고르는 기준
+
+외부 도구를 붙일 때도 “무엇을 연결할 수 있는가”보다 “어떤 방식이 운영에 맞는가”가 중요하다. GitHub, Notion, Google Workspace, WikiDocs 같은 도구는 CLI/API/MCP 중 여러 방식으로 연결될 수 있다.
+
+| 방식 | 강한 경우 | 조심할 점 |
+|---|---|---|
+| CLI | GitHub처럼 로컬 인증과 명령이 안정적인 도구 | 실행 환경 HOME/path/auth 차이 |
+| API | 세밀한 요청/응답과 자동화 제어가 필요할 때 | token scope, rate limit, 오류 처리 |
+| MCP | LLM이 도구 목록과 스키마를 이해하고 호출해야 할 때 | credential filtering, tool 권한, 서버 안정성 |
+| browser/GUI 자동화 | 공식 API가 부족하거나 사람 화면을 따라가야 할 때 | 느리고 깨지기 쉬우므로 마지막 선택지로 둔다 |
+
+MCP는 좋은 연결 방식이지만 만능 연결 방식은 아니다. 반복 실행 절차가 중요하면 Skill이 필요하고, 예약 실행이면 cron이 필요하며, 사용자가 Slack에서 부르는 흐름이면 gateway까지 함께 봐야 한다.
+
 ## MCP와 cron/gateway/skill의 차이
 
 | 기능 | 한 문장 정의 | 헷갈리기 쉬운 지점 |
