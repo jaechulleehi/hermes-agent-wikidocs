@@ -76,7 +76,7 @@
 || Use MCP with Hermes | 5장 | 외부 도구 연결 | MCP를 기능이 아니라 업무 흐름 연결 수단으로 설명 | `05-hermes-agent-mcp-external-tools.md` 반영 |
 || GitHub PR Review Agent/GitHub skills | 5장/9장 | GitHub 작업 자동화 | CLI/MCP/API 연결 방식을 나눠 인증, 로그, 검증 기준으로 설명 | `05-github-cli-mcp-api.md` 반영 |
 || Notion/Google Workspace bundled skills | 5장/6장 | 업무 문서/DB/협업 도구 연결 | source of truth, DB schema, 계정/scope, 공개 채널 기준으로 설명 | `05-notion-google-workspace-wikidocs-integration.md` 반영 |
-|| Working with Skills | 5장/향후 스킬 장 | 재사용 절차 관리 | 스킬을 만들지 cron/자동화로 만들지 판단하는 기준 | 스킬 장 신설 예정 |
+|| Working with Skills | 6장 | 재사용 절차 관리 | 반복 업무가 Skill이 되는 기준, 역할별 Skill 분리, Skill QA, 공개/내부 Skill 분리 | `06-skills-chapter.md` 및 06-1~06-6 반영 |
 || Messaging Platforms | 0장/2장/7장 | Telegram/Discord/Slack 등 메시징 연결 | 메인 창구, delivery target, 멀티봇 호출 규칙 | `00-hermes-agent-channels.md` 반영 |
 | Memory | 4장 | 지속 기억 | session/memory/skill/wiki/source of truth의 경계 | 기억 경계 페이지 보강 |
 | Migrate from OpenClaw | 1장/8장 | OpenClaw에서 Hermes로 전환 | 왜 옮겼고 어떻게 이사/검증/복구했는지 | 마이그레이션 체크리스트 보강 |
@@ -88,7 +88,7 @@
 
 ## 5. 실제 운영 케이스 수집 기준
 
-실제 운영 케이스는 10장에 우선 모은다. 단, 단순 일화나 성공담이 아니라 독자가 따라 할 수 있는 업무 자동화 패턴이어야 한다.
+실제 운영 케이스는 11장에 우선 모은다. 단, 단순 일화나 성공담이 아니라 독자가 따라 할 수 있는 업무 자동화 패턴이어야 한다.
 
 케이스를 수집할 때는 다음 항목을 남긴다.
 
@@ -106,7 +106,7 @@
 본문 반영 후보:
 ```
 
-10장에 들어간 케이스는 이후 7장 FAQ 또는 8장 체크리스트로 이어질 수 있어야 한다. 실제 케이스가 쌓이는데 운영 기준으로 전환되지 않으면 책이 사례 모음으로 흩어진다.
+11장에 들어간 케이스는 이후 8장 FAQ 또는 9장 체크리스트로 이어질 수 있어야 한다. 실제 케이스가 쌓이는데 운영 기준으로 전환되지 않으면 책이 사례 모음으로 흩어진다.
 
 ## 6. 앞으로 나올 이야기 수집 기준
 
@@ -187,7 +187,7 @@
 
 1. 1장 입문 글 2개와 기존 1장 글 2개를 실무 사례 중심으로 다듬는다.
 2. 3장 역할형 에이전트 글을 조사형/정리형/실행형/이미지형/콘텐츠형까지 확장한다.
-3. 5장에 공식 docs 기반 cron/MCP/skills/gateway 내용을 실무 패턴으로 보강한다.
+3. 5장에는 cron/MCP/gateway를, 6장에는 공식 Skills Hub와 실제 운영 기반 Skill 관리 기준을 실무 패턴으로 보강한다.
 4. 10장 실제 운영 케이스를 크론 조사, handoff, GitHub/WikiDocs 발행, Slack 분배 흐름 중심으로 보강한다.
 5. 8장에 OpenClaw→Hermes 이사 방법과 복구 체크리스트를 실제 절차로 보강한다.
 6. 이후 6장 콘텐츠 시스템과 9장 조직 확장을 확장한다.

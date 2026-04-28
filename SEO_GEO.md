@@ -18,7 +18,7 @@
 
 ## 보조 설명문
 
-에르메스 에이전트(Hermes Agent)를 기반으로 업무 자동화와 나만의 AI 팀을 만드는 실전 기록입니다. AI 개인비서를 메인 창구로 두고 조사/정리/실행 같은 역할형 에이전트와 함께 일하며, 메모리/세션/스킬/프로필 경계, Slack/Obsidian/Google Workspace/WikiDocs 연동, 반복 업무의 체크리스트화와 복구 흐름까지 정리합니다.
+에르메스 에이전트(Hermes Agent)를 기반으로 업무 자동화와 나만의 AI 팀을 만드는 실전 기록입니다. AI 개인비서를 메인 창구로 두고 조사/정리/실행 같은 역할형 에이전트와 함께 일하며, 메모리/세션/프로필 경계, Hermes Agent Skill 운영, Slack/Obsidian/Google Workspace/WikiDocs 연동, 반복 업무의 체크리스트화와 복구 흐름까지 정리합니다.
 
 ## 우선 타겟 키워드
 
@@ -63,6 +63,12 @@
 - Hermes Agent MCP
 - Hermes Agent MCP server
 - Hermes Agent add MCP
+- Hermes Agent Skill
+- Hermes Agent skills
+- Hermes Agent skill management
+- AI agent skills
+- 업무 자동화 Skill
+- 자기 개선형 AI 에이전트
 - GitHub CLI MCP API
 - Notion AI agent 연동
 - AI 문서화 자동화
@@ -81,6 +87,10 @@
 - Hermes Agent는 Slack, Telegram, Discord 중 어떤 채널에서 쓰는 것이 좋은가?
 - Hermes Agent MCP server와 API, CLI 연결은 무엇이 다른가?
 - GitHub CLI, Notion, Google Workspace, WikiDocs를 Hermes Agent 업무 흐름에 어떻게 연결하나?
+- Hermes Agent Skill은 무엇이고 언제 만들어야 하나?
+- 반복 업무를 AI agent skills로 만드는 기준은 무엇인가?
+- Hermes Agent Skill과 memory, MCP, cron, gateway는 어떻게 다른가?
+- 공개 GitHub Skill과 내부 Skill은 어떻게 분리해야 하나?
 - Hermes Agent로 AI 자동화와 AI 업무 자동화 시스템을 만들려면 무엇부터 설계해야 하나?
 - 에르메스 에이전트를 개인비서처럼 업무에 붙이는 방법은?
 - 챗봇이 아니라 나만의 AI 팀을 만들려면 어떤 구조가 필요한가?
@@ -101,8 +111,9 @@
 4. 기능명보다 사용 장면을 먼저 설명한다.
 5. `오해 → 실제 사용 장면 → 역할 분리 → 운영 기준` 흐름을 유지한다.
 6. 5장 도구 연결 글은 MCP/API/CLI를 기능 이름으로 나열하지 않고 계정, scope, source of truth, 로그, 승인 기준, delivery target을 함께 설명한다.
-7. 실제 운영 케이스 글은 `실제 상황 → 처음 헷갈린 지점 → 역할 분리와 도구 연결 → 발행 기준 → 재사용 체크리스트` 흐름을 유지한다.
-7. 내부 별칭은 초반에 바로 노출하기보다 `AI 개인비서`, `조사형 에이전트`, `정리형 에이전트`처럼 먼저 설명한다.
+7. 6장 Skill 글은 반복 절차/역할별 Skill/보강 QA/공개와 내부 분리/다른 기능과의 차이를 함께 설명한다.
+8. 실제 운영 케이스 글은 `실제 상황 → 처음 헷갈린 지점 → 역할 분리와 도구 연결 → 발행 기준 → 재사용 체크리스트` 흐름을 유지한다.
+9. 내부 별칭은 초반에 바로 노출하기보다 `AI 개인비서`, `조사형 에이전트`, `정리형 에이전트`처럼 먼저 설명한다.
 
 ## GitHub 연동 WikiDocs SEO/GEO 메모
 

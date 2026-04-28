@@ -500,11 +500,13 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 | 2장 | AI 개인비서 구조 | AI 개인비서, 메인 창구, 위임, 멀티 에이전트 |
 | 3장 | 역할형 에이전트 설계 | 조사형 에이전트, 정리형 에이전트, 실행형 에이전트, 역할 분리 |
 | 4장 | AI 기억 관리 | 세션, 메모리, 컨텍스트, 프로필, source of truth |
-| 5장 | 도구 연동과 MCP | MCP, Google Workspace, Slack, 자동화, 스킬 |
-| 6장 | 지식/콘텐츠 시스템 | Obsidian, WikiDocs, 위키, 블로그, 강의, 콘텐츠 자동화 |
-| 7장 | 운영 실패와 멀티봇 | 멀티봇, 운영 FAQ, 실패 패턴, 호출 규칙 |
-| 8장 | 체크리스트와 복구 | 운영 체크리스트, 복구 플레이북, 마이그레이션 |
-| 9장 | 조직 도입 | AI 에이전트 도입, 조직 운영, 권한, 온보딩 |
+| 5장 | 도구 연동과 MCP | MCP, Google Workspace, Slack, 자동화, gateway |
+| 6장 | Skill 운영과 자기 개선 | Hermes Agent Skill, AI agent skills, 반복 절차, Skill QA, 공개/내부 Skill |
+| 7장 | 지식/콘텐츠 시스템 | Obsidian, WikiDocs, 위키, 블로그, 강의, 콘텐츠 자동화 |
+| 8장 | 운영 실패와 멀티봇 | 멀티봇, 운영 FAQ, 실패 패턴, 호출 규칙 |
+| 9장 | 체크리스트와 복구 | 운영 체크리스트, 복구 플레이북, 마이그레이션 |
+| 10장 | 조직 도입 | AI 에이전트 도입, 조직 운영, 권한, 온보딩 |
+| 11장 | 실제 업무 자동화 사례 | Slack, cron, 역할 분배, GitHub/WikiDocs, Skill화 |
 
 ### GEO 대응 질문 예시
 
@@ -865,7 +867,7 @@ OpenClaw→Hermes 이야기는 두 곳에서 다룬다.
 | Automate Anything with Cron | 5장/8장 | 반복 업무를 예약 실행으로 바꾸는 방법과 실패 대응 |
 | Automation Templates | 5장 | 자동화 패턴을 재사용 가능한 템플릿으로 관리하는 방식 |
 | Cron Troubleshooting | 8장 | gateway, scheduler, delivery 문제를 복구 플레이북으로 정리 |
-| Working with Skills | 5장 | 반복 절차를 스킬로 만들지, cron/자동화로 만들지 결정하는 기준 |
+| Working with Skills | 6장 | 반복 절차를 Skill로 만들지, cron/자동화로 만들지 결정하는 기준 |
 | Delegation & Parallel Work | 3장/5장 | 조사형/정리형/실행형 에이전트로 병렬 작업을 나누는 기준 |
 | Migrate from OpenClaw | 1장/8장 | 왜 옮겼는지와 어떻게 안전하게 옮기는지의 기준 |
 | Messaging Platforms | 2장/7장 | Slack, Telegram, Discord에서 호출 규칙과 전달 채널을 나누는 법 |
@@ -962,7 +964,7 @@ Daily Briefing Bot은 한 페이지로만 다루기보다 세 군데에서 재�
 
 ## 22. 현재 결론
 
-지금 바로 할 일은 새 스킬을 더 만드는 것이 아니라, 이 `BOOK_STRUCTURE.md`를 기준으로 실제 `TOC.md`를 10장 구조로 관리하고, 기존 27편과 실제 운영 케이스를 빠짐없이 배치한 뒤, 실무 경험/시행착오/업데이트 운영 루프를 각 장에 박아 넣는 것이다.
+스킬 장 신설 이후에는 이 `BOOK_STRUCTURE.md`를 기준으로 실제 `TOC.md`를 11장 구조로 관리하고, 기존 27편과 실제 운영 케이스를 빠짐없이 배치한 뒤, 실무 경험/시행착오/업데이트 운영 루프를 각 장에 박아 넣는 것이다.
 
 가장 좋은 다음 액션은 다음 순서다.
 
