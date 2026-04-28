@@ -83,4 +83,4 @@ WikiDocs에 함께 읽을 수 있는 지식으로 정리
 
 ## 다음에 읽을 흐름
 
-먼저 [AI 개인비서는 무엇을 기억해야 할까](https://wikidocs.net/346125)에서 기억의 기준을 잡는다. 그다음 [session/memory/profile은 어떻게 다를까](https://wikidocs.net/346126)에서 내부 기억층을 나누고, SOUL.md 성격 정의 페이지에서 역할형 에이전트의 정체성을 어떻게 고정하는지 확인한다.
+먼저 [AI 개인비서는 무엇을 기억해야 할까](https://wikidocs.net/346125)에서 기억의 기준을 잡는다. 그다음 [session/memory/profile은 어떻게 다를까](https://wikidocs.net/346126)에서 내부 기억층을 나누고, [SOUL.md 성격 정의 페이지](https://wikidocs.net/346292)에서 역할형 에이전트의 정체성을 어떻게 고정하는지 확인한다.
