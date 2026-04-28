@@ -1,8 +1,8 @@
 ## AI 챗봇과 AI 개인비서는 어떻게 다를까
 
-![AI 챗봇과 AI 개인비서 차이](../assets/images/chapter-heroes/ch1-1-chatbot-vs-ai-assistant-codex.webp)
-
 AI 챗봇은 질문에 답한다. AI 개인비서는 요청을 받아 업무 흐름을 만든다. 둘 다 대화형 AI를 사용하지만, 실제 업무에서 기대하는 역할은 다르다.
+
+![AI 챗봇과 AI 개인비서 차이](../assets/images/chapter-heroes/ch1-1-chatbot-vs-ai-assistant-codex.webp)
 
 챗봇은 “이 내용을 요약해줘”, “문장을 다듬어줘”처럼 한 번의 대화 안에서 끝나는 작업에 강하다. 반면 AI 개인비서는 요청을 해석하고, 필요한 역할을 나누고, 도구를 연결하고, 결과를 다시 쓸 수 있는 기록으로 남기는 쪽에 가깝다.
 

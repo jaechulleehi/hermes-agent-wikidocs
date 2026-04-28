@@ -1,8 +1,8 @@
 ## Hermes Agent MCP는 외부 도구를 어떻게 연결할까
 
-![Hermes Agent MCP 외부 도구 연결](../assets/images/chapter-heroes/ch5-5-mcp-external-tools-codex.webp)
-
 에르메스 에이전트(Hermes Agent)에서 MCP는 외부 도구를 대화 흐름에 붙이는 표준 연결면이다. `Hermes Agent MCP`, `Hermes Agent MCP server`, `Hermes Agent add MCP`를 찾는 독자라면 MCP를 “자동화 버튼”이 아니라 AI 개인비서가 외부 서비스의 도구 목록을 이해하고 호출하는 방식으로 이해해야 한다.
+
+![Hermes Agent MCP 외부 도구 연결](../assets/images/chapter-heroes/ch5-5-mcp-external-tools-codex.webp)
 
 MCP를 붙이면 할 수 있는 일이 늘어난다. 이 기준은 [외부 도구/MCP/채널 연동과 AI 워크플로우 자동화](https://wikidocs.net/345907) 전체와 연결된다. 하지만 위험도도 같이 늘어난다. 캘린더 조회, 문서 검색, GitHub 이슈 확인, Notion 페이지 조회처럼 읽기 중심인 작업과 문서 수정, 공유 범위 변경, 삭제, 배포처럼 되돌리기 어려운 작업은 같은 연결로 다루면 안 된다.
 

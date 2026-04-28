@@ -1,8 +1,8 @@
 ## 역할형 에이전트는 어떤 기준으로 나눌까
 
-![역할형 에이전트 분리 기준](../assets/images/chapter-heroes/ch3-1-role-splitting-criteria-codex.webp)
-
 에르메스 에이전트(Hermes Agent)에서 역할형 에이전트는 “누가 더 잘하느냐”가 아니라 “어떤 실패를 줄이느냐”를 기준으로 나눈다. [나만의 AI 팀](https://wikidocs.net/345924)을 실제 업무에 붙일 때 좋은 역할 분리는 일을 예쁘게 분류하는 것이 아니라, 문제가 생겼을 때 어디를 고쳐야 하는지 보이게 만든다.
+
+![역할형 에이전트 분리 기준](../assets/images/chapter-heroes/ch3-1-role-splitting-criteria-codex.webp)
 
 예를 들어 글이 약할 때 원인은 여러 가지일 수 있다. 근거가 부족해서 약할 수도 있고, 구조가 나빠서 약할 수도 있고, 검증 없이 발행돼서 약할 수도 있다. 이 세 문제를 한 역할에 모두 묶으면 “다시 잘해줘”라는 말만 반복된다.
 

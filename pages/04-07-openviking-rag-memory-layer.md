@@ -1,8 +1,8 @@
 ## OpenViking과 RAG는 기억을 어떻게 강화할까
 
-![OpenViking과 RAG 기억 강화층](../assets/images/chapter-heroes/ch4-7-openviking-rag-memory-layer-codex.webp)
-
 Hermes Agent에서 AI 에이전트의 기억을 강화한다는 말은 모든 지식을 프롬프트에 더 많이 붙인다는 뜻이 아니다. [OpenClaw에서 Hermes로 기억을 옮기는 기준](https://wikidocs.net/346130)이 과거 유산 정리라면, OpenViking/RAG는 앞으로 쌓일 지식을 회수하는 강화층이다. 오래 운영할수록 지식은 늘어나고, 매번 전부 넣을 수는 없다. 그래서 필요한 것이 OpenViking 같은 외부 메모리 레이어와 RAG 회수 구조다.
+
+![OpenViking과 RAG 기억 강화층](../assets/images/chapter-heroes/ch4-7-openviking-rag-memory-layer-codex.webp)
 
 에르메스 에이전트(Hermes Agent)에서 memory는 항상 주입할 짧은 기준을 맡고, Obsidian LLM Wiki는 누적 지식과 운영 원장을 맡는다. OpenViking/RAG는 이 둘 사이에서 필요한 지식을 검색하고, 관련성이 높은 조각을 다시 모델에게 건네는 기억 강화층으로 볼 수 있다. 다만 회수한 지식도 긴 대화 속에서는 흐려질 수 있으므로 [context compaction과 handoff](https://wikidocs.net/346132) 기준이 함께 필요하다.
 

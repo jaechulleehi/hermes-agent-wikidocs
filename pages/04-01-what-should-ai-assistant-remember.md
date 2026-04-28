@@ -1,8 +1,8 @@
 ## AI 개인비서는 무엇을 기억해야 할까
 
-![AI 개인비서가 기억해야 할 기준](../assets/images/chapter-heroes/ch4-1-memory-layers-codex.webp)
-
 AI 개인비서가 기억해야 할 것은 모든 대화가 아니다. 앞 장의 [AI 개인비서 메인 창구](https://wikidocs.net/345891)가 요청의 입구를 다룬다면, 이 글은 그 입구가 무엇을 기억으로 남겨야 하는지 다룬다. 다시 판단할 때 반복해서 필요한 기준이다. 오래 쓰는 AI 개인비서일수록 “많이 기억하는가”보다 “무엇을 어디에 기억하는가”가 더 중요하다.
+
+![AI 개인비서가 기억해야 할 기준](../assets/images/chapter-heroes/ch4-1-memory-layers-codex.webp)
 
 에르메스 에이전트(Hermes Agent)에서 하비가 강해지는 지점도 여기에 있다. 하비는 요청을 처리하는 창구이면서, 새 정보가 들어왔을 때 그것을 memory, shared-memory, Obsidian, skill, session_search 중 어디에 둘지 판단한다. 이 판단이 없으면 AI 팀은 기록은 많은데 다시 쓰지 못하는 상태가 된다. 이 역할은 뒤에서 다루는 [하비 기억 오케스트레이터](https://wikidocs.net/346133)와 바로 이어진다.
 

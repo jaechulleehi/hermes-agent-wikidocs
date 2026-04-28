@@ -1,8 +1,8 @@
 ## 에르메스 에이전트(Hermes Agent) provider/model/config 설정은 어떻게 확인할까
 
-![Hermes Agent provider model config 설정 흐름](../assets/images/chapter-heroes/ch00-5-provider-model-config-codex.webp)
-
 Hermes Agent에서 provider/model/config는 “어떤 모델을 쓸지”만의 문제가 아니다. [공식 configuration 문서](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)는 설정을 `~/.hermes/config.yaml`, secret/token을 `~/.hermes/.env`로 나누고, provider, model, terminal backend, Docker/SSH/Modal/Daytona 같은 실행 환경 설정을 함께 다룬다. 이 경계가 흐리면 CLI에서는 되던 일이 gateway나 cron에서는 실패한다. 설정을 바꾼 뒤에는 [업데이트 전후 점검](https://wikidocs.net/346253)처럼 실행 검증까지 이어가야 한다.
+
+![Hermes Agent provider model config 설정 흐름](../assets/images/chapter-heroes/ch00-5-provider-model-config-codex.webp)
 
 처음 세팅할 때는 좋은 모델을 고르는 것보다 “어디에 무엇이 저장되는가”를 먼저 알아야 한다. 모델 이름, API key, OAuth, custom endpoint, provider routing, toolset, terminal backend가 섞이면 나중에 실패 원인을 찾기 어렵다.
 

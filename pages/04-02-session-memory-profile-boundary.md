@@ -1,8 +1,8 @@
 ## session/memory/profile은 어떻게 다를까
 
-![session memory profile 경계](../assets/images/chapter-heroes/ch4-2-session-memory-profile-boundary-codex.webp)
-
 AI 개인비서가 다르게 느껴지는 가장 큰 이유는 session, memory, profile이 서로 다른 층이기 때문이다. 이 구분은 앞 글인 [AI 개인비서는 무엇을 기억해야 할까](https://wikidocs.net/346125)의 기준을 실제 운영 단위로 나누는 작업이다. 같은 모델을 쓰더라도 현재 대화 맥락, 장기 기억, 실행 프로필이 다르면 결과는 달라진다.
+
+![session memory profile 경계](../assets/images/chapter-heroes/ch4-2-session-memory-profile-boundary-codex.webp)
 
 이 차이를 이해하지 못하면 “왜 기억을 못 하지?”라는 질문이 반복된다. 실제로는 기억 문제가 아니라 현재 session이 바뀌었거나, profile의 도구 권한이 다르거나, memory에 넣지 말아야 할 작업 로그를 기대하고 있는 경우가 많다. 그래서 다음 단계에서는 [AGENTS.md와 USER.md](https://wikidocs.net/346127)가 어떤 기억을 고정하는지 봐야 한다.
 

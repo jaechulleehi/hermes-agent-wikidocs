@@ -1,8 +1,8 @@
 ## Skill은 어떻게 보강하고 QA해야 할까
 
-![Skill 보강과 QA 흐름](../assets/images/chapter-heroes/ch6-4-skill-patching-qa-codex.webp)
-
 에르메스 에이전트(Hermes Agent)의 Skill은 한 번 만들고 끝나는 문서가 아니다. 실제 운영과 맞지 않는 Skill은 오래될수록 위험해진다. 좋은 Skill 운영은 새 Skill을 많이 만드는 것이 아니라, 틀린 절차를 빨리 고치고 검증 기준을 현재 운영에 맞추는 것이다.
+
+![Skill 보강과 QA 흐름](../assets/images/chapter-heroes/ch6-4-skill-patching-qa-codex.webp)
 
 Skill 보강은 “기억을 더 넣는 일”이 아니다. 실패가 발생했을 때 왜 기존 Skill이 막지 못했는지 확인하고, 다음에는 어떤 순서로 막을지 절차를 바꾸는 일이다. 그래서 Skill QA는 문장 교정보다 운영 품질 관리에 가깝다.
 

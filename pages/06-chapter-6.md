@@ -1,8 +1,8 @@
-## 7장. WikiDocs/블로그/강의 콘텐츠 시스템
+## 7장. AI 문서화 자동화와 WikiDocs 콘텐츠 시스템
 
-에르메스 에이전트(Hermes Agent)로 조사 결과를 많이 모았다고 바로 좋은 콘텐츠가 되지는 않는다. WikiDocs, 블로그, 강의, 이미지 자산은 같은 내용을 담더라도 역할이 다르다. 7장은 이 차이를 구분하고, 원자료를 공유 가능한 콘텐츠 시스템으로 바꾸는 기준을 다룬다.
+에르메스 에이전트(Hermes Agent)로 AI 문서화 자동화를 한다고 해서 조사 결과가 바로 좋은 콘텐츠가 되지는 않는다. WikiDocs, 블로그, 강의, 이미지 자산은 같은 내용을 담더라도 역할이 다르다. 7장은 이 차이를 구분하고, 원자료를 공유 가능한 콘텐츠 시스템으로 바꾸는 기준을 다룬다.
 
-![7장 WikiDocs 블로그 강의 콘텐츠 시스템 흐름](../assets/images/chapter-heroes/ch07-content-system-wikidocs-blog-lecture-codex.webp)
+![7장 AI 문서화 자동화와 WikiDocs 콘텐츠 시스템](../assets/images/chapter-heroes/ch07-content-system-wikidocs-blog-lecture-codex.webp)
 
 앞 장의 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)은 Obsidian LLM Wiki, HALOX Brain, shared-memory 같은 기억층을 다뤘다. 7장은 그 기억층에 쌓인 원장과 조사 결과를 어떻게 WikiDocs 책, 블로그 글, 강의 흐름, 이미지 자산으로 변환할지에 집중한다.
 
@@ -20,7 +20,7 @@
 
 사용자가 “블로그 원문과 공식 docs가 잘 옮겨졌는지, 내용이 너무 축약되어 보이지 않는지”를 물었을 때, 작업은 단순 이전 검수가 아니었다. 기존 글, 공식 기능 기준, 세션 기록, Slack 대화, shared-memory, Obsidian에 흩어진 운영 이야기를 다시 모아야 했다.
 
-여기서 WikiDocs는 최종 공개 책이고, GitHub는 원본이다. Obsidian과 shared-memory는 운영 기록과 근거를 담고, 뽀동이는 독자가 읽을 수 있는 구조로 바꾼다. 하망이는 필요한 이미지를 만들고, 하비는 최종 통합과 검증을 본다. 실제 이미지 제작 흐름은 [하망이와 WikiDocs 본문 이미지를 만드는 법](https://wikidocs.net/345989)에서 따로 다룬다.
+이 흐름에서 WikiDocs는 AI 문서화 자동화의 최종 공개 책이고, GitHub는 원본이다. Obsidian과 shared-memory는 운영 기록과 근거를 담고, 뽀동이는 독자가 읽을 수 있는 구조로 바꾼다. 하망이는 필요한 이미지를 만들고, 하비는 최종 통합과 검증을 본다. 실제 이미지 제작 흐름은 [하망이와 WikiDocs 본문 이미지를 만드는 법](https://wikidocs.net/345989)에서 따로 다룬다.
 
 중요한 점은 기록을 많이 남기는 것이 아니라 채널마다 역할을 정하는 것이다. 내부 원장은 판단의 근거가 되고, WikiDocs는 evergreen 운영서가 되며, 블로그는 특정 문제를 검색하는 독자의 입구가 된다. 강의는 다시 순서와 실습을 설계해야 한다. 이 흐름이 실제 요청에서 어떻게 굴러가는지는 [Hermes Agent 실제 업무 자동화 케이스](https://wikidocs.net/345990)에서 다시 확인할 수 있다.
 

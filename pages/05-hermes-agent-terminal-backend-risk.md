@@ -1,8 +1,8 @@
 ## Hermes Agent terminal 도구는 언제 강하고 언제 위험할까
 
-![Hermes Agent terminal 도구 위험 경계](../assets/images/chapter-heroes/ch5-9-terminal-backend-risk-codex.webp)
-
 Hermes Agent terminal 도구는 가장 강력하지만 가장 조심해야 하는 도구다. [공식 Tools & Toolsets 문서](https://hermes-agent.nousresearch.com/docs/user-guide/features/tools#terminal-backends)는 terminal backend를 local, docker, ssh, singularity, modal, daytona처럼 여러 실행 환경으로 나눈다. 즉 terminal은 하나의 명령창이 아니라 실행 위치와 격리 수준을 함께 선택하는 도구다.
+
+![Hermes Agent terminal 도구 위험 경계](../assets/images/chapter-heroes/ch5-9-terminal-backend-risk-codex.webp)
 
 AI 개인비서가 terminal을 쓰면 파일 검증, 테스트 실행, git 상태 확인, 빌드, 배포 준비가 빨라진다. 반대로 잘못 쓰면 사용자의 로컬 파일, credential, 운영 repo를 직접 건드릴 수 있다. 그래서 terminal 작업은 “명령을 실행할 수 있는가”보다 “어디서 실행해야 안전한가”가 먼저다.
 

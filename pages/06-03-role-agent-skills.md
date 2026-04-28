@@ -1,8 +1,8 @@
 ## 역할형 에이전트별 Skill은 어떻게 나눌까
 
-![역할형 에이전트별 Skill 분리](../assets/images/chapter-heroes/ch6-3-role-agent-skills-codex.webp)
-
 에르메스 에이전트(Hermes Agent)에서 Skill을 잘 쓰려면 역할형 에이전트의 경계를 먼저 봐야 한다. 하비, 방울이, 뽀동이, 하망이, 봉구가 모두 같은 Skill을 쓰면 편해 보이지만, 실제로는 역할마다 필요한 판단 기준과 검증 방식이 다르다.
+
+![역할형 에이전트별 Skill 분리](../assets/images/chapter-heroes/ch6-3-role-agent-skills-codex.webp)
 
 앞의 [역할형 에이전트 분리](https://wikidocs.net/345925)에서 본 것처럼 조사형/정리형/실행형/이미지형 에이전트는 강점과 실패 방식이 다르다. Skill도 이 차이를 반영해야 한다. Skill은 에이전트를 똑같이 만드는 장치가 아니라, 각 역할이 자기 일을 더 안정적으로 하게 만드는 장치다.
 
