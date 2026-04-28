@@ -1,8 +1,8 @@
 ![5장 외부 도구 MCP 자동화 운영 구조](../assets/images/chapter-heroes/ch05-tools-mcp-automation-ops-codex.png)
 
-## 5장. 외부 도구/MCP/자동화 운영
+## 5장. 외부 도구/MCP/AI 워크플로우 자동화
 
-Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 도구와 연결되어 실제 업무를 움직일 때다. Google Workspace, MCP, skill, cron, gateway, Daily Briefing Bot은 모두 “기능 목록”이 아니라 업무 흐름을 이어주는 연결 장치다.
+Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 도구와 연결되어 실제 업무를 움직일 때다. Google Workspace, MCP, skill, cron, gateway, Daily Briefing Bot은 모두 “기능 목록”이 아니라 AI 워크플로우 자동화와 업무 흐름을 이어주는 연결 장치다.
 
 하지만 외부 도구는 붙였다고 끝나지 않는다. 계정이 맞는지, 권한 범위가 맞는지, gateway가 살아 있는지, cron prompt가 혼자 실행될 만큼 충분한지, 결과가 어디로 전달되는지까지 봐야 한다. 5장은 바로 이 운영 기준을 다룬다.
 
@@ -23,7 +23,7 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 
 | 기능 | 공식 기준으로 보는 뜻 | 실제 운영에서의 질문 |
 |---|---|---|
-| MCP | 외부 서비스와 도구를 Hermes Agent 대화 흐름에 연결하는 방식 | 어떤 계정/권한/scope로 연결했고, 위험 작업은 어디서 멈출 것인가 |
+| MCP | Model Context Protocol의 약자로, 외부 서비스와 도구를 Hermes Agent 대화 흐름에 연결하는 방식 | 어떤 계정/권한/scope로 연결했고, 위험 작업은 어디서 멈출 것인가 |
 | cron | 정해진 시간이나 주기에 fresh session으로 작업을 실행하는 예약 자동화 | prompt가 혼자 실행될 만큼 충분하고, 결과가 어디로 전달되는가 |
 | skill | 반복 절차, 도구 사용법, 실패 패턴, 검증 기준을 재사용하는 운영 지식 | 이번 일은 기억할 선호인가, 반복 절차인가, 예약 실행인가 |
 | gateway | 메시징 플랫폼, cron 실행, delivery를 이어주는 always-on 운영 축 | process가 살아 있는 것과 실제 메시지가 도착한 것을 구분했는가 |
@@ -38,7 +38,7 @@ WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. Git
 
 ## 이 장에서 얻을 기준
 
-- MCP는 “도구 연결”이지 “운영 완성”이 아니다.
+- MCP는 Model Context Protocol 기반의 “도구 연결”이지 “운영 완성”이 아니다.
 - cron은 혼자 실행되는 fresh session이므로 prompt 안에 필요한 맥락이 있어야 한다.
 - skill은 반복 가능한 절차, 실패 패턴, 검증 방법이 생겼을 때 만든다.
 - gateway는 항상 켜져 있다는 느낌보다 실제 전달/로그/상태를 함께 봐야 한다.
