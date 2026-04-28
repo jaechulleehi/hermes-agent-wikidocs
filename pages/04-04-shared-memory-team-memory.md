@@ -20,7 +20,7 @@ shared-memory는 단순 폴더가 아니다. 팀 공통 규칙, source of truth,
 
 HaloX 운영에서는 memory, shared-memory, HALOX Brain을 나눠 쓴다. memory는 장기 규칙과 선호, shared-memory는 공용 작업 원본과 handoff, HALOX Brain은 누적 지식과 운영 원장을 맡는다.
 
-예를 들어 방울이가 조사한 내용이 콘텐츠 후보가 되면, 원장은 Obsidian에 남기고 후속 작업 패키지는 shared-memory로 이어진다. 로이드가 “넘겨”라고 판단하면 뽀동이, 하비, 하망이가 그 패키지를 보고 이어받을 수 있어야 한다.
+예를 들어 방울이가 조사한 내용이 콘텐츠 후보가 되면, 원장은 Obsidian에 남기고 후속 작업 패키지는 shared-memory로 이어진다. 사용자가 “넘겨”라고 판단하면 뽀동이, 하비, 하망이가 그 패키지를 보고 이어받을 수 있어야 한다.
 
 ## shared-memory에 둘 것
 
