@@ -92,6 +92,30 @@ Hermes Agent는 한 번의 질문으로 끝나는 챗봇보다 오래 가는 작
 - `/tools`, `/toolsets`, `/config`, `/skills`를 확인한다.
 - 실패했을 때 오류가 provider/config/tool/gateway 중 어디에 가까운지 분리한다.
 
+## 첫날 해보면 좋은 작은 요청
+
+첫 대화가 성공했는지 보려면 거창한 업무 자동화를 시키기보다, 실패 범위가 좁은 요청을 단계별로 던지는 편이 좋다.
+
+| 단계 | 예시 요청 | 확인할 것 |
+|---|---|---|
+| 답변 확인 | `Hermes Agent가 무엇인지 한 문단으로 설명해줘` | provider/model이 응답하는가 |
+| 맥락 확인 | `방금 답을 초보자용으로 다시 써줘` | 같은 session 안에서 맥락이 이어지는가 |
+| 도구 확인 | `현재 폴더의 README 존재 여부만 확인해줘` | toolset이 필요한 범위에서만 작동하는가 |
+| 중단 확인 | 긴 답변 중 interrupt를 걸어본다 | CLI에서 멈춤/재지시가 가능한가 |
+| 회수 확인 | 새 session에서 이전 작업을 찾을 수 있는지 본다 | session search나 기억 경계가 기대대로 작동하는가 |
+
+이 요청들은 모두 “업무를 맡기기 전의 기준선”이다. 여기서 흔들리면 Slack, cron, MCP로 확장해도 같은 문제가 더 복잡한 형태로 반복된다.
+
+## 실패했을 때 증상별 첫 확인
+
+| 증상 | 먼저 볼 곳 | 다음 판단 |
+|---|---|---|
+| `hermes` 명령을 못 찾는다 | 설치 경로와 shell reload | 설치/환경 변수 문제 |
+| 명령은 되는데 응답이 없다 | provider/API key/OAuth | [provider/model/config](https://wikidocs.net/346252) 문제 |
+| 답변은 되는데 도구가 안 돈다 | `/tools`, `/toolsets` | toolset 권한 또는 실행 환경 문제 |
+| CLI는 되는데 Slack이 안 된다 | gateway process/log/delivery | [Docker/Gateway](https://wikidocs.net/346139) 또는 채널 권한 문제 |
+| 같은 작업을 못 이어간다 | session/history/memory 경계 | 4장 기억 시스템 문제 |
+
 ## FAQ
 
 ### CLI를 건너뛰고 Slack부터 써도 되나요?

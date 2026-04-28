@@ -52,6 +52,28 @@ cron job / Skill / MCP 흐름 점검
 
 검증은 “프로세스가 살아 있다”에서 끝나면 안 된다. gateway가 살아 있어도 Slack thread로 답이 돌아오지 않을 수 있고, cron job이 등록되어 있어도 fresh session prompt가 새 환경에서 실패할 수 있다.
 
+## 업데이트 리허설 질문
+
+업데이트 전후에는 같은 질문을 다시 던져 비교한다. 질문은 멋진 답변을 받기 위한 것이 아니라, 운영 축이 그대로 살아 있는지 확인하기 위한 것이다.
+
+```text
+1. CLI에서 짧은 답변을 받을 수 있는가?
+2. 현재 provider/model/config를 설명할 수 있는가?
+3. 작은 toolset 작업이 정상 동작하는가?
+4. Slack이나 주 채널에서 같은 thread로 답이 돌아오는가?
+5. cron job 하나가 fresh session에서 끝까지 실행되고 delivery되는가?
+6. 자주 쓰는 Skill 하나가 로드되고 절차가 깨지지 않는가?
+```
+
+| 확인 축 | 통과 기준 | 실패하면 의심할 것 |
+|---|---|---|
+| CLI | `hermes`와 짧은 chat이 된다 | 설치 경로, venv, shell reload |
+| provider/model | 같은 모델로 응답이 온다 | API key, OAuth, provider routing, config migrate |
+| toolset | 작은 파일/웹/터미널 작업이 된다 | toolset 이름 변경, 권한, backend 설정 |
+| gateway | 실제 채널로 답이 돌아온다 | process만 정상인 delivery 실패, token/scope/channel 권한 |
+| cron | 결과가 정해진 target에 도착한다 | self-contained prompt 부족, delivery target, scheduler 상태 |
+| Skill | 반복 절차가 그대로 작동한다 | 명령 변경, stale Skill, 검증 단계 누락 |
+
 ## 운영 환경별 추가 확인
 
 | 환경 | 추가 확인 |
@@ -68,7 +90,7 @@ cron job / Skill / MCP 흐름 점검
 - 운영 중인 gateway가 있으면 사람이 적게 쓰는 시간에 업데이트한다.
 - update 전후로 같은 테스트 질문을 남긴다.
 - CLI 확인 없이 messaging platform만 보고 판단하지 않는다.
-- secret/token을 로그나 공개 문서에 복사하지 않는다.
+- secret/token을 로그나 공유 문서에 복사하지 않는다.
 - 실패 시 바로 재시도하기 전에 update log와 config check를 먼저 본다.
 - 반복되는 업데이트 검증 절차는 Skill이나 체크리스트 후보로 남긴다.
 
