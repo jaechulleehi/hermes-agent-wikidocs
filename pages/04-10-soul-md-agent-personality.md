@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent)에서 SOUL.md는 에이전트의 정체성과 성격을 정의하는 파일이다. 단순히 “말투를 귀엽게 한다”가 아니라, 이 에이전트가 누구이고, 어떤 기준으로 응답하고, 어떤 태도를 유지해야 하는지를 정하는 역할 기억에 가깝다.
 
-![SOUL.md 에이전트 성격 정의](../assets/images/chapter-heroes/ch4-10-soul-md-agent-personality-codex.webp)
+![SOUL.md 에이전트 성격 정의](../assets/images/chapter-heroes/ch4-10-soul-md-agent-personality-codex.png)
 
 이 글은 공식 Personality/SOUL.md 설명을 실제 운영 관점으로 바꿔 읽는 페이지다. 핵심은 하나다. SOUL.md는 선택 사항이지만, 하비/뽀동이처럼 역할과 개성이 중요한 [역할형 에이전트](https://wikidocs.net/345925)를 운영한다면 반드시 의식적으로 설계해야 한다.
 
