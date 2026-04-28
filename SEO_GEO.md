@@ -28,7 +28,10 @@
 - Hermes Agent 공식 문서
 - Hermes Agent docs
 - Hermes Agent 설치
+- Hermes Agent 사용법
+- Hermes Agent 설치 방법
 - 에르메스 에이전트 설치
+- 에르메스 에이전트 세팅
 - Hermes Agent CLI
 - Hermes Agent 첫 대화
 - Hermes Agent config
@@ -57,24 +60,37 @@
 - AI 업무 자동화
 - AI 자동화
 - AI 업무 자동화 사례
+- AI 업무 자동화 워크플로우
+- AI 자동화 사례
+- AI 자동화 시스템
+- AI 업무 자동화 책
 - AI 워크플로우
 - AI 워크플로우 자동화
 - 나만의 AI 팀 만들기
 - AI 비서
 - AI 개인비서
+- AI 개인비서 만들기
 - 개인 AI 비서
+- 개인 AI 비서 만들기
 - 역할형 에이전트
+- 멀티 에이전트 운영
+- 멀티 에이전트 사례
 - 멀티 에이전트 시스템
+- 멀티 에이전트 아키텍처
 - 멀티 에이전트 오케스트레이션
 - 오픈소스 AI 에이전트
 - 자율 AI 에이전트
 - AI 에이전트 업무 자동화
+- AI 에이전트 도입
 - AI 에이전트 도입 사례
+- AI 에이전트 운영 사례
 - Slack AI 비서
 - Obsidian AI 워크플로우
 - MCP 연동
 - Model Context Protocol
 - MCP AI agent
+- MCP AI agent protocol
+- AI 에이전트 MCP 연동
 - Hermes Agent MCP
 - Hermes Agent MCP server
 - Hermes Agent add MCP
@@ -83,6 +99,8 @@
 - Hermes Agent skill management
 - AI agent skills
 - 업무 자동화 Skill
+- AI 에이전트 스킬
+- 스킬 관리
 - 자기 개선형 AI 에이전트
 - GitHub CLI MCP API
 - Notion AI agent 연동
@@ -96,6 +114,7 @@
 
 - Hermes Agent 공식 GitHub와 공식 문서는 어디서 볼 수 있나?
 - Hermes Agent 설치와 세팅은 어떻게 시작해야 하나?
+- Hermes Agent 사용법을 기능 목록이 아니라 업무 자동화 흐름으로 익히려면 무엇부터 봐야 하나?
 - Hermes Agent CLI 첫 대화는 어떻게 시작하나?
 - Hermes Agent provider/model/config는 어떻게 확인하나?
 - Hermes Agent 업데이트 전후에는 무엇을 점검해야 하나?
@@ -110,12 +129,15 @@
 - Hermes Agent Skill과 memory, MCP, cron, gateway는 어떻게 다른가?
 - 공개 GitHub Skill과 내부 Skill은 어떻게 분리해야 하나?
 - Hermes Agent로 AI 자동화와 AI 업무 자동화 시스템을 만들려면 무엇부터 설계해야 하나?
+- AI 업무 자동화 사례를 실제 업무 흐름으로 만들려면 어떤 역할 분리와 검증이 필요한가?
 - 에르메스 에이전트를 개인비서처럼 업무에 붙이는 방법은?
 - 챗봇이 아니라 나만의 AI 팀을 만들려면 어떤 구조가 필요한가?
+- AI 개인비서 만들기는 챗봇 설정과 무엇이 다르고, 어떤 운영 기준이 필요한가?
 - AI 개인비서와 역할형 에이전트를 나눠 쓰는 방법은?
 - 조사, 정리, 문서화, 발행을 AI 워크플로우로 만드는 방법은?
 - Slack, Obsidian, Google Workspace를 AI 비서와 연결해 쓰는 실제 사례는?
 - MCP와 Model Context Protocol은 AI 워크플로우 자동화에서 언제 필요하고 어디까지 써야 하나?
+- MCP AI agent protocol을 업무 도구 연결에 쓸 때 CLI/API와 무엇이 다른가?
 - 크론 조사에서 AI 에이전트 글쓰기와 WikiDocs 발행까지 어떻게 연결하나?
 - GitHub와 WikiDocs를 연결해 AI 콘텐츠를 발행하고 수정하는 실제 흐름은?
 - Slack 스레드에서 AI 개인비서가 역할형 에이전트에게 일을 분배하는 기준은?

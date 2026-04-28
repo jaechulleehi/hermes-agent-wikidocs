@@ -2,9 +2,9 @@
 
 ![5장 외부 도구 MCP 자동화 운영 구조](../assets/images/chapter-heroes/ch05-tools-mcp-automation-ops-codex.webp)
 
-Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 도구와 연결되어 실제 업무를 움직일 때다. Google Workspace, Notion, GitHub, WikiDocs, MCP, CLI, API, cron, gateway, Daily Briefing Bot은 모두 “기능 목록”이 아니라 AI 워크플로우 자동화와 업무 흐름을 이어주는 연결 장치다. 반복 절차를 재사용하는 Skill은 별도 6장에서 다룬다.
+Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 도구와 연결되어 실제 업무를 움직일 때다. Google Workspace, Notion, GitHub, WikiDocs, MCP, CLI, API, cron, gateway, Daily Briefing Bot은 모두 “기능 목록”이 아니라 AI 워크플로우 자동화와 업무 흐름을 이어주는 연결 장치다. MCP는 Model Context Protocol 기반의 도구 연결면이고, 반복 절차를 재사용하는 Skill은 별도 6장에서 다룬다.
 
-하지만 외부 도구는 붙였다고 끝나지 않는다. 계정이 맞는지, 권한 범위가 맞는지, gateway가 살아 있는지, cron prompt가 혼자 실행될 만큼 충분한지, 결과가 어디로 전달되는지까지 봐야 한다. 특히 GitHub CLI, MCP server, API 직접 호출은 같은 외부 연결처럼 보여도 인증, 로그, 검증 방식이 다르다. 5장은 바로 이 운영 기준을 다룬다.
+하지만 외부 도구는 붙였다고 끝나지 않는다. 계정이 맞는지, 권한 범위가 맞는지, gateway가 살아 있는지, cron prompt가 혼자 실행될 만큼 충분한지, 결과가 어디로 전달되는지까지 봐야 한다. 특히 GitHub CLI, MCP server, API 직접 호출은 같은 외부 연결처럼 보여도 인증, 로그, 검증 방식이 다르다. 5장은 MCP AI agent protocol을 업무 도구에 붙일 때 어디까지 자동화하고 어디서 사람이 승인해야 하는지 다룬다.
 
 ## 이 장에서 다루는 문제
 
@@ -15,6 +15,9 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 | Google Workspace/Notion/WikiDocs | API 인증만 되면 된다 | source of truth, 계정/권한/삭제 위험/공유 범위를 분리한다 |
 | gateway | status가 OK면 끝이다 | 메시징 delivery, cron 실행, 로그를 함께 본다 |
 | Daily Briefing Bot | 뉴스 요약 예제다 | fresh session 기반 자동화 패턴이다 |
+| 내장 도구/toolset | 도구가 많을수록 좋다 | 역할별로 필요한 도구 범위와 위험도를 제한한다 |
+| terminal backend | 명령만 맞으면 된다 | local/docker/ssh/modal 같은 실행 위치와 격리 수준을 고른다 |
+| 실행 결과 검증 | exit code 0이면 끝이다 | diff, 공개 반영, delivery, rollback 경로까지 확인한다 |
 | 실행 방식 | 에이전트를 나누면 알아서 운영된다 | 직접 처리/profile/delegation/subagent/cron을 구분한다 |
 
 ## 공식 docs 기능별 mini 정의
