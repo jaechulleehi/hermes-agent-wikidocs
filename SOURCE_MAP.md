@@ -73,11 +73,11 @@
 | Automate Anything with Cron | 5장/8장 | 프롬프트 기반 예약 실행 | 반복 업무를 cron으로 만들 때 필요한 self-contained prompt와 검증 기준 | cron 운영 페이지 필요 |
 | Cron Troubleshooting | 8장 | gateway, schedule, delivery 문제 해결 | 예약 작업이 안 돌 때 확인 순서 | gateway/cron 복구 체크리스트 필요 |
 | Delegation & Parallel Work | 3장/5장 | sub-agent 병렬 작업 | 조사형/정리형/실행형 분리의 공식 기능 기반 | 역할 분리 페이지에 공식 연결 추가 |
-|| Use MCP with Hermes | 5장 | 외부 도구 연결 | MCP를 기능이 아니라 업무 흐름 연결 수단으로 설명 | `05-hermes-agent-mcp-external-tools.md` 반영 |
-|| GitHub PR Review Agent/GitHub skills | 5장/9장 | GitHub 작업 자동화 | CLI/MCP/API 연결 방식을 나눠 인증, 로그, 검증 기준으로 설명 | `05-github-cli-mcp-api.md` 반영 |
-|| Notion/Google Workspace bundled skills | 5장/6장 | 업무 문서/DB/협업 도구 연결 | source of truth, DB schema, 계정/scope, 공개 채널 기준으로 설명 | `05-notion-google-workspace-wikidocs-integration.md` 반영 |
-|| Working with Skills | 6장 | 재사용 절차 관리 | 반복 업무가 Skill이 되는 기준, 역할별 Skill 분리, Skill QA, 공개/내부 Skill 분리 | `06-skills-chapter.md` 및 06-1~06-6 반영 |
-|| Messaging Platforms | 0장/2장/7장 | Telegram/Discord/Slack 등 메시징 연결 | 메인 창구, delivery target, 멀티봇 호출 규칙 | `00-hermes-agent-channels.md` 반영 |
+| Use MCP with Hermes | 5장 | 외부 도구 연결 | MCP를 기능이 아니라 업무 흐름 연결 수단으로 설명 | `05-hermes-agent-mcp-external-tools.md` 반영 |
+| GitHub PR Review Agent/GitHub skills | 5장/9장 | GitHub 작업 자동화 | CLI/MCP/API 연결 방식을 나눠 인증, 로그, 검증 기준으로 설명 | `05-github-cli-mcp-api.md` 반영 |
+| Notion/Google Workspace bundled skills | 5장/6장 | 업무 문서/DB/협업 도구 연결 | source of truth, DB schema, 계정/scope, 공개 채널 기준으로 설명 | `05-notion-google-workspace-wikidocs-integration.md` 반영 |
+| Working with Skills | 6장 | 재사용 절차 관리 | 반복 업무가 Skill이 되는 기준, 역할별 Skill 분리, Skill QA, 공개/내부 Skill 분리 | `06-skills-chapter.md` 및 06-1~06-6 반영 |
+| Messaging Platforms | 0장/2장/7장 | Telegram/Discord/Slack 등 메시징 연결 | 메인 창구, delivery target, 멀티봇 호출 규칙 | `00-hermes-agent-channels.md` 반영 |
 | Memory | 4장 | 지속 기억 | session/memory/skill/wiki/source of truth의 경계 | 기억 경계 페이지 보강 |
 | Migrate from OpenClaw | 1장/8장 | OpenClaw에서 Hermes로 전환 | 왜 옮겼고 어떻게 이사/검증/복구했는지 | 마이그레이션 체크리스트 보강 |
 | Tips & Best Practices | 전 장 | 운영 팁 | 좋은 프롬프트보다 좋은 운영 구조가 먼저라는 기준 | 각 장 FAQ/체크리스트에 분산 |

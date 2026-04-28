@@ -10,9 +10,9 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 
 | 기능 | 흔한 착각 | 실제 운영 기준 |
 |---|---|---|
-|| MCP | 연결만 되면 자동화가 끝난다 | 어떤 업무 흐름에 붙을지 먼저 정한다 |
-|| CLI/API | 명령이나 endpoint만 알면 된다 | 실행 환경, 인증 scope, 로그, retry 기준을 확인한다 |
-|| Google Workspace/Notion/WikiDocs | API 인증만 되면 된다 | source of truth, 계정/권한/삭제 위험/공유 범위를 분리한다 |
+| MCP | 연결만 되면 자동화가 끝난다 | 어떤 업무 흐름에 붙을지 먼저 정한다 |
+| CLI/API | 명령이나 endpoint만 알면 된다 | 실행 환경, 인증 scope, 로그, retry 기준을 확인한다 |
+| Google Workspace/Notion/WikiDocs | API 인증만 되면 된다 | source of truth, 계정/권한/삭제 위험/공유 범위를 분리한다 |
 | gateway | status가 OK면 끝이다 | 메시징 delivery, cron 실행, 로그를 함께 본다 |
 | Daily Briefing Bot | 뉴스 요약 예제다 | fresh session 기반 자동화 패턴이다 |
 | 실행 방식 | 에이전트를 나누면 알아서 운영된다 | 직접 처리/profile/delegation/subagent/cron을 구분한다 |
@@ -23,10 +23,10 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 
 | 기능 | 공식 기준으로 보는 뜻 | 실제 운영에서의 질문 |
 |---|---|---|
-|| MCP | Model Context Protocol의 약자로, 외부 서비스와 도구를 Hermes Agent 대화 흐름에 연결하는 방식 | 어떤 계정/권한/scope로 연결했고, 위험 작업은 어디서 멈출 것인가 |
-|| CLI | 로컬 명령과 기존 개발자 워크플로우를 Hermes Agent 실행 흐름에서 호출하는 방식 | 어느 HOME/path/auth 환경에서 실행되는지 확인했는가 |
-|| API | REST/GraphQL 같은 endpoint를 직접 호출해 세밀하게 제어하는 방식 | token scope, pagination, rate limit, retry를 관리하는가 |
-|| cron | 정해진 시간이나 주기에 fresh session으로 작업을 실행하는 예약 자동화 | prompt가 혼자 실행될 만큼 충분하고, 결과가 어디로 전달되는가 |
+| MCP | Model Context Protocol의 약자로, 외부 서비스와 도구를 Hermes Agent 대화 흐름에 연결하는 방식 | 어떤 계정/권한/scope로 연결했고, 위험 작업은 어디서 멈출 것인가 |
+| CLI | 로컬 명령과 기존 개발자 워크플로우를 Hermes Agent 실행 흐름에서 호출하는 방식 | 어느 HOME/path/auth 환경에서 실행되는지 확인했는가 |
+| API | REST/GraphQL 같은 endpoint를 직접 호출해 세밀하게 제어하는 방식 | token scope, pagination, rate limit, retry를 관리하는가 |
+| cron | 정해진 시간이나 주기에 fresh session으로 작업을 실행하는 예약 자동화 | prompt가 혼자 실행될 만큼 충분하고, 결과가 어디로 전달되는가 |
 | gateway | 메시징 플랫폼, cron 실행, delivery를 이어주는 always-on 운영 축 | process가 살아 있는 것과 실제 메시지가 도착한 것을 구분했는가 |
 | Daily Briefing Bot | cron, search, summarization, messaging delivery가 묶인 예제 | 뉴스 요약을 넘어 정기 모니터링/신호 분류/후속 실행으로 확장할 수 있는가 |
 | delegation/subagent | 작업을 하위 에이전트나 별도 실행 단위로 나누는 방식 | 역할 분리와 실행 방식을 섞지 않고 최종 통합자를 정했는가 |
