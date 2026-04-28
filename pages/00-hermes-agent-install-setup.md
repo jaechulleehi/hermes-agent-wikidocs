@@ -36,7 +36,7 @@ OpenClaw 커뮤니티 대화에서 가장 많이 반복된 질문은 “어디�
 |---|---|---|
 | 개인 노트북/macOS | CLI 실습, 짧은 개인 업무, 파일 기반 실험 | 개인 로그인 정보와 업무 파일이 많다면 위험 명령 범위를 좁힌다 |
 | WSL2 | Windows 사용자가 공식 지원 경로로 시작할 때 | Windows native와 WSL 경로/HOME이 섞이지 않게 한다 |
-| Mac mini/맥미니/전용 머신 | Slack AI 비서, gateway, cron을 오래 켜둘 때 | 별도 계정, 별도 작업 폴더, 재시작 정책을 둔다 |
+| Mac mini/맥미니/전용 머신 | Slack AI 비서, gateway, cron을 오래 켜둘 때 | 별도 계정, 별도 작업 폴더, launchd/절전/재시작 정책을 둔다 |
 | VPS/클라우드 | 팀 채널, 상시 gateway, 외부 webhook 운영 | secret/env 전달, 방화벽, 비용 알림을 먼저 잡는다 |
 | Docker | 위험한 terminal 작업이나 재현 가능한 실행 환경이 필요할 때 | container에 넘기는 credential을 최소화한다 |
 
@@ -80,7 +80,7 @@ provider에 따라 API key, OAuth, custom endpoint, model name, context length �
 
 ### gateway부터 켜도 되나요?
 
-가능하지만 추천 순서는 아니다. CLI 기본 chat이 안정된 뒤 gateway를 붙여야 메시징 문제인지 모델/provider 문제인지 구분할 수 있다.
+가능하지만 추천 순서는 아니다. CLI 기본 chat이 안정된 뒤 gateway를 붙여야 메시징 문제인지 모델/provider 문제인지 구분할 수 있다. 특히 맥미니 같은 전용 머신에 상시 운영할 때는 gateway만이 아니라 launchd/LaunchAgent, 절전, 로그 확인 순서까지 함께 잡아야 한다.
 
 ### Docker로 바로 시작해도 되나요?
 

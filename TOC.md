@@ -11,6 +11,7 @@
   * [00-08. 에르메스 에이전트(Hermes Agent) Docker/Gateway는 언제 필요할까](pages/00-hermes-agent-docker-gateway.md)
   * [00-09. 에르메스 에이전트(Hermes Agent)는 어떤 채널에서 쓸 수 있을까](pages/00-hermes-agent-channels.md)
   * [00-10. 에르메스 에이전트(Hermes Agent) 업데이트 전후에는 무엇을 점검할까](pages/00-hermes-agent-update-validation.md)
+  * [00-11. 맥미니로 에르메스 에이전트(Hermes Agent)를 상시 운영하려면 무엇을 세팅할까](pages/00-hermes-agent-mac-mini-always-on.md)
 * [01. AI 챗봇 말고 나만의 AI 팀 만들기](pages/01-chapter-1.md)
   * [01-1. AI 챗봇과 AI 개인비서는 어떻게 다를까](pages/00-ai-chatbot-vs-ai-personal-assistant.md)
   * [01-2. 나만의 AI 팀은 어떻게 구성할까](pages/00-what-is-my-ai-team.md)

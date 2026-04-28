@@ -20,6 +20,7 @@
 | 00-08 | Docker/Gateway는 언제 필요할까 | 로컬 실습과 상시 운영의 경계는 어디인가 |
 | 00-09 | 어떤 채널에서 쓸 수 있을까 | CLI/Slack/Telegram/Discord/Webhook 중 어디서 부를까 |
 | 00-10 | 업데이트 전후 무엇을 점검할까 | 운영 중인 gateway/cron/skill을 깨지 않으려면 무엇을 볼까 |
+| 00-11 | 맥미니 상시 운영은 무엇을 세팅할까 | 전용 Mac mini에서 tmux/launchd/절전/gateway를 어떻게 나눠 볼까 |
 
 ## 공식 docs 기준으로 먼저 알아야 할 것
 
@@ -67,4 +68,4 @@ cron/skill/MCP 같은 운영 기능 확장
 
 ## 다음 글
 
-먼저 [에르메스 에이전트(Hermes Agent)란 무엇인지](https://wikidocs.net/346055) 확인한다. 그다음 공식 GitHub/docs, 설치, [CLI 첫 대화](https://wikidocs.net/346251), [provider/model/config 설정](https://wikidocs.net/346252), 비교, Docker/Gateway, 채널, [업데이트 검증](https://wikidocs.net/346253) 순서로 보면 0장이 하나의 체크리스트처럼 작동한다.
+먼저 [에르메스 에이전트(Hermes Agent)란 무엇인지](https://wikidocs.net/346055) 확인한다. 그다음 공식 GitHub/docs, 설치, [CLI 첫 대화](https://wikidocs.net/346251), [provider/model/config 설정](https://wikidocs.net/346252), 비교, Docker/Gateway, 채널, [업데이트 검증](https://wikidocs.net/346253), 맥미니 상시 운영 순서로 보면 0장이 하나의 체크리스트처럼 작동한다.

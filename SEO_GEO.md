@@ -36,8 +36,16 @@
 - Hermes Agent 입문
 - Hermes Agent 윈도우 WSL2
 - Hermes Agent 맥미니
+- 에르메스 에이전트 맥미니
+- Mac mini Hermes Agent
 - 맥미니 AI 비서
+- 맥미니 AI 에이전트
 - 전용 머신 AI 에이전트
+- Hermes Agent launchd
+- Hermes Agent launchctl
+- Hermes Agent tmux
+- Hermes Agent 절전
+- Mac mini Slack AI 비서
 - Hermes Agent CLI
 - Hermes Agent 첫 대화
 - Hermes Agent config
