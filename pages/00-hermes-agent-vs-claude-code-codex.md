@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent)와 Claude Code/Codex는 어떻게 다를까
 
-![Hermes Agent와 Claude Code Codex 비교 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-5-hermes-claude-code-codex-comparison-codex.png)
+![Hermes Agent와 Claude Code Codex 비교 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-5-hermes-claude-code-codex-comparison-codex.webp)
 
 에르메스 에이전트(Hermes Agent)와 Claude Code/Codex는 모두 AI 에이전트처럼 보이지만 쓰임이 다르다. `Hermes Agent Claude Code 비교`, `Hermes Agent Codex 비교`, `Hermes Agent vs Claude Code`를 찾는 독자라면 먼저 기준을 나눠야 한다. Claude Code와 Codex는 주로 코드 작성, 리팩터링, PR 리뷰 같은 코딩 작업에 강한 CLI 에이전트이고, Hermes Agent는 memory, skills, cron, MCP, gateway, messaging, delegation을 묶어 장기 업무 자동화 흐름을 운영하는 환경에 가깝다.
 

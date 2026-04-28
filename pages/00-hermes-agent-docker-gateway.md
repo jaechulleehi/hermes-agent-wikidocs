@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent) Docker/Gateway는 언제 필요할까
 
-![Docker와 Gateway 상시 운영 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-6-docker-gateway-always-on-codex.png)
+![Docker와 Gateway 상시 운영 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-6-docker-gateway-always-on-codex.webp)
 
 에르메스 에이전트(Hermes Agent) Docker와 Gateway는 “내 터미널에서 가끔 실행하는 도구”가 아니라 “항상 받을 수 있는 AI 개인비서”로 운영하고 싶을 때 중요해진다. `Hermes Agent Docker`, `Hermes Agent docker compose`, `Hermes Agent gateway`, `Hermes Agent Slack`을 찾는 독자라면 Docker는 실행 환경을 안정적으로 묶는 방식이고, Gateway는 Slack, Telegram, Discord 같은 메시징 플랫폼과 Hermes Agent를 연결하는 운영 축이라고 이해하면 된다.
 

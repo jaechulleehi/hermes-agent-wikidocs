@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent) 공식 GitHub/docs는 어디서 볼까
 
-![공식 GitHub와 Docs를 먼저 확인하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-2-official-github-docs-codex.png)
+![공식 GitHub와 Docs를 먼저 확인하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-2-official-github-docs-codex.webp)
 
 에르메스 에이전트(Hermes Agent) 공식 GitHub는 `NousResearch/hermes-agent`이고, 공식 문서는 `hermes-agent.nousresearch.com/docs`에서 볼 수 있다. `Hermes Agent docs`, `Hermes Agent 공식 문서`, `Hermes Agent 공식 GitHub`를 찾는 독자라면 블로그 글이나 요약글보다 이 두 곳을 먼저 기준으로 잡는 편이 안전하다.
 

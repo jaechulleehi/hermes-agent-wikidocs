@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent) 설치와 세팅은 어떻게 시작할까
 
-![에르메스 에이전트 설치와 기본 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-3-install-setup-flow-codex.png)
+![에르메스 에이전트 설치와 기본 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-3-install-setup-flow-codex.webp)
 
 에르메스 에이전트(Hermes Agent) 설치는 공식 문서 기준으로 매우 짧다. `Hermes Agent 설치`, `에르메스 에이전트 설치`, `Hermes Agent 설치 방법`을 찾는 독자라면 Linux, macOS, WSL2, Android Termux에서 one-line installer로 시작할 수 있다. 다만 실제 업무 자동화에 쓰려면 설치 명령보다 설치 후 검증 순서가 더 중요하다.
 
