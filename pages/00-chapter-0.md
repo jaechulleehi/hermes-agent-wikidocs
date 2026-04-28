@@ -1,5 +1,7 @@
 ## 0장. 에르메스 에이전트(Hermes Agent) 기초 가이드
 
+![에르메스 에이전트 기초 가이드 흐름](../assets/images/chapter-heroes/ch00-hermes-foundation-guide-tool-badges-codex.png)
+
 에르메스 에이전트(Hermes Agent)를 처음 찾는 독자는 보통 네 가지를 먼저 묻는다. [공식 GitHub](https://github.com/NousResearch/hermes-agent)와 [공식 문서](https://hermes-agent.nousresearch.com/docs/)는 어디에 있는지, 설치와 세팅은 어떻게 시작하는지, OpenClaw나 Claude Code/Codex 같은 다른 AI 에이전트와 무엇이 다른지, Slack/Telegram/Discord 같은 채널에서 어떻게 쓸 수 있는지다. 0장은 그 기초 질문을 먼저 정리하는 입문 장이다.
 
 이 장은 공식 문서를 그대로 번역하지 않는다. 공식 문서의 기준은 확인하되, 독자가 실제로 에르메스 에이전트를 AI 개인비서, AI 자동화, 업무 자동화, 나만의 AI 팀 운영에 붙일 때 먼저 알아야 할 판단 기준으로 바꿔 설명한다.
