@@ -24,9 +24,11 @@ Daily Briefing Bot은 단순한 뉴스 요약 예제가 아니다. Hermes Agent�
 
 ## fresh session이 핵심이다
 
-cron job은 사람이 옆에서 설명해 주지 않는다. 그래서 prompt는 self-contained해야 한다. 어떤 파일을 먼저 볼지, 어떤 기준으로 신호를 고를지, 결과를 어디로 보낼지, 민감정보를 어떻게 다룰지까지 포함해야 한다.
+cron job은 사람이 옆에서 설명해 주지 않는다. 그래서 prompt는 self-contained해야 한다. 어떤 자료를 먼저 볼지, 어떤 기준으로 신호를 고를지, 결과를 어디로 보낼지, 공개하면 안 되는 내부값을 어떻게 다룰지까지 포함해야 한다.
 
 나쁜 cron prompt는 “오늘도 정리해줘”처럼 짧다. 좋은 cron prompt는 목적, 입력 출처, 제외 기준, 출력 형식, delivery target, 실패 시 보고 기준을 갖는다.
+
+예를 들어 좋은 프롬프트는 “어제 이후 새로 나온 AI 검색/콘텐츠/제품 신호를 찾고, 이미 다룬 항목은 제외하고, 콘텐츠 후보와 제품 후보를 나눠서, 근거 링크와 다음 액션을 함께 보고하라”처럼 스스로 판단할 기준을 담는다. 반대로 “오늘 AI 뉴스 정리해줘”는 fresh session에서 너무 많은 것을 추측하게 만든다.
 
 ## 공식 기준 mini 정의: Hermes Agent cron
 
@@ -38,7 +40,7 @@ Hermes Agent cron은 정해진 시간이나 주기에 작업을 실행하는 예
 
 1. schedule이 의도한 시간대와 맞는가?
 2. prompt가 fresh session에서도 이해될 만큼 충분한가?
-3. 필요한 도구와 credential이 현재 profile에서 접근 가능한가?
+3. 필요한 도구와 인증 범위가 현재 profile에서 접근 가능한가?
 4. gateway가 실행 중이고 delivery target이 맞는가?
 5. 결과가 없을 때도 운영 확인 메시지를 남기도록 되어 있는가?
 
