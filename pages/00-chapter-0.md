@@ -14,6 +14,7 @@
 | [00-4](https://wikidocs.net/345889) | Hermes Agent와 OpenClaw는 무엇이 다른가 | 이름 변경이 아니라 memory/profile/skill/cron/gateway 중심의 운영 전환이다 |
 | [00-5](https://wikidocs.net/346138) | Hermes Agent와 Claude Code/Codex는 어떻게 다른가 | 코딩 에이전트와 업무 자동화 운영 환경의 차이를 구분한다 |
 | [00-6](https://wikidocs.net/346139) | Hermes Agent Docker/Gateway는 언제 필요한가 | 컨테이너 실행과 메시징 gateway를 항상 켜진 운영 구조로 이해한다 |
+| 00-7 | Hermes Agent는 어떤 채널에서 쓸 수 있는가 | CLI, Slack, Telegram, Discord, Email, Webhook을 호출 채널과 운영 규칙으로 구분한다 |
 
 ## 공식 문서를 먼저 봐야 하는 이유
 
@@ -26,7 +27,8 @@ Hermes Agent는 Nous Research가 공개한 오픈소스 AI 에이전트다. 공�
 1. Hermes Agent는 챗봇 wrapper가 아니라 장기 운영을 전제로 한 AI 에이전트다.
 2. 설치는 시작일 뿐이고, provider 설정과 기본 chat 검증이 먼저다.
 3. gateway, cron, skill, MCP는 기능명이 아니라 업무 흐름의 연결 지점이다.
-4. Claude Code/Codex는 강한 코딩 에이전트이고, Hermes Agent는 그것들을 포함해 여러 실행 방식을 조율할 수 있는 운영 환경에 가깝다.
+4. Slack, Telegram, Discord 같은 채널은 Hermes Agent를 어디서 호출하고 어디로 결과를 돌려받을지 정하는 운영 입구다.
+5. Claude Code/Codex는 강한 코딩 에이전트이고, Hermes Agent는 그것들을 포함해 여러 실행 방식을 조율할 수 있는 운영 환경에 가깝다.
 5. OpenClaw에서 Hermes로 넘어오는 일은 도구 교체보다 기억/스킬/프로필/자동화 기준을 다시 세우는 일이다.
 
 ## 이어서 읽기

@@ -2,7 +2,7 @@
 
 > AI 개인비서와 역할형 에이전트로 만드는 실전 업무 워크플로우
 
-에르메스 에이전트(Hermes Agent)를 기반으로 **AI 자동화, 업무 자동화, 나만의 AI 팀**을 실제로 만들고 운영한 경험을 정리한 책입니다. 처음 읽는 독자가 공식 GitHub, 공식 문서, 설치, OpenClaw 비교, Claude Code/Codex 비교를 먼저 확인할 수 있도록 0장 기초 가이드를 앞에 두었습니다.
+에르메스 에이전트(Hermes Agent)를 기반으로 **AI 자동화, 업무 자동화, 나만의 AI 팀**을 실제로 만들고 운영한 경험을 정리한 책입니다. 처음 읽는 독자가 공식 GitHub, 공식 문서, 설치, OpenClaw 비교, Claude Code/Codex 비교, Docker/Gateway, Slack/Telegram/Discord 같은 사용 채널을 먼저 확인할 수 있도록 0장 기초 가이드를 앞에 두었습니다.
 
 이 책은 에르메스 에이전트(Hermes Agent)의 설치법이나 기능 목록을 다시 설명하지 않습니다. 핵심은 “AI에게 답변을 잘 받는 법”이 아니라, AI 개인비서, 즉 개인 AI 비서를 메인 창구로 두고 조사/정리/실행 역할을 나눠 실제 업무 흐름과 AI 워크플로우를 굴리는 법입니다. 긴 대화에서 맥락이 흐려지는 문제, 역할이 섞일 때 생기는 혼선, 외부 도구와 기록 시스템을 어떻게 연결할지 같은 운영 문제를 독자 입장에서 풀어갑니다.
 
@@ -10,11 +10,12 @@
 
 - Hermes Agent 공식 GitHub/공식 문서/설치/세팅을 확인하는 기초 흐름
 - Hermes Agent와 OpenClaw, Claude Code/Codex, Docker/Gateway의 차이
+- Slack, Telegram, Discord, Email, Webhook 같은 Hermes Agent 사용 채널과 gateway 운영 기준
 - 챗봇과 AI 개인비서의 차이
 - 혼자 일해도 역할형 AI 팀이 필요한 이유
 - 조사형/정리형/실행형 에이전트를 나누는 기준
 - 메모리/세션/스킬/프로필 경계가 흐려질 때 생기는 문제
-- MCP, cron, gateway, Google Workspace 같은 외부 도구를 업무 흐름에 붙이는 법
+- MCP, CLI, API, cron, gateway, Google Workspace, Notion, GitHub, WikiDocs 같은 외부 도구를 업무 흐름에 붙이는 법
 - WikiDocs/블로그/강의로 이어지는 콘텐츠 시스템
 - 체크리스트와 복구 플레이북으로 시행착오를 남기는 법
 - 실제 운영 케이스로 보는 AI 업무 자동화 사례와 AI 워크플로우
@@ -42,7 +43,7 @@ AI 에이전트를 많이 붙인다고 바로 일이 자동화되지는 않습�
 
 - AI를 단순 챗봇이 아니라 AI 비서나 개인 AI 비서처럼 쓰고 싶은 사람
 - 조사, 정리, 실행, 기록을 AI와 함께 반복 가능한 흐름으로 만들고 싶은 사람
-- Hermes Agent 공식 GitHub, 공식 문서, 설치, Docker, gateway, OpenClaw 비교를 먼저 확인하고 싶은 사람
+- Hermes Agent 공식 GitHub, 공식 문서, 설치, Docker, gateway, Slack/Telegram/Discord, OpenClaw 비교를 먼저 확인하고 싶은 사람
 - Claude Code, Codex, Cursor, 에르메스 에이전트(Hermes Agent), MCP를 실제 업무 안에서 써보고 싶은 사람
 - 혼자 일하지만 여러 역할의 AI 팀을 두고 일하는 방식을 만들고 싶은 사람
 - AI 에이전트 운영에서 메모리, 도구, 자동화, 기록의 경계를 정리하고 싶은 사람

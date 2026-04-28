@@ -55,7 +55,7 @@ AI를 단순 챗봇처럼 쓰는 단계에서 벗어나, 자신의 업무 흐름
 
 ### 0단계. 기초 확인
 
-공식 GitHub/공식 문서/설치/세팅/비교 키워드를 먼저 정리해 독자가 검색 초입에서 길을 잃지 않게 한다. 이 단계에서는 Hermes Agent를 self-improving AI agent, 오픈소스 AI 에이전트, 업무 자동화 운영 환경으로 이해한다.
+공식 GitHub/공식 문서/설치/세팅/비교 키워드와 Slack/Telegram/Discord 같은 사용 채널을 먼저 정리해 독자가 검색 초입에서 길을 잃지 않게 한다. 이 단계에서는 Hermes Agent를 self-improving AI agent, 오픈소스 AI 에이전트, 업무 자동화 운영 환경으로 이해한다.
 
 ### 1단계. 관점 전환
 
@@ -164,6 +164,7 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 - 00-4. Hermes Agent와 OpenClaw는 무엇이 다를까
 - 00-5. Hermes Agent와 Claude Code/Codex는 어떻게 다를까
 - 00-6. Hermes Agent Docker/Gateway는 언제 필요할까
+- 00-7. Hermes Agent는 어떤 채널에서 쓸 수 있을까
 
 ## 1부. AI 챗봇에서 AI 팀으로 관점 바꾸기
 
@@ -264,14 +265,16 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 
 ## 4부. 도구와 자동화 연결하기
 
-### 5장. 외부 도구, MCP, 자동화 운영
+### 5장. 외부 도구, MCP, 채널 연동과 자동화 운영
 
-목적: 외부 도구 연결을 기능 나열이 아니라 업무 흐름 안에서 필요한 연결로 설명한다.
+목적: 외부 도구 연결을 기능 나열이 아니라 업무 흐름 안에서 필요한 연결로 설명한다. MCP, CLI, API, gateway, cron을 구분하고 GitHub, Notion, Google Workspace, WikiDocs 같은 실제 업무 도구를 어떤 기준으로 붙일지 정리한다.
 
 핵심 질문:
 
 - Google Workspace 연동은 왜 생각보다 오래 걸리는가?
 - MCP는 언제 필요한가?
+- GitHub CLI, MCP, API 연결은 어떻게 다른가?
+- Notion, Google Workspace, WikiDocs는 어떤 source of truth 기준으로 연결해야 하는가?
 - 스킬은 언제 만들고 어떻게 관리해야 하는가?
 - always-on gateway는 왜 혼선을 만들기 쉬운가?
 
@@ -280,12 +283,14 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 - `05-why-google-workspace-integration-takes-longer-than-expected.md`
 - `10-when-and-how-to-manage-skills-in-hermes.md`
 - `12-always-on-gateway-is-more-confusing-than-it-looks.md`
+- `05-hermes-agent-mcp-external-tools.md`
+- `05-github-cli-mcp-api.md`
+- `05-notion-google-workspace-wikidocs-integration.md`
 
-새로 필요한 글:
+다음 보강 후보:
 
-- `MCP는 AI 업무 자동화에서 어떤 역할을 할까`
-- `도구를 붙이기 전에 먼저 정해야 할 권한과 범위`
 - `반복 업무를 스킬로 만들지 자동화로 만들지 결정하는 법`
+- `채널/gateway/cron delivery를 함께 점검하는 복구 순서`
 
 ## 5부. 위키에서 콘텐츠와 강의로 확장하기
 
