@@ -2,7 +2,7 @@
 
 Obsidian LLM Wiki의 가치는 메모를 많이 쌓는 데 있지 않다. [shared-memory](https://wikidocs.net/346128)가 실행과 handoff의 공용 작업층이라면, Obsidian은 시간이 지나며 누적되는 외부 장기 기억층이다. 나중에 AI 개인비서와 역할형 에이전트가 다시 꺼내 쓸 수 있는 구조로 운영 지식을 남기는 데 있다. 특히 HaloX처럼 모니터링, 콘텐츠, 제품 신호, 운영 판단이 함께 움직이는 환경에서는 Obsidian이 기억층의 핵심이 된다.
 
-따라서 Obsidian은 강의 시스템이나 콘텐츠 제작 도구에만 묶으면 안 된다. HALOX Brain은 누적 지식 베이스, 운영 원장, 연결형 LLM Wiki 역할을 맡는 외부 장기 기억층이다.
+따라서 Obsidian은 강의 시스템이나 콘텐츠 제작 도구에만 묶으면 안 된다. HALOX Brain은 누적 지식 베이스, 운영 원장, 연결형 LLM Wiki 역할을 맡는 외부 장기 기억층이다. 이 지식층이 커질수록 [OpenViking/RAG](https://wikidocs.net/346131)처럼 필요한 내용을 회수하는 구조가 중요해진다.
 
 ## Obsidian은 memory보다 크고 shared-memory보다 누적형이다
 
@@ -38,7 +38,7 @@ HaloX 운영에서는 매일 조사/모니터링 결과가 쌓인다. 이 결과
 
 이 구조가 있어야 나중에 하비가 “이건 어디서 봐야 하지?”라고 판단할 때 Obsidian을 기억층으로 쓸 수 있다.
 
-## 운영 기준
+## Obsidian을 기억층으로 쓸 때의 기준
 
 1. 일일 로그와 긴 브리프를 memory에 넣지 않는다.
 2. 누적 지식과 운영 원장은 Obsidian에 둔다.
@@ -47,7 +47,7 @@ HaloX 운영에서는 매일 조사/모니터링 결과가 쌓인다. 이 결과
 5. RAG/OpenViking 연결을 염두에 두고 제목과 구조를 정리한다.
 6. 공개 콘텐츠로 바꿀 때는 내부값을 제거하고 WikiDocs용으로 다시 쓴다.
 
-## FAQ
+## 자주 헷갈리는 질문
 
 ### Obsidian과 WikiDocs는 어떻게 나누나요?
 
@@ -61,6 +61,6 @@ Obsidian은 내부 운영 지식과 원장이고, WikiDocs는 공개 독자에�
 
 아니다. Obsidian은 지식을 사람이 관리하는 공간이고, RAG는 필요한 지식을 검색해 모델에 주입하는 실행 구조다. Obsidian이 잘 정리되어 있을수록 RAG 품질도 좋아진다.
 
-## 다음 글
+## 다음에 읽을 글
 
 다음은 [OpenClaw에서 Hermes로 기억을 옮길 때 무엇을 버릴까](https://wikidocs.net/346130)에서 과거 유산과 현재 기준을 나눈다.

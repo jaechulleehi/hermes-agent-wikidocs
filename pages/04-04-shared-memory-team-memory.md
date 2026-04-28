@@ -1,8 +1,8 @@
 ## shared-memory는 팀 공통 기억으로 어떻게 써야 할까
 
-역할형 AI 팀을 운영하면 개인 에이전트 memory만으로는 부족하다. [AGENTS.md와 USER.md](https://wikidocs.net/346127)가 개인 역할과 사용자 선호를 나눈다면, shared-memory는 팀 전체가 함께 보는 기준을 맡는다. 하비, 방울이, 뽀동이, 봉구, 비벙이, 하망이가 같은 기준을 봐야 하는 순간이 생긴다. 이때 필요한 층이 shared-memory다.
+역할형 AI 팀을 운영하면 개인 에이전트 memory만으로는 부족하다. [AGENTS.md와 USER.md](https://wikidocs.net/346127)가 개인 역할과 사용자 선호를 나눈다면, shared-memory는 팀 전체가 함께 보는 기준을 맡는다. 하비/방울이/뽀동이/봉구/비벙이/하망이가 같은 기준을 봐야 하는 순간이 생긴다. 이때 필요한 층이 shared-memory다.
 
-shared-memory는 단순 폴더가 아니다. 팀 공통 규칙, source of truth, handoff, 인덱스, 콘텐츠 패키지, 체크리스트를 담는 공용 기억층이다. 개인 에이전트가 각자 기억하면 어긋날 내용을 한곳에 두는 장치다.
+shared-memory는 단순 폴더가 아니다. 팀 공통 규칙, source of truth, handoff, 인덱스, 콘텐츠 패키지, 체크리스트를 담는 공용 기억층이다. 개인 에이전트가 각자 기억하면 어긋날 내용을 한곳에 두는 장치다. 더 오래 누적되는 지식은 [Obsidian LLM Wiki](https://wikidocs.net/346129)로 넘겨 외부 장기 기억으로 관리한다.
 
 ## 왜 개인 memory만으로는 부족할까
 
@@ -34,7 +34,7 @@ HaloX 운영에서는 memory, shared-memory, HALOX Brain을 나눠 쓴다. memor
 
 반대로 개인의 말투 선호나 특정 에이전트의 장기 성격은 profile memory나 SOUL.md가 더 맞다. 모든 것을 shared-memory에 넣으면 공용 원본이 아니라 잡동사니 폴더가 된다.
 
-## 운영 기준
+## shared-memory에 남길 때의 기준
 
 - 팀 공통 규칙은 shared-memory에 원본을 둔다.
 - profile별 문서에는 공통 내용을 복붙하지 말고 원본을 참조한다.
@@ -43,7 +43,7 @@ HaloX 운영에서는 memory, shared-memory, HALOX Brain을 나눠 쓴다. memor
 - Obsidian 원장과 shared-memory 작업 패키지는 서로 추적 가능해야 한다.
 - 공개 글로 바꿀 때는 내부 경로와 운영값을 제거하고 판단 기준만 남긴다.
 
-## FAQ
+## 자주 헷갈리는 질문
 
 ### shared-memory와 memory의 가장 큰 차이는 무엇인가요?
 
@@ -57,6 +57,6 @@ shared-memory는 실행과 handoff에 가깝다. Obsidian은 누적 지식, 원�
 
 아니다. 반복해서 이어받아야 하거나 팀 공통으로 봐야 하는 상태만 남긴다. 단순 작업 완료 이력은 GitHub log나 발행 기록으로 충분할 수 있다.
 
-## 다음 글
+## 다음에 읽을 글
 
 다음은 [Obsidian LLM Wiki는 외부 장기 기억으로 어떻게 쓰일까](https://wikidocs.net/346129)에서 누적 지식층을 설명한다.

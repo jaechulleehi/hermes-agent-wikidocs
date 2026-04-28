@@ -2,7 +2,7 @@
 
 AI 개인비서가 다르게 느껴지는 가장 큰 이유는 session, memory, profile이 서로 다른 층이기 때문이다. 이 구분은 앞 글인 [AI 개인비서는 무엇을 기억해야 할까](https://wikidocs.net/346125)의 기준을 실제 운영 단위로 나누는 작업이다. 같은 모델을 쓰더라도 현재 대화 맥락, 장기 기억, 실행 프로필이 다르면 결과는 달라진다.
 
-이 차이를 이해하지 못하면 “왜 기억을 못 하지?”라는 질문이 반복된다. 실제로는 기억 문제가 아니라 현재 session이 바뀌었거나, profile의 도구 권한이 다르거나, memory에 넣지 말아야 할 작업 로그를 기대하고 있는 경우가 많다.
+이 차이를 이해하지 못하면 “왜 기억을 못 하지?”라는 질문이 반복된다. 실제로는 기억 문제가 아니라 현재 session이 바뀌었거나, profile의 도구 권한이 다르거나, memory에 넣지 말아야 할 작업 로그를 기대하고 있는 경우가 많다. 그래서 다음 단계에서는 [AGENTS.md와 USER.md](https://wikidocs.net/346127)가 어떤 기억을 고정하는지 봐야 한다.
 
 ## 세 층의 역할
 
@@ -26,7 +26,7 @@ profile은 말투만 나누는 것이 아니다. HOME, 권한, token, 연결된 
 
 특히 Obsidian/iCloud/GitHub repo/shared-memory가 섞이면 경로와 권한 문제가 자주 생긴다. 이때는 “파일이 있나”보다 “현재 profile의 도구가 그 경로를 볼 수 있나”를 먼저 확인해야 한다.
 
-## 운영 기준
+## 세 층을 헷갈리지 않는 기준
 
 1. 현재 대화에서만 필요한 내용은 session에 둔다.
 2. 반복될 선호와 안정적 기준만 memory에 남긴다.
@@ -35,7 +35,7 @@ profile은 말투만 나누는 것이 아니다. HOME, 권한, token, 연결된 
 5. 작업 로그는 memory가 아니라 session_search, GitHub log, shared-memory handoff로 회수한다.
 6. source of truth가 따로 있으면 memory보다 원본을 먼저 본다.
 
-## FAQ
+## 자주 헷갈리는 질문
 
 ### session이 길어지면 memory가 되나요?
 
@@ -49,6 +49,6 @@ profile은 말투만 나누는 것이 아니다. HOME, 권한, token, 연결된 
 
 항상 그렇지는 않다. 경로, 권한, 동기화, profile HOME, tool sandbox 문제일 수 있다. 그래서 memory 문제로 보기 전에 실행 환경을 확인해야 한다.
 
-## 다음 글
+## 다음에 읽을 글
 
 다음은 [AGENTS.md와 USER.md는 기억에서 어떤 역할을 할까](https://wikidocs.net/346127)에서 역할 기억과 사용자 기억을 나눈다.

@@ -108,4 +108,4 @@ Hermes Agent를 처음 보면 기능 이름이 먼저 눈에 들어온다. memor
 
 ## 다음 글
 
-[다음 글: Hermes Agent는 왜 운영 시스템인가](https://wikidocs.net/345890)
+[다음 글: 에르메스 에이전트(Hermes Agent)는 왜 운영 시스템인가](https://wikidocs.net/345890)
