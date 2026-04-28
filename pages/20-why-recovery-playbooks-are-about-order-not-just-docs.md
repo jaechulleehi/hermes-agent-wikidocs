@@ -24,6 +24,8 @@
 | 6 | 최소 수정 | 한 번에 하나만 바꾼다 |
 | 7 | 검증/기록 | 성공 기준과 남은 일을 남긴다 |
 
+Hermes Agent에는 이 순서를 도와주는 checkpoint와 `/rollback` 기능도 있다. 다만 rollback은 수정 전에 상태를 보존하고 diff를 본 뒤 쓰는 복구 수단이지, 확인 없이 실행해도 된다는 면허가 아니다.
+
 ## 실제 운영 예시
 
 OpenClaw에서 Hermes로 넘어온 뒤에는 과거 설정이 모두 새 구조에 1:1로 들어오지 않았다. 일부 cron, gateway, hooks, agent routing, skill registry는 archive/manual review 대상으로 남았다. 여기서 바로 “왜 예전처럼 안 되지?”라고 보면 복구가 꼬인다.

@@ -344,15 +344,19 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 - `AI 팀 운영에서 가장 먼저 정해야 할 호출 규칙`
 - `에이전트가 서로 겹쳐 답할 때 어떻게 정리할까`
 
-### 8장. 체크리스트, 마이그레이션, 복구 플레이북
+### 9장. 체크리스트, 마이그레이션, 보안, 복구 플레이북
 
-목적: 시행착오를 반복하지 않도록 운영 기준과 복구 순서를 문서화하는 방법을 제시한다.
+목적: 시행착오를 반복하지 않도록 운영 기준, 보안 경계, 권한 분리, 복구 순서를 문서화하는 방법을 제시한다.
 
 핵심 질문:
 
 - 삽질을 어떻게 다음 사람의 체크리스트로 바꾸는가?
 - 복구 플레이북은 왜 순서가 중요한가?
 - 운영 체크리스트는 어떻게 써야 실제 도움이 되는가?
+- Hermes Agent 보안 체크리스트는 어떻게 만들까?
+- 위험 명령 승인, YOLO mode, allowlist는 어떻게 관리할까?
+- gateway 권한, 실행 격리, credential 권한은 어떻게 나눌까?
+- checkpoint와 rollback은 복구 흐름에서 어떻게 써야 할까?
 - OpenClaw에서 Hermes로 넘어올 때 왜 체크리스트가 필요했는가?
 
 현재 포함 후보:
@@ -360,12 +364,17 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 - `06-how-to-turn-stumbles-into-checklists.md`
 - `20-why-recovery-playbooks-are-about-order-not-just-docs.md`
 - `21-how-to-make-hermes-operation-checklists-actually-useful.md`
+- `09-hermes-agent-security-checklist.md`
+- `09-hermes-agent-command-approval-yolo-allowlist.md`
+- `09-hermes-agent-gateway-permission-sandbox-isolation.md`
+- `09-hermes-agent-checkpoint-rollback-recovery.md`
 - `25-why-openclaw-to-hermes-needed-a-migration-checklist.md`
 
 새로 필요한 글:
 
 - `AI 업무 자동화 운영 체크리스트 기본형`
 - `문제가 터졌을 때 가장 먼저 확인할 5가지`
+- 공식 Security docs 변화가 있을 때 9장 보안 체크리스트와 권한/격리 페이지 업데이트
 
 ## 7부. 개인 AI 팀에서 조직 운영으로 확장하기
 

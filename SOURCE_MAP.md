@@ -72,6 +72,8 @@
 | Daily Briefing Bot | 5장/6장/8장 | cron, web search, summarization, messaging delivery | 조사형→정리형→예약 실행→메시지 전달의 기본 자동화 패턴 | `05-daily-briefing-bot-workflow.md` 보강 |
 | Automate Anything with Cron | 5장/8장 | 프롬프트 기반 예약 실행 | 반복 업무를 cron으로 만들 때 필요한 self-contained prompt와 검증 기준 | cron 운영 페이지 필요 |
 | Cron Troubleshooting | 8장 | gateway, schedule, delivery 문제 해결 | 예약 작업이 안 돌 때 확인 순서 | gateway/cron 복구 체크리스트 필요 |
+| Security | 9장 | user authorization, dangerous command approval, container isolation, MCP credential filtering, context file scanning, session isolation, input sanitization | 보안 기능을 기능 설명이 아니라 호출 권한/실행 권한/credential 권한/복구 경로 체크리스트로 변환 | `09-hermes-agent-security-checklist.md`, `09-hermes-agent-command-approval-yolo-allowlist.md`, `09-hermes-agent-gateway-permission-sandbox-isolation.md` 반영 |
+| Checkpoints and rollback | 9장 | destructive operation 전 checkpoint와 `/rollback` 복구 | git/source of truth와 checkpoint 안전망을 나누고, 복구 플레이북 안에서 diff→rollback→검증 순서로 설명 | `09-hermes-agent-checkpoint-rollback-recovery.md` 반영 |
 | Delegation & Parallel Work | 3장/5장 | sub-agent 병렬 작업 | 조사형/정리형/실행형 분리의 공식 기능 기반 | 역할 분리 페이지에 공식 연결 추가 |
 | Use MCP with Hermes | 5장 | 외부 도구 연결 | MCP를 기능이 아니라 업무 흐름 연결 수단으로 설명 | `05-hermes-agent-mcp-external-tools.md` 반영 |
 | GitHub PR Review Agent/GitHub skills | 5장/9장 | GitHub 작업 자동화 | CLI/MCP/API 연결 방식을 나눠 인증, 로그, 검증 기준으로 설명 | `05-github-cli-mcp-api.md` 반영 |

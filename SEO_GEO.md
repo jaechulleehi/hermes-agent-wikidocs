@@ -38,6 +38,14 @@
 - Hermes Agent 업데이트
 - Hermes Agent Docker
 - Hermes Agent gateway
+- Hermes Agent security
+- Hermes Agent 보안
+- Hermes Agent allowlist
+- Hermes Agent YOLO mode
+- Hermes Agent command approval
+- Hermes Agent checkpoint
+- Hermes Agent rollback
+- Hermes Agent sandbox
 - Hermes Agent Slack
 - Hermes Agent Telegram
 - Hermes Agent Discord

@@ -18,6 +18,7 @@
 - MCP, CLI, API, cron, gateway, Google Workspace, Notion, GitHub, WikiDocs 같은 외부 도구를 업무 흐름에 붙이는 법
 - Hermes Agent Skill로 반복 업무 절차/검증 기준을 남기고 보강하는 법
 - WikiDocs/블로그/강의로 이어지는 콘텐츠 시스템
+- 보안 체크리스트, 위험 명령 승인, gateway 권한, 실행 격리, checkpoint/rollback으로 운영 사고를 줄이는 법
 - 체크리스트와 복구 플레이북으로 시행착오를 남기는 법
 - 실제 운영 케이스로 보는 AI 업무 자동화 사례와 AI 워크플로우
 
