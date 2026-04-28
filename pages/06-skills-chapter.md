@@ -1,8 +1,8 @@
 ## 6장. Hermes Agent Skill 운영과 자기 개선형 AI 에이전트
 
-![6장 Skill 운영과 자기 개선 흐름](../assets/images/chapter-heroes/ch06-skill-ops-self-improving-agent-codex.webp)
-
 에르메스 에이전트(Hermes Agent)에서 Skill은 “다음에도 같은 일을 더 안정적으로 처리하기 위한 작업법”이다. 프롬프트를 예쁘게 모아둔 문서가 아니라, 반복 업무에서 생긴 순서, 판단 기준, 실패 패턴, 검증 방법을 다음 세션에서도 다시 쓰게 만드는 운영 지식이다.
+
+![6장 Skill 운영과 자기 개선 흐름](../assets/images/chapter-heroes/ch06-skill-ops-self-improving-agent-codex.webp)
 
 이 장은 Skill을 기능 설명으로만 다루지 않는다. 하비가 요청을 나누고, 방울이가 근거를 찾고, 뽀동이가 WikiDocs 원고를 다듬고, 하망이가 이미지를 만들며, 봉구가 실행과 검증을 맡는 흐름 속에서 어떤 기준이 Skill로 남는지 보여준다. 독자가 가져가야 할 질문은 “스킬이 몇 개인가”가 아니라 “우리 팀의 반복 실수를 어떤 작업법으로 줄일 것인가”다.
 

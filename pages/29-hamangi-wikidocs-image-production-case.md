@@ -1,8 +1,8 @@
 ## 하망이와 WikiDocs 이미지를 만든 실제 운영 케이스
 
-![하망이와 WikiDocs 이미지 제작 운영 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-1-hamangi-image-production-tool-badges-codex.png)
-
 에르메스 에이전트(Hermes Agent) 운영에서 하망이 이미지 제작 케이스는 “예쁜 그림을 만들었다”가 아니라, WikiDocs 책의 메시지를 시각 자료로 바꾸는 업무 자동화 흐름을 보여준다. AI 개인비서와 [역할형 에이전트](https://wikidocs.net/345925) 운영서에서 이미지는 장식이 아니라 독자가 개념을 빨리 잡게 하는 설명 도구다.
+
+![하망이와 WikiDocs 이미지 제작 운영 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-1-hamangi-image-production-tool-badges-codex.png)
 
 이 케이스를 따라 하면 한 페이지의 핵심 메시지를 이미지로 압축하고, 생성 결과를 검수하고, `assets/`에 연결하고, WikiDocs 공개 화면까지 확인하는 흐름을 만들 수 있다. 하망이는 이미지 제작형 에이전트이고, 뽀동이는 본문 메시지를 정리하며, 하비는 책 전체 흐름과 맞는지 판단한다.
 

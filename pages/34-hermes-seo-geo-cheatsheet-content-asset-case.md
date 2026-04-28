@@ -1,8 +1,8 @@
 ## SEO/GEO 치트시트를 콘텐츠 자산으로 만든 실제 케이스
 
-![SEO GEO 치트시트가 콘텐츠 자산으로 이어지는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-6-linkedin-skill-content-asset-codex.png)
-
 SEO/GEO 치트시트 케이스는 [Hermes Agent](https://wikidocs.net/346055)가 단일 산출물을 만드는 도구가 아니라 콘텐츠 운영 시스템으로 쓰이는 장면을 보여준다. 시작은 이미지 한 장이었지만, 실제 흐름은 Slack 요청, 형식 판단, 이미지 제작, QA, skill화, LinkedIn 본문, WikiDocs 기록으로 이어졌다.
+
+![SEO GEO 치트시트가 콘텐츠 자산으로 이어지는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-6-linkedin-skill-content-asset-codex.png)
 
 이 케이스의 핵심은 “예쁜 카드뉴스를 만들었다”가 아니다. 반복될 가능성이 있는 제작 기준을 찾아 [Skill](https://wikidocs.net/345904)로 분리하고, 배포 문안까지 이어 붙이고, 시행착오를 다음 콘텐츠의 기준으로 남겼다는 점이다. 그래서 7장의 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)과 [하망이 이미지 제작 기준](https://wikidocs.net/345989)이 함께 적용된다.
 

@@ -1,8 +1,8 @@
 ## 11장. Hermes Agent AI 업무 자동화 사례
 
-![Hermes Agent 실제 운영 케이스 흐름](../assets/images/chapter-heroes/ch10-real-ops-cases-tool-badges-codex.webp)
-
 에르메스 에이전트(Hermes Agent)로 AI 업무 자동화를 한다는 말은 “에이전트가 알아서 다 해준다”는 뜻이 아니다. 실제 운영에서는 요청이 들어오고, 메인 창구가 일을 해석하고, 조사형/정리형/실행형/이미지형 에이전트가 역할을 나누고, 마지막에는 검증 가능한 문서나 발행물로 남는다.
+
+![Hermes Agent 실제 운영 케이스 흐름](../assets/images/chapter-heroes/ch10-real-ops-cases-tool-badges-codex.webp)
 
 11장은 그 흐름을 실제 업무 자동화 사례와 AI 자동화 사례로 보여준다. Slack 요청, cron 조사, 방울이 확장조사, 뽀동이 문서화, 하망이 이미지 제작, GitHub/WikiDocs 발행이 어떻게 이어지는지 따라 할 수 있게 정리했다. 앞 장들이 개념과 운영 기준을 설명했다면, 이 장은 “그 기준이 실제 요청에서 어떻게 움직이는가”를 보여주는 실습형 사례 모음이다.
 

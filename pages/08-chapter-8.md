@@ -1,8 +1,8 @@
 ## 9장. 체크리스트/마이그레이션/복구 플레이북
 
-![9장 체크리스트와 복구 플레이북 흐름](../assets/images/chapter-heroes/ch08-checklist-migration-recovery-codex.webp)
-
 [Hermes Agent](https://wikidocs.net/346055)를 오래 운영하려면 좋은 답변보다 먼저 필요한 것이 있다. 같은 실수를 반복하지 않게 만드는 체크리스트, 시스템을 옮길 때 기준을 잃지 않게 하는 마이그레이션 절차, 문제가 생겼을 때 무엇부터 볼지 정하는 복구 플레이북, 그리고 실행 권한과 보안 경계를 지키는 운영 기준이다.
+
+![9장 체크리스트와 복구 플레이북 흐름](../assets/images/chapter-heroes/ch08-checklist-migration-recovery-codex.webp)
 
 9장은 앞 장의 [운영 FAQ와 멀티봇 규칙](https://wikidocs.net/345916)을 실행 가능한 순서로 바꾼다. 질문이 반복되면 FAQ가 되고, FAQ가 반복되면 체크리스트가 되고, 체크리스트가 실제 장애를 만나면 복구 플레이북이 된다. 여기에 공식 Hermes Agent 보안 기준인 사용자 권한, 위험 명령 승인, gateway allowlist, sandbox, credential filtering, checkpoint/rollback을 붙여야 한다. 반복되는 확인 순서는 [Hermes Agent Skill](https://wikidocs.net/346235)로 남길 수 있고, 도구 장애는 [외부 도구/MCP/채널 연동](https://wikidocs.net/345907)의 process/runtime/delivery 기준으로 되돌아간다. 이 흐름이 있어야 AI 개인비서와 역할형 에이전트 팀이 “잘 되는 날만 잘 되는 시스템”이 아니라 “문제가 생겨도 돌아오는 시스템”이 된다.
 

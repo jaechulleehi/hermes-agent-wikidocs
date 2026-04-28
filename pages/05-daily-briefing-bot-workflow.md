@@ -1,8 +1,8 @@
-![Daily Briefing Bot이 cron fresh session delivery로 이어지는 자동화 패턴](../assets/how-image-agent-creates-wikidocs-visuals/ch5-4-daily-briefing-bot-pattern-codex.png)
-
 ## Hermes Agent cron과 Daily Briefing Bot은 어떻게 작동할까
 
 Daily Briefing Bot은 단순한 뉴스 요약 예제가 아니다. Hermes Agent에서 반복 업무를 자동화할 때 필요한 기본 패턴을 보여준다. 정해진 시간에 fresh session이 열리고, 필요한 자료를 찾고, 판단 기준에 맞게 요약하고, 정해진 대상에게 전달한다.
+
+![Daily Briefing Bot이 cron fresh session delivery로 이어지는 자동화 패턴](../assets/how-image-agent-creates-wikidocs-visuals/ch5-4-daily-briefing-bot-pattern-codex.png)
 
 이 패턴은 HaloX 운영에서도 그대로 쓰인다. 구체적인 흐름은 [크론 조사에서 WikiDocs 발행까지 이어지는 AI 업무 자동화 케이스](https://wikidocs.net/345992)에서 더 자세히 볼 수 있다. 방울이의 매일 아침 SEO/GEO 모니터링은 “새로운 변화가 있는지 찾고, 강한 신호만 골라, 필요한 곳으로 넘기는” 자동화다. 사용자가 `넘겨`라고 판단하면 뽀동이/하비/하망이까지 이어지는 콘텐츠 제작 흐름이 시작된다.
 

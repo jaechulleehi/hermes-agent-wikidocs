@@ -1,8 +1,8 @@
 ## Hermes Agent 운영 체크리스트는 어떻게 써야 할까
 
-![운영 체크리스트를 짧고 실행 가능하게 쓰는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch08-3-useful-ops-checklists-codex.png)
-
 [Hermes Agent](https://wikidocs.net/346055) 운영 체크리스트는 긴 문서가 아니다. AI 개인비서, 역할형 에이전트, MCP, cron, WikiDocs 발행처럼 여러 요소가 얽힐 때 먼저 확인할 순서를 짧게 고정하는 도구다.
+
+![운영 체크리스트를 짧고 실행 가능하게 쓰는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch08-3-useful-ops-checklists-codex.png)
 
 체크리스트가 실제로 도움이 되려면 설명보다 행동이 보여야 한다. “메모리를 확인한다”보다 “[session](https://wikidocs.net/346126) 내용인지 memory 저장 대상인지 나눈다”가 낫고, “발행을 확인한다”보다 “TOC 링크, 이미지 경로, H1 사용 여부, 본문 raw `.md` 링크를 검사한다”가 낫다.
 

@@ -1,8 +1,8 @@
 ## Hermes Agent 운영 질문은 어떻게 분류할까
 
-![Hermes Agent 운영 질문을 identity profile memory runtime으로 분류하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch7-1-ops-question-routing-codex.png)
-
 [Hermes Agent](https://wikidocs.net/346055) 운영 질문은 대부분 새로운 문제가 아니라 이미 있는 혼선의 변형이다. 같은 하비인데 기억이 다르게 느껴지는 문제, 도구가 파일을 못 읽는 문제, gateway가 살아 있는지 헷갈리는 문제, WikiDocs에 링크가 보이지만 클릭이 안 되는 문제는 서로 달라 보여도 모두 “어느 레이어를 먼저 볼 것인가”의 문제다.
+
+![Hermes Agent 운영 질문을 identity profile memory runtime으로 분류하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch7-1-ops-question-routing-codex.png)
 
 그래서 운영 FAQ를 만들 때는 질문을 그대로 쌓지 않는다. 질문을 identity/profile/role/tool/runtime/source of truth/recovery 같은 레이어에 먼저 놓고, 그다음 하비가 직접 답할지, [방울이](https://wikidocs.net/345895)가 근거를 모을지, [뽀동이](https://wikidocs.net/345896)가 문서로 정리할지, 실행형 에이전트가 검증할지 정한다.
 

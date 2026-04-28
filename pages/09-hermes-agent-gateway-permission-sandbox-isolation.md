@@ -1,6 +1,6 @@
 ## Hermes Agent gateway 권한과 실행 격리는 어떻게 나눌까
 
-Hermes Agent를 CLI로 혼자 쓸 때와 gateway로 Slack/Telegram/Discord에 붙일 때의 위험은 다르다. CLI는 사용자가 직접 보고 실행하지만, gateway는 메시징 플랫폼에서 호출되고 cron과 연결될 수 있다. 그래서 권한 기준은 “모델이 똑똑한가”가 아니라 “누가 호출하고, 어디서 실행되고, 어떤 credential을 볼 수 있는가”에서 시작해야 한다.
+Hermes Agent를 CLI로 혼자 쓸 때와 gateway로 Slack/Telegram/Discord에 붙일 때의 위험은 다르다. CLI는 사용자가 직접 보고 실행하지만, gateway는 메시징 플랫폼에서 호출되고 cron과 연결될 수 있다. 그래서 권한 기준은 “모델이 똑똑한가”가 아니라 “누가 호출하고, 어디서 실행되고, 어떤 credential을 볼 수 있는가”에서 시작해야 한다. 문제가 생겼을 때는 [checkpoint와 rollback](https://wikidocs.net/346262)으로 되돌릴 수 있는 경계도 함께 설계해야 한다.
 
 [공식 Security 문서](https://hermes-agent.nousresearch.com/docs/user-guide/security)는 gateway user authorization, container isolation, environment variable passthrough, MCP credential handling을 따로 설명한다. 운영에서는 이 네 가지를 따로 보되, 하나의 권한 표로 묶어 관리하는 편이 안전하다.
 

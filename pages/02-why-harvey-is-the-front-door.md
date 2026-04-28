@@ -1,8 +1,8 @@
 ## AI 개인비서 메인 창구는 왜 필요할까
 
-![AI 개인비서 메인 창구가 사용자 부담을 줄이는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch2-1-ai-assistant-front-door-codex.png)
-
 [AI 개인비서](https://wikidocs.net/345923)에 메인 창구가 필요한 이유는 단순하다. 사용자가 여러 에이전트를 직접 고르고 지시해야 하면 AI 팀은 편해지는 것이 아니라 더 피곤해진다.
+
+![AI 개인비서 메인 창구가 사용자 부담을 줄이는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch2-1-ai-assistant-front-door-codex.png)
 
 [Hermes Agent](https://wikidocs.net/346055)를 업무에 붙이면 요청은 대부분 짧게 들어온다. “이 스레드 전체 리뷰해줘”, “WikiDocs 2장도 봐줘”, “공식 설명과 어긋난 부분 없는지 확인해줘”처럼 시작한다. 그런데 그 안에는 이전 맥락 확인, 자료 대조, 문서 리라이트, 링크 검증, 발행 후 확인까지 함께 들어 있다.
 

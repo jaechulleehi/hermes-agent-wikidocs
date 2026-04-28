@@ -1,8 +1,8 @@
 ## 에르메스 에이전트(Hermes Agent)는 왜 운영 시스템인가
 
-![Hermes Agent는 단순 챗봇이 아니라 운영 시스템이다](../assets/how-image-agent-creates-wikidocs-visuals/ch1-4-hermes-operating-system-codex.png)
-
 에르메스 에이전트(Hermes Agent)는 단순 챗봇이 아니라 AI 개인비서, 역할형 에이전트, 메모리, 스킬, 외부 도구, 자동화가 함께 움직이는 운영 시스템이다. 질문에 답하는 것에서 끝나지 않고, 요청을 해석하고, 일을 나누고, 실행을 검증하고, 결과를 기록으로 남기는 구조까지 다룬다.
+
+![Hermes Agent는 단순 챗봇이 아니라 운영 시스템이다](../assets/how-image-agent-creates-wikidocs-visuals/ch1-4-hermes-operating-system-codex.png)
 
 처음에는 챗봇처럼 보일 수 있다. 질문을 받고 답하고, 도구를 쓰고, 메모를 남기기 때문이다. 하지만 실제 업무에 붙여보면 중요한 지점은 답변 한 번의 품질이 아니다. 누가 요청을 받고, 누가 조사하고, 누가 정리하고, 어떤 프로필과 기억을 쓰고, 무엇을 공유 자산으로 남길지가 더 중요해진다.
 

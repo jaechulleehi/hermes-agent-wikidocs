@@ -1,8 +1,8 @@
 ## 에르메스 에이전트(Hermes Agent) 설치와 세팅은 어떻게 시작할까
 
-![에르메스 에이전트 설치와 기본 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-3-install-setup-flow-codex.webp)
+에르메스 에이전트(Hermes Agent) 설치는 공식 docs 기준으로 짧다. Linux, macOS, WSL2, Android Termux에서는 one-line installer로 시작할 수 있고, 공식 설치 문서는 “under two minutes” 안에 실행 가능한 상태를 만드는 흐름을 안내한다. 하지만 실제 업무 자동화에 쓰려면 설치 명령보다 설치 후 검증 순서가 더 중요하다. 설치가 끝난 뒤에는 [CLI 첫 대화](https://wikidocs.net/346251)와 provider/model/config 설정을 이어서 확인해야 한다.
 
-에르메스 에이전트(Hermes Agent) 설치는 공식 docs 기준으로 짧다. Linux, macOS, WSL2, Android Termux에서는 one-line installer로 시작할 수 있고, 공식 설치 문서는 “under two minutes” 안에 실행 가능한 상태를 만드는 흐름을 안내한다. 하지만 실제 업무 자동화에 쓰려면 설치 명령보다 설치 후 검증 순서가 더 중요하다.
+![에르메스 에이전트 설치와 기본 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-3-install-setup-flow-codex.webp)
 
 처음 목표는 모든 기능을 켜는 것이 아니다. 먼저 `hermes` 명령이 잡히는지 확인하고, 기본 chat이 되는지 보고, provider/model 설정을 안정화한 뒤, CLI 세션, tool/toolset, Docker/Gateway, cron, Skill, MCP를 순서대로 붙여야 한다. 설치 단계에서 원인을 분리해두면 나중에 Slack, Telegram, Discord, cron, gateway에서 문제가 생겨도 복구가 쉬워진다.
 

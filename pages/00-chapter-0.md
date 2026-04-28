@@ -1,8 +1,8 @@
 ## 0장. 에르메스 에이전트(Hermes Agent) 기초 가이드
 
-![Hermes Agent 기초 가이드 흐름](../assets/images/chapter-heroes/ch00-hermes-foundation-guide-tool-badges-codex.webp)
+에르메스 에이전트(Hermes Agent)를 처음 시작할 때 가장 위험한 흐름은 설치 명령부터 복사하고, 곧바로 Slack/gateway/cron/MCP를 붙이는 것이다. 공식 docs와 GitHub는 Hermes Agent를 self-improving AI agent, CLI/TUI, messaging gateway, memory, skill, tool, cron, MCP를 갖춘 실행 환경으로 설명한다. 그래서 0장은 기능을 모두 외우는 장이 아니라 “어떤 순서로 확인해야 안전하게 실제 업무에 붙일 수 있는가”를 잡는 입문 흐름이다. 따라서 처음에는 [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055)를 먼저 읽고, 설치보다 운영 기준을 앞에 둔다.
 
-에르메스 에이전트(Hermes Agent)를 처음 시작할 때 가장 위험한 흐름은 설치 명령부터 복사하고, 곧바로 Slack/gateway/cron/MCP를 붙이는 것이다. 공식 docs와 GitHub는 Hermes Agent를 self-improving AI agent, CLI/TUI, messaging gateway, memory, skill, tool, cron, MCP를 갖춘 실행 환경으로 설명한다. 그래서 0장은 기능을 모두 외우는 장이 아니라 “어떤 순서로 확인해야 안전하게 실제 업무에 붙일 수 있는가”를 잡는 입문 흐름이다.
+![Hermes Agent 기초 가이드 흐름](../assets/images/chapter-heroes/ch00-hermes-foundation-guide-tool-badges-codex.webp)
 
 이 책은 공식 문서를 대체하지 않는다. 공식 GitHub와 docs에서 설치/명령/설정 기준을 확인하고, 이 책에서는 AI 개인비서와 역할형 에이전트 운영 관점으로 다시 해석한다. 처음 독자는 0장을 따라가며 정의, 공식 자료, 설치, 첫 대화, provider/model/config, 비교, Docker/Gateway, 채널, 업데이트 검증 순서로 보면 된다.
 
