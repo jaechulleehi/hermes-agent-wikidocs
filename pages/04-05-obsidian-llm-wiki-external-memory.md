@@ -13,7 +13,7 @@ Hermes Agent의 memory는 항상 주입되는 짧은 장기 기준이다. shared
 | memory | 짧은 장기 규칙 | 로이드의 반복 선호 |
 | shared-memory | 공용 작업 원본 | 콘텐츠 패키지, handoff, 팀 규칙 |
 | Obsidian LLM Wiki | 누적 지식/운영 원장 | 모니터링 기록, MOC, product signal, 발행 연결 |
-| WikiDocs | 공개 독자용 지식 | 내부 경험을 재작성한 책 페이지 |
+| WikiDocs | 읽기 쉬운 공유 지식 | 내부 경험을 정리한 책 페이지 |
 
 Obsidian은 사람이 탐색하기에도 좋고, 나중에 RAG나 OpenViking 같은 회수층과 연결하기에도 좋다. 그래서 “기록 저장소”가 아니라 “AI 팀이 다시 쓸 수 있는 지식 구조”로 설계해야 한다.
 
@@ -66,7 +66,7 @@ Obsidian을 기억층으로 쓴다는 말은 모든 대화를 노트로 복사�
 | memory | 짧은 장기 선호 | 긴 원문 로그 |
 | shared-memory | 공용 작업 원본 | 개인만 보는 생각 메모 |
 | Obsidian LLM Wiki | 연결형 운영 지식 | 임시 작업 상태 |
-| WikiDocs | 공개 가능한 재작성 지식 | 내부 운영값 |
+| WikiDocs | 정리된 공유 지식 | 불필요한 내부값 |
 
 ## 자주 헷갈리는 질문
 

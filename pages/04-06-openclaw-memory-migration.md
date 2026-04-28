@@ -62,7 +62,7 @@ OpenClaw에서 Hermes로 옮길 때 중요한 것은 “많이 가져오기”�
 | 사용자 반복 선호 | 유지 | USER.md / memory |
 | 오래된 임시 작업 상태 | 폐기 또는 session_search | 장기 memory 금지 |
 | 팀 운영 규칙 | 정리 후 유지 | shared-memory |
-| 공개 가능한 운영 교훈 | 재작성 | WikiDocs |
+| 함께 읽을 만한 운영 교훈 | 정리 | WikiDocs |
 
 ## 자주 헷갈리는 질문
 
