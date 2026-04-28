@@ -159,12 +159,15 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 포함 글:
 
 - 00-1. 에르메스 에이전트(Hermes Agent)란 무엇인가
-- 00-2. Hermes Agent 공식 GitHub와 공식 문서는 어디서 볼까
-- 00-3. Hermes Agent 설치와 세팅은 어떻게 시작할까
-- 00-4. Hermes Agent와 OpenClaw는 무엇이 다를까
-- 00-5. Hermes Agent와 Claude Code/Codex는 어떻게 다를까
-- 00-6. Hermes Agent Docker/Gateway는 언제 필요할까
-- 00-7. Hermes Agent는 어떤 채널에서 쓸 수 있을까
+- 00-2. 에르메스 에이전트(Hermes Agent) 공식 GitHub/docs는 어디서 볼까
+- 00-3. 에르메스 에이전트(Hermes Agent) 설치와 세팅은 어떻게 시작할까
+- 00-4. 에르메스 에이전트(Hermes Agent) CLI 첫 대화는 어떻게 시작할까
+- 00-5. 에르메스 에이전트(Hermes Agent) provider/model/config는 어떻게 확인할까
+- 00-6. 에르메스 에이전트(Hermes Agent)와 OpenClaw는 무엇이 다를까
+- 00-7. 에르메스 에이전트(Hermes Agent)와 Claude Code/Codex는 어떻게 다를까
+- 00-8. 에르메스 에이전트(Hermes Agent) Docker/Gateway는 언제 필요할까
+- 00-9. 에르메스 에이전트(Hermes Agent)는 어떤 채널에서 쓸 수 있을까
+- 00-10. 에르메스 에이전트(Hermes Agent) 업데이트 전후에는 무엇을 점검할까
 
 ## 1부. AI 챗봇에서 AI 팀으로 관점 바꾸기
 

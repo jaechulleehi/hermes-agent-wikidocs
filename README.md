@@ -2,7 +2,7 @@
 
 > AI 개인비서와 역할형 에이전트로 만드는 실전 업무 워크플로우
 
-에르메스 에이전트(Hermes Agent)를 기반으로 **AI 자동화, 업무 자동화, 나만의 AI 팀**을 실제로 만들고 운영한 경험을 정리한 책입니다. 처음 읽는 독자가 공식 GitHub, 공식 문서, 설치, OpenClaw 비교, Claude Code/Codex 비교, Docker/Gateway, Slack/Telegram/Discord 같은 사용 채널을 먼저 확인할 수 있도록 0장 기초 가이드를 앞에 두었습니다.
+에르메스 에이전트(Hermes Agent)를 기반으로 **AI 자동화, 업무 자동화, 나만의 AI 팀**을 실제로 만들고 운영한 경험을 정리한 책입니다. 처음 읽는 독자가 공식 GitHub, 공식 문서, 설치, CLI 첫 대화, provider/model/config, OpenClaw 비교, Claude Code/Codex 비교, Docker/Gateway, Slack/Telegram/Discord 같은 사용 채널, 업데이트 검증을 순서대로 확인할 수 있도록 0장 기초 가이드를 앞에 두었습니다.
 
 이 책은 에르메스 에이전트(Hermes Agent)의 설치법이나 기능 목록을 다시 설명하지 않습니다. 핵심은 “AI에게 답변을 잘 받는 법”이 아니라, AI 개인비서, 즉 개인 AI 비서를 메인 창구로 두고 조사/정리/실행 역할을 나눠 실제 업무 흐름과 AI 워크플로우를 굴리는 법입니다. 긴 대화에서 맥락이 흐려지는 문제, 역할이 섞일 때 생기는 혼선, 외부 도구와 기록 시스템을 어떻게 연결할지 같은 운영 문제를 독자 입장에서 풀어갑니다.
 

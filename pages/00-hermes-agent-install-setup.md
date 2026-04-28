@@ -2,9 +2,9 @@
 
 ![에르메스 에이전트 설치와 기본 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-3-install-setup-flow-codex.webp)
 
-에르메스 에이전트(Hermes Agent) 설치는 공식 문서 기준으로 매우 짧다. `Hermes Agent 설치`, `에르메스 에이전트 설치`, `Hermes Agent 설치 방법`을 찾는 독자라면 Linux, macOS, WSL2, Android Termux에서 one-line installer로 시작할 수 있다. 다만 실제 업무 자동화에 쓰려면 설치 명령보다 설치 후 검증 순서가 더 중요하다.
+에르메스 에이전트(Hermes Agent) 설치는 공식 docs 기준으로 짧다. Linux, macOS, WSL2, Android Termux에서는 one-line installer로 시작할 수 있고, 공식 설치 문서는 “under two minutes” 안에 실행 가능한 상태를 만드는 흐름을 안내한다. 하지만 실제 업무 자동화에 쓰려면 설치 명령보다 설치 후 검증 순서가 더 중요하다.
 
-처음 목표는 “모든 기능을 켜기”가 아니다. 먼저 기본 chat이 정상 작동하는지 확인하고, provider 설정을 안정화하고, 그다음 [Docker/Gateway](https://wikidocs.net/346139), [cron](https://wikidocs.net/345926), [skill](https://wikidocs.net/345904), [MCP](https://wikidocs.net/345903) 같은 기능을 하나씩 붙여야 한다.
+처음 목표는 모든 기능을 켜는 것이 아니다. 먼저 `hermes` 명령이 잡히는지 확인하고, 기본 chat이 되는지 보고, provider/model 설정을 안정화한 뒤, CLI 세션, tool/toolset, Docker/Gateway, cron, Skill, MCP를 순서대로 붙여야 한다. 설치 단계에서 원인을 분리해두면 나중에 Slack, Telegram, Discord, cron, gateway에서 문제가 생겨도 복구가 쉬워진다.
 
 ## 공식 설치 명령
 
@@ -14,7 +14,19 @@
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 ```
 
-공식 문서 기준 지원 흐름은 Linux, macOS, WSL2, Android Termux다. Windows native는 공식 문서에서 직접 지원 대상으로 보지 않고, WSL2 사용을 권장한다.
+공식 문서 기준 지원 흐름은 Linux, macOS, WSL2, Android Termux다. Windows native는 공식 문서에서 직접 지원 대상으로 보지 않고, WSL2 사용을 권장한다. Nix/NixOS와 수동 개발 설치 흐름은 공식 docs의 별도 페이지를 확인하는 편이 안전하다.
+
+## 설치 전에 확인할 것
+
+| 확인 항목 | 왜 필요한가 |
+|---|---|
+| 실행 환경 | Linux/macOS/WSL2/Termux/Nix 중 어떤 경로인지에 따라 설치 방법과 의존성이 달라진다 |
+| Python/Node/git/ripgrep/ffmpeg 등 의존성 | installer가 일부를 처리하더라도 실패 시 원인을 좁히는 기준이 된다 |
+| 사용할 provider | 설치 후 바로 대화하려면 모델/provider 연결이 필요하다 |
+| 사용할 채널 | CLI만 쓸지, Slack/Telegram/Discord gateway까지 붙일지에 따라 다음 단계가 달라진다 |
+| 권한/보안 기준 | 파일/터미널/브라우저 도구를 어디까지 허용할지 먼저 정해야 한다 |
+
+설치 전 단계에서 모든 것을 완벽히 결정할 필요는 없다. 다만 “CLI 실습”인지 “상시 gateway 운영”인지가 다르면 검증 순서가 달라진다는 점은 알아야 한다.
 
 ## 설치보다 중요한 첫 검증 순서
 
@@ -22,11 +34,12 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 |---|---|---|
 | 1 | 설치 스크립트 실행 | `hermes` 명령이 잡히는가 |
 | 2 | shell reload | `source ~/.bashrc` 또는 `source ~/.zshrc` 후 실행되는가 |
-| 3 | provider 선택 | `hermes model`로 사용할 모델/provider가 연결되는가 |
-| 4 | 기본 chat 실행 | 평범한 질문에 응답하는가 |
-| 5 | tool 범위 확인 | 파일/터미널/브라우저 등 필요한 도구만 켰는가 |
-| 6 | gateway 필요 여부 판단 | Slack/Telegram/Discord 같은 메시징 연결이 필요한가 |
-| 7 | 자동화 후보 분리 | cron으로 돌릴 일과 사람이 직접 시킬 일을 구분했는가 |
+| 3 | provider 선택 | `hermes model` 또는 config 흐름으로 사용할 모델/provider가 연결되는가 |
+| 4 | 기본 chat 실행 | `hermes` 또는 `hermes chat -q "Hello"`가 응답하는가 |
+| 5 | 세션 확인 | 대화가 저장되고 이어서 볼 수 있는가 |
+| 6 | tool 범위 확인 | 파일/터미널/브라우저 등 필요한 도구만 켰는가 |
+| 7 | gateway 필요 여부 판단 | Slack/Telegram/Discord 같은 메시징 연결이 필요한가 |
+| 8 | 자동화 후보 분리 | cron으로 돌릴 일과 사람이 직접 시킬 일을 구분했는가 |
 
 ## 좋은 시작 방식
 
@@ -36,8 +49,8 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 2. provider/model 설정이 안정적이다.
 3. 기본 대화가 된다.
 4. 작은 파일 읽기나 검색 같은 도구 호출을 확인한다.
-5. Slack/Telegram 같은 메시징 gateway를 붙인다.
-6. 반복 업무 하나를 cron이나 skill 후보로 분리한다.
+5. Slack/Telegram 같은 messaging gateway를 붙인다.
+6. 반복 업무 하나를 cron이나 Skill 후보로 분리한다.
 
 이 순서가 중요한 이유는 Hermes Agent가 기능이 많은 도구라서다. 기능을 많이 켜는 것보다 “어느 단계까지 정상인지”를 나눠 확인해야 복구가 쉽다.
 
@@ -61,4 +74,4 @@ provider에 따라 API key, OAuth, custom endpoint, model name, context length �
 
 ## 다음 글
 
-설치와 기본 세팅을 이해했다면, 다음에는 [OpenClaw와 Hermes Agent가 무엇이 다른지](https://wikidocs.net/345889) 본다. 이미 OpenClaw나 유사한 에이전트 환경을 써봤다면 전환 기준을 먼저 잡아야 한다.
+설치와 기본 세팅을 끝냈다면 바로 자동화로 넘어가지 말고 다음 단계인 에르메스 에이전트(Hermes Agent) CLI 첫 대화를 확인한다. CLI에서 첫 대화와 세션이 안정돼야 provider, config, gateway 문제를 분리할 수 있다.

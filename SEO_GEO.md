@@ -29,6 +29,13 @@
 - Hermes Agent docs
 - Hermes Agent 설치
 - 에르메스 에이전트 설치
+- Hermes Agent CLI
+- Hermes Agent 첫 대화
+- Hermes Agent config
+- Hermes Agent provider
+- Hermes Agent model
+- Hermes Agent update
+- Hermes Agent 업데이트
 - Hermes Agent Docker
 - Hermes Agent gateway
 - Hermes Agent Slack
@@ -81,6 +88,9 @@
 
 - Hermes Agent 공식 GitHub와 공식 문서는 어디서 볼 수 있나?
 - Hermes Agent 설치와 세팅은 어떻게 시작해야 하나?
+- Hermes Agent CLI 첫 대화는 어떻게 시작하나?
+- Hermes Agent provider/model/config는 어떻게 확인하나?
+- Hermes Agent 업데이트 전후에는 무엇을 점검해야 하나?
 - Hermes Agent와 OpenClaw는 무엇이 다른가?
 - Hermes Agent와 Claude Code/Codex는 어떻게 다른가?
 - Hermes Agent Docker와 gateway는 언제 필요한가?
@@ -105,7 +115,7 @@
 
 ## 작성 규칙
 
-1. 0장 기초 가이드의 제목과 첫 문단은 `Hermes Agent 공식 GitHub`, `Hermes Agent 공식 문서`, `Hermes Agent 설치`, `Hermes Agent vs OpenClaw`, `Hermes Agent Claude Code 비교`, `Hermes Agent Docker/Gateway`, `Hermes Agent Slack`, `Hermes Agent Telegram`, `Hermes Agent Discord` 같은 입문 검색어를 자연스럽게 받는다.
+1. 0장 기초 가이드의 제목과 첫 문단은 `Hermes Agent 공식 GitHub`, `Hermes Agent 공식 문서`, `Hermes Agent 설치`, `Hermes Agent CLI`, `Hermes Agent config`, `Hermes Agent provider`, `Hermes Agent model`, `Hermes Agent update`, `Hermes Agent vs OpenClaw`, `Hermes Agent Claude Code 비교`, `Hermes Agent Docker/Gateway`, `Hermes Agent Slack`, `Hermes Agent Telegram`, `Hermes Agent Discord` 같은 입문 검색어를 자연스럽게 받는다.
 2. 각 페이지 첫 문단은 가능하면 `에르메스 에이전트(Hermes Agent)` 혼용 표기를 자연스럽게 포함한다. 문장이 어색할 때만 `에르메스 에이전트`, `Hermes Agent`, `AI 업무 자동화`, `AI 개인비서`, `나만의 AI 팀`, `워크플로우` 중 하나로 보완한다.
 3. 제목은 질문형을 유지하되, 장 제목에는 독자 문제 키워드를 넣는다.
 4. 기능명보다 사용 장면을 먼저 설명한다.
