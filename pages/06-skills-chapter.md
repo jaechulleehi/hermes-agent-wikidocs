@@ -48,4 +48,4 @@ Skill은 Hermes Agent의 성장 단위다. memory가 사용자 선호와 안정 
 
 ## 이어서 읽기
 
-먼저 [Hermes Agent Skill은 무엇이고 언제 만들까](https://wikidocs.net/345904)를 읽고, 반복 업무가 Skill로 바뀌는 기준을 이어서 본다. Skill과 도구 연결의 차이는 [MCP 연결 기준](https://wikidocs.net/346231)과 함께 읽으면 더 선명해진다.
+먼저 [Hermes Agent Skill은 무엇이고 언제 만들까](https://wikidocs.net/345904)를 읽고, 이어서 [반복 업무는 어떻게 Skill이 되는가](https://wikidocs.net/346236)에서 실제 업무가 Skill로 바뀌는 기준을 본다. Skill과 도구 연결의 차이는 [MCP 연결 기준](https://wikidocs.net/346231)과 함께 읽으면 더 선명해진다.

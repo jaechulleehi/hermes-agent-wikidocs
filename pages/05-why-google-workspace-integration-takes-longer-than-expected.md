@@ -60,4 +60,4 @@ MCP는 Hermes Agent가 외부 도구와 만나는 표준 연결면이다. 사용
 
 ## 다음 글
 
-다음은 [always-on gateway는 왜 자주 헷갈릴까](https://wikidocs.net/345906)에서 연결된 도구가 실제 채널에서 계속 살아 있는지 확인하는 기준을 본다. 반복 절차를 Skill로 남기는 기준은 6장의 [Hermes Agent Skill 운영](https://wikidocs.net/345904)에서 이어진다.
+다음은 [always-on gateway는 왜 자주 헷갈릴까](https://wikidocs.net/345906)에서 연결된 도구가 실제 채널에서 계속 살아 있는지 확인하는 기준을 본다. 반복 절차를 Skill로 남기는 기준은 6장의 [Hermes Agent Skill 운영](https://wikidocs.net/346235)에서 이어진다.

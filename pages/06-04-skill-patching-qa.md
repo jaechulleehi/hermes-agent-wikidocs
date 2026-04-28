@@ -52,4 +52,4 @@ Skill을 고칠 때는 큰 문서를 다시 쓰기보다, 실패를 막는 문�
 
 ## 다음 글
 
-다음은 Skill을 공개 GitHub에 둘지, 개인/팀 내부에만 둘지 나누는 기준을 본다.
+다음은 [공개 GitHub Skill과 내부 Skill은 어떻게 분리할까](https://wikidocs.net/346239)에서 Skill을 공개 GitHub에 둘지, 개인/팀 내부에만 둘지 나누는 기준을 본다.

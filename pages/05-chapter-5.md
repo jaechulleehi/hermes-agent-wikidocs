@@ -59,4 +59,4 @@ WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. Git
 
 ## 이어서 읽기
 
-먼저 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)를 읽고, 이어서 [Hermes Agent MCP 연결 기준](https://wikidocs.net/346231), [GitHub CLI와 MCP/API 차이](https://wikidocs.net/346232), [Notion/Google Workspace/WikiDocs 연결 방식](https://wikidocs.net/346233)을 비교하면 도구 연결의 기준이 보인다. 반복 절차는 6장의 [Hermes Agent Skill 운영](https://wikidocs.net/345904)에서, 역할을 실제로 어떻게 움직일지는 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](https://wikidocs.net/346124)에서 이어서 본다.
+먼저 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)를 읽고, 이어서 [Hermes Agent MCP 연결 기준](https://wikidocs.net/346231), [GitHub CLI와 MCP/API 차이](https://wikidocs.net/346232), [Notion/Google Workspace/WikiDocs 연결 방식](https://wikidocs.net/346233)을 비교하면 도구 연결의 기준이 보인다. 반복 절차는 6장의 [Hermes Agent Skill 운영](https://wikidocs.net/346235)에서, 역할을 실제로 어떻게 움직일지는 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](https://wikidocs.net/346124)에서 이어서 본다.

@@ -53,4 +53,4 @@
 
 ## 다음 글
 
-다음은 Skill과 memory, MCP, cron, gateway가 각각 어떤 역할을 맡는지 한 번에 비교한다.
+다음은 [Skill과 memory/MCP/cron/gateway는 어떻게 다를까](https://wikidocs.net/346240)에서 Skill과 다른 운영 기능이 각각 어떤 역할을 맡는지 한 번에 비교한다.
