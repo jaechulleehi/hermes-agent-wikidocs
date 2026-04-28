@@ -61,7 +61,9 @@
 | 26 | `04-08-context-compaction-handoff.md` | 4장 | 긴 대화와 컨텍스트 부패 | context compaction/source of truth 운영 기준 추가 |
 | 27 | `27-why-agent-adoption-fails-in-operations.md` | 9장 | 초도 도입 조직이 운영에서 무너지는 이유 | 조직 도입 체크리스트와 온보딩 기준으로 확장 |
 
-## 4. Hermes Agent 공식 docs 매핑
+## 4. 공식 Hermes Agent docs 매핑
+
+0장 기초 가이드는 공식 문서와 검색 초입 질문을 연결하는 관문이다. 공식 GitHub/공식 Docs/Installation/Quickstart/OpenClaw migration/Docker/Gateway/Claude Code/Codex 비교 질문은 0장에서 먼저 받고, 1장 이후는 AI 개인비서와 역할형 에이전트 운영 구조로 이어진다.
 
 공식 문서는 기능의 기준이다. 책에서는 공식 문서를 그대로 반복하지 않고, 실제 운영 패턴과 시행착오로 번역한다.
 

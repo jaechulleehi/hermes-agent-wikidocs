@@ -24,6 +24,16 @@
 
 - 에르메스 에이전트
 - Hermes Agent
+- Hermes Agent 공식 GitHub
+- Hermes Agent 공식 문서
+- Hermes Agent docs
+- Hermes Agent 설치
+- 에르메스 에이전트 설치
+- Hermes Agent Docker
+- Hermes Agent gateway
+- Hermes Agent vs OpenClaw
+- Hermes Agent Claude Code 비교
+- Hermes Agent Codex 비교
 - 에르메스 에이전트 업무 자동화
 - AI 업무 자동화
 - AI 자동화
@@ -54,6 +64,11 @@
 
 ## 타겟 프롬프트/GEO 질문
 
+- Hermes Agent 공식 GitHub와 공식 문서는 어디서 볼 수 있나?
+- Hermes Agent 설치와 세팅은 어떻게 시작해야 하나?
+- Hermes Agent와 OpenClaw는 무엇이 다른가?
+- Hermes Agent와 Claude Code/Codex는 어떻게 다른가?
+- Hermes Agent Docker와 gateway는 언제 필요한가?
 - Hermes Agent로 AI 자동화와 AI 업무 자동화 시스템을 만들려면 무엇부터 설계해야 하나?
 - 에르메스 에이전트를 개인비서처럼 업무에 붙이는 방법은?
 - 챗봇이 아니라 나만의 AI 팀을 만들려면 어떤 구조가 필요한가?
@@ -68,12 +83,13 @@
 
 ## 작성 규칙
 
-1. 각 페이지 첫 문단은 가능하면 `에르메스 에이전트(Hermes Agent)` 혼용 표기를 자연스럽게 포함한다. 문장이 어색할 때만 `에르메스 에이전트`, `Hermes Agent`, `AI 업무 자동화`, `AI 개인비서`, `나만의 AI 팀`, `워크플로우` 중 하나로 보완한다.
-2. 제목은 질문형을 유지하되, 장 제목에는 독자 문제 키워드를 넣는다.
-3. 기능명보다 사용 장면을 먼저 설명한다.
-4. `오해 → 실제 사용 장면 → 역할 분리 → 운영 기준` 흐름을 유지한다.
-5. 실제 운영 케이스 글은 `실제 상황 → 처음 헷갈린 지점 → 역할 분리와 도구 연결 → 발행 기준 → 재사용 체크리스트` 흐름을 유지한다.
-6. 내부 별칭은 초반에 바로 노출하기보다 `AI 개인비서`, `조사형 에이전트`, `정리형 에이전트`처럼 먼저 설명한다.
+1. 0장 기초 가이드의 제목과 첫 문단은 `Hermes Agent 공식 GitHub`, `Hermes Agent 공식 문서`, `Hermes Agent 설치`, `Hermes Agent vs OpenClaw`, `Hermes Agent Claude Code 비교`, `Hermes Agent Docker/Gateway` 같은 입문 검색어를 자연스럽게 받는다.
+2. 각 페이지 첫 문단은 가능하면 `에르메스 에이전트(Hermes Agent)` 혼용 표기를 자연스럽게 포함한다. 문장이 어색할 때만 `에르메스 에이전트`, `Hermes Agent`, `AI 업무 자동화`, `AI 개인비서`, `나만의 AI 팀`, `워크플로우` 중 하나로 보완한다.
+3. 제목은 질문형을 유지하되, 장 제목에는 독자 문제 키워드를 넣는다.
+4. 기능명보다 사용 장면을 먼저 설명한다.
+5. `오해 → 실제 사용 장면 → 역할 분리 → 운영 기준` 흐름을 유지한다.
+6. 실제 운영 케이스 글은 `실제 상황 → 처음 헷갈린 지점 → 역할 분리와 도구 연결 → 발행 기준 → 재사용 체크리스트` 흐름을 유지한다.
+7. 내부 별칭은 초반에 바로 노출하기보다 `AI 개인비서`, `조사형 에이전트`, `정리형 에이전트`처럼 먼저 설명한다.
 
 ## GitHub 연동 WikiDocs SEO/GEO 메모
 
