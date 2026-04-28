@@ -19,7 +19,7 @@ Skill은 반복 업무의 실행 절차와 검증 기준이다. memory는 장기
 
 ## 실제 운영 장면: 같은 WikiDocs 작업을 기능별로 나누기
 
-사용자가 “WikiDocs SEO를 다시 리뷰해줘”라고 요청하면 gateway는 Slack 요청을 Hermes Agent에게 전달한다. memory는 사용자가 짧은 보고와 자연스러운 한국어를 선호한다는 안정 기준을 제공한다. Skill은 WikiDocs 전자책 호환, SEO/GEO, 내부 링크, 검증/commit/push 흐름을 제공한다.
+사용자가 “WikiDocs SEO를 다시 리뷰해줘”라고 요청하면 gateway는 Slack 요청을 Hermes Agent에게 전달한다. memory는 사용자가 짧은 보고와 자연스러운 한국어를 선호한다는 안정 기준을 제공한다. Skill은 WikiDocs 전자책 호환, SEO/GEO, 내부 링크, 검증과 원본 반영 흐름을 제공한다.
 
 필요하면 MCP나 CLI가 GitHub, WikiDocs, 파일 시스템을 연결한다. cron은 같은 일을 매일 자동으로 해야 할 때만 등장한다. 과거에 비슷한 작업을 어떻게 했는지는 session_search나 GitHub log에서 회수한다. 이처럼 하나의 요청도 기능별 책임이 나뉘어야 한다.
 
@@ -45,7 +45,7 @@ Skill은 반복 업무의 실행 절차와 검증 기준이다. memory는 장기
 
 ### Skill이 있으면 memory가 필요 없나요?
 
-아니다. Skill은 실행 절차이고 memory는 안정 맥락이다. “로이드는 보고를 짧게 선호한다”는 memory에 가깝고, “WikiDocs 발행 전 검증 순서”는 Skill에 가깝다.
+아니다. Skill은 실행 절차이고 memory는 안정 맥락이다. “사용자는 보고를 짧게 선호한다”는 memory에 가깝고, “WikiDocs 발행 전 검증 순서”는 Skill에 가깝다.
 
 ### MCP tool 사용법은 Skill인가요?
 

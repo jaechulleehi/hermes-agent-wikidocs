@@ -20,7 +20,7 @@ Skill은 “많이 한 일”이 아니라 “다시 할 때 기준이 필요한
 
 WikiDocs 발행은 처음엔 단순했다. 글을 고치고, commit하고, push하면 끝나는 일처럼 보였다. 하지만 실제 운영에서는 TOC 링크, H1 금지, 이미지 경로, 중점 문자, raw `.md` body 링크, WikiDocs 동기화 확인까지 함께 봐야 했다.
 
-이때 생긴 기준은 [GitHub/WikiDocs 발행 케이스](https://wikidocs.net/345994)와 연결된다. 한 번의 발행 성공이 아니라, 여러 번의 발행에서 같은 검증 항목이 반복되면서 Skill이 됐다. 이제 뽀동이는 WikiDocs 작업을 받을 때 먼저 `wikidocs-github-ebook-pipeline`을 로드하고, 검증 후 commit/push와 공개 페이지 확인까지 흐름으로 처리한다.
+이때 생긴 기준은 [GitHub/WikiDocs 발행 케이스](https://wikidocs.net/345994)와 연결된다. 한 번의 발행 성공이 아니라, 여러 번의 발행에서 같은 검증 항목이 반복되면서 Skill이 됐다. 이제 뽀동이는 WikiDocs 작업을 받을 때 먼저 `wikidocs-github-ebook-pipeline`을 로드하고, 검증 후 원본 반영과 공개 페이지 확인까지 흐름으로 처리한다.
 
 ## Skill로 만들기 전 확인할 질문
 

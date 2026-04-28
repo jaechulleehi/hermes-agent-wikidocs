@@ -10,7 +10,7 @@ Hermes Agent의 memory는 항상 주입되는 짧은 장기 기준이다. shared
 
 | 층 | 핵심 역할 | 좋은 사용 예 |
 |---|---|---|
-| memory | 짧은 장기 규칙 | 로이드의 반복 선호 |
+| memory | 짧은 장기 규칙 | 사용자별 반복 선호 |
 | shared-memory | 공용 작업 원본 | 콘텐츠 패키지, handoff, 팀 규칙 |
 | Obsidian LLM Wiki | 누적 지식/운영 원장 | 모니터링 기록, MOC, product signal, 발행 연결 |
 | WikiDocs | 읽기 쉬운 공유 지식 | 내부 경험을 정리한 책 페이지 |

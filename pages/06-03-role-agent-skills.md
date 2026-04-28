@@ -18,7 +18,7 @@
 
 ## 실제 운영 장면: 뽀동이 Skill과 하비 Skill은 다르다
 
-뽀동이에게 필요한 Skill은 글의 구조, 독자 흐름, WikiDocs 전자책 호환성, SEO/GEO, 공개 문서 품질 검증이다. 그래서 뽀동이는 원고 작업 전 `wikidocs-github-ebook-pipeline` 같은 Skill을 보고, 결과를 commit/push하기 전 검증한다.
+뽀동이에게 필요한 Skill은 글의 구조, 독자 흐름, WikiDocs 전자책 호환성, SEO/GEO, 공개 문서 품질 검증이다. 그래서 뽀동이는 원고 작업 전 `wikidocs-github-ebook-pipeline` 같은 Skill을 보고, 결과를 GitHub 원본에 반영하기 전 검증한다.
 
 하비에게 필요한 Skill은 다르다. 하비는 사용자의 요청을 받아 직접 처리할지, 방울이에게 조사시킬지, 뽀동이에게 정리시킬지, 봉구에게 실행시킬지 판단해야 한다. 이 기준은 [AI 개인비서 메인 창구](https://wikidocs.net/345892)와 [직접 처리할 일과 역할형 에이전트에 맡길 일](https://wikidocs.net/345893)에 더 가깝다.
 

@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent)는 하나의 앱 화면에서만 쓰는 도구가 아니다. `Hermes Agent Slack`, `Hermes Agent Telegram`, `Hermes Agent Discord`, `Hermes Agent gateway`를 찾는 독자라면 먼저 Hermes Agent를 CLI, Slack, Telegram, Discord, Email, Webhook 같은 여러 채널에서 호출되는 AI 개인비서 운영 환경으로 이해하는 편이 좋다.
 
-우리는 현재 Slack을 주 채널로 쓴다. Slack 스레드에서 로이드가 요청을 던지면 하비가 메인 창구로 해석하고, 필요하면 방울이/뽀동이/하망이/봉구 같은 역할형 에이전트로 나눈다. 하지만 이 구조는 Slack에만 묶인 것이 아니다. 같은 Hermes Agent도 Telegram에서는 모바일 개인비서처럼, Discord에서는 커뮤니티/팀 채널 봇처럼, Webhook에서는 외부 이벤트를 받는 자동화 입구처럼 운영될 수 있다.
+우리는 현재 Slack을 주 채널로 쓴다. Slack 스레드에서 사용자가 요청을 던지면 하비가 메인 창구로 해석하고, 필요하면 방울이/뽀동이/하망이/봉구 같은 역할형 에이전트로 나눈다. 하지만 이 구조는 Slack에만 묶인 것이 아니다. 같은 Hermes Agent도 Telegram에서는 모바일 개인비서처럼, Discord에서는 커뮤니티/팀 채널 봇처럼, Webhook에서는 외부 이벤트를 받는 자동화 입구처럼 운영될 수 있다.
 
 ## 사용 가능한 채널을 먼저 보는 이유
 

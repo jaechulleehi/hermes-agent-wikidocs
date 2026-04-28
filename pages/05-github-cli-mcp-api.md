@@ -2,13 +2,13 @@
 
 에르메스 에이전트(Hermes Agent)에서 GitHub 작업을 자동화할 때는 GitHub CLI, MCP, API를 구분해야 한다. 셋 다 GitHub와 연결할 수 있지만, `GitHub CLI MCP API`, `Hermes Agent GitHub CLI`, `Hermes Agent MCP API` 관점에서 보면 실행 방식과 검증 기준이 다르다.
 
-GitHub는 source of truth가 되기 쉽다. [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서도 원고를 고치고, 검증하고, commit/push하고, 공개 페이지를 확인하는 흐름은 GitHub가 중심이었다. 그래서 GitHub 연결은 “편의 기능”이 아니라 발행/검증/복구 기준과 함께 설계해야 한다.
+GitHub는 source of truth가 되기 쉽다. [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서도 원고를 고치고, 검증하고, GitHub 원본에 반영한 뒤 공개 페이지를 확인하는 흐름은 GitHub가 중심이었다. 그래서 GitHub 연결은 “편의 기능”이 아니라 발행/검증/복구 기준과 함께 설계해야 한다.
 
 ## 세 방식의 차이
 
 | 방식 | 강점 | 주의할 점 | 어울리는 작업 |
 |---|---|---|---|
-| CLI | 로컬 인증과 기존 개발자 워크플로우를 재사용하기 쉽다 | 실행 환경/HOME/path에 따라 인증이 달라질 수 있다 | git status, gh issue/pr 조회, commit/push 검증 |
+| CLI | 로컬 인증과 기존 개발자 워크플로우를 재사용하기 쉽다 | 실행 환경/HOME/path에 따라 인증이 달라질 수 있다 | git status, gh issue/pr 조회, 원격 반영 검증 |
 | MCP | 에이전트가 tool 목록으로 이해하기 쉽다 | server 설정, scope, tool permission을 관리해야 한다 | 이슈/PR/파일 정보를 대화 흐름에 붙이기 |
 | API | 세밀한 제어와 배치 자동화에 좋다 | token scope, pagination, rate limit, 응답 파싱을 직접 봐야 한다 | 대량 조회, custom report, 운영 대시보드 |
 
@@ -43,7 +43,7 @@ API는 반복 조회와 세밀한 자동화에 좋다. 예를 들어 여러 repo
 
 ## 작은 예시: WikiDocs 발행 흐름
 
-WikiDocs 원고를 고칠 때는 먼저 로컬 파일을 수정하고 검증한다. 그다음 GitHub commit/push로 source of truth를 갱신한다. 마지막으로 WikiDocs 공개 페이지가 sync됐는지 확인한다. 이 과정에서 CLI는 파일과 git 상태를 확인하고, API나 MCP는 공개/원격 상태 확인을 도울 수 있다.
+WikiDocs 원고를 고칠 때는 먼저 로컬 파일을 수정하고 검증한다. 그다음 GitHub 원본에 변경 이력을 남기고 source of truth를 갱신한다. 마지막으로 WikiDocs 공개 페이지가 sync됐는지 확인한다. 이 과정에서 CLI는 파일과 git 상태를 확인하고, API나 MCP는 공개/원격 상태 확인을 도울 수 있다.
 
 중요한 것은 한 도구로 모든 것을 하려는 태도가 아니다. 로컬 검증, 원격 반영, 공개 화면 확인을 나눠 보는 것이다.
 
@@ -57,9 +57,9 @@ WikiDocs 원고를 고칠 때는 먼저 로컬 파일을 수정하고 검증한�
 
 세밀한 제어에는 강하지만 운영 부담도 크다. token scope, pagination, rate limit을 직접 관리해야 하므로 단순 작업에는 CLI나 MCP가 더 낫다.
 
-### 자동 commit/push를 바로 맡겨도 되나요?
+### GitHub 원본 반영을 바로 맡겨도 되나요?
 
-검증 기준이 없으면 위험하다. `git diff`, 포맷 검증, 공개 링크 확인, push 후 sync 확인 같은 순서가 먼저 있어야 한다.
+검증 기준이 없으면 위험하다. `git diff`, 포맷 검증, 공개 링크 확인, 원격 반영 후 동기화 확인 같은 순서가 먼저 있어야 한다.
 
 ## 다음 글
 
