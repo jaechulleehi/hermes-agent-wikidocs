@@ -71,4 +71,4 @@ Hermes Agent와 Claude Code/Codex는 모두 AI 에이전트처럼 보이지만 �
 
 ## 다음 글
 
-다음에는 Docker와 Gateway를 언제 써야 하는지 본다. Hermes Agent를 개인 CLI로만 쓸지, 항상 켜진 AI 비서로 운영할지에 따라 구조가 달라진다.
+다음에는 [Docker와 Gateway를 언제 써야 하는지](https://wikidocs.net/346139) 본다. Hermes Agent를 개인 CLI로만 쓸지, 항상 켜진 AI 비서로 운영할지에 따라 구조가 달라진다.

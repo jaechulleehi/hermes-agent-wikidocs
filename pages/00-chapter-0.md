@@ -8,12 +8,12 @@
 
 | 글 | 검색자가 묻는 질문 | 이 장의 답 |
 |---|---|---|
-| 00-1 | 에르메스 에이전트(Hermes Agent)란 무엇인가 | self-improving AI agent를 업무 자동화 운영 구조로 읽는다 |
-| 00-2 | Hermes Agent 공식 GitHub와 공식 문서는 어디인가 | 공식 저장소와 공식 docs를 확인하고, 이 책의 해설 범위를 구분한다 |
-| 00-3 | Hermes Agent 설치와 세팅은 어떻게 시작하나 | one-line installer, provider 설정, 기본 chat 검증 순서로 본다 |
-| 00-4 | Hermes Agent와 OpenClaw는 무엇이 다른가 | 이름 변경이 아니라 memory/profile/skill/cron/gateway 중심의 운영 전환이다 |
-| 00-5 | Hermes Agent와 Claude Code/Codex는 어떻게 다른가 | 코딩 에이전트와 업무 자동화 운영 환경의 차이를 구분한다 |
-| 00-6 | Hermes Agent Docker/Gateway는 언제 필요한가 | 컨테이너 실행과 메시징 gateway를 항상 켜진 운영 구조로 이해한다 |
+| [00-1](https://wikidocs.net/346055) | 에르메스 에이전트(Hermes Agent)란 무엇인가 | self-improving AI agent를 업무 자동화 운영 구조로 읽는다 |
+| [00-2](https://wikidocs.net/346136) | Hermes Agent 공식 GitHub와 공식 문서는 어디인가 | 공식 저장소와 공식 docs를 확인하고, 이 책의 해설 범위를 구분한다 |
+| [00-3](https://wikidocs.net/346137) | Hermes Agent 설치와 세팅은 어떻게 시작하나 | one-line installer, provider 설정, 기본 chat 검증 순서로 본다 |
+| [00-4](https://wikidocs.net/345889) | Hermes Agent와 OpenClaw는 무엇이 다른가 | 이름 변경이 아니라 memory/profile/skill/cron/gateway 중심의 운영 전환이다 |
+| [00-5](https://wikidocs.net/346138) | Hermes Agent와 Claude Code/Codex는 어떻게 다른가 | 코딩 에이전트와 업무 자동화 운영 환경의 차이를 구분한다 |
+| [00-6](https://wikidocs.net/346139) | Hermes Agent Docker/Gateway는 언제 필요한가 | 컨테이너 실행과 메시징 gateway를 항상 켜진 운영 구조로 이해한다 |
 
 ## 공식 문서를 먼저 봐야 하는 이유
 
@@ -31,4 +31,4 @@ Hermes Agent는 Nous Research가 공개한 오픈소스 AI 에이전트다. 공�
 
 ## 다음 장으로 이어지는 방식
 
-0장에서 기본 용어와 비교 기준을 잡았다면, 1장에서는 왜 AI를 챗봇 하나가 아니라 AI 개인비서와 역할형 에이전트로 나눠 봐야 하는지 다룬다. 기초 장은 “무엇인가/어디서 시작하나”에 답하고, 1장부터는 “어떻게 업무 구조로 굴릴 것인가”에 답한다.
+0장에서 기본 용어와 비교 기준을 잡았다면, [1장](https://wikidocs.net/345888)에서는 왜 AI를 챗봇 하나가 아니라 AI 개인비서와 역할형 에이전트로 나눠 봐야 하는지 다룬다. 기초 장은 “무엇인가/어디서 시작하나”에 답하고, 1장부터는 “어떻게 업무 구조로 굴릴 것인가”에 답한다.

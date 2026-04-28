@@ -43,4 +43,4 @@ Hermes Agent 공식 GitHub는 `NousResearch/hermes-agent`이고, 공식 문서�
 
 ## 다음 글
 
-다음에는 Hermes Agent 설치와 세팅을 어떻게 시작하면 좋은지 본다. 공식 설치 명령은 짧지만, 실제 운영에서는 설치 후 provider, gateway, 보안, 검증 순서가 더 중요하다.
+다음에는 [Hermes Agent 설치와 세팅](https://wikidocs.net/346137)을 어떻게 시작하면 좋은지 본다. 공식 설치 명령은 짧지만, 실제 운영에서는 설치 후 provider, gateway, 보안, 검증 순서가 더 중요하다.

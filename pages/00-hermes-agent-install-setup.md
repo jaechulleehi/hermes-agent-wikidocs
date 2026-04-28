@@ -59,4 +59,4 @@ provider에 따라 API key, OAuth, custom endpoint, model name, context length �
 
 ## 다음 글
 
-설치와 기본 세팅을 이해했다면, 다음에는 OpenClaw와 Hermes Agent가 무엇이 다른지 본다. 이미 OpenClaw나 유사한 에이전트 환경을 써봤다면 전환 기준을 먼저 잡아야 한다.
+설치와 기본 세팅을 이해했다면, 다음에는 [OpenClaw와 Hermes Agent가 무엇이 다른지](https://wikidocs.net/345889) 본다. 이미 OpenClaw나 유사한 에이전트 환경을 써봤다면 전환 기준을 먼저 잡아야 한다.

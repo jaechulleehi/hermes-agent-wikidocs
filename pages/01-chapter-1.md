@@ -2,7 +2,7 @@
 
 ![01. 왜 AI 챗봇이 아니라 AI 팀인가](../assets/images/chapter-heroes/ch01-why-ai-team-codex-only.png)
 
-0장에서 에르메스 에이전트(Hermes Agent)의 공식 GitHub, 설치, OpenClaw 비교, Claude Code/Codex 비교를 확인했다면 이제 질문은 바뀐다. 1장의 답은 분명하다. Hermes Agent는 좋은 답변을 한 번 받는 도구가 아니라, AI 개인비서와 역할형 에이전트로 실제 업무 흐름을 굴리기 위한 운영 구조다.
+[0장 기초 가이드](https://wikidocs.net/346135)에서 에르메스 에이전트(Hermes Agent)의 공식 GitHub, 설치, OpenClaw 비교, Claude Code/Codex 비교를 확인했다면 이제 질문은 바뀐다. 1장의 답은 분명하다. Hermes Agent는 좋은 답변을 한 번 받는 도구가 아니라, AI 개인비서와 역할형 에이전트로 실제 업무 흐름을 굴리기 위한 운영 구조다.
 
 반복 업무가 늘어나면 질문 하나를 잘 던지는 것만으로는 부족해진다. 조사해야 할 것이 있고, 정리해야 할 문서가 있고, 실행해야 할 작업이 있고, 나중에 다시 꺼내볼 기록도 필요하다. 그래서 이 책은 [AI를 챗봇 하나로 보지 않고](https://wikidocs.net/345923), **AI 개인비서와 역할형 에이전트가 함께 움직이는 업무 자동화 흐름**으로 본다.
 

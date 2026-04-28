@@ -63,4 +63,4 @@ cron은 정해진 시간에 fresh session으로 작업을 시작하는 방식이
 
 ## 다음 글
 
-Docker/Gateway까지 이해했다면 1장으로 넘어가 AI를 왜 챗봇 하나가 아니라 AI 팀 구조로 봐야 하는지 읽으면 된다.
+Docker/Gateway까지 이해했다면 [1장](https://wikidocs.net/345888)으로 넘어가 AI를 왜 챗봇 하나가 아니라 AI 팀 구조로 봐야 하는지 읽으면 된다.

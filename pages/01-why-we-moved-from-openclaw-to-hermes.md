@@ -264,6 +264,4 @@ OpenClaw에서 Hermes로 넘어온 건 더 화려한 이름을 찾은 일이 아
 
 ## 다음 글
 
-OpenClaw에서 Hermes로 넘어오며 가장 먼저 선명해진 것은 메인 창구의 필요성이었다. 다음 장에서는 왜 AI 개인비서에는 하나의 메인 창구가 필요한지 다룬다.
-
-[다음 장: AI 개인비서 메인 창구 만들기](https://wikidocs.net/345891)
+OpenClaw와 Hermes의 차이를 잡았다면, 다음에는 [Hermes Agent와 Claude Code/Codex의 차이](https://wikidocs.net/346138)를 본다. 코딩 에이전트와 업무 자동화 운영 환경을 구분해야 도구 선택이 쉬워진다.
