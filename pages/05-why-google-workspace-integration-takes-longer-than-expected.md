@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent)에서 Google Workspace나 MCP 연동은 기술적으로 “붙이는 일”처럼 보인다. 하지만 실제 운영에서는 인증보다 계정, 권한, 범위, 위험 작업 기준이 더 오래 걸린다. 연결은 시작이고, 운영 기준은 그 다음이다.
 
-![Google Workspace와 MCP 연동에서 계정 권한 범위를 나누는 구조](../assets/how-image-agent-creates-wikidocs-visuals/ch5-1-google-workspace-mcp-ops-codex.png)
+![Google Workspace와 MCP 연동에서 계정 권한 범위를 나누는 구조](../assets/how-image-agent-creates-wikidocs-visuals/ch5-1-google-workspace-mcp-ops-codex.webp)
 
 Hermes Agent에서 MCP는 외부 도구를 대화 흐름에 붙이는 수단이다. Gmail, Calendar, Drive, Docs, Sheets 같은 도구가 연결되면 할 수 있는 일이 많아지지만, 그만큼 잘못 실행했을 때의 영향도 커진다.
 
