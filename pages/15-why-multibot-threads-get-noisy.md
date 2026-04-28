@@ -2,7 +2,7 @@
 
 멀티봇 스레드는 [역할형 에이전트](https://wikidocs.net/345925)를 잘못 부르면 금방 시끄러워진다. 하비, 방울이, 뽀동이, 봉구, 비벙이, 하망이가 모두 쓸모 있는 역할을 갖고 있어도 한 스레드에서 동시에 말하면 사용자는 도움보다 소음을 먼저 느낀다.
 
-![멀티봇 스레드에서 하비 명시 호출 위임 침묵 규칙을 정리하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch7-2-multibot-thread-noise-codex.png)
+![멀티봇 스레드에서 하비 명시 호출 위임 침묵 규칙을 정리하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch8-2-multibot-thread-noise-codex.webp)
 
 [Hermes Agent](https://wikidocs.net/346055) 운영에서 중요한 것은 “누가 더 똑똑한가”가 아니라 “누가 지금 말해야 하는가”다. 메인 창구는 하비로 두고, 보조 에이전트는 명시 호출을 받거나 하비가 위임했을 때만 나오는 구조가 가장 안정적이었다.
 
