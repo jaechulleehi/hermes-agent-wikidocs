@@ -2,7 +2,7 @@
 
 ## always-on gateway는 왜 자주 헷갈릴까
 
-always-on gateway는 “켜져 있다”는 말 때문에 단순해 보인다. 하지만 운영에서는 gateway process, messaging platform 연결, cron scheduler, delivery target, 로그가 함께 맞아야 한다. 하나라도 어긋나면 status는 괜찮아 보여도 사용자는 결과를 받지 못할 수 있다.
+에르메스 에이전트(Hermes Agent)의 always-on gateway는 “켜져 있다”는 말 때문에 단순해 보인다. 하지만 운영에서는 gateway process, messaging platform 연결, cron scheduler, delivery target, 로그가 함께 맞아야 한다. 하나라도 어긋나면 status는 괜찮아 보여도 사용자는 결과를 받지 못할 수 있다.
 
 Hermes Agent에서 gateway는 대화형 업무와 예약 실행을 연결하는 중요한 축이다. 그래서 gateway 문제는 5장 도구 자동화뿐 아니라 [체크리스트/복구 플레이북](https://wikidocs.net/345921)으로도 이어진다.
 

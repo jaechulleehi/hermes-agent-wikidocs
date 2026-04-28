@@ -4,7 +4,7 @@
   * [01-1. AI 챗봇과 AI 개인비서는 어떻게 다를까](pages/00-ai-chatbot-vs-ai-personal-assistant.md)
   * [01-2. 나만의 AI 팀은 어떻게 구성할까](pages/00-what-is-my-ai-team.md)
   * [01-3. 하비/방울이/뽀동이는 어떻게 읽어야 할까](pages/00-agent-team-reading-guide.md)
-  * [01-4. Hermes Agent 주요 개념과 기능은 어떻게 연결될까](pages/00-hermes-agent-core-concepts.md)
+  * [01-4. 에르메스 에이전트(Hermes Agent)란 무엇인가](pages/00-hermes-agent-core-concepts.md)
   * [01-5. Hermes Agent는 왜 운영 시스템인가](pages/09-hermes-is-an-operating-system-not-just-a-chatbot.md)
   * [01-6. OpenClaw에서 Hermes로 왜 넘어왔나](pages/01-why-we-moved-from-openclaw-to-hermes.md)
 * [02. AI 개인비서 메인 창구 만들기](pages/02-chapter-2.md)

@@ -2,7 +2,7 @@
 
 ![과거 유산을 보관하고 현재 기준 문서를 분리하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch4-3-legacy-vs-current-standard-codex.png)
 
-AI 운영 시스템을 오래 쓰면 과거 문서가 자산이면서 동시에 위험이 된다. OpenClaw에서 Hermes로 넘어올 때도 그랬다. 예전 정체성 문서, memory, cron, gateway, agent binding은 운영 경험을 담고 있었지만, Hermes의 현재 구조와 1:1로 맞지는 않았다.
+에르메스 에이전트(Hermes Agent) 같은 AI 운영 시스템을 오래 쓰면 과거 문서가 자산이면서 동시에 위험이 된다. OpenClaw에서 Hermes로 넘어올 때도 그랬다. 예전 정체성 문서, memory, cron, gateway, agent binding은 운영 경험을 담고 있었지만, Hermes의 현재 구조와 1:1로 맞지는 않았다.
 
 그래서 과거 유산은 버릴 것과 살릴 것을 나눠야 한다. 기준은 “예전에 썼다”가 아니라 “지금도 source of truth인가”다. 현재 기준은 [memory/profile/session](https://wikidocs.net/345899), shared-memory, AGENTS, skill, GitHub 원본처럼 Hermes가 실제로 읽고 운영하는 층에 있어야 한다.
 

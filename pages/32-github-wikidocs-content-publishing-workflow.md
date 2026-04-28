@@ -1,6 +1,6 @@
 ## GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름
 
-이 책에서 GitHub는 원본이고 [WikiDocs](https://wikidocs.net/345908)는 공개 배포 채널이다. 뽀동이가 원고를 고치고, 검증을 통과시키고, GitHub에 커밋/푸시하면 WikiDocs가 독자에게 보이는 형태로 배포한다.
+에르메스 에이전트(Hermes Agent) 업무 자동화 책에서 GitHub는 원본이고 [WikiDocs](https://wikidocs.net/345908)는 공개 배포 채널이다. 뽀동이가 원고를 고치고, 검증을 통과시키고, GitHub에 커밋/푸시하면 WikiDocs가 독자에게 보이는 형태로 배포한다.
 
 이 구조를 쓰는 이유는 단순하다. 공개 글은 한 번 쓰고 끝나지 않는다. 제목, TOC, 이미지, SEO/GEO, 전자책 규칙, 내부 링크가 계속 바뀐다. 이력과 기준이 남아야 안전하게 고칠 수 있다.
 

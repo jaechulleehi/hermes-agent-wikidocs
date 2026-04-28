@@ -2,7 +2,7 @@
 
 ![사람 화면과 도구 경로 권한 동기화 차이](../assets/how-image-agent-creates-wikidocs-visuals/ch4-2-file-tool-path-boundary-codex.png)
 
-사람 눈에는 파일이 있는데 AI 도구는 못 읽는 일이 있다. Finder나 Obsidian에서는 분명 보이는데, 에이전트가 접근하면 “없다”고 말한다. 이때 바로 도구 문제로 보면 해결이 늦어진다.
+에르메스 에이전트(Hermes Agent)를 실제 업무에 붙이면 사람 눈에는 파일이 있는데 AI 도구는 못 읽는 일이 있다. Finder나 Obsidian에서는 분명 보이는데, 에이전트가 접근하면 “없다”고 말한다. 이때 바로 도구 문제로 보면 해결이 늦어진다.
 
 파일이 없는 것과 파일을 못 읽는 것은 다르다. 경로, 권한, 동기화, 실행 profile, 현재 작업 디렉터리가 모두 다를 수 있다. [memory/profile/session](https://wikidocs.net/345899) 경계가 흔들리면 도구 실행 환경도 함께 헷갈린다.
 
