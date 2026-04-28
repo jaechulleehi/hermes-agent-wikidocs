@@ -37,6 +37,7 @@
   * [04-7. OpenViking과 RAG는 기억을 어떻게 강화할까](pages/04-07-openviking-rag-memory-layer.md)
   * [04-8. 긴 대화와 context compaction은 어떻게 관리할까](pages/04-08-context-compaction-handoff.md)
   * [04-9. 하비는 기억 오케스트레이터로 무엇을 판단할까](pages/04-09-harvey-memory-orchestrator.md)
+  * [04-10. SOUL.md로 AI 에이전트 성격은 어떻게 정의할까](pages/04-10-soul-md-agent-personality.md)
 * [05. 외부 도구/MCP/채널 연동과 AI 워크플로우 자동화](pages/05-chapter-5.md)
   * [05-01. Google Workspace와 MCP 연동은 왜 오래 걸릴까](pages/05-why-google-workspace-integration-takes-longer-than-expected.md)
   * [05-02. always-on gateway는 왜 자주 헷갈릴까](pages/12-always-on-gateway-is-more-confusing-than-it-looks.md)
