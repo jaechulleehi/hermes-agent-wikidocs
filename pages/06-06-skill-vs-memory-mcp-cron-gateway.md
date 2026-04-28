@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent)를 운영하다 보면 Skill, memory, MCP, cron, gateway가 모두 “자동화를 돕는 기능”처럼 보인다. 하지만 역할은 다르다. 이 차이를 모르면 모든 것을 memory에 넣거나, 모든 반복 작업을 cron으로 만들거나, 도구 연결을 Skill이라고 착각하기 쉽다.
 
-Skill은 반복 업무의 실행 절차와 검증 기준이다. memory는 장기 맥락과 선호를 기억한다. MCP는 외부 도구를 대화 흐름에 연결한다. cron은 정해진 시간에 작업을 실행한다. gateway는 Slack, Telegram, Discord 같은 채널에서 Hermes Agent를 부르는 입구다. 도구 연결 기준은 [Hermes Agent MCP 연결](https://wikidocs.net/346231)과 함께 읽으면 차이가 더 선명하다.
+Skill은 반복 업무의 실행 절차와 검증 기준이다. [memory](https://wikidocs.net/346126)는 장기 맥락과 선호를 기억한다. MCP는 외부 도구를 대화 흐름에 연결한다. [cron](https://wikidocs.net/345926)은 정해진 시간에 작업을 실행한다. gateway는 Slack, Telegram, Discord 같은 채널에서 Hermes Agent를 부르는 입구다. 도구 연결 기준은 [Hermes Agent MCP 연결](https://wikidocs.net/346231)과 함께 읽으면 차이가 더 선명하다.
 
 ## 한눈에 보는 차이
 
@@ -17,11 +17,17 @@ Skill은 반복 업무의 실행 절차와 검증 기준이다. memory는 장기
 
 이 표에서 중요한 것은 우열이 아니다. 한 작업 안에서도 여러 기능이 함께 쓰인다. 다만 어떤 기능이 어떤 책임을 갖는지 나눠야 운영이 안정된다.
 
-## 실제 운영 장면: 같은 WikiDocs 작업을 기능별로 나누기
+## 사례: 같은 WikiDocs 요청을 기능별로 나누기
 
-사용자가 “WikiDocs SEO를 다시 리뷰해줘”라고 요청하면 gateway는 Slack 요청을 Hermes Agent에게 전달한다. memory는 사용자가 짧은 보고와 자연스러운 한국어를 선호한다는 안정 기준을 제공한다. Skill은 WikiDocs 전자책 호환, SEO/GEO, 내부 링크, 검증과 원본 반영 흐름을 제공한다.
+사용자가 “WikiDocs SEO를 다시 리뷰해줘”라고 요청하면 gateway는 Slack 요청을 Hermes Agent에게 전달한다. memory는 사용자가 짧은 보고와 자연스러운 한국어를 선호한다는 안정 기준을 제공한다. Skill은 WikiDocs 전자책 호환, SEO/GEO, 내부 링크, 검증/반영/공개 확인 흐름을 제공한다.
 
 필요하면 MCP나 CLI가 GitHub, WikiDocs, 파일 시스템을 연결한다. cron은 같은 일을 매일 자동으로 해야 할 때만 등장한다. 과거에 비슷한 작업을 어떻게 했는지는 session_search나 GitHub log에서 회수한다. 이처럼 하나의 요청도 기능별 책임이 나뉘어야 한다.
+
+## 사례: WikiDocs MCP 연결은 Skill이 아니다
+
+WikiDocs MCP를 연결하면 책, 페이지, 블로그를 만들고 수정하는 도구가 Hermes Agent 안으로 들어온다. 하지만 MCP 연결 자체가 작업 품질을 보장하지는 않는다. 어떤 책이 source of truth인지, GitHub-linked book에서는 어디를 먼저 고쳐야 하는지, 공개 페이지를 어떻게 확인할지는 별도의 운영 기준이 필요하다.
+
+이 운영 기준이 Skill이다. MCP는 문을 열어주고, Skill은 그 문으로 들어가 무엇을 어떤 순서로 할지 정한다.
 
 ## 잘못 나누면 생기는 문제
 
