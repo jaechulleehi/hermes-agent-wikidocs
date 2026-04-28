@@ -62,6 +62,22 @@ routing은 최적화 도구다. 기본 대화와 도구 호출이 안정되기 �
 
 그래서 provider/model/config 페이지는 모델 추천표가 아니라 “비용과 권한이 어디서 발생하는지”를 확인하는 장이어야 한다. API 비용이 터지거나 OAuth 정책이 바뀌어도 원인을 좁히려면 provider, model, auth, gateway process를 분리해서 기록해야 한다.
 
+## 비용은 모델값만 보면 안 된다
+
+현재 우리 운영은 OAuth/구독 기반 연결을 많이 활용한다. 이 방식은 개인이 이미 쓰는 구독을 활용할 수 있고, 시작이 빠르다는 장점이 있다. 하지만 상시 gateway나 cron에 붙이면 세션 만료, third-party 사용 제한, provider 정책 변경, rate limit을 따로 봐야 한다.
+
+다른 선택지도 있다. API key 방식은 서버, gateway, cron에서 안정적으로 쓰기 쉽지만 사용량 과금과 key 노출 위험을 관리해야 한다. OpenRouter 같은 aggregator나 custom endpoint/proxy는 여러 모델을 한 인터페이스로 묶기 좋지만, 어떤 요청이 어느 provider로 갔는지 추적 가능해야 한다. 로컬 모델은 토큰 비용은 줄일 수 있어도 GPU/서버/속도/품질 비용이 생긴다.
+
+| 비용 항목 | 어디서 생기나 | 운영 기준 |
+|---|---|---|
+| 구독/OAuth | 개인 계정 기반 provider 연결 | 세션 만료, 정책 변경, third-party 허용 여부 확인 |
+| API 사용량 | provider API key, aggregator, 검색 API | 월 한도, 알림, key scope, 과금 owner를 정한다 |
+| 검색/크롤링 비용 | Brave/Tavily/Exa/Firecrawl/Parallel 등 | 무료 검색으로 충분한지, 대량 호출이 필요한지 나눈다 |
+| 인프라 비용 | Mac mini, VPS, Docker, GPU, storage | 상시 gateway/cron 운영 시간과 로그 보관 기준을 둔다 |
+| 복구 비용 | 장애 대응, token rotation, 설정 재검증 | 비용보다 먼저 원인 분리와 rollback 경로를 남긴다 |
+
+입문자는 “어떤 모델이 제일 좋은가”보다 “어떤 비용이 어디서 새는가”를 먼저 봐야 한다. 개인 실험은 OAuth/구독으로 빠르게 시작할 수 있지만, 팀 운영이나 상시 자동화는 API key, quota, fallback, billing alert를 분리해서 설계하는 편이 안전하다.
+
 ## terminal backend 설정도 같이 본다
 
 Hermes Agent는 terminal backend를 local, Docker, SSH 등으로 구성할 수 있다. 공식 configuration docs는 Docker backend와 SSH backend 설정, 환경변수 전달, sandbox 격리 기준을 함께 설명한다.

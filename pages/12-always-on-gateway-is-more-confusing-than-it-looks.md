@@ -42,6 +42,21 @@ gateway는 Hermes Agent를 메시징 플랫폼과 예약 실행 흐름에 붙여
 
 특히 delivery는 별도 검증 대상이다. gateway가 켜져 있어도 `origin`, home channel, explicit target이 어긋나면 사용자는 결과를 받지 못한다. 그래서 cron troubleshooting은 “실행됐는가”와 “도착했는가”를 반드시 나눠 본다.
 
+## 실제로 자주 나온 설치/세팅 실패 사례
+
+초보자 설치 실패는 install script 자체보다 “설치 이후 연결 단계”에서 더 자주 나온다. 우리 운영 기록에서도 gateway, profile, config, Slack 설정이 섞이면서 원인 분리가 어려웠다.
+
+| 증상 | 실제로 헷갈렸던 지점 | 먼저 볼 것 |
+|---|---|---|
+| Slack에서 home channel 안내가 반복된다 | `/sethome` 안내와 Slack slash command UX가 다를 수 있다 | `SLACK_HOME_CHANNEL`, `/hermes sethome`, config 반영 여부 |
+| config를 고쳤는데 Slack 응답이 안 바뀐다 | 파일 수정과 gateway 재시작은 별도다 | 올바른 profile의 gateway restart, 최근 로그 |
+| `gateway status`는 이상한데 process는 떠 있다 | service manager 기준과 수동 실행 process 기준이 다를 수 있다 | PID, launchd/service 상태, 실행 인자, profile |
+| CLI는 되는데 Slack은 안 된다 | model/provider가 아니라 messaging/gateway 문제일 수 있다 | bot token, app token, socket mode, 채널 권한, delivery target |
+| 같은 하비/뽀동이인데 성격이 다르다 | 다른 profile/session/memory를 보고 있을 수 있다 | profile 이름, AGENTS.md, memory, 실행 HOME |
+| cron 결과가 안 온다 | 실행 실패와 전달 실패가 섞인다 | recent output, deliver target, home channel, thread target |
+
+이 표의 핵심은 “재설치부터 하지 않는다”는 것이다. 먼저 CLI 기본 chat, provider/model, config/env, gateway process, platform permission, delivery target을 나눠 보면 문제 범위가 빠르게 좁혀진다.
+
 ## 봇이 갑자기 답하지 않을 때의 분리 진단
 
 실제 운영 질문에서 가장 흔한 형태는 “어느 순간 봇이 아무 답도 안 한다”였다. 이때 바로 모델 문제로 보면 원인을 놓치기 쉽다.

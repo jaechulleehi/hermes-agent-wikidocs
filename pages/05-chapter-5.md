@@ -15,6 +15,7 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 | Google Workspace/Notion/WikiDocs | API 인증만 되면 된다 | source of truth, 계정/권한/삭제 위험/공유 범위를 분리한다 |
 | gateway | status가 OK면 끝이다 | 메시징 delivery, cron 실행, 로그를 함께 본다 |
 | Daily Briefing Bot | 뉴스 요약 예제다 | fresh session 기반 자동화 패턴이다 |
+| 웹 검색/리서치 | 검색 API만 붙이면 조사가 된다 | 무료/유료 검색원, 출처 품질, 재현성, 후속 검증을 나눈다 |
 | 내장 도구/toolset | 도구가 많을수록 좋다 | 역할별로 필요한 도구 범위와 위험도를 제한한다 |
 | terminal backend | 명령만 맞으면 된다 | local/docker/ssh/modal 같은 실행 위치와 격리 수준을 고른다 |
 | 실행 결과 검증 | exit code 0이면 끝이다 | diff, 공개 반영, delivery, rollback 경로까지 확인한다 |
@@ -32,6 +33,7 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 | cron | 정해진 시간이나 주기에 fresh session으로 작업을 실행하는 예약 자동화 | prompt가 혼자 실행될 만큼 충분하고, 결과가 어디로 전달되는가 |
 | gateway | 메시징 플랫폼, cron 실행, delivery를 이어주는 always-on 운영 축 | process가 살아 있는 것과 실제 메시지가 도착한 것을 구분했는가 |
 | Daily Briefing Bot | cron, search, summarization, messaging delivery가 묶인 예제 | 뉴스 요약을 넘어 정기 모니터링/신호 분류/후속 실행으로 확장할 수 있는가 |
+| 웹 검색/리서치 | web search, browser, 검색 백엔드로 새 정보를 찾는 기능 | 무료 검색으로 충분한지, 유료 API가 필요한지, 어떤 출처를 믿을지 정했는가 |
 | 내장 도구/toolset | web, file, terminal, browser, memory, messaging, MCP 같은 도구 묶음 | 역할별로 필요한 toolset만 열었고 위험 도구는 제한했는가 |
 | terminal backend | local, docker, ssh, sandbox 같은 실행 위치와 격리 방식 | 명령이 어느 환경에서 실행되고 credential이 어디까지 노출되는가 |
 | 도구 실행 검증 | 도구 호출 결과를 다음 판단에 쓰기 전 확인하는 절차 | exit code, diff, 공개 반영, 메시지 delivery, rollback 가능성을 확인했는가 |
@@ -42,6 +44,22 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. GitHub가 source of truth였고, WikiDocs는 공개 배포 채널이었다. 그래서 원고를 고친 뒤에는 “파일이 바뀌었는가”만 보지 않고, 공개 화면에서 본문 링크와 이미지가 제대로 작동하는지까지 확인해야 했다. 실제로 본문 링크가 `.md`로 남아 WikiDocs에서 raw 파일 경로처럼 보일 위험이 생겼고, WikiDocs page ID를 확인해 공개 URL로 바꾸는 작업이 필요했다.
 
 또 다른 장면은 콘텐츠 자동화다. 방울이의 크론 조사는 매일 신호를 찾고, 좋은 신호만 shared-memory와 Obsidian으로 이어진다. 사용자가 “넘겨”라고 판단하면 뽀동이가 본문 구조를 만들고, 하비가 최종 통합하며, 필요하면 하망이가 이미지를 만든다. 여기서 cron은 신호를 찾는 장치이고, shared-memory는 handoff 위치이며, WikiDocs는 공유 자산이 된다. 이것은 단일 기능이 아니라 [역할형 에이전트](https://wikidocs.net/345925)와 도구가 연결된 운영 흐름이다.
+
+## 웹 검색/리서치 도구는 어떻게 고를까
+
+웹 검색은 MCP/API/CLI와 비슷해 보이지만 실제로는 성격이 조금 다르다. 검색 도구는 “정답을 실행하는 도구”가 아니라 후보 출처를 가져오는 입력 장치다. 그래서 검색 품질은 API 이름보다 검색원, 최신성, 중복 제거, 원문 접근, 인용 가능성, 후속 검증 기준으로 봐야 한다.
+
+현재 우리 운영에서는 웹 리서치를 시작할 때 무료 검색 계열을 먼저 쓴다. 확인된 기준으로는 DuckDuckGo 기반 DDGS처럼 API key 없이 쓸 수 있는 검색 백엔드가 fallback 역할을 한다. 필요하면 브라우저로 원문을 직접 열어 확인하고, SEO/GEO 키워드 확장은 Google Suggest 같은 공개 suggest endpoint를 별도로 본다. 반대로 Brave Search API, Tavily, Exa, Firecrawl, Parallel, Perplexity 같은 유료/상용 도구는 대량 검색, extract/crawl, 더 안정적인 API 응답, 검색 결과 품질 관리가 필요할 때 후보가 된다. SearXNG는 직접 호스팅하거나 공개 인스턴스를 쓰는 무료 메타검색 옵션으로 볼 수 있지만, 공개 인스턴스는 안정성과 차단 위험을 따로 봐야 한다.
+
+| 방식 | 비용/인증 | 강한 경우 | 조심할 점 |
+|---|---|---|---|
+| DuckDuckGo/DDGS | 무료, 보통 API key 없음 | 빠른 초기 조사, 키워드 후보, 가벼운 사실 확인 | 결과 재현성과 대량 호출 안정성이 약할 수 있다 |
+| SearXNG | 자체 호스팅이면 무료에 가깝다 | 여러 검색원을 메타검색으로 묶고 싶을 때 | 공개 인스턴스 안정성, 차단, 운영 부담 |
+| Brave/Tavily/Exa 등 검색 API | 유료 또는 API key 필요 | 대량 조사, API 기반 자동화, 결과 품질 관리 | 비용, quota, vendor lock-in, token 관리 |
+| Perplexity/AI 검색 | 유료/구독/API 가능 | 질문형 리서치, 요약과 출처를 함께 볼 때 | 답변 생성과 원문 근거를 분리 검증해야 한다 |
+| Browser 직접 확인 | 별도 API 없이 화면 확인 | 로그인 페이지, 동적 페이지, 원문 검수 | 느리고 깨지기 쉬워 자동화의 마지막 단계로 둔다 |
+
+실제 운영 기준은 단순하다. “오늘 빠르게 신호를 찾는가”라면 무료 검색과 브라우저 확인으로 충분한 경우가 많다. “매일 같은 주제를 안정적으로 모니터링하고, 결과를 Slack이나 WikiDocs로 넘기는가”라면 유료 API나 자체 SearXNG 같은 운영형 백엔드를 검토한다. “공개 글에 근거로 넣을 것인가”라면 검색 결과 요약이 아니라 원문 URL과 공식 출처 확인이 우선이다.
 
 ## 이 장에서 얻을 기준
 
