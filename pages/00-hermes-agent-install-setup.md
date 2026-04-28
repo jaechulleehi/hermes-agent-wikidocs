@@ -80,7 +80,7 @@ provider에 따라 API key, OAuth, custom endpoint, model name, context length �
 
 ### gateway부터 켜도 되나요?
 
-가능하지만 추천 순서는 아니다. CLI 기본 chat이 안정된 뒤 gateway를 붙여야 메시징 문제인지 모델/provider 문제인지 구분할 수 있다. 특히 맥미니 같은 전용 머신에 상시 운영할 때는 gateway만이 아니라 launchd/LaunchAgent, 절전, 로그 확인 순서까지 함께 잡아야 한다.
+가능하지만 추천 순서는 아니다. CLI 기본 chat이 안정된 뒤 gateway를 붙여야 메시징 문제인지 모델/provider 문제인지 구분할 수 있다. 특히 [맥미니 같은 전용 머신에 상시 운영](https://wikidocs.net/346395)할 때는 gateway만이 아니라 launchd/LaunchAgent, 절전, 로그 확인 순서까지 함께 잡아야 한다.
 
 ### Docker로 바로 시작해도 되나요?
 

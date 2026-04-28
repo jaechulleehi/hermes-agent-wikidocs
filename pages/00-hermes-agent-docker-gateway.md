@@ -45,7 +45,7 @@ Gateway는 Hermes Agent가 메시징 플랫폼에서 요청을 받을 수 있게
 | 팀 자동화 | gateway + cron + 로그/복구 기준 | delivery target, 실패 알림, 재시작 방법을 문서화한다 |
 | 위험한 실행 작업 | Docker/remote backend | host 파일과 credential을 보호한다 |
 
-처음부터 상시 운영 구조로 가지 않아도 된다. 다만 상시 운영으로 넘어가는 순간부터는 설치 가이드가 아니라 운영 체크리스트가 필요하다. Mac mini/맥미니 같은 전용 머신을 쓰는 경우에도 이 기준은 같다. Docker를 쓰지 않더라도 gateway 자동 시작, launchd/LaunchAgent, 절전 정책, 로그 확인 순서는 별도로 잡아야 한다.
+처음부터 상시 운영 구조로 가지 않아도 된다. 다만 상시 운영으로 넘어가는 순간부터는 설치 가이드가 아니라 운영 체크리스트가 필요하다. [Mac mini/맥미니 같은 전용 머신을 쓰는 경우](https://wikidocs.net/346395)에도 이 기준은 같다. Docker를 쓰지 않더라도 gateway 자동 시작, launchd/LaunchAgent, 절전 정책, 로그 확인 순서는 별도로 잡아야 한다.
 
 ## Docker/Gateway를 붙이기 전 체크리스트
 

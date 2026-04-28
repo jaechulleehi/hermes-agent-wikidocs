@@ -68,4 +68,4 @@ cron/skill/MCP 같은 운영 기능 확장
 
 ## 다음 글
 
-먼저 [에르메스 에이전트(Hermes Agent)란 무엇인지](https://wikidocs.net/346055) 확인한다. 그다음 공식 GitHub/docs, 설치, [CLI 첫 대화](https://wikidocs.net/346251), [provider/model/config 설정](https://wikidocs.net/346252), 비교, Docker/Gateway, 채널, [업데이트 검증](https://wikidocs.net/346253), 맥미니 상시 운영 순서로 보면 0장이 하나의 체크리스트처럼 작동한다.
+먼저 [에르메스 에이전트(Hermes Agent)란 무엇인지](https://wikidocs.net/346055) 확인한다. 그다음 공식 GitHub/docs, 설치, [CLI 첫 대화](https://wikidocs.net/346251), [provider/model/config 설정](https://wikidocs.net/346252), 비교, Docker/Gateway, 채널, [업데이트 검증](https://wikidocs.net/346253), [맥미니 상시 운영](https://wikidocs.net/346395) 순서로 보면 0장이 하나의 체크리스트처럼 작동한다.
