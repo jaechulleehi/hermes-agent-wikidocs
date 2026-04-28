@@ -1,8 +1,8 @@
-## Hermes Agent와 OpenClaw는 무엇이 다를까
+## 에르메스 에이전트(Hermes Agent)와 OpenClaw는 무엇이 다를까
+
+에르메스 에이전트(Hermes Agent)와 OpenClaw의 차이는 이름이나 UI의 차이가 아니다. `Hermes Agent vs OpenClaw`, `Hermes Agent OpenClaw migration`, `OpenClaw Hermes 차이`를 찾는 독자에게 핵심은 “어느 쪽이 더 멋진가”가 아니라 **에이전트를 실제로 운영 가능한 시스템으로 다시 세울 수 있는가**다. AI 개인비서가 요청을 받는 메인 창구, 조사형/정리형/실행형으로 나뉘는 [역할형 에이전트](https://wikidocs.net/345925), 프로필 경계, 기억 레이어, 도구 연결, 기록 자산화까지 한 번에 보려면 OpenClaw 감각만으로는 부족했고, 에르메스 에이전트([Hermes Agent](https://wikidocs.net/346055))라는 더 선명한 업무 자동화 기준점이 필요했다.
 
 ![OpenClaw에서 Hermes로 구조 전환한 이유](../assets/how-image-agent-creates-wikidocs-visuals/ch1-5-openclaw-to-hermes-codex.png)
-
-Hermes Agent와 OpenClaw의 차이는 이름이나 UI의 차이가 아니다. OpenClaw에서 Hermes로 넘어온 건 더 멋진 에이전트 페르소나를 만드는 일이 아니라, **에이전트를 실제로 운영 가능한 시스템으로 다시 세우는 것**이었다. AI 개인비서가 요청을 받는 메인 창구, 조사형/정리형/실행형으로 나뉘는 [역할형 에이전트](https://wikidocs.net/345925), 프로필 경계, 기억 레이어, 도구 연결, 기록 자산화까지 한 번에 보려면 OpenClaw 감각만으로는 부족했고, 에르메스 에이전트([Hermes Agent](https://wikidocs.net/346055))라는 더 선명한 업무 자동화 기준점이 필요했다.
 
 이 글은 전환의 세부 설정을 설명하기 위한 글이 아니다. 실제 운영에서 어떤 혼선이 있었고, 왜 현재 기준점을 다시 세워야 했는지 설명하기 위한 글이다. 독자에게 필요한 것은 내부값이 아니라 “전환할 때 무엇을 분리해서 봐야 하는가”다.
 

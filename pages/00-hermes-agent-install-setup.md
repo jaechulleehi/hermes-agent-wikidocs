@@ -1,6 +1,6 @@
-## Hermes Agent 설치와 세팅은 어떻게 시작할까
+## 에르메스 에이전트(Hermes Agent) 설치와 세팅은 어떻게 시작할까
 
-Hermes Agent 설치는 공식 문서 기준으로 매우 짧다. Linux, macOS, WSL2, Android Termux에서는 one-line installer로 시작할 수 있다. 하지만 에르메스 에이전트(Hermes Agent)를 실제 업무 자동화에 쓰려면 설치 명령보다 설치 후 검증 순서가 더 중요하다.
+에르메스 에이전트(Hermes Agent) 설치는 공식 문서 기준으로 매우 짧다. `Hermes Agent 설치`, `에르메스 에이전트 설치`, `Hermes Agent 설치 방법`을 찾는 독자라면 Linux, macOS, WSL2, Android Termux에서 one-line installer로 시작할 수 있다. 다만 실제 업무 자동화에 쓰려면 설치 명령보다 설치 후 검증 순서가 더 중요하다.
 
 처음 목표는 “모든 기능을 켜기”가 아니다. 먼저 기본 chat이 정상 작동하는지 확인하고, provider 설정을 안정화하고, 그다음 gateway, cron, skill, MCP 같은 기능을 하나씩 붙여야 한다.
 
