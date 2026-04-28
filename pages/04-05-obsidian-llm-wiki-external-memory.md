@@ -68,6 +68,48 @@ Obsidian을 기억층으로 쓴다는 말은 모든 대화를 노트로 복사�
 | Obsidian LLM Wiki | 연결형 운영 지식 | 임시 작업 상태 |
 | WikiDocs | 정리된 공유 지식 | 불필요한 내부값 |
 
+
+## HALOX Brain을 LLM Wiki로 보강해 온 히스토리
+
+Obsidian은 처음에는 사람이 보기 좋은 노트 공간에 가까웠다. 하지만 운영이 커지면서 단순 메모로는 부족했다. 모니터링 결과, 콘텐츠 브리프, 제품 신호, glossary, MOC, 운영 규칙이 서로 연결되어야 했고, 하비와 역할형 에이전트가 나중에 다시 회수할 수 있어야 했다.
+
+그래서 HALOX Brain에는 LLM Wiki 운영 규칙이 생겼다. 새 작업을 시작할 때 INDEX, HALOX MEMORY OPS, HARVEY WAREHOUSE MANAGER, knowledge schema, raw/compiled link rules, operating guide, content stage policy, MOC를 보는 흐름을 만들었다. 핵심 노트는 최소 2개 이상의 관련 노트와 연결하고, glossary_terms/related_content/content_tags를 채워 검색과 회수 단서를 남기게 했다.
+
+| 보강 단계 | 바뀐 점 |
+|---|---|
+| 메모 저장 | 개별 조사와 아이디어를 노트로 남김 |
+| MOC 구성 | HALOX Home, Monitoring Pipeline, Content Connections 같은 진입점을 만듦 |
+| raw/compiled 분리 | 원자료와 정리된 판단 노트를 구분함 |
+| 운영 규칙 미러 | shared-memory 원본과 Obsidian 열람용 미러를 나눔 |
+| LLM 회수 준비 | 제목/상태/연결/태그/다음 액션을 정리해 RAG 후보로 만들기 시작함 |
+
+## LLM Wiki 링크 구조 예시
+
+공개 글에서는 내부 파일 경로를 그대로 드러낼 필요는 없다. 대신 구조를 이해하면 된다.
+
+```text
+HALOX Home MOC
+  ↓
+운영 규칙: HALOX MEMORY OPS / HARVEY WAREHOUSE MANAGER
+  ↓
+지식 스키마: glossary / framework / product / content / monitoring
+  ↓
+작업 원본: shared-memory package / research queue / handoff
+  ↓
+공개 산출물: WikiDocs / blog / lecture derivative
+```
+
+이 구조에서 Obsidian은 “글쓰기 전에 참고하는 자료함”이 아니다. AI 팀이 나중에 회수할 수 있게 누적 지식을 연결해 두는 외부 장기 기억층이다.
+
+## 우리 운영에서 Obsidian을 쓰는 방식
+
+| 상황 | Obsidian에 남기는 것 | shared-memory에 남기는 것 |
+|---|---|---|
+| 일일 모니터링 | daily 원장, 강한 신호, MOC 연결 | 후속 조사 큐, 콘텐츠 갭, 작업 패키지 |
+| 콘텐츠 제작 | brief/draft/published 연결과 관련 개념 | 실제 원고 패키지, 이미지, 메타, 발행 체크 |
+| 제품 신호 | feature idea, backlog, roadmap 연결 | 실행용 handoff와 우선순위 메모 |
+| 운영 규칙 변경 | 열람용 미러와 MOC 연결 | canonical 원본과 팀 공통 규칙 |
+
 ## 자주 헷갈리는 질문
 
 ### Obsidian과 WikiDocs는 어떻게 나누나요?

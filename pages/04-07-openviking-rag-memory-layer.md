@@ -44,6 +44,41 @@ OpenViking 도입의 의미는 기억을 한 단계 더 체계화하는 데 있�
 
 이 비교를 해두면 “새 메모리 도구가 좋아 보인다”에서 멈추지 않고, Hermes Agent의 어떤 기억층을 보강하는지 판단할 수 있다.
 
+
+## OpenViking / Honcho 비교와 링크
+
+OpenViking과 Honcho는 둘 다 “에이전트 기억”을 다루지만 초점이 다르다. OpenViking은 공식 소개에서 AI Agent를 위한 open-source context database라고 설명하며, memory/resources/skills를 파일 시스템 패러다임으로 통합 관리하는 쪽에 가깝다. Honcho는 stateful agent를 만들기 위한 open-source memory library와 managed service를 제공하며, 사용자/에이전트/그룹/아이디어 같은 entity의 상태를 계속 모델링하는 쪽에 강하다.
+
+| 항목 | OpenViking | Honcho |
+|---|---|---|
+| 공식 링크 | [GitHub](https://github.com/volcengine/OpenViking) / [Website](https://openviking.ai) | [GitHub](https://github.com/plastic-labs/honcho) / [Docs](https://docs.honcho.dev) / [App](https://app.honcho.dev) |
+| 공식 설명에 가까운 위치 | AI Agent용 context database | stateful agent용 memory library / managed service |
+| 기억 대상 | memory, resources, skills, 운영 문서, 에이전트 context | users, agents, groups, ideas 같은 entity 상태 |
+| 운영 감각 | Obsidian/HALOX Brain과 shared-memory를 회수하는 RAG/context layer 후보 | 개인화/상태 기반 agent memory 후보 |
+| 라이선스 | GitHub 기준 AGPL-3.0 | GitHub 기준 AGPL-3.0 |
+| 비용 관점 | 오픈소스 자체는 공개되어 있으나 모델 API, 임베딩, 서버 운영 비용은 별도 | README 기준 managed service 가입 시 $100 free credits 언급, self-host는 테스트/평가용으로 가능 |
+| 우리 운영 판단 | 하비가 정리한 지식층을 더 잘 회수하게 만드는 retrieval layer | 사용자/대상별 상태 모델링이 필요할 때 비교할 후보 |
+
+이 비교에서 중요한 것은 “어느 도구가 더 좋다”가 아니다. 우리에게 필요한 기억층이 무엇인지다. HALOX Brain과 shared-memory에 쌓인 운영 지식을 하비가 다시 찾게 하려면 OpenViking 쪽 관점이 자연스럽고, 사용자나 팀원별 상태 변화를 장기적으로 모델링하려면 Honcho류 관점이 필요해진다.
+
+## Hermes 공식 플러그인 관점에서 보는 기억 확장
+
+Hermes Agent는 외부 도구와 플러그인을 통해 기능을 붙일 수 있다. 메모리 확장도 같은 관점에서 봐야 한다. 핵심 기능은 “모델에게 더 길게 말하기”가 아니라, 외부 기억층을 어떤 도구로 연결하고 어떤 질문에서 회수할지 정하는 것이다.
+
+```text
+Hermes Agent 요청
+  ↓
+하비가 기억 범위 판단
+  ↓
+내장 memory / session_search / shared-memory / Obsidian 확인
+  ↓
+필요하면 OpenViking 같은 context database 또는 Honcho류 memory service 후보 검토
+  ↓
+회수 결과를 근거/최신성/보호 범위 기준으로 검증
+```
+
+우리 OpenViking 파일럿도 이 기준으로 봤다. 패키지 설치와 파일럿 문서는 준비됐지만, 서버 기동과 provider 설정 검증이 끝나야 실사용 전환이 가능했다. 그래서 공개 문서에서는 “이미 모든 기억 문제가 해결됐다”가 아니라 “외부 회수층을 붙이는 방향으로 기억 시스템을 확장하고 있다”라고 설명하는 것이 정확하다.
+
 ## RAG 회수층을 붙일 때의 기준
 
 - 항상 필요한 기준은 memory에 둔다.

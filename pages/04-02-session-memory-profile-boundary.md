@@ -52,6 +52,21 @@ memory = 다음에도 반복 적용할 짧은 기준
 profile = 에이전트가 어떤 주체로 행동할지 정하는 역할 기억
 ```
 
+## profile 경계가 기억 품질에 영향을 주는 이유
+
+같은 사람이 같은 요청을 해도 하비에서 볼 때와 뽀동이에서 볼 때 결과가 달라질 수 있다. 이것은 모델의 변덕이 아니라 profile이 다르기 때문이다. profile은 역할뿐 아니라 HOME, 기본 경로, 연결된 도구, 인증 범위, 로드되는 AGENTS.md/SOUL.md까지 바꾼다.
+
+우리 운영에서도 이 차이가 중요했다. GitHub repo는 특정 macOS 사용자 HOME의 credential을 봐야 push가 되고, Obsidian HALOX Brain은 iCloud 경로에 있으며, shared-memory는 여러 에이전트가 공통으로 보는 원본이다. 따라서 “기억에 있다/없다”만 볼 것이 아니라 “현재 profile이 그 기억층에 접근할 수 있는가”를 함께 봐야 한다.
+
+| 질문 | 확인할 층 |
+|---|---|
+| 지금 대화에서 이미 합의한 내용인가 | session / compaction summary |
+| 다음 세션에도 반복될 선호인가 | memory / USER.md |
+| 이 에이전트의 역할과 도구 경계인가 | profile / AGENTS.md / SOUL.md |
+| 팀 전체의 source of truth인가 | shared-memory |
+| 누적 지식이나 운영 원장인가 | Obsidian HALOX Brain |
+| 과거 작업을 회수해야 하는가 | session_search / GitHub log |
+
 ## 자주 헷갈리는 질문
 
 ### session이 길어지면 memory가 되나요?

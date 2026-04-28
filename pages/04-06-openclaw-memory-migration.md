@@ -64,6 +64,32 @@ OpenClaw에서 Hermes로 옮길 때 중요한 것은 “많이 가져오기”�
 | 팀 운영 규칙 | 정리 후 유지 | shared-memory |
 | 함께 읽을 만한 운영 교훈 | 정리 | WikiDocs |
 
+## OpenClaw 유산을 다시 배치한 실제 흐름
+
+OpenClaw에서 Hermes로 넘어올 때 가장 중요한 일은 “예전 것을 얼마나 많이 살릴까”가 아니라 “현재 Hermes에서 어떤 층이 그 역할을 맡아야 하는가”를 다시 묻는 것이었다. 예전에는 SOUL/IDENTITY, memory, cron, gateway, agent binding이 한 운영 경험 안에 섞여 있었다. Hermes에서는 이것을 역할형 profile, AGENTS.md/SOUL.md, persistent memory, shared-memory, Obsidian, skill, cronjob으로 나눠 다시 배치한다.
+
+```text
+OpenClaw 유산
+  ↓
+정체성 / 사용자 선호 / 팀 규칙 / 프로젝트 원장 / 반복 절차 / 실행 설정으로 분해
+  ↓
+SOUL.md / USER.md / shared-memory / Obsidian / skill / profile config로 재배치
+  ↓
+공개할 수 있는 운영 교훈만 WikiDocs로 정리
+```
+
+| 예전에는 한 덩어리였던 것 | Hermes에서 나눈 위치 |
+|---|---|
+| 에이전트 정체성과 말투 | SOUL.md |
+| 실제 작업 규칙과 검증 기준 | AGENTS.md |
+| 사용자 반복 선호 | USER.md / memory |
+| 팀 공통 운영 원칙 | shared-memory |
+| 누적 지식과 원장 | Obsidian HALOX Brain |
+| 반복 가능한 실행 절차 | skill |
+| 오래된 실행 흔적 | archive 또는 GitHub/session_search 회수 |
+
+이 재배치가 끝나야 OpenViking/RAG 같은 외부 회수층도 의미가 있다. 낡은 원문을 그대로 색인하면 회수는 잘 되더라도 현재 운영 기준과 맞지 않는 답을 강화할 수 있기 때문이다.
+
 ## 자주 헷갈리는 질문
 
 ### 과거 memory를 전부 Hermes memory로 옮기면 안 되나요?

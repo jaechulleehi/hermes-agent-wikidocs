@@ -64,6 +64,31 @@ AI 개인비서가 기억해야 할 정보는 다음 조건을 만족해야 한�
 | 팀 전체의 보고 템플릿 | shared-memory | 여러 에이전트가 함께 따라야 한다 |
 | 공개 글의 문체 기준 | skill / 작성 가이드 | 반복 작업 절차로 재사용된다 |
 
+
+## memory max가 있을 때 운영하는 방법
+
+Hermes Agent의 persistent memory는 무한한 창고가 아니다. 실제 운영에서도 memory와 user profile에는 글자 수 제한이 있다. 그래서 “좋은 내용이니까 저장”이 아니라 “짧게 압축해도 계속 쓸 기준인가”를 먼저 본다.
+
+우리 운영에서 이 제한은 오히려 좋은 기준이 됐다. memory가 가득 차기 시작하면 작업 로그를 더 넣는 것이 아니라, 오래된 임시 상태를 빼고 더 안정적인 규칙으로 바꾼다. 예를 들어 “오늘 4장 보강 중”은 지우고, “WikiDocs/Hermes 글은 실제 운영 사례와 검증 후 커밋/푸시까지 마무리한다” 같은 장기 기준만 남긴다.
+
+| memory에 남길 문장 | 남기면 안 되는 문장 |
+|---|---|
+| 사용자는 Slack 보고를 완료/남음/다음 중심으로 짧게 선호한다 | 오늘 4장 OpenViking 문단을 수정했다 |
+| WikiDocs 글은 SEO/GEO와 전자책 구조를 함께 본다 | 방금 읽은 세션 검색 결과 전문 |
+| HaloX 조회 우선순위는 HALOX Brain → shared-memory → memory다 | 이번 작업에서 확인한 파일 목록 전체 |
+
+## 압축해서 남기는 예시
+
+긴 피드백을 그대로 memory에 넣으면 금방 한계에 걸린다. 대신 다음처럼 운영 규칙으로 압축한다.
+
+```text
+원문 피드백: 4장에 실제로 나눴던 OpenViking/Honcho 비교, 가격, GitHub 링크, Obsidian 보강 히스토리, shared-memory가 생긴 이유까지 빠졌다.
+
+memory 후보: Hermes/WikiDocs memory chapter should include actual operation evidence for OpenViking/Honcho, Obsidian/HALOX Brain, shared-memory, context compaction, and AGENTS.md/USER.md boundaries.
+
+작업 상태: 이번 보강의 파일 목록과 커밋 여부는 session/GitHub log에 둔다.
+```
+
 ## 자주 헷갈리는 질문
 
 ### memory에 많이 넣으면 더 개인화되지 않나요?

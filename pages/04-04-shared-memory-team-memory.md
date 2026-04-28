@@ -63,6 +63,37 @@ shared-memory/
 | 계속 갱신되는 작업 원본인가 | 예 |
 | 누적 지식으로 오래 탐색해야 하는가 | Obsidian이 더 맞다 |
 
+
+## shared-memory가 만들어진 이유
+
+shared-memory는 처음부터 예쁘게 설계된 폴더가 아니라, 여러 에이전트가 같은 기준을 보지 못해 생긴 문제를 줄이기 위해 정착했다. 개인 memory에 공통 규칙을 넣으면 특정 에이전트만 알고 끝난다. Slack 대화에만 두면 다음 세션이나 다른 에이전트가 회수하기 어렵다. Obsidian에만 두면 실행 중인 작업 패키지와 handoff가 느슨해질 수 있다.
+
+그래서 shared-memory는 “팀 공통 운영 spine” 역할을 맡는다. 팀 규칙, 결정, 콘텐츠 패키지, research queue, handoff, 디자인 시스템처럼 여러 에이전트가 바로 실행에 써야 하는 원본을 둔다.
+
+| 문제가 생긴 지점 | shared-memory로 해결한 방식 |
+|---|---|
+| 에이전트별 프로필에 공통 규칙이 복붙됨 | 공통 규칙은 shared-memory 원본으로 모으고 각 프로필은 참조만 한다 |
+| 콘텐츠 작업 원본이 Slack/로컬/노트에 흩어짐 | content-system/packages와 인덱스로 작업 패키지를 관리한다 |
+| 조사 결과가 글쓰기까지 이어지지 않음 | research queue와 handoff로 방울이 → 뽀동이 → 하비 흐름을 만든다 |
+| 이미지/디자인 기준이 매번 달라짐 | design-system을 공통 참조 축으로 둔다 |
+| Obsidian 원장과 실행 파일이 끊김 | shared-memory 패키지와 HALOX Brain 노트를 서로 추적 가능하게 둔다 |
+
+## shared-memory와 Obsidian을 함께 쓰는 흐름
+
+```text
+방울이 조사 / 크론 모니터링
+  ↓
+강한 신호는 shared-memory research queue나 content package로 구조화
+  ↓
+HALOX Brain에는 원장/MOC/관련 노트로 연결
+  ↓
+뽀동이가 글이나 WikiDocs 구조로 정리
+  ↓
+하비가 최종 통합과 기억 위치를 확인
+```
+
+이 구조가 생긴 뒤부터 “누가 어디까지 했는가”보다 “다음 에이전트가 무엇을 보면 되는가”가 더 분명해졌다.
+
 ## 자주 헷갈리는 질문
 
 ### shared-memory와 memory의 가장 큰 차이는 무엇인가요?

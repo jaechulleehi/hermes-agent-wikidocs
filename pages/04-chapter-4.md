@@ -1,8 +1,8 @@
 ## 4장. AI 에이전트 기억 시스템은 어떻게 설계해야 할까
 
-![4장 기억 컨텍스트 프로필 경계 구조](../assets/images/chapter-heroes/ch04-memory-context-profile-boundary-codex.webp)
-
 AI 개인비서를 오래 쓰다 보면 “왜 이건 기억하고, 저건 또 모를까?”라는 순간이 온다. 이 문제는 모델이 똑똑한가 아닌가보다 기억을 어디에 두고, 어떤 순서로 다시 꺼내는가에 더 가깝다.
+
+![4장 기억 컨텍스트 프로필 경계 구조](../assets/images/chapter-heroes/ch04-memory-context-profile-boundary-codex.webp)
 
 에르메스 에이전트(Hermes Agent)를 실제 업무 자동화에 붙여보면 기억은 하나의 저장소가 아니다. 지금 대화의 session, 장기 선호를 담는 memory, 역할과 권한을 나누는 profile/AGENTS.md, 팀 공통 기준을 담는 shared-memory, 누적 지식 원장인 Obsidian LLM Wiki, 그리고 OpenViking/RAG 같은 외부 회수층이 함께 움직인다.
 
@@ -60,6 +60,36 @@ OpenViking 도입도 같은 흐름이다. 기억을 더 길게 프롬프트에 �
   ↓
 WikiDocs에 함께 읽을 수 있는 지식으로 정리
 ```
+
+
+## 실제로 정착한 기억 운영 흐름
+
+우리 운영에서 4장이 중요해진 이유는 “memory 기능을 켰다”가 아니라, 기억을 유지하는 방식 자체를 계속 고쳐 왔기 때문이다. 처음에는 Slack 대화, 프로필 기억, 작업 파일, Obsidian 노트가 따로 움직였다. 시간이 지나며 반복 문제가 보였다. 어떤 내용은 다음 세션에도 꼭 살아 있어야 했고, 어떤 내용은 memory에 넣으면 오히려 방해가 됐다.
+
+그래서 지금은 새 정보가 들어오면 바로 저장하지 않고 먼저 위치를 정한다.
+
+```text
+새 정보
+  ↓
+사람 선호인가 / 팀 규칙인가 / 프로젝트 지식인가 / 반복 절차인가 / 과거 회상인가
+  ↓
+memory / USER.md / AGENTS.md / shared-memory / Obsidian / skill / session_search / OpenViking 후보로 분류
+  ↓
+필요하면 WikiDocs에서 함께 읽을 수 있는 지식으로 재작성
+```
+
+이 흐름에서 중요한 것은 “기억을 많이 남기는 것”이 아니다. memory에는 짧고 안정적인 규칙만 남기고, 바뀌는 원본과 큰 지식은 shared-memory와 Obsidian에 둔다. 긴 대화의 진행 상태는 session, todo, GitHub log, handoff에서 회수한다. OpenViking/RAG는 이런 지식층을 검색/회수하는 다음 단계다.
+
+## 기억층과 실제 운영 산출물의 연결
+
+| 운영에서 생긴 일 | 바로 넣으면 위험한 곳 | 실제로 정착한 위치 | 이유 |
+|---|---|---|---|
+| 보고 방식에 대한 반복 피드백 | 작업 로그 | memory / USER.md | 다음 세션에도 짧게 주입돼야 한다 |
+| WikiDocs 4장 수정 진행 상황 | memory | session / GitHub log / handoff | 현재 작업 상태라 계속 바뀐다 |
+| 하비/방울이/뽀동이 공통 규칙 | 개별 profile | shared-memory | 여러 에이전트가 같은 기준을 봐야 한다 |
+| HaloX 모니터링과 콘텐츠 원장 | memory | Obsidian HALOX Brain | 누적 지식과 연결형 탐색이 필요하다 |
+| 반복되는 WikiDocs 검증 절차 | session | skill | 다음 작업에서도 같은 방식으로 재사용된다 |
+| OpenViking/Honcho 같은 외부 메모리 비교 | 단기 대화 | 4장/RAG 페이지와 source note | 도구 선택 기준으로 다시 쓰인다 |
 
 ## 기억 시스템을 설계할 때 남길 기준
 
