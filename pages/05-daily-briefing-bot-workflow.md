@@ -52,4 +52,4 @@ cron은 독립 실행된다. 현재 대화 맥락을 기대하면 실패한다. 
 
 ## 다음 글
 
-다음은 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)으로 넘어가서 자동화 결과가 어떻게 공개 콘텐츠 자산으로 바뀌는지 본다.
+다음은 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](https://wikidocs.net/346124)으로 넘어가서 자동화, profile 직접 호출, delegation, 독립 subagent 실행을 어떻게 구분하는지 본다.

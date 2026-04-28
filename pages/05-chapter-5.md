@@ -42,4 +42,4 @@ WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. Git
 
 ## 이어서 읽기
 
-먼저 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)를 읽고, 이어서 [Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](https://wikidocs.net/345904)로 넘어가면 도구 연결과 절차 재사용의 차이가 보인다. 역할을 실제로 어떻게 움직일지는 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](pages/35-four-ways-to-assign-work-in-hermes-agent.md)에서 이어서 본다.
+먼저 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)를 읽고, 이어서 [Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](https://wikidocs.net/345904)로 넘어가면 도구 연결과 절차 재사용의 차이가 보인다. 역할을 실제로 어떻게 움직일지는 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](https://wikidocs.net/346124)에서 이어서 본다.

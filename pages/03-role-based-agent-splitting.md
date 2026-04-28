@@ -68,7 +68,7 @@
 
 Hermes Agent에는 profile, delegation, parallel work, 독립 subagent 실행, cron처럼 일을 나눠 움직이는 여러 방식이 있다. 하지만 기능이 있다고 해서 곧바로 좋은 역할 분리가 되는 것은 아니다.
 
-기능은 “나눌 수 있다”를 제공한다. 운영 기준은 “무엇을 왜 나눌지”를 정한다. 조사형/정리형/실행형은 역할의 문제이고, profile 직접 호출/delegation/subagent/cron은 실행 방식의 문제다. 두 층을 나눠 보면 어떤 업무를 누구에게 맡기고 어떤 방식으로 돌릴지 더 선명해진다. 실행 방식의 차이는 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](pages/35-four-ways-to-assign-work-in-hermes-agent.md)에서 이어서 다룬다.
+기능은 “나눌 수 있다”를 제공한다. 운영 기준은 “무엇을 왜 나눌지”를 정한다. 조사형/정리형/실행형은 역할의 문제이고, profile 직접 호출/delegation/subagent/cron은 실행 방식의 문제다. 두 층을 나눠 보면 어떤 업무를 누구에게 맡기고 어떤 방식으로 돌릴지 더 선명해진다. 실행 방식의 차이는 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](https://wikidocs.net/346124)에서 이어서 다룬다.
 
 ## 운영 체크리스트
 
