@@ -1,6 +1,6 @@
 ## AGENTS.md와 USER.md는 기억에서 어떤 역할을 할까
 
-AI 에이전트의 기억은 사용자 선호만으로 만들어지지 않는다. [session/memory/profile 경계](04-02-session-memory-profile-boundary.md)가 내부 기억층을 나눈다면, 이 글은 문서가 그 기억층을 어떻게 고정하는지 설명한다. 누가 어떤 역할을 맡는지, 어떤 톤으로 말하는지, 어떤 도구를 쓸 수 있는지도 기억의 일부다. Hermes Agent에서는 이 역할을 AGENTS.md, SOUL.md, USER.md, profile이 나눠 맡는다.
+AI 에이전트의 기억은 사용자 선호만으로 만들어지지 않는다. [session/memory/profile 경계](https://wikidocs.net/346126)가 내부 기억층을 나눈다면, 이 글은 문서가 그 기억층을 어떻게 고정하는지 설명한다. 누가 어떤 역할을 맡는지, 어떤 톤으로 말하는지, 어떤 도구를 쓸 수 있는지도 기억의 일부다. Hermes Agent에서는 이 역할을 AGENTS.md, SOUL.md, USER.md, profile이 나눠 맡는다.
 
 이 구분이 없으면 에이전트가 “사용자를 기억하는 것”과 “자기 역할을 아는 것”이 섞인다. 하비가 해야 할 판단을 뽀동이가 하거나, 뽀동이가 지켜야 할 글쓰기 기준이 하비의 라우팅 규칙 속에 묻히는 식이다.
 
@@ -53,4 +53,4 @@ AGENTS.md는 에이전트가 어떻게 일할지 설명하는 운영 문서다. 
 
 ## 다음 글
 
-다음은 [shared-memory는 팀 공통 기억으로 어떻게 써야 할까](04-04-shared-memory-team-memory.md)에서 여러 에이전트가 함께 보는 기억층을 설명한다.
+다음은 [shared-memory는 팀 공통 기억으로 어떻게 써야 할까](https://wikidocs.net/346128)에서 여러 에이전트가 함께 보는 기억층을 설명한다.

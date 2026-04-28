@@ -4,7 +4,7 @@
 
 Hermes Agent의 skill은 “자주 쓰는 프롬프트 모음”이 아니다. 반복되는 작업에서 필요한 순서, 도구, 실패 패턴, 검증 기준을 묶어 두는 운영 절차다. 그래서 skill은 많이 만드는 것보다 정확히 만들고 계속 고치는 것이 중요하다.
 
-우리 운영에서도 skill은 실제 시행착오가 쌓인 뒤에 힘을 냈다. WikiDocs 작업에서는 GitHub-linked WikiDocs 규칙, 본문 내부 링크 방식, H1 금지, 이미지 경로 검증, commit/push 기준이 반복되자 `wikidocs-github-ebook-pipeline`이 작업 품질을 지키는 기준이 됐다.
+우리 운영에서도 skill은 실제 시행착오가 쌓인 뒤에 힘을 냈다. WikiDocs 작업에서는 GitHub-linked WikiDocs 규칙, 본문 내부 링크 방식, H1 금지, 이미지 경로 검증, 발행 전 상태 확인이 반복되자 `wikidocs-github-ebook-pipeline`이 작업 품질을 지키는 기준이 됐다.
 
 ## 스킬은 많을수록 좋은 게 아니다
 

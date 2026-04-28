@@ -1,6 +1,6 @@
 ## session/memory/profile은 어떻게 다를까
 
-AI 개인비서가 다르게 느껴지는 가장 큰 이유는 session, memory, profile이 서로 다른 층이기 때문이다. 이 구분은 앞 글인 [AI 개인비서는 무엇을 기억해야 할까](04-01-what-should-ai-assistant-remember.md)의 기준을 실제 운영 단위로 나누는 작업이다. 같은 모델을 쓰더라도 현재 대화 맥락, 장기 기억, 실행 프로필이 다르면 결과는 달라진다.
+AI 개인비서가 다르게 느껴지는 가장 큰 이유는 session, memory, profile이 서로 다른 층이기 때문이다. 이 구분은 앞 글인 [AI 개인비서는 무엇을 기억해야 할까](https://wikidocs.net/346125)의 기준을 실제 운영 단위로 나누는 작업이다. 같은 모델을 쓰더라도 현재 대화 맥락, 장기 기억, 실행 프로필이 다르면 결과는 달라진다.
 
 이 차이를 이해하지 못하면 “왜 기억을 못 하지?”라는 질문이 반복된다. 실제로는 기억 문제가 아니라 현재 session이 바뀌었거나, profile의 도구 권한이 다르거나, memory에 넣지 말아야 할 작업 로그를 기대하고 있는 경우가 많다.
 
@@ -51,4 +51,4 @@ profile은 말투만 나누는 것이 아니다. HOME, 권한, token, 연결된 
 
 ## 다음 글
 
-다음은 [AGENTS.md와 USER.md는 기억에서 어떤 역할을 할까](04-03-agents-user-md-memory-role.md)에서 역할 기억과 사용자 기억을 나눈다.
+다음은 [AGENTS.md와 USER.md는 기억에서 어떤 역할을 할까](https://wikidocs.net/346127)에서 역할 기억과 사용자 기억을 나눈다.

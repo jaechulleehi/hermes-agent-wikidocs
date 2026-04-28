@@ -1,6 +1,6 @@
 ## Obsidian LLM Wiki는 외부 장기 기억으로 어떻게 쓰일까
 
-Obsidian LLM Wiki의 가치는 메모를 많이 쌓는 데 있지 않다. [shared-memory](04-04-shared-memory-team-memory.md)가 실행과 handoff의 공용 작업층이라면, Obsidian은 시간이 지나며 누적되는 외부 장기 기억층이다. 나중에 AI 개인비서와 역할형 에이전트가 다시 꺼내 쓸 수 있는 구조로 운영 지식을 남기는 데 있다. 특히 HaloX처럼 모니터링, 콘텐츠, 제품 신호, 운영 판단이 함께 움직이는 환경에서는 Obsidian이 기억층의 핵심이 된다.
+Obsidian LLM Wiki의 가치는 메모를 많이 쌓는 데 있지 않다. [shared-memory](https://wikidocs.net/346128)가 실행과 handoff의 공용 작업층이라면, Obsidian은 시간이 지나며 누적되는 외부 장기 기억층이다. 나중에 AI 개인비서와 역할형 에이전트가 다시 꺼내 쓸 수 있는 구조로 운영 지식을 남기는 데 있다. 특히 HaloX처럼 모니터링, 콘텐츠, 제품 신호, 운영 판단이 함께 움직이는 환경에서는 Obsidian이 기억층의 핵심이 된다.
 
 따라서 Obsidian은 강의 시스템이나 콘텐츠 제작 도구에만 묶으면 안 된다. HALOX Brain은 누적 지식 베이스, 운영 원장, 연결형 LLM Wiki 역할을 맡는 외부 장기 기억층이다.
 
@@ -63,4 +63,4 @@ Obsidian은 내부 운영 지식과 원장이고, WikiDocs는 공개 독자에�
 
 ## 다음 글
 
-다음은 [OpenClaw에서 Hermes로 기억을 옮길 때 무엇을 버릴까](04-06-openclaw-memory-migration.md)에서 과거 유산과 현재 기준을 나눈다.
+다음은 [OpenClaw에서 Hermes로 기억을 옮길 때 무엇을 버릴까](https://wikidocs.net/346130)에서 과거 유산과 현재 기준을 나눈다.

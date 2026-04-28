@@ -1,6 +1,6 @@
 ## shared-memory는 팀 공통 기억으로 어떻게 써야 할까
 
-역할형 AI 팀을 운영하면 개인 에이전트 memory만으로는 부족하다. [AGENTS.md와 USER.md](04-03-agents-user-md-memory-role.md)가 개인 역할과 사용자 선호를 나눈다면, shared-memory는 팀 전체가 함께 보는 기준을 맡는다. 하비, 방울이, 뽀동이, 봉구, 비벙이, 하망이가 같은 기준을 봐야 하는 순간이 생긴다. 이때 필요한 층이 shared-memory다.
+역할형 AI 팀을 운영하면 개인 에이전트 memory만으로는 부족하다. [AGENTS.md와 USER.md](https://wikidocs.net/346127)가 개인 역할과 사용자 선호를 나눈다면, shared-memory는 팀 전체가 함께 보는 기준을 맡는다. 하비, 방울이, 뽀동이, 봉구, 비벙이, 하망이가 같은 기준을 봐야 하는 순간이 생긴다. 이때 필요한 층이 shared-memory다.
 
 shared-memory는 단순 폴더가 아니다. 팀 공통 규칙, source of truth, handoff, 인덱스, 콘텐츠 패키지, 체크리스트를 담는 공용 기억층이다. 개인 에이전트가 각자 기억하면 어긋날 내용을 한곳에 두는 장치다.
 
@@ -59,4 +59,4 @@ shared-memory는 실행과 handoff에 가깝다. Obsidian은 누적 지식, 원�
 
 ## 다음 글
 
-다음은 [Obsidian LLM Wiki는 외부 장기 기억으로 어떻게 쓰일까](04-05-obsidian-llm-wiki-external-memory.md)에서 누적 지식층을 설명한다.
+다음은 [Obsidian LLM Wiki는 외부 장기 기억으로 어떻게 쓰일까](https://wikidocs.net/346129)에서 누적 지식층을 설명한다.

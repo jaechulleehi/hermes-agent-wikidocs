@@ -39,4 +39,4 @@
 
 ## 이어서 읽기
 
-먼저 [왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까](07-why-we-write-the-wiki-first.md)에서 공개 책을 중심에 두는 이유를 본다. 그다음 [좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](08-why-good-research-does-not-automatically-become-a-good-blog.md)에서 조사와 글쓰기의 경계를 나눈다.
+먼저 [왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까](https://wikidocs.net/345908)에서 공개 책을 중심에 두는 이유를 본다. 그다음 [좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](https://wikidocs.net/345909)에서 조사와 글쓰기의 경계를 나눈다.

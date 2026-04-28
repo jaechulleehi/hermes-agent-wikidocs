@@ -65,4 +65,4 @@ OpenViking 도입도 같은 흐름이다. 기억을 더 길게 프롬프트에 �
 
 ## 이어서 읽기
 
-먼저 [AI 개인비서는 무엇을 기억해야 할까](04-01-what-should-ai-assistant-remember.md)에서 기억의 기준을 잡는다. 그다음 [session/memory/profile은 어떻게 다를까](04-02-session-memory-profile-boundary.md)에서 내부 기억층을 나눈다.
+먼저 [AI 개인비서는 무엇을 기억해야 할까](https://wikidocs.net/346125)에서 기억의 기준을 잡는다. 그다음 [session/memory/profile은 어떻게 다를까](https://wikidocs.net/346126)에서 내부 기억층을 나눈다.
