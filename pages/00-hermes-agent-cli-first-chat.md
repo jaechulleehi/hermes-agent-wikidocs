@@ -106,4 +106,4 @@ Hermes Agent는 한 번의 질문으로 끝나는 챗봇보다 오래 가는 작
 
 ## 다음 글
 
-CLI 첫 대화가 안정됐다면 다음에는 provider/model/config 확인으로 넘어간다. 모델과 설정 저장 위치가 정리되어야 이후 gateway와 cron이 흔들리지 않는다.
+CLI 첫 대화가 안정됐다면 다음에는 [provider/model/config 설정 확인](https://wikidocs.net/346252)으로 넘어간다. 모델과 설정 저장 위치가 정리되어야 이후 gateway와 cron이 흔들리지 않는다.

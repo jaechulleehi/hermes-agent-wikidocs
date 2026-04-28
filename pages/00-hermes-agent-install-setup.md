@@ -74,4 +74,4 @@ provider에 따라 API key, OAuth, custom endpoint, model name, context length �
 
 ## 다음 글
 
-설치와 기본 세팅을 끝냈다면 바로 자동화로 넘어가지 말고 다음 단계인 에르메스 에이전트(Hermes Agent) CLI 첫 대화를 확인한다. CLI에서 첫 대화와 세션이 안정돼야 provider, config, gateway 문제를 분리할 수 있다.
+설치와 기본 세팅을 끝냈다면 바로 자동화로 넘어가지 말고 다음 단계인 [에르메스 에이전트(Hermes Agent) CLI 첫 대화](https://wikidocs.net/346251)를 확인한다. CLI에서 첫 대화와 세션이 안정돼야 provider, config, gateway 문제를 분리할 수 있다.

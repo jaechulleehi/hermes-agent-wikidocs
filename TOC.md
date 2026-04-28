@@ -5,7 +5,7 @@
   * [00-2. 에르메스 에이전트(Hermes Agent) 공식 GitHub/docs는 어디서 볼까](pages/00-hermes-agent-official-github-docs.md)
   * [00-3. 에르메스 에이전트(Hermes Agent) 설치와 세팅은 어떻게 시작할까](pages/00-hermes-agent-install-setup.md)
   * [00-4. 에르메스 에이전트(Hermes Agent) CLI 첫 대화는 어떻게 시작할까](pages/00-hermes-agent-cli-first-chat.md)
-  * [00-5. 에르메스 에이전트(Hermes Agent) provider/model/config는 어떻게 확인할까](pages/00-hermes-agent-provider-model-config.md)
+  * [00-5. 에르메스 에이전트(Hermes Agent) provider/model/config 설정은 어떻게 확인할까](pages/00-hermes-agent-provider-model-config.md)
   * [00-6. 에르메스 에이전트(Hermes Agent)와 OpenClaw는 무엇이 다를까](pages/01-why-we-moved-from-openclaw-to-hermes.md)
   * [00-7. 에르메스 에이전트(Hermes Agent)와 Claude Code/Codex는 어떻게 다를까](pages/00-hermes-agent-vs-claude-code-codex.md)
   * [00-8. 에르메스 에이전트(Hermes Agent) Docker/Gateway는 언제 필요할까](pages/00-hermes-agent-docker-gateway.md)

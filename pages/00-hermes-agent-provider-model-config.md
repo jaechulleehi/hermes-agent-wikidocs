@@ -1,4 +1,4 @@
-## 에르메스 에이전트(Hermes Agent) provider/model/config는 어떻게 확인할까
+## 에르메스 에이전트(Hermes Agent) provider/model/config 설정은 어떻게 확인할까
 
 Hermes Agent에서 provider/model/config는 “어떤 모델을 쓸지”만의 문제가 아니다. [공식 configuration 문서](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)는 설정을 `~/.hermes/config.yaml`, secret/token을 `~/.hermes/.env`로 나누고, provider, model, terminal backend, Docker/SSH/Modal/Daytona 같은 실행 환경 설정을 함께 다룬다. 이 경계가 흐리면 CLI에서는 되던 일이 gateway나 cron에서는 실패한다.
 

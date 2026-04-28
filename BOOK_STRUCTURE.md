@@ -162,7 +162,7 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 - 00-2. 에르메스 에이전트(Hermes Agent) 공식 GitHub/docs는 어디서 볼까
 - 00-3. 에르메스 에이전트(Hermes Agent) 설치와 세팅은 어떻게 시작할까
 - 00-4. 에르메스 에이전트(Hermes Agent) CLI 첫 대화는 어떻게 시작할까
-- 00-5. 에르메스 에이전트(Hermes Agent) provider/model/config는 어떻게 확인할까
+- 00-5. 에르메스 에이전트(Hermes Agent) provider/model/config 설정은 어떻게 확인할까
 - 00-6. 에르메스 에이전트(Hermes Agent)와 OpenClaw는 무엇이 다를까
 - 00-7. 에르메스 에이전트(Hermes Agent)와 Claude Code/Codex는 어떻게 다를까
 - 00-8. 에르메스 에이전트(Hermes Agent) Docker/Gateway는 언제 필요할까
