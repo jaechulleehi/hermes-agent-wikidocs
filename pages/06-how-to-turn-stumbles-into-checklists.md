@@ -1,5 +1,7 @@
 ## 시행착오를 운영 체크리스트로 바꾸는 법
 
+![시행착오를 운영 체크리스트로 바꾸는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch08-1-stumbles-to-checklists-codex.png)
+
 [Hermes Agent](https://wikidocs.net/346055) 운영에서 시행착오는 실패 기록으로 끝나면 아깝다. gateway가 응답하지 않던 일, profile 경계가 헷갈렸던 일, WikiDocs 발행 전에 내부 링크가 안 먹던 일은 모두 다음 작업자를 위한 운영 체크리스트가 될 수 있다.
 
 핵심은 사건을 길게 보존하는 것이 아니라, 다음에 같은 상황이 왔을 때 무엇을 먼저 확인해야 하는지 남기는 것이다. AI 개인비서와 [역할형 에이전트](https://wikidocs.net/345925) 팀은 일을 나눠 처리하므로, 시행착오도 누가 봐도 실행 가능한 형태로 바뀌어야 한다.
