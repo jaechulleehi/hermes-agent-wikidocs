@@ -6,11 +6,47 @@
 
 이 구조를 쓰는 이유는 단순하다. 공유할 글은 한 번 쓰고 끝나지 않는다. 제목, TOC, 이미지, SEO/GEO, 전자책 규칙, 내부 링크가 계속 바뀐다. 이력과 기준이 남아야 안전하게 고칠 수 있다. 그래서 GitHub/WikiDocs 발행은 7장의 [WikiDocs를 먼저 쓰는 콘텐츠 시스템](https://wikidocs.net/345908)을 운영으로 고정하는 단계다.
 
+## 프로젝트: GitHub 원본에서 WikiDocs 공개본까지
+
+이 프로젝트에서는 Hermes Agent가 WikiDocs 책을 수정할 때 어떤 순서로 원고를 확인하고, 어떤 검증을 통과한 뒤 공개 화면에 반영하는지 정리한다. 독자가 그대로 따라 할 수 있게 “수정 → 검증 → 원격 반영 → 공개 확인” 순서로 본다.
+
+## 목표
+
+- GitHub를 책 원고의 source of truth로 유지한다.
+- WikiDocs는 공개 배포 채널로 둔다.
+- TOC, 본문, 이미지, 내부 링크를 함께 검증한다.
+- 공개 화면에서 실제로 링크와 이미지가 동작하는지 확인한다.
+- 수정 이력과 운영 기준을 남긴다.
+
+## 사전 준비
+
+| 준비 항목 | 설명 |
+|---|---|
+| GitHub 저장소 | README, TOC, pages, assets 구조가 있어야 한다 |
+| WikiDocs GitHub 연동 | WikiDocs 책이 GitHub 저장소와 연결되어 있어야 한다 |
+| 발행 기준 | H1 금지, 이미지 경로, 링크 규칙, 중점 문자 금지 등 책 규칙을 정한다 |
+| 검증 스크립트 | 발행 전 자동으로 확인할 항목을 준비한다 |
+| 역할 기준 | 뽀동이가 원고/구조/문체를 보고, 실행형이 명령과 상태를 확인한다 |
+
 ## 실제 업무 상황
 
 사용자가 “이 장 가자”라고 하면 뽀동이는 해당 장의 TOC와 본문을 확인하고, 세션 기록, 협업 기록, 팀 공통 기억, 원본 자료 목록에서 근거를 찾고, 책형 구조로 다시 쓴다. 그다음 전자책/WikiDocs 규칙을 검증한 뒤 검증을 통과한 변경을 발행한다. WikiDocs 화면은 GitHub에 연결된 공개 배포 결과다.
 
 이때 WikiDocs에서 바로 수정하는 것보다 GitHub에서 수정하는 편이 좋다. [source of truth](https://wikidocs.net/345902)가 하나로 남기 때문이다.
+
+## 발행 흐름
+
+```text
+1. TOC에서 대상 장/페이지를 확인한다.
+2. 현재 원고와 관련 자료를 읽는다.
+3. 독자 문제, 제목, 본문 구조, FAQ, 다음 링크를 보강한다.
+4. 이미지가 필요하면 assets 경로와 Markdown 상대 경로를 함께 정리한다.
+5. 본문 내부 링크가 WikiDocs 공개 URL로 연결되는지 확인한다.
+6. 전자책/WikiDocs 형식 검증을 실행한다.
+7. GitHub 원본에 변경을 반영한다.
+8. WikiDocs 동기화 후 공개 페이지를 spot-check한다.
+9. Slack에는 완료/남음/다음 중심으로 짧게 보고한다.
+```
 
 ## 발행 전 확인할 것
 
@@ -23,13 +59,85 @@
 | 형식 | pages 본문에 H1이 없는가 |
 | 문체 | AI 번역투, 중점 문자, 블로그 scaffolding이 남지 않았는가 |
 | 안전 | 드러내면 안 되는 내부값과 읽는 사람이 볼 필요 없는 운영 흔적이 제거되었는가 |
-| Git | 발행 후 HEAD와 origin/main이 같은가 |
+| Git | 원본 반영 후 로컬과 원격 상태가 맞는가 |
+| 공개 화면 | WikiDocs에서 최신 문장, 이미지, 링크가 보이는가 |
+
+## 검증 스크립트 예시
+
+아래 검증은 기본적인 전자책/WikiDocs 형식 문제를 찾는다.
+
+```bash
+python - <<'PY'
+from pathlib import Path
+import re, json
+root = Path('.')
+report = {
+    'h1_pages': [],
+    'bad_heading_spacing': [],
+    'bad_image_spacing': [],
+    'hr_lines': [],
+    'missing_toc_links': [],
+    'missing_images': [],
+    'middle_dot': [],
+}
+
+for p in sorted((root / 'pages').glob('*.md')):
+    lines = p.read_text(encoding='utf-8').splitlines()
+    for idx, line in enumerate(lines, start=1):
+        if re.match(r'^#\\s+', line):
+            report['h1_pages'].append([str(p), idx, line])
+        if re.match(r'^\\s*-{4,}\\s*$', line):
+            report['hr_lines'].append([str(p), idx])
+        if chr(0x00B7) in line:
+            report['middle_dot'].append([str(p), idx])
+        if re.match(r'^#{2,6}\\s+', line):
+            if idx > 1 and lines[idx-2] != '':
+                report['bad_heading_spacing'].append([str(p), idx, 'before'])
+            if idx < len(lines) and lines[idx] != '':
+                report['bad_heading_spacing'].append([str(p), idx, 'after'])
+        if re.match(r'^\\s*!\\[[^\\]]*\\]\\([^)]+\\)\\s*$', line):
+            if idx > 1 and lines[idx-2] != '':
+                report['bad_image_spacing'].append([str(p), idx, 'before'])
+            if idx < len(lines) and lines[idx] != '':
+                report['bad_image_spacing'].append([str(p), idx, 'after'])
+
+links = re.findall(r'\\]\\(([^)]+)\\)', (root / 'TOC.md').read_text(encoding='utf-8'))
+report['missing_toc_links'] = [l for l in links if not (root / l).exists()]
+
+for p in sorted((root / 'pages').glob('*.md')):
+    for img in re.findall(r'!\\[[^\\]]*\\]\\(([^)]+)\\)', p.read_text(encoding='utf-8')):
+        if not img.startswith('http') and not (p.parent / img).resolve().exists():
+            report['missing_images'].append([str(p), img])
+
+print(json.dumps({k: len(v) for k, v in report.items()}, ensure_ascii=False, indent=2))
+PY
+```
+
+검증 수치가 0이 아니면 원본 반영 전에 고친다. 특히 H1, 이미지 경로, TOC 누락, 중점 문자는 WikiDocs 책 품질에 바로 영향을 준다.
 
 ## 수정 기준
 
 GitHub/WikiDocs 발행에서 중요한 것은 “지금 보이는 화면”보다 “어느 원본을 고쳤는가”다. 본문 링크가 WikiDocs에서 안 먹는 문제도 이 기준으로 해결했다. GitHub 원고의 `.md` 링크는 저장소 안에서는 자연스럽지만, WikiDocs 공개 화면에서는 page ID URL이 필요했다. 그래서 TOC는 GitHub 구조를 유지하고, 본문 링크는 WikiDocs URL로 바꿨다.
 
 이런 판단은 단순 기술 수정이 아니라 발행 구조의 기준이다. 독자가 보는 공개 화면과 작성자가 관리하는 원본 구조가 다를 수 있기 때문이다.
+
+## 문제 해결
+
+### WikiDocs 화면에 최신 내용이 안 보일 때
+
+GitHub 원본 반영 직후에는 WikiDocs 동기화가 조금 늦을 수 있다. 잠시 기다린 뒤 공개 페이지를 다시 확인한다. 계속 반영되지 않으면 WikiDocs GitHub 설정에서 수동 동기화를 확인한다.
+
+### GitHub에서는 링크가 되는데 WikiDocs에서는 안 될 때
+
+본문 내부 링크가 로컬 `.md` 경로일 가능성이 있다. WikiDocs 공개 화면에서는 page ID URL을 쓰는 편이 안전하다. 단, TOC는 GitHub 파일 경로를 유지한다.
+
+### 이미지가 깨질 때
+
+이미지 파일이 실제로 `assets/`에 있는지, 페이지 기준 상대 경로가 맞는지 확인한다. `pages/` 아래 문서에서는 보통 `../assets/...`가 된다.
+
+### 원고는 좋아 보이는데 책 흐름이 어색할 때
+
+해당 페이지 앞뒤 링크를 확인한다. WikiDocs는 단일 글이 아니라 책이므로 다음 링크와 본문 내 contextual link가 중요하다.
 
 ## 운영 기준
 
