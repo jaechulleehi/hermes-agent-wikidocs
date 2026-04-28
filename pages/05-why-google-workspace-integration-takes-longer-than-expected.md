@@ -42,7 +42,7 @@ MCP는 Hermes Agent가 외부 도구와 만나는 표준 연결면이다. 사용
 3. on-demand 호출과 cron 자동화를 나눈다.
 4. 자동화는 self-contained prompt와 delivery target을 갖춘 뒤 만든다.
 5. 실패 시 profile, 권한 범위, gateway, tool permission 순서로 확인한다.
-6. 공개 문서에는 실제 계정명, 인증값 위치, 내부 식별값을 남기지 않는다.
+6. 공유 문서에는 실제 계정명, 인증값 위치, 내부 식별값을 남기지 않는다.
 
 ## FAQ
 

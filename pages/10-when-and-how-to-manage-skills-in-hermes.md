@@ -47,7 +47,7 @@ Hermes Agent의 Skill은 “다음에도 같은 방식으로 처리해야 하는
 2. Skill에는 “무엇을 할지”보다 “어떤 순서로 검증할지”를 넣는다.
 3. 실제 운영과 Skill이 어긋나면 즉시 고친다.
 4. cron job은 Skill을 불러 쓸 수 있지만, cron prompt 자체도 self-contained해야 한다.
-5. 공개 콘텐츠 Skill에는 내부값 제거 기준을 포함한다.
+5. 공유 콘텐츠 Skill에는 내부값 제거 기준을 포함한다.
 
 ## FAQ
 

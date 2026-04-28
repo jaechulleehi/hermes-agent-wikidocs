@@ -41,7 +41,7 @@ HaloX 운영에서는 memory, shared-memory, HALOX Brain을 나눠 쓴다. memor
 - handoff는 다음 에이전트가 바로 이어받을 수 있는 형태로 쓴다.
 - 오래 지속되는 임시 규칙은 handoff에서 꺼내 공용 문서로 승격한다.
 - Obsidian 원장과 shared-memory 작업 패키지는 서로 추적 가능해야 한다.
-- 공개 글로 바꿀 때는 내부 경로와 운영값을 제거하고 판단 기준만 남긴다.
+- 공유 글로 정리할 때는 내부 경로와 운영값을 제거하고 판단 기준만 남긴다.
 
 ## shared-memory 예시 구조
 

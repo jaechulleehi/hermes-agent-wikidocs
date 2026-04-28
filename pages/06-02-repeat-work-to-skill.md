@@ -32,7 +32,7 @@ WikiDocs 발행은 처음엔 단순했다. 글을 고치고, commit하고, push�
 
 ## Skill에 넣지 말아야 할 것
 
-- API key, token, password, webhook URL 같은 민감정보
+- API key, token, password, webhook URL 같은 보호해야 할 정보
 - 매번 바뀌는 최신 뉴스, 버전, 가격, 검색 결과
 - 특정 세션에서만 의미 있는 작업 진행 상태
 - 원문 그대로의 대화 로그

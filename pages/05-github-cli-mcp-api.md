@@ -30,7 +30,7 @@ MCP는 GitHub를 에이전트의 toolset처럼 붙이고 싶을 때 좋다. 사�
 
 API는 반복 조회와 세밀한 자동화에 좋다. 예를 들어 여러 repo의 issue 수를 모으거나, PR 상태를 표로 만들거나, WikiDocs 발행과 GitHub commit 사이의 상태를 비교하는 작업은 API가 깔끔할 수 있다.
 
-대신 API는 직접 관리할 것이 많다. token scope, pagination, rate limit, 오류 응답, retry, logging을 봐야 한다. 공개 문서에는 실제 token이나 내부 endpoint를 남기지 않고 placeholder로 설명해야 한다.
+대신 API는 직접 관리할 것이 많다. token scope, pagination, rate limit, 오류 응답, retry, logging을 봐야 한다. 공유 문서에는 실제 token이나 내부 endpoint를 남기지 않고 placeholder로 설명해야 한다.
 
 ## 운영 기준
 
