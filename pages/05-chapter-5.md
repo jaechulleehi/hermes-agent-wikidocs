@@ -15,6 +15,7 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 | skill | 많이 만들수록 좋다 | 반복 절차와 검증 기준이 있을 때 만든다 |
 | gateway | status가 OK면 끝이다 | 메시징 delivery, cron 실행, 로그를 함께 본다 |
 | Daily Briefing Bot | 뉴스 요약 예제다 | fresh session 기반 자동화 패턴이다 |
+| 실행 방식 | 에이전트를 나누면 알아서 운영된다 | 직접 처리/profile/delegation/subagent/cron을 구분한다 |
 
 ## 실제 운영 장면
 
@@ -41,4 +42,4 @@ WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. Git
 
 ## 이어서 읽기
 
-먼저 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)를 읽고, 이어서 [Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](https://wikidocs.net/345904)로 넘어가면 도구 연결과 절차 재사용의 차이가 보인다.
+먼저 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)를 읽고, 이어서 [Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](https://wikidocs.net/345904)로 넘어가면 도구 연결과 절차 재사용의 차이가 보인다. 역할을 실제로 어떻게 움직일지는 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](pages/35-four-ways-to-assign-work-in-hermes-agent.md)에서 이어서 본다.

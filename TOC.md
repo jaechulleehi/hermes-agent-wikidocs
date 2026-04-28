@@ -28,6 +28,7 @@
   * [05-2. Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](pages/10-when-and-how-to-manage-skills-in-hermes.md)
   * [05-3. always-on gateway는 왜 자주 헷갈릴까](pages/12-always-on-gateway-is-more-confusing-than-it-looks.md)
   * [05-4. Daily Briefing Bot은 어떤 업무 자동화 패턴일까](pages/05-daily-briefing-bot-workflow.md)
+  * [05-5. Hermes Agent에서 일을 나누는 네 가지 실행 방식](pages/35-four-ways-to-assign-work-in-hermes-agent.md)
 * [06. WikiDocs/블로그/강의 콘텐츠 시스템](pages/06-chapter-6.md)
   * [06-1. Obsidian LLM Wiki는 운영 기록을 어떻게 살릴까](pages/11-how-to-use-obsidian-llm-wiki-in-real-operations.md)
   * [06-2. 왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까](pages/07-why-we-write-the-wiki-first.md)
