@@ -60,6 +60,21 @@ cron/skill/MCP 같은 운영 기능 확장
 
 0장에서 중요한 것은 “다 알기”가 아니다. 지금 내가 어느 단계에서 막혔는지 구분하는 것이다. 설치 문제인지, provider 문제인지, config 문제인지, gateway 문제인지, 권한 문제인지가 분리되어야 이후 장의 AI 개인비서/역할형 에이전트 운영이 흔들리지 않는다.
 
+## 막혔을 때 바로 가는 길
+
+처음 독자는 전체를 순서대로 읽어도 되지만, 이미 막힌 상태라면 아래처럼 들어가면 빠르다.
+
+| 지금 증상 | 먼저 읽을 곳 | 다음에 확인할 곳 |
+|---|---|---|
+| Hermes Agent가 무엇인지 아직 헷갈린다 | [00-01 핵심 개념](https://wikidocs.net/346055) | 01장 AI 개인비서/AI 팀 |
+| 설치는 했는데 첫 대화가 안 된다 | [00-04 CLI 첫 대화](https://wikidocs.net/346251) | [00-05 provider/model/config](https://wikidocs.net/346252) |
+| CLI는 되는데 Slack에서 답이 없다 | [00-08 Docker/Gateway](https://wikidocs.net/346139) | [05-02 always-on gateway](https://wikidocs.net/345906) |
+| cron 결과가 어디로 갔는지 모르겠다 | [05-03 Daily Briefing Bot](https://wikidocs.net/345926) | [08-1 운영 질문 분류](https://wikidocs.net/345912) |
+| 비용이 어디서 나가는지 모르겠다 | [00-05 provider/model/config](https://wikidocs.net/346252) | [05장 외부 도구/검색 비용](https://wikidocs.net/345907) |
+| 여러 봇이 동시에 답해 시끄럽다 | [08-2 멀티봇 스레드](https://wikidocs.net/345913) | 09장 체크리스트/복구 |
+
+이 표의 목적은 “정답 페이지”를 찍어 주는 것이 아니라, 재설치/재시작/토큰 교체를 하기 전에 문제 범위를 좁히는 것이다.
+
 ## 이 책과 공식 문서를 함께 보는 법
 
 공식 문서는 기능의 source of truth다. 설치 명령, CLI command, config option, messaging gateway 설정, security boundary, architecture처럼 바뀔 수 있는 내용은 공식 docs를 먼저 확인해야 한다.

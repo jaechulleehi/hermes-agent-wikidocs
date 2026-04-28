@@ -8,6 +8,8 @@
 
 ## FAQ가 약해지는 이유
 
+초보자에게 약한 FAQ는 “질문은 많은데 어디부터 봐야 할지 모르는 문서”다. 그래서 Hermes Agent 운영 FAQ는 단순 Q&A보다 첫 분기와 확인 순서를 먼저 보여줘야 한다.
+
 약한 FAQ는 이런 식으로 쌓인다.
 
 ```text
@@ -36,6 +38,21 @@
 WikiDocs 내부 링크 문제는 처음에는 “링크가 이상하다”로 보였다. 하지만 실제 원인은 글쓰기 문제가 아니라 publishing/source of truth 레이어였다. GitHub 본문에는 `.md` 링크가 자연스럽지만, GitHub 연동 WikiDocs 화면에서는 공개 페이지 ID 링크가 필요했다. 그래서 해결책도 단순 문장 수정이 아니라 WikiDocs TOC에서 page ID를 확인하고 본문 링크를 `https://wikidocs.net/{page_id}`로 바꾸는 것이었다.
 
 같은 방식으로 “하비가 왜 기억을 못 하지?”는 기억 레이어로, “방울이와 뽀동이가 왜 다르게 말하지?”는 역할 레이어로, “cron 결과가 어디로 갔지?”는 runtime/delivery 레이어로 먼저 분류한다. 분류가 맞으면 답은 짧아진다.
+
+## 자주 막히는 질문을 다시 쓰는 법
+
+같은 질문도 FAQ에 어떻게 쓰느냐에 따라 복구 속도가 달라진다.
+
+| 약한 질문 | 운영형 질문 | 연결할 확인 순서 |
+|---|---|---|
+| 왜 안 돼요? | CLI도 안 되는가, Slack만 안 되는가? | CLI → provider/config → gateway |
+| Slack 봇이 죽었나요? | gateway process는 살아 있고 delivery target은 맞는가? | process → log → token/permission → channel/thread |
+| 비용이 왜 늘었나요? | OAuth/구독/API key/검색 API 중 어느 비용인가? | provider 설정 → usage/quota → cron 반복 주기 |
+| 검색 결과가 이상해요 | 검색 API 결과인가, 원문 검증 결과인가? | DuckDuckGo/SearXNG → browser 원문 → 유료 API 필요성 |
+| 같은 에이전트가 다르게 말해요 | 같은 profile/session/AGENTS/SOUL을 쓰고 있는가? | profile → session → memory → gateway restart |
+| 문서가 반영 안 돼요 | GitHub 원본이 바뀌었고 WikiDocs가 동기화됐는가? | source of truth → sync → public page spot-check |
+
+이렇게 다시 쓰면 답변은 짧아지고, 운영자는 바로 확인 순서로 넘어갈 수 있다.
 
 ## 운영 기준
 

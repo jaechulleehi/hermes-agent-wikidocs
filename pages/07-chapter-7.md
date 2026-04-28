@@ -6,6 +6,21 @@
 
 8장은 바로 그 라우터를 만든다. 앞 장에서 [memory/session/profile/source of truth 경계](https://wikidocs.net/345902)와 [MCP/cron/gateway 운영](https://wikidocs.net/345907)을 봤다면, 여기서는 실제 대화 공간에서 생기는 혼선을 줄이는 규칙을 다룬다. 특히 Slack 스레드에서 하비/방울이/뽀동이/하망이 같은 역할형 에이전트가 동시에 반응하면 유용함보다 소음이 먼저 생긴다.
 
+## 처음 막혔을 때의 빠른 분기
+
+운영 FAQ를 읽는 독자는 보통 이미 막힌 상태다. 이때는 긴 설명보다 첫 분기가 먼저다.
+
+| 사용자가 느끼는 문제 | 먼저 분류할 레이어 | 바로 확인할 것 |
+|---|---|---|
+| 봇이 답하지 않는다 | runtime/gateway | CLI는 되는지, gateway process와 delivery target이 맞는지 |
+| 답은 오는데 엉뚱한 봇이 말한다 | identity/trigger | 멘션/호출 이름/스레드 규칙이 맞는지 |
+| 같은 봇인데 말투나 기억이 다르다 | profile/memory | 실행 profile, AGENTS/SOUL, session/memory 경계 |
+| 조사 결과와 문서화 결과가 다르다 | role/source | 조사형 근거와 정리형 판단이 분리됐는지 |
+| 수정했는데 공개 화면이 안 바뀐다 | publishing/source of truth | GitHub 원본, WikiDocs 동기화, 공개 page ID 링크 |
+| 반복해서 같은 장애가 난다 | recovery/checklist | FAQ가 아니라 체크리스트/복구 플레이북으로 내려갈 문제인지 |
+
+이 분기를 먼저 통과하면 “왜 안 되지?”가 “어느 레이어부터 볼까?”로 바뀐다.
+
 ## 이 장에서 다루는 문제
 
 | 순서 | 글 | 핵심 질문 |
