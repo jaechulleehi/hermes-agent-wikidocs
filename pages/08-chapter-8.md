@@ -1,6 +1,6 @@
 ## 9장. 체크리스트/마이그레이션/복구 플레이북
 
-![8장 체크리스트와 복구 플레이북 흐름](../assets/images/chapter-heroes/ch08-checklist-migration-recovery-codex.png)
+![9장 체크리스트와 복구 플레이북 흐름](../assets/images/chapter-heroes/ch08-checklist-migration-recovery-codex.webp)
 
 [Hermes Agent](https://wikidocs.net/346055)를 오래 운영하려면 좋은 답변보다 먼저 필요한 것이 있다. 같은 실수를 반복하지 않게 만드는 체크리스트, 시스템을 옮길 때 기준을 잃지 않게 하는 마이그레이션 절차, 문제가 생겼을 때 무엇부터 볼지 정하는 복구 플레이북이다.
 

@@ -1,6 +1,6 @@
-![4장 기억 컨텍스트 프로필 경계를 나누는 구조](../assets/images/chapter-heroes/ch04-memory-context-profile-boundary-codex.png)
-
 ## 4장. AI 에이전트 기억 시스템은 어떻게 설계해야 할까
+
+![4장 기억 컨텍스트 프로필 경계 구조](../assets/images/chapter-heroes/ch04-memory-context-profile-boundary-codex.webp)
 
 AI 개인비서를 오래 쓰다 보면 “왜 이건 기억하고, 저건 또 모를까?”라는 순간이 온다. 이 문제는 모델이 똑똑한가 아닌가보다 기억을 어디에 두고, 어떤 순서로 다시 꺼내는가에 더 가깝다.
 

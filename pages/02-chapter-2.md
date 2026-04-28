@@ -1,6 +1,6 @@
 ## 2장. AI 개인비서 메인 창구 만들기
 
-![2장 AI 개인비서 메인 창구 흐름](../assets/images/chapter-heroes/ch02-ai-assistant-front-door-codex.png)
+![2장 AI 개인비서 메인 창구 흐름](../assets/images/chapter-heroes/ch02-ai-assistant-front-door-codex.webp)
 
 에르메스 에이전트(Hermes Agent)로 AI 팀을 만들 때 먼저 정해야 할 것은 에이전트 숫자가 아니라 **사용자가 어디로 말하느냐**다. 조사형, 정리형, 실행형, 이미지형 에이전트가 있어도 사용자가 매번 “이번 일은 누구에게 맡기지?”를 판단해야 한다면 자동화가 아니라 관리 업무가 하나 더 생긴다.
 

@@ -1,5 +1,7 @@
 ## 7장. WikiDocs/블로그/강의 콘텐츠 시스템
 
+![7장 WikiDocs 블로그 강의 콘텐츠 시스템 흐름](../assets/images/chapter-heroes/ch07-content-system-wikidocs-blog-lecture-codex.webp)
+
 에르메스 에이전트(Hermes Agent)로 조사 결과를 많이 모았다고 바로 좋은 콘텐츠가 되지는 않는다. WikiDocs, 블로그, 강의, 이미지 자산은 같은 내용을 담더라도 역할이 다르다. 7장은 이 차이를 구분하고, 원자료를 공유 가능한 콘텐츠 시스템으로 바꾸는 기준을 다룬다.
 
 앞 장의 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)은 Obsidian LLM Wiki, HALOX Brain, shared-memory 같은 기억층을 다뤘다. 7장은 그 기억층에 쌓인 원장과 조사 결과를 어떻게 WikiDocs 책, 블로그 글, 강의 흐름, 이미지 자산으로 변환할지에 집중한다.

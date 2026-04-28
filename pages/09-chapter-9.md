@@ -1,6 +1,6 @@
 ## 10장. 조직 도입과 AI 에이전트 운영 확장
 
-![조직 도입과 AI 에이전트 운영 확장 흐름](../assets/images/chapter-heroes/ch09-organization-agent-ops-scale-codex.png)
+![조직 도입과 AI 에이전트 운영 확장 흐름](../assets/images/chapter-heroes/ch09-organization-agent-ops-scale-codex.webp)
 
 [Hermes Agent](https://wikidocs.net/346055)를 개인용 AI 개인비서로 쓰는 것과 조직의 업무 자동화 시스템으로 확장하는 것은 다른 문제다. 개인은 하비 하나로도 많은 일을 처리할 수 있지만, 조직에서는 역할, 권한, 기록, 검증, 책임자가 함께 정리되어야 한다.
 

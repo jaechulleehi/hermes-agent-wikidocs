@@ -1,6 +1,6 @@
 ## 8장. 운영 FAQ/실패 패턴/멀티봇 규칙
 
-![7장 운영 FAQ 분류와 멀티봇 호출 규칙](../assets/images/chapter-heroes/ch07-ops-faq-multibot-rules-codex.png)
+![8장 운영 FAQ 분류와 멀티봇 호출 규칙](../assets/images/chapter-heroes/ch07-ops-faq-multibot-rules-codex.webp)
 
 [Hermes Agent](https://wikidocs.net/346055)를 AI 개인비서와 역할형 에이전트 팀으로 운영하면 질문은 기능별로 오지 않는다. Slack에서는 “이거 누가 해야 해?”, “왜 같은 하비인데 다르게 답하지?”, “방울이와 뽀동이를 같이 불러도 되나?”처럼 섞인 질문으로 들어온다. 그래서 운영 FAQ는 답변집이 아니라 문제를 어느 레이어에서 볼지 정하는 라우터여야 한다.
 

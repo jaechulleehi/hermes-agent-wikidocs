@@ -1,6 +1,6 @@
 ## 1장. 왜 AI 챗봇이 아니라 AI 팀인가
 
-![01. 왜 AI 챗봇이 아니라 AI 팀인가](../assets/images/chapter-heroes/ch01-why-ai-team-codex-only.png)
+![01. 왜 AI 챗봇이 아니라 AI 팀인가](../assets/images/chapter-heroes/ch01-why-ai-team-codex-only.webp)
 
 [0장 기초 가이드](https://wikidocs.net/346135)에서 에르메스 에이전트(Hermes Agent)의 공식 GitHub, 설치, OpenClaw 비교, Claude Code/Codex 비교를 확인했다면 이제 질문은 바뀐다. 1장의 답은 분명하다. Hermes Agent는 좋은 답변을 한 번 받는 도구가 아니라, AI 개인비서와 역할형 에이전트로 실제 업무 흐름을 굴리기 위한 운영 구조다.
 
