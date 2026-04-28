@@ -278,6 +278,9 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 - MCP는 언제 필요한가?
 - GitHub CLI, MCP, API 연결은 어떻게 다른가?
 - Notion, Google Workspace, WikiDocs는 어떤 source of truth 기준으로 연결해야 하는가?
+- Hermes Agent 내장 도구와 toolset은 어떻게 분류하고 제한해야 하는가?
+- terminal 도구와 backend는 언제 강하고 언제 위험한가?
+- 도구 실행 결과는 어떻게 검증해야 하는가?
 - 스킬은 언제 만들고 어떻게 관리해야 하는가?
 - always-on gateway는 왜 혼선을 만들기 쉬운가?
 
@@ -289,11 +292,15 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 - `05-hermes-agent-mcp-external-tools.md`
 - `05-github-cli-mcp-api.md`
 - `05-notion-google-workspace-wikidocs-integration.md`
+- `05-hermes-agent-built-in-tools-toolsets.md`
+- `05-hermes-agent-terminal-backend-risk.md`
+- `05-hermes-agent-tool-result-verification.md`
 
 다음 보강 후보:
 
 - `반복 업무를 스킬로 만들지 자동화로 만들지 결정하는 법`
 - `채널/gateway/cron delivery를 함께 점검하는 복구 순서`
+- 공식 Tools & Toolsets docs 변화가 있을 때 내장 도구/toolset/terminal backend 기준 업데이트
 
 ## 5부. 위키에서 콘텐츠와 강의로 확장하기
 

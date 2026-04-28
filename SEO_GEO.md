@@ -94,6 +94,16 @@
 - Hermes Agent MCP
 - Hermes Agent MCP server
 - Hermes Agent add MCP
+- Hermes Agent tools
+- Hermes Agent toolsets
+- Hermes Agent built-in tools
+- Hermes Agent terminal
+- Hermes Agent terminal backend
+- Hermes Agent Docker backend
+- Hermes Agent tool verification
+- Hermes Agent 도구
+- Hermes Agent 내장 도구
+- Hermes Agent 터미널
 - Hermes Agent Skill
 - Hermes Agent skills
 - Hermes Agent skill management
@@ -123,6 +133,9 @@
 - Hermes Agent Docker와 gateway는 언제 필요한가?
 - Hermes Agent는 Slack, Telegram, Discord 중 어떤 채널에서 쓰는 것이 좋은가?
 - Hermes Agent MCP server와 API, CLI 연결은 무엇이 다른가?
+- Hermes Agent 내장 도구와 toolset은 역할별로 어떻게 나눠야 하나?
+- Hermes Agent terminal 도구와 backend는 언제 강하고 언제 위험한가?
+- Hermes Agent 도구 실행 결과는 어떻게 검증해야 하나?
 - GitHub CLI, Notion, Google Workspace, WikiDocs를 Hermes Agent 업무 흐름에 어떻게 연결하나?
 - Hermes Agent Skill은 무엇이고 언제 만들어야 하나?
 - 반복 업무를 AI agent skills로 만드는 기준은 무엇인가?

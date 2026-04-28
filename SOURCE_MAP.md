@@ -76,6 +76,8 @@
 | Checkpoints and rollback | 9장 | destructive operation 전 checkpoint와 `/rollback` 복구 | git/source of truth와 checkpoint 안전망을 나누고, 복구 플레이북 안에서 diff→rollback→검증 순서로 설명 | `09-hermes-agent-checkpoint-rollback-recovery.md` 반영 |
 | Delegation & Parallel Work | 3장/5장 | sub-agent 병렬 작업 | 조사형/정리형/실행형 분리의 공식 기능 기반 | 역할 분리 페이지에 공식 연결 추가 |
 | Use MCP with Hermes | 5장 | 외부 도구 연결 | MCP를 기능이 아니라 업무 흐름 연결 수단으로 설명 | `05-hermes-agent-mcp-external-tools.md` 반영 |
+| Tools & Toolsets | 5장 | web, file, terminal, browser, memory, messaging, MCP 등 도구 묶음 | 내장 도구를 기능 목록이 아니라 역할별 권한/위험도/검증 기준으로 변환 | `05-hermes-agent-built-in-tools-toolsets.md` 반영 |
+| Terminal Backends | 5장/9장 | local, docker, ssh, sandbox 등 실행 위치와 격리 방식 | terminal을 실행 위치/credential 노출/복구 기준으로 설명 | `05-hermes-agent-terminal-backend-risk.md`, 9장 보안 페이지와 연결 |
 | GitHub PR Review Agent/GitHub skills | 5장/9장 | GitHub 작업 자동화 | CLI/MCP/API 연결 방식을 나눠 인증, 로그, 검증 기준으로 설명 | `05-github-cli-mcp-api.md` 반영 |
 | Notion/Google Workspace bundled skills | 5장/6장 | 업무 문서/DB/협업 도구 연결 | source of truth, DB schema, 계정/scope, 공개 채널 기준으로 설명 | `05-notion-google-workspace-wikidocs-integration.md` 반영 |
 | Working with Skills | 6장 | 재사용 절차 관리 | 반복 업무가 Skill이 되는 기준, 역할별 Skill 분리, Skill QA, 공개/내부 Skill 분리 | `06-skills-chapter.md` 및 06-1~06-6 반영 |

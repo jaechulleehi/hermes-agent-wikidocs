@@ -32,6 +32,9 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 | cron | 정해진 시간이나 주기에 fresh session으로 작업을 실행하는 예약 자동화 | prompt가 혼자 실행될 만큼 충분하고, 결과가 어디로 전달되는가 |
 | gateway | 메시징 플랫폼, cron 실행, delivery를 이어주는 always-on 운영 축 | process가 살아 있는 것과 실제 메시지가 도착한 것을 구분했는가 |
 | Daily Briefing Bot | cron, search, summarization, messaging delivery가 묶인 예제 | 뉴스 요약을 넘어 정기 모니터링/신호 분류/후속 실행으로 확장할 수 있는가 |
+| 내장 도구/toolset | web, file, terminal, browser, memory, messaging, MCP 같은 도구 묶음 | 역할별로 필요한 toolset만 열었고 위험 도구는 제한했는가 |
+| terminal backend | local, docker, ssh, sandbox 같은 실행 위치와 격리 방식 | 명령이 어느 환경에서 실행되고 credential이 어디까지 노출되는가 |
+| 도구 실행 검증 | 도구 호출 결과를 다음 판단에 쓰기 전 확인하는 절차 | exit code, diff, 공개 반영, 메시지 delivery, rollback 가능성을 확인했는가 |
 | delegation/subagent | 작업을 하위 에이전트나 별도 실행 단위로 나누는 방식 | 역할 분리와 실행 방식을 섞지 않고 최종 통합자를 정했는가 |
 
 ## 실제 운영 장면
@@ -47,6 +50,9 @@ WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. Git
 - API는 세밀하지만 token scope, pagination, rate limit, retry를 직접 봐야 한다.
 - cron은 혼자 실행되는 fresh session이므로 prompt 안에 필요한 맥락이 있어야 한다.
 - gateway는 항상 켜져 있다는 느낌보다 실제 전달/로그/상태를 함께 봐야 한다.
+- 내장 도구와 toolset은 역할별로 열어야 하며, 모든 도구를 항상 열어두는 것이 좋은 운영은 아니다.
+- terminal 도구는 강력하지만 실행 위치, credential, 삭제/배포 위험, rollback 기준을 함께 봐야 한다.
+- 도구 실행 결과는 exit code만 보지 말고 diff, 공개 반영, delivery, source of truth 기준으로 다시 확인해야 한다.
 - 외부 도구 작업에는 삭제/공개/권한 변경 같은 위험 작업을 분리하는 승인 기준이 필요하다.
 
 5장을 읽을 때 핵심은 “무슨 도구를 붙였나”가 아니다. 같은 작업도 CLI로 즉시 실행할지, MCP tool로 대화 흐름에 붙일지, API로 정기 조회할지, cron으로 자동화할지, 반복 절차를 [Skill](https://wikidocs.net/346235)로 남길지에 따라 필요한 맥락과 검증이 달라진다. 도구가 실패하면 [복구 플레이북](https://wikidocs.net/345918)으로, 반복 절차가 안정되면 6장의 Skill 운영으로 이어진다.
@@ -62,4 +68,4 @@ WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. Git
 
 ## 이어서 읽기
 
-먼저 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)를 읽고, 이어서 [Hermes Agent MCP 연결 기준](https://wikidocs.net/346231), [GitHub CLI와 MCP/API 차이](https://wikidocs.net/346232), [Notion/Google Workspace/WikiDocs 연결 방식](https://wikidocs.net/346233)을 비교하면 도구 연결의 기준이 보인다. 반복 절차는 6장의 [Hermes Agent Skill 운영](https://wikidocs.net/346235)에서, 역할을 실제로 어떻게 움직일지는 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](https://wikidocs.net/346124)에서 이어서 본다.
+먼저 [Google Workspace와 MCP 연동은 왜 오래 걸릴까](https://wikidocs.net/345903)를 읽고, 이어서 [Hermes Agent MCP 연결 기준](https://wikidocs.net/346231), [GitHub CLI와 MCP/API 차이](https://wikidocs.net/346232), [Notion/Google Workspace/WikiDocs 연결 방식](https://wikidocs.net/346233)을 비교하면 도구 연결의 기준이 보인다. 그다음 내장 도구/toolset, terminal backend, 도구 실행 결과 검증 순서로 읽으면 “무엇을 연결할까”에서 “어떻게 안전하게 실행하고 확인할까”로 이어진다. 반복 절차는 6장의 [Hermes Agent Skill 운영](https://wikidocs.net/346235)에서, 역할을 실제로 어떻게 움직일지는 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](https://wikidocs.net/346124)에서 이어서 본다.

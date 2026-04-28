@@ -16,6 +16,7 @@
 - 조사형/정리형/실행형 에이전트를 나누는 기준
 - 메모리/세션/프로필 경계가 흐려질 때 생기는 문제
 - MCP, CLI, API, cron, gateway, Google Workspace, Notion, GitHub, WikiDocs 같은 외부 도구를 업무 흐름에 붙이는 법
+- Hermes Agent 내장 도구, toolset, terminal backend, 도구 실행 결과 검증 기준
 - Hermes Agent Skill로 반복 업무 절차/검증 기준을 남기고 보강하는 법
 - WikiDocs/블로그/강의로 이어지는 콘텐츠 시스템
 - 보안 체크리스트, 위험 명령 승인, gateway 권한, 실행 격리, checkpoint/rollback으로 운영 사고를 줄이는 법
