@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent) Docker와 Gateway는 “내 터미널에서 가끔 실행하는 도구”가 아니라 “항상 받을 수 있는 AI 개인비서”로 운영하고 싶을 때 중요해진다. `Hermes Agent Docker`, `Hermes Agent docker compose`, `Hermes Agent gateway`, `Hermes Agent Slack`을 찾는 독자라면 Docker는 실행 환경을 안정적으로 묶는 방식이고, Gateway는 Slack, Telegram, Discord 같은 메시징 플랫폼과 Hermes Agent를 연결하는 운영 축이라고 이해하면 된다.
 
-처음부터 Docker/Gateway를 붙일 필요는 없다. 특히 gateway는 [always-on gateway 운영 기준](https://wikidocs.net/345906)처럼 process, 인증, delivery target, 로그를 함께 봐야 한다. 기본 CLI chat이 안정되고, provider 설정과 tool 권한을 확인한 뒤, 상시 접속이나 메시징 delivery가 필요해질 때 붙이는 편이 안전하다.
+처음부터 Docker/Gateway를 붙일 필요는 없다. 특히 gateway는 [always-on gateway 운영 기준](https://wikidocs.net/345906)과 [설치 후 기본 검증 순서](https://wikidocs.net/346137)처럼 process, 인증, delivery target, 로그를 함께 봐야 한다. 기본 CLI chat이 안정되고, provider 설정과 tool 권한을 확인한 뒤, 상시 접속이나 메시징 delivery가 필요해질 때 붙이는 편이 안전하다.
 
 ## Docker가 필요한 경우
 
