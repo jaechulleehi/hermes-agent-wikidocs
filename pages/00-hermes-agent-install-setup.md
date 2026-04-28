@@ -28,6 +28,20 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 
 설치 전 단계에서 모든 것을 완벽히 결정할 필요는 없다. 다만 “CLI 실습”인지 “상시 gateway 운영”인지가 다르면 검증 순서가 달라진다는 점은 알아야 한다.
 
+## 서비스형 AI 도구와 Hermes Agent는 다르다
+
+원본 커뮤니티 질문에는 Genspark/Manus 같은 서비스형 AI 도구와 Hermes Agent를 같은 선택지로 비교하는 흐름도 있었다. 둘 다 “AI가 일을 대신한다”는 느낌은 비슷하지만 운영 기준은 다르다.
+
+서비스형 AI 도구는 가입하면 바로 쓸 수 있고, 검색/브라우징/문서 생성이 한 화면에 묶여 있어 입문 장벽이 낮다. 대신 내부 도구, Slack gateway, local file, GitHub source of truth, profile별 memory, cron 같은 운영 경계를 직접 설계하기는 어렵다. Hermes Agent는 설치와 설정이 더 필요하지만, 내가 정한 provider, toolset, memory, Skill, gateway, cron을 조합해 “나만의 AI 업무 자동화 환경”을 만드는 쪽에 가깝다.
+
+| 선택지 | 잘 맞는 경우 | 조심할 점 |
+|---|---|---|
+| Genspark/Manus 같은 서비스형 AI | 빠른 조사, 자료 생성, 비개발자 즉시 사용 | 내부 권한/로그/source of truth를 세밀하게 통제하기 어렵다 |
+| ChatGPT/Claude/Codex 단독 사용 | 대화형 작업, 코드/문서 초안, 빠른 실험 | 팀 채널/gateway/cron/역할형 에이전트 운영은 별도 설계가 필요하다 |
+| Hermes Agent | Slack AI 비서, 반복 업무 자동화, 역할형 에이전트, 로컬/외부 도구 연결 | 설치, provider/config, 권한, 로그, 복구 기준을 직접 잡아야 한다 |
+
+입문자는 “어느 도구가 더 똑똑한가”보다 “내가 원하는 것이 즉시 사용 가능한 서비스인가, 오래 운영할 수 있는 AI 개인비서 환경인가”를 먼저 정하면 된다.
+
 ## 설치 환경을 고르는 기준
 
 OpenClaw 커뮤니티 대화에서 가장 많이 반복된 질문은 “어디에 설치해야 안전하고 오래 쓸 수 있는가”였다. Hermes Agent도 마찬가지다. 설치 명령보다 먼저 운영 환경을 정해야 한다.

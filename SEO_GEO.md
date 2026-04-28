@@ -72,6 +72,8 @@
 - Hermes Agent messaging
 - Hermes Agent Webhook
 - Hermes Agent 이메일
+- 카카오톡 AI 비서
+- KakaoTalk AI bot
 - Hermes Agent vs OpenClaw
 - Hermes Agent Claude Code 비교
 - Hermes Agent Codex 비교
@@ -105,6 +107,8 @@
 - AI 에이전트 도입
 - AI 에이전트 도입 사례
 - AI 에이전트 운영 사례
+- Genspark Manus 비교
+- 서비스형 AI 도구 비교
 - Slack AI 비서
 - Obsidian AI 워크플로우
 - MCP 연동
@@ -123,6 +127,10 @@
 - Hermes Agent terminal backend
 - Hermes Agent Docker backend
 - Hermes Agent tool verification
+- Hermes Agent 웹 검색
+- DuckDuckGo DDGS AI 리서치
+- SearXNG AI 검색
+- Brave Tavily Perplexity 비교
 - Hermes Agent 도구
 - Hermes Agent 내장 도구
 - Hermes Agent 터미널
