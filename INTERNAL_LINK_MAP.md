@@ -96,7 +96,7 @@
 - Slack 스레드 업무 분배 → `33-slack-thread-harvey-delegation-case.md`
 - 이미지형 에이전트 운영 → `28-how-image-agent-creates-wikidocs-visuals.md`
 
-## 2.4 4장: 기억/컨텍스트/프로필 경계
+## 2.4 4장: AI 에이전트 기억 시스템
 
 4장은 오래 굴러가는 AI 팀의 기억 체계를 설명한다.
 
@@ -104,16 +104,16 @@
 
 | 현재 페이지 | 다음 링크 |
 |---|---|
-| `04-chapter-4.md` | `03-why-same-harvey-feels-like-different-memory.md` |
-| `03-why-same-harvey-feels-like-different-memory.md` | `04-why-tools-cannot-read-files-that-exist.md` |
-| `04-why-tools-cannot-read-files-that-exist.md` | `13-what-to-do-with-legacy-while-keeping-current-truth-clear.md` |
-| `13-what-to-do-with-legacy-while-keeping-current-truth-clear.md` | `26-why-agents-get-fuzzy-in-long-conversations-and-how-hermes-holds-up.md` |
-| `26-why-agents-get-fuzzy-in-long-conversations-and-how-hermes-holds-up.md` | `05-chapter-5.md` |
+| `04-chapter-4.md` | `04-01-what-should-ai-assistant-remember.md` |
+| `04-01-what-should-ai-assistant-remember.md` | `04-02-session-memory-profile-boundary.md` |
+| `04-02-session-memory-profile-boundary.md` | `04-06-openclaw-memory-migration.md` |
+| `04-06-openclaw-memory-migration.md` | `04-08-context-compaction-handoff.md` |
+| `04-08-context-compaction-handoff.md` | `05-chapter-5.md` |
 
 권장 회귀 링크:
 
-- source of truth 정리 → `13-what-to-do-with-legacy-while-keeping-current-truth-clear.md`
-- 장기 운영에서 흐려지는 컨텍스트 → `26-why-agents-get-fuzzy-in-long-conversations-and-how-hermes-holds-up.md`
+- source of truth 정리 → `04-06-openclaw-memory-migration.md`
+- 장기 운영에서 흐려지는 컨텍스트 → `04-08-context-compaction-handoff.md`
 - 복구 순서와 연결 → `20-why-recovery-playbooks-are-about-order-not-just-docs.md`
 
 ## 2.5 5장: 외부 도구/MCP/자동화 운영
@@ -144,8 +144,8 @@
 
 | 현재 페이지 | 다음 링크 |
 |---|---|
-| `06-chapter-6.md` | `11-how-to-use-obsidian-llm-wiki-in-real-operations.md` |
-| `11-how-to-use-obsidian-llm-wiki-in-real-operations.md` | `07-why-we-write-the-wiki-first.md` |
+| `06-chapter-6.md` | `04-05-obsidian-llm-wiki-external-memory.md` |
+| `04-05-obsidian-llm-wiki-external-memory.md` | `07-why-we-write-the-wiki-first.md` |
 | `07-why-we-write-the-wiki-first.md` | `08-why-good-research-does-not-automatically-become-a-good-blog.md` |
 | `08-why-good-research-does-not-automatically-become-a-good-blog.md` | `28-how-image-agent-creates-wikidocs-visuals.md` |
 | `28-how-image-agent-creates-wikidocs-visuals.md` | `07-chapter-7.md` |
@@ -193,7 +193,7 @@
 
 - OpenClaw 전환 이유 → `01-why-we-moved-from-openclaw-to-hermes.md`
 - always-on gateway 혼선 → `12-always-on-gateway-is-more-confusing-than-it-looks.md`
-- 현재 기준/source of truth → `13-what-to-do-with-legacy-while-keeping-current-truth-clear.md`
+- 현재 기준/source of truth → `04-06-openclaw-memory-migration.md`
 
 ## 2.9 9장: 조직 도입과 AI 에이전트 운영 확장
 

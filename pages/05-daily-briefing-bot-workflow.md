@@ -1,6 +1,6 @@
 ![Daily Briefing Bot이 cron fresh session delivery로 이어지는 자동화 패턴](../assets/how-image-agent-creates-wikidocs-visuals/ch5-4-daily-briefing-bot-pattern-codex.png)
 
-## Daily Briefing Bot은 어떤 업무 자동화 패턴일까
+## Hermes Agent cron과 Daily Briefing Bot은 어떻게 작동할까
 
 Daily Briefing Bot은 단순한 뉴스 요약 예제가 아니다. Hermes Agent에서 반복 업무를 자동화할 때 필요한 기본 패턴을 보여준다. 정해진 시간에 fresh session이 열리고, 필요한 자료를 찾고, 판단 기준에 맞게 요약하고, 정해진 대상에게 전달한다.
 
@@ -27,6 +27,12 @@ Daily Briefing Bot은 단순한 뉴스 요약 예제가 아니다. Hermes Agent�
 cron job은 사람이 옆에서 설명해 주지 않는다. 그래서 prompt는 self-contained해야 한다. 어떤 파일을 먼저 볼지, 어떤 기준으로 신호를 고를지, 결과를 어디로 보낼지, 민감정보를 어떻게 다룰지까지 포함해야 한다.
 
 나쁜 cron prompt는 “오늘도 정리해줘”처럼 짧다. 좋은 cron prompt는 목적, 입력 출처, 제외 기준, 출력 형식, delivery target, 실패 시 보고 기준을 갖는다.
+
+## 공식 기준 mini 정의: Hermes Agent cron
+
+Hermes Agent cron은 정해진 시간이나 주기에 작업을 실행하는 예약 자동화다. 중요한 점은 cron이 기존 대화의 연장이 아니라 fresh session으로 열린다는 것이다.
+
+따라서 cron을 만들 때는 schedule, prompt, 필요한 도구, context source, delivery target, 실패 시 보고 기준을 한 세트로 설계해야 한다. Daily Briefing Bot은 이 기준을 가장 단순하게 보여주는 예제다. 정해진 시간에 새 정보를 찾고, 기준에 맞게 요약하고, 메시징 플랫폼으로 전달한다.
 
 ## 실패할 때 먼저 볼 것
 

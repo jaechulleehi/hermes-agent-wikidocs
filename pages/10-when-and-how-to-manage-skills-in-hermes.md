@@ -33,6 +33,12 @@ Hermes Agent의 skill은 “자주 쓰는 프롬프트 모음”이 아니다. �
 
 이 구분은 [memory/profile/session](https://wikidocs.net/345899) 경계와 직접 연결된다. 모든 것을 skill로 만들면 절차가 비대해지고, 모든 것을 memory에 넣으면 기억이 흐려진다.
 
+## 공식 기준 mini 정의: skill과 cron의 차이
+
+Hermes Agent의 skill은 “다음에도 같은 방식으로 처리해야 하는 절차”를 남기는 장치다. 반면 cron은 “정해진 시간에 독립 실행해야 하는 작업”을 예약하는 장치다.
+
+둘은 함께 쓸 수 있다. 예를 들어 WikiDocs 검증 절차는 skill로 남기고, 매일 아침 콘텐츠 신호를 찾는 일은 cron으로 돌릴 수 있다. 다만 cron job이 skill을 불러 쓰더라도 prompt는 fresh session에서 혼자 이해될 만큼 충분해야 한다.
+
 ## 운영 기준
 
 1. 같은 실수가 두 번 반복되면 skill 보강 후보로 본다.

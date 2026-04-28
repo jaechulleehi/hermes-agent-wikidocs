@@ -232,10 +232,10 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 
 현재 포함 후보:
 
-- `03-why-same-harvey-feels-like-different-memory.md`
-- `04-why-tools-cannot-read-files-that-exist.md`
-- `26-why-agents-get-fuzzy-in-long-conversations-and-how-hermes-holds-up.md`
-- `13-what-to-do-with-legacy-while-keeping-current-truth-clear.md`
+- `04-01-what-should-ai-assistant-remember.md`
+- `04-02-session-memory-profile-boundary.md`
+- `04-08-context-compaction-handoff.md`
+- `04-06-openclaw-memory-migration.md`
 
 새로 필요한 글:
 
@@ -285,7 +285,7 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 
 - `07-why-we-write-the-wiki-first.md`
 - `08-why-good-research-does-not-automatically-become-a-good-blog.md`
-- `11-how-to-use-obsidian-llm-wiki-in-real-operations.md`
+- `04-05-obsidian-llm-wiki-external-memory.md`
 
 새로 필요한 글:
 
@@ -395,14 +395,14 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 | `19-why-bangwooli-and-ppodongi-fail-differently.md` | 역할별 실패 차이 | 3장 | 유지, 내부명은 후반으로 이동 |
 | `16-why-research-agents-rush-to-conclusions.md` | 조사형 실패 | 3장 또는 7장 | 3장 권장 |
 | `17-why-writing-agents-produce-polished-but-weak-drafts.md` | 정리형 실패 | 3장 또는 6장 | 3장 권장 |
-| `03-why-same-harvey-feels-like-different-memory.md` | 기억 층위 | 4장 | 제목 대중화 |
-| `04-why-tools-cannot-read-files-that-exist.md` | 파일/도구 경계 | 4장 | 유지 |
-| `26-why-agents-get-fuzzy-in-long-conversations-and-how-hermes-holds-up.md` | 컨텍스트 부패 | 4장 | 유지 |
-| `13-what-to-do-with-legacy-while-keeping-current-truth-clear.md` | 현재 기준점 | 4장 또는 8장 | 4장 권장 |
+| `04-01-what-should-ai-assistant-remember.md` | 기억 층위 | 4장 | 제목 대중화 |
+| `04-02-session-memory-profile-boundary.md` | 파일/도구 경계 | 4장 | 유지 |
+| `04-08-context-compaction-handoff.md` | 컨텍스트 부패 | 4장 | 유지 |
+| `04-06-openclaw-memory-migration.md` | 현재 기준점 | 4장 또는 8장 | 4장 권장 |
 | `05-why-google-workspace-integration-takes-longer-than-expected.md` | 외부 도구 연동 | 5장 | 유지 |
 | `10-when-and-how-to-manage-skills-in-hermes.md` | 스킬 운영 | 5장 | 유지 |
 | `12-always-on-gateway-is-more-confusing-than-it-looks.md` | 게이트웨이 운영 | 5장 | 유지 |
-| `11-how-to-use-obsidian-llm-wiki-in-real-operations.md` | 위키 운영 | 6장 | 5장에서 6장으로 이동 권장 |
+| `04-05-obsidian-llm-wiki-external-memory.md` | 위키 운영 | 6장 | 5장에서 6장으로 이동 권장 |
 | `07-why-we-write-the-wiki-first.md` | 위키 우선 | 6장 | 유지 |
 | `08-why-good-research-does-not-automatically-become-a-good-blog.md` | 콘텐츠 전환 | 6장 | 유지 |
 | `14-most-common-hermes-ops-questions-and-how-to-think.md` | FAQ | 7장 | 유지 |
@@ -513,7 +513,7 @@ AI 팀이 오래 굴러가려면 대화 하나에 모든 기억을 맡기면 안
 1. 이 문서를 기준으로 `TOC.md`의 장 구조를 8장 또는 9장 체계로 확정한다.
 2. 1장 앞에 입문용 개념 글 2개를 추가한다.
 3. 2장의 역할형 에이전트 글 일부를 별도 장으로 분리한다.
-4. `11-how-to-use-obsidian-llm-wiki-in-real-operations.md`를 콘텐츠 시스템 장으로 이동한다.
+4. `04-05-obsidian-llm-wiki-external-memory.md`를 콘텐츠 시스템 장으로 이동한다.
 5. 6장/7장/8장의 실패 패턴, FAQ, 체크리스트 경계를 정리한다.
 
 ### 2차: 제목 대중화
@@ -926,6 +926,15 @@ Daily Briefing Bot은 한 페이지로만 다루기보다 세 군데에서 재�
 - 하망이가 이미지 제작 방향을 잡고 WikiDocs 본문 이미지로 연결하는 흐름
 - SEO/GEO 치트시트를 이미지, QA, skill, LinkedIn 본문, WikiDocs 기록으로 자산화하는 흐름
 - 실제 케이스에서 나온 FAQ를 운영 규칙과 체크리스트로 내리는 방식
+
+## 22. 4장 기억 시스템 개편 기준
+
+4장은 `04. AI 에이전트 기억 시스템은 어떻게 설계해야 할까`로 확장한다. 핵심은 session/memory/profile 같은 내부 기억층에 머무르지 않고, AGENTS.md/USER.md/shared-memory/Obsidian LLM Wiki/OpenViking/RAG까지 이어지는 체계적 지식층을 설명하는 것이다.
+
+- Obsidian은 콘텐츠 시스템의 하위 도구가 아니라 외부 장기 기억층이다.
+- OpenViking/RAG는 memory 대체물이 아니라 필요한 지식을 회수하는 기억 강화층이다.
+- 하비는 정보를 memory/shared-memory/Obsidian/skill/session_search/OpenViking 중 어디에 둘지 판단하는 기억 오케스트레이터다.
+- 6장은 Obsidian 자체 설명이 아니라, 기억층에서 나온 지식을 WikiDocs/블로그/강의로 변환하는 콘텐츠 시스템으로 다룬다.
 
 ## 22. 현재 결론
 

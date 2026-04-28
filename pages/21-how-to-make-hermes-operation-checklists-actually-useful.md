@@ -52,7 +52,7 @@ WikiDocs 장 리라이트 작업의 체크리스트는 이렇게 짧아야 한�
 | shared-memory | 팀 공통 규칙과 handoff 기준일 때 |
 | WikiDocs | 독자에게 공개 가능한 운영 기준일 때 |
 
-memory에는 장기 선호와 안정적인 사실만 남긴다. 작업 진행 상황이나 임시 로그는 memory가 아니라 session/search, GitHub, shared-memory에서 회수하는 편이 좋다. 이 기준은 [기억/컨텍스트/프로필 경계](https://wikidocs.net/345902)와 직접 연결된다.
+memory에는 장기 선호와 안정적인 사실만 남긴다. 작업 진행 상황이나 임시 로그는 memory가 아니라 session/search, GitHub, shared-memory에서 회수하는 편이 좋다. 이 기준은 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)와 직접 연결된다.
 
 ## 운영 기준
 

@@ -17,6 +17,19 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 | Daily Briefing Bot | 뉴스 요약 예제다 | fresh session 기반 자동화 패턴이다 |
 | 실행 방식 | 에이전트를 나누면 알아서 운영된다 | 직접 처리/profile/delegation/subagent/cron을 구분한다 |
 
+## 공식 docs 기능별 mini 정의
+
+공식 Hermes Agent 문서를 5장에서 그대로 옮기지는 않는다. 대신 독자가 기능명을 검색했을 때 바로 이해할 수 있도록 “공식 기능의 뜻”과 “실제 운영에서 봐야 할 기준”을 나눠서 읽게 한다.
+
+| 기능 | 공식 기준으로 보는 뜻 | 실제 운영에서의 질문 |
+|---|---|---|
+| MCP | 외부 서비스와 도구를 Hermes Agent 대화 흐름에 연결하는 방식 | 어떤 계정/권한/scope로 연결했고, 위험 작업은 어디서 멈출 것인가 |
+| cron | 정해진 시간이나 주기에 fresh session으로 작업을 실행하는 예약 자동화 | prompt가 혼자 실행될 만큼 충분하고, 결과가 어디로 전달되는가 |
+| skill | 반복 절차, 도구 사용법, 실패 패턴, 검증 기준을 재사용하는 운영 지식 | 이번 일은 기억할 선호인가, 반복 절차인가, 예약 실행인가 |
+| gateway | 메시징 플랫폼, cron 실행, delivery를 이어주는 always-on 운영 축 | process가 살아 있는 것과 실제 메시지가 도착한 것을 구분했는가 |
+| Daily Briefing Bot | cron, search, summarization, messaging delivery가 묶인 예제 | 뉴스 요약을 넘어 정기 모니터링/신호 분류/후속 실행으로 확장할 수 있는가 |
+| delegation/subagent | 작업을 하위 에이전트나 별도 실행 단위로 나누는 방식 | 역할 분리와 실행 방식을 섞지 않고 최종 통합자를 정했는가 |
+
 ## 실제 운영 장면
 
 WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. GitHub가 source of truth였기 때문에 파일 수정 후 commit/push가 필요했고, WikiDocs는 공개 배포 채널로 동기화됐다. 본문 링크가 `.md`로 남아 WikiDocs에서 제대로 동작하지 않자, WikiDocs page ID를 확인해 공개 URL로 바꾸는 작업도 필요했다.
@@ -31,7 +44,7 @@ WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. Git
 - gateway는 항상 켜져 있다는 느낌보다 실제 전달/로그/상태를 함께 봐야 한다.
 - 외부 도구 작업에는 삭제/공개/권한 변경 같은 위험 작업을 분리하는 승인 기준이 필요하다.
 
-이 기준은 [기억/컨텍스트/프로필 경계](https://wikidocs.net/345902)와 이어진다. 도구 자동화가 실패할 때도 많은 원인은 모델이 아니라 profile, 권한, 경로, source of truth 경계에 있다.
+이 기준은 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)와 이어진다. 도구 자동화가 실패할 때도 많은 원인은 모델이 아니라 profile, 권한, 경로, source of truth 경계에 있다.
 
 ## 다음 장으로 가기 전 체크 질문
 

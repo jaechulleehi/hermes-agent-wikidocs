@@ -35,17 +35,17 @@
 |---|---|---|---|---|
 | 01 | `01-why-we-moved-from-openclaw-to-hermes.md` | 1장/8장 | OpenClaw에서 Hermes로 넘어온 배경 | 왜 넘어왔는지와 어떻게 안전하게 이사하는지 분리 |
 | 02 | `02-why-harvey-is-the-front-door.md` | 2장 | 메인 창구를 하비로 둔 이유 | 하비보다 AI 개인비서 메인 창구 개념을 먼저 설명 |
-| 03 | `03-why-same-harvey-feels-like-different-memory.md` | 4장 | 같은 비서인데 기억이 다르게 느껴지는 문제 | session/memory/profile/source of truth 구분 강화 |
-| 04 | `04-why-tools-cannot-read-files-that-exist.md` | 4장 | 파일은 있는데 도구가 못 읽는 문제 | iCloud/Obsidian/도구 권한/경로 문제를 체크리스트화 |
+| 03 | `04-01-what-should-ai-assistant-remember.md` | 4장 | 같은 비서인데 기억이 다르게 느껴지는 문제 | session/memory/profile/source of truth 구분 강화 |
+| 04 | `04-02-session-memory-profile-boundary.md` | 4장 | 파일은 있는데 도구가 못 읽는 문제 | iCloud/Obsidian/도구 권한/경로 문제를 체크리스트화 |
 | 05 | `05-why-google-workspace-integration-takes-longer-than-expected.md` | 5장 | Google Workspace 연동이 오래 걸린 경험 | API보다 권한, 계정, 범위 조율이 핵심임을 강조 |
 | 06 | `06-how-to-turn-stumbles-into-checklists.md` | 8장 | 삽질을 체크리스트로 바꾸는 방식 | 모든 시행착오를 운영 자산으로 바꾸는 기준 페이지화 |
 | 07 | `07-why-we-write-the-wiki-first.md` | 6장 | 위키를 먼저 쓰고 블로그/강의를 나중에 뽑는 이유 | 위키를 source note hub로 설명 |
 | 08 | `08-why-good-research-does-not-automatically-become-a-good-blog.md` | 6장 | 좋은 조사 결과가 바로 좋은 글이 되지 않는 문제 | 조사형→정리형→콘텐츠형 흐름을 강화 |
 | 09 | `09-hermes-is-an-operating-system-not-just-a-chatbot.md` | 1장 | Hermes를 챗봇이 아니라 운영 시스템으로 본 관점 | 책의 핵심 관점 페이지로 격상 |
 | 10 | `10-when-and-how-to-manage-skills-in-hermes.md` | 5장 | 스킬을 언제 만들고 관리할지 | 스킬 vs cron vs 자동화 판단 기준 추가 |
-| 11 | `11-how-to-use-obsidian-llm-wiki-in-real-operations.md` | 6장 | Obsidian LLM Wiki 실전 운영 | 위키/메모리/콘텐츠 시스템 연결 강화 |
+| 11 | `04-05-obsidian-llm-wiki-external-memory.md` | 6장 | Obsidian LLM Wiki 실전 운영 | 위키/메모리/콘텐츠 시스템 연결 강화 |
 | 12 | `12-always-on-gateway-is-more-confusing-than-it-looks.md` | 5장/8장 | always-on gateway 혼선 | gateway status, cron, delivery 문제 복구 기준화 |
-| 13 | `13-what-to-do-with-legacy-while-keeping-current-truth-clear.md` | 4장/8장 | 과거 유산과 현재 기준점 정리 | OpenClaw 잔여물/source of truth 정리와 연결 |
+| 13 | `04-06-openclaw-memory-migration.md` | 4장/8장 | 과거 유산과 현재 기준점 정리 | OpenClaw 잔여물/source of truth 정리와 연결 |
 | 14 | `14-most-common-hermes-ops-questions-and-how-to-think.md` | 7장 | Hermes 운영 FAQ | FAQ를 장별 질문/답변으로 재분산 가능 |
 | 15 | `15-why-multibot-threads-get-noisy.md` | 7장 | 멀티봇 스레드가 시끄러워지는 문제 | Slack/Telegram/Discord 호출 규칙과 연결 |
 | 16 | `16-why-research-agents-rush-to-conclusions.md` | 3장 | 조사형 에이전트가 결론을 서두르는 문제 | 근거/해석/가설 구분 체크리스트 추가 |
@@ -58,7 +58,7 @@
 | 23 | `23-where-bangwooli-research-agent-is-strong-and-where-it-wobbles.md` | 3장 | 조사형 에이전트의 강점과 흔들림 | 조사 요청 예시/나쁜 요청 예시 추가 |
 | 24 | `24-where-ppodongi-organization-agent-is-strong-and-where-it-wobbles.md` | 3장 | 정리형 에이전트의 강점과 흔들림 | 입력 자료/목적/독자 기준 추가 |
 | 25 | `25-why-openclaw-to-hermes-needed-a-migration-checklist.md` | 8장 | OpenClaw→Hermes 마이그레이션 체크리스트 필요성 | 실제 이사 방법 페이지로 보강 |
-| 26 | `26-why-agents-get-fuzzy-in-long-conversations-and-how-hermes-holds-up.md` | 4장 | 긴 대화와 컨텍스트 부패 | context compaction/source of truth 운영 기준 추가 |
+| 26 | `04-08-context-compaction-handoff.md` | 4장 | 긴 대화와 컨텍스트 부패 | context compaction/source of truth 운영 기준 추가 |
 | 27 | `27-why-agent-adoption-fails-in-operations.md` | 9장 | 초도 도입 조직이 운영에서 무너지는 이유 | 조직 도입 체크리스트와 온보딩 기준으로 확장 |
 
 ## 4. Hermes Agent 공식 docs 매핑
@@ -166,7 +166,14 @@
 - 다음 글로 이어지는 연결 문장이 있는가?
 - 실제 운영 케이스라면 발행 기준, 민감정보 제거 기준, 재사용 체크리스트가 들어가는가?
 
-## 10. 현재 결론
+## 10. 4장 기억 시스템 개편 메모
+
+- 4장은 `AI 에이전트 기억 시스템은 어떻게 설계해야 할까`로 확장했다.
+- Obsidian LLM Wiki는 6장 콘텐츠 시스템이 아니라 4장 외부 장기 기억층으로 이동했다.
+- OpenViking/RAG는 memory를 대체하는 기능이 아니라 Obsidian/shared-memory에 쌓인 지식을 회수하는 외부 메모리 강화층으로 설명한다.
+- 하비는 단순 라우터가 아니라 memory/shared-memory/Obsidian/skill/session_search/OpenViking 중 어디에 정보를 둘지 판단하는 기억 오케스트레이터로 다룬다.
+
+## 11. 현재 결론
 
 현재 책의 기초 구조는 좋다. 다만 아직 “배치”가 끝난 단계에 가깝고, 최종 품질은 각 글 안에 실제 경험과 시행착오를 얼마나 잘 넣느냐에 달려 있다.
 
