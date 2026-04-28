@@ -74,4 +74,4 @@ memory에는 장기 선호와 안정적인 사실만 남긴다. 작업 진행 �
 
 ## 이어서 읽기
 
-운영 체크리스트 다음에는 보안 체크리스트가 필요하다. 이어서 Hermes Agent 보안 체크리스트, 위험 명령 승인, gateway 권한과 실행 격리 기준을 읽는다.
+운영 체크리스트 다음에는 보안 체크리스트가 필요하다. 이어서 [Hermes Agent 보안 체크리스트](https://wikidocs.net/346259), [위험 명령 승인](https://wikidocs.net/346260), [gateway 권한과 실행 격리](https://wikidocs.net/346261) 기준을 읽는다.

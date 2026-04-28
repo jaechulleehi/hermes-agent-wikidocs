@@ -75,4 +75,4 @@ rollback은 끝이 아니라 중간 단계다. 되돌린 뒤에는 아래를 다
 
 ## 다음 글
 
-checkpoint와 rollback까지 확인했다면, OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 하는지 마이그레이션 기준으로 이어진다.
+checkpoint와 rollback까지 확인했다면, [OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 하는지](https://wikidocs.net/345920) 마이그레이션 기준으로 이어진다.

@@ -64,4 +64,4 @@ gateway를 켠다면 필요하다. CLI로 혼자 쓰는 것과 메시징 플랫�
 
 ## 다음 글
 
-다음에는 위험 명령 승인, YOLO mode, permanent allowlist를 운영에서 어떻게 다룰지 본다.
+다음에는 [위험 명령 승인, YOLO mode, permanent allowlist](https://wikidocs.net/346260)를 운영에서 어떻게 다룰지 본다.

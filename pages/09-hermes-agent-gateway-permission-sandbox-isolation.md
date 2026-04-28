@@ -85,4 +85,4 @@ MCP server는 외부 도구를 연결하는 subprocess다. 필요 없는 host en
 
 ## 다음 글
 
-권한과 격리 기준을 잡았다면, 복구 단계에서는 checkpoint와 rollback을 어떻게 쓸지 봐야 한다.
+권한과 격리 기준을 잡았다면, 복구 단계에서는 [checkpoint와 rollback](https://wikidocs.net/346262)을 어떻게 쓸지 봐야 한다.

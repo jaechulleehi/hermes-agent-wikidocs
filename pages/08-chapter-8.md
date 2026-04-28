@@ -51,4 +51,4 @@ OpenClaw에서 Hermes로 넘어올 때도 핵심은 이름 변경이 아니었�
 
 ## 이어서 읽기
 
-시행착오를 운영 자산으로 바꾸는 방법은 [시행착오를 운영 체크리스트로 바꾸는 법](https://wikidocs.net/345917)에서 시작한다. 복구 순서는 [복구 플레이북은 왜 문서보다 순서가 중요할까](https://wikidocs.net/345918), 마이그레이션 기준은 [OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](https://wikidocs.net/345920)에서 이어서 본다.
+시행착오를 운영 자산으로 바꾸는 방법은 [시행착오를 운영 체크리스트로 바꾸는 법](https://wikidocs.net/345917)에서 시작한다. 복구 순서는 [복구 플레이북은 왜 문서보다 순서가 중요할까](https://wikidocs.net/345918), 보안 경계는 [Hermes Agent 보안 체크리스트](https://wikidocs.net/346259), 되돌릴 기준점은 [checkpoint와 rollback](https://wikidocs.net/346262), 마이그레이션 기준은 [OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](https://wikidocs.net/345920)에서 이어서 본다.
