@@ -2,7 +2,7 @@
 
 Hermes Agent에서 일을 나눈다는 말은 두 층으로 봐야 한다. 하나는 **어떤 역할이 필요한가**이고, 다른 하나는 **그 역할을 어떤 방식으로 실행시킬 것인가**다.
 
-![Hermes Agent 일을 나누는 네 가지 실행 방식](../assets/images/chapter-heroes/ch5-4-four-ways-to-assign-work-codex.webp)
+![Hermes Agent 일을 나누는 네 가지 실행 방식](../assets/images/chapter-heroes/ch5-4-four-ways-to-assign-work-codex.png)
 
 [역할형 에이전트](https://wikidocs.net/345925)를 나누는 기준은 조사형/정리형/실행형처럼 업무 성격을 구분하는 일이다. 반면 profile 직접 호출, delegation, subagent, cron은 그 역할을 실제로 움직이는 실행 방식이다. 이 둘을 섞어 생각하면 “누구에게 맡길까”와 “어떻게 돌릴까”가 한꺼번에 흐려진다.
 

@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent)의 도구 시스템은 “무엇을 할 수 있는가”보다 “어떤 권한으로 어떤 환경에서 실행되는가”를 먼저 봐야 한다. [공식 Tools & Toolsets 문서](https://hermes-agent.nousresearch.com/docs/user-guide/features/tools)는 web search, terminal, file editing, browser automation, media, memory, delegation, cron, messaging delivery, MCP server tools 같은 built-in tools가 toolset 단위로 묶인다고 설명한다. 도구를 열기 전에는 [Hermes Agent MCP 연결 기준](https://wikidocs.net/346231)과 권한 범위를 함께 봐야 한다.
 
-![Hermes Agent 내장 도구와 toolset 분류](../assets/images/chapter-heroes/ch5-8-built-in-tools-toolsets-codex.webp)
+![Hermes Agent 내장 도구와 toolset 분류](../assets/images/chapter-heroes/ch5-8-built-in-tools-toolsets-codex.png)
 
 이 장의 목적은 도구 목록을 외우는 것이 아니다. AI 개인비서가 어떤 일을 맡았을 때 web 도구가 필요한지, terminal/file 도구가 필요한지, browser/vision이 필요한지, cron이나 send_message처럼 자동화/전달 도구가 필요한지를 구분하는 기준을 잡는 것이다.
 
