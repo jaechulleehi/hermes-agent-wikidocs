@@ -129,7 +129,7 @@ assets/how-image-agent-creates-wikidocs-visuals/ch10-1-hamangi-image-production-
 
 `pages/`에서 `assets/`로 가는 상대 경로를 확인한다. 보통 페이지 파일에서는 `../assets/...` 형태가 된다.
 
-## 운영 기준
+## 판단 기준
 
 - 이미지형 에이전트는 장식 담당이 아니라 메시지 압축 담당이다.
 - 본문 메시지가 불명확하면 이미지 프롬프트를 쓰지 않는다.
@@ -147,11 +147,3 @@ assets/how-image-agent-creates-wikidocs-visuals/ch10-1-hamangi-image-production-
 ### 이미지는 꼭 모든 페이지에 필요할까요?
 
 아니다. 모든 페이지에 이미지를 넣는 것보다, 독자가 헷갈릴 개념이나 장 전환 지점에 넣는 것이 좋다. 이미지가 본문 이해를 돕지 않으면 장식이 된다.
-
-### 이미지가 마음에 들면 바로 발행해도 되나요?
-
-아니다. 시각적으로 좋아도 본문 메시지와 어긋나면 수정해야 한다. WikiDocs용 이미지는 페이지 제목, 첫 문단, 독자 문제와 맞아야 한다.
-
-## 이어서 읽기
-
-이미지 제작이 콘텐츠 운영 흐름 안에서 어떻게 쓰이는지는 [하망이와 WikiDocs 본문 이미지를 만드는 법](https://wikidocs.net/345989)에서 더 자세히 본다. 자동화에서 발행까지 이어지는 사례는 [크론 조사에서 WikiDocs 발행까지 이어지는 AI 업무 자동화 케이스](https://wikidocs.net/345992)로 이어진다.
