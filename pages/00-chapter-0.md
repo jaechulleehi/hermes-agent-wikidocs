@@ -1,6 +1,6 @@
 ## 0장. 에르메스 에이전트(Hermes Agent) 기초 가이드
 
-에르메스 에이전트(Hermes Agent)를 처음 시작할 때 가장 중요한 것은 설치 명령을 빨리 따라 하는 것이 아니라, **내 업무에 어떤 순서로 붙일지**를 정하는 것이다. CLI, provider, memory, Skill, cron, MCP, gateway는 모두 강력하지만 한꺼번에 켜면 문제 원인을 찾기 어렵다.
+에르메스 에이전트(Hermes Agent)를 시작할 때 설치 명령보다 먼저 정해야 할 것은 **내 업무에 어떤 순서로 붙일지**다. CLI, provider, memory, Skill, cron, MCP, gateway는 모두 강력하지만 한꺼번에 켜면 문제 원인을 찾기 어렵다.
 
 0장은 기능 소개 장이 아니다. Hermes Agent를 실제 AI 개인비서와 업무 자동화 환경으로 쓰기 전에, 무엇을 먼저 확인하고 어디까지 확장할지 잡는 입문 지도다. 처음에는 [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055)를 먼저 읽고, 설치보다 운영 그림을 먼저 잡는다.
 

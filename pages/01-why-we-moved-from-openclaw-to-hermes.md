@@ -4,7 +4,7 @@
 
 ![OpenClaw에서 Hermes로 구조를 전환하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-4-openclaw-hermes-comparison-codex.webp)
 
-이 글은 전환의 세부 설정을 설명하기 위한 글이 아니다. OpenClaw에서 Hermes로 넘어올 때 무엇이 헷갈리기 쉬운지, 그리고 그 혼선을 어떤 기준으로 정리하면 되는지 보는 글이다. 실제 마이그레이션 절차와 복구 기준은 9장의 [OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](https://wikidocs.net/345920)에서 더 자세히 다룬다.
+여기서는 전환의 세부 설정보다 OpenClaw에서 Hermes로 넘어올 때 무엇이 헷갈리기 쉬운지, 그 혼선을 어떤 기준으로 정리하면 되는지 본다. 실제 마이그레이션 절차와 복구 기준은 9장의 [OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](https://wikidocs.net/345920)에서 더 자세히 다룬다.
 
 ## 이 글의 답
 

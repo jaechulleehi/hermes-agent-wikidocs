@@ -1,6 +1,6 @@
 ## 5장. 외부 도구/MCP/채널 연동과 AI 워크플로우 자동화
 
-Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 실제 업무 도구와 연결될 때다. Google Workspace, Notion, GitHub, WikiDocs, MCP, CLI, API, cron, gateway, Daily Briefing Bot은 각각 다른 이름의 기능이지만, 목적은 하나다. 사람이 매번 반복하던 업무 흐름을 AI 개인비서가 안전하게 이어받게 만드는 것이다.
+Hermes Agent의 힘은 답변보다 연결에서 커진다. Google Workspace, Notion, GitHub, WikiDocs, MCP, CLI, API, cron, gateway, Daily Briefing Bot은 각각 다른 이름의 기능이지만, 목적은 하나다. 사람이 매번 반복하던 업무 흐름을 AI 개인비서가 안전하게 이어받게 만드는 것이다.
 
 다만 외부 도구는 많이 붙일수록 좋은 것이 아니다. 계정, 권한 범위, 실행 위치, gateway 상태, cron prompt, 결과 전달 위치가 함께 맞아야 실제 운영이 된다. 5장은 도구 목록을 외우는 장이 아니라, **어떤 업무에 어떤 연결 방식을 붙일지** 고르는 장이다. 반복 절차를 재사용하는 Skill은 6장에서 따로 다룬다.
 

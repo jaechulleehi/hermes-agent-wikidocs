@@ -1,6 +1,6 @@
 ## session/memory/profile은 어떻게 다를까
 
-AI 개인비서가 다르게 느껴지는 가장 큰 이유는 session, memory, profile이 서로 다른 층이기 때문이다. 앞 글인 [AI 개인비서는 무엇을 기억해야 할까](https://wikidocs.net/346125)가 “무엇을 기억할 것인가”를 다뤘다면, 이 글은 “그 기억이 어떤 실행 단위에서 작동하는가”를 다룬다.
+AI 개인비서가 날마다 다르게 느껴지는 이유는 session, memory, profile이 서로 다른 층이기 때문이다. 앞 글인 [AI 개인비서는 무엇을 기억해야 할까](https://wikidocs.net/346125)가 “무엇을 기억할 것인가”를 다뤘다면, 여기서는 “그 기억이 어떤 실행 단위에서 작동하는가”를 나눈다.
 
 ![session memory profile 경계](../assets/images/chapter-heroes/ch4-2-session-memory-profile-boundary-codex.webp)
 

@@ -1,6 +1,6 @@
 ## 왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까
 
-에르메스 에이전트(Hermes Agent) 운영에서 WikiDocs를 먼저 쓰는 이유는 글을 길게 쓰기 위해서가 아니다. 판단 기준을 책처럼 정리해 두면 블로그, 강의, 카드뉴스, Slack 답변이 모두 같은 기준에서 파생되기 때문이다.
+에르메스 에이전트(Hermes Agent) 운영에서 WikiDocs를 앞에 두는 이유는 글을 길게 쓰기 위해서가 아니다. 판단 기준을 책처럼 정리해 두면 블로그, 강의, 카드뉴스, Slack 답변이 모두 같은 기준에서 파생되기 때문이다.
 
 ![WikiDocs를 먼저 쓰는 콘텐츠 모체 흐름](../assets/images/chapter-heroes/ch7-1-wiki-first-content-source-codex.webp)
 

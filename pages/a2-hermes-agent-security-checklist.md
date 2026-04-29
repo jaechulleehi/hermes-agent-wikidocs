@@ -2,7 +2,7 @@
 
 Hermes Agent 보안은 마지막에 붙이는 옵션이 아니다. AI 개인비서가 도구를 실행하고, 외부 채널에서 요청을 받고, GitHub/WikiDocs/Slack/Google Workspace 같은 업무 시스템에 연결될수록 권한과 기록 기준을 먼저 정해야 한다.
 
-이 페이지는 완벽한 보안 정책이 아니라 운영 전 최소 점검표다. 명령어와 설정 키는 [Hermes Agent 공식 문서](https://hermes-agent.nousresearch.com/docs/)에서 다시 확인한다.
+완벽한 보안 정책보다 먼저 필요한 것은 운영 전 최소 점검표다. 명령어와 설정 키는 [Hermes Agent 공식 문서](https://hermes-agent.nousresearch.com/docs/)에서 다시 확인한다.
 
 ## 1. 비밀값과 인증 정보
 

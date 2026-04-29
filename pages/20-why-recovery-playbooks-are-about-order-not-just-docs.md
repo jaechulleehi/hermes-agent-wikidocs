@@ -1,6 +1,6 @@
 ## 복구 플레이북은 왜 문서보다 순서가 중요할까
 
-복구 플레이북의 핵심은 문서가 많다는 것이 아니라 순서가 분명하다는 것이다. [Hermes Agent](https://wikidocs.net/346055) 운영에서 문제가 생기면 바로 재시작하거나 설정을 고치고 싶지만, 먼저 봐야 할 것은 증상, process, profile/runtime 경계, 최근 변경, 원본 기준다.
+복구 플레이북의 핵심은 문서가 많다는 것이 아니라 순서가 분명하다는 것이다. [Hermes Agent](https://wikidocs.net/346055) 운영에서 문제가 생기면 바로 재시작하거나 설정을 고치고 싶지만, 먼저 봐야 할 것은 증상, process, profile/runtime 경계, 최근 변경, 원본 기준이다.
 
 ![복구 플레이북에서 순서를 먼저 정하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch9-2-recovery-playbook-order-codex.webp)
 
