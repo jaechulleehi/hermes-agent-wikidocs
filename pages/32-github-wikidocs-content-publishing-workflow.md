@@ -1,6 +1,6 @@
 ## GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름
 
-에르메스 에이전트(Hermes Agent) 업무 자동화에서 GitHub와 [WikiDocs](https://wikidocs.net/345908)를 나누는 이유는 원본과 공개 배포 채널을 분리하기 위해서다. GitHub는 책 원고의 원본 기준이고, WikiDocs는 독자가 보는 공개 화면이다. 뽀동이가 원고를 고치고 검증을 통과시키면, GitHub 변경이 WikiDocs 발행 흐름으로 이어진다.
+에르메스 에이전트(Hermes Agent) 업무 자동화에서 GitHub와 [WikiDocs](https://wikidocs.net/345908)를 나누는 이유는 원본과 공개 배포 채널을 분리하기 위해서다. `GitHub WikiDocs 연동`이나 `WikiDocs 발행 자동화`를 찾는 독자에게 핵심은 연결 자체보다 원본 관리와 공개 검증을 나누는 기준이다. GitHub는 책 원고의 원본 기준이고, WikiDocs는 독자가 보는 공개 화면이다. 뽀동이가 원고를 고치고 검증을 통과시키면, GitHub 변경이 WikiDocs 발행 흐름으로 이어진다.
 
 ![GitHub와 WikiDocs 발행 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-4-github-wikidocs-publishing-tool-badges-codex.png)
 

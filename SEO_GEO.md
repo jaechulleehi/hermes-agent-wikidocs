@@ -87,6 +87,8 @@
 - 카카오톡 AI 비서
 - KakaoTalk AI bot
 - Hermes Agent vs OpenClaw
+- OpenClaw 사용법
+- OpenClaw GitHub
 - Hermes Agent Claude Code 비교
 - Hermes Agent Codex 비교
 - 에르메스 에이전트 업무 자동화
@@ -169,6 +171,7 @@
 - 크론 업무 자동화
 - WikiDocs 발행 자동화
 - GitHub WikiDocs 연동
+- AI 문서화 자동화 사례
 - AI 콘텐츠 운영 사례
 
 ## 검색 진입 페이지별 제목/스니펫 기준

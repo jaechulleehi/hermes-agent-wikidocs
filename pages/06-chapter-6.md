@@ -1,6 +1,6 @@
 ## 7장. AI 문서화 자동화와 WikiDocs 콘텐츠 시스템
 
-6장에서 반복 절차를 Skill로 남기는 법을 봤다면, 7장에서는 그 기준을 콘텐츠 제작에 적용한다. 에르메스 에이전트(Hermes Agent)로 AI 문서화 자동화를 한다고 해서 조사 결과가 바로 좋은 콘텐츠가 되지는 않는다. WikiDocs, 블로그, 강의, 이미지 자산은 같은 내용을 담더라도 역할이 다르다.
+6장에서 반복 절차를 Skill로 남기는 법을 봤다면, 7장에서는 그 기준을 콘텐츠 제작에 적용한다. `AI 문서화 자동화`, `WikiDocs 발행 자동화`, `GitHub WikiDocs 연동`을 찾는 독자라면 여기서 자동화의 끝을 초안 생성이 아니라 원본 관리, 공개 반영, 검증까지 이어지는 콘텐츠 시스템으로 봐야 한다. 에르메스 에이전트(Hermes Agent)로 AI 문서화 자동화를 한다고 해서 조사 결과가 바로 좋은 콘텐츠가 되지는 않는다. WikiDocs, 블로그, 강의, 이미지 자산은 같은 내용을 담더라도 역할이 다르다.
 
 ![7장 AI 문서화 자동화와 WikiDocs 콘텐츠 시스템](../assets/images/chapter-heroes/ch07-content-system-wikidocs-blog-lecture-codex.webp)
 

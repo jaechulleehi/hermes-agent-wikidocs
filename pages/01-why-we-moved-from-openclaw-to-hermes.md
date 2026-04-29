@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent)와 OpenClaw는 무엇이 다를까
 
-에르메스 에이전트(Hermes Agent)와 OpenClaw의 차이는 이름이나 UI의 차이가 아니다. 이 글의 질문은 “어느 쪽이 더 멋진가”가 아니라 **에이전트를 실제 업무에서 오래 굴릴 수 있는 운영 구조로 세울 수 있는가**다. AI 개인비서가 요청을 받는 메인 창구, 조사형/정리형/실행형으로 나뉘는 [역할형 에이전트](https://wikidocs.net/345925), 기억 경계, 도구 연결, 기록 자산화를 한 흐름으로 보려면 현재 기준점을 분명히 해야 한다.
+에르메스 에이전트(Hermes Agent)와 OpenClaw의 차이는 이름이나 UI의 차이가 아니다. `OpenClaw 사용법`, `OpenClaw GitHub`, `Hermes Agent vs OpenClaw`를 찾는 독자라도 이 글의 질문은 “어느 쪽이 더 멋진가”가 아니라 **에이전트를 실제 업무에서 오래 굴릴 수 있는 운영 구조로 세울 수 있는가**다. AI 개인비서가 요청을 받는 메인 창구, 조사형/정리형/실행형으로 나뉘는 [역할형 에이전트](https://wikidocs.net/345925), 기억 경계, 도구 연결, 기록 자산화를 한 흐름으로 보려면 현재 기준점을 분명히 해야 한다.
 
 ![OpenClaw에서 Hermes로 구조를 전환하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-4-openclaw-hermes-comparison-codex.webp)
 

@@ -1,6 +1,6 @@
 ## OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까
 
-[OpenClaw에서 Hermes로](https://wikidocs.net/345889) 넘어오는 일은 이름만 바꾸는 작업이 아니었다. AI 개인비서 판단 기준, 역할형 에이전트 분리, memory/profile/runtime 경계, GitHub/WikiDocs 원본 기준까지 함께 정리해야 하는 마이그레이션이었다.
+[OpenClaw에서 Hermes로](https://wikidocs.net/345889) 넘어오는 일은 이름만 바꾸는 작업이 아니었다. `OpenClaw 사용법`이나 `OpenClaw GitHub`를 보며 운영을 시작한 뒤 Hermes Agent로 옮겨 오려면, AI 개인비서 판단 기준, 역할형 에이전트 분리, memory/profile/runtime 경계, GitHub/WikiDocs 원본 기준까지 함께 정리해야 하는 마이그레이션이었다.
 
 ![OpenClaw에서 Hermes로 전환할 때 점검할 기준](../assets/how-image-agent-creates-wikidocs-visuals/ch9-8-openclaw-hermes-migration-checklist-codex.webp)
 
