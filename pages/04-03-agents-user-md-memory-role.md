@@ -8,13 +8,13 @@ AI 에이전트의 기억은 사용자 선호만으로 만들어지지 않는다
 
 ## 역할 기억과 사용자 기억은 다르다
 
-| 문서/층 | 주로 담는 것 | 예시 |
+| 문서/층 | 주로 담는 것 | 공식 docs 기준 |
 |---|---|---|
-| SOUL.md | 에이전트의 정체성, 미션, 성격 | 뽀동이는 콘텐츠 품질을 책임지는 햄스터 |
-| AGENTS.md | 운영 매뉴얼, 작업 원칙, 도구 사용 규칙 | WikiDocs 작업 전 검증 기준을 따른다 |
-| USER.md | 사용자 선호, 반복 교정, 협업 방식 | 사용자는 Slack 보고를 짧게 선호한다 |
-| profile | 실행 환경, 도구 노출, 권한 경계 | 하비와 뽀동이가 가진 도구/역할 차이 |
-| memory | 항상 주입할 압축된 장기 기준 | source of truth 우선순위 |
+| SOUL.md | 에이전트의 정체성, 미션, 성격 | `HERMES_HOME/SOUL.md`에서 로드되는 전역 personality 파일 |
+| AGENTS.md | 운영 매뉴얼, 작업 원칙, 도구 사용 규칙 | 프로젝트 context file 중 하나이며, `.hermes.md`/`HERMES.md`/`CLAUDE.md`/`.cursorrules`와 함께 로딩 우선순위를 갖는다 |
+| USER.md | 사용자 선호, 반복 교정, 협업 방식 | Persistent Memory의 user profile 저장소 |
+| profile | 실행 환경과 상태 분리 | config, `.env`, SOUL.md, memories, sessions, skills, cron, gateway state를 분리하지만 sandbox는 아니다 |
+| memory | 항상 주입할 압축된 장기 기준 | `MEMORY.md`에 저장되는 에이전트 개인 노트 |
 
 SOUL.md는 “누구인가”에 가깝고, AGENTS.md는 “어떻게 일하는가”에 가깝다. USER.md는 “사용자가 무엇을 선호하는가”를 담는다. SOUL.md를 실제로 어떻게 작성하고 테스트할지는 [SOUL.md로 AI 에이전트 성격은 어떻게 정의할까](https://wikidocs.net/346292)에서 더 자세히 다룬다.
 

@@ -70,7 +70,7 @@
   * [09-3. Hermes Agent 운영 체크리스트는 어떻게 써야 할까](pages/21-how-to-make-hermes-operation-checklists-actually-useful.md)
   * [09-4. Hermes Agent 보안 체크리스트는 어떻게 만들까](pages/09-hermes-agent-security-checklist.md)
   * [09-5. Hermes Agent 위험 명령 승인과 YOLO mode는 어떻게 관리할까](pages/09-hermes-agent-command-approval-yolo-allowlist.md)
-  * [09-6. Hermes Agent gateway 권한과 실행 격리는 어떻게 나눌까](pages/09-hermes-agent-gateway-permission-sandbox-isolation.md)
+  * [09-6. Hermes Agent Messaging Gateway 권한과 실행 격리는 어떻게 나눌까](pages/09-hermes-agent-gateway-permission-sandbox-isolation.md)
   * [09-7. Hermes Agent checkpoint와 rollback은 복구 흐름에서 어떻게 쓸까](pages/09-hermes-agent-checkpoint-rollback-recovery.md)
   * [09-8. OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](pages/25-why-openclaw-to-hermes-needed-a-migration-checklist.md)
 * [10. AI 에이전트 조직 도입과 운영 확장](pages/09-chapter-9.md)
@@ -86,3 +86,4 @@
   * [A-1. Hermes Agent 용어집](pages/a1-hermes-agent-glossary.md)
   * [A-2. Hermes Agent 보안 체크리스트](pages/a2-hermes-agent-security-checklist.md)
   * [A-3. 나만의 AI 팀 설계 워크시트](pages/a3-ai-team-design-worksheet.md)
+  * [A-4. Hermes Agent 공식 docs 정합성 점검표](pages/a4-official-docs-alignment-checklist.md)
