@@ -82,3 +82,7 @@
   * [11-4. GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](pages/32-github-wikidocs-content-publishing-workflow.md)
   * [11-5. Slack 스레드에서 하비가 일을 분배하는 방식](pages/33-slack-thread-harvey-delegation-case.md)
   * [11-6. SEO/GEO 치트시트를 콘텐츠 자산으로 만든 실제 케이스](pages/34-hermes-seo-geo-cheatsheet-content-asset-case.md)
+* [부록 A. Hermes Agent 실전 운영 도구](pages/a0-hermes-agent-appendix-tools.md)
+  * [A-1. Hermes Agent 용어집](pages/a1-hermes-agent-glossary.md)
+  * [A-2. Hermes Agent 보안 체크리스트](pages/a2-hermes-agent-security-checklist.md)
+  * [A-3. 나만의 AI 팀 설계 워크시트](pages/a3-ai-team-design-worksheet.md)
