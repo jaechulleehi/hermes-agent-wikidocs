@@ -56,6 +56,8 @@ allowlist 운영 기준
 
 이 질문에 답하지 못하면 `deny`가 기본이다. 공식 docs에서도 approval timeout은 응답이 없으면 deny되는 fail-closed 방식으로 설명된다.
 
+승인 기준은 [보안 체크리스트](https://wikidocs.net/346259)와 [gateway 권한/실행 격리](https://wikidocs.net/346261)를 함께 봐야 한다. 특히 cron이나 Slack gateway처럼 사람이 없는 실행 경로에서는 빠른 실행보다 되돌릴 수 있는 범위와 로그가 먼저다.
+
 ## FAQ
 
 ### `session` 승인은 안전한가요?

@@ -1,6 +1,6 @@
 ## 시행착오를 운영 체크리스트로 바꾸는 법
 
-[Hermes Agent](https://wikidocs.net/346055) 운영에서 시행착오는 실패 기록으로 끝나면 아깝다. gateway가 응답하지 않던 일, profile 경계가 헷갈렸던 일, WikiDocs 발행 전에 내부 링크가 안 먹던 일은 모두 다음 작업자를 위한 운영 체크리스트가 될 수 있다.
+[Hermes Agent](https://wikidocs.net/346055) 운영에서 시행착오는 실패 기록으로 끝나면 아깝다. gateway가 응답하지 않던 일, profile 경계가 헷갈렸던 일, WikiDocs 발행 전에 본문 링크가 안 먹던 일은 모두 다음 작업자를 위한 운영 체크리스트가 될 수 있다.
 
 ![시행착오를 운영 체크리스트로 바꾸는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch9-1-stumbles-to-checklists-codex.webp)
 
@@ -30,11 +30,11 @@ profile도 봐야 했던 것 같음
 
 ## 실제 운영 예시
 
-WikiDocs 작업에서 내부 링크가 안 먹던 문제는 좋은 체크리스트 후보였다. 처음에는 “링크를 더 넣자”가 목표였지만, 실제 문제는 GitHub `.md` 링크가 WikiDocs 공개 화면에서 독자가 클릭하기 어려운 형태로 남는 것이었다. 해결 후 체크리스트는 이렇게 바뀌었다.
+WikiDocs 작업에서 본문 링크가 안 먹던 문제는 좋은 체크리스트 후보였다. 처음에는 “링크를 더 넣자”가 목표였지만, 실제 문제는 GitHub `.md` 링크가 WikiDocs 공개 화면에서 독자가 클릭하기 어려운 형태로 남는 것이었다. 해결 후 체크리스트는 이렇게 바뀌었다.
 
 ```text
 1. TOC.md는 GitHub 연동을 위해 pages/*.md 링크를 유지한다.
-2. 본문 내부 링크는 WikiDocs page ID URL로 바꾼다.
+2. 본문 본문 링크는 WikiDocs page ID URL로 바꾼다.
 3. mcp_wikidocs_get_book_toc로 현재 page ID를 확인한다.
 4. pages/*.md 본문에 raw .md 링크가 0개인지 검사한다.
 5. WikiDocs 공개 페이지 하나를 spot check한다.

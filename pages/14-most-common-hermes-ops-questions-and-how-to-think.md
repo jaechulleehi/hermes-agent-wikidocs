@@ -35,7 +35,7 @@
 
 ## 실제 운영 예시
 
-WikiDocs 내부 링크 문제는 처음에는 “링크가 이상하다”로 보였다. 하지만 실제 원인은 글쓰기 문제가 아니라 publishing/source of truth 레이어였다. GitHub 본문에는 `.md` 링크가 자연스럽지만, GitHub 연동 WikiDocs 화면에서는 공개 페이지 ID 링크가 필요했다. 그래서 해결책도 단순 문장 수정이 아니라 WikiDocs TOC에서 page ID를 확인하고 본문 링크를 `https://wikidocs.net/{page_id}`로 바꾸는 것이었다.
+WikiDocs 본문 링크 문제는 처음에는 “링크가 이상하다”로 보였다. 하지만 실제 원인은 글쓰기 문제가 아니라 publishing/source of truth 레이어였다. GitHub 본문에는 `.md` 링크가 자연스럽지만, GitHub 연동 WikiDocs 화면에서는 공개 페이지 ID 링크가 필요했다. 그래서 해결책도 단순 문장 수정이 아니라 WikiDocs TOC에서 page ID를 확인하고 본문 링크를 `https://wikidocs.net/{page_id}`로 바꾸는 것이었다.
 
 같은 방식으로 “하비가 왜 기억을 못 하지?”는 기억 레이어로, “방울이와 뽀동이가 왜 다르게 말하지?”는 역할 레이어로, “cron 결과가 어디로 갔지?”는 runtime/delivery 레이어로 먼저 분류한다. 분류가 맞으면 답은 짧아진다.
 

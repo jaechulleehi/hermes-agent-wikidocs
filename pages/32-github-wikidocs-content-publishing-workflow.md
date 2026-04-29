@@ -4,7 +4,7 @@
 
 ![GitHub와 WikiDocs 발행 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-4-github-wikidocs-publishing-tool-badges-codex.png)
 
-이 구조를 쓰는 이유는 단순하다. 공유할 글은 한 번 쓰고 끝나지 않는다. 제목, TOC, 이미지, SEO/GEO, 전자책 규칙, 내부 링크가 계속 바뀐다. 이력과 기준이 남아야 안전하게 고칠 수 있다. 그래서 GitHub/WikiDocs 발행은 7장의 [WikiDocs를 먼저 쓰는 콘텐츠 시스템](https://wikidocs.net/345908)을 운영으로 고정하는 단계다.
+이 구조를 쓰는 이유는 단순하다. 공유할 글은 한 번 쓰고 끝나지 않는다. 제목, TOC, 이미지, SEO/GEO, 전자책 규칙, 본문 링크가 계속 바뀐다. 이력과 기준이 남아야 안전하게 고칠 수 있다. 그래서 GitHub/WikiDocs 발행은 7장의 [WikiDocs를 먼저 쓰는 콘텐츠 시스템](https://wikidocs.net/345908)을 운영으로 고정하는 단계다.
 
 ## 프로젝트: GitHub 원본에서 WikiDocs 공개본까지
 
@@ -14,7 +14,7 @@
 
 - GitHub를 책 원고의 source of truth로 유지한다.
 - WikiDocs는 공개 배포 채널로 둔다.
-- TOC, 본문, 이미지, 내부 링크를 함께 검증한다.
+- TOC, 본문, 이미지, 본문 링크를 함께 검증한다.
 - 공개 화면에서 실제로 링크와 이미지가 동작하는지 확인한다.
 - 수정 이력과 운영 기준을 남긴다.
 
@@ -41,7 +41,7 @@
 2. 현재 원고와 관련 자료를 읽는다.
 3. 독자 문제, 제목, 본문 구조, FAQ, 다음 링크를 보강한다.
 4. 이미지가 필요하면 assets 경로와 Markdown 상대 경로를 함께 정리한다.
-5. 본문 내부 링크가 WikiDocs 공개 URL로 연결되는지 확인한다.
+5. 본문 본문 링크가 WikiDocs 공개 URL로 연결되는지 확인한다.
 6. 전자책/WikiDocs 형식 검증을 실행한다.
 7. GitHub 원본에 변경을 반영한다.
 8. WikiDocs 동기화 후 공개 페이지를 spot-check한다.
@@ -54,7 +54,7 @@
 |---|---|
 | TOC | 링크가 존재하고 제목 흐름이 자연스러운가 |
 | 본문 | 첫 답변, 운영 기준, FAQ, 다음 링크가 있는가 |
-| 링크 | 본문 내부 링크가 WikiDocs page ID URL인가 |
+| 링크 | 본문 본문 링크가 WikiDocs page ID URL인가 |
 | 이미지 | 상대 경로가 존재하고 위아래 빈 줄이 있는가 |
 | 형식 | pages 본문에 H1이 없는가 |
 | 문체 | AI 번역투, 중점 문자, 블로그 scaffolding이 남지 않았는가 |
@@ -129,7 +129,7 @@ GitHub 원본 반영 직후에는 WikiDocs 동기화가 조금 늦을 수 있다
 
 ### GitHub에서는 링크가 되는데 WikiDocs에서는 안 될 때
 
-본문 내부 링크가 로컬 `.md` 경로일 가능성이 있다. WikiDocs 공개 화면에서는 page ID URL을 쓰는 편이 안전하다. 단, TOC는 GitHub 파일 경로를 유지한다.
+본문 본문 링크가 로컬 `.md` 경로일 가능성이 있다. WikiDocs 공개 화면에서는 page ID URL을 쓰는 편이 안전하다. 단, TOC는 GitHub 파일 경로를 유지한다.
 
 ### 이미지가 깨질 때
 
