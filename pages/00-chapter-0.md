@@ -1,10 +1,12 @@
 ## 0장. 에르메스 에이전트(Hermes Agent) 기초 가이드
 
-에르메스 에이전트(Hermes Agent)를 처음 시작할 때 가장 위험한 흐름은 설치 명령부터 복사하고, 곧바로 Slack/gateway/cron/MCP를 붙이는 것이다. 공식 docs와 GitHub는 Hermes Agent를 self-improving AI agent, CLI/TUI, messaging gateway, memory, skill, tool, cron, MCP를 갖춘 실행 환경으로 설명한다. 그래서 0장은 기능을 모두 외우는 장이 아니라 “어떤 순서로 확인해야 안전하게 실제 업무에 붙일 수 있는가”를 잡는 입문 흐름이다. 따라서 처음에는 [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055)를 먼저 읽고, 설치보다 확인 순서를 앞에 둔다.
+에르메스 에이전트(Hermes Agent)를 처음 시작할 때 가장 위험한 흐름은 설치 명령부터 복사하고, 곧바로 Slack/gateway/cron/MCP를 붙이는 것이다. 그렇게 시작하면 “일하는 AI”를 만들기도 전에 설치 문제, provider 설정, gateway 연결, 권한, 비용 경계가 한꺼번에 섞인다.
+
+그래서 0장은 기능을 모두 외우는 장이 아니라, Hermes Agent를 실제 업무에 붙이기 전 **무엇을 먼저 확인하고 어떤 순서로 확장할지**를 잡는 입문 흐름이다. 공식 docs와 GitHub는 Hermes Agent를 self-improving AI agent, CLI/TUI, messaging gateway, memory, skill, tool, cron, MCP를 갖춘 실행 환경으로 설명한다. 이 책은 그 기능을 “어떤 업무 목적을 안정적으로 반복하게 만들 것인가”라는 질문으로 다시 읽는다. 처음에는 [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055)를 먼저 읽고, 설치보다 확인 순서를 앞에 둔다.
 
 ![Hermes Agent 기초 가이드 흐름](../assets/images/chapter-heroes/ch00-hermes-foundation-guide-tool-badges-codex.webp)
 
-이 책은 공식 문서를 대체하지 않는다. 공식 GitHub와 docs에서 설치/명령/설정 기준을 확인하고, 이 책에서는 AI 개인비서와 역할형 에이전트 운영 관점으로 다시 해석한다. 특히 0장에서는 Hermes Agent의 특징을 기능 목록이 아니라 목적별 운영 장치로 본다. 기억할 정보는 memory와 shared-memory에 남기고, 반복되는 절차는 Skill로 만들고, 과거 작업은 session search로 다시 찾고, 정기 작업은 cron으로 시작하고, 외부 업무 시스템은 MCP/gateway로 연결하는 흐름이다.
+이 책은 공식 문서를 대체하지 않는다. 공식 GitHub와 docs에서 설치/명령/설정 기준을 확인하고, 이 책에서는 AI 개인비서와 역할형 에이전트 운영 관점으로 다시 해석한다. 특히 0장에서는 Hermes Agent의 특징을 기능 목록이 아니라 목적별 운영 장치로 본다. 기억할 정보는 memory와 shared-memory에 남기고, 반복되는 절차는 Skill로 만들고, 과거 작업은 session search로 다시 찾고, 정기 작업은 cron으로 시작하고, 외부 업무 시스템은 MCP/gateway로 연결한다. 이 흐름을 잡아야 이후 장의 메인 창구, 역할 분리, 기억 시스템, Skill 운영이 하나의 AI 업무 자동화 구조로 이어진다.
 
 ## 0장을 읽는 순서
 
