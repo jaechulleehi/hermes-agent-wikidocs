@@ -4,7 +4,7 @@
 
 ![8장 Hermes Agent 운영 FAQ와 멀티봇 실패 패턴](../assets/images/chapter-heroes/ch8-ops-faq-multibot-rules-codex.webp)
 
-8장은 바로 그 라우터를 만든다. 앞 장에서 [memory/session/profile/source of truth 경계](https://wikidocs.net/345902)와 [MCP/cron/gateway 운영](https://wikidocs.net/345907)을 봤다면, 여기서는 실제 대화 공간에서 생기는 혼선을 줄이는 규칙을 다룬다. 특히 Slack 스레드에서 하비/방울이/뽀동이/하망이 같은 역할형 에이전트가 동시에 반응하면 유용함보다 소음이 먼저 생긴다.
+8장은 바로 그 라우터를 만든다. 앞 장의 [콘텐츠 시스템](https://wikidocs.net/345911)이 조사 결과와 원장을 공개 콘텐츠로 바꾸는 흐름을 다뤘다면, 여기서는 실제 대화 공간에서 생기는 혼선을 줄이는 규칙을 다룬다. 특히 Slack 스레드에서 하비/방울이/뽀동이/하망이 같은 역할형 에이전트가 동시에 반응하면 유용함보다 소음이 먼저 생긴다.
 
 ## 처음 막혔을 때의 빠른 분기
 

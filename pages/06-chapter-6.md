@@ -4,7 +4,7 @@
 
 ![7장 AI 문서화 자동화와 WikiDocs 콘텐츠 시스템](../assets/images/chapter-heroes/ch07-content-system-wikidocs-blog-lecture-codex.webp)
 
-앞 장의 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)은 Obsidian LLM Wiki, HALOX Brain, shared-memory 같은 기억층을 다뤘다. 7장은 그 기억층에 쌓인 원장과 조사 결과를 어떻게 WikiDocs 책, 블로그 글, 강의 흐름, 이미지 자산으로 변환할지에 집중한다.
+앞 장의 [Skill 운영](https://wikidocs.net/345906)은 반복 작업의 절차와 검증 기준을 남기는 방법을 다뤘다. 7장은 그 기준을 콘텐츠 제작에 적용한다. Obsidian LLM Wiki, HALOX Brain, shared-memory에 쌓인 원장과 조사 결과를 WikiDocs 책, 블로그 글, 강의 흐름, 이미지 자산으로 바꾸는 흐름에 집중한다.
 
 ## 이 장에서 다루는 문제
 
