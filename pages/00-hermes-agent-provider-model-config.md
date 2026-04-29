@@ -6,6 +6,8 @@ Hermes Agent에서 provider/model/config는 “어떤 모델을 쓸지”만의 
 
 처음 세팅할 때는 좋은 모델을 고르는 것보다 “어디에 무엇이 저장되는가”를 먼저 알아야 한다. 모델 이름, API key, OAuth, custom endpoint, provider routing, toolset, terminal backend가 섞이면 나중에 실패 원인을 찾기 어렵다.
 
+이 페이지는 provider 전체 목록을 외우게 하는 문서가 아니다. 입문자가 먼저 볼 것은 “내가 어떤 방식으로 Hermes Agent를 연결하고, 그 선택이 비용/권한/복구에 어떤 영향을 주는가”다. 최신 provider 목록, env var 이름, 세부 설정값은 [Hermes Agent 공식 docs](https://hermes-agent.nousresearch.com/docs/integrations/providers)와 [공식 docs 정합성 점검표](https://wikidocs.net/346587)에서 다시 확인한다.
+
 ## 공식 docs 기준 설정 위치
 
 | 구분 | 공식 docs 기준 위치/흐름 | 실제 확인 포인트 |
@@ -35,6 +37,18 @@ hermes chat --model "provider/model-name" -q "지금 설정이 어떤 의미인�
 ```
 
 모델명은 provider별로 달라질 수 있다. 그래서 책에 적힌 예시를 그대로 외우기보다, 현재 공식 docs와 자신의 provider 목록을 확인하는 것이 안전하다.
+
+## provider/model 선택 기준
+
+| 상황 | 먼저 검토할 방식 | 확인할 것 |
+|---|---|---|
+| 개인이 빠르게 시작 | `hermes model`에서 OAuth/구독 기반 provider 선택 | 세션 만료, third-party 사용 정책, 개인 계정 한도 |
+| 서버/gateway/cron 운영 | API key 기반 provider | `.env` 보관, 과금 owner, 월 한도, billing alert |
+| 여러 모델을 한 인터페이스로 묶기 | OpenRouter, custom endpoint, proxy | 요청 추적, 로그 보관, fallback 기준 |
+| 회사 데이터 반출 제한 | local/self-hosted endpoint | GPU/서버 비용, 속도, 모델 품질, 접근 권한 |
+| 비용/장애 대응이 중요 | routing/fallback | 어느 요청이 어느 provider로 갔는지 확인할 로그 |
+
+처음에는 하나의 provider/model로 CLI 응답과 도구 호출을 확인한다. 그다음 gateway, cron, routing, local/self-hosted로 넓히는 편이 실패 원인을 줄인다.
 
 ## provider routing은 언제 볼까
 
@@ -72,7 +86,7 @@ routing은 조정 도구다. 기본 대화와 도구 호출이 안정되기 전�
 |---|---|---|
 | 구독/OAuth | 개인 계정 기반 provider 연결 | 세션 만료, 정책 변경, third-party 허용 여부 확인 |
 | API 사용량 | provider API key, aggregator, 검색 API | 월 한도, 알림, key scope, 과금 owner를 정한다 |
-| 검색/크롤링 비용 | Brave/Tavily/Exa/Firecrawl/Parallel 등 | 무료 검색으로 충분한지, 대량 호출이 필요한지 나눈다 |
+| 검색/크롤링 비용 | Firecrawl/Parallel/Tavily/Exa 같은 공식 web backend와 별도 검색 API | 공식 지원 범위, 무료 검색으로 충분한지, 대량 호출이 필요한지 나눈다 |
 | 인프라 비용 | Mac mini, VPS, Docker, GPU, storage | 상시 gateway/cron 운영 시간과 로그 보관 기준을 둔다 |
 | 복구 비용 | 장애 대응, token rotation, 설정 재검증 | 비용보다 먼저 원인 분리와 rollback 경로를 남긴다 |
 

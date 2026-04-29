@@ -23,7 +23,7 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 
 ## 공식 문서 기능을 운영 기준으로 읽기
 
-공식 Hermes Agent 문서를 5장에서 그대로 옮기지는 않는다. 대신 기능 이름을 처음 보는 독자가 이해할 수 있도록 “무엇을 하는 기능인가”와 “실제 운영에서 무엇을 확인해야 하는가”를 나눠서 본다.
+공식 Hermes Agent 문서를 5장에서 그대로 옮기지는 않는다. 이 책은 공식 docs를 대신하는 설정 사전이 아니라, 입문자가 외부 연결을 업무 흐름에 어떻게 배치할지 판단하게 돕는 안내서다. 최신 지원 provider, web backend, platform, 설정값은 공식 docs와 부록 A-4에서 확인하고, 본문에서는 “무엇을 하는 기능인가”와 “실제 운영에서 무엇을 확인해야 하는가”를 나눠서 본다.
 
 | 기능 | 공식 기준으로 보는 뜻 | 실제 운영에서의 질문 |
 |---|---|---|
@@ -49,14 +49,16 @@ WikiDocs 작업에서도 외부 도구 판단 기준이 계속 등장했다. Git
 
 웹 검색은 MCP/API/CLI와 비슷해 보이지만 실제로는 성격이 조금 다르다. 검색 도구는 “정답을 실행하는 도구”가 아니라 후보 출처를 가져오는 입력 장치다. 그래서 검색 품질은 API 이름보다 검색원, 최신성, 중복 제거, 원문 접근, 인용 가능성, 후속 검증 기준으로 봐야 한다.
 
-현재 우리 운영에서는 웹 리서치를 시작할 때 무료 검색 계열을 먼저 쓴다. 확인된 기준으로는 DuckDuckGo 기반 DDGS처럼 API key 없이 쓸 수 있는 검색 백엔드가 fallback 역할을 한다. 필요하면 브라우저로 원문을 직접 열어 확인하고, SEO/GEO 키워드 확장은 Google Suggest 같은 공개 suggest endpoint를 별도로 본다. 반대로 Brave Search API, Tavily, Exa, Firecrawl, Parallel, Perplexity 같은 유료/상용 도구는 대량 검색, extract/crawl, 더 안정적인 API 응답, 검색 결과 품질 관리가 필요할 때 후보가 된다. SearXNG는 직접 호스팅하거나 공개 인스턴스를 쓰는 무료 메타검색 옵션으로 볼 수 있지만, 공개 인스턴스는 안정성과 차단 위험을 따로 봐야 한다.
+공식 Integrations 기준으로 Hermes Agent의 web backend는 Firecrawl, Parallel, Tavily, Exa처럼 공식 docs에서 지원 범위를 확인해야 하는 영역이다. 반면 DuckDuckGo/DDGS, SearXNG, Brave Search API, Perplexity, Google Suggest 같은 도구는 별도 운영 후보나 리서치 경로로 볼 수 있다. 이 둘을 섞어서 “공식 Hermes web backend”처럼 쓰면 나중에 설정과 검증 기준이 꼬인다.
+
+현재 우리 운영에서는 웹 리서치를 시작할 때 무료 검색 계열을 먼저 쓴다. DuckDuckGo 기반 DDGS처럼 API key 없이 쓸 수 있는 검색 경로는 빠른 신호 탐색과 fallback에 적합하다. 필요하면 브라우저로 원문을 직접 열어 확인하고, SEO/GEO 키워드 확장은 Google Suggest 같은 공개 suggest endpoint를 별도로 본다. 반대로 Firecrawl, Parallel, Tavily, Exa 같은 공식 web backend나 Brave Search API, Perplexity 같은 별도 상용 도구는 대량 검색, extract/crawl, 안정적인 API 응답, 검색 결과 품질 관리가 필요할 때 후보가 된다. SearXNG는 직접 호스팅하거나 공개 인스턴스를 쓰는 무료 메타검색 옵션으로 볼 수 있지만, 공개 인스턴스는 안정성과 차단 위험을 따로 봐야 한다.
 
 | 방식 | 비용/인증 | 강한 경우 | 조심할 점 |
 |---|---|---|---|
 | DuckDuckGo/DDGS | 무료, 보통 API key 없음 | 빠른 초기 조사, 키워드 후보, 가벼운 사실 확인 | 결과 재현성과 대량 호출 안정성이 약할 수 있다 |
 | SearXNG | 자체 호스팅이면 무료에 가깝다 | 여러 검색원을 메타검색으로 묶고 싶을 때 | 공개 인스턴스 안정성, 차단, 운영 부담 |
-| Brave/Tavily/Exa 등 검색 API | 유료 또는 API key 필요 | 대량 조사, API 기반 자동화, 결과 품질 관리 | 비용, quota, vendor lock-in, token 관리 |
-| Perplexity/AI 검색 | 유료/구독/API 가능 | 질문형 리서치, 요약과 출처를 함께 볼 때 | 답변 생성과 원문 근거를 분리 검증해야 한다 |
+| Firecrawl/Parallel/Tavily/Exa | 공식 docs에서 지원 범위 확인 | Hermes Agent web backend로 붙일 때 | 비용, quota, 설정값 변경, token 관리 |
+| Brave/Perplexity 등 별도 검색 API | 유료 또는 API key 필요 | 별도 리서치 경로나 질문형 리서치가 필요할 때 | 공식 web backend와 구분하고 원문 근거를 재검증 |
 | Browser 직접 확인 | 별도 API 없이 화면 확인 | 로그인 페이지, 동적 페이지, 원문 검수 | 느리고 깨지기 쉬워 자동화의 마지막 단계로 둔다 |
 
 실제 사용 기준은 단순하다. “오늘 빠르게 신호를 찾는가”라면 무료 검색과 브라우저 확인으로 충분한 경우가 많다. “매일 같은 주제를 안정적으로 모니터링하고, 결과를 Slack이나 WikiDocs로 넘기는가”라면 유료 API나 자체 SearXNG 같은 운영형 백엔드를 검토한다. “공유 글에 근거로 넣을 것인가”라면 검색 결과 요약이 아니라 원문 URL과 공식 출처 확인이 우선이다.
@@ -71,7 +73,8 @@ WikiDocs 작업에서도 외부 도구 판단 기준이 계속 등장했다. Git
 | Slack에서 사람 요청을 받기 | gateway | 메시징 연결과 delivery가 핵심이다 |
 | 매일 같은 시간에 조사/보고 | cron | fresh session prompt와 전달 대상이 핵심이다 |
 | 웹에서 새 정보 찾기 | DuckDuckGo/DDGS 또는 SearXNG 계열 검색 | 무료로 시작하고 원문 검증을 붙이기 쉽다 |
-| 대량 검색/안정적 JSON/크롤링 | Brave/Tavily/Exa/Firecrawl 같은 API | quota/비용을 내는 대신 재현성과 구조화가 좋아진다 |
+| Hermes 공식 web backend 활용 | Firecrawl/Parallel/Tavily/Exa | 공식 Integrations 기준으로 설정과 지원 범위를 확인할 수 있다 |
+| 별도 검색 API/AI 검색 활용 | Brave/Perplexity 등 | 특정 검색 품질이나 요약형 리서치가 필요할 때 후보가 된다 |
 | 반복 절차를 다음에도 쓰기 | Skill | 도구가 아니라 검증 순서와 판단 기준을 재사용한다 |
 | 위험 명령/배포/삭제 실행 | terminal backend + 승인 기준 | 실행 위치, credential, rollback 가능성을 분리해야 한다 |
 

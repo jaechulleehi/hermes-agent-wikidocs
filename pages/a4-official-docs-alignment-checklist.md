@@ -12,11 +12,12 @@
 | 업데이트 | Getting Started / Updating | 업데이트 후 `hermes doctor`, 설정/도구 확인 흐름을 함께 본다. |
 | CLI | User Guide / CLI, Reference / CLI Commands | `hermes chat`, `hermes setup`, `hermes model`, `hermes doctor` 같은 명령어를 정확히 쓴다. |
 | 설정 | User Guide / Configuration | `config.yaml`, `.env`, `auth.json`의 역할을 구분한다. |
-| provider/model | Integrations / Providers | provider 이름, OAuth/API key 방식, env var 이름을 추측하지 않는다. |
+| provider/model | Integrations / Providers | provider 이름, OAuth/API key 방식, env var 이름을 추측하지 않는다. 책에는 선택 기준을 두고 최신 목록은 공식 docs에서 확인하게 한다. |
 | toolset/tools | Reference / Tools, Toolsets | tool 이름과 toolset 이름을 역할명처럼 바꿔 쓰지 않는다. |
 | memory | User Guide / Persistent Memory | `MEMORY.md`, `USER.md`, session search, 외부 provider를 구분한다. |
 | context files | User Guide / Context Files | `.hermes.md`, `HERMES.md`, `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, SOUL.md의 로딩 위치를 구분한다. |
 | Skill | User Guide / Skills System | Skill은 on-demand knowledge document이며, 반복 절차와 검증 기준으로 설명한다. |
+| Integrations | Integrations | provider, web backend, browser, voice, API server, plugin, memory provider는 전체 목록을 본문에 옮기지 않고 활용 기준과 확인 위치를 나눈다. |
 | MCP | User Guide / MCP | stdio/HTTP 서버, tool prefix, resource/prompt utility를 임의로 단순화하지 않는다. |
 | cron | User Guide / Scheduled Tasks | fresh session, delivery target, skill attachment, workdir 기준을 확인한다. |
 | Messaging Gateway | User Guide / Messaging Gateway | Slack/Telegram/Discord 등 채널 연결과 session/cron delivery를 설명한다. |
@@ -71,7 +72,18 @@
 | 위험 설정 | `--yolo`, dangerous command approval, allowlist, pairing, checkpoint/rollback은 보안 문맥에서만 다룬다. |
 | 공식 docs 링크 | 기능 단위로 필요한 곳에만 넣고, 모든 문단마다 반복하지 않는다. |
 
-## 6. 공식 docs와 책의 역할 분담
+## 6. Integrations를 책에 반영할 때의 기준
+
+| 독자 상황 | 본문에서 설명할 것 | 부록/공식 docs로 보낼 것 |
+|---|---|---|
+| 처음 모델을 고르는 단계 | OAuth/API key/custom endpoint/local model의 선택 기준 | provider 전체 목록, env var 이름, 최신 지원 model |
+| 외부 도구를 붙이는 단계 | MCP/API/CLI/gateway/cron 중 무엇을 먼저 쓸지 | MCP 서버별 설정값, platform별 세부 옵션 |
+| 웹 리서치를 자동화하는 단계 | 무료 검색/공식 web backend/별도 검색 API를 구분하는 기준 | Firecrawl/Parallel/Tavily/Exa의 최신 설정, quota, 가격 |
+| 팀이나 상시 운영으로 확장하는 단계 | 권한, 로그, delivery, fallback, 복구 기준 | provider routing 세부 옵션, platform별 제한, API reference |
+
+책 본문은 “무엇을 선택해야 하는가”를 보여주고, 부록은 “공식 docs와 어디를 대조해야 하는가”를 알려준다. 빠르게 바뀌는 이름과 설정값을 본문에 길게 넣으면 입문서가 금방 낡는다.
+
+## 7. 공식 docs와 책의 역할 분담
 
 공식 docs는 기능의 최신 기준이다. 설치 명령, 설정 키, 지원 플랫폼, provider, toolset, CLI reference는 공식 docs를 따른다.
 
