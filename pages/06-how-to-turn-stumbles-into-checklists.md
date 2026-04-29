@@ -34,7 +34,7 @@ WikiDocs 작업에서 본문 링크가 안 먹던 문제는 좋은 체크리스�
 
 ```text
 1. TOC.md는 GitHub 연동을 위해 pages/*.md 링크를 유지한다.
-2. 본문 본문 링크는 WikiDocs page ID URL로 바꾼다.
+2. 본문 링크는 WikiDocs page ID URL로 바꾼다.
 3. mcp_wikidocs_get_book_toc로 현재 page ID를 확인한다.
 4. pages/*.md 본문에 raw .md 링크가 0개인지 검사한다.
 5. WikiDocs 공개 페이지 하나를 spot check한다.

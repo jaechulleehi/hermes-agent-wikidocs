@@ -55,7 +55,7 @@ rollback은 끝이 아니라 중간 단계다. 되돌린 뒤에는 아래를 다
 
 - `git status`가 의도한 상태인지 확인한다.
 - TOC 링크와 이미지 경로가 깨지지 않았는지 본다.
-- H1, heading spacing, raw `.md` 링크, 중점 문자 같은 WikiDocs 검증을 다시 돌린다.
+- H1, heading spacing, raw `.md` 링크, 불필요한 구분 문자 같은 WikiDocs 검증을 다시 돌린다.
 - gateway/cron/config를 건드렸다면 실제 process와 delivery를 확인한다.
 - 실패 원인을 체크리스트나 Skill 보강 후보로 남긴다.
 
