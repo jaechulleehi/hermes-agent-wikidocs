@@ -44,7 +44,7 @@ WikiDocs는 우리 책에서 공개 배포 채널이다. 원고의 source of tru
 2. GitHub 원본에 변경 이력을 남기고 갱신한다.
 3. WikiDocs 공개 페이지에서 링크, 이미지, 본문 반영을 확인한다.
 
-이 구조 덕분에 전자책/PDF 호환성, SEO/GEO 키워드, 내부 링크, 이미지 경로를 한 번에 관리할 수 있다. 반대로 GitHub와 WikiDocs 중 어디가 원본인지 헷갈리면 같은 글을 두 곳에서 다르게 고치는 문제가 생긴다. 실제 발행 흐름은 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서, 콘텐츠 채널 기준은 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)에서 이어서 볼 수 있다.
+이 구조 덕분에 전자책/PDF 호환성, SEO/GEO 키워드, 본문 링크, 이미지 경로를 한 번에 관리할 수 있다. 반대로 GitHub와 WikiDocs 중 어디가 원본인지 헷갈리면 같은 글을 두 곳에서 다르게 고치는 문제가 생긴다. 실제 발행 흐름은 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서, 콘텐츠 채널 기준은 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)에서 이어서 볼 수 있다.
 
 ## API/MCP/CLI 선택 기준
 

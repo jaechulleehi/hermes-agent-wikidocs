@@ -54,6 +54,11 @@ toolset은 에이전트가 사용할 수 있는 도구 범위를 줄이는 장�
 - 이 작업은 현재 세션에서 끝나는가, 반복되어 Skill/cron으로 남아야 하는가?
 - toolset을 줄여도 작업이 가능한가?
 
+## 함께 연결해서 볼 기준
+
+내장 도구와 toolset은 단독 기능이 아니라 [MCP 외부 도구](https://wikidocs.net/346231), [terminal backend](https://wikidocs.net/346289), [도구 실행 결과 검증](https://wikidocs.net/346290)과 함께 판단해야 한다. 예를 들어 파일을 읽는 일은 toolset 선택 문제지만, 외부 계정에 쓰는 일은 MCP/API 권한 문제이고, 시스템을 바꾸는 일은 terminal 위험도와 검증 기준까지 같이 봐야 한다.
+
+
 ## FAQ
 
 ### 모든 toolset을 켜두면 더 편하지 않나요?

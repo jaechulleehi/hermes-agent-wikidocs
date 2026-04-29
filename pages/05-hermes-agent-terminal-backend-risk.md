@@ -65,6 +65,11 @@ terminal 명령은 실행 전에 세 가지로 쪼개서 읽는다.
 - 삭제/이동/쓰기 작업 전에 diff/checkpoint가 있는가?
 - background process는 누가 종료하고 어떻게 로그를 볼 것인가?
 
+## 함께 연결해서 볼 기준
+
+terminal은 [내장 도구와 toolset](https://wikidocs.net/346288) 중에서도 실행 영향이 큰 축이다. 그래서 명령을 돌리기 전에는 [도구 실행 결과 검증](https://wikidocs.net/346290) 기준을 같이 보고, 반복되는 명령은 나중에 [Skill 운영](https://wikidocs.net/346235)이나 복구 플레이북으로 옮길 수 있는지 확인하는 편이 안전하다.
+
+
 ## FAQ
 
 ### terminal을 쓰면 항상 위험한가요?

@@ -77,6 +77,15 @@ WikiDocs 작업에서도 외부 도구 운영 기준이 계속 등장했다. Git
 
 이 순서로 보면 “무슨 MCP를 붙일까”보다 “이 업무가 검색인지, 실행인지, 반복 절차인지, 상시 메시징인지”가 먼저 보인다.
 
+## 5장을 마치면 남아야 할 것
+
+| 남아야 할 것 | 확인 질문 | 연결되는 글 |
+|---|---|---|
+| 연결 방식 선택표 | 이 일은 CLI/API/MCP/gateway/cron/skill 중 무엇이 맞는가 | [네 가지 실행 방식](https://wikidocs.net/346124) |
+| 권한/인증 경계 | 계정 권한, token, scope, 로그 노출 범위를 분리했는가 | [Google Workspace와 MCP](https://wikidocs.net/345903) / [MCP 외부 도구](https://wikidocs.net/346231) |
+| 상시 운영 점검표 | gateway, delivery, cron, channel을 따로 확인할 수 있는가 | [always-on gateway](https://wikidocs.net/345906) / [Daily Briefing Bot](https://wikidocs.net/345926) |
+| 실행 검증 기준 | 도구 실행 결과를 exit code가 아니라 산출물/로그/공개 반영까지 확인하는가 | [도구 실행 결과 검증](https://wikidocs.net/346290) |
+
 ## 이 장에서 얻을 기준
 
 - MCP는 Model Context Protocol 기반의 “도구 연결”이지 “운영 완성”이 아니다.

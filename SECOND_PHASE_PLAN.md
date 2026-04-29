@@ -7,9 +7,9 @@
 
 현재 책은 GitHub 연동 WikiDocs 책으로 읽힐 수 있는 기본 구조를 갖췄다.
 
-- 10장 구조 완료
-- TOC 링크 49개
-- 페이지 파일 50개
+- 00장 기초 가이드 + 01~11장 구조 완료
+- TOC 링크 82개
+- 페이지 파일 82개
 - 기존 Hermes 블로그 1~27편 매핑 완료
 - 주요 Hermes Agent 공식 docs 주제 매핑 완료
 - WikiDocs/전자책 기본 검증 통과
@@ -45,7 +45,7 @@
 
 ### 3.1 새 글보다 기존 글 보강 우선
 
-아직은 새 장을 늘리기보다 기존 10장 구조 안에서 밀도를 높인다.
+아직은 새 장을 늘리기보다 현재 00장 기초 가이드와 01~11장 구조 안에서 밀도를 높인다.
 
 새 페이지는 아래 조건 중 하나를 만족할 때만 만든다.
 
@@ -96,11 +96,11 @@
 
 작업 범위:
 
-- 장 인트로 1~10장에 해당 장의 핵심 페이지 링크 추가
+- 장 인트로 1~11장에 해당 장의 핵심 페이지 링크 추가
 - 모든 개별 페이지 끝에 `다음 글` 또는 `관련 글` 추가
-- 10장 실제 운영 케이스에서 앞 장의 개념 페이지로 역링크 추가
-- 6장 콘텐츠 시스템에서 10장 발행 케이스로 연결
-- 8장 복구/마이그레이션에서 1장 OpenClaw 전환 글과 상호 연결
+- 11장 실제 운영 케이스에서 앞 장의 개념 페이지로 역링크 추가
+- 7장 콘텐츠 시스템에서 11장 발행 케이스로 연결
+- 9장 복구/마이그레이션에서 1장 OpenClaw 전환 글과 상호 연결
 
 우선 링크 축:
 
@@ -111,11 +111,12 @@
 | 3장 역할 분리 | 조사형/정리형/실행형/이미지형/콘텐츠형/실패 패턴 |
 | 4장 기억 경계 | memory/session/profile/source of truth/긴 대화 |
 | 5장 자동화 | MCP/cron/skills/gateway/Daily Briefing Bot |
-| 6장 콘텐츠 | Obsidian/WikiDocs/블로그/강의/이미지/발행 케이스 |
-| 7장 FAQ | 멀티봇/운영 질문/호출 규칙/조직 도입 |
-| 8장 복구 | 체크리스트/복구 순서/OpenClaw migration/gateway |
-| 9장 조직 확장 | 도입 실패/역할 책임/source of truth/팀 운영 |
-| 10장 케이스 | 각 케이스에서 앞 장 개념으로 역링크 |
+| 6장 Skill | 반복 절차/역할별 Skill/Skill QA/공개 Skill 검증 |
+| 7장 콘텐츠 | Obsidian/WikiDocs/블로그/강의/이미지/발행 케이스 |
+| 8장 FAQ | 멀티봇/운영 질문/호출 규칙 |
+| 9장 복구 | 보안/체크리스트/복구 순서/OpenClaw migration/gateway |
+| 10장 조직 확장 | 도입 실패/역할 책임/source of truth/팀 운영 |
+| 11장 케이스 | 각 케이스에서 앞 장 개념으로 역링크 |
 
 완료 검증:
 
@@ -123,7 +124,7 @@
 - TOC 누락 링크 0개
 - 깨진 이미지 0개
 
-## 4.2 Phase B: 장 인트로 1~10장 보강
+## 4.2 Phase B: 장 인트로 1~11장 보강
 
 목표: 장 인트로가 단순 목차 설명이 아니라 독자의 사고 전환을 이끌게 만든다.
 
@@ -142,12 +143,13 @@
 - 2장: AI 개인비서 메인 창구를 왜 먼저 정해야 하는지
 - 3장: 역할형 에이전트를 “많이 만드는 것”이 아니라 “실패 패턴을 나누는 것”으로 설명
 - 5장: MCP/cron/skills/gateway를 기능 목록이 아니라 자동화 운영 체계로 설명
-- 9장: 조직 도입에서 왜 모델보다 운영 기준이 먼저인지 확장
-- 10장: 케이스 장이 단순 사례 모음이 아니라 앞 장 개념을 묶어 보여주는 장임을 명확히 설명
+- 9장: 보안/복구/마이그레이션을 실행 순서로 정리
+- 10장: 조직 도입에서 왜 모델보다 운영 기준이 먼저인지 확장
+- 11장: 케이스 장이 단순 사례 모음이 아니라 앞 장 개념을 묶어 보여주는 장임을 명확히 설명
 
 완료 검증:
 
-- 장 인트로 10개 모두 내부 링크 포함
+- 장 인트로 11개 모두 내부 링크 포함
 - 각 장 인트로 500단어 이상 권장
 - FAQ는 장 인트로에 필수는 아니지만, 읽는 순서와 다음 링크는 필수
 
@@ -167,12 +169,12 @@
    - 공식 docs 기반 체크리스트 추가
    - Daily Briefing Bot을 대표 자동화 패턴으로 확장
 
-3. 8장 체크리스트/마이그레이션/복구
+3. 9장 보안/체크리스트/마이그레이션/복구
    - OpenClaw에서 Hermes로 넘어올 때의 실제 확인 순서 확장
    - gateway/cron/delivery/source of truth 복구 순서 보강
    - 복구 플레이북 템플릿 추가
 
-4. 10장 실제 운영 케이스
+4. 11장 실제 운영 케이스
    - 각 케이스를 `상황 → 역할 분리 → 사용 도구 → 검증 → 재사용 기준`으로 확장
    - 추상 예시보다 실제 Slack 요청, 방울이 확장조사, 뽀동이 구조 정리, GitHub/WikiDocs 발행 흐름을 살림
 
@@ -214,15 +216,15 @@
 
 | 공식 docs 주제 | 반영 위치 | 보강 방향 |
 |---|---|---|
-| Daily Briefing Bot | 5장/6장/8장/10장 | 대표 자동화 패턴으로 확장 |
-| Automate Anything with Cron | 5장/8장 | self-contained prompt/schedule/delivery 검증 기준 |
-| Cron Troubleshooting | 5장/8장 | gateway/status/API key/delivery 순서 |
-| Delegation & Parallel Work | 3장/5장/10장 | 역할형 에이전트 협업 기준 |
+| Daily Briefing Bot | 5장/7장/8장/11장 | 대표 자동화 패턴으로 확장 |
+| Automate Anything with Cron | 5장/9장 | self-contained prompt/schedule/delivery 검증 기준 |
+| Cron Troubleshooting | 5장/9장 | gateway/status/API key/delivery 순서 |
+| Delegation & Parallel Work | 3장/5장/11장 | 역할형 에이전트 협업 기준 |
 | Use MCP with Hermes | 5장 | MCP를 업무 연결 계층으로 설명 |
-| Working with Skills | 5장 | skill/cron/plugin/문서화 판단 기준 |
-| Messaging Platforms | 2장/7장/9장 | 메인 창구/호출 규칙/팀 채널 운영 |
+| Working with Skills | 6장 | skill/cron/plugin/문서화 판단 기준 |
+| Messaging Platforms | 0장/2장/8장/10장 | 메인 창구/호출 규칙/팀 채널 운영 |
 | Memory | 4장 | session/memory/skill/wiki/source of truth 경계 |
-| Migrate from OpenClaw | 1장/8장 | 전환 이유/실행 순서/검증/복구 |
+| Migrate from OpenClaw | 0장/1장/9장 | 전환 이유/실행 순서/검증/복구 |
 
 완료 검증:
 
@@ -241,7 +243,7 @@
 5. Phase B 장 인트로 보강
 6. validation/content audit 실행
 7. 커밋/푸시
-8. Phase C 본문 확장: 3장 → 5장 → 8장 → 10장 순서
+8. Phase C 본문 확장: 3장 → 5장 → 9장 → 11장 순서
 9. 각 장 단위로 validation/content audit 후 커밋/푸시
 10. Phase D 블로그 1~27 원문 대비 재검수
 11. Phase E 공식 docs 반영 상태 정리

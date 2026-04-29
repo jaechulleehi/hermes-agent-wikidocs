@@ -91,6 +91,15 @@ memory / USER.md / AGENTS.md / shared-memory / Obsidian / skill / session_search
 | 반복되는 WikiDocs 검증 절차 | session | skill | 다음 작업에서도 같은 방식으로 재사용된다 |
 | OpenViking/Honcho 같은 외부 메모리 비교 | 단기 대화 | 4장/RAG 페이지와 source note | 도구 선택 기준으로 다시 쓰인다 |
 
+## 4장을 마치면 남아야 할 것
+
+| 남아야 할 것 | 확인 질문 | 연결되는 글 |
+|---|---|---|
+| 기억 배치표 | session/memory/profile/shared-memory/Obsidian/RAG 중 어디에 둘지 판단할 수 있는가 | [session/memory/profile 경계](https://wikidocs.net/346126) |
+| 역할 문서 기준 | AGENTS.md, USER.md, SOUL.md, skill을 섞지 않았는가 | [AGENTS.md와 USER.md](https://wikidocs.net/346127) / [SOUL.md](https://wikidocs.net/346292) |
+| 팀 공통 기억 기준 | 개인 선호와 팀 공통 규칙을 분리했는가 | [shared-memory](https://wikidocs.net/346128) |
+| 회수/복구 기준 | 긴 대화와 외부 기억층에서 필요한 정보를 다시 찾을 수 있는가 | [context compaction](https://wikidocs.net/346132) / [OpenViking과 RAG](https://wikidocs.net/346131) |
+
 ## 기억 시스템을 설계할 때 남길 기준
 
 1. memory는 많이 넣는 곳이 아니라 짧고 안정적인 장기 기준을 넣는 곳이다.

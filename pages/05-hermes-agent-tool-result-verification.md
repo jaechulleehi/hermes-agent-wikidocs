@@ -68,6 +68,11 @@ Hermes Agent 도구 실행의 끝은 “명령이 성공했다”가 아니다. 
 
 이 흐름은 번거로워 보이지만, 독자가 보는 공개 책의 품질을 지키는 최소 기준이다. 특히 GitHub와 WikiDocs처럼 source of truth와 배포 채널이 나뉘는 구조에서는 마지막 공개 확인이 중요하다.
 
+## 함께 연결해서 볼 기준
+
+검증은 마지막 보고 문구만 다듬는 일이 아니다. [terminal backend](https://wikidocs.net/346289)를 썼다면 파일/프로세스/로그를 확인해야 하고, [MCP 외부 도구](https://wikidocs.net/346231)를 썼다면 계정 권한과 실제 반영 위치를 확인해야 한다. 반복되는 검증 절차는 [Hermes Agent Skill](https://wikidocs.net/345904)로 남겨야 다음 작업에서 같은 실수를 줄일 수 있다.
+
+
 ## FAQ
 
 ### exit code 0이면 성공 아닌가요?
