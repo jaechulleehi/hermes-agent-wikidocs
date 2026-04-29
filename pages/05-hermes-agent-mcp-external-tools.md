@@ -42,7 +42,7 @@ GitHub도 마찬가지다. 이슈 목록 조회나 PR diff 검토는 낮은 위�
 
 웹 검색/리서치 도구는 MCP/API/CLI 중 하나로만 설명하면 독자가 헷갈린다. 실제 운영에서는 무료 검색 백엔드, 유료 검색 API, 브라우저 직접 확인, AI 검색 서비스를 목적에 따라 섞는다.
 
-가벼운 조사에서는 DuckDuckGo/DDGS처럼 API key 없이 쓸 수 있는 무료 검색이 빠르다. SearXNG는 직접 호스팅하거나 신뢰 가능한 인스턴스를 쓰면 여러 검색원을 묶는 선택지가 된다. Brave/Tavily/Exa 같은 유료 API는 대량 호출, 안정적인 JSON 응답, extract/crawl 같은 기능이 필요할 때 검토한다. Perplexity 같은 AI 검색은 요약이 빠르지만, 답변 자체와 원문 근거를 분리해서 확인해야 한다.
+가벼운 조사에서는 DuckDuckGo/DDGS처럼 API key 없이 쓸 수 있는 무료 검색이 빠르다. SearXNG는 직접 호스팅하거나 신뢰 가능한 인스턴스를 쓰면 여러 검색원을 묶는 선택지가 된다. Hermes Agent 공식 web backend는 Firecrawl/Parallel/Tavily/Exa처럼 공식 docs에서 지원 범위를 확인하고, Brave/Perplexity 같은 별도 검색 API나 AI 검색은 원문 근거 확인 경로와 분리해서 검토한다.
 
 그래서 리서치형 에이전트에게는 “Brave가 좋다” 또는 “Tavily가 좋다”보다 아래 기준이 더 중요하다.
 

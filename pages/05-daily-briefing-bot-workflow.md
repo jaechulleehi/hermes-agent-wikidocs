@@ -26,7 +26,7 @@ Daily Briefing Bot은 단순한 뉴스 요약 예제가 아니다. Hermes Agent�
 
 Daily Briefing Bot류 작업에서 “웹에서 찾아줘”만 쓰면 검색 품질이 흔들린다. fresh session은 이전에 우리가 어떤 검색원을 선호했는지 모를 수 있기 때문이다. 그래서 정기 리서치 prompt에는 검색 도구와 출처 기준을 함께 적어야 한다.
 
-예를 들어 우리 운영에서는 가벼운 웹 리서치는 DuckDuckGo/DDGS 같은 무료 검색을 먼저 보고, 중요한 내용은 브라우저로 원문을 직접 확인한다. SEO/GEO 키워드 확장은 검색 결과가 아니라 Google Suggest 같은 suggest 데이터를 따로 본다. 만약 매일 대량으로 수집하거나 결과 안정성이 중요해지면 Brave/Tavily/Exa 같은 유료 API나 자체 SearXNG 운영을 검토할 수 있다.
+예를 들어 우리 운영에서는 가벼운 웹 리서치는 DuckDuckGo/DDGS 같은 무료 검색을 먼저 보고, 중요한 내용은 브라우저로 원문을 직접 확인한다. SEO/GEO 키워드 확장은 검색 결과가 아니라 Google Suggest 같은 suggest 데이터를 따로 본다. Hermes Agent의 공식 web backend는 Firecrawl/Parallel/Tavily/Exa처럼 공식 docs에서 지원 범위를 확인하고, Brave/Perplexity/자체 SearXNG는 별도 리서치 경로나 운영 후보로 구분한다.
 
 좋은 prompt는 이렇게 쓴다.
 
@@ -60,6 +60,8 @@ Hermes Agent cron은 정해진 시간이나 주기에 작업을 실행하는 예
 3. 필요한 도구와 인증 범위가 현재 profile에서 접근 가능한가?
 4. gateway가 실행 중이고 delivery target이 맞는가?
 5. 결과가 없을 때도 운영 확인 메시지를 남기도록 되어 있는가?
+
+알림이 너무 많아지는 작업은 `[SILENT]` 기준을 둔다. 예를 들어 “변화가 없으면 `[SILENT]`만 반환하고, 의미 있는 변화가 있을 때만 요약한다”처럼 쓰면 조용한 날에는 메시지를 보내지 않고 신호가 있을 때만 보고할 수 있다.
 
 ## FAQ
 

@@ -18,6 +18,7 @@
 | context files | User Guide / Context Files | `.hermes.md`, `HERMES.md`, `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, SOUL.md의 로딩 위치를 구분한다. |
 | Skill | User Guide / Skills System | Skill은 on-demand knowledge document이며, 반복 절차와 검증 기준으로 설명한다. |
 | Integrations | Integrations | provider, web backend, browser, voice, API server, plugin, memory provider는 전체 목록을 본문에 옮기지 않고 활용 기준과 확인 위치를 나눈다. |
+| Guides / Tutorials / Tips | Guides | Tips & Best Practices, Daily Briefing Bot, delegation, cron, skills 같은 실전 가이드는 기능 목록보다 사용 습관과 운영 패턴으로 반영한다. |
 | MCP | User Guide / MCP | stdio/HTTP 서버, tool prefix, resource/prompt utility를 임의로 단순화하지 않는다. |
 | cron | User Guide / Scheduled Tasks | fresh session, delivery target, skill attachment, workdir 기준을 확인한다. |
 | Messaging Gateway | User Guide / Messaging Gateway | Slack/Telegram/Discord 등 채널 연결과 session/cron delivery를 설명한다. |
@@ -83,7 +84,21 @@
 
 책 본문은 “무엇을 선택해야 하는가”를 보여주고, 부록은 “공식 docs와 어디를 대조해야 하는가”를 알려준다. 빠르게 바뀌는 이름과 설정값을 본문에 길게 넣으면 입문서가 금방 낡는다.
 
-## 7. 공식 docs와 책의 역할 분담
+## 7. Guides와 Tutorials를 반영할 때의 기준
+
+공식 guides와 tutorials는 “명령어 전체를 책에 옮기는 자료”가 아니라, 입문자가 어떤 순서로 성공 경험을 만들어야 하는지 보여주는 예시다.
+
+| 공식 가이드 유형 | 책에서 반영할 관점 | 본문에 과하게 넣지 않을 것 |
+|---|---|---|
+| Tips & Best Practices | 구체적인 요청, 앞부분 맥락 제공, context file, Skill, memory/Skill 구분, prompt cache, `/compress` 같은 사용 습관 | 모든 단축키와 CLI 조작법 |
+| Daily Briefing Bot | cron fresh session, self-contained prompt, web search, delegation, delivery가 이어지는 자동화 패턴 | 예제 뉴스 주제와 명령어 전체 |
+| Delegation & Parallel Work | 병렬 조사/검토에 delegation을 쓰고, 단순 도구 호출이나 오래 도는 작업은 다른 실행 방식을 쓰는 판단 기준 | 내부 tool schema 전체 |
+| Working with Skills | 반복 절차를 Skill로 만들고, 설치/로드/검증 기준을 나누는 흐름 | Hub 목록 전체와 개별 skill 세부 설정 |
+| Automation Templates | schedule/webhook/API trigger의 차이와 보고 억제(`[SILENT]`) 같은 운영 패턴 | 모든 template 예제 |
+
+가이드 내용을 반영할 때는 “공식 예제와 같은 명령어를 따라 한다”보다 “왜 이 순서가 실패를 줄이는가”를 설명하는 편이 이 책의 역할에 맞다.
+
+## 8. 공식 docs와 책의 역할 분담
 
 공식 docs는 기능의 최신 기준이다. 설치 명령, 설정 키, 지원 플랫폼, provider, toolset, CLI reference는 공식 docs를 따른다.
 
