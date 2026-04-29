@@ -4,7 +4,7 @@
 
 AI를 잘 쓰는 일은 더 긴 프롬프트를 쓰는 일이 아닙니다. 같은 설명을 반복하지 않아도 되고, 조사/정리/실행이 끊기지 않으며, 도구와 기록이 하나의 업무 흐름으로 이어질 때 비로소 “일하는 AI”가 됩니다.
 
-이 책은 에르메스 에이전트(Hermes Agent)를 기반으로 **AI 업무 자동화와 나만의 AI 팀**을 실제로 만들고 운영한 경험을 정리한 실전 가이드입니다. 설치 명령을 따라 하는 데서 멈추지 않고, 무엇을 기억으로 남길지, 어떤 절차를 Skill로 만들지, 어떤 업무에 AI 개인비서를 붙일지 정하는 관점으로 `Hermes Agent 사용법`을 풀어갑니다.
+이 책은 에르메스 에이전트(Hermes Agent)를 기반으로 **AI 업무 자동화와 나만의 AI 팀**을 실제로 만들고 운영한 경험을 정리한 실전 가이드입니다. 한국어 검색에서는 `헤르메스 에이전트`라고 찾는 경우도 많기 때문에, 본문에서는 대표 표기인 `에르메스 에이전트(Hermes Agent)`를 유지하되 `헤르메스 에이전트 설치`, `헤르메스 에이전트 사용법`, `Hermes Agent GitHub`처럼 독자가 실제로 찾는 표현도 함께 안내합니다. 설치 명령을 따라 하는 데서 멈추지 않고, 무엇을 기억으로 남길지, 어떤 절차를 Skill로 만들지, 어떤 업무에 AI 개인비서를 붙일지 정하는 관점으로 `Hermes Agent 사용법`을 풀어갑니다.
 
 0장에서는 공식 GitHub/문서, 설치, CLI 첫 대화, provider/model/config, OpenClaw 비교, Claude Code/Codex 비교, Docker/Gateway, Slack/Telegram/Discord 채널, 업데이트 검증을 한 번에 훑습니다. 이후에는 하나의 AI 개인비서를 메인 창구로 세우고, 조사형/정리형/실행형 에이전트를 나눠 실제 AI 워크플로우를 굴리는 방식으로 확장합니다.
 
@@ -37,7 +37,7 @@ Hermes Agent를 쓰다 막히는 지점은 대개 설치 명령이 아니라 운
 
 ## 이 책에서 다루는 것
 
-- Hermes Agent 공식 GitHub/공식 문서/설치/세팅을 확인하는 기초 흐름
+- Hermes Agent 공식 GitHub/공식 문서/설치/세팅을 확인하는 기초 흐름과 `헤르메스 에이전트` 검색 별칭
 - Hermes Agent와 OpenClaw, Claude Code/Codex, Docker/Gateway의 차이
 - Slack, Telegram, Discord, Email, Webhook 같은 Hermes Agent 사용 채널과 gateway 판단 기준
 - 챗봇과 AI 개인비서의 차이

@@ -11,6 +11,7 @@
 ## 제목을 이렇게 잡은 이유
 
 - `에르메스 에이전트(Hermes Agent)`를 맨 앞에 두어 한글/영문 검색어를 동시에 잡는다.
+- 한국어 검색에서는 `헤르메스 에이전트` 표기도 함께 발생하므로 제목 체계는 유지하되 README, 0장, FAQ, 용어집에서 검색 별칭으로 자연스럽게 받는다.
 - `업무 자동화`를 제목 전면에 넣어 독자가 실제로 찾는 문제 키워드에 맞춘다.
 - `나만의 AI 팀 만들기`로 챗봇 단일 사용이 아니라 역할형 에이전트 운영이라는 차별점을 쉽게 전달한다.
 - 부제의 `AI 개인비서`, `역할형 에이전트`, `실전 업무 워크플로우`로 대중적인 이해와 실제 운영 경험을 동시에 살린다.
@@ -23,6 +24,12 @@
 ## 우선 타겟 키워드
 
 - 에르메스 에이전트
+- 헤르메스 에이전트
+- 헤르메스 에이전트 설치
+- 헤르메스 에이전트 사용법
+- 헤르메스 에이전트 스킬
+- 헤르메스 에이전트 깃허브
+- 헤르메스 에이전트 윈도우
 - Hermes Agent
 - Hermes Agent 공식 GitHub
 - Hermes Agent 공식 문서
@@ -54,6 +61,8 @@
 - Hermes Agent update
 - Hermes Agent 업데이트
 - Hermes Agent Docker
+- Hermes Agent Windows
+- Hermes Agent web ui
 - Hermes Agent gateway
 - Hermes Agent security
 - Hermes Agent 보안
@@ -104,6 +113,10 @@
 - 오픈소스 AI 에이전트
 - 자율 AI 에이전트
 - AI 에이전트 업무 자동화
+- AI 에이전트 만들기
+- AI 에이전트 사용법
+- AI 에이전트 사례
+- AI 에이전트 종류
 - AI 에이전트 도입
 - AI 에이전트 도입 사례
 - AI 에이전트 운영 사례
@@ -112,6 +125,9 @@
 - Slack AI 비서
 - Obsidian AI 워크플로우
 - MCP 연동
+- MCP 에이전트란
+- AI 에이전트와 MCP
+- MCP 서버 에이전트
 - Model Context Protocol
 - MCP AI agent
 - MCP AI agent protocol
@@ -175,6 +191,7 @@
 - Hermes Agent CLI 첫 대화는 어떻게 시작하나?
 - Hermes Agent provider/model/config는 어떻게 확인하나?
 - Hermes Agent 업데이트 전후에는 무엇을 점검해야 하나?
+- 헤르메스 에이전트와 에르메스 에이전트는 같은 Hermes Agent를 가리키는가?
 - Hermes Agent와 OpenClaw는 무엇이 다른가?
 - Hermes Agent와 Claude Code/Codex는 어떻게 다른가?
 - Hermes Agent Docker와 gateway는 언제 필요한가?

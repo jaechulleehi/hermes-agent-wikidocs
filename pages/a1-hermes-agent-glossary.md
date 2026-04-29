@@ -8,6 +8,7 @@
 
 | 용어 | 한 줄 의미 | 실제로 쓰는 순간 |
 |---|---|---|
+| Hermes Agent / 에르메스 에이전트 / 헤르메스 에이전트 | 같은 도구를 가리키는 영문/한국어/검색 별칭 | 공식 표기는 Hermes Agent, 이 책의 대표 한국어 표기는 에르메스 에이전트로 읽을 때 |
 | AI 개인비서 | Hermes Agent를 내 업무 목적에 맞게 운영하는 방식 | 요청을 먼저 받고 일을 나눌 메인 창구가 필요할 때 |
 | 역할형 에이전트 | profile, SOUL.md, Skill, toolset, gateway 계정을 조합해 역할을 나누는 구조 | 조사/정리/실행처럼 실패 방식이 다른 일을 분리할 때 |
 | Persistent Memory | `MEMORY.md`, `USER.md`, session search, 외부 memory provider를 포함하는 기억 체계 | 매번 반복 설명하지 않아도 되는 기준을 남길 때 |

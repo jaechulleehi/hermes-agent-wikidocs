@@ -1,10 +1,16 @@
 ## Hermes Agent MCP는 외부 도구를 어떻게 연결할까
 
-에르메스 에이전트(Hermes Agent)에서 MCP는 외부 도구를 대화 흐름에 붙이는 표준 연결면이다. `Hermes Agent MCP`, `Hermes Agent MCP server`, `Hermes Agent add MCP`를 찾는 독자라면 MCP를 “자동화 버튼”이 아니라 AI 개인비서가 외부 서비스의 도구 목록을 이해하고 호출하는 방식으로 이해해야 한다.
+에르메스 에이전트(Hermes Agent)에서 MCP는 외부 도구를 대화 흐름에 붙이는 표준 연결면이다. `MCP 에이전트란`, `AI 에이전트와 MCP`, `Hermes Agent MCP`, `Hermes Agent MCP server`, `Hermes Agent add MCP`를 찾는 독자라면 MCP를 “자동화 버튼”이 아니라 AI 개인비서가 외부 서비스의 도구 목록을 이해하고 호출하는 방식으로 이해해야 한다.
 
 ![Hermes Agent MCP 외부 도구 연결](../assets/images/chapter-heroes/ch5-5-mcp-external-tools-codex.png)
 
 MCP를 붙이면 할 수 있는 일이 늘어난다. 하지만 위험도도 같이 늘어난다. 캘린더 조회, 문서 검색, GitHub 이슈 확인, Notion 페이지 조회처럼 읽기 중심인 작업과 문서 수정, 공유 범위 변경, 삭제, 배포처럼 되돌리기 어려운 작업은 같은 연결로 다루면 안 된다.
+
+## MCP 에이전트라는 표현을 어떻게 읽어야 할까
+
+검색어로는 `MCP 에이전트`, `MCP 서버 에이전트`, `MCP 멀티 에이전트`처럼 묶여 보이지만, MCP가 에이전트 자체를 대신하는 것은 아니다. 실제 운영에서는 AI 에이전트가 외부 도구를 안전하게 호출하기 위한 연결 방식으로 보는 편이 정확하다.
+
+즉, Hermes Agent가 요청을 해석하고 역할을 나누는 중심이라면 MCP는 GitHub, Notion, Google Workspace 같은 외부 업무 시스템을 tool 목록과 schema로 연결하는 통로다. 이 구분이 있어야 `AI 에이전트와 MCP`를 기능 나열이 아니라 권한, 검증, 복구 기준까지 포함한 운영 문제로 다룰 수 있다.
 
 ## MCP가 해결하는 문제
 

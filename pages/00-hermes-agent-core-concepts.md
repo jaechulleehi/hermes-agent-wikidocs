@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent)란 무엇인가
 
-에르메스 에이전트(Hermes Agent)는 질문에 답하고 끝나는 AI 챗봇이 아니다. 메모리 계층, 프로필, 스킬, cron, MCP, gateway를 묶어 실제 업무 흐름을 운영하게 돕는 오픈소스 AI 에이전트이자 AI 에이전트 프레임워크다. 공식 문서의 표현을 빌리면 경험에서 스킬을 만들고 세션을 넘어 기억하는 `self-improving AI agent`, 즉 `AI agent with memory`에 가깝다. 이 책에서는 에르메스 에이전트(Hermes Agent)를 설치 기능보다 **기억할 것, 반복할 것, 도구로 실행할 것을 나눠 AI 개인비서와 역할형 에이전트로 업무 자동화를 굴리는 운영 시스템**으로 설명한다.
+에르메스 에이전트(Hermes Agent)는 질문에 답하고 끝나는 AI 챗봇이 아니다. 한국어 검색에서는 `헤르메스 에이전트`라고 찾는 경우도 많지만, 이 책에서는 대표 표기를 `에르메스 에이전트(Hermes Agent)`로 통일한다. 메모리 계층, 프로필, 스킬, cron, MCP, gateway를 묶어 실제 업무 흐름을 운영하게 돕는 오픈소스 AI 에이전트이자 AI 에이전트 프레임워크다. 공식 문서의 표현을 빌리면 경험에서 스킬을 만들고 세션을 넘어 기억하는 `self-improving AI agent`, 즉 `AI agent with memory`에 가깝다. 이 책에서는 에르메스 에이전트(Hermes Agent)를 설치 기능보다 **기억할 것, 반복할 것, 도구로 실행할 것을 나눠 AI 개인비서와 역할형 에이전트로 업무 자동화를 굴리는 운영 시스템**으로 설명한다.
 
 ![에르메스 에이전트 핵심 개념 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-1-hermes-core-concepts-codex.webp)
 
@@ -99,6 +99,10 @@ Hermes Agent를 처음 보면 기능 이름이 먼저 눈에 들어온다. memor
 이 질문에 답하면 Hermes Agent가 기능 묶음이 아니라 업무 자동화 구조로 보이기 시작한다.
 
 ## FAQ
+
+### 헤르메스 에이전트와 에르메스 에이전트는 다른 도구인가요?
+
+아니다. 한국어로 검색할 때 `헤르메스 에이전트`라고 쓰는 경우가 있지만, 이 책에서는 같은 Hermes Agent를 `에르메스 에이전트(Hermes Agent)`로 표기한다. 검색어가 달라도 핵심은 AI 개인비서, 역할형 에이전트, 메모리, Skill, MCP, gateway로 이어지는 업무 자동화 운영 구조다.
 
 ### 에르메스 에이전트(Hermes Agent)는 챗봇과 무엇이 다른가요?
 

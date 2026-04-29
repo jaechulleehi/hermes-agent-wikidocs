@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent) 설치와 세팅은 어떻게 시작할까
 
-에르메스 에이전트(Hermes Agent) 설치 자체는 길지 않다. Linux, macOS, WSL2, Android Termux에서는 one-line installer로 시작할 수 있고, Windows 사용자는 보통 WSL2 경로를 본다. 진짜 기준은 명령어를 많이 외우는 것이 아니라, 설치 후 무엇을 확인해야 다음 단계로 넘어갈 수 있는지 잡는 것이다.
+에르메스 에이전트(Hermes Agent) 설치 자체는 길지 않다. `헤르메스 에이전트 설치`, `Hermes Agent 설치`, `Hermes Agent Windows`, `Hermes Agent Docker`를 찾고 들어온 독자라도 먼저 볼 순서는 같다. Linux, macOS, WSL2, Android Termux에서는 one-line installer로 시작할 수 있고, Windows 사용자는 보통 WSL2 경로를 본다. 진짜 기준은 명령어를 많이 외우는 것이 아니라, 설치 후 무엇을 확인해야 다음 단계로 넘어갈 수 있는지 잡는 것이다.
 
 ![에르메스 에이전트 설치와 기본 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-3-install-setup-flow-codex.webp)
 
@@ -14,7 +14,7 @@
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 ```
 
-공식 문서 기준 지원 흐름은 Linux, macOS, WSL2, Android Termux다. Windows native는 공식 문서에서 직접 지원 대상으로 보지 않고, WSL2 사용을 권장한다. Nix/NixOS와 수동 개발 설치 흐름은 공식 문서의 별도 페이지를 확인하는 편이 안전하다.
+공식 문서 기준 지원 흐름은 Linux, macOS, WSL2, Android Termux다. 그래서 `헤르메스 에이전트 윈도우`나 `Hermes Agent windows`로 검색했다면 Windows native 설치보다 WSL2 기준으로 읽는 편이 안전하다. Windows native는 공식 문서에서 직접 지원 대상으로 보지 않고, WSL2 사용을 권장한다. Nix/NixOS와 수동 개발 설치 흐름은 공식 문서의 별도 페이지를 확인하는 편이 안전하다.
 
 ## 설치 전에 확인할 것
 
