@@ -1,78 +1,71 @@
 ## 부록 A-2. Hermes Agent 보안 체크리스트
 
-Hermes Agent로 AI 업무 자동화를 만들 때 보안은 마지막에 붙이는 옵션이 아니다. AI 개인비서가 도구를 실행하고, 외부 채널에서 요청을 받고, GitHub/WikiDocs/Slack/Google Workspace 같은 업무 시스템에 연결될수록 권한과 기록 기준을 먼저 정해야 한다.
+Hermes Agent 보안은 마지막에 붙이는 옵션이 아니다. AI 개인비서가 도구를 실행하고, 외부 채널에서 요청을 받고, GitHub/WikiDocs/Slack/Google Workspace 같은 업무 시스템에 연결될수록 권한과 기록 기준을 먼저 정해야 한다.
 
-이 체크리스트는 완벽한 보안 정책 문서가 아니라, 운영자가 실제 자동화를 붙이기 전에 최소한으로 확인해야 할 항목을 정리한 것이다. 명령어와 설정 키는 [Hermes Agent 공식 docs](https://hermes-agent.nousresearch.com/docs/)를 기준으로 다시 확인한다.
+이 페이지는 완벽한 보안 정책이 아니라 운영 전 최소 점검표다. 명령어와 설정 키는 [Hermes Agent 공식 docs](https://hermes-agent.nousresearch.com/docs/)에서 다시 확인한다.
 
 ## 1. 비밀값과 인증 정보
 
-| 확인 항목 | 기준 |
+| 확인할 것 | 기준 |
 |---|---|
-| API key/token/password를 문서에 남기지 않았는가 | README, WikiDocs, Slack 보고, 예제 코드에 실제 값을 쓰지 않는다. |
-| `.env`와 `auth.json`의 역할을 구분했는가 | API key는 `.env`, OAuth/credential pool 정보는 `auth.json` 쪽 흐름으로 관리한다. |
-| OAuth 권한 범위를 확인했는가 | 필요한 권한만 요청하고, 쓰지 않는 scope는 제거한다. |
-| 로그에 인증 정보가 섞이지 않는가 | 실패 로그를 공유하기 전에 token, webhook URL, channel ID를 확인한다. |
-| Skill이 요구하는 secret 입력 경로를 확인했는가 | messaging 채널에 비밀값을 쓰지 않고, 로컬 CLI나 `.env`에서 설정한다. |
+| API key/token/password | README, WikiDocs, Slack 보고, 예제 코드에 실제 값을 쓰지 않는다. |
+| `.env`와 `auth.json` | API key는 `.env`, OAuth/credential pool 정보는 `auth.json` 흐름으로 구분한다. |
+| OAuth scope | 필요한 권한만 요청하고 쓰지 않는 scope는 제거한다. |
+| 로그 공유 | token, webhook URL, channel ID, 계정 정보가 섞였는지 먼저 본다. |
+| Skill의 secret 요구 | 메시징 채널에 비밀값을 쓰지 않고 로컬 CLI나 `.env`에서 설정한다. |
 
-## 2. 도구 실행과 권한
+## 2. 도구 실행 권한
 
-| 확인 항목 | 기준 |
+| 확인할 것 | 기준 |
 |---|---|
-| terminal/file/git 같은 상태 변경 도구를 누가 쓸 수 있는가 | 실행형 에이전트나 승인된 profile에만 맡긴다. |
-| 위험 명령은 승인 절차가 있는가 | 삭제, 배포, 권한 변경, 대량 수정은 바로 실행하지 않는다. |
-| `--yolo` 또는 YOLO mode 사용 조건이 분명한가 | 위험 명령 승인을 건너뛰는 설정은 격리된 환경이나 명확한 테스트 범위에서만 쓴다. |
-| toolset을 필요한 범위로 제한했는가 | 조사만 필요한 작업에는 파일 수정/터미널 도구를 열지 않는다. |
-| 외부 API 호출 결과를 검증하는가 | “성공했다고 말했다”가 아니라 status, URL, 파일, 공개 페이지를 확인한다. |
+| terminal/file/git 권한 | 상태 변경 도구는 실행형 에이전트나 승인된 profile에만 맡긴다. |
+| 위험 명령 | 삭제, 배포, 권한 변경, 대량 수정은 바로 실행하지 않는다. |
+| YOLO mode | 승인 우회는 격리된 테스트 범위에서만 쓴다. |
+| toolset 범위 | 조사만 필요한 작업에는 파일 수정/터미널 도구를 열지 않는다. |
+| 실행 결과 검증 | “성공했다고 말했다”가 아니라 status, URL, 파일, 공개 페이지를 확인한다. |
 
-## 3. Messaging Gateway와 채널 권한
+## 3. 채널과 Gateway
 
-| 확인 항목 | 기준 |
+| 확인할 것 | 기준 |
 |---|---|
-| Messaging Gateway가 어느 채널의 요청을 받는지 확인했는가 | Slack/Telegram/Discord/Webhook별 허용 범위를 분리한다. |
-| allowlist 또는 pairing 기준이 있는가 | 공식 docs 기준으로 gateway는 허용되지 않은 사용자를 막는 방향을 기본값으로 본다. |
-| 멀티봇 스레드 호출 규칙이 있는가 | 직접 호출되지 않은 봇은 침묵하는 기준을 둔다. |
-| 공개 채널과 내부 채널을 구분했는가 | 내부 값이 공개 채널로 나가지 않게 보고 포맷을 나눈다. |
-| cron 결과가 어디로 전달되는지 확인했는가 | fresh session에서 실행되므로 prompt와 delivery target을 명확히 쓴다. |
+| Messaging Gateway 범위 | Slack/Telegram/Discord/Webhook별 요청 허용 범위를 나눈다. |
+| allowlist/pairing | 허용되지 않은 사용자가 요청하지 못하게 한다. |
+| 멀티봇 호출 규칙 | 직접 호출되지 않은 봇은 침묵하는 기준을 둔다. |
+| 공개/내부 채널 | 내부 값이 공개 채널로 나가지 않게 보고 포맷을 나눈다. |
+| cron delivery | fresh session prompt와 전달 대상을 명확히 쓴다. |
 
 ## 4. Nous Tool Gateway와 외부 도구 키
 
-| 확인 항목 | 기준 |
+| 확인할 것 | 기준 |
 |---|---|
-| Messaging Gateway와 Nous Tool Gateway를 구분했는가 | 전자는 Slack/Telegram 같은 채널 입구이고, 후자는 web/image/TTS/browser 도구 호출 경로다. |
-| `use_gateway` 설정을 확인했는가 | web/image_gen/tts/browser 도구별로 Nous Tool Gateway를 쓸지 직접 API 키를 쓸지 구분한다. |
-| 기존 API 키를 삭제하지 않아도 되는가 | 공식 docs 기준으로 `use_gateway: true`는 직접 키보다 gateway 경로를 우선 사용한다. |
-| 구독 만료 시 대체 경로가 있는가 | Tool Gateway가 멈추면 direct API key 방식으로 전환할 수 있게 준비한다. |
+| Gateway 구분 | Messaging Gateway는 채널 입구, Nous Tool Gateway는 도구 호출 경로다. |
+| `use_gateway` | web/image_gen/tts/browser 도구별로 gateway 사용 여부를 확인한다. |
+| direct API key | `use_gateway: true`를 쓰더라도 직접 key 보관 정책을 따로 정한다. |
+| 대체 경로 | 구독 만료나 장애 시 direct API key 또는 다른 provider로 전환할 수 있어야 한다. |
 
-## 5. profile, workspace, sandbox 경계
+## 5. profile, workspace, sandbox
 
-| 확인 항목 | 기준 |
+| 확인할 것 | 기준 |
 |---|---|
-| profile을 보안 샌드박스로 오해하지 않았는가 | profile은 config, `.env`, SOUL.md, memory, sessions, skills, cron, gateway state를 분리하지만 파일 접근 자체를 막지는 않는다. |
-| 작업 시작 위치를 명시했는가 | 필요한 경우 profile의 `terminal.cwd`를 절대 경로로 지정한다. |
-| 위험 작업은 실행 환경을 격리했는가 | local backend에서 같은 사용자 권한으로 실행된다는 점을 전제로 Docker/SSH/Modal 등 격리 방식을 검토한다. |
-| SOUL.md가 보안 경계를 대신한다고 착각하지 않았는가 | SOUL.md는 행동 지침이지 접근 제어 장치가 아니다. |
+| profile의 역할 | config, `.env`, SOUL.md, memory, sessions, skills, cron, gateway state를 분리한다. |
+| profile의 한계 | 파일 접근 자체나 OS 사용자 권한을 막는 샌드박스는 아니다. |
+| 작업 시작 위치 | 필요한 경우 `terminal.cwd`를 절대 경로로 지정한다. |
+| 위험 작업 격리 | local backend가 위험하면 Docker/SSH/Modal 같은 실행 환경을 검토한다. |
+| SOUL.md | 행동 지침이지 접근 제어 장치가 아니다. |
 
-## 6. 문서화와 발행
+## 6. 발행과 복구
 
-| 확인 항목 | 기준 |
+| 확인할 것 | 기준 |
 |---|---|
-| GitHub 원본과 WikiDocs 공개본이 일치하는가 | GitHub push 후 WikiDocs 반영을 확인한다. |
-| 보호해야 할 정보가 사례에 남지 않았는가 | 내부 경로, 토큰, 계정, 개인 대화는 판단 기준으로 추상화한다. |
-| 이미지/첨부 파일에 민감정보가 없는가 | 스크린샷, 썸네일, 로그 이미지도 업로드 전 확인한다. |
-| 전자책 변환을 고려했는가 | H1, 이미지 경로, 표, 링크를 검증한다. |
+| GitHub/WikiDocs 일치 | GitHub push 후 WikiDocs 공개 반영을 확인한다. |
+| 공개 사례 | 내부 경로, 토큰, 계정, 개인 대화는 판단 기준으로 추상화한다. |
+| 이미지/첨부 | 스크린샷, 썸네일, 로그 이미지도 업로드 전 확인한다. |
+| diff와 rollback | 파일 수정, 페이지 생성, 대량 치환 전후 차이를 보고 되돌릴 기준을 둔다. |
+| 반복 사고 | 한 번 겪은 문제는 체크리스트나 Skill에 반영한다. |
 
-## 7. 복구와 운영 지속성
+## 운영 전 다섯 문장
 
-| 확인 항목 | 기준 |
-|---|---|
-| 변경 전후 diff를 확인했는가 | 파일 수정, 페이지 생성, 대량 치환 전후 차이를 본다. |
-| checkpoint/rollback 기준이 있는가 | 실패했을 때 되돌릴 커밋, 백업, 복구 순서를 정한다. |
-| cron/gateway/Skill 업데이트 후 재검증했는가 | 설정 변경 후 실제 실행 결과까지 확인한다. |
-| 반복 사고를 체크리스트나 Skill에 반영했는가 | 한 번 겪은 문제를 다음 작업 기준으로 남긴다. |
-
-## 최소 기준
-
-바로 운영에 붙이기 전에는 아래 다섯 문장에 답할 수 있어야 한다.
+바로 운영에 붙이기 전에는 아래 질문에 답할 수 있어야 한다.
 
 1. 이 작업이 접근할 수 있는 도구와 데이터는 어디까지인가?
 2. 실패하면 무엇을 기준으로 되돌릴 수 있는가?
