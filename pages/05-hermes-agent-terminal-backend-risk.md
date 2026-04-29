@@ -69,7 +69,6 @@ terminal 명령은 실행 전에 세 가지로 쪼개서 읽는다.
 
 terminal은 [내장 도구와 toolset](https://wikidocs.net/346288) 중에서도 실행 영향이 큰 축이다. 그래서 명령을 돌리기 전에는 [도구 실행 결과 검증](https://wikidocs.net/346290) 기준을 같이 보고, 반복되는 명령은 나중에 [Skill 운영](https://wikidocs.net/346235)이나 복구 플레이북으로 옮길 수 있는지 확인하는 편이 안전하다.
 
-
 ## FAQ
 
 ### terminal을 쓰면 항상 위험한가요?
@@ -79,11 +78,3 @@ terminal은 [내장 도구와 toolset](https://wikidocs.net/346288) 중에서도
 ### Docker backend를 쓰면 안전한가요?
 
 도움은 된다. 하지만 container에 전달한 env나 mounted volume은 여전히 노출될 수 있다. 격리와 credential 최소화를 함께 봐야 한다.
-
-### Codex나 Claude Code 같은 interactive CLI도 terminal로 돌리나요?
-
-가능하다. 다만 interactive CLI는 PTY mode가 필요할 수 있고, 오래 도는 작업은 background process 관리 기준이 있어야 한다.
-
-## 다음 글
-
-terminal 실행 기준을 잡았다면, 다음에는 도구 실행 결과를 어떻게 검증하고 공개 반영까지 확인할지 본다.

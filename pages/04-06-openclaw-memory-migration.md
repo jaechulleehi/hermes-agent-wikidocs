@@ -90,7 +90,7 @@ SOUL.md / USER.md / shared-memory / Obsidian / skill / profile config로 재배�
 | 반복 가능한 실행 절차 | skill |
 | 오래된 실행 흔적 | archive 또는 GitHub/session_search 회수 |
 
-이 재배치가 끝나야 OpenViking/RAG 같은 외부 회수층도 의미가 있다. 낡은 원문을 그대로 색인하면 회수는 잘 되더라도 현재 운영 기준과 맞지 않는 답을 강화할 수 있기 때문이다.
+이 재배치가 끝나야 OpenViking/RAG 같은 외부 회수층도 의미가 있다. 낡은 원문을 그대로 색인하면 회수는 잘 되더라도 현재 판단 기준과 맞지 않는 답을 강화할 수 있기 때문이다.
 
 ## 자주 헷갈리는 질문
 
@@ -105,7 +105,3 @@ SOUL.md / USER.md / shared-memory / Obsidian / skill / profile config로 재배�
 ### 이 내용은 9장 마이그레이션과 어떻게 다르나요?
 
 4장은 기억 이관의 원칙을 다룬다. 9장은 실제 전환/복구 체크리스트와 실행 순서를 다룬다.
-
-## 다음에 읽을 글
-
-다음은 [OpenViking과 RAG는 기억을 어떻게 강화할까](https://wikidocs.net/346131)에서 외부 메모리 회수층을 본다.

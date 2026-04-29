@@ -71,7 +71,7 @@ gateway는 Hermes Agent를 메시징 플랫폼과 예약 실행 흐름에 붙여
 
 복구 순서는 `model → gateway → channel permission → thread/trigger → delivery`가 아니라, 현재 증상에 따라 나눠야 한다. CLI가 정상이라면 모델보다 gateway/channel을 먼저 보는 편이 빠르다.
 
-## 운영 기준
+## 판단 기준
 
 - gateway는 process, log, delivery를 함께 확인한다.
 - profile별 gateway를 섞어 보지 않는다.
@@ -88,11 +88,3 @@ gateway는 Hermes Agent를 메시징 플랫폼과 예약 실행 흐름에 붙여
 ### 항상 켜두는 게 좋은가요?
 
 메시징/cron 운영을 한다면 켜져 있어야 한다. 다만 always-on이라고 해서 검증이 필요 없는 것은 아니다.
-
-### cron과 gateway는 어떤 관계인가요?
-
-cron은 예약 실행이고 gateway는 메시징/스케줄러 운영 축이다. cron 결과를 Slack으로 보내려면 delivery 경로까지 맞아야 한다.
-
-## 다음 글
-
-다음은 [Daily Briefing Bot은 어떤 업무 자동화 패턴일까](https://wikidocs.net/345926)에서 gateway/cron/fresh session이 하나의 자동화 패턴으로 묶이는 방식을 본다.

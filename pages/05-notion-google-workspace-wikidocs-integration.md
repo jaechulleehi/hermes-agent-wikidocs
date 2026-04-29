@@ -8,7 +8,7 @@
 
 ## 도구별 역할을 먼저 나누기
 
-| 도구 | 주 역할 | 연결 방식 후보 | 운영 기준 |
+| 도구 | 주 역할 | 연결 방식 후보 | 판단 기준 |
 |---|---|---|---|
 | Notion | 팀 문서, DB, 프로젝트 기록 | API/MCP/공식 skill | DB schema와 쓰기 권한을 먼저 확인한다 |
 | Google Workspace | Gmail, Calendar, Drive, Docs, Sheets | API/MCP/Google toolset | 계정/scope/삭제/공유 변경 기준을 나눈다 |
@@ -38,7 +38,7 @@ Google Workspace는 계정과 권한이 가장 중요하다. Gmail, Calendar, Dr
 
 WikiDocs는 우리 책에서 공개 배포 채널이다. 원고의 source of truth는 GitHub repo에 두고, WikiDocs는 독자가 보는 공개 화면으로 본다. 그래서 WikiDocs 작업은 “파일을 고쳤다”에서 끝나지 않는다.
 
-운영 기준은 세 단계다.
+판단 기준은 세 단계다.
 
 1. GitHub 원고를 수정하고 검증한다.
 2. GitHub 원본에 변경 이력을 남기고 갱신한다.
@@ -76,12 +76,4 @@ WikiDocs는 우리 책에서 공개 배포 채널이다. 원고의 source of tru
 
 ### Google Workspace는 왜 연동이 어렵게 느껴지나요?
 
-도구가 어려워서라기보다 계정/scope/공유권한/삭제 위험이 섞이기 때문이다. 연결보다 운영 기준이 먼저다.
-
-### WikiDocs도 MCP로 바로 고치면 안 되나요?
-
-가능 여부보다 source of truth가 중요하다. 이 책처럼 GitHub 연동 WikiDocs라면 GitHub를 원본으로 보고, WikiDocs는 공개 반영을 확인하는 채널로 보는 편이 안전하다.
-
-## 다음 글
-
-도구 연결 기준을 잡았다면 [Hermes Agent cron과 Daily Briefing Bot](https://wikidocs.net/345926)에서 정기 실행과 결과 전달을 어떻게 설계하는지 이어서 보면 된다.
+도구가 어려워서라기보다 계정/scope/공유권한/삭제 위험이 섞이기 때문이다. 연결보다 판단 기준이 먼저다.

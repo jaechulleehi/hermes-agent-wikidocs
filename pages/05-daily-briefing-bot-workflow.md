@@ -70,11 +70,3 @@ Hermes Agent cron은 정해진 시간이나 주기에 작업을 실행하는 예
 ### cron prompt는 왜 길어야 하나요?
 
 cron은 독립 실행된다. 현재 대화 맥락을 기대하면 실패한다. 필요한 기준은 prompt 안에 있어야 한다.
-
-### 결과를 어디로 보내야 하나요?
-
-작업 성격에 따라 다르다. 즉시 사람이 볼 것은 Slack, 장기 원장은 Obsidian/shared-memory, 테스트 결과는 local output이 맞을 수 있다.
-
-## 다음 글
-
-다음은 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](https://wikidocs.net/346124)으로 넘어가서 자동화, profile 직접 호출, delegation, 독립 subagent 실행을 어떻게 구분하는지 본다.

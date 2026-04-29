@@ -46,7 +46,6 @@ OpenViking 도입의 의미는 기억을 한 단계 더 체계화하는 데 있�
 
 이 비교를 해두면 “새 메모리 도구가 좋아 보인다”에서 멈추지 않고, Hermes Agent의 어떤 기억층을 보강하는지 판단할 수 있다.
 
-
 ## OpenViking / Honcho 비교와 링크
 
 OpenViking과 Honcho는 둘 다 “에이전트 기억”을 다루지만 초점이 다르다. OpenViking은 공식 소개에서 AI Agent를 위한 open-source context database라고 설명하며, memory/resources/skills를 파일 시스템 패러다임으로 통합 관리하는 쪽에 가깝다. Honcho는 stateful agent를 만들기 위한 open-source memory library와 managed service를 제공하며, 사용자/에이전트/그룹/아이디어 같은 entity의 상태를 계속 모델링하는 쪽에 강하다.
@@ -126,7 +125,3 @@ memory / shared-memory / Obsidian / RAG 후보 조회
 ### 외부 메모리에 모든 문서를 넣어도 되나요?
 
 안 된다. 보호해야 할 정보, 불필요한 내부값, 오래된 문서, source of truth가 아닌 자료를 그대로 넣으면 잘못된 회수가 늘어난다. 넣기 전에 정리와 평가 질문이 필요하다.
-
-## 다음에 읽을 글
-
-다음은 [긴 대화와 context compaction은 어떻게 관리할까](https://wikidocs.net/346132)에서 단기 맥락이 흐려지는 문제를 본다.

@@ -34,7 +34,7 @@ API는 반복 조회와 세밀한 자동화에 좋다. 예를 들어 여러 repo
 
 대신 API는 직접 관리할 것이 많다. token scope, pagination, rate limit, 오류 응답, retry, logging을 봐야 한다. 공유 문서에는 실제 token이나 내부 endpoint를 남기지 않고 placeholder로 설명해야 한다.
 
-## 운영 기준
+## 판단 기준
 
 1. repo 상태와 파일 diff는 먼저 CLI로 확인한다.
 2. 이슈/PR/프로젝트 정보를 대화 흐름에 붙일 때는 MCP를 검토한다.
@@ -58,11 +58,3 @@ WikiDocs 원고를 고칠 때는 먼저 로컬 파일을 수정하고 검증한�
 ### API가 가장 강력한 방식인가요?
 
 세밀한 제어에는 강하지만 운영 부담도 크다. token scope, pagination, rate limit을 직접 관리해야 하므로 단순 작업에는 CLI나 MCP가 더 낫다.
-
-### GitHub 원본 반영을 바로 맡겨도 되나요?
-
-검증 기준이 없으면 위험하다. `git diff`, 포맷 검증, 공개 링크 확인, 원격 반영 후 동기화 확인 같은 순서가 먼저 있어야 한다.
-
-## 다음 글
-
-GitHub 연결 방식을 봤다면, 다음에는 [Notion, Google Workspace, WikiDocs처럼 성격이 다른 업무 도구](https://wikidocs.net/346233)를 어떤 기준으로 연결할지 보면 된다.

@@ -48,7 +48,7 @@ Hermes Agent의 terminal backend는 local만 있는 것이 아니다. 공식 doc
 
 공식 docs는 skill-scoped passthrough와 config-based passthrough를 나눠 설명한다. Skill이 필요한 env를 선언하면 해당 skill에 필요한 값만 통과시키고, 그 외 값은 `terminal.env_passthrough` 같은 명시 설정으로 다룬다.
 
-운영 기준은 아래처럼 잡는다.
+판단 기준은 아래처럼 잡는다.
 
 - provider API key 같은 Hermes infrastructure secret은 임의 passthrough 대상에 넣지 않는다.
 - GitHub token처럼 작업에 필요한 credential도 작업 목적과 범위를 줄인다.
@@ -85,7 +85,7 @@ Slack 채널에 봇이 들어와 있다고 해서 그 채널의 모든 사람이
 
 팀 채널에서는 최소한 `호출 권한`과 `실행 권한`을 분리해야 한다. 누구나 질문은 할 수 있어도, 파일 수정/배포/터미널 실행은 승인된 사용자나 별도 실행형 에이전트로 제한하는 방식이 안전하다.
 
-이 페이지의 권한 표는 [always-on gateway](https://wikidocs.net/345906), [보안 체크리스트](https://wikidocs.net/346259), [checkpoint/rollback 복구](https://wikidocs.net/346262)를 함께 읽을 때 실제 운영 기준이 된다. 채널 권한과 실행 권한을 분리해야 멀티봇 운영에서도 책임 경계가 흐려지지 않는다.
+이 페이지의 권한 표는 [always-on gateway](https://wikidocs.net/345906), [보안 체크리스트](https://wikidocs.net/346259), [checkpoint/rollback 복구](https://wikidocs.net/346262)를 함께 읽을 때 실제 사용 기준이 된다. 채널 권한과 실행 권한을 분리해야 멀티봇 운영에서도 책임 경계가 흐려지지 않는다.
 
 ## FAQ
 
@@ -96,11 +96,3 @@ Slack 채널에 봇이 들어와 있다고 해서 그 채널의 모든 사람이
 ### Docker를 쓰면 credential도 자동으로 안전한가요?
 
 아니다. Docker에 넘긴 env나 mounted credential file은 container 안에서 접근될 수 있다. sandbox와 credential 최소화는 같이 써야 한다.
-
-### MCP server는 왜 env를 제한해야 하나요?
-
-MCP server는 외부 도구를 연결하는 subprocess다. 필요 없는 host env를 그대로 넘기면 token이나 내부 설정이 예상치 못한 도구에 노출될 수 있다.
-
-## 다음 글
-
-권한과 격리 기준을 잡았다면, 복구 단계에서는 [checkpoint와 rollback](https://wikidocs.net/346262)을 어떻게 쓸지 봐야 한다.

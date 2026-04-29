@@ -53,7 +53,7 @@ HaloX 운영에서는 매일 조사/모니터링 결과가 쌓인다. 이 결과
 
 커뮤니티 대화에서도 “기존 지식관리 시스템과 에이전트를 어떻게 연결할까”라는 질문이 반복됐다. 답은 도구 이름이 아니라 역할 분리다. Obsidian, Notion, OpenViking 같은 RAG 계층은 memory를 대체하는 것이 아니라 memory가 감당하지 못하는 긴 맥락을 찾아주는 층이다.
 
-| 질문 | 운영 기준 |
+| 질문 | 판단 기준 |
 |---|---|
 | 매번 자동 주입해야 하는가 | 그렇다면 memory/profile 후보 |
 | 필요할 때 검색해서 찾으면 되는가 | Obsidian/Notion/RAG 후보 |
@@ -83,7 +83,6 @@ Obsidian을 기억층으로 쓴다는 말은 모든 대화를 노트로 복사�
 | shared-memory | 공용 작업 원본 | 개인만 보는 생각 메모 |
 | Obsidian LLM Wiki | 연결형 운영 지식 | 임시 작업 상태 |
 | WikiDocs | 정리된 공유 지식 | 불필요한 내부값 |
-
 
 ## HALOX Brain을 LLM Wiki로 보강해 온 히스토리
 
@@ -139,7 +138,3 @@ Obsidian은 내부 운영 지식과 원장이고, WikiDocs는 공개 독자에�
 ### Obsidian이 있으면 RAG가 필요 없나요?
 
 아니다. Obsidian은 지식을 사람이 관리하는 공간이고, RAG는 필요한 지식을 검색해 모델에 주입하는 실행 구조다. Obsidian이 잘 정리되어 있을수록 RAG 품질도 좋아진다.
-
-## 다음에 읽을 글
-
-다음은 [OpenClaw에서 Hermes로 기억을 옮길 때 무엇을 버릴까](https://wikidocs.net/346130)에서 과거 유산과 현재 기준을 나눈다.

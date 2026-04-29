@@ -72,11 +72,3 @@ rollback은 [복구 플레이북](https://wikidocs.net/345918) 안에서 위치�
 ### rollback은 언제 바로 실행해도 되나요?
 
 작업 범위가 작고, diff를 봤고, 되돌릴 대상이 분명할 때다. 범위가 불명확하면 먼저 증상과 변경 목록을 기록한다.
-
-### rollback 후에도 문제가 남으면 어떻게 하나요?
-
-원인이 파일 변경이 아닐 수 있다. process, profile, env, gateway, cron, credential, delivery target을 다시 봐야 한다. 이때는 앞의 복구 플레이북 순서로 돌아간다.
-
-## 다음 글
-
-checkpoint와 rollback까지 확인했다면, [OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 하는지](https://wikidocs.net/345920) 마이그레이션 기준으로 이어진다.

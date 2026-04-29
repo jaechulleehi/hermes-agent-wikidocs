@@ -64,7 +64,7 @@ AI 개인비서와 역할형 에이전트를 실제 업무에 붙이면 권한�
 
 보안은 “모두 막기”가 아니다. 실행해야 할 일은 실행하되, 호출자/도구/credential/복구 경로를 분리하는 것이다.
 
-이 보안 기준은 앞의 [gateway 권한/실행 격리](https://wikidocs.net/346261), [위험 명령 승인](https://wikidocs.net/346260), [checkpoint/rollback](https://wikidocs.net/346262)과 한 묶음으로 읽어야 한다. 보안 체크리스트만 따로 두면 경고 문서가 되고, 복구 경로까지 연결하면 실제 운영 기준이 된다.
+이 보안 기준은 앞의 [gateway 권한/실행 격리](https://wikidocs.net/346261), [위험 명령 승인](https://wikidocs.net/346260), [checkpoint/rollback](https://wikidocs.net/346262)과 한 묶음으로 읽어야 한다. 보안 체크리스트만 따로 두면 경고 문서가 되고, 복구 경로까지 연결하면 실제 사용 기준이 된다.
 
 ## FAQ
 
@@ -75,11 +75,3 @@ gateway를 켠다면 필요하다. CLI로 혼자 쓰는 것과 메시징 플랫�
 ### Docker를 쓰면 안전 문제가 끝나나요?
 
 아니다. Docker는 호스트 보호에 도움이 되지만, container에 넘긴 env나 credential은 container 안에서 읽힐 수 있다. 격리는 시작점이고, credential 최소화가 같이 필요하다.
-
-### 보안 체크리스트는 어디에 두면 좋나요?
-
-공개 운영 기준은 WikiDocs, 팀 공통 규칙은 shared-memory, 반복 검증 절차는 Skill에 둔다. 실제 token 값이나 내부 경로는 공유 문서에 남기지 않는다.
-
-## 다음 글
-
-다음에는 [위험 명령 승인, YOLO mode, permanent allowlist](https://wikidocs.net/346260)를 운영에서 어떻게 다룰지 본다.

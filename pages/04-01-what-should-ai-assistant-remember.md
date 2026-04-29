@@ -34,7 +34,7 @@ AI 개인비서가 기억해야 할 정보는 다음 조건을 만족해야 한�
 1. 앞으로도 반복해서 적용된다.
 2. 사용자가 다시 말하지 않으면 품질이 떨어진다.
 3. 짧게 압축해도 의미가 유지된다.
-4. 특정 날짜의 작업 상태가 아니라 운영 기준이다.
+4. 특정 날짜의 작업 상태가 아니라 판단 기준이다.
 5. 여러 에이전트가 따라야 하면 shared-memory로 승격할 수 있다.
 
 이 기준을 통과하지 못하면 memory가 아니라 session, shared-memory, Obsidian, GitHub log, skill, WikiDocs 중 다른 층을 봐야 한다.
@@ -65,7 +65,6 @@ AI 개인비서가 기억해야 할 정보는 다음 조건을 만족해야 한�
 | 방금 수정한 파일 목록 | session / GitHub log | 현재 작업 상태일 뿐이다 |
 | 팀 전체의 보고 템플릿 | shared-memory | 여러 에이전트가 함께 따라야 한다 |
 | 공개 글의 문체 기준 | skill / 작성 가이드 | 반복 작업 절차로 재사용된다 |
-
 
 ## memory max가 있을 때 운영하는 방법
 
@@ -104,7 +103,3 @@ memory 후보: Hermes/WikiDocs memory chapter should include actual operation ev
 ### 하비는 무엇을 기억해야 하나요?
 
 하비는 모든 원문을 들고 있는 것이 아니라, 어떤 정보가 어느 층에 있어야 하는지 판단하는 기준을 기억해야 한다. 그래서 하비의 핵심 기억은 라우팅, 우선순위, 최종 통합 방식, source of truth 순서다.
-
-## 다음에 읽을 글
-
-다음은 [session/memory/profile은 어떻게 다를까](https://wikidocs.net/346126)에서 내부 기억층을 더 구체적으로 나눈다.

@@ -35,7 +35,7 @@ YOLO를 켜야 한다면 먼저 세 가지를 확인한다. 작업 디렉터리�
 공식 docs는 승인 prompt에서 `always`를 선택하면 config에 permanent allowlist가 저장될 수 있다고 설명한다. 이 기능은 반복 작업에는 편하지만, 오래된 allowlist는 나중에 위험해질 수 있다.
 
 ```text
-allowlist 운영 기준
+allowlist 판단 기준
 - 명령 전체를 넓게 허용하지 않는다.
 - repo/path/context가 바뀌면 다시 검토한다.
 - 삭제, 권한 변경, 네트워크 전송, credential 접근 명령은 permanent allowlist에 넣지 않는다.
@@ -67,11 +67,3 @@ allowlist 운영 기준
 ### `always`를 누르면 안 되나요?
 
 쓸 수는 있다. 다만 삭제, credential 접근, 외부 전송, 권한 변경처럼 피해가 큰 명령은 permanent allowlist에 넣지 않는 편이 좋다.
-
-### 승인 prompt가 자주 떠서 작업이 느립니다.
-
-먼저 작업을 읽기 단계와 쓰기 단계로 나눈다. 정말 반복되는 안전 명령이면 Skill이나 검증 스크립트로 고정하고, 필요한 최소 명령만 allowlist 후보로 본다.
-
-## 다음 글
-
-위험 명령 기준을 잡았다면, 다음에는 [gateway 사용자 권한과 실행 환경 격리](https://wikidocs.net/346261)를 함께 본다.

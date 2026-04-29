@@ -27,9 +27,9 @@ Skill은 반복 업무의 실행 절차와 검증 기준이다. [memory](https:/
 
 ## 사례: WikiDocs MCP 연결은 Skill이 아니다
 
-WikiDocs MCP를 연결하면 책, 페이지, 블로그를 만들고 수정하는 도구가 Hermes Agent 안으로 들어온다. 하지만 MCP 연결 자체가 작업 품질을 보장하지는 않는다. 어떤 책이 source of truth인지, GitHub-linked book에서는 어디를 먼저 고쳐야 하는지, 공개 페이지를 어떻게 확인할지는 별도의 운영 기준이 필요하다.
+WikiDocs MCP를 연결하면 책, 페이지, 블로그를 만들고 수정하는 도구가 Hermes Agent 안으로 들어온다. 하지만 MCP 연결 자체가 작업 품질을 보장하지는 않는다. 어떤 책이 source of truth인지, GitHub-linked book에서는 어디를 먼저 고쳐야 하는지, 공개 페이지를 어떻게 확인할지는 별도의 판단 기준이 필요하다.
 
-이 운영 기준이 Skill이다. MCP는 문을 열어주고, Skill은 그 문으로 들어가 무엇을 어떤 순서로 할지 정한다.
+이 판단 기준이 Skill이다. MCP는 문을 열어주고, Skill은 그 문으로 들어가 무엇을 어떤 순서로 할지 정한다.
 
 ## 잘못 나누면 생기는 문제
 
@@ -41,7 +41,7 @@ WikiDocs MCP를 연결하면 책, 페이지, 블로그를 만들고 수정하는
 | gateway가 있으면 AI 팀 운영이 끝난다 | 채널은 열렸지만 처리 기준이 없다 | gateway는 입구, 하비/Skill이 처리 흐름 |
 | 과거 작업을 Skill에 다 적는다 | 오래된 로그가 절차를 오염시킨다 | 과거 회수는 session_search, 절차만 Skill |
 
-## 운영 기준
+## 판단 기준
 
 1. 반복 절차는 Skill, 장기 선호는 memory로 나눈다.
 2. 도구를 붙이는 일과 도구를 쓰는 기준을 분리한다.
@@ -58,11 +58,3 @@ WikiDocs MCP를 연결하면 책, 페이지, 블로그를 만들고 수정하는
 ### MCP tool 사용법은 Skill인가요?
 
 도구를 연결하는 것은 MCP이고, 그 도구를 어떤 순서와 기준으로 쓸지 정하는 것은 Skill이다. 예를 들어 GitHub MCP를 붙이는 일과 PR 리뷰 절차를 Skill로 남기는 일은 다르다.
-
-### cron에 Skill을 붙이면 끝인가요?
-
-끝이 아니다. cron은 fresh session에서 실행되므로 prompt 자체가 충분히 self-contained해야 한다. Skill은 절차를 돕지만, cron job의 목적/입력/출력/전달 대상은 prompt에 분명해야 한다.
-
-## 다음 글
-
-Skill 기준을 잡았다면 다음은 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)으로 넘어간다. 반복 검증 기준이 어떻게 WikiDocs, 블로그, 강의, 이미지 자산의 품질을 지키는지 7장에서 이어서 본다.

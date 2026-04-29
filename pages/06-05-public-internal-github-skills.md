@@ -4,16 +4,16 @@
 
 ![공개 GitHub Skill과 내부 Skill 분리](../assets/images/chapter-heroes/ch6-5-public-internal-github-skills-codex.webp)
 
-공개 GitHub Skill은 일반화된 절차여야 한다. 내부 Skill은 특정 사용자, 팀, 프로젝트, 채널, 계정, source of truth에 맞춘 운영 기준을 담을 수 있다. 이 구분은 [memory/profile/session 경계](https://wikidocs.net/346126)와도 이어진다. 두 경계를 섞으면 밖에 나가면 안 되는 정보가 섞이거나, 반대로 내부 운영에 필요한 기준이 너무 추상화되어 쓸모가 약해진다.
+공개 GitHub Skill은 일반화된 절차여야 한다. 내부 Skill은 특정 사용자, 팀, 프로젝트, 채널, 계정, source of truth에 맞춘 판단 기준을 담을 수 있다. 이 구분은 [memory/profile/session 경계](https://wikidocs.net/346126)와도 이어진다. 두 경계를 섞으면 밖에 나가면 안 되는 정보가 섞이거나, 반대로 내부 운영에 필요한 기준이 너무 추상화되어 쓸모가 약해진다.
 
 ## 공개 Skill과 내부 Skill의 차이
 
 | 구분 | 공개 GitHub Skill | 내부 Skill |
 |---|---|---|
-| 목적 | 다른 사용자도 재사용할 수 있는 일반 절차 | 특정 팀/사용자/프로젝트의 운영 기준 |
+| 목적 | 다른 사용자도 재사용할 수 있는 일반 절차 | 특정 팀/사용자/프로젝트의 판단 기준 |
 | 넣을 수 있는 것 | 도구 사용 순서, 검증 기준, 흔한 실패 | 팀 경로, 보고 스타일, source of truth 우선순위 |
 | 넣으면 안 되는 것 | 계정, 토큰, 내부 경로, 고객명, 비공개 정책 | 토큰/비밀번호 같은 비밀값은 여기도 금지 |
-| 검증 | 누구나 따라 할 수 있는 기준 | 팀 source of truth와 실제 운영 기준 |
+| 검증 | 누구나 따라 할 수 있는 기준 | 팀 source of truth와 실제 사용 기준 |
 | 예시 | GitHub PR 리뷰 절차, YouTube transcript 정리 | Hermes WikiDocs 발행 기준, 사용자별 보고 스타일 |
 
 내부 Skill이라고 해서 보호해야 할 정보를 넣어도 되는 것은 아니다. token, password, webhook, private key는 Skill이 아니라 안전한 credential store나 환경 설정에서 관리해야 한다.
@@ -47,13 +47,13 @@
 1. token, password, webhook, private key가 없는가?
 2. 개인 경로, 채널 ID, 고객명, 계정명이 남아 있지 않은가?
 3. 특정 팀만 아는 약어를 일반 독자도 이해할 수 있게 바꿨는가?
-4. 실패 사례를 개인 탓이 아니라 운영 기준으로 바꿨는가?
+4. 실패 사례를 개인 탓이 아니라 판단 기준으로 바꿨는가?
 5. 검증 방법이 외부 사용자도 따라 할 수 있는가?
 6. 책 본문과 내부 Skill의 source of truth가 분리되어 있는가?
 
 ## GitHub 공개 Skill을 보강하는 흐름
 
-공개 Skill은 일반 독자에게 도움이 되는 기준만 남긴다. 내부 시행착오를 그대로 복사하지 말고, 문제/착각/운영 기준/검증 방법으로 다시 쓴다. 예를 들어 “특정 사용자가 이렇게 선호한다”는 문장은 공개 Skill에 바로 넣지 않는다. 대신 “[사용자별 보고 형식](https://wikidocs.net/346126)은 memory에 두고, Skill에는 보고 항목의 구조를 둔다”처럼 기준으로 바꾼다.
+공개 Skill은 일반 독자에게 도움이 되는 기준만 남긴다. 내부 시행착오를 그대로 복사하지 말고, 문제/착각/판단 기준/검증 방법으로 다시 쓴다. 예를 들어 “특정 사용자가 이렇게 선호한다”는 문장은 공개 Skill에 바로 넣지 않는다. 대신 “[사용자별 보고 형식](https://wikidocs.net/346126)은 memory에 두고, Skill에는 보고 항목의 구조를 둔다”처럼 기준으로 바꾼다.
 
 공개 Skill을 보강한 뒤에는 README, 예시, 검증 방법이 함께 맞는지 확인한다. Skill은 도구 설명서가 아니라 실제 반복 작업을 안정화하는 운영 단위이기 때문이다.
 
@@ -66,11 +66,3 @@
 ### 공개 Skill에는 실제 사례를 넣으면 안 되나요?
 
 넣어도 된다. 다만 개인, 고객, 계정, 경로, 비밀값을 제거하고 재사용 가능한 문제와 기준만 남겨야 한다.
-
-### Skill을 GitHub에 공개하면 SEO에도 도움이 되나요?
-
-도움이 될 수 있다. 특히 `Hermes Agent skills`, `AI agent skills`, `업무 자동화 Skill` 같은 검색 의도에는 공개 Skill이 실사용 근거가 된다. 다만 SEO를 위해 보호해야 할 정보 경계를 낮추면 안 된다.
-
-## 다음 글
-
-다음은 [Skill과 memory/MCP/cron/gateway는 어떻게 다를까](https://wikidocs.net/346240)에서 반복 절차, 기억, 도구 연결, 예약 실행, 채널 입구를 구분한다.

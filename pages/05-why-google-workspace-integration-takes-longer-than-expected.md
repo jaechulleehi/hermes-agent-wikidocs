@@ -1,6 +1,6 @@
 ## Google Workspace와 MCP 연동은 왜 오래 걸릴까
 
-에르메스 에이전트(Hermes Agent)에서 Google Workspace나 MCP 연동은 기술적으로 “붙이는 일”처럼 보인다. 하지만 실제 운영에서는 인증보다 계정, 권한, 범위, 위험 작업 기준이 더 오래 걸린다. 연결은 시작이고, 운영 기준은 그 다음이다.
+에르메스 에이전트(Hermes Agent)에서 Google Workspace나 MCP 연동은 기술적으로 “붙이는 일”처럼 보인다. 하지만 실제 운영에서는 인증보다 계정, 권한, 범위, 위험 작업 기준이 더 오래 걸린다. 연결은 시작이고, 판단 기준은 그 다음이다.
 
 ![Google Workspace와 MCP 연동에서 계정 권한 범위를 나누는 구조](../assets/how-image-agent-creates-wikidocs-visuals/ch5-1-google-workspace-mcp-ops-codex.webp)
 
@@ -35,7 +35,7 @@ MCP는 Hermes Agent가 외부 도구와 만나는 표준 연결면이다. 사용
 
 그래서 MCP 페이지의 핵심 질문은 “연결됐는가”가 아니다. “어느 계정의 어떤 권한으로, 어떤 작업까지 실행해도 되는가”다. MCP는 [Hermes Agent cron](https://wikidocs.net/345926)이나 [Skill](https://wikidocs.net/345904)과 함께 쓰일 수 있지만, MCP 자체가 예약 실행이나 절차 재사용을 대신하지는 않는다.
 
-## 운영 기준
+## 판단 기준
 
 1. 먼저 계정과 scope를 확인한다.
 2. 읽기/쓰기/삭제/공유 변경을 분리한다.
@@ -53,11 +53,3 @@ MCP는 Hermes Agent가 외부 도구와 만나는 표준 연결면이다. 사용
 ### 처음부터 cron으로 돌리면 안 되나요?
 
 반복 기준이 안정되기 전에는 위험하다. 먼저 사람이 요청했을 때 잘 되는 on-demand 흐름을 만들고, 그 다음 cron으로 옮기는 편이 안전하다.
-
-### Google Workspace 연동에서 제일 먼저 볼 것은 무엇인가요?
-
-계정과 권한 범위다. 도구가 되는지보다 “이 계정에서 이 작업을 해도 되는가”가 먼저다.
-
-## 다음 글
-
-다음은 [always-on gateway는 왜 자주 헷갈릴까](https://wikidocs.net/345906)에서 연결된 도구가 실제 채널에서 계속 살아 있는지 확인하는 기준을 본다. 반복 절차를 Skill로 남기는 기준은 6장의 [Hermes Agent Skill 운영](https://wikidocs.net/346235)에서 이어진다.
