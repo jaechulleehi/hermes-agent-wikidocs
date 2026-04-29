@@ -1,6 +1,6 @@
 ## AI 챗봇과 AI 개인비서는 어떻게 다를까
 
-AI 챗봇은 질문에 답한다. AI 개인비서는 요청을 받아 업무 흐름을 만든다. 둘 다 대화형 AI를 사용하지만, 실제 업무에서 기대하는 역할은 다르다.
+AI 챗봇은 질문에 답한다. AI 개인비서는 요청을 받아 업무 흐름을 만든다. 에르메스 에이전트(Hermes Agent)로 AI 업무 자동화를 시작할 때도 둘의 차이를 먼저 알아야 한다.
 
 ![AI 챗봇과 AI 개인비서 차이](../assets/images/chapter-heroes/ch1-1-chatbot-vs-ai-assistant-codex.webp)
 
