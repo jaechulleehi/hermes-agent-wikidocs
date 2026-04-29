@@ -4,7 +4,7 @@
 
 ![공식 GitHub와 Docs를 먼저 확인하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-2-official-github-docs-codex.webp)
 
-이 책은 공식 문서의 대체물이 아니다. 먼저 [공식 GitHub](https://github.com/NousResearch/hermes-agent)와 [공식 Docs](https://hermes-agent.nousresearch.com/docs/)를 확인하고, 그다음 이 책에서 실제 운영 기준으로 해석하면 된다. 공식 GitHub와 공식 docs를 기준으로 삼되, [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055), [설치와 세팅](https://wikidocs.net/346137), [OpenClaw와의 차이](https://wikidocs.net/345889)처럼 실제 업무 자동화와 AI 개인비서 운영에서 어떤 기준으로 읽어야 하는지 풀어주는 한국어 운영 해설서에 가깝다.
+이 책은 공식 문서의 대체물이 아니다. 먼저 [공식 GitHub](https://github.com/NousResearch/hermes-agent)와 [공식 Docs](https://hermes-agent.nousresearch.com/docs/)를 확인하고, 그다음 이 책에서 실제 업무 흐름에 맞게 해석하면 된다. 공식 GitHub와 공식 docs를 기준으로 삼되, [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055), [설치와 세팅](https://wikidocs.net/346137), [OpenClaw와의 차이](https://wikidocs.net/345889)처럼 실제 업무 자동화와 AI 개인비서 운영에서 어떤 기준으로 읽어야 하는지 풀어주는 한국어 실전 해설서에 가깝다.
 
 ## 공식 링크
 
@@ -32,7 +32,7 @@
 
 ## 공식 문서 Quick Links를 운영 관점으로 읽기
 
-| 공식 docs 항목 | 기능으로 보면 | 운영 기준으로 보면 |
+| 공식 docs 항목 | 기능으로 보면 | 실제 업무에서는 |
 |---|---|---|
 | Installation | 설치 명령 | 지원 환경과 실패 원인을 분리하는 시작점 |
 | Quickstart | 첫 대화 | provider, chat, session, key feature를 순서대로 검증하는 절차 |
@@ -58,7 +58,7 @@
 | Memory/Profiles/Sessions | AI 개인비서가 무엇을 기억하고 어디까지 잊어야 하는지의 경계 |
 | Skills | 반복 절차를 어떻게 재사용 가능한 운영 지식으로 만들지의 기준 |
 | MCP/Tools | 외부 업무 시스템을 어떻게 안전하게 연결할지의 기준 |
-| Cron/Gateway | 사람 없이 시작되는 자동화와 메시징 delivery의 운영 기준 |
+| Cron/Gateway | 사람 없이 시작되는 자동화와 메시징 delivery의 확인 순서 |
 | Delegation/Subagents | 조사형/정리형/실행형 에이전트로 일을 나누는 기준 |
 | Security/Architecture | 운영 환경에서 어디까지 허용하고 어디서 멈출지의 기준 |
 | OpenClaw migration | 과거 운영 흔적을 현재 Hermes 기준으로 정리하는 전환 절차 |
@@ -75,16 +75,8 @@
 
 ### 이 책만 읽고 공식 docs는 안 봐도 되나요?
 
-아니다. 설치 명령, config option, command, gateway 설정처럼 바뀔 수 있는 정보는 공식 docs를 먼저 봐야 한다. 이 책은 그 정보를 실제 업무 자동화 운영 기준으로 해석하는 보조 가이드다.
+아니다. 설치 명령, config option, command, gateway 설정처럼 바뀔 수 있는 정보는 공식 docs를 먼저 봐야 한다. 이 책은 그 정보를 실제 업무 자동화 흐름에 맞게 읽도록 돕는 보조 가이드다.
 
 ### 공식 GitHub와 docs 중 어디를 먼저 봐야 하나요?
 
 처음 사용자는 docs의 Installation, Quickstart, Learning Path를 먼저 보는 편이 좋다. GitHub는 README, source, release/change, issue 흐름을 확인할 때 더 유용하다.
-
-### 한국어 자료와 공식 문서가 다르면 무엇을 믿어야 하나요?
-
-기능 동작과 명령은 공식 docs/GitHub를 기준으로 본다. 한국어 자료는 운영 방식, 사례, 체크리스트를 이해하는 보조 자료로 쓰는 것이 안전하다.
-
-## 다음 글
-
-다음에는 [Hermes Agent 설치와 세팅](https://wikidocs.net/346137)을 어떻게 시작하면 좋은지 본다. 공식 설치 명령은 짧지만, 실제 운영에서는 설치 후 provider, CLI 첫 대화, config, gateway, 보안, 검증 순서가 더 중요하다.

@@ -66,11 +66,3 @@
 ### Codex와 Hermes Agent를 같이 쓸 수 있나요?
 
 가능하다. Hermes Agent의 skill과 delegation 흐름에서 Codex 같은 코딩 에이전트를 특정 작업 실행자로 볼 수 있다. 다만 인증, git repository, 권한, sandbox 기준은 별도로 확인해야 한다.
-
-### 비개발자도 Hermes Agent를 쓸 이유가 있나요?
-
-있다. Hermes Agent의 핵심은 코딩만이 아니라 AI 개인비서, 업무 자동화, 정기 보고, 문서화, 기억 관리, 메시징 연동이다. 개발자가 아니어도 반복 업무와 기록 흐름이 있다면 쓸 이유가 생긴다.
-
-## 다음 글
-
-다음에는 [Docker와 Gateway를 언제 써야 하는지](https://wikidocs.net/346139) 본다. Hermes Agent를 개인 CLI로만 쓸지, 항상 켜진 AI 비서로 운영할지에 따라 구조가 달라진다.

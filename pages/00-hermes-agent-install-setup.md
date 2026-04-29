@@ -30,7 +30,7 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 
 ## 서비스형 AI 도구와 Hermes Agent는 다르다
 
-원본 커뮤니티 질문에는 Genspark/Manus 같은 서비스형 AI 도구와 Hermes Agent를 같은 선택지로 비교하는 흐름도 있었다. 둘 다 “AI가 일을 대신한다”는 느낌은 비슷하지만 운영 기준은 다르다.
+원본 커뮤니티 질문에는 Genspark/Manus 같은 서비스형 AI 도구와 Hermes Agent를 같은 선택지로 비교하는 흐름도 있었다. 둘 다 “AI가 일을 대신한다”는 느낌은 비슷하지만 운영 방식은 다르다.
 
 서비스형 AI 도구는 가입하면 바로 쓸 수 있고, 검색/브라우징/문서 생성이 한 화면에 묶여 있어 입문 장벽이 낮다. 대신 내부 도구, Slack gateway, local file, GitHub source of truth, profile별 memory, cron 같은 운영 경계를 직접 설계하기는 어렵다. Hermes Agent는 설치와 설정이 더 필요하지만, 내가 정한 provider, toolset, memory, Skill, gateway, cron을 조합해 “나만의 AI 업무 자동화 환경”을 만드는 쪽에 가깝다.
 
@@ -99,7 +99,3 @@ provider에 따라 API key, OAuth, custom endpoint, model name, context length �
 ### Docker로 바로 시작해도 되나요?
 
 가능하다. 다만 Docker는 데이터 디렉터리, gateway health, port, restart policy까지 같이 봐야 한다. 단순 실습은 CLI 설치가 쉽고, 상시 운영은 Docker/Gateway 장에서 따로 판단하는 편이 좋다.
-
-## 다음 글
-
-설치와 기본 세팅을 끝냈다면 바로 자동화로 넘어가지 말고 다음 단계인 [에르메스 에이전트(Hermes Agent) CLI 첫 대화](https://wikidocs.net/346251)를 확인한다. CLI에서 첫 대화와 세션이 안정돼야 provider, config, gateway 문제를 분리할 수 있다.

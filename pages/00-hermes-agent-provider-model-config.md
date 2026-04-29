@@ -8,7 +8,7 @@ Hermes Agent에서 provider/model/config는 “어떤 모델을 쓸지”만의 
 
 ## 공식 docs 기준 설정 위치
 
-| 구분 | 공식 docs 기준 위치/흐름 | 운영 기준 |
+| 구분 | 공식 docs 기준 위치/흐름 | 실제 확인 포인트 |
 |---|---|---|
 | secret/token | `~/.hermes/.env` | API key, OAuth token처럼 노출되면 안 되는 값 |
 | non-secret setting | `~/.hermes/config.yaml` | model, provider, toolset, display, backend 같은 설정 |
@@ -44,10 +44,10 @@ hermes chat --model "provider/model-name" -q "지금 설정이 어떤 의미인�
 |---|---|
 | 첫 설치 | provider 하나와 model 하나로 기본 chat을 확인한다 |
 | 업무 사용 | 기본 model과 fallback model을 나눈다 |
-| 비용/속도 최적화 | provider routing의 sort, only, ignore, order 같은 옵션을 검토한다 |
+| 비용/속도 조정 | provider routing의 sort, only, ignore, order 같은 옵션을 검토한다 |
 | 팀/상시 운영 | gateway와 cron이 같은 config를 읽는지 확인한다 |
 
-routing은 최적화 도구다. 기본 대화와 도구 호출이 안정되기 전에 routing부터 복잡하게 만들면 실패 원인이 늘어난다.
+routing은 조정 도구다. 기본 대화와 도구 호출이 안정되기 전에 routing부터 복잡하게 만들면 실패 원인이 늘어난다.
 
 ## OAuth/API/구독제 비용을 먼저 분리한다
 
@@ -68,7 +68,7 @@ routing은 최적화 도구다. 기본 대화와 도구 호출이 안정되기 �
 
 다른 선택지도 있다. API key 방식은 서버, gateway, cron에서 안정적으로 쓰기 쉽지만 사용량 과금과 key 노출 위험을 관리해야 한다. OpenRouter 같은 aggregator나 custom endpoint/proxy는 여러 모델을 한 인터페이스로 묶기 좋지만, 어떤 요청이 어느 provider로 갔는지 추적 가능해야 한다. 로컬 모델은 토큰 비용은 줄일 수 있어도 GPU/서버/속도/품질 비용이 생긴다.
 
-| 비용 항목 | 어디서 생기나 | 운영 기준 |
+| 비용 항목 | 어디서 생기나 | 확인 포인트 |
 |---|---|---|
 | 구독/OAuth | 개인 계정 기반 provider 연결 | 세션 만료, 정책 변경, third-party 허용 여부 확인 |
 | API 사용량 | provider API key, aggregator, 검색 API | 월 한도, 알림, key scope, 과금 owner를 정한다 |
@@ -102,12 +102,4 @@ Hermes Agent는 terminal backend를 local, Docker, SSH 등으로 구성할 수 �
 
 ### provider routing은 꼭 써야 하나요?
 
-아니다. 처음에는 단일 provider/model로 시작하는 편이 안전하다. routing은 비용/속도/가용성을 최적화해야 할 때 도입한다.
-
-### CLI에서 되는데 gateway에서 안 되면 모델 문제인가요?
-
-반드시 그렇지는 않다. gateway process가 읽는 env/config, delivery target, platform permission, restart 여부를 함께 봐야 한다.
-
-## 다음 글
-
-provider/model/config 경계를 잡았다면, 기존 OpenClaw나 다른 에이전트 환경에서 넘어올 때 무엇이 다른지 확인한다. 다음은 [OpenClaw와 Hermes Agent의 차이](https://wikidocs.net/345889)다.
+아니다. 처음에는 단일 provider/model로 시작하는 편이 안전하다. routing은 비용/속도/가용성을 세밀하게 조정해야 할 때 도입한다.

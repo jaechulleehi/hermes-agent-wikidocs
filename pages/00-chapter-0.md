@@ -1,6 +1,6 @@
 ## 0장. 에르메스 에이전트(Hermes Agent) 기초 가이드
 
-에르메스 에이전트(Hermes Agent)를 처음 시작할 때 가장 위험한 흐름은 설치 명령부터 복사하고, 곧바로 Slack/gateway/cron/MCP를 붙이는 것이다. 공식 docs와 GitHub는 Hermes Agent를 self-improving AI agent, CLI/TUI, messaging gateway, memory, skill, tool, cron, MCP를 갖춘 실행 환경으로 설명한다. 그래서 0장은 기능을 모두 외우는 장이 아니라 “어떤 순서로 확인해야 안전하게 실제 업무에 붙일 수 있는가”를 잡는 입문 흐름이다. 따라서 처음에는 [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055)를 먼저 읽고, 설치보다 운영 기준을 앞에 둔다.
+에르메스 에이전트(Hermes Agent)를 처음 시작할 때 가장 위험한 흐름은 설치 명령부터 복사하고, 곧바로 Slack/gateway/cron/MCP를 붙이는 것이다. 공식 docs와 GitHub는 Hermes Agent를 self-improving AI agent, CLI/TUI, messaging gateway, memory, skill, tool, cron, MCP를 갖춘 실행 환경으로 설명한다. 그래서 0장은 기능을 모두 외우는 장이 아니라 “어떤 순서로 확인해야 안전하게 실제 업무에 붙일 수 있는가”를 잡는 입문 흐름이다. 따라서 처음에는 [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055)를 먼저 읽고, 설치보다 확인 순서를 앞에 둔다.
 
 ![Hermes Agent 기초 가이드 흐름](../assets/images/chapter-heroes/ch00-hermes-foundation-guide-tool-badges-codex.webp)
 
@@ -46,7 +46,7 @@ cron/skill/MCP 같은 운영 기능 확장
 업데이트/복구/보안 기준 마련
 ```
 
-## 처음 세팅할 때의 운영 기준
+## 처음 세팅할 때 먼저 정할 것
 
 | 구분 | 성급한 접근 | 안정적인 접근 |
 |---|---|---|
@@ -113,8 +113,4 @@ cron/Skill/MCP 확장 예정 여부:
 
 공식 문서는 기능의 source of truth다. 설치 명령, CLI command, config option, messaging gateway 설정, security boundary, architecture처럼 바뀔 수 있는 내용은 공식 docs를 먼저 확인해야 한다.
 
-이 책은 그 기능을 실제 업무에 붙일 때의 운영 기준을 다룬다. 예를 들어 공식 docs가 `hermes gateway setup`을 설명한다면, 이 책은 “왜 gateway status와 실제 Slack delivery를 따로 확인해야 하는가”를 설명한다. 공식 docs가 skills system을 설명한다면, 이 책은 “어떤 반복 업무를 skill로 남기고 어떤 정보는 memory에 남기면 안 되는가”를 다룬다.
-
-## 다음 글
-
-먼저 [에르메스 에이전트(Hermes Agent)란 무엇인지](https://wikidocs.net/346055) 확인한다. 그다음 공식 GitHub/docs, 설치, [CLI 첫 대화](https://wikidocs.net/346251), [provider/model/config 설정](https://wikidocs.net/346252), 비교, Docker/Gateway, 채널, [업데이트 검증](https://wikidocs.net/346253), [맥미니 상시 운영](https://wikidocs.net/346395) 순서로 보면 0장이 하나의 체크리스트처럼 작동한다.
+이 책은 그 기능을 실제 업무에 붙일 때의 판단 기준을 다룬다. 예를 들어 공식 docs가 `hermes gateway setup`을 설명한다면, 이 책은 “왜 gateway status와 실제 Slack delivery를 따로 확인해야 하는가”를 설명한다. 공식 docs가 skills system을 설명한다면, 이 책은 “어떤 반복 업무를 skill로 남기고 어떤 정보는 memory에 남기면 안 되는가”를 다룬다.

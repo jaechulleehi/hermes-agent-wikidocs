@@ -74,7 +74,7 @@ hermes chat --toolsets "web,terminal" -q "현재 프로젝트에서 README가 �
 
 Hermes Agent는 한 번의 질문으로 끝나는 챗봇보다 오래 가는 작업 흐름에 맞다. 그래서 첫 대화 후에는 세션이 저장되고 다시 이어질 수 있는지 확인해야 한다. 공식 docs의 session, memory, context 관련 문서는 이후 장에서 더 자세히 다룬다.
 
-운영 기준은 단순하다.
+기준은 단순하다.
 
 | 상태 | 해석 |
 |---|---|
@@ -125,11 +125,3 @@ Hermes Agent는 한 번의 질문으로 끝나는 챗봇보다 오래 가는 작
 ### slash command를 모두 외워야 하나요?
 
 아니다. 처음에는 `/tools`, `/toolsets`, `/config`, `/skills` 정도만 확인해도 충분하다. 나머지는 운영 범위가 커질 때 공식 reference를 보면 된다.
-
-### 첫 대화에서 도구 호출까지 확인해야 하나요?
-
-가능하면 작은 도구 호출 하나는 확인하는 편이 좋다. Hermes Agent는 답변만 하는 도구가 아니라 실제 작업을 수행하는 에이전트이기 때문이다.
-
-## 다음 글
-
-CLI 첫 대화가 안정됐다면 다음에는 [provider/model/config 설정 확인](https://wikidocs.net/346252)으로 넘어간다. 모델과 설정 저장 위치가 정리되어야 이후 gateway와 cron이 흔들리지 않는다.

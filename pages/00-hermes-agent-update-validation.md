@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent) 업데이트 전후에는 무엇을 점검할까
 
-Hermes Agent 업데이트는 최신 기능을 받는 일인 동시에 운영 중인 AI 개인비서 환경을 흔들 수 있는 작업이다. 공식 docs는 `hermes update`, update log, post-update validation, terminal disconnect 대응, messaging platform에서의 update, manual update, rollback 흐름을 안내한다. 이 책에서는 그 흐름을 실제 운영 기준으로 바꿔 본다. 특히 [Docker/Gateway 운영](https://wikidocs.net/346139)이나 Slack 같은 채널을 붙여 쓰는 환경에서는 업데이트 직후 연결 상태를 다시 확인한다.
+Hermes Agent 업데이트는 최신 기능을 받는 일인 동시에 운영 중인 AI 개인비서 환경을 흔들 수 있는 작업이다. 공식 docs는 `hermes update`, update log, post-update validation, terminal disconnect 대응, messaging platform에서의 update, manual update, rollback 흐름을 안내한다. 이 책에서는 그 흐름을 실제 점검 순서로 바꿔 본다. 특히 [Docker/Gateway 점검](https://wikidocs.net/346139)이나 Slack 같은 채널을 붙여 쓰는 환경에서는 업데이트 직후 연결 상태를 다시 확인한다.
 
 ![Hermes Agent 업데이트 검증 흐름](../assets/images/chapter-heroes/ch00-10-update-validation-codex.webp)
 
@@ -103,11 +103,3 @@ cron job / Skill / MCP 흐름 점검
 ### messaging platform에서도 업데이트할 수 있나요?
 
 공식 docs는 messaging platform에서의 update 흐름도 다룬다. 다만 원격 업데이트는 로그와 gateway restart 확인이 더 중요하므로, 운영자는 update log와 실제 delivery를 같이 봐야 한다.
-
-### 업데이트 후 config가 이상하면 무엇을 먼저 보나요?
-
-`hermes config check`, `hermes config migrate`, update log를 먼저 본다. 그다음 provider/model, toolset, gateway, cron 순서로 좁혀 간다.
-
-## 다음 글
-
-0장을 마쳤다면 [AI 챗봇과 AI 개인비서의 차이](https://wikidocs.net/345923)로 넘어간다. 설치와 설정을 넘어서, Hermes Agent를 왜 하나의 대화창이 아니라 AI 개인비서 운영 환경으로 봐야 하는지 이해할 차례다.

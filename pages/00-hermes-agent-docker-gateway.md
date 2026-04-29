@@ -4,7 +4,7 @@
 
 ![Docker와 Gateway 상시 운영 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-6-docker-gateway-always-on-codex.webp)
 
-처음부터 Docker/Gateway를 붙일 필요는 없다. 특히 gateway는 [always-on gateway 운영 기준](https://wikidocs.net/345906)과 [설치 후 기본 검증 순서](https://wikidocs.net/346137)처럼 process, 인증, delivery target, 로그를 함께 봐야 한다. 기본 CLI chat이 안정되고, provider 설정과 tool 권한을 확인한 뒤, 상시 접속이나 메시징 delivery가 필요해질 때 붙이는 편이 안전하다.
+처음부터 Docker/Gateway를 붙일 필요는 없다. 특히 gateway는 [always-on gateway 확인 기준](https://wikidocs.net/345906)과 [설치 후 기본 검증 순서](https://wikidocs.net/346137)처럼 process, 인증, delivery target, 로그를 함께 봐야 한다. 기본 CLI chat이 안정되고, provider 설정과 tool 권한을 확인한 뒤, 상시 접속이나 메시징 delivery가 필요해질 때 붙이는 편이 안전하다.
 
 ## Docker가 필요한 경우
 
@@ -72,11 +72,3 @@ Gateway는 Hermes Agent가 메시징 플랫폼에서 요청을 받을 수 있게
 ### Gateway만 켜면 Slack AI 비서가 완성되나요?
 
 아니다. gateway는 입구일 뿐이다. 호출 규칙, 권한, 실행 범위, delivery target, 로그 확인 기준이 있어야 AI 비서 운영이 안정된다.
-
-### cron과 gateway는 어떤 관계인가요?
-
-cron은 정해진 시간에 fresh session으로 작업을 시작하는 방식이고, gateway는 그 결과를 메시징 플랫폼으로 전달하거나 외부 요청을 받을 수 있게 하는 축이다. 둘은 함께 쓰일 수 있지만, 문제 해결할 때는 schedule, prompt, process, delivery를 나눠 봐야 한다.
-
-## 다음 글
-
-Docker/Gateway까지 이해했다면 [1장](https://wikidocs.net/345888)으로 넘어가 AI를 왜 챗봇 하나가 아니라 AI 팀 구조로 봐야 하는지 읽으면 된다.

@@ -2,7 +2,7 @@
 
 맥미니로 에르메스 에이전트(Hermes Agent)를 운영한다는 말은 “내 컴퓨터에 설치했다”와 다르다. Slack AI 비서, gateway, cron, 역할형 에이전트를 오래 켜두려면 실행 환경, 자동 시작 방식, 세션 유지 방식, 절전 정책, 로그 확인 순서를 함께 정해야 한다. 맥미니는 개인 노트북보다 상시 운영에 적합하지만, 아무 설정 없이 켜두면 절전/재시작/프로필 혼선 때문에 AI 개인비서가 어느 순간 답하지 않을 수 있다.
 
-이 페이지는 로컬 실습을 넘어 Mac mini/맥미니를 전용 머신처럼 쓰려는 독자를 위한 운영 기준이다. 먼저 [설치와 세팅 기본 순서](https://wikidocs.net/346137)를 확인한 뒤, gateway가 필요해지는 순간에는 [Docker/Gateway 판단 기준](https://wikidocs.net/346139)과 함께 읽는 편이 좋다.
+이 페이지는 로컬 실습을 넘어 Mac mini/맥미니를 전용 머신처럼 쓰려는 독자를 위한 상시 운영 가이드다. 먼저 [설치와 세팅 기본 순서](https://wikidocs.net/346137)를 확인한 뒤, gateway가 필요해지는 순간에는 [Docker/Gateway 판단 기준](https://wikidocs.net/346139)과 함께 읽는 편이 좋다.
 
 ## 왜 맥미니가 좋은 선택지가 될까
 
@@ -58,7 +58,7 @@ hermes gateway stop
 7. Slack/Telegram/Discord에서 실제 응답이 오는가?
 ```
 
-status가 정상이어도 실제 메시지가 오지 않을 수 있다. 그래서 gateway는 [process/log/delivery를 함께 확인하는 운영 기준](https://wikidocs.net/345906)으로 봐야 한다.
+status가 정상이어도 실제 메시지가 오지 않을 수 있다. 그래서 gateway는 [process/log/delivery를 함께 확인하는 방식](https://wikidocs.net/345906)으로 봐야 한다.
 
 ## 절전 설정은 “화면 꺼짐”과 “시스템 잠자기”를 나눠 본다
 
@@ -66,7 +66,7 @@ status가 정상이어도 실제 메시지가 오지 않을 수 있다. 그래�
 
 팀 문서나 책으로 정리할 때는 특정 개인의 환경값을 그대로 적기보다 아래 기준을 남기는 편이 안전하다.
 
-| 확인 항목 | 운영 기준 |
+| 확인 항목 | 판단 기준 |
 |---|---|
 | 디스플레이 끄기 | 가능하다. gateway와 cron에는 보통 직접 문제가 아니다 |
 | 시스템 잠자기 | 상시 gateway/cron 운영 중에는 피한다 |
@@ -122,7 +122,7 @@ Slack에서 AI 개인비서가 갑자기 답하지 않으면 바로 모델 문�
 
 책이나 팀 문서에는 “어떤 값을 봐야 하는가”와 “왜 그 값이 중요한가”를 남기고, 실제 값은 팀 내부 문서나 secure secret store에 둔다.
 
-## 운영 기준
+## 상시 운영에서 반드시 나눌 것
 
 - 맥미니는 상시 Hermes Agent 운영에 적합하지만, 설치만으로 운영이 끝나지 않는다.
 - tmux는 수동 관찰/복구용, launchd/LaunchAgent는 gateway 자동 시작/재시작용으로 나눈다.
@@ -139,15 +139,3 @@ Slack에서 AI 개인비서가 갑자기 답하지 않으면 바로 모델 문�
 ### tmux로 gateway를 켜두면 안 되나요?
 
 테스트나 임시 운영은 가능하다. 다만 장기 운영에서는 launchd/LaunchAgent처럼 재시작, 로그, profile, 부팅 후 복구 기준이 있는 방식이 낫다.
-
-### 절전 방지는 무조건 해야 하나요?
-
-상시 Slack gateway나 cron을 돌린다면 시스템 잠자기는 피하는 편이 좋다. 다만 화면 꺼짐까지 막을 필요는 없다. 어떤 절전을 막는지 구분해야 한다.
-
-### gateway restart 후에도 답이 없으면 무엇을 먼저 보나요?
-
-먼저 profile과 log를 본다. 재시작한 gateway가 실제 Slack에서 쓰는 profile인지, 최근 로그에 Starting이나 오류가 있는지 확인한 뒤 channel 권한과 trigger 규칙을 본다.
-
-## 다음 글
-
-맥미니 상시 운영을 잡았다면 다음은 [업데이트 전후 검증](https://wikidocs.net/346253)이다. 상시 gateway와 cron이 있는 환경에서는 업데이트가 단순 설치 문제가 아니라 config, profile, service, log, delivery를 함께 확인하는 운영 문제가 된다.

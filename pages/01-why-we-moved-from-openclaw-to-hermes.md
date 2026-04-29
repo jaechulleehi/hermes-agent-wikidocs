@@ -18,7 +18,7 @@
 - session, memory, skill, [profile](https://wikidocs.net/346126), identity를 한 덩어리 감각이 아니라 **운영 가능한 층**으로 봐야 했다.
 - 대화에서 끝나지 않고, 도구 실행과 [Obsidian](https://wikidocs.net/346129) 기록, 블로그/강의 자산화까지 이어지는 **운영 흐름**이 필요했다.
 
-그래서 Hermes는 OpenClaw의 부정이 아니라, **그 유산 위에서 현재 운영 기준을 더 선명하게 만든 다음 단계**에 가깝다.
+그래서 Hermes는 OpenClaw의 부정이 아니라, **그 유산 위에서 현재의 실행 기준을 더 선명하게 만든 다음 단계**에 가깝다.
 
 ## 많은 전환이 실패하는 이유
 
@@ -139,7 +139,7 @@ shared-memory → 팀 공통 기준과 handoff
 
 공식 문서는 OpenClaw에서 Hermes로 옮길 때 `hermes claw migrate` 흐름을 제공한다. 이 명령은 기존 설정과 기억을 Hermes 구조로 옮기는 출발점이다. 하지만 실제 운영 전환은 명령 하나로 끝나지 않는다. 어떤 기억을 옮길지, 어떤 skill은 새로 만들지, 어떤 profile과 source of truth를 현재 기준으로 삼을지 다시 정해야 한다.
 
-그래서 공식 migration은 baseline이고, 이 책의 관심사는 그다음이다. 전환 이후 사용자가 헷갈리지 않도록 메인 창구, 역할형 에이전트, memory/profile/skill 경계, gateway/cron 흔적을 정리하는 운영 기준이 필요하다.
+그래서 공식 migration은 baseline이고, 이 책의 관심사는 그다음이다. 전환 이후 사용자가 헷갈리지 않도록 메인 창구, 역할형 에이전트, memory/profile/skill 경계, gateway/cron 흔적을 정리하는 기준이 필요하다.
 
 ## 그래서 OpenClaw를 버린 게 아니라, 위치를 다시 정리한 것이다
 
@@ -173,7 +173,7 @@ shared-memory → 팀 공통 기준과 handoff
 |---|---|---|
 | 중심 감각 | 이전 유산/캐릭터 흔적 | 현재 운영 구조 |
 | 사용자 창구 | 다소 맥락 의존적 | 하비 중심 단일 창구 |
-| 역할 분리 | 개별 에이전트 감각이 먼저 보임 | 조사/정리/실행/이미지 역할을 운영 기준으로 나눔 |
+| 역할 분리 | 개별 에이전트 감각이 먼저 보임 | 조사/정리/실행/이미지 역할을 책임 기준으로 나눔 |
 | 프로필 인식 | 덜 노출될 수 있음 | 구조적으로 중요하게 다룸 |
 | 기억 체계 | 혼재되어 보일 수 있음 | session/memory/skill/source of truth 분리 |
 | 도구 사용 | 대화 중심 인상 | 검증/실행 중심 강조 |
@@ -215,7 +215,7 @@ OpenClaw에서 Hermes로 넘어온 이야기는 좋은 운영 지식이 될 수 
 
 ### 원칙 3. 과거는 지우지 말고 위치를 옮긴다
 
-OpenClaw 유산은 archive, history, comparison, migration note 쪽에 남길 수 있다. 대신 현재 운영 기준 문서에서는 Hermes가 먼저 보여야 한다.
+OpenClaw 유산은 archive, history, comparison, migration note 쪽에 남길 수 있다. 대신 현재 문서에서는 Hermes가 먼저 보여야 한다.
 
 ### 원칙 4. 전환사는 좋은 콘텐츠 소재다
 
@@ -246,24 +246,8 @@ OpenClaw에서 Hermes로 넘어온 건 더 화려한 이름을 찾은 일이 아
 
 ### OpenClaw와 Hermes는 완전히 다른 시스템인가요?
 
-완전히 단절된 시스템이라기보다, OpenClaw의 유산 위에서 Hermes가 현재 운영 기준을 더 선명하게 세운 체계에 가깝다.
+완전히 단절된 시스템이라기보다, OpenClaw의 유산 위에서 Hermes가 현재 실행 기준을 더 선명하게 세운 체계에 가깝다.
 
 ### 왜 전환 후에도 OpenClaw 흔적이 보였나요?
 
 실제 시스템 전환은 문서, 자동 실행, skill, comments, runtime 흔적이 모두 한 번에 정리되지 않기 때문이다. 이상한 일이 아니라 자연스러운 전환 후유증에 가깝다.
-
-### 왜 같은 하비인데 다르게 느껴졌나요?
-
-보통은 profile, state DB, skill, identity docs 같은 상태 저장 단위가 달라졌기 때문이다. 감정 문제가 아니라 경계 문제인 경우가 많다.
-
-### OpenClaw 흔적은 다 지워야 하나요?
-
-아니다. archive/history/comparison 문서에는 남길 수 있다. 다만 현재 운영 기준 문서에는 Hermes 기준이 먼저 보여야 한다.
-
-### 전환 사례를 공개할 때 가장 조심할 것은 무엇인가요?
-
-불필요한 내부 디테일이다. 책이나 팀 문서에는 왜 문제가 생겼고 어떤 운영 기준으로 해결했는지만 남겨야 한다.
-
-## 다음 글
-
-OpenClaw와 Hermes의 차이를 잡았다면, 다음에는 [Hermes Agent와 Claude Code/Codex의 차이](https://wikidocs.net/346138)를 본다. 코딩 에이전트와 업무 자동화 운영 환경을 구분해야 도구 선택이 쉬워진다.
