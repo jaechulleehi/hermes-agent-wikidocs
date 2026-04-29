@@ -2,7 +2,7 @@
 
 * [00. 에르메스 에이전트(Hermes Agent) 기초 가이드](pages/00-chapter-0.md)
   * [00-01. 에르메스 에이전트(Hermes Agent)란 무엇인가](pages/00-hermes-agent-core-concepts.md)
-  * [00-02. 에르메스 에이전트(Hermes Agent) 공식 GitHub/docs는 어디서 볼까](pages/00-hermes-agent-official-github-docs.md)
+  * [00-02. 에르메스 에이전트(Hermes Agent) 공식 GitHub와 문서는 어디서 볼까](pages/00-hermes-agent-official-github-docs.md)
   * [00-03. 에르메스 에이전트(Hermes Agent) 설치와 세팅은 어떻게 시작할까](pages/00-hermes-agent-install-setup.md)
   * [00-04. 에르메스 에이전트(Hermes Agent) CLI 첫 대화는 어떻게 시작할까](pages/00-hermes-agent-cli-first-chat.md)
   * [00-05. 에르메스 에이전트(Hermes Agent) provider/model/config 설정은 어떻게 확인할까](pages/00-hermes-agent-provider-model-config.md)
@@ -86,4 +86,4 @@
   * [A-1. Hermes Agent 용어집](pages/a1-hermes-agent-glossary.md)
   * [A-2. Hermes Agent 보안 체크리스트](pages/a2-hermes-agent-security-checklist.md)
   * [A-3. 나만의 AI 팀 설계 워크시트](pages/a3-ai-team-design-worksheet.md)
-  * [A-4. Hermes Agent 공식 docs 정합성 점검표](pages/a4-official-docs-alignment-checklist.md)
+  * [A-4. Hermes Agent 공식 문서 정합성 점검표](pages/a4-official-docs-alignment-checklist.md)

@@ -30,7 +30,7 @@
 | role | 누가 조사하고 누가 정리하나 | 조사형/정리형/실행형 경계 | [역할 분리](https://wikidocs.net/345925) |
 | memory | 왜 기억이 다르게 느껴지나 | session/memory/profile/원본 기준 | [기억 경계](https://wikidocs.net/346126) |
 | tool | 파일, MCP, gateway, cron이 왜 안 되나 | 권한/경로/process/delivery | [도구 운영](https://wikidocs.net/345907) |
-| publishing | GitHub와 WikiDocs 중 무엇을 고치나 | 원본 기준와 공개 배포 채널 | [WikiDocs 발행 흐름](https://wikidocs.net/345994) |
+| publishing | GitHub와 WikiDocs 중 무엇을 고치나 | 원본 기준과 공개 배포 채널 | [WikiDocs 발행 흐름](https://wikidocs.net/345994) |
 | recovery | 무엇부터 고쳐야 하나 | 증상 보존, 최근 변경, 복구 순서 | [복구 플레이북](https://wikidocs.net/345918) |
 
 ## 반복 질문이 들어왔을 때

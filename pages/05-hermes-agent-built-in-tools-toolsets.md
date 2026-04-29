@@ -30,7 +30,7 @@ toolset은 에이전트가 사용할 수 있는 도구 범위를 줄이는 장�
 | 역할 | 기본 도구 범위 | 열기 전에 볼 것 |
 |---|---|---|
 | 조사형 | web, browser, session search | 출처/시점/근거 분리 |
-| 정리형 | file read/search, patch, WikiDocs 검증 | 원본 기준와 문체 기준 |
+| 정리형 | file read/search, patch, WikiDocs 검증 | 원본 기준과 문체 기준 |
 | 실행형 | terminal, process, git, deployment tool | 승인/rollback/로그 |
 | 자동화형 | cronjob, send_message, web/API | fresh session prompt와 delivery target |
 | 이미지형 | image generation, vision | 메시지 일치와 저작권/브랜드 기준 |

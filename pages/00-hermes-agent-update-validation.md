@@ -21,7 +21,7 @@ hermes update
 | 항목 | 확인할 것 |
 |---|---|
 | 현재 버전 | 지금 어떤 Hermes Agent 버전을 쓰는지 확인한다 |
-| GitHub/docs 변경점 | 공식 문서/GitHub에서 관련 변경 사항을 본다 |
+| GitHub/공식 문서 변경점 | 공식 문서/GitHub에서 관련 변경 사항을 본다 |
 | gateway 상태 | Slack/Telegram/Discord 등 사용 중인 gateway가 있는지 확인한다 |
 | cron 목록 | 자동 실행 중인 job이 있는지 확인한다 |
 | config/env 백업 | `config.yaml`과 `.env`의 경계를 확인하고 secret을 공개하지 않는다 |

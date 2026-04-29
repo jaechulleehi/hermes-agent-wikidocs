@@ -40,7 +40,7 @@ Hermes Agent의 terminal backend는 local만 있는 것이 아니다. 공식 문
 | local | 빠르고 단순하다 | 호스트 파일/credential에 가까워진다 |
 | Docker | 호스트와 작업 공간을 분리하기 좋다 | container에 넘긴 env는 읽힐 수 있다 |
 | Modal/remote backend | 무거운 작업이나 격리에 유리하다 | credential mount와 동기화 기준이 필요하다 |
-| SSH | 원격 환경 작업에 유리하다 | 원격 권한/경로/원본 기준를 따로 확인해야 한다 |
+| SSH | 원격 환경 작업에 유리하다 | 원격 권한/경로/원본 기준을 따로 확인해야 한다 |
 
 실무 기준은 단순하다. 읽기/문서화 중심 작업은 local도 가능하지만, 삭제/대량 수정/외부 code 실행이 섞이면 sandbox를 먼저 검토한다.
 

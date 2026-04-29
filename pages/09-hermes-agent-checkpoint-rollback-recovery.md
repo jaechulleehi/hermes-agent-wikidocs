@@ -61,7 +61,7 @@ rollback은 끝이 아니라 중간 단계다. 되돌린 뒤에는 아래를 다
 
 복구는 “원래대로 돌아왔다”가 아니라 “같은 문제가 다시 줄었다”까지 가야 끝난다.
 
-rollback은 [복구 플레이북](https://wikidocs.net/345918) 안에서 위치가 정해져야 한다. 위험 명령을 실행하기 전에는 [승인/YOLO mode 기준](https://wikidocs.net/346260)을 확인하고, 실행 후에는 GitHub 원본이나 WikiDocs 공개본처럼 원본 기준가 실제로 회복됐는지 검증한다.
+rollback은 [복구 플레이북](https://wikidocs.net/345918) 안에서 위치가 정해져야 한다. 위험 명령을 실행하기 전에는 [승인/YOLO mode 기준](https://wikidocs.net/346260)을 확인하고, 실행 후에는 GitHub 원본이나 WikiDocs 공개본처럼 원본 기준이 실제로 회복됐는지 검증한다.
 
 ## FAQ
 

@@ -4,7 +4,7 @@
 
 ![GitHub CLI MCP API 연결 차이](../assets/images/chapter-heroes/ch5-6-github-cli-mcp-api-codex.webp)
 
-GitHub는 원본 기준가 되기 쉽다. [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서도 원고를 고치고, 검증하고, GitHub 원본에 반영한 뒤 공개 페이지를 확인하는 흐름은 GitHub가 중심이었다. 그래서 GitHub 연결은 “편의 기능”이 아니라 발행/검증/복구 기준과 함께 설계해야 한다.
+GitHub는 원본 기준이 되기 쉽다. [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서도 원고를 고치고, 검증하고, GitHub 원본에 반영한 뒤 공개 페이지를 확인하는 흐름은 GitHub가 중심이었다. 그래서 GitHub 연결은 “편의 기능”이 아니라 발행/검증/복구 기준과 함께 설계해야 한다.
 
 ## 세 방식의 차이
 
@@ -45,7 +45,7 @@ API는 반복 조회와 세밀한 자동화에 좋다. 예를 들어 여러 repo
 
 ## 작은 예시: WikiDocs 발행 흐름
 
-WikiDocs 원고를 고칠 때는 먼저 로컬 파일을 수정하고 검증한다. 그다음 GitHub 원본에 변경 이력을 남기고 원본 기준를 갱신한다. 마지막으로 WikiDocs 공개 페이지가 sync됐는지 확인한다. 이 과정에서 CLI는 파일과 git 상태를 확인하고, API나 MCP는 공개/원격 상태 확인을 도울 수 있다.
+WikiDocs 원고를 고칠 때는 먼저 로컬 파일을 수정하고 검증한다. 그다음 GitHub 원본에 변경 이력을 남기고 원본 기준을 갱신한다. 마지막으로 WikiDocs 공개 페이지가 sync됐는지 확인한다. 이 과정에서 CLI는 파일과 git 상태를 확인하고, API나 MCP는 공개/원격 상태 확인을 도울 수 있다.
 
 중요한 것은 한 도구로 모든 것을 하려는 태도가 아니다. 로컬 검증, 원격 반영, 공개 화면 확인을 나눠 보는 것이다. 이 순서가 흔들릴 때는 [운영 체크리스트](https://wikidocs.net/345919)와 [복구 플레이북](https://wikidocs.net/345918)으로 돌아가 무엇을 먼저 확인할지 정한다.
 
