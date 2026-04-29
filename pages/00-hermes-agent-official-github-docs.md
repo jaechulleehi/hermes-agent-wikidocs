@@ -19,7 +19,7 @@
 | CLI / Commands | https://hermes-agent.nousresearch.com/docs/user-guide/cli | CLI/TUI, single query, model/provider/toolset 지정, slash command |
 | Messaging Gateway | https://hermes-agent.nousresearch.com/docs/user-guide/messaging | Telegram, Discord, Slack, WhatsApp 등 gateway 구조와 보안 |
 | Security | https://hermes-agent.nousresearch.com/docs/user-guide/security | command approval, allowlist, gateway authorization, sandbox 격리 |
-| Architecture | https://hermes-agent.nousresearch.com/docs/developer-guide/architecture | agent loop, prompt assembly, provider resolution, gateway/cron/session 흐름 |
+| Architecture | https://hermes-agent.nousresearch.com/docs/developer-guide/architecture | CLI/gateway/cron/ACP가 하나의 `AIAgent` core로 들어가고, prompt/provider/tool/session이 어떻게 이어지는지 |
 | OpenClaw migration | https://hermes-agent.nousresearch.com/docs/guides/migrate-from-openclaw | `hermes claw migrate`, dry-run, preset, migration 대상 |
 
 ## 공식 문서가 말하는 Hermes Agent의 정체성
@@ -44,7 +44,7 @@
 | Messaging Gateway | 플랫폼 연결 | channel, session, allowed user, delivery target을 관리하는 기준 |
 | MCP Integration | 외부 도구 연결 | 계정/권한/scope/timeout을 명확히 하는 기준 |
 | Security | 보안 기능 | command approval, allowlist, sandbox, gateway auth를 운영 규칙으로 만드는 기준 |
-| Architecture | 내부 구조 | 문제가 생겼을 때 agent loop, prompt, provider, gateway, cron 중 어디를 볼지 나누는 지도 |
+| Architecture | 내부 구조 | 문제가 생겼을 때 entry point, `AIAgent`, prompt, provider, tool dispatch, session storage, gateway/cron 중 어디를 볼지 나누는 지도 |
 
 ## 이 책은 공식 문서를 어떻게 다르게 읽나
 
@@ -62,6 +62,19 @@
 | Delegation/Subagents | 조사형/정리형/실행형 에이전트로 일을 나누는 기준 |
 | Security/Architecture | 운영 환경에서 어디까지 허용하고 어디서 멈출지의 기준 |
 | OpenClaw migration | 과거 운영 흔적을 현재 Hermes 기준으로 정리하는 전환 절차 |
+
+## Architecture를 입문서 관점으로 읽기
+
+공식 Architecture 문서는 개발자용 내부 지도다. 이 책에서 전부 설명할 필요는 없지만, 운영자가 문제를 진단할 때는 구조를 아주 얕게라도 알고 있으면 좋다. 핵심은 하나다. CLI, Messaging Gateway, cron, ACP, API Server처럼 들어오는 입구는 여러 개지만, 실제 대화와 도구 실행은 `AIAgent`를 중심으로 모인다.
+
+```text
+입구: CLI / Messaging Gateway / cron / ACP / API Server
+→ AIAgent: prompt 구성 / provider 선택 / tool dispatch / 압축과 저장
+→ 바깥 실행: terminal / browser / web / MCP / file / vision 등 tool backend
+→ 기록: session storage / memory / skill / 발행물
+```
+
+그래서 장애를 볼 때도 “Hermes가 안 된다”로 뭉뚱그리기보다 어느 층에서 막혔는지 나누는 편이 빠르다. 메시지가 안 오면 Messaging Gateway와 platform adapter를 보고, 답변은 되는데 도구가 안 돌면 toolset과 tool backend를 보고, 모델 호출이 흔들리면 provider resolution과 credential을 보고, 오래된 맥락이 문제라면 session storage, memory, context compression을 본다.
 
 ## 먼저 확인할 것
 

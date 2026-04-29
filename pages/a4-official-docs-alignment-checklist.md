@@ -25,6 +25,7 @@
 | Nous Tool Gateway | User Guide / Nous Tool Gateway | web/image/TTS/browser 도구 API 라우팅 기능으로 따로 설명한다. |
 | profiles | User Guide / Profiles | profile은 상태 분리이지 보안 sandbox가 아니라는 점을 명확히 한다. |
 | security | User Guide / Security | allowlist, pairing, dangerous command approval, secret 관리 기준을 확인한다. |
+| architecture | Developer Guide / Architecture | CLI, gateway, cron, ACP가 하나의 `AIAgent` core로 들어가는 구조를 기준으로 entry point와 내부 실행 흐름을 구분한다. |
 | checkpoints/rollback | User Guide / Checkpoints and Rollback | 파일 시스템 변경 복구 기능으로 설명하고, 만능 백업처럼 쓰지 않는다. |
 
 ## 2. 이 책에서 특히 헷갈리기 쉬운 표현
@@ -98,7 +99,21 @@
 
 가이드 내용을 반영할 때는 “공식 예제와 같은 명령어를 따라 한다”보다 “왜 이 순서가 실패를 줄이는가”를 설명하는 편이 이 책의 역할에 맞다.
 
-## 8. 공식 docs와 책의 역할 분담
+## 8. Architecture를 반영할 때의 기준
+
+Architecture 문서는 개발자용 내부 지도다. 본문에 파일 구조와 dependency chain을 길게 옮기기보다, 입문자가 장애를 분리해서 볼 수 있는 수준으로만 반영한다.
+
+| 공식 Architecture 항목 | 책에서 반영할 관점 | 본문에 과하게 넣지 않을 것 |
+|---|---|---|
+| Entry Points | CLI, Messaging Gateway, cron, ACP, API Server처럼 요청이 들어오는 입구가 다르다는 점 | 파일별 line 수, 내부 class 상세 |
+| AIAgent core | prompt 구성, provider 선택, tool dispatch, compression, session 저장이 한 흐름으로 이어진다는 점 | agent loop 내부 구현 전체 |
+| Tool System | tool registry와 toolset을 통해 필요한 도구만 노출한다는 점 | 모든 tool schema와 registry 코드 |
+| Session Storage | session, compression, search가 운영 맥락을 이어주는 기반이라는 점 | SQLite schema 세부 구현 |
+| Design Principles | prompt stability, observable execution, platform-agnostic core, profile isolation을 운영 원칙으로 해석 | contributor용 dependency chain 전체 |
+
+책에서는 Architecture를 “개발자가 코드를 고치는 순서”보다 “운영자가 문제를 어디서부터 확인할지 나누는 지도”로 쓴다.
+
+## 9. 공식 docs와 책의 역할 분담
 
 공식 docs는 기능의 최신 기준이다. 설치 명령, 설정 키, 지원 플랫폼, provider, toolset, CLI reference는 공식 docs를 따른다.
 

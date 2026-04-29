@@ -53,6 +53,21 @@ Hermes Agent를 처음 보면 기능 이름이 먼저 눈에 들어온다. memor
 
 즉, 에르메스 에이전트(Hermes Agent)의 공식 기능은 “기능을 많이 붙이는 법”보다 “업무 흐름에서 어느 지점을 안정화할 것인가”로 읽어야 한다.
 
+## 구조로 보면 더 단순하다
+
+공식 Architecture를 아주 짧게 읽으면 Hermes Agent는 여러 입구가 하나의 에이전트 core로 모이는 구조다. CLI에서 직접 말하든, Slack 같은 Messaging Gateway에서 부르든, cron이 정해진 시간에 시작하든, 중심에는 `AIAgent`가 있다. 이 core가 prompt를 만들고, provider/model을 고르고, 필요한 tool을 호출하고, 결과를 session과 memory에 남긴다.
+
+입문 단계에서는 파일명이나 내부 구현을 외울 필요가 없다. 대신 아래처럼 이해하면 충분하다.
+
+| 구조 | 사용자가 체감하는 의미 |
+|---|---|
+| Entry point | CLI, Slack, cron처럼 요청이 들어오는 입구 |
+| Agent core | 요청을 해석하고 provider/tool/session을 이어 붙이는 중심 |
+| Tool backend | terminal, browser, web, MCP, file처럼 실제 일을 실행하는 부분 |
+| Session/memory/skill | 대화 기록, 오래 남길 기준, 반복 절차를 나눠 저장하는 부분 |
+
+이 관점으로 보면 Hermes Agent는 기능이 많은 도구가 아니라, 요청이 들어와서 실행되고 기록으로 남는 흐름을 관리하는 구조로 보인다.
+
 ## 0장에서 잡을 것과 1장에서 이어갈 것
 
 0장의 역할은 Hermes Agent를 설치하기 전에 **기능 지도를 먼저 잡는 것**이다. 여기서는 AI 개인비서, 역할형 에이전트, memory, profile, skill, cron, MCP, gateway가 어떤 위치에 있는지만 확인하면 충분하다.

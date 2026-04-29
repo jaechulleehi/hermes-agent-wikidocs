@@ -45,8 +45,12 @@
 
 ## 공통 아키텍처
 
+공식 Architecture 관점으로 보면 요청이 들어오는 입구는 여러 개다. Slack 같은 Messaging Gateway, CLI, cron, ACP가 모두 시작점이 될 수 있다. 하지만 실제 운영 사례에서는 그 입구를 바로 기능 목록으로 설명하지 않고, “누가 요청을 해석하고, 어떤 역할이 이어받고, 어디에 결과를 남기는가”로 바꿔 읽는다.
+
 ```text
-사용자 요청 또는 cron 신호
+입구: 사용자 요청 / Slack thread / cron 신호
+        ↓
+AIAgent core: 목적 해석 / provider 선택 / tool 호출 / session 기록
         ↓
 하비: 목적/역할/결과물 판단
         ↓
