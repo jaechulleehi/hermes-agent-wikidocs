@@ -99,7 +99,3 @@ memory 후보: Hermes/WikiDocs memory chapter should include actual operation ev
 ### 작업 진행 상황은 어디에 남겨야 하나요?
 
 현재 대화에서는 session과 todo가 맞다. 완료된 변경은 GitHub log나 WikiDocs 원본에서 확인한다. 팀이 이어받아야 하는 상태는 shared-memory handoff에 남긴다.
-
-### 하비는 무엇을 기억해야 하나요?
-
-하비는 모든 원문을 들고 있는 것이 아니라, 어떤 정보가 어느 층에 있어야 하는지 판단하는 기준을 기억해야 한다. 그래서 하비의 핵심 기억은 라우팅, 우선순위, 최종 통합 방식, source of truth 순서다.

@@ -121,7 +121,3 @@ context compaction은 사용자가 “지금 압축해”라고 말해야만 생
 ### 긴 대화가 무조건 나쁜가요?
 
 아니다. 다만 긴 대화는 “한 번에 다 알고 있다”는 착각을 만든다. 그래서 검증과 source of truth 확인이 같이 있어야 한다.
-
-### memory에 모든 작업 내역을 넣으면 해결되나요?
-
-아니다. 작업 내역은 memory가 아니라 session, GitHub log, shared-memory handoff, session_search에서 찾는 것이 맞다.

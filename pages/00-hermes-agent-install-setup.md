@@ -86,16 +86,8 @@ OpenClaw 커뮤니티 대화에서 가장 많이 반복된 질문은 “어디�
 
 ### 설치가 끝나면 바로 업무 자동화가 되나요?
 
-아니다. 설치는 실행 환경을 만든 것뿐이다. AI 업무 자동화는 요청 창구, provider, 도구 권한, 기록 위치, 검증 기준이 정해져야 시작된다.
+아니다. 설치는 실행 환경을 만든 것뿐이다. AI 업무 자동화는 요청 창구, provider, 도구 권한, 기록 위치, 검증 기준이 정해져야 시작된다. API key/OAuth/custom endpoint/model name 같은 provider 설정도 이 단계에서 함께 확인해야 한다.
 
-### API key만 넣으면 되나요?
+### gateway나 Docker부터 시작해도 되나요?
 
-provider에 따라 API key, OAuth, custom endpoint, model name, context length 설정이 달라질 수 있다. 공식 Quickstart도 설치 다음 단계로 provider 선택과 기본 chat 검증을 강조한다.
-
-### gateway부터 켜도 되나요?
-
-가능하지만 추천 순서는 아니다. CLI 기본 chat이 안정된 뒤 gateway를 붙여야 메시징 문제인지 모델/provider 문제인지 구분할 수 있다. 특히 [맥미니 같은 전용 머신에 상시 운영](https://wikidocs.net/346395)할 때는 gateway만이 아니라 launchd/LaunchAgent, 절전, 로그 확인 순서까지 함께 잡아야 한다.
-
-### Docker로 바로 시작해도 되나요?
-
-가능하다. 다만 Docker는 데이터 디렉터리, gateway health, port, restart policy까지 같이 봐야 한다. 단순 실습은 CLI 설치가 쉽고, 상시 운영은 Docker/Gateway 장에서 따로 판단하는 편이 좋다.
+가능하지만 추천 순서는 아니다. CLI 기본 chat이 안정된 뒤 gateway나 Docker를 붙여야 메시징 문제인지 모델/provider 문제인지 구분할 수 있다. 단순 실습은 CLI 설치가 쉽고, 상시 운영은 [Docker/Gateway](https://wikidocs.net/346139)와 [맥미니 상시 운영](https://wikidocs.net/346395) 기준을 함께 보는 편이 좋다.
