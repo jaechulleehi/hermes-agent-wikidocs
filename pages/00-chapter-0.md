@@ -13,7 +13,7 @@
 | 순서 | 페이지 | 먼저 답하는 질문 |
 |---|---|---|
 | 00-01 | 에르메스 에이전트(Hermes Agent)란 무엇인가 | Hermes Agent가 챗봇/IDE copilot과 무엇이 다른가 |
-| 00-02 | 공식 GitHub/docs는 어디서 볼까 | 공식 source of truth와 이 책의 역할은 어떻게 다른가 |
+| 00-02 | 공식 GitHub/docs는 어디서 볼까 | 공식 원본 기준와 이 책의 역할은 어떻게 다른가 |
 | 00-03 | 설치와 세팅은 어떻게 시작할까 | 설치 명령보다 먼저 무엇을 확인해야 하는가 |
 | 00-04 | CLI 첫 대화는 어떻게 시작할까 | 설치 후 첫 대화와 세션을 어떻게 확인하는가 |
 | 00-05 | provider/model/config는 어떻게 확인할까 | 모델 라우팅과 설정 파일은 어디서 흔들리는가 |
@@ -42,7 +42,7 @@
 
 | 구분 | 성급한 접근 | 안정적인 접근 |
 |---|---|---|
-| 설치 | 설치 명령만 복사한다 | 공식 docs와 GitHub를 확인하고 지원 환경을 먼저 본다 |
+| 설치 | 설치 명령만 복사한다 | 공식 문서와 GitHub를 확인하고 지원 환경을 먼저 본다 |
 | 첫 실행 | gateway부터 켠다 | CLI에서 기본 대화와 세션을 먼저 확인한다 |
 | 모델 | 아무 모델이나 붙인다 | provider/model/config 저장 위치와 라우팅 기준을 본다 |
 | 도구 | 모든 tool을 켠다 | 필요한 toolset만 켜고 위험 작업 승인 기준을 둔다 |
@@ -95,8 +95,8 @@ cron/Skill/MCP 확장 예정 여부:
 
 ## 이 책과 공식 문서를 함께 보는 법
 
-공식 문서는 기능의 기준점이다. 설치 명령, CLI command, config option, messaging gateway 설정, security boundary, architecture처럼 바뀔 수 있는 내용은 공식 docs를 먼저 확인해야 한다.
+공식 문서는 기능의 기준점이다. 설치 명령, CLI command, config option, messaging gateway 설정, security boundary, architecture처럼 바뀔 수 있는 내용은 공식 문서를 먼저 확인해야 한다.
 
-이 책은 그 기능을 실제 업무에 붙일 때의 판단 기준을 다룬다. 예를 들어 공식 docs가 `hermes gateway setup`을 설명한다면, 이 책은 “왜 gateway status와 실제 Slack delivery를 따로 확인해야 하는가”를 설명한다. 공식 docs가 skills system을 설명한다면, 이 책은 “어떤 반복 업무를 skill로 남기고 어떤 정보는 memory에 남기면 안 되는가”를 다룬다.
+이 책은 그 기능을 실제 업무에 붙일 때의 판단 기준을 다룬다. 예를 들어 공식 문서가 `hermes gateway setup`을 설명한다면, 이 책은 “왜 gateway status와 실제 Slack delivery를 따로 확인해야 하는가”를 설명한다. 공식 문서가 skills system을 설명한다면, 이 책은 “어떤 반복 업무를 skill로 남기고 어떤 정보는 memory에 남기면 안 되는가”를 다룬다.
 
 0장의 목표는 Hermes Agent 전체를 한 번에 이해시키는 것이 아니다. 이후 장을 읽을 때 같은 이야기가 반복되는 느낌이 아니라, 설치/운영/기억/자동화/복구가 한 흐름으로 이어지게 만드는 것이다.

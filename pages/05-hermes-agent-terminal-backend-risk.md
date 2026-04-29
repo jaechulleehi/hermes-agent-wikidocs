@@ -8,7 +8,7 @@ AI 개인비서가 terminal을 쓰면 파일 검증, 테스트 실행, git 상�
 
 ## terminal backend를 고르는 기준
 
-| backend | 공식 docs 기준 의미 | 좋은 사용처 | 주의점 |
+| backend | 공식 문서 기준 의미 | 좋은 사용처 | 주의점 |
 |---|---|---|---|
 | local | 현재 machine에서 실행 | 신뢰된 repo, 빠른 검증, 개발 환경 확인 | 사용자 파일/credential에 가까움 |
 | docker | 격리 container에서 실행 | 재현성, 위험 명령 분리, 깨끗한 환경 | env 전달 범위 확인 필요 |

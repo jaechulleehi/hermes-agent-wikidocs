@@ -17,7 +17,7 @@
 | 09-5 | Hermes Agent 위험 명령 승인과 YOLO mode는 어떻게 관리할까 | 빠른 실행과 안전 경계를 어떻게 나눌까 |
 | 09-6 | Hermes Agent gateway 권한과 실행 격리는 어떻게 나눌까 | 호출 권한, 실행 권한, credential 권한을 어떻게 분리할까 |
 | 09-7 | Hermes Agent checkpoint와 rollback은 복구 흐름에서 어떻게 쓸까 | 실행 전후 되돌릴 기준점을 어떻게 확보할까 |
-| 09-8 | OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까 | 전환 과정에서 memory/profile/runtime/source of truth를 어떻게 잃지 않을까 |
+| 09-8 | OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까 | 전환 과정에서 memory/profile/runtime/원본 기준를 어떻게 잃지 않을까 |
 
 ## 복구 장에서 남길 안전망
 
@@ -32,7 +32,7 @@
 
 운영 실수는 대개 처음 보는 문제가 아니다. gateway가 살아 있는지 확인하지 않고 cron을 고치려 하거나, GitHub가 원본인데 WikiDocs 화면만 보며 수정 상태를 판단하거나, memory에 넣으면 안 되는 작업 로그를 장기 기억으로 남기려는 일이 반복된다.
 
-복구도 같다. 문제가 생겼을 때 바로 재설치하거나 재시작하면 원인이 사라질 수 있다. 먼저 증상, process, 최근 변경, profile/runtime 경계, source of truth를 확인해야 한다. 그런 다음 수정하고, 마지막에 검증과 기록을 남긴다. 반복되는 확인 순서는 [Hermes Agent Skill](https://wikidocs.net/346235)로 남길 수 있고, 도구 장애는 [외부 도구/MCP/채널 연동](https://wikidocs.net/345907)의 runtime/delivery 기준으로 되돌아간다.
+복구도 같다. 문제가 생겼을 때 바로 재설치하거나 재시작하면 원인이 사라질 수 있다. 먼저 증상, process, 최근 변경, profile/runtime 경계, 원본 기준를 확인해야 한다. 그런 다음 수정하고, 마지막에 검증과 기록을 남긴다. 반복되는 확인 순서는 [Hermes Agent Skill](https://wikidocs.net/346235)로 남길 수 있고, 도구 장애는 [외부 도구/MCP/채널 연동](https://wikidocs.net/345907)의 runtime/delivery 기준으로 되돌아간다.
 
 ## 이 장에서 얻을 기준
 

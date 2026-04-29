@@ -27,7 +27,7 @@ Skill은 반복 업무의 실행 절차와 검증 기준이다. [memory](https:/
 
 ## 사례: WikiDocs MCP 연결은 Skill이 아니다
 
-WikiDocs MCP를 연결하면 책, 페이지, 블로그를 만들고 수정하는 도구가 Hermes Agent 안으로 들어온다. 하지만 MCP 연결 자체가 작업 품질을 보장하지는 않는다. 어떤 책이 source of truth인지, GitHub-linked book에서는 어디를 먼저 고쳐야 하는지, 공개 페이지를 어떻게 확인할지는 별도의 판단 기준이 필요하다.
+WikiDocs MCP를 연결하면 책, 페이지, 블로그를 만들고 수정하는 도구가 Hermes Agent 안으로 들어온다. 하지만 MCP 연결 자체가 작업 품질을 보장하지는 않는다. 어떤 책이 원본 기준인지, GitHub-linked book에서는 어디를 먼저 고쳐야 하는지, 공개 페이지를 어떻게 확인할지는 별도의 판단 기준이 필요하다.
 
 이 판단 기준이 Skill이다. MCP는 문을 열어주고, Skill은 그 문으로 들어가 무엇을 어떤 순서로 할지 정한다.
 
@@ -47,7 +47,7 @@ WikiDocs MCP를 연결하면 책, 페이지, 블로그를 만들고 수정하는
 2. 도구를 붙이는 일과 도구를 쓰는 기준을 분리한다.
 3. cron prompt는 Skill을 불러 쓰더라도 독립 실행 가능해야 한다.
 4. gateway는 채널 문제이고, Skill은 처리 방식 문제다.
-5. 과거 사례는 session_search나 source of truth에서 찾고, Skill에는 재사용 기준만 남긴다.
+5. 과거 사례는 session_search나 원본 기준에서 찾고, Skill에는 재사용 기준만 남긴다.
 
 ## FAQ
 

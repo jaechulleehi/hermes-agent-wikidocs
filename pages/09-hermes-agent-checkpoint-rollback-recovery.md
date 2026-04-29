@@ -8,7 +8,7 @@ Hermes Agent 복구에서 가장 좋은 상황은 “문제가 생기기 전 상
 
 ## checkpoint가 필요한 순간
 
-공식 docs 기준 checkpoint는 파일 변경 도구나 destructive terminal command 같은 mutating operation 전에 만들어진다. 운영에서는 아래 상황을 checkpoint 필요 작업으로 본다.
+공식 문서 기준 checkpoint는 파일 변경 도구나 destructive terminal command 같은 mutating operation 전에 만들어진다. 운영에서는 아래 상황을 checkpoint 필요 작업으로 본다.
 
 | 상황 | checkpoint 확인이 필요한 이유 |
 |---|---|
@@ -38,11 +38,11 @@ Hermes Agent 복구에서 가장 좋은 상황은 “문제가 생기기 전 상
 
 ## git과 checkpoint의 역할을 나눈다
 
-공식 docs는 Hermes checkpoint가 별도 shadow git repository 아래에서 관리되고, 실제 project `.git`을 건드리지 않는다고 설명한다. 그래서 운영에서는 git과 checkpoint를 서로 대체재로 보지 않는다.
+공식 문서는 Hermes checkpoint가 별도 shadow git repository 아래에서 관리되고, 실제 project `.git`을 건드리지 않는다고 설명한다. 그래서 운영에서는 git과 checkpoint를 서로 대체재로 보지 않는다.
 
 | 도구 | 역할 |
 |---|---|
-| git | 공개 원본/source of truth, commit 단위 변경 이력 |
+| git | 공개 원본/원본 기준, commit 단위 변경 이력 |
 | Hermes checkpoint | 작업 중 실수 복구, turn 단위 안전망 |
 | WikiDocs sync | 공개 배포 반영 확인 |
 | 복구 플레이북 | 무엇을 먼저 보고 어떻게 되돌릴지 정하는 순서 |
@@ -61,13 +61,13 @@ rollback은 끝이 아니라 중간 단계다. 되돌린 뒤에는 아래를 다
 
 복구는 “원래대로 돌아왔다”가 아니라 “같은 문제가 다시 줄었다”까지 가야 끝난다.
 
-rollback은 [복구 플레이북](https://wikidocs.net/345918) 안에서 위치가 정해져야 한다. 위험 명령을 실행하기 전에는 [승인/YOLO mode 기준](https://wikidocs.net/346260)을 확인하고, 실행 후에는 GitHub 원본이나 WikiDocs 공개본처럼 source of truth가 실제로 회복됐는지 검증한다.
+rollback은 [복구 플레이북](https://wikidocs.net/345918) 안에서 위치가 정해져야 한다. 위험 명령을 실행하기 전에는 [승인/YOLO mode 기준](https://wikidocs.net/346260)을 확인하고, 실행 후에는 GitHub 원본이나 WikiDocs 공개본처럼 원본 기준가 실제로 회복됐는지 검증한다.
 
 ## FAQ
 
 ### checkpoint가 있으면 git commit을 덜 해도 되나요?
 
-아니다. checkpoint는 작업 중 안전망이고, git commit은 source of truth 이력이다. 공개 책이나 운영 문서는 여전히 GitHub 원본에 정리된 commit으로 남겨야 한다.
+아니다. checkpoint는 작업 중 안전망이고, git commit은 원본 기준 이력이다. 공개 책이나 운영 문서는 여전히 GitHub 원본에 정리된 commit으로 남겨야 한다.
 
 ### rollback은 언제 바로 실행해도 되나요?
 

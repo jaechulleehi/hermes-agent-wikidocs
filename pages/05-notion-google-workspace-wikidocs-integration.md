@@ -1,10 +1,10 @@
 ## Notion/Google Workspace/WikiDocs는 어떤 방식으로 연결할까
 
-에르메스 에이전트(Hermes Agent)에서 Notion, Google Workspace, WikiDocs를 연결할 때는 도구 이름보다 역할을 먼저 나눠야 한다. `Hermes Agent Notion`, `Hermes Agent Google Workspace`, `Hermes Agent WikiDocs`, `MCP API CLI 연동`을 찾는 독자라면 “어떤 서비스를 붙일까”보다 “어떤 정보가 어디의 source of truth인가”를 먼저 정해야 한다.
+에르메스 에이전트(Hermes Agent)에서 Notion, Google Workspace, WikiDocs를 연결할 때는 도구 이름보다 역할을 먼저 나눠야 한다. `Hermes Agent Notion`, `Hermes Agent Google Workspace`, `Hermes Agent WikiDocs`, `MCP API CLI 연동`을 찾는 독자라면 “어떤 서비스를 붙일까”보다 “어떤 정보가 어디의 원본 기준인가”를 먼저 정해야 한다.
 
 ![Notion Google Workspace WikiDocs 연결 역할](../assets/images/chapter-heroes/ch5-7-notion-google-workspace-wikidocs-codex.webp)
 
-같은 문서 도구처럼 보여도 세 서비스의 역할은 다르다. Notion은 팀 문서/업무 DB가 되기 쉽고, Google Workspace는 메일/일정/드라이브/문서 협업의 중심이 되기 쉽다. WikiDocs는 공개 책/전자책으로 읽히는 발행 채널이다. 이 구분은 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)에서 말하는 source of truth 경계와도 연결된다.
+같은 문서 도구처럼 보여도 세 서비스의 역할은 다르다. Notion은 팀 문서/업무 DB가 되기 쉽고, Google Workspace는 메일/일정/드라이브/문서 협업의 중심이 되기 쉽다. WikiDocs는 공개 책/전자책으로 읽히는 발행 채널이다. 이 구분은 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)에서 말하는 원본 기준 경계와도 연결된다.
 
 ## 도구별 역할을 먼저 나누기
 
@@ -15,7 +15,7 @@
 | WikiDocs | 공개 책, 전자책/PDF, 장기 콘텐츠 자산 | GitHub 연동/API/수동 확인 | GitHub 원본과 공개 페이지 sync를 함께 본다 |
 | Slack | 요청/보고/스레드 협업 | gateway/messaging | thread 맥락과 delivery target을 관리한다 |
 
-이 표에서 중요한 것은 연결 방식이 하나로 고정되지 않는다는 점이다. 어떤 도구는 API가 좋고, 어떤 도구는 MCP가 좋고, 어떤 흐름은 GitHub를 중간 source of truth로 두는 편이 안전하다.
+이 표에서 중요한 것은 연결 방식이 하나로 고정되지 않는다는 점이다. 어떤 도구는 API가 좋고, 어떤 도구는 MCP가 좋고, 어떤 흐름은 GitHub를 중간 원본 기준로 두는 편이 안전하다.
 
 ## Notion을 연결할 때
 
@@ -36,7 +36,7 @@ Google Workspace는 계정과 권한이 가장 중요하다. Gmail, Calendar, Dr
 
 ## WikiDocs를 연결할 때
 
-WikiDocs는 우리 책에서 공개 배포 채널이다. 원고의 source of truth는 GitHub repo에 두고, WikiDocs는 독자가 보는 공개 화면으로 본다. 그래서 WikiDocs 작업은 “파일을 고쳤다”에서 끝나지 않는다.
+WikiDocs는 우리 책에서 공개 배포 채널이다. 원고의 원본 기준는 GitHub repo에 두고, WikiDocs는 독자가 보는 공개 화면으로 본다. 그래서 WikiDocs 작업은 “파일을 고쳤다”에서 끝나지 않는다.
 
 판단 기준은 세 단계다.
 

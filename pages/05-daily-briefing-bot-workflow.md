@@ -26,7 +26,7 @@ Daily Briefing Bot은 단순한 뉴스 요약 예제가 아니다. Hermes Agent�
 
 Daily Briefing Bot류 작업에서 “웹에서 찾아줘”만 쓰면 검색 품질이 흔들린다. fresh session은 이전에 우리가 어떤 검색원을 선호했는지 모를 수 있기 때문이다. 그래서 정기 리서치 prompt에는 검색 도구와 출처 기준을 함께 적어야 한다.
 
-예를 들어 우리 운영에서는 가벼운 웹 리서치는 DuckDuckGo/DDGS 같은 무료 검색을 먼저 보고, 중요한 내용은 브라우저로 원문을 직접 확인한다. SEO/GEO 키워드 확장은 검색 결과가 아니라 Google Suggest 같은 suggest 데이터를 따로 본다. Hermes Agent의 공식 web backend는 Firecrawl/Parallel/Tavily/Exa처럼 공식 docs에서 지원 범위를 확인하고, Brave/Perplexity/자체 SearXNG는 별도 리서치 경로나 운영 후보로 구분한다.
+예를 들어 우리 운영에서는 가벼운 웹 리서치는 DuckDuckGo/DDGS 같은 무료 검색을 먼저 보고, 중요한 내용은 브라우저로 원문을 직접 확인한다. SEO/GEO 키워드 확장은 검색 결과가 아니라 Google Suggest 같은 suggest 데이터를 따로 본다. Hermes Agent의 공식 web backend는 Firecrawl/Parallel/Tavily/Exa처럼 공식 문서에서 지원 범위를 확인하고, Brave/Perplexity/자체 SearXNG는 별도 리서치 경로나 운영 후보로 구분한다.
 
 좋은 prompt는 이렇게 쓴다.
 

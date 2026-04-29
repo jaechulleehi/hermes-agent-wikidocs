@@ -1,6 +1,6 @@
 ## 긴 대화와 context compaction은 어떻게 관리할까
 
-긴 대화는 편하지만 위험하다. [OpenViking/RAG](https://wikidocs.net/346131)가 외부 지식 회수층이라면, context compaction과 handoff는 현재 대화의 단기 맥락을 잃지 않게 만드는 운영 장치다. 앞에서 합의한 기준, 완료한 작업, 남은 범위가 계속 쌓이면 AI 개인비서는 모든 것을 기억하는 것처럼 보이다가 어느 순간 흐려진다. 이때 필요한 것은 더 긴 대화가 아니라 handoff, source of truth, 검증 기준이다.
+긴 대화는 편하지만 위험하다. [OpenViking/RAG](https://wikidocs.net/346131)가 외부 지식 회수층이라면, context compaction과 handoff는 현재 대화의 단기 맥락을 잃지 않게 만드는 운영 장치다. 앞에서 합의한 기준, 완료한 작업, 남은 범위가 계속 쌓이면 AI 개인비서는 모든 것을 기억하는 것처럼 보이다가 어느 순간 흐려진다. 이때 필요한 것은 더 긴 대화가 아니라 handoff, 원본 기준, 검증 기준이다.
 
 ![context compaction과 handoff 관리](../assets/images/chapter-heroes/ch4-8-context-compaction-handoff-codex.webp)
 
@@ -20,7 +20,7 @@
 
 WikiDocs 책을 장별로 다시 쓸 때 대화는 길어졌다. 각 장마다 세션 기록, Slack 스레드, shared-memory, profile 문서를 확인했고, 수정 후 검증/커밋/푸시까지 이어졌다. 이 과정에서 다음 장을 시작할 때마다 “현재 HEAD가 어디인지”, “작업트리가 clean인지”, “이번 장 범위가 어디까지인지”를 다시 확인해야 했다.
 
-긴 대화의 위험은 실력 문제가 아니다. 작업 범위가 길어질수록 작은 변경이 섞이기 쉽다. 그래서 context compaction을 믿고 계속 밀기보다, 중간마다 source of truth와 검증 기준을 다시 잡아야 한다.
+긴 대화의 위험은 실력 문제가 아니다. 작업 범위가 길어질수록 작은 변경이 섞이기 쉽다. 그래서 context compaction을 믿고 계속 밀기보다, 중간마다 원본 기준와 검증 기준을 다시 잡아야 한다.
 
 ## handoff가 필요한 순간
 
@@ -32,7 +32,7 @@ handoff는 대화를 요약하는 문서가 아니다. 다음 사람이 바로 �
 2. 완료된 것
 3. 남은 것
 4. 바꾸면 안 되는 기준
-5. 참조해야 할 source of truth
+5. 참조해야 할 원본 기준
 6. 보호 정보/공유 범위 주의점
 7. 다음 실행자가 바로 할 수 있는 첫 행동
 
@@ -42,7 +42,7 @@ handoff는 대화를 요약하는 문서가 아니다. 다음 사람이 바로 �
 - context compaction은 요약이지 검증이 아니다.
 - 작업 로그를 memory에 넣지 않는다.
 - 다음 실행자가 필요하면 shared-memory handoff로 남긴다.
-- 변경 전후에는 source of truth와 git 상태를 확인한다.
+- 변경 전후에는 원본 기준와 git 상태를 확인한다.
 - 공유 콘텐츠는 보호 정보 제거 기준을 매번 다시 적용한다.
 
 ## handoff에 남겨야 하는 것
@@ -120,4 +120,4 @@ context compaction은 사용자가 “지금 압축해”라고 말해야만 생
 
 ### 긴 대화가 무조건 나쁜가요?
 
-아니다. 다만 긴 대화는 “한 번에 다 알고 있다”는 착각을 만든다. 그래서 검증과 source of truth 확인이 같이 있어야 한다.
+아니다. 다만 긴 대화는 “한 번에 다 알고 있다”는 착각을 만든다. 그래서 검증과 원본 기준 확인이 같이 있어야 한다.

@@ -4,7 +4,7 @@ Hermes Agent에서 역할형 AI 팀을 운영하면 개인 에이전트 memory�
 
 ![shared-memory 팀 공통 기억](../assets/images/chapter-heroes/ch4-4-shared-memory-team-memory-codex.webp)
 
-shared-memory는 단순 폴더가 아니다. 팀 공통 규칙, source of truth, handoff, 인덱스, 콘텐츠 패키지, 체크리스트를 담는 공용 기억층이다. 개인 에이전트가 각자 기억하면 어긋날 내용을 한곳에 두는 장치다. 더 오래 누적되는 지식은 [Obsidian LLM Wiki](https://wikidocs.net/346129)로 넘겨 외부 장기 기억으로 관리한다.
+shared-memory는 단순 폴더가 아니다. 팀 공통 규칙, 원본 기준, handoff, 인덱스, 콘텐츠 패키지, 체크리스트를 담는 공용 기억층이다. 개인 에이전트가 각자 기억하면 어긋날 내용을 한곳에 두는 장치다. 더 오래 누적되는 지식은 [Obsidian LLM Wiki](https://wikidocs.net/346129)로 넘겨 외부 장기 기억으로 관리한다.
 
 ## 왜 개인 memory만으로는 부족할까
 
@@ -27,7 +27,7 @@ HaloX 운영에서는 memory, shared-memory, HALOX Brain을 나눠 쓴다. memor
 ## shared-memory에 둘 것
 
 1. 팀 전체 공통 규칙
-2. source of truth 문서와 인덱스
+2. 원본 기준 문서와 인덱스
 3. 역할형 에이전트 간 handoff
 4. 콘텐츠 패키지와 작업 원본
 5. 반복되는 운영 체크리스트

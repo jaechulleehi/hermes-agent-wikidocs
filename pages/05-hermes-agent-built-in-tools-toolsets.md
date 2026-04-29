@@ -6,7 +6,7 @@
 
 이 장의 목적은 도구 목록을 외우는 것이 아니다. AI 개인비서가 어떤 일을 맡았을 때 web 도구가 필요한지, terminal/file 도구가 필요한지, browser/vision이 필요한지, cron이나 send_message처럼 자동화/전달 도구가 필요한지를 구분하는 기준을 잡는 것이다.
 
-## 공식 docs 기준 도구 분류
+## 공식 문서 기준 도구 분류
 
 | 분류 | 예시 | 운영에서 묻는 질문 |
 |---|---|---|
@@ -30,7 +30,7 @@ toolset은 에이전트가 사용할 수 있는 도구 범위를 줄이는 장�
 | 역할 | 기본 도구 범위 | 열기 전에 볼 것 |
 |---|---|---|
 | 조사형 | web, browser, session search | 출처/시점/근거 분리 |
-| 정리형 | file read/search, patch, WikiDocs 검증 | source of truth와 문체 기준 |
+| 정리형 | file read/search, patch, WikiDocs 검증 | 원본 기준와 문체 기준 |
 | 실행형 | terminal, process, git, deployment tool | 승인/rollback/로그 |
 | 자동화형 | cronjob, send_message, web/API | fresh session prompt와 delivery target |
 | 이미지형 | image generation, vision | 메시지 일치와 저작권/브랜드 기준 |

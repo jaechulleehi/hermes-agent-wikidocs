@@ -24,7 +24,7 @@ Hermes Agent 도구 실행의 끝은 “명령이 성공했다”가 아니다. 
 도구 검증은 실행 후에만 하지 않는다.
 
 ```text
-실행 전: 범위, 권한, 작업 디렉터리, source of truth, rollback 기준 확인
+실행 전: 범위, 권한, 작업 디렉터리, 원본 기준, rollback 기준 확인
 실행 중: 로그, exit code, partial failure, timeout, background process 확인
 실행 후: diff, 공개 반영, delivery, 링크/이미지, 다음 액션 확인
 ```
@@ -55,7 +55,7 @@ Hermes Agent 도구 실행의 끝은 “명령이 성공했다”가 아니다. 
 
 ## 사례: WikiDocs 발행 검증
 
-이 책의 WikiDocs 작업은 도구 검증의 좋은 예다. GitHub가 source of truth이고 WikiDocs가 공개 배포 채널이므로, 로컬 Markdown이 맞는 것만으로는 끝나지 않는다.
+이 책의 WikiDocs 작업은 도구 검증의 좋은 예다. GitHub가 원본 기준이고 WikiDocs가 공개 배포 채널이므로, 로컬 Markdown이 맞는 것만으로는 끝나지 않는다.
 
 ```text
 1. TOC와 page 파일을 수정한다.
@@ -63,10 +63,10 @@ Hermes Agent 도구 실행의 끝은 “명령이 성공했다”가 아니다. 
 3. GitHub 원본에 commit/push한다.
 4. WikiDocs TOC가 새 페이지를 받았는지 확인한다.
 5. 새 page ID를 받아 본문 링크를 공개 URL로 보정한다.
-6. 공개 페이지를 spot-check한다.
+6. 공개 페이지를 부분 확인한다.
 ```
 
-이 흐름은 번거로워 보이지만, 독자가 보는 공개 책의 품질을 지키는 최소 기준이다. 특히 GitHub와 WikiDocs처럼 source of truth와 배포 채널이 나뉘는 구조에서는 마지막 공개 확인이 중요하다.
+이 흐름은 번거로워 보이지만, 독자가 보는 공개 책의 품질을 지키는 최소 기준이다. 특히 GitHub와 WikiDocs처럼 원본 기준와 배포 채널이 나뉘는 구조에서는 마지막 공개 확인이 중요하다.
 
 ## 함께 연결해서 볼 기준
 

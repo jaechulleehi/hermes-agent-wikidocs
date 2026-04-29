@@ -4,7 +4,7 @@
 
 ![8장 Hermes Agent 운영 FAQ와 멀티봇 실패 패턴](../assets/images/chapter-heroes/ch8-ops-faq-multibot-rules-codex.webp)
 
-Slack에서는 “이거 누가 해야 해?”, “왜 같은 하비인데 다르게 답하지?”, “방울이와 뽀동이를 같이 불러도 되나?”처럼 질문이 섞여 들어온다. 8장은 이런 질문을 identity, profile, role, tool, runtime, source of truth, recovery 중 어디에 놓을지 나누는 장이다.
+Slack에서는 “이거 누가 해야 해?”, “왜 같은 하비인데 다르게 답하지?”, “방울이와 뽀동이를 같이 불러도 되나?”처럼 질문이 섞여 들어온다. 8장은 이런 질문을 identity, profile, role, tool, runtime, 원본 기준, recovery 중 어디에 놓을지 나누는 장이다.
 
 ## 처음 막혔을 때의 빠른 분기
 
@@ -14,14 +14,14 @@ Slack에서는 “이거 누가 해야 해?”, “왜 같은 하비인데 다�
 | 답은 오는데 엉뚱한 봇이 말한다 | identity/trigger | 멘션/호출 이름/스레드 규칙이 맞는지 |
 | 같은 봇인데 말투나 기억이 다르다 | profile/memory | 실행 profile, AGENTS/SOUL, session/memory 경계 |
 | 조사 결과와 문서화 결과가 다르다 | role/source | 조사형 근거와 정리형 판단이 분리됐는지 |
-| 수정했는데 공개 화면이 안 바뀐다 | publishing/source of truth | GitHub 원본, WikiDocs 동기화, 공개 page ID 링크 |
+| 수정했는데 공개 화면이 안 바뀐다 | publishing/원본 기준 | GitHub 원본, WikiDocs 동기화, 공개 page ID 링크 |
 | 반복해서 같은 장애가 난다 | recovery/checklist | FAQ가 아니라 체크리스트/복구 플레이북으로 내려갈 문제인지 |
 
 ## 이 장에서 다루는 문제
 
 | 순서 | 글 | 핵심 질문 |
 |---|---|---|
-| 08-1 | Hermes Agent 운영 질문은 어떻게 분류할까 | 반복 질문을 identity/profile/role/tool/runtime/source of truth 중 어디에 놓을까 |
+| 08-1 | Hermes Agent 운영 질문은 어떻게 분류할까 | 반복 질문을 identity/profile/role/tool/runtime/원본 기준 중 어디에 놓을까 |
 | 08-2 | 멀티봇 스레드는 왜 쉽게 시끄러워질까 | 여러 에이전트가 있는 Slack 스레드에서 누가 언제 말해야 할까 |
 
 ## FAQ는 답변집이 아니라 운영 라우터다
@@ -34,7 +34,7 @@ Slack에서는 “이거 누가 해야 해?”, “왜 같은 하비인데 다�
 | role | 조사형/정리형/실행형의 일이 섞인다 | [역할형 에이전트 분리](https://wikidocs.net/345925) |
 | memory | 기억해야 할 것과 작업 로그가 섞인다 | [기억 경계](https://wikidocs.net/346126) |
 | tool | 파일, MCP, gateway, cron 문제가 보인다 | [외부 도구 운영](https://wikidocs.net/345907) |
-| source of truth | GitHub, WikiDocs, Obsidian 중 무엇을 믿을지 모른다 | [WikiDocs 콘텐츠 시스템](https://wikidocs.net/345911) |
+| 원본 기준 | GitHub, WikiDocs, Obsidian 중 무엇을 믿을지 모른다 | [WikiDocs 콘텐츠 시스템](https://wikidocs.net/345911) |
 | recovery | 고치기 전에 무엇부터 봐야 할지 모른다 | [복구 플레이북](https://wikidocs.net/345918) |
 
 바로 답을 주기보다 먼저 어느 레이어에서 생긴 문제인지 찾는다. 그래야 같은 문제가 다른 말로 다시 와도 처리 순서가 흔들리지 않는다.

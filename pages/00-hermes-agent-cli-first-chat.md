@@ -37,7 +37,7 @@ hermes chat --model "anthropic/claude-sonnet-4"
 hermes chat --provider openrouter
 ```
 
-모델 이름은 환경마다 달라질 수 있으니 공식 docs와 현재 `hermes model` 흐름을 확인해야 한다. 이 책에서 중요한 것은 특정 모델명이 아니라 “모델을 바꿔도 같은 업무 흐름이 유지되는가”다.
+모델 이름은 환경마다 달라질 수 있으니 공식 문서와 현재 `hermes model` 흐름을 확인해야 한다. 이 책에서 중요한 것은 특정 모델명이 아니라 “모델을 바꿔도 같은 업무 흐름이 유지되는가”다.
 
 ## 3단계. 필요한 toolset만 켜본다
 
@@ -72,7 +72,7 @@ hermes chat --toolsets "web,terminal" -q "현재 프로젝트에서 README가 �
 
 ## 5단계. session이 이어지는지 본다
 
-Hermes Agent는 한 번의 질문으로 끝나는 챗봇보다 오래 가는 작업 흐름에 맞다. 그래서 첫 대화 후에는 세션이 저장되고 다시 이어질 수 있는지 확인해야 한다. 공식 docs의 session, memory, context 관련 문서는 이후 장에서 더 자세히 다룬다.
+Hermes Agent는 한 번의 질문으로 끝나는 챗봇보다 오래 가는 작업 흐름에 맞다. 그래서 첫 대화 후에는 세션이 저장되고 다시 이어질 수 있는지 확인해야 한다. 공식 문서의 session, memory, context 관련 문서는 이후 장에서 더 자세히 다룬다.
 
 기준은 단순하다.
 

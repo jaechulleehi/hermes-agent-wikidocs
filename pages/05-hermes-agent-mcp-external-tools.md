@@ -4,7 +4,7 @@
 
 ![Hermes Agent MCP 외부 도구 연결](../assets/images/chapter-heroes/ch5-5-mcp-external-tools-codex.png)
 
-MCP를 붙이면 할 수 있는 일이 늘어난다. 이 기준은 [외부 도구/MCP/채널 연동과 AI 워크플로우 자동화](https://wikidocs.net/345907) 전체와 연결된다. 하지만 위험도도 같이 늘어난다. 캘린더 조회, 문서 검색, GitHub 이슈 확인, Notion 페이지 조회처럼 읽기 중심인 작업과 문서 수정, 공유 범위 변경, 삭제, 배포처럼 되돌리기 어려운 작업은 같은 연결로 다루면 안 된다.
+MCP를 붙이면 할 수 있는 일이 늘어난다. 하지만 위험도도 같이 늘어난다. 캘린더 조회, 문서 검색, GitHub 이슈 확인, Notion 페이지 조회처럼 읽기 중심인 작업과 문서 수정, 공유 범위 변경, 삭제, 배포처럼 되돌리기 어려운 작업은 같은 연결로 다루면 안 된다.
 
 ## MCP가 해결하는 문제
 
@@ -21,8 +21,6 @@ AI 개인비서는 자연어 요청을 받는다. 외부 도구는 API, CLI, OAu
 
 ## MCP server를 붙이기 전 질문
 
-MCP server를 추가하기 전에는 기능보다 경계를 먼저 봐야 한다.
-
 1. 이 MCP server는 어떤 계정으로 연결되는가?
 2. 읽기/쓰기/삭제/공유 변경 중 어디까지 가능한가?
 3. tool 이름만 봐도 에이전트가 위험도를 구분할 수 있는가?
@@ -38,41 +36,17 @@ MCP server를 추가하기 전에는 기능보다 경계를 먼저 봐야 한다
 
 GitHub도 마찬가지다. 이슈 목록 조회나 PR diff 검토는 낮은 위험 작업이다. 하지만 branch push, release 생성, issue close, 권한 변경은 실행 전 기준이 필요하다. MCP 연결 여부보다 “어디까지 자동 실행해도 되는가”가 먼저다.
 
-## 웹 검색은 MCP로만 설명하면 부족하다
+## CLI/API/MCP는 역할이 다르다
 
-웹 검색/리서치 도구는 MCP/API/CLI 중 하나로만 설명하면 독자가 헷갈린다. 실제 운영에서는 무료 검색 백엔드, 유료 검색 API, 브라우저 직접 확인, AI 검색 서비스를 목적에 따라 섞는다.
-
-가벼운 조사에서는 DuckDuckGo/DDGS처럼 API key 없이 쓸 수 있는 무료 검색이 빠르다. SearXNG는 직접 호스팅하거나 신뢰 가능한 인스턴스를 쓰면 여러 검색원을 묶는 선택지가 된다. Hermes Agent 공식 web backend는 Firecrawl/Parallel/Tavily/Exa처럼 공식 docs에서 지원 범위를 확인하고, Brave/Perplexity 같은 별도 검색 API나 AI 검색은 원문 근거 확인 경로와 분리해서 검토한다.
-
-그래서 리서치형 에이전트에게는 “Brave가 좋다” 또는 “Tavily가 좋다”보다 아래 기준이 더 중요하다.
-
-1. 이 조사는 빠른 후보 탐색인가, 공개 근거 수집인가?
-2. 무료 검색으로 충분한가, quota와 SLA가 있는 유료 API가 필요한가?
-3. 원문을 직접 열어 확인해야 하는가?
-4. 검색 결과를 cron으로 매일 반복할 것인가?
-5. 결과를 WikiDocs나 블로그에 인용할 수 있는 출처로 남길 것인가?
-
-## CLI/API/MCP를 고르는 기준
-
-외부 도구를 붙일 때도 “무엇을 연결할 수 있는가”보다 “어떤 방식이 운영에 맞는가”가 중요하다. GitHub, Notion, Google Workspace, WikiDocs 같은 도구는 CLI/API/MCP 중 여러 방식으로 연결될 수 있다.
+MCP는 좋은 연결 방식이지만 만능 연결 방식은 아니다. 로컬 repo 검증은 CLI가 빠르고, 대량 조회나 정기 리포트는 API가 나을 수 있다. GitHub 같은 실제 예시는 [GitHub CLI와 MCP/API 연결](https://wikidocs.net/346232)에서 따로 본다.
 
 | 방식 | 강한 경우 | 조심할 점 |
 |---|---|---|
-| CLI | GitHub처럼 로컬 인증과 명령이 안정적인 도구 | 실행 환경 HOME/path/auth 차이 |
+| CLI | 로컬 인증과 명령이 안정적인 도구 | 실행 환경 HOME/path/auth 차이 |
 | API | 세밀한 요청/응답과 자동화 제어가 필요할 때 | token scope, rate limit, 오류 처리 |
 | MCP | LLM이 도구 목록과 스키마를 이해하고 호출해야 할 때 | credential filtering, tool 권한, 서버 안정성 |
-| browser/GUI 자동화 | 공식 API가 부족하거나 사람 화면을 따라가야 할 때 | 느리고 깨지기 쉬우므로 마지막 선택지로 둔다 |
 
-MCP는 좋은 연결 방식이지만 만능 연결 방식은 아니다. 반복 실행 절차가 중요하면 Skill이 필요하고, 예약 실행이면 cron이 필요하며, 사용자가 Slack에서 부르는 흐름이면 gateway까지 함께 봐야 한다.
-
-## MCP와 cron/gateway/skill의 차이
-
-| 기능 | 한 문장 정의 | 헷갈리기 쉬운 지점 |
-|---|---|---|
-| MCP | 외부 도구를 Hermes Agent 대화 흐름에 붙이는 연결 방식 | MCP 자체가 자동화 일정을 만들지는 않는다 |
-| cron | 정해진 시간에 fresh session으로 작업을 실행하는 예약 방식 | prompt가 혼자 이해될 만큼 충분해야 한다 |
-| gateway | Slack/Telegram/Discord 같은 채널과 Hermes Agent를 이어주는 상시 입구 | process OK와 실제 delivery 성공은 다르다 |
-| skill | 반복 절차와 검증 기준을 재사용하는 운영 지식 | 최신 정보 조회를 skill에 고정하면 낡을 수 있다 |
+반복 실행 절차가 중요하면 Skill이 필요하고, 예약 실행이면 cron이 필요하며, 사용자가 Slack에서 부르는 흐름이면 gateway까지 함께 봐야 한다. 각 개념의 차이는 [Skill과 memory/MCP/cron/gateway](https://wikidocs.net/346240)에서 한 번 더 정리한다.
 
 ## FAQ
 

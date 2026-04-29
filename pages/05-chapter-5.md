@@ -40,7 +40,7 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 실제 
 
 ## 실제 운영에서는 이렇게 이어진다
 
-WikiDocs 작업을 예로 들면 GitHub가 원고의 source of truth이고, WikiDocs는 공개 배포 채널이다. 그래서 원고를 고친 뒤에는 파일이 바뀌었는지만 보지 않고, 링크, 이미지 경로, 공개 화면 반영까지 확인해야 한다. GitHub CLI는 저장소 작업에 강하고, WikiDocs 도구는 공개 채널 반영에 필요하며, 브라우저 확인은 최종 화면 검수에 가깝다.
+WikiDocs 작업을 예로 들면 GitHub가 원고의 원본 기준이고, WikiDocs는 공개 배포 채널이다. 그래서 원고를 고친 뒤에는 파일이 바뀌었는지만 보지 않고, 링크, 이미지 경로, 공개 화면 반영까지 확인해야 한다. GitHub CLI는 저장소 작업에 강하고, WikiDocs 도구는 공개 채널 반영에 필요하며, 브라우저 확인은 최종 화면 검수에 가깝다.
 
 콘텐츠 자동화도 같은 구조다. 방울이의 크론 조사는 신호를 찾고, 좋은 신호만 shared-memory와 Obsidian으로 이어진다. 사용자가 “넘겨”라고 판단하면 뽀동이가 본문 구조를 만들고, 하비가 최종 통합하며, 필요하면 하망이가 이미지를 만든다. 여기서 cron은 시작 장치, shared-memory는 handoff 위치, WikiDocs는 공유 자산이다. 단일 기능이 아니라 역할형 에이전트와 도구가 연결된 AI 워크플로우 자동화로 봐야 한다.
 
@@ -48,13 +48,13 @@ WikiDocs 작업을 예로 들면 GitHub가 원고의 source of truth이고, Wiki
 
 웹 검색은 실행 도구가 아니라 입력 장치다. 검색 결과는 정답이 아니라 후보 출처다. 그래서 검색 품질은 API 이름보다 검색원, 최신성, 중복 제거, 원문 접근, 인용 가능성, 후속 검증 기준으로 봐야 한다.
 
-공식 Integrations 기준의 web backend는 Firecrawl, Parallel, Tavily, Exa처럼 공식 docs에서 지원 범위를 확인해야 하는 영역이다. DuckDuckGo/DDGS, SearXNG, Brave Search API, Perplexity, Google Suggest 같은 도구는 별도 리서치 경로나 운영 후보로 볼 수 있다. 둘을 섞어 “공식 Hermes web backend”처럼 쓰면 설정과 검증 기준이 꼬인다.
+공식 Integrations 기준의 web backend는 Firecrawl, Parallel, Tavily, Exa처럼 공식 문서에서 지원 범위를 확인해야 하는 영역이다. DuckDuckGo/DDGS, SearXNG, Brave Search API, Perplexity, Google Suggest 같은 도구는 별도 리서치 경로나 운영 후보로 볼 수 있다. 둘을 섞어 “공식 Hermes web backend”처럼 쓰면 설정과 검증 기준이 꼬인다.
 
 | 방식 | 비용/인증 | 강한 경우 | 조심할 점 |
 |---|---|---|---|
 | DuckDuckGo/DDGS | 무료, 보통 API key 없음 | 빠른 초기 조사, 키워드 후보, 가벼운 사실 확인 | 결과 재현성과 대량 호출 안정성이 약할 수 있다 |
 | SearXNG | 자체 호스팅이면 무료에 가깝다 | 여러 검색원을 메타검색으로 묶고 싶을 때 | 공개 인스턴스 안정성, 차단, 운영 부담 |
-| Firecrawl/Parallel/Tavily/Exa | 공식 docs에서 지원 범위 확인 | Hermes Agent web backend로 붙일 때 | 비용, quota, 설정값 변경, token 관리 |
+| Firecrawl/Parallel/Tavily/Exa | 공식 문서에서 지원 범위 확인 | Hermes Agent web backend로 붙일 때 | 비용, quota, 설정값 변경, token 관리 |
 | Brave/Perplexity 등 별도 검색 API | 유료 또는 API key 필요 | 별도 리서치 경로나 질문형 리서치가 필요할 때 | 공식 web backend와 구분하고 원문 근거를 재검증 |
 | Browser 직접 확인 | 별도 API 없이 화면 확인 | 로그인 페이지, 동적 페이지, 원문 검수 | 느리고 깨지기 쉬워 자동화의 마지막 단계로 둔다 |
 

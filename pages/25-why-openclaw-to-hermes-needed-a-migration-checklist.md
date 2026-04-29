@@ -1,6 +1,6 @@
 ## OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까
 
-[OpenClaw에서 Hermes로](https://wikidocs.net/345889) 넘어오는 일은 이름만 바꾸는 작업이 아니었다. AI 개인비서 판단 기준, 역할형 에이전트 분리, memory/profile/runtime 경계, GitHub/WikiDocs source of truth까지 함께 정리해야 하는 마이그레이션이었다.
+[OpenClaw에서 Hermes로](https://wikidocs.net/345889) 넘어오는 일은 이름만 바꾸는 작업이 아니었다. AI 개인비서 판단 기준, 역할형 에이전트 분리, memory/profile/runtime 경계, GitHub/WikiDocs 원본 기준까지 함께 정리해야 하는 마이그레이션이었다.
 
 ![OpenClaw에서 Hermes로 전환할 때 점검할 기준](../assets/how-image-agent-creates-wikidocs-visuals/ch9-8-openclaw-hermes-migration-checklist-codex.webp)
 
@@ -28,7 +28,7 @@
 | skill | 반복 절차 | 재사용 절차가 skill로 옮겨졌는가 |
 | cron | 예약 실행 | self-contained prompt와 delivery target이 있는가 |
 | gateway | 상시 실행 | process/log/delivery 확인 순서가 있는가 |
-| docs | source of truth | GitHub/WikiDocs/shared-memory 역할이 분리되어 있는가 |
+| docs | 원본 기준 | GitHub/WikiDocs/shared-memory 역할이 분리되어 있는가 |
 
 ## 실제 운영에서 중요했던 점
 
@@ -38,7 +38,7 @@ OpenClaw migration notes에는 자동으로 옮기기 어려운 항목들이 arc
 
 ## 판단 기준
 
-1. 현재 source of truth를 먼저 정한다.
+1. 현재 원본 기준를 먼저 정한다.
 2. 과거 설정은 archive로 보관하고 manual review 대상으로 분리한다.
 3. profile/memory/skill/cron/gateway를 같은 범주로 취급하지 않는다.
 4. 자동 실행되는 항목은 process와 delivery까지 확인한다.
@@ -49,7 +49,7 @@ OpenClaw migration notes에는 자동으로 옮기기 어려운 항목들이 arc
 
 ### 이름만 Hermes로 바꾸면 안 되나요?
 
-안 된다. 이름만 바꾸면 예전 운영 습관이 그대로 남는다. Hermes로 넘어왔다는 것은 메인 창구, 역할형 에이전트, memory/session/profile, gateway/cron, source of truth를 새 기준으로 다시 나누는 일이다.
+안 된다. 이름만 바꾸면 예전 운영 습관이 그대로 남는다. Hermes로 넘어왔다는 것은 메인 창구, 역할형 에이전트, memory/session/profile, gateway/cron, 원본 기준를 새 기준으로 다시 나누는 일이다.
 
 ### 이전 OpenClaw 기록은 지우는 게 좋나요?
 

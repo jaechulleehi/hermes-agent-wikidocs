@@ -2,7 +2,7 @@
 
 이 부록은 책을 읽다가 막힐 때 바로 확인하는 짧은 용어표다. 용어를 외우기보다 “이 기능이 어떤 운영 문제를 해결하는가”를 기준으로 보면 된다.
 
-최신 기능명과 설정값은 [Hermes Agent 공식 docs](https://hermes-agent.nousresearch.com/docs/)를 기준으로 확인하고, 이 페이지는 책 전체를 읽는 빠른 지도처럼 사용한다.
+최신 기능명과 설정값은 [Hermes Agent 공식 문서](https://hermes-agent.nousresearch.com/docs/)를 기준으로 확인하고, 이 페이지는 책 전체를 읽는 빠른 지도처럼 사용한다.
 
 ## 먼저 볼 핵심 용어
 

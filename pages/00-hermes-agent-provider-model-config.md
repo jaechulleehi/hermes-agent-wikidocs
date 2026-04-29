@@ -1,19 +1,17 @@
 ## 에르메스 에이전트(Hermes Agent) provider/model/config 설정은 어떻게 확인할까
 
-Hermes Agent에서 provider/model/config는 “어떤 모델을 쓸지”만의 문제가 아니다. [공식 configuration 문서](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)는 설정을 `~/.hermes/config.yaml`, secret/token을 `~/.hermes/.env`로 나누고, provider, model, terminal backend, Docker/SSH/Modal/Daytona 같은 실행 환경 설정을 함께 다룬다. 이 경계가 흐리면 CLI에서는 되던 일이 gateway나 cron에서는 실패한다. 설정을 바꾼 뒤에는 [업데이트 전후 점검](https://wikidocs.net/346253)처럼 실행 검증까지 이어가야 한다.
+Hermes Agent에서 provider/model/config는 “어떤 모델을 쓸지”만의 문제가 아니다. [공식 configuration 문서](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)는 설정을 `~/.hermes/config.yaml`, secret/token을 `~/.hermes/.env`로 나누고, provider, model, 실행 환경 설정을 함께 다룬다. 이 경계가 흐리면 CLI에서는 되던 일이 gateway나 cron에서는 실패할 수 있다.
 
 ![Hermes Agent provider model config 설정 흐름](../assets/images/chapter-heroes/ch00-5-provider-model-config-codex.webp)
 
-처음 세팅할 때는 좋은 모델을 고르는 것보다 “어디에 무엇이 저장되는가”를 먼저 알아야 한다. 모델 이름, API key, OAuth, custom endpoint, provider routing, toolset, terminal backend가 섞이면 나중에 실패 원인을 찾기 어렵다.
+이 페이지는 provider 전체 목록을 외우게 하는 문서가 아니다. 입문자가 먼저 볼 것은 “내가 어떤 방식으로 Hermes Agent를 연결하고, 그 선택이 비용/권한/복구에 어떤 영향을 주는가”다. 최신 provider 목록, env var 이름, 세부 설정값은 [Hermes Agent 공식 문서](https://hermes-agent.nousresearch.com/docs/integrations/providers)와 [공식 문서 정합성 점검표](https://wikidocs.net/346587)에서 다시 확인한다.
 
-이 페이지는 provider 전체 목록을 외우게 하는 문서가 아니다. 입문자가 먼저 볼 것은 “내가 어떤 방식으로 Hermes Agent를 연결하고, 그 선택이 비용/권한/복구에 어떤 영향을 주는가”다. 최신 provider 목록, env var 이름, 세부 설정값은 [Hermes Agent 공식 docs](https://hermes-agent.nousresearch.com/docs/integrations/providers)와 [공식 docs 정합성 점검표](https://wikidocs.net/346587)에서 다시 확인한다.
+## 공식 문서 기준 설정 위치
 
-## 공식 docs 기준 설정 위치
-
-| 구분 | 공식 docs 기준 위치/흐름 | 실제 확인 포인트 |
+| 구분 | 위치/흐름 | 실제 확인 포인트 |
 |---|---|---|
 | secret/token | `~/.hermes/.env` | API key, OAuth token처럼 노출되면 안 되는 값 |
-| non-secret setting | `~/.hermes/config.yaml` | model, provider, toolset, display, backend 같은 설정 |
+| 일반 설정 | `~/.hermes/config.yaml` | model, provider, toolset, display, backend 같은 설정 |
 | config 확인 | `hermes config` | 현재 설정을 읽고 이상 여부를 본다 |
 | config 수정 | `hermes config edit` 또는 `hermes config set KEY VAL` | 수동 편집보다 변경 의도를 남긴다 |
 | update 후 점검 | `hermes config check`, `hermes config migrate` | 새 옵션 누락 여부를 확인한다 |
@@ -23,7 +21,7 @@ Hermes Agent에서 provider/model/config는 “어떤 모델을 쓸지”만의 
 ## provider와 model을 확인하는 순서
 
 1. 지금 쓸 provider를 하나 고른다.
-2. 공식 docs나 `hermes model` 흐름으로 사용 가능한 model을 확인한다.
+2. 공식 문서나 `hermes model` 흐름으로 사용 가능한 model을 확인한다.
 3. CLI에서 단일 질문으로 응답을 확인한다.
 4. 같은 model/provider로 tool 호출이 되는지 확인한다.
 5. gateway나 cron으로 확장하기 전에 config 저장 위치를 확인한다.
@@ -36,13 +34,13 @@ hermes chat --provider openrouter -q "짧게 자기소개해줘"
 hermes chat --model "provider/model-name" -q "지금 설정이 어떤 의미인지 설명해줘"
 ```
 
-모델명은 provider별로 달라질 수 있다. 그래서 책에 적힌 예시를 그대로 외우기보다, 현재 공식 docs와 자신의 provider 목록을 확인하는 것이 안전하다.
+모델명은 provider별로 달라질 수 있다. 책에 적힌 예시를 그대로 외우기보다 현재 공식 문서와 자신의 provider 목록을 확인하는 것이 안전하다.
 
 ## provider/model 선택 기준
 
 | 상황 | 먼저 검토할 방식 | 확인할 것 |
 |---|---|---|
-| 개인이 빠르게 시작 | `hermes model`에서 OAuth/구독 기반 provider 선택 | 세션 만료, third-party 사용 정책, 개인 계정 한도 |
+| 개인이 빠르게 시작 | OAuth/구독 기반 provider | 세션 만료, third-party 사용 정책, 개인 계정 한도 |
 | 서버/gateway/cron 운영 | API key 기반 provider | `.env` 보관, 과금 owner, 월 한도, billing alert |
 | 여러 모델을 한 인터페이스로 묶기 | OpenRouter, custom endpoint, proxy | 요청 추적, 로그 보관, fallback 기준 |
 | 회사 데이터 반출 제한 | local/self-hosted endpoint | GPU/서버 비용, 속도, 모델 품질, 접근 권한 |
@@ -50,53 +48,36 @@ hermes chat --model "provider/model-name" -q "지금 설정이 어떤 의미인�
 
 처음에는 하나의 provider/model로 CLI 응답과 도구 호출을 확인한다. 그다음 gateway, cron, routing, local/self-hosted로 넓히는 편이 실패 원인을 줄인다.
 
-## provider routing은 언제 볼까
+## routing은 언제 볼까
 
-공식 docs에는 provider routing 기능이 있다. 비용, 속도, 사용 가능한 parameter, provider 순서 같은 기준으로 요청을 라우팅할 수 있다. 하지만 첫날부터 routing을 복잡하게 만들 필요는 없다.
+공식 문서에는 provider routing 기능이 있다. 비용, 속도, 사용 가능한 parameter, provider 순서 같은 기준으로 요청을 라우팅할 수 있다. 하지만 첫날부터 routing을 복잡하게 만들 필요는 없다.
 
 | 단계 | 추천 방식 |
 |---|---|
 | 첫 설치 | provider 하나와 model 하나로 기본 chat을 확인한다 |
 | 업무 사용 | 기본 model과 fallback model을 나눈다 |
-| 비용/속도 조정 | provider routing의 sort, only, ignore, order 같은 옵션을 검토한다 |
+| 비용/속도 조정 | routing의 sort, only, ignore, order 같은 옵션을 검토한다 |
 | 팀/상시 운영 | gateway와 cron이 같은 config를 읽는지 확인한다 |
 
 routing은 조정 도구다. 기본 대화와 도구 호출이 안정되기 전에 routing부터 복잡하게 만들면 실패 원인이 늘어난다.
 
-## OAuth/API/구독제 비용을 먼저 분리한다
-
-입문자가 자주 헷갈리는 지점은 provider 설정을 “로그인 방식”으로만 보는 것이다. 실제 운영에서는 인증 방식이 곧 구독/API 비용, 토큰, 한도, 과금, 복구 기준이 된다.
-
-| 방식 | 장점 | 먼저 확인할 것 |
-|---|---|---|
-| API key | 서버/gateway/cron에서 쓰기 쉽다 | 사용량 과금, 월 한도, key 노출 범위 |
-| OAuth/구독 기반 연결 | 개인 구독을 활용할 수 있다 | third-party 사용 가능 여부, 세션 만료, provider 정책 변경 |
-| custom endpoint/proxy | 여러 모델을 한 인터페이스로 묶을 수 있다 | 호환 API 범위, 로그에 남는 요청/응답, 장애 시 우회 경로 |
-| fallback/routing | 특정 provider 장애나 한도 초과에 대응할 수 있다 | 어떤 요청이 어느 provider로 갔는지 추적 가능해야 한다 |
-
-그래서 provider/model/config 페이지는 모델 추천표가 아니라 “비용과 권한이 어디서 발생하는지”를 확인하는 장이어야 한다. API 비용이 터지거나 OAuth 정책이 바뀌어도 원인을 좁히려면 provider, model, auth, gateway process를 분리해서 기록해야 한다.
-
 ## 비용은 모델값만 보면 안 된다
 
-현재 우리 운영은 OAuth/구독 기반 연결을 많이 활용한다. 이 방식은 개인이 이미 쓰는 구독을 활용할 수 있고, 시작이 빠르다는 장점이 있다. 하지만 상시 gateway나 cron에 붙이면 세션 만료, third-party 사용 제한, provider 정책 변경, rate limit을 따로 봐야 한다.
-
-다른 선택지도 있다. API key 방식은 서버, gateway, cron에서 안정적으로 쓰기 쉽지만 사용량 과금과 key 노출 위험을 관리해야 한다. OpenRouter 같은 aggregator나 custom endpoint/proxy는 여러 모델을 한 인터페이스로 묶기 좋지만, 어떤 요청이 어느 provider로 갔는지 추적 가능해야 한다. 로컬 모델은 토큰 비용은 줄일 수 있어도 GPU/서버/속도/품질 비용이 생긴다.
+입문자가 자주 헷갈리는 지점은 provider 설정을 “로그인 방식”으로만 보는 것이다. 실제 운영에서는 인증 방식이 곧 구독/API 비용, 토큰, 한도, 과금, 복구 기준이 된다.
 
 | 비용 항목 | 어디서 생기나 | 확인 포인트 |
 |---|---|---|
 | 구독/OAuth | 개인 계정 기반 provider 연결 | 세션 만료, 정책 변경, third-party 허용 여부 확인 |
 | API 사용량 | provider API key, aggregator, 검색 API | 월 한도, 알림, key scope, 과금 owner를 정한다 |
-| 검색/크롤링 비용 | Firecrawl/Parallel/Tavily/Exa 같은 공식 web backend와 별도 검색 API | 공식 지원 범위, 무료 검색으로 충분한지, 대량 호출이 필요한지 나눈다 |
+| 검색/크롤링 비용 | web backend와 별도 검색 API | 공식 지원 범위, 무료 검색으로 충분한지, 대량 호출이 필요한지 나눈다 |
 | 인프라 비용 | Mac mini, VPS, Docker, GPU, storage | 상시 gateway/cron 운영 시간과 로그 보관 기준을 둔다 |
 | 복구 비용 | 장애 대응, token rotation, 설정 재검증 | 비용보다 먼저 원인 분리와 rollback 경로를 남긴다 |
 
-입문자는 “어떤 모델이 제일 좋은가”보다 “어떤 비용이 어디서 새는가”를 먼저 봐야 한다. 개인 실험은 OAuth/구독으로 빠르게 시작할 수 있지만, 팀 운영이나 상시 자동화는 API key, quota, fallback, billing alert를 분리해서 설계하는 편이 안전하다.
+개인 실험은 OAuth/구독으로 빠르게 시작할 수 있지만, 팀 운영이나 상시 자동화는 API key, quota, fallback, billing alert를 분리해서 설계하는 편이 안전하다.
 
-## terminal backend 설정도 같이 본다
+## 실행 환경 설정도 같이 본다
 
-Hermes Agent는 terminal backend를 local, Docker, SSH 등으로 구성할 수 있다. 공식 configuration docs는 Docker backend와 SSH backend 설정, 환경변수 전달, sandbox 격리 기준을 함께 설명한다.
-
-처음에는 local backend로 CLI를 확인하고, 위험한 명령이나 격리가 필요한 작업이 늘어나면 Docker/SSH를 검토한다. 특히 Docker에 credential을 넘길 때는 `docker_forward_env`에 적은 값이 container 안의 command에 보일 수 있다는 점을 주의해야 한다.
+Hermes Agent는 terminal backend를 local, Docker, SSH 등으로 구성할 수 있다. 처음에는 local backend로 CLI를 확인하고, 위험한 명령이나 격리가 필요한 작업이 늘어나면 Docker/SSH를 검토한다. 특히 Docker에 credential을 넘길 때는 `docker_forward_env`에 적은 값이 container 안의 command에 보일 수 있다는 점을 주의해야 한다.
 
 ## config가 꼬였을 때 보는 순서
 

@@ -18,7 +18,7 @@ Hermes Agent는 실행형 에이전트가 강력한 만큼 위험 명령 승인 
 
 ## YOLO mode를 써도 되는 경우와 안 되는 경우
 
-YOLO mode는 현재 세션에서 위험 명령 승인 prompt를 우회한다. 공식 docs 기준으로 CLI flag, `/yolo`, 환경 변수로 켤 수 있다. 이름처럼 편하지만, 운영에서는 “편한 mode”가 아니라 “안전 경계를 의도적으로 내리는 mode”로 봐야 한다.
+YOLO mode는 현재 세션에서 위험 명령 승인 prompt를 우회한다. 공식 문서 기준으로 CLI flag, `/yolo`, 환경 변수로 켤 수 있다. 이름처럼 편하지만, 운영에서는 “편한 mode”가 아니라 “안전 경계를 의도적으로 내리는 mode”로 봐야 한다.
 
 | 상황 | 판단 |
 |---|---|
@@ -32,7 +32,7 @@ YOLO를 켜야 한다면 먼저 세 가지를 확인한다. 작업 디렉터리�
 
 ## permanent allowlist를 쓸 때의 원칙
 
-공식 docs는 승인 prompt에서 `always`를 선택하면 config에 permanent allowlist가 저장될 수 있다고 설명한다. 이 기능은 반복 작업에는 편하지만, 오래된 allowlist는 나중에 위험해질 수 있다.
+공식 문서는 승인 prompt에서 `always`를 선택하면 config에 permanent allowlist가 저장될 수 있다고 설명한다. 이 기능은 반복 작업에는 편하지만, 오래된 allowlist는 나중에 위험해질 수 있다.
 
 ```text
 allowlist 판단 기준
@@ -54,7 +54,7 @@ allowlist 판단 기준
 4. 되돌릴 checkpoint, git 상태, 백업이 있는가?
 5. 이 승인 범위를 one/session/always 중 어디까지 줄 것인가?
 
-이 질문에 답하지 못하면 `deny`가 기본이다. 공식 docs에서도 approval timeout은 응답이 없으면 deny되는 fail-closed 방식으로 설명된다.
+이 질문에 답하지 못하면 `deny`가 기본이다. 공식 문서에서도 approval timeout은 응답이 없으면 deny되는 fail-closed 방식으로 설명된다.
 
 승인 기준은 [보안 체크리스트](https://wikidocs.net/346259)와 [gateway 권한/실행 격리](https://wikidocs.net/346261)를 함께 봐야 한다. 특히 cron이나 Slack gateway처럼 사람이 없는 실행 경로에서는 빠른 실행보다 되돌릴 수 있는 범위와 로그가 먼저다.
 

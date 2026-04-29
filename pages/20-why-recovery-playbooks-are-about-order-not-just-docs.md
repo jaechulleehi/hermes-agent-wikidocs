@@ -1,6 +1,6 @@
 ## 복구 플레이북은 왜 문서보다 순서가 중요할까
 
-복구 플레이북의 핵심은 문서가 많다는 것이 아니라 순서가 분명하다는 것이다. [Hermes Agent](https://wikidocs.net/346055) 운영에서 문제가 생기면 바로 재시작하거나 설정을 고치고 싶지만, 먼저 봐야 할 것은 증상, process, profile/runtime 경계, 최근 변경, source of truth다.
+복구 플레이북의 핵심은 문서가 많다는 것이 아니라 순서가 분명하다는 것이다. [Hermes Agent](https://wikidocs.net/346055) 운영에서 문제가 생기면 바로 재시작하거나 설정을 고치고 싶지만, 먼저 봐야 할 것은 증상, process, profile/runtime 경계, 최근 변경, 원본 기준다.
 
 ![복구 플레이북에서 순서를 먼저 정하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch9-2-recovery-playbook-order-codex.webp)
 
@@ -20,7 +20,7 @@
 | 2 | 최근 변경 | 마지막으로 바뀐 설정, 자동화, 절차, 원고를 본다 |
 | 3 | process/runtime | 실제 실행 중인지와 어느 profile에서 도는지 본다 |
 | 4 | 권한/경로 | 파일 접근, 전달 위치, 실행 위치를 확인한다 |
-| 5 | source of truth | GitHub, WikiDocs, Obsidian, shared-memory 중 무엇이 원본인지 정한다 |
+| 5 | 원본 기준 | GitHub, WikiDocs, Obsidian, shared-memory 중 무엇이 원본인지 정한다 |
 | 6 | 최소 수정 | 한 번에 하나만 바꾼다 |
 | 7 | 검증/기록 | 성공 기준과 남은 일을 남긴다 |
 
@@ -30,7 +30,7 @@ Hermes Agent에는 이 순서를 도와주는 [checkpoint와 `/rollback`](https:
 
 OpenClaw에서 Hermes로 넘어온 뒤에는 과거 설정이 모두 새 구조에 1:1로 들어오지 않았다. 일부 cron, gateway, hooks, agent routing, skill registry는 archive/manual review 대상으로 남았다. 여기서 바로 “왜 예전처럼 안 되지?”라고 보면 복구가 꼬인다.
 
-올바른 순서는 먼저 현재 Hermes에서 무엇이 source of truth인지 확인하고, 그다음 archived record를 참고 자료로 본 뒤, 필요한 것만 새 Hermes 구조에 맞게 다시 만든다. 과거 유산은 버리는 것이 아니라 검토 대상으로 내려놓아야 한다. 이 기준은 [과거 유산과 현재 기준을 나누는 법](https://wikidocs.net/345920)과도 연결된다.
+올바른 순서는 먼저 현재 Hermes에서 무엇이 원본 기준인지 확인하고, 그다음 archived record를 참고 자료로 본 뒤, 필요한 것만 새 Hermes 구조에 맞게 다시 만든다. 과거 유산은 버리는 것이 아니라 검토 대상으로 내려놓아야 한다. 이 기준은 [과거 유산과 현재 기준을 나누는 법](https://wikidocs.net/345920)과도 연결된다.
 
 ## 복구 플레이북 템플릿
 
@@ -41,7 +41,7 @@ OpenClaw에서 Hermes로 넘어온 뒤에는 과거 설정이 모두 새 구조�
 최근 변경:
 먼저 볼 process/runtime:
 먼저 볼 profile/config:
-source of truth:
+원본 기준:
 수정 전 보존할 로그/상태:
 최소 수정:
 검증 기준:
@@ -66,4 +66,4 @@ source of truth:
 
 ### 복구 플레이북에 명령어를 많이 넣어야 하나요?
 
-명령어보다 순서가 먼저다. 명령어는 환경마다 달라질 수 있지만, 증상 보존, 최근 변경 확인, process 확인, source of truth 확인이라는 순서는 오래 간다.
+명령어보다 순서가 먼저다. 명령어는 환경마다 달라질 수 있지만, 증상 보존, 최근 변경 확인, process 확인, 원본 기준 확인이라는 순서는 오래 간다.

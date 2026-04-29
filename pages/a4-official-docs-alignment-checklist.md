@@ -1,18 +1,18 @@
-## 부록 A-4. Hermes Agent 공식 docs 정합성 점검표
+## 부록 A-4. Hermes Agent 공식 문서 정합성 점검표
 
-이 페이지는 책의 설명을 [Hermes Agent 공식 docs](https://hermes-agent.nousresearch.com/docs/)와 맞춰 보기 위한 점검표다. 한국어 책에서는 독자가 이해하기 쉽도록 운영 관점으로 풀어 쓰지만, 기능명/명령어/설정 경로/지원 플랫폼은 공식 docs와 맞아야 한다.
+이 페이지는 책의 설명을 [Hermes Agent 공식 문서](https://hermes-agent.nousresearch.com/docs/)와 맞춰 보기 위한 점검표다. 한국어 책에서는 독자가 이해하기 쉽도록 운영 관점으로 풀어 쓰지만, 기능명/명령어/설정 경로/지원 플랫폼은 공식 문서와 맞아야 한다.
 
-정합성을 볼 때는 “비슷한 뜻인가”보다 “독자가 그대로 따라 했을 때 공식 docs와 충돌하지 않는가”를 기준으로 본다.
+정합성을 볼 때는 “비슷한 뜻인가”보다 “독자가 그대로 따라 했을 때 공식 문서와 충돌하지 않는가”를 기준으로 본다.
 
-## 1. 공식 docs를 먼저 볼 항목
+## 1. 공식 문서를 먼저 볼 항목
 
-| 항목 | 공식 docs 기준 | 책에서 조심할 점 |
+| 항목 | 공식 문서 기준 | 책에서 조심할 점 |
 |---|---|---|
 | 설치 | Getting Started / Installation | 설치 명령과 전제 조건을 임의로 바꾸지 않는다. |
 | 업데이트 | Getting Started / Updating | 업데이트 후 `hermes doctor`, 설정/도구 확인 흐름을 함께 본다. |
 | CLI | User Guide / CLI, Reference / CLI Commands | `hermes chat`, `hermes setup`, `hermes model`, `hermes doctor` 같은 명령어를 정확히 쓴다. |
 | 설정 | User Guide / Configuration | `config.yaml`, `.env`, `auth.json`의 역할을 구분한다. |
-| provider/model | Integrations / Providers | provider 이름, OAuth/API key 방식, env var 이름을 추측하지 않는다. 책에는 선택 기준을 두고 최신 목록은 공식 docs에서 확인하게 한다. |
+| provider/model | Integrations / Providers | provider 이름, OAuth/API key 방식, env var 이름을 추측하지 않는다. 책에는 선택 기준을 두고 최신 목록은 공식 문서에서 확인하게 한다. |
 | toolset/tools | Reference / Tools, Toolsets | tool 이름과 toolset 이름을 역할명처럼 바꿔 쓰지 않는다. |
 | memory | User Guide / Persistent Memory | `MEMORY.md`, `USER.md`, session search, 외부 provider를 구분한다. |
 | context files | User Guide / Context Files | `.hermes.md`, `HERMES.md`, `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, SOUL.md의 로딩 위치를 구분한다. |
@@ -44,10 +44,10 @@
 ## 3. 페이지를 고칠 때 보는 순서
 
 1. 페이지가 설명하는 공식 기능을 하나로 정한다.
-2. 공식 docs에서 기능명, 명령어, 설정 위치를 확인한다.
+2. 공식 문서에서 기능명, 명령어, 설정 위치를 확인한다.
 3. 책의 표현이 기능명과 운영 해석을 섞어 쓰고 있지 않은지 본다.
 4. 독자가 그대로 따라 할 수 있는 최소 명령어와 확인 방법을 남긴다.
-5. 버전이 바뀌기 쉬운 세부값은 “공식 docs에서 확인”하도록 연결한다.
+5. 버전이 바뀌기 쉬운 세부값은 “공식 문서에서 확인”하도록 연결한다.
 6. 보안/권한/비밀값/공개 범위가 걸린 설명은 별도 체크리스트로 분리한다.
 
 ## 4. 정합성 점검 질문
@@ -72,18 +72,18 @@
 | 명령어 | 백틱으로 감싸고 임의 번역하지 않는다. |
 | 설정 파일 | `config.yaml`, `.env`, `auth.json`, `SOUL.md`, `MEMORY.md`, `USER.md`처럼 정확한 파일명을 쓴다. |
 | 위험 설정 | `--yolo`, dangerous command approval, allowlist, pairing, checkpoint/rollback은 보안 문맥에서만 다룬다. |
-| 공식 docs 링크 | 기능 단위로 필요한 곳에만 넣고, 모든 문단마다 반복하지 않는다. |
+| 공식 문서 링크 | 기능 단위로 필요한 곳에만 넣고, 모든 문단마다 반복하지 않는다. |
 
 ## 6. Integrations를 책에 반영할 때의 기준
 
-| 독자 상황 | 본문에서 설명할 것 | 부록/공식 docs로 보낼 것 |
+| 독자 상황 | 본문에서 설명할 것 | 부록/공식 문서로 보낼 것 |
 |---|---|---|
 | 처음 모델을 고르는 단계 | OAuth/API key/custom endpoint/local model의 선택 기준 | provider 전체 목록, env var 이름, 최신 지원 model |
 | 외부 도구를 붙이는 단계 | MCP/API/CLI/gateway/cron 중 무엇을 먼저 쓸지 | MCP 서버별 설정값, platform별 세부 옵션 |
 | 웹 리서치를 자동화하는 단계 | 무료 검색/공식 web backend/별도 검색 API를 구분하는 기준 | Firecrawl/Parallel/Tavily/Exa의 최신 설정, quota, 가격 |
 | 팀이나 상시 운영으로 확장하는 단계 | 권한, 로그, delivery, fallback, 복구 기준 | provider routing 세부 옵션, platform별 제한, API reference |
 
-책 본문은 “무엇을 선택해야 하는가”를 보여주고, 부록은 “공식 docs와 어디를 대조해야 하는가”를 알려준다. 빠르게 바뀌는 이름과 설정값을 본문에 길게 넣으면 입문서가 금방 낡는다.
+책 본문은 “무엇을 선택해야 하는가”를 보여주고, 부록은 “공식 문서와 어디를 대조해야 하는가”를 알려준다. 빠르게 바뀌는 이름과 설정값을 본문에 길게 넣으면 입문서가 금방 낡는다.
 
 ## 7. Guides와 Tutorials를 반영할 때의 기준
 
@@ -113,10 +113,10 @@ Architecture 문서는 개발자용 내부 지도다. 본문에 파일 구조와
 
 책에서는 Architecture를 “개발자가 코드를 고치는 순서”보다 “운영자가 문제를 어디서부터 확인할지 나누는 지도”로 쓴다.
 
-## 9. 공식 docs와 책의 역할 분담
+## 9. 공식 문서와 책의 역할 분담
 
-공식 docs는 기능의 최신 기준이다. 설치 명령, 설정 키, 지원 플랫폼, provider, toolset, CLI reference는 공식 docs를 따른다.
+공식 문서는 기능의 최신 기준이다. 설치 명령, 설정 키, 지원 플랫폼, provider, toolset, CLI reference는 공식 문서를 따른다.
 
 이 책은 그 기능을 실제 업무 흐름으로 배치하는 운영 가이드다. “어떤 기능이 있다”에서 끝내지 않고, “내 업무에서 무엇을 기억하고, 무엇을 반복하고, 무엇을 도구와 채널로 연결할 것인가”를 정리한다.
 
-따라서 책을 고칠 때는 공식 docs를 요약 복붙하기보다, 공식 기능명과 충돌하지 않는 선에서 독자의 판단 기준을 더 분명하게 만드는 방향이 좋다.
+따라서 책을 고칠 때는 공식 문서를 요약 복붙하기보다, 공식 기능명과 충돌하지 않는 선에서 독자의 판단 기준을 더 분명하게 만드는 방향이 좋다.

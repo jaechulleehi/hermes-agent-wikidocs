@@ -95,7 +95,7 @@ elif 함께 읽을 만한 지식이면:
   ↓
 승격 판단: raw 유지 / compiled note / 체크리스트 / WikiDocs 페이지
   ↓
-검증: source of truth / 최신성 / 보호 정보 / 다음 액션
+검증: 원본 기준 / 최신성 / 보호 정보 / 다음 액션
 ```
 
 | 분류 | 하비가 묻는 질문 | 대표 위치 |
@@ -121,4 +121,4 @@ elif 함께 읽을 만한 지식이면:
 
 ### specialist가 직접 memory를 관리하면 안 되나요?
 
-각 specialist도 자기 역할에 필요한 memory를 관리할 수 있다. 다만 팀 전체 기준이나 최종 source of truth는 하비가 통합해서 판단해야 한다.
+각 specialist도 자기 역할에 필요한 memory를 관리할 수 있다. 다만 팀 전체 기준이나 최종 원본 기준는 하비가 통합해서 판단해야 한다.

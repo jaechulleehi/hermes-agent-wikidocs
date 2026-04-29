@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent) 업데이트 전후에는 무엇을 점검할까
 
-Hermes Agent 업데이트는 최신 기능을 받는 일인 동시에 운영 중인 AI 개인비서 환경을 흔들 수 있는 작업이다. 공식 docs는 `hermes update`, update log, post-update validation, terminal disconnect 대응, messaging platform에서의 update, manual update, rollback 흐름을 안내한다. 이 책에서는 그 흐름을 실제 점검 순서로 바꿔 본다. 특히 [Docker/Gateway 점검](https://wikidocs.net/346139)이나 Slack 같은 채널을 붙여 쓰는 환경에서는 업데이트 직후 연결 상태를 다시 확인한다.
+Hermes Agent 업데이트는 최신 기능을 받는 일인 동시에 운영 중인 AI 개인비서 환경을 흔들 수 있는 작업이다. 공식 문서는 `hermes update`, update log, post-update validation, terminal disconnect 대응, messaging platform에서의 update, manual update, rollback 흐름을 안내한다. 이 책에서는 그 흐름을 실제 점검 순서로 바꿔 본다. 특히 [Docker/Gateway 점검](https://wikidocs.net/346139)이나 Slack 같은 채널을 붙여 쓰는 환경에서는 업데이트 직후 연결 상태를 다시 확인한다.
 
 ![Hermes Agent 업데이트 검증 흐름](../assets/images/chapter-heroes/ch00-10-update-validation-codex.webp)
 
@@ -8,7 +8,7 @@ Hermes Agent 업데이트는 최신 기능을 받는 일인 동시에 운영 중
 
 ## 공식 업데이트 기본 흐름
 
-공식 docs 기준 기본 명령은 아래와 같다.
+공식 문서 기준 기본 명령은 아래와 같다.
 
 ```bash
 hermes update
@@ -21,7 +21,7 @@ hermes update
 | 항목 | 확인할 것 |
 |---|---|
 | 현재 버전 | 지금 어떤 Hermes Agent 버전을 쓰는지 확인한다 |
-| GitHub/docs 변경점 | 공식 docs/GitHub에서 관련 변경 사항을 본다 |
+| GitHub/docs 변경점 | 공식 문서/GitHub에서 관련 변경 사항을 본다 |
 | gateway 상태 | Slack/Telegram/Discord 등 사용 중인 gateway가 있는지 확인한다 |
 | cron 목록 | 자동 실행 중인 job이 있는지 확인한다 |
 | config/env 백업 | `config.yaml`과 `.env`의 경계를 확인하고 secret을 공개하지 않는다 |
@@ -102,4 +102,4 @@ cron job / Skill / MCP 흐름 점검
 
 ### messaging platform에서도 업데이트할 수 있나요?
 
-공식 docs는 messaging platform에서의 update 흐름도 다룬다. 다만 원격 업데이트는 로그와 gateway restart 확인이 더 중요하므로, 운영자는 update log와 실제 delivery를 같이 봐야 한다.
+공식 문서는 messaging platform에서의 update 흐름도 다룬다. 다만 원격 업데이트는 로그와 gateway restart 확인이 더 중요하므로, 운영자는 update log와 실제 delivery를 같이 봐야 한다.

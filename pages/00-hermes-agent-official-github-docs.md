@@ -4,7 +4,7 @@
 
 ![공식 GitHub와 Docs를 먼저 확인하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-2-official-github-docs-codex.webp)
 
-이 책은 공식 문서의 대체물이 아니다. 먼저 [공식 GitHub](https://github.com/NousResearch/hermes-agent)와 [공식 Docs](https://hermes-agent.nousresearch.com/docs/)를 확인하고, 그다음 이 책에서 실제 업무 흐름에 맞게 해석하면 된다. 공식 GitHub와 공식 docs를 기준으로 삼되, [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055), [설치와 세팅](https://wikidocs.net/346137), [OpenClaw와의 차이](https://wikidocs.net/345889)처럼 실제 업무 자동화와 AI 개인비서 운영에서 어떤 기준으로 읽어야 하는지 풀어주는 한국어 실전 해설서에 가깝다.
+이 책은 공식 문서의 대체물이 아니다. 먼저 [공식 GitHub](https://github.com/NousResearch/hermes-agent)와 [공식 Docs](https://hermes-agent.nousresearch.com/docs/)를 확인하고, 그다음 이 책에서 실제 업무 흐름에 맞게 해석하면 된다. 공식 GitHub와 공식 문서를 기준으로 삼되, [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055), [설치와 세팅](https://wikidocs.net/346137), [OpenClaw와의 차이](https://wikidocs.net/345889)처럼 실제 업무 자동화와 AI 개인비서 운영에서 어떤 기준으로 읽어야 하는지 풀어주는 한국어 실전 해설서에 가깝다.
 
 ## 공식 링크
 
@@ -32,7 +32,7 @@
 
 ## 공식 문서 Quick Links를 운영 관점으로 읽기
 
-| 공식 docs 항목 | 기능으로 보면 | 실제 업무에서는 |
+| 공식 문서 항목 | 기능으로 보면 | 실제 업무에서는 |
 |---|---|---|
 | Installation | 설치 명령 | 지원 환경과 실패 원인을 분리하는 시작점 |
 | Quickstart | 첫 대화 | provider, chat, session, key feature를 순서대로 검증하는 절차 |
@@ -86,9 +86,9 @@
 
 ## FAQ
 
-### 이 책만 읽고 공식 docs는 안 봐도 되나요?
+### 이 책만 읽고 공식 문서는 안 봐도 되나요?
 
-아니다. 설치 명령, config option, command, gateway 설정처럼 바뀔 수 있는 정보는 공식 docs를 먼저 봐야 한다. 이 책은 그 정보를 실제 업무 자동화 흐름에 맞게 읽도록 돕는 보조 가이드다.
+아니다. 설치 명령, config option, command, gateway 설정처럼 바뀔 수 있는 정보는 공식 문서를 먼저 봐야 한다. 이 책은 그 정보를 실제 업무 자동화 흐름에 맞게 읽도록 돕는 보조 가이드다.
 
 ### 공식 GitHub와 docs 중 어디를 먼저 봐야 하나요?
 

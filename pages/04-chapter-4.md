@@ -64,4 +64,4 @@ memory / USER.md / AGENTS.md / shared-memory / Obsidian / Skill / session_search
 2. 이 정보는 개인 에이전트가 기억해야 하나, 팀 전체가 함께 봐야 하나?
 3. 누적 지식으로 연결해야 할 내용인데 memory에 넣으려 하고 있지는 않은가?
 4. 검색/회수해야 할 지식인데 프롬프트에 계속 붙이려 하고 있지는 않은가?
-5. 도구 자동화가 같은 기준을 보도록 source of truth가 정리되어 있는가?
+5. 도구 자동화가 같은 기준을 보도록 원본 기준가 정리되어 있는가?
