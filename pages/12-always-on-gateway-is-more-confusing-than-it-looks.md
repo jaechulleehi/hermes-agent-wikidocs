@@ -36,7 +36,7 @@ status는 출발점이다. 실제 운영에서는 다음 질문까지 봐야 한
 
 이 기준이 없으면 [Daily Briefing Bot](https://wikidocs.net/345926) 같은 자동화도 “돌았는지”와 “도착했는지”를 헷갈리게 된다.
 
-## 공식 기준 mini 정의: gateway와 delivery
+## 공식 기능 기준: gateway와 delivery
 
 gateway는 Hermes Agent를 메시징 플랫폼과 예약 실행 흐름에 붙여 두는 always-on 운영 축이다. 그래서 gateway를 볼 때는 process, scheduler, messaging connection, delivery target을 함께 확인해야 한다.
 

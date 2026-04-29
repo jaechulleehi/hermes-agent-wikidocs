@@ -59,7 +59,7 @@ Hermes Agent 도구 실행의 끝은 “명령이 성공했다”가 아니다. 
 
 ```text
 1. TOC와 page 파일을 수정한다.
-2. H1, heading spacing, 이미지, raw .md 링크, 중점 문자 검증을 돌린다.
+2. H1, heading spacing, 이미지, raw .md 링크, 불필요한 구분 문자 검증을 돌린다.
 3. GitHub 원본에 commit/push한다.
 4. WikiDocs TOC가 새 페이지를 받았는지 확인한다.
 5. 새 page ID를 받아 본문 링크를 공개 URL로 보정한다.

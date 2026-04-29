@@ -4,9 +4,9 @@ AI 개인비서를 오래 쓰다 보면 “왜 이건 기억하고, 저건 또 �
 
 ![4장 기억 컨텍스트 프로필 경계 구조](../assets/images/chapter-heroes/ch04-memory-context-profile-boundary-codex.webp)
 
-에르메스 에이전트(Hermes Agent)를 실제 업무 자동화에 붙여보면 기억은 하나의 저장소가 아니다. 지금 대화의 session, 장기 선호를 담는 memory, 역할과 권한을 나누는 profile/AGENTS.md, 팀 공통 기준을 담는 shared-memory, 누적 지식 원장인 Obsidian LLM Wiki, 그리고 OpenViking/RAG 같은 외부 회수층이 함께 움직인다.
+에르메스 에이전트(Hermes Agent)를 실제 업무 자동화에 붙이면 기억은 하나의 저장소가 아니라 여러 층으로 움직인다. 지금 대화의 session, 장기 선호를 담는 memory, 역할과 권한을 나누는 profile/AGENTS.md, 팀 공통 기준을 담는 shared-memory, 누적 지식 원장인 Obsidian LLM Wiki, 그리고 OpenViking/RAG 같은 외부 회수층이 서로 다른 일을 맡는다.
 
-이 장은 AI 에이전트에게 더 많은 내용을 외우게 하는 법이 아니라, 기억을 층으로 나누고 하비 같은 메인 창구가 그 기억층을 어떻게 관리해야 하는지 설명한다. 마지막에는 [하비가 기억 오케스트레이터로 판단하는 기준](https://wikidocs.net/346133)까지 연결한다.
+4장은 “무엇을 더 오래 외울 것인가”보다 “어디에 남겨야 다시 잘 꺼낼 수 있는가”를 다룬다. 이 기준이 잡혀야 5장의 MCP, CLI, cron, gateway 같은 외부 도구도 같은 source of truth를 보고 안정적으로 움직인다.
 
 ## 이 장에서 다루는 문제
 
@@ -39,11 +39,9 @@ AI 팀의 기억 시스템은 “어디에 저장했는가”보다 “언제, �
 
 ## 기억 기준이 흔들리는 장면
 
-하비의 역할을 다시 정리하면서 중요한 문장이 생겼다. 하비는 단순 라우터가 아니라 HaloX/Hermes 지식 구조의 창고 관리자다. 새 정보가 들어오면 사람/운영/프로젝트/절차/과거 회상으로 분류하고, memory/shared-memory/Obsidian/skills/session_search 중 어디에 둘지 결정한다.
+기억 기준은 “저장할까 말까”만으로는 부족하다. 하비는 새 정보가 들어오면 사람 선호, 팀 운영 규칙, 프로젝트 지식, 반복 절차, 과거 회상 중 어디에 가까운지 먼저 나눈다. 그다음 memory, shared-memory, Obsidian, skill, session_search 중 어느 층에 둘지 정한다.
 
-이 관점에서 Obsidian은 콘텐츠 시스템의 하위 도구가 아니다. HALOX Brain은 누적 지식, 운영 원장, LLM Wiki 역할을 맡는 외부 장기 기억층이다. 방울이의 조사 결과, 뽀동이의 글 구조, 비벙이의 제품 신호, 봉구의 운영 정렬은 모두 필요하면 Obsidian과 shared-memory를 통해 다시 회수될 수 있어야 한다.
-
-OpenViking 도입도 같은 흐름이다. 기억을 더 길게 프롬프트에 붙이는 방식이 아니라, 외부 메모리/RAG 레이어를 통해 필요한 지식을 다시 찾고 적중률을 검증하는 방향이다. 그래서 이 장은 단순 memory 설명이 아니라 AI 팀의 지식층 설계에 가깝다.
+이 관점에서 Obsidian은 콘텐츠 시스템의 하위 도구가 아니다. HALOX Brain은 누적 지식과 운영 원장을 맡는 외부 장기 기억층이고, OpenViking/RAG는 그 지식을 필요할 때 다시 찾는 회수층이다. 4장은 memory 기능 소개가 아니라 AI 팀의 지식층을 설계하는 장에 가깝다.
 
 ## 기억 장을 따로 둔 이유
 

@@ -1,10 +1,10 @@
 ## 5장. 외부 도구/MCP/채널 연동과 AI 워크플로우 자동화
 
-Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 도구와 연결되어 실제 업무를 움직일 때다. Google Workspace, Notion, GitHub, WikiDocs, MCP, CLI, API, cron, gateway, Daily Briefing Bot은 모두 “기능 목록”이 아니라 AI 워크플로우 자동화와 업무 흐름을 이어주는 연결 장치다. MCP는 Model Context Protocol 기반의 도구 연결면이고, 반복 절차를 재사용하는 Skill은 별도 6장에서 다룬다.
+Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 도구와 연결되어 실제 업무를 움직일 때다. Google Workspace, Notion, GitHub, WikiDocs, MCP, CLI, API, cron, gateway, Daily Briefing Bot은 모두 기능 목록이 아니라 AI 워크플로우 자동화와 업무 흐름을 이어주는 연결 장치다. MCP는 Model Context Protocol 기반의 도구 연결면이고, 반복 절차를 재사용하는 Skill은 6장에서 따로 다룬다.
 
 ![5장 외부 도구 MCP 자동화 운영 구조](../assets/images/chapter-heroes/ch05-tools-mcp-automation-ops-codex.webp)
 
-하지만 외부 도구는 붙였다고 끝나지 않는다. 계정이 맞는지, 권한 범위가 맞는지, gateway가 살아 있는지, cron prompt가 혼자 실행될 만큼 충분한지, 결과가 어디로 전달되는지까지 봐야 한다. 특히 GitHub CLI, MCP server, API 직접 호출은 같은 외부 연결처럼 보여도 인증, 로그, 검증 방식이 다르다. 5장은 MCP AI agent protocol을 업무 도구에 붙일 때 어디까지 자동화하고 어디서 사람이 승인해야 하는지 다룬다.
+하지만 외부 도구는 붙였다고 끝나지 않는다. 계정, 권한 범위, 실행 위치, gateway 상태, cron prompt, 결과 전달 위치를 함께 봐야 한다. 특히 GitHub CLI, MCP server, API 직접 호출은 모두 외부 연결이지만 인증, 로그, 검증 방식이 다르다. 5장은 도구를 많이 붙이는 법보다 **어떤 업무 흐름에 어떤 연결 방식을 붙일지**를 정하는 장이다.
 
 ## 이 장에서 다루는 문제
 
@@ -19,11 +19,11 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 | 내장 도구/toolset | 도구가 많을수록 좋다 | 역할별로 필요한 도구 범위와 위험도를 제한한다 |
 | terminal backend | 명령만 맞으면 된다 | local/docker/ssh/modal 같은 실행 위치와 격리 수준을 고른다 |
 | 실행 결과 검증 | exit code 0이면 끝이다 | diff, 공개 반영, delivery, rollback 경로까지 확인한다 |
-| 실행 방식 | 에이전트를 나누면 알아서 운영된다 | 직접 처리/profile/delegation/subagent/cron을 구분한다 |
+| 실행 방식 | 에이전트만 나누면 운영도 자동으로 정리된다 | 직접 처리/profile/delegation/subagent/cron을 구분한다 |
 
-## 공식 docs 기능별 mini 정의
+## 공식 문서 기능을 운영 기준으로 읽기
 
-공식 Hermes Agent 문서를 5장에서 그대로 옮기지는 않는다. 대신 독자가 기능명을 검색했을 때 바로 이해할 수 있도록 “공식 기능의 뜻”과 “실제 운영에서 봐야 할 기준”을 나눠서 읽게 한다.
+공식 Hermes Agent 문서를 5장에서 그대로 옮기지는 않는다. 대신 기능 이름을 처음 보는 독자가 이해할 수 있도록 “무엇을 하는 기능인가”와 “실제 운영에서 무엇을 확인해야 하는가”를 나눠서 본다.
 
 | 기능 | 공식 기준으로 보는 뜻 | 실제 운영에서의 질문 |
 |---|---|---|
@@ -41,9 +41,9 @@ Hermes Agent가 강해지는 순간은 답변을 잘할 때가 아니라 외부 
 
 ## 도구 선택 기준이 드러나는 순간
 
-WikiDocs 작업에서도 외부 도구 판단 기준이 계속 등장했다. GitHub가 source of truth였고, WikiDocs는 공개 배포 채널이었다. 그래서 원고를 고친 뒤에는 “파일이 바뀌었는가”만 보지 않고, 공개 화면에서 본문 링크와 이미지가 제대로 작동하는지까지 확인해야 했다. 실제로 본문 링크가 `.md`로 남아 WikiDocs에서 raw 파일 경로처럼 보일 위험이 생겼고, WikiDocs page ID를 확인해 공개 URL로 바꾸는 작업이 필요했다.
+WikiDocs 작업에서도 외부 도구 판단 기준이 계속 등장했다. GitHub가 source of truth였고, WikiDocs는 공개 배포 채널이었다. 그래서 원고를 고친 뒤에는 “파일이 바뀌었는가”만 보지 않고, 공개 화면에서 본문 링크와 이미지가 제대로 작동하는지까지 확인해야 했다.
 
-또 다른 장면은 콘텐츠 자동화다. 방울이의 크론 조사는 매일 신호를 찾고, 좋은 신호만 shared-memory와 Obsidian으로 이어진다. 사용자가 “넘겨”라고 판단하면 뽀동이가 본문 구조를 만들고, 하비가 최종 통합하며, 필요하면 하망이가 이미지를 만든다. 여기서 cron은 신호를 찾는 장치이고, shared-memory는 handoff 위치이며, WikiDocs는 공유 자산이 된다. 이것은 단일 기능이 아니라 [역할형 에이전트](https://wikidocs.net/345925)와 도구가 연결된 운영 흐름이다.
+콘텐츠 자동화도 마찬가지다. 방울이의 크론 조사는 신호를 찾고, 좋은 신호만 shared-memory와 Obsidian으로 이어진다. 사용자가 “넘겨”라고 판단하면 뽀동이가 본문 구조를 만들고, 하비가 최종 통합하며, 필요하면 하망이가 이미지를 만든다. 여기서 cron은 신호를 찾는 장치이고, shared-memory는 handoff 위치이며, WikiDocs는 공유 자산이다. 단일 기능이 아니라 [역할형 에이전트](https://wikidocs.net/345925)와 도구가 연결된 운영 흐름으로 봐야 한다.
 
 ## 웹 검색/리서치 도구는 어떻게 고를까
 
@@ -100,7 +100,7 @@ WikiDocs 작업에서도 외부 도구 판단 기준이 계속 등장했다. Git
 
 5장을 읽을 때 핵심은 “무슨 도구를 붙였나”가 아니다. 같은 작업도 CLI로 즉시 실행할지, MCP tool로 대화 흐름에 붙일지, API로 정기 조회할지, cron으로 자동화할지, 반복 절차를 [Skill](https://wikidocs.net/346235)로 남길지에 따라 필요한 맥락과 검증이 달라진다. 도구가 실패하면 [복구 플레이북](https://wikidocs.net/345918)으로, 반복 절차가 안정되면 6장의 Skill 운영으로 이어진다.
 
-이 기준은 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)과 이어진다. 도구 자동화가 실패할 때도 많은 원인은 모델이 아니라 profile, 권한, 경로, source of truth 경계에 있다.
+이 기준은 4장의 [AI 에이전트 기억 시스템](https://wikidocs.net/345902)과 이어진다. 도구 자동화가 실패할 때도 많은 원인은 모델이 아니라 profile, 권한, 경로, source of truth 경계에 있다.
 
 ## 다음 장으로 가기 전 체크 질문
 
