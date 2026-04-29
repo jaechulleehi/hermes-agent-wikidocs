@@ -156,6 +156,7 @@
 - 방울이/뽀동이 콘텐츠 handoff → `31-bangwooli-ppodongi-content-handoff.md`
 - GitHub/WikiDocs 발행 흐름 → `32-github-wikidocs-content-publishing-workflow.md`
 - SEO/GEO 치트시트 자산화 → `34-hermes-seo-geo-cheatsheet-content-asset-case.md`
+- 반복 문서 제작 자동화 → `36-repeat-document-production-agent-workflow.md`
 
 ## 2.7 7장: 운영 FAQ/실패 패턴/멀티봇 규칙
 
