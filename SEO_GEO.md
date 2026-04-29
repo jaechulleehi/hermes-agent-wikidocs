@@ -29,6 +29,7 @@
 - 헤르메스 에이전트 사용법
 - 헤르메스 에이전트 스킬
 - 헤르메스 에이전트 깃허브
+- 헤르메스 에이전트 github
 - 헤르메스 에이전트 윈도우
 - Hermes Agent
 - Hermes Agent 공식 GitHub
@@ -63,6 +64,8 @@
 - Hermes Agent Docker
 - Hermes Agent Windows
 - Hermes Agent web ui
+- Hermes Agent Open WebUI
+- Hermes Agent UI
 - Hermes Agent gateway
 - Hermes Agent security
 - Hermes Agent 보안

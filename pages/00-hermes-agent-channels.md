@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent)는 어떤 채널에서 쓸 수 있을까
 
-에르메스 에이전트(Hermes Agent)는 하나의 앱 화면에서만 쓰는 도구가 아니다. `Hermes Agent Slack`, `Hermes Agent Telegram`, `Hermes Agent Discord`, `Hermes Agent gateway`를 찾는 독자라면 먼저 Hermes Agent를 CLI, Slack/슬랙, Telegram/텔레그램, Discord/디스코드, Email/이메일, Webhook/웹훅 같은 여러 채널에서 호출되는 AI 개인비서 운영 환경으로 이해하는 편이 좋다.
+에르메스 에이전트(Hermes Agent)는 하나의 앱 화면에서만 쓰는 도구가 아니다. `Hermes Agent Slack`, `Hermes Agent Telegram`, `Hermes Agent Discord`, `Hermes Agent gateway`, `Hermes Agent web ui`를 찾는 독자라면 먼저 Hermes Agent를 CLI, Slack/슬랙, Telegram/텔레그램, Discord/디스코드, Email/이메일, Webhook/웹훅, 웹 UI 같은 여러 채널에서 호출되는 AI 개인비서 운영 환경으로 이해하는 편이 좋다.
 
 ![Hermes Agent 채널 연결 흐름](../assets/images/chapter-heroes/ch00-9-hermes-agent-channels-codex.webp)
 
@@ -28,7 +28,7 @@
 | Discord | 커뮤니티/팀 서버, 봇형 운영 | channel 권한, thread, 멘션 규칙을 정해야 한다 |
 | Email | 비동기 보고, briefing, 외부 커뮤니케이션 | 읽기/발송/삭제 권한을 분리해야 한다 |
 | Webhook | 외부 이벤트 기반 자동화 | 이벤트 payload와 승인 기준을 함께 설계해야 한다 |
-| Open WebUI | 웹 UI 기반 접근 | UI 편의성과 실제 도구 권한을 구분해야 한다 |
+| Open WebUI | `Hermes Agent web ui`처럼 웹 화면 기반 접근을 찾을 때 | UI 편의성과 실제 도구 권한을 구분해야 한다 |
 | Matrix/WhatsApp/Signal 등 | 확장 메시징 채널 | 조직에서 이미 쓰는 메신저와 권한 정책을 우선 본다 |
 
 핵심은 채널 수가 많다는 사실이 아니다. 어떤 채널을 쓰든 요청 해석, 도구 실행, 결과 전달, 실패 로그를 하나의 운영 흐름으로 봐야 한다.

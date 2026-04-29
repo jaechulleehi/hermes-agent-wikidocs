@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent) 공식 GitHub와 문서는 어디서 볼까
 
-에르메스 에이전트(Hermes Agent)를 확인할 때 기준점은 두 곳이다. 공식 GitHub는 `NousResearch/hermes-agent`, 공식 문서는 `hermes-agent.nousresearch.com/docs`다. `Hermes Agent docs`, `Hermes Agent 공식 문서`, `Hermes Agent 공식 GitHub`를 찾는다면 블로그 글이나 요약글보다 이 두 곳을 기준으로 잡는 편이 안전하다.
+에르메스 에이전트(Hermes Agent)를 확인할 때 기준점은 두 곳이다. 공식 GitHub는 `NousResearch/hermes-agent`, 공식 문서는 `hermes-agent.nousresearch.com/docs`다. `Hermes Agent docs`, `Hermes Agent 공식 문서`, `Hermes Agent 공식 GitHub`, `헤르메스 에이전트 깃허브`를 찾는다면 블로그 글이나 요약글보다 이 두 곳을 기준으로 잡는 편이 안전하다.
 
 ![공식 GitHub와 Docs를 먼저 확인하는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-2-official-github-docs-codex.webp)
 
@@ -92,4 +92,4 @@
 
 ### 공식 GitHub와 문서 중 어디를 먼저 봐야 하나요?
 
-처음 사용자는 docs의 Installation, Quickstart, Learning Path를 먼저 보는 편이 좋다. GitHub는 README, source, release/change, issue 흐름을 확인할 때 더 유용하다.
+처음 사용자는 docs의 Installation, Quickstart, Learning Path를 먼저 보는 편이 좋다. GitHub는 README, source, release/change, issue 흐름을 확인할 때 더 유용하다. `헤르메스 에이전트 깃허브`로 검색했다면 비공식 요약보다 `NousResearch/hermes-agent` 저장소를 먼저 확인하는 것이 안전하다.
