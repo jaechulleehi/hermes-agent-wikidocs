@@ -16,7 +16,7 @@ Daily Briefing Bot은 단순한 뉴스 요약 예제가 아니다. Hermes Agent�
 | summarization | 읽을 수 있게 압축 | 보고서/브리프/콘텐츠 초안 |
 | delivery | 결과 전달 | Slack thread, home channel, local output |
 
-## 실제 운영 장면: 크론 조사에서 콘텐츠 제작으로
+## 크론 조사가 콘텐츠 제작으로 이어지는 순간
 
 방울이의 정기 조사는 매일 같은 질문을 반복하지 않는다. watchlist와 기존 인덱스를 보고, 전일 기준 새로 생긴 변화 중 의미 있는 신호만 고른다. 제품 신호와 콘텐츠 신호도 분리한다. 이 분리는 단순한 보고 양식이 아니라 후속 실행을 바꾸는 기준이다.
 
@@ -41,7 +41,7 @@ Daily Briefing Bot류 작업에서 “웹에서 찾아줘”만 쓰면 검색 �
 
 ## fresh session이 핵심이다
 
-cron job은 사람이 옆에서 설명해 주지 않는다. 그래서 prompt는 self-contained해야 한다. 어떤 자료를 먼저 볼지, 어떤 기준으로 신호를 고를지, 결과를 어디로 보낼지, 공개하면 안 되는 내부값을 어떻게 다룰지까지 포함해야 한다.
+cron job은 사람이 옆에서 설명해 주지 않는다. 그래서 prompt는 self-contained해야 한다. 어떤 자료를 먼저 볼지, 어떤 기준으로 신호를 고를지, 결과를 어디로 보낼지, 공유하면 안 되는 세부값을 어떻게 다룰지까지 포함해야 한다.
 
 나쁜 cron prompt는 “오늘도 정리해줘”처럼 짧다. 좋은 cron prompt는 목적, 입력 출처, 제외 기준, 출력 형식, delivery target, 실패 시 보고 기준을 갖는다.
 

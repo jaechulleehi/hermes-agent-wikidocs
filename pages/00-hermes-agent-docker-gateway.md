@@ -55,7 +55,7 @@ Gateway는 Hermes Agent가 메시징 플랫폼에서 요청을 받을 수 있게
 - 메시징 플랫폼에서 받을 요청의 범위를 정했는가?
 - cron이 보낼 결과의 delivery target을 정했는가?
 - 로그와 복구 순서를 문서로 남겼는가?
-- API key, token, webhook 같은 민감정보를 공개 문서에 남기지 않는가?
+- API key, token, webhook 같은 보호해야 할 정보를 공유 문서에 남기지 않는가?
 
 ## 작은 운영 예시
 

@@ -98,7 +98,7 @@ Hermes Agent는 terminal backend를 local, Docker, SSH 등으로 구성할 수 �
 
 ### `.env`와 `config.yaml`은 어떻게 나누나요?
 
-노출되면 안 되는 secret/token은 `.env`, 일반 설정은 `config.yaml`로 나누는 것이 기본이다. 공개 문서나 WikiDocs에는 실제 token 값을 절대 남기지 않는다.
+노출되면 안 되는 secret/token은 `.env`, 일반 설정은 `config.yaml`로 나누는 것이 기본이다. WikiDocs나 팀 문서에는 실제 token 값을 절대 남기지 않는다.
 
 ### provider routing은 꼭 써야 하나요?
 

@@ -19,7 +19,7 @@
 | 09-7 | Hermes Agent checkpoint와 rollback은 복구 흐름에서 어떻게 쓸까 | 실행 전후 되돌릴 기준점을 어떻게 확보할까 |
 | 09-8 | OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까 | 전환 과정에서 memory/profile/runtime/source of truth를 어떻게 잃지 않을까 |
 
-## 9장을 마치면 남아야 할 것
+## 복구 장에서 남길 안전망
 
 | 산출물 | 확인 질문 |
 |---|---|

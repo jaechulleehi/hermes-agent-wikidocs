@@ -16,7 +16,7 @@ Hermes Agent에서 gateway는 대화형 업무와 예약 실행을 연결하는 
 | profile | profile마다 gateway 설정이 다름 | 어떤 profile의 gateway인지 |
 | target | home channel과 thread가 다름 | origin/local/명시 target 구분 |
 
-## 실제 운영 장면: 보고 규칙 수정 후 gateway 재시작
+## 보고 규칙을 고친 뒤 gateway를 다시 봐야 하는 이유
 
 뽀동이의 보고 방식이 장황하다는 피드백이 있었고, 프로필 운영 문서와 memory에 짧은 보고 규칙을 반영했다. 여기서 작업은 파일 수정으로 끝나지 않았다. 새 규칙이 실제 Slack 응답에 안정적으로 반영되려면 gateway 재시작과 상태 확인이 필요했다.
 

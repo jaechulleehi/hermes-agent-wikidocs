@@ -42,7 +42,7 @@ OpenClaw migration notes에는 자동으로 옮기기 어려운 항목들이 arc
 2. 과거 설정은 archive로 보관하고 manual review 대상으로 분리한다.
 3. profile/memory/skill/cron/gateway를 같은 범주로 취급하지 않는다.
 4. 자동 실행되는 항목은 process와 delivery까지 확인한다.
-5. 공유 문서에는 내부값이 아니라 전환 판단 기준만 남긴다.
+5. 공유 문서에는 불필요한 세부값이 아니라 전환 판단 기준만 남긴다.
 6. 전환 후에는 [복구 플레이북](https://wikidocs.net/345918)을 만들어 되돌아올 순서를 남긴다.
 
 ## FAQ
