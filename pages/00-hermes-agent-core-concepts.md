@@ -1,6 +1,6 @@
 ## 에르메스 에이전트(Hermes Agent)란 무엇인가
 
-에르메스 에이전트(Hermes Agent)는 단순히 질문에 답하는 AI 챗봇이 아니라, 메모리, 프로필, 스킬, cron, MCP, gateway 같은 기능을 묶어 실제 업무 흐름을 운영하게 돕는 오픈소스 AI 에이전트이자 AI 에이전트 프레임워크다. 공식 문서의 표현을 빌리면 경험에서 스킬을 만들고 세션을 넘어 기억하는 `self-improving AI agent`, 즉 `AI agent with memory`에 가깝다. 이 책에서는 에르메스 에이전트(Hermes Agent)를 설치 기능보다 **AI 개인비서와 역할형 에이전트로 업무 자동화를 굴리는 운영 시스템**으로 설명한다.
+에르메스 에이전트(Hermes Agent)는 단순히 질문에 답하는 AI 챗봇이 아니라, 메모리 계층, 프로필, 스킬, cron, MCP, gateway 같은 기능을 묶어 실제 업무 흐름을 운영하게 돕는 오픈소스 AI 에이전트이자 AI 에이전트 프레임워크다. 공식 문서의 표현을 빌리면 경험에서 스킬을 만들고 세션을 넘어 기억하는 `self-improving AI agent`, 즉 `AI agent with memory`에 가깝다. 이 책에서는 에르메스 에이전트(Hermes Agent)를 설치 기능보다 **기억할 것, 반복할 것, 도구로 실행할 것을 나눠 AI 개인비서와 역할형 에이전트로 업무 자동화를 굴리는 운영 시스템**으로 설명한다.
 
 ![에르메스 에이전트 핵심 개념 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-1-hermes-core-concepts-codex.webp)
 
@@ -28,7 +28,8 @@
 | 정리형 에이전트 | 자료를 독자에게 읽히는 구조와 문장으로 바꾸는 역할 | [정리형 에이전트는 어디서 강하고 어디서 흔들릴까](https://wikidocs.net/345896) |
 | 실행형 에이전트 | 파일 수정, 명령 실행, 검증처럼 상태를 바꾸는 역할 | [역할형 에이전트는 어떤 기준으로 나눌까](https://wikidocs.net/345925) |
 | memory | 오래 유지해야 할 사용자 선호와 기준 | [AI 에이전트 기억 시스템](https://wikidocs.net/345902) |
-| profile | 역할과 상태를 분리하는 실행 단위 | [같은 AI 개인비서인데 기억은 왜 다르게 느껴질까](https://wikidocs.net/346126) |
+| session search | 과거 대화와 작업 결과를 다시 찾는 회상 장치 | [AI 에이전트 기억 시스템](https://wikidocs.net/345902) |
+| profile/shared-memory | 개인 역할과 팀 공통 기준을 분리하는 기억 계층 | [같은 AI 개인비서인데 기억은 왜 다르게 느껴질까](https://wikidocs.net/346126) |
 | skill | 반복 절차를 재사용 가능한 작업 기준으로 남기는 기능 | [Hermes Agent 스킬은 언제 만들고 어떻게 관리할까](https://wikidocs.net/345904) |
 | cron | 정해진 시간에 작업을 시작하는 자동화 방식 | [Daily Briefing Bot은 어떤 업무 자동화 패턴일까](https://wikidocs.net/345926) |
 | MCP | 외부 도구와 업무 시스템을 연결하는 방식 | [외부 도구/MCP/자동화 운영](https://wikidocs.net/345907) |
@@ -43,8 +44,9 @@ Hermes Agent를 처음 보면 기능 이름이 먼저 눈에 들어온다. memor
 이 기능들은 따로 떨어진 목록이 아니라 하나의 운영 흐름 안에서 연결된다.
 
 - memory는 오래 유지해야 할 선호와 기준을 남긴다.
-- profile은 역할과 실행 상태의 경계를 나눈다.
-- skill은 반복 절차를 재사용 가능한 방식으로 남긴다.
+- session search는 예전에 했던 작업과 결정을 다시 찾게 해준다.
+- profile과 shared-memory는 개인 역할과 팀 공통 기준을 분리한다.
+- skill은 반복 절차를 재사용 가능한 방식으로 남기고, 필요하면 작업 중 배운 내용을 반영해 보강한다.
 - cron은 정해진 시간에 작업을 시작한다.
 - MCP는 외부 도구와 업무 시스템을 연결한다.
 - gateway는 외부 요청을 받을 입구가 된다.
@@ -73,10 +75,11 @@ Hermes Agent를 처음 보면 기능 이름이 먼저 눈에 들어온다. memor
 
 1. 사용자의 기본 요청 창구는 누구인가?
 2. 조사/정리/실행 중 어떤 역할이 자주 섞이는가?
-3. 반복되는 절차는 skill로 남길 만큼 안정됐는가?
-4. 정기적으로 시작해야 할 일은 cron으로 분리할 수 있는가?
-5. 외부 도구 연결은 MCP나 gateway가 필요한 업무 흐름인가?
-6. 결과는 session, memory, shared-memory, GitHub, WikiDocs 중 어디에 남아야 하는가?
+3. 이번에 기억해야 할 기준과 이번 세션에서만 끝낼 정보가 구분되는가?
+4. 반복되는 절차는 skill로 남길 만큼 안정됐는가?
+5. 정기적으로 시작해야 할 일은 cron으로 분리할 수 있는가?
+6. 외부 도구 연결은 MCP나 gateway가 필요한 업무 흐름인가?
+7. 결과는 session, memory, shared-memory, GitHub, WikiDocs 중 어디에 남아야 하는가?
 
 이 질문에 답하면 Hermes Agent가 기능 묶음이 아니라 업무 자동화 구조로 보이기 시작한다.
 

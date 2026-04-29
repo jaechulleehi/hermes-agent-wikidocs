@@ -4,7 +4,7 @@
 
 ![Hermes Agent 기초 가이드 흐름](../assets/images/chapter-heroes/ch00-hermes-foundation-guide-tool-badges-codex.webp)
 
-이 책은 공식 문서를 대체하지 않는다. 공식 GitHub와 docs에서 설치/명령/설정 기준을 확인하고, 이 책에서는 AI 개인비서와 역할형 에이전트 운영 관점으로 다시 해석한다. 처음 독자는 0장을 따라가며 정의, 공식 자료, 설치, 첫 대화, provider/model/config, 비교, Docker/Gateway, 채널, 업데이트 검증 순서로 보면 된다.
+이 책은 공식 문서를 대체하지 않는다. 공식 GitHub와 docs에서 설치/명령/설정 기준을 확인하고, 이 책에서는 AI 개인비서와 역할형 에이전트 운영 관점으로 다시 해석한다. 특히 0장에서는 Hermes Agent의 특징을 기능 목록이 아니라 목적별 운영 장치로 본다. 기억할 정보는 memory와 shared-memory에 남기고, 반복되는 절차는 Skill로 만들고, 과거 작업은 session search로 다시 찾고, 정기 작업은 cron으로 시작하고, 외부 업무 시스템은 MCP/gateway로 연결하는 흐름이다.
 
 ## 0장을 읽는 순서
 
@@ -21,6 +21,21 @@
 | 00-09 | 어떤 채널에서 쓸 수 있을까 | CLI/Slack/Telegram/Discord/Webhook 중 어디서 부를까 |
 | 00-10 | 업데이트 전후 무엇을 점검할까 | 운영 중인 gateway/cron/skill을 깨지 않으려면 무엇을 볼까 |
 | 00-11 | 맥미니 상시 운영은 무엇을 세팅할까 | 전용 Mac mini에서 tmux/launchd/절전/gateway를 어떻게 나눠 볼까 |
+
+## Hermes Agent를 목적별로 보면 무엇이 다른가
+
+Hermes Agent의 특징은 기능이 많다는 데서 끝나지 않는다. 중요한 차이는 사용자가 매번 처음부터 설명하지 않아도 되도록 기억, 절차, 도구, 채널을 나눠 운영할 수 있다는 점이다.
+
+| 목적 | Hermes Agent에서 보는 장치 | 실제 활용 예 |
+|---|---|---|
+| 오래 남겨야 할 기준을 기억하기 | memory/profile/shared-memory | 사용자 선호, 팀 규칙, 프로젝트 공통 기준을 다음 대화에서도 유지한다 |
+| 과거 작업을 다시 찾기 | session search/context compaction | 지난 작업의 결정과 결과를 새 요청에서 이어받는다 |
+| 반복 절차를 재사용하기 | Skill | 검증 순서, 발행 절차, 리뷰 기준을 스스로 만들고 보강한다 |
+| 정기적으로 일을 시작하기 | cron | 매일 조사, 주간 요약, 사용량 점검처럼 반복 시작점을 만든다 |
+| 외부 업무 시스템과 연결하기 | MCP/tool/gateway | GitHub, Slack, WikiDocs, Google Workspace 같은 실제 업무 도구를 붙인다 |
+| 여러 역할로 나눠 처리하기 | delegation/profile/역할형 에이전트 | 조사/정리/실행/이미지 제작을 분리하고 최종 결과만 통합한다 |
+
+따라서 0장에서 먼저 잡아야 할 질문은 “어떤 기능을 켤까”가 아니라 “내 업무에서 무엇을 기억하고, 무엇을 반복하고, 무엇을 도구와 연결할까”다. 이 관점이 있어야 이후 장의 AI 개인비서, 역할형 에이전트, memory, Skill, MCP, cron이 하나의 업무 흐름으로 이어진다.
 
 ## 공식 docs 기준으로 먼저 알아야 할 것
 
