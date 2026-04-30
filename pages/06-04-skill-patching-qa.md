@@ -32,7 +32,7 @@ Skill 보강은 “기억을 더 넣는 일”이 아니다. 실패가 발생했
 
 사용자가 “보고가 너무 장황하다”고 말했을 때도 단순히 그 답변만 짧게 고치면 같은 문제가 반복된다. 이 경우에는 사용자 선호는 memory에 남기고, 문서 작업 완료 보고나 Slack 보고의 형식은 Skill과 판단 기준에 반영해야 한다. 예를 들어 `완료 / 남음 / 다음`처럼 짧은 상태 보고를 선호한다는 사실은 장기 선호이고, [WikiDocs 작업](https://wikidocs.net/345994) 후 어떤 검증 항목과 commit hash를 보고할지는 작업 Skill의 일부다.
 
-이처럼 Skill 보강은 한 파일만 고치는 일이 아니다. memory, shared-memory, Skill, session_search가 각자 맡을 자리를 나눠야 다음 작업에서 같은 피드백을 반복하지 않는다.
+이처럼 Skill 보강은 한 파일만 고치는 일이 아니다. memory, shared-memory, Skill, session_search가 각자 맡을 자리를 나눠야 다음 작업에서 같은 피드백을 반복하지 않는다. 정기 크론이 모델 응답 단계에서 막힌 사례처럼, 실패 원인이 attached Skill의 범위와 표현에 있다면 [크론 오류를 Skill/메모리 개선으로 바꾸는 운영 케이스](50-cron-error-skill-memory-improvement-case.md)처럼 Skill 구성과 toolset까지 함께 줄여야 한다.
 
 ## Skill QA 체크리스트
 

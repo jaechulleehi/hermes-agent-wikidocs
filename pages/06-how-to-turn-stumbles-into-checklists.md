@@ -58,6 +58,7 @@ WikiDocs 작업에서 본문 링크가 안 먹던 문제는 좋은 체크리스�
 - “확인한다”보다 “무엇이 0개인지 확인한다”가 낫다.
 - 반복 작업은 [skill](https://wikidocs.net/345904) 후보로 본다.
 - 예약 실행 문제는 [cron/gateway](https://wikidocs.net/345926) 체크리스트로 분리한다.
+- 크론이 실행됐지만 실패 메시지를 보낸 경우는 [크론 오류를 Skill/메모리 개선으로 바꾸는 운영 케이스](50-cron-error-skill-memory-improvement-case.md)처럼 schedule/tool/model/delivery 레이어를 나눠 본다.
 - 장애 복구 순서가 필요한 문제는 [복구 플레이북](https://wikidocs.net/345918)으로 승격한다.
 
 ## FAQ
