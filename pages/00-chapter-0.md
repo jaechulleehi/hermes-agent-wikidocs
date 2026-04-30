@@ -2,6 +2,9 @@
 
 에르메스 에이전트(Hermes Agent)를 시작할 때 설치 명령보다 먼저 정해야 할 것은 **내 업무에 어떤 순서로 붙일지**다. CLI, provider, memory, Skill, cron, MCP, gateway는 모두 강력하지만 한꺼번에 켜면 문제 원인을 찾기 어렵다.
 
+
+무엇보다 Hermes Agent를 오래 쓰면서 가장 크게 체감되는 차이는 **기억 구조와 자기 개선 루프**다. 단순히 답변을 잘하는 에이전트가 아니라, 어떤 정보는 memory에 남기고, 어떤 맥락은 session search로 다시 찾고, 반복 절차는 Skill로 만들고, 사용 중 어긋난 Skill은 다시 고치는 흐름이 생긴다. 이 구조가 있어야 에이전트가 매번 처음 만나는 도구가 아니라, 함께 일할수록 작업 기준이 쌓이는 AI 팀이 된다.
+
 0장은 기능 소개 장이 아니다. Hermes Agent를 실제 AI 개인비서와 업무 자동화 환경으로 쓰기 전에, 무엇을 먼저 확인하고 어디까지 확장할지 잡는 입문 지도다. 처음에는 [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055)를 먼저 읽고, 설치보다 운영 그림을 먼저 잡는다.
 
 ![Hermes Agent 기초 가이드 흐름](../assets/images/chapter-heroes/ch00-hermes-foundation-guide-tool-badges-codex.webp)
