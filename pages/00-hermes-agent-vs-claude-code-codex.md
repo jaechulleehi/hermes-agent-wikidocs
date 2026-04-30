@@ -8,11 +8,20 @@
 
 ## 한눈에 보는 비교
 
-| 도구 | 주 용도 | 강점 | Hermes Agent와의 관계 |
-|---|---|---|---|
-| Claude Code | 코드 작성/리팩터링/PR 작업 | Anthropic Claude 기반의 코딩 CLI, 긴 코드 작업과 리뷰 | Hermes가 필요할 때 외부 코딩 에이전트로 위임할 수 있다 |
-| Codex | 코드 수정/자동 구현/리뷰 | OpenAI 계열 코딩 에이전트, git repo 기반 작업 | Hermes의 autonomous-ai-agents skill 흐름에서 호출 후보가 된다 |
-| Hermes Agent | AI 개인비서/업무 자동화/메모리/스킬/메시징/cron | 여러 도구와 역할을 묶는 운영 시스템 | Claude Code/Codex 같은 코딩 에이전트까지 포함해 작업을 조율한다 |
+| 도구 | 주 용도 | 강점 | 잘 맞는 상황 | Hermes Agent와의 관계 |
+|---|---|---|---|---|
+| Claude Code | 코드 작성/리팩터링/PR 작업 | Anthropic Claude 기반의 코딩 CLI, 긴 코드 작업과 리뷰 | 개발자가 코드베이스 안에서 빠르게 구현/수정할 때 | Hermes가 필요할 때 외부 코딩 에이전트로 위임할 수 있다 |
+| Codex | 코드 수정/자동 구현/리뷰 | OpenAI 계열 코딩 에이전트, git repository 기반 작업 | 테스트, 수정, 리뷰처럼 개발 작업의 경계가 분명할 때 | Hermes의 autonomous-ai-agents Skill 흐름에서 호출 후보가 된다 |
+| OpenClaw | 개인 컴퓨터에서 직접 일하는 AI 집사 경험 | 로컬 작업, 웹 탐색, 파일 처리 같은 체감형 자동화 | 초보자가 AI 에이전트의 “내 컴퓨터에서 일하는 느낌”을 빠르게 얻고 싶을 때 | Hermes와 같은 계열의 도구로 비교하되, Hermes는 장기 운영 구조를 더 강조한다 |
+| Hermes Agent | AI 개인비서/업무 자동화/memory/Skill/messaging/cron | 여러 채널, 도구, 역할을 묶는 운영 시스템 | Slack/메일/조사/문서/이미지/발행을 하나의 업무 흐름으로 묶고 싶을 때 | Claude Code/Codex 같은 코딩 에이전트까지 포함해 작업을 조율한다 |
+
+## 차이를 과장하지 않고 설명하는 법
+
+Hermes Agent를 Claude Code, Codex, OpenClaw와 완전히 다른 종류의 도구로 볼 필요는 없다. 모두 LLM이 도구를 호출해 사용자의 일을 돕는 AI 에이전트 계열에 있다. 차이는 “누가 더 똑똑한가”보다 **어떤 업무 단위를 중심에 두는가**에서 생긴다.
+
+Claude Code와 Codex는 코드베이스 안에서 깊게 파고드는 개발 작업에 강하다. OpenClaw는 개인 컴퓨터에서 AI가 직접 일하는 감각을 빠르게 보여주는 데 강하다. Hermes Agent는 Slack 요청, 메일 정리, 자료조사, 이미지 제작, WikiDocs 발행, 정기 리포트처럼 여러 업무가 이어지는 흐름을 memory, Skill, cron, MCP, gateway로 오래 굴리는 쪽에 초점을 둔다.
+
+따라서 Hermes Agent의 질문은 “이 도구가 다른 도구보다 항상 나은가?”가 아니다. 더 정확한 질문은 “내 업무에서 반복되는 흐름을 어떤 채널에서 받고, 어떤 역할로 나누고, 어떤 기억과 절차로 남길 것인가?”다.
 
 ## Claude Code/Codex를 먼저 쓰면 좋은 경우
 
