@@ -96,6 +96,7 @@
   * [11-18. 블로그와 뉴스레터는 어떻게 하나의 원본에서 재가공할까](pages/48-blog-newsletter-content-repurposing-workflow.md)
   * [11-19. 정기 리서치는 의사결정 회의자료로 어떻게 바꿀까](pages/49-recurring-research-to-decision-meeting-workflow.md)
   * [11-20. 크론 오류를 Skill/메모리 개선으로 바꾸는 운영 케이스](pages/50-cron-error-skill-memory-improvement-case.md)
+  * [11-21. 회의록과 메일은 어떻게 고객사 SDR 파이프라인으로 바꿀까](pages/51-meeting-email-to-sdr-pipeline-workflow.md)
 * [부록 A. Hermes Agent 실전 운영 도구](pages/a0-hermes-agent-appendix-tools.md)
   * [A-1. Hermes Agent 용어집](pages/a1-hermes-agent-glossary.md)
   * [A-2. Hermes Agent 보안 체크리스트](pages/a2-hermes-agent-security-checklist.md)
