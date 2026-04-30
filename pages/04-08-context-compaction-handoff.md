@@ -79,6 +79,101 @@ context compaction은 사용자가 “지금 압축해”라고 말해야만 생
 
 그래서 긴 작업에서는 compaction 이후에도 반드시 현재 원본을 다시 확인해야 한다. 특히 WikiDocs 작업처럼 파일을 직접 고치고 발행하는 일은 압축된 기억보다 git status, TOC, 실제 파일 내용, WikiDocs 동기화 상태가 더 믿을 만하다.
 
+## 압축 기준은 무엇을 조정하나
+
+Hermes Agent의 압축은 “대화가 길어졌으니 아무거나 줄인다”가 아니라 설정값에 따라 작동한다. 운영자가 자주 보는 값은 `enabled`, `threshold`, `target_ratio`, `protect_last_n`, `summary_model`, `summary_provider`다.
+
+| 설정 | 뜻 | 운영 판단 |
+|---|---|---|
+| `enabled` | 자동 context compaction을 켤지 정한다 | 긴 작업이 많으면 켜두는 편이 낫다 |
+| `threshold` | 컨텍스트가 어느 정도 찼을 때 압축을 시작할지 정한다 | 낮을수록 빨리 압축되고, 높을수록 원문을 오래 유지한다 |
+| `target_ratio` | 압축 후 어느 정도 크기로 줄일지 정한다 | 낮을수록 강하게 줄지만 세부 맥락 손실이 커진다 |
+| `protect_last_n` | 최근 몇 개 메시지를 압축에서 보호할지 정한다 | 최근 결정/수정 지시가 중요하면 크게 잡는다 |
+| `summary_model` | 압축 요약을 만들 모델 | 일반 답변 모델과 별개로 호출될 수 있다 |
+| `summary_provider` | 압축 요약 모델을 어느 provider로 호출할지 정한다 | API key가 실제로 있는 provider와 맞아야 한다 |
+
+압축값은 작업 성격에 맞춰 조정해야 한다. 짧은 Q&A 위주라면 빨리 압축해도 큰 문제가 없지만, WikiDocs 발행, 코드 수정, Slack 스레드 운영처럼 결정과 파일 상태가 중요한 작업은 너무 이른 압축이 위험하다.
+
+| 성향 | 예시 값 | 장점 | 위험 |
+|---|---|---|---|
+| 공격적 압축 | `threshold: 0.5`, `target_ratio: 0.2`, `protect_last_n: 20` | 긴 대화를 빨리 가볍게 만든다 | 파일명/결정 이유/예외 조건이 사라질 수 있다 |
+| 안정형 압축 | `threshold: 0.7`, `target_ratio: 0.3`, `protect_last_n: 30` | 최근 맥락과 작업 기준을 더 오래 보존한다 | 토큰 사용량은 조금 더 늘 수 있다 |
+
+실전 운영에서는 안정형 기준이 더 안전하다. 특히 에르메스 에이전트(Hermes Agent)를 AI 개인비서와 역할형 에이전트 팀으로 오래 운영한다면, 속도보다 “이전 결정이 왜 그렇게 내려졌는가”가 더 중요할 때가 많다.
+
+```yaml
+compression:
+  enabled: true
+  threshold: 0.7
+  target_ratio: 0.3
+  protect_last_n: 30
+  summary_model: google/gemini-3-flash-preview
+  summary_provider: openrouter
+```
+
+## 압축에도 API 호출이 필요하다
+
+context compaction은 로컬에서 단순히 문장을 잘라내는 기능이 아니다. 압축 요약을 만들기 위해 별도의 모델 호출이 일어날 수 있다. 그래서 일반 대화가 되는 상태라도 압축만 실패할 수 있다. 이유는 압축 요약에 쓰는 `summary_model`과 `summary_provider`가 실제 API key, OAuth, credential pool과 맞지 않을 수 있기 때문이다.
+
+예를 들어 `summary_model`이 `google/gemini-3-flash-preview`인데 현재 profile에는 Gemini 직접 API key가 없고 OpenRouter API key만 있다면, `summary_provider`를 `openrouter`로 맞추는 편이 안정적이다. 반대로 Gemini 직접 키를 쓰려면 provider와 환경변수가 그 경로에 맞아야 한다.
+
+운영자가 확인할 순서는 이렇다.
+
+1. `config.yaml`에서 `compression.summary_model`을 본다.
+2. 같은 파일에서 `compression.summary_provider`를 본다.
+3. active profile의 `.env`에 해당 provider API key가 있는지 확인한다.
+4. profile `.env`에 없으면 global `.env` 또는 credential pool을 쓰는 구조인지 확인한다.
+5. 압축 실패가 반복되면 summary provider를 실제 키가 있는 provider로 고정한다.
+
+중요한 점은 API key 값을 문서나 Slack에 노출하지 않는 것이다. 문서에는 “어떤 provider에 키가 있는지”만 남기고, 실제 키는 `.env`나 credential store에만 둔다.
+
+## 수동 압축은 어떻게 실행하나
+
+긴 스레드를 계속 이어가야 한다면 사용자가 직접 압축을 요청할 수 있다. CLI에서는 보통 다음처럼 실행한다.
+
+```text
+/compress
+```
+
+특정 주제를 중심으로 남기고 싶다면 focus topic을 붙인다.
+
+```text
+/compress WikiDocs 04-08 context compaction 기준과 Slack slash command 설정을 중심으로 압축해줘
+```
+
+Slack에서는 두 가지 경로가 있다.
+
+```text
+/compress
+```
+
+또는 Hermes gateway가 `/hermes` 단일 명령으로 subcommand를 받도록 구성되어 있다면 다음처럼 쓴다.
+
+```text
+/hermes compress
+```
+
+다만 Slack slash command는 Hermes 내부 명령만 있다고 바로 동작하지 않는다. Slack App Manifest의 `features.slash_commands`에 `/compress`나 `/hermes`가 등록되어 있어야 하고, `commands` scope와 app reinstall도 필요하다. 등록이 없으면 Slack이 Hermes gateway로 요청을 보내기 전에 “없는 명령”으로 막는다.
+
+## 압축 실패 메시지는 어떻게 읽나
+
+압축 중 이런 메시지가 보일 수 있다.
+
+```text
+Compression summary failed: peer closed connection without sending complete message body. Inserted a fallback context marker.
+```
+
+이 메시지는 “대화가 압축됐다”가 아니라 “압축 요약을 만들려고 했지만 실패해서 fallback marker만 넣었다”는 뜻에 가깝다. 정상 압축이면 이전 대화의 핵심 요약이 남지만, fallback marker는 요약 대신 실패 표식만 남긴다. 이 상태에서는 에이전트가 이어서 답할 수 있어도 오래된 세부 맥락이 충분히 보존됐다고 믿으면 안 된다.
+
+복구 순서는 단순하다.
+
+1. 지금 해야 할 일을 짧게 다시 써준다.
+2. 완료된 작업/남은 작업/바꾸면 안 되는 기준을 알려준다.
+3. 파일 작업이면 실제 파일과 git 상태를 다시 확인한다.
+4. API/provider 설정을 확인한다.
+5. 필요하면 `threshold`, `target_ratio`, `protect_last_n`, `summary_provider`를 조정한다.
+
+
 | compaction 이후 확인할 것 | 이유 |
 |---|---|
 | 현재 작업트리 상태 | 압축 요약이 실제 파일 상태와 다를 수 있다 |

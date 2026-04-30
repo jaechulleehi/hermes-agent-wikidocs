@@ -48,6 +48,8 @@ WikiDocs 본문 링크 문제는 처음에는 “링크가 이상하다”로 �
 | 왜 안 돼요? | CLI도 안 되는가, Slack만 안 되는가? | CLI → provider/config → gateway |
 | Slack 봇이 죽었나요? | gateway process는 살아 있고 delivery target은 맞는가? | process → log → token/permission → channel/thread |
 | 비용이 왜 늘었나요? | OAuth/구독/API key/검색 API 중 어느 비용인가? | provider 설정 → usage/quota → cron 반복 주기 |
+| 압축이 왜 실패했나요? | 일반 대화 모델이 아니라 compression summary provider/API가 맞는가? | config → `.env` → provider → `/compress` |
+| `/compress`가 Slack에서 왜 안 먹나요? | Hermes 명령 문제인가, Slack App Manifest 등록 문제인가? | slash_commands → commands scope → app reinstall → gateway |
 | 검색 결과가 이상해요 | 검색 API 결과인가, 원문 검증 결과인가? | DuckDuckGo/SearXNG → browser 원문 → 유료 API 필요성 |
 | 같은 에이전트가 다르게 말해요 | 같은 profile/session/AGENTS/SOUL을 쓰고 있는가? | profile → session → memory → gateway restart |
 | 문서가 반영 안 돼요 | GitHub 원본이 바뀌었고 WikiDocs가 동기화됐는가? | 원본 기준 → sync → public page 부분 확인 |
@@ -71,3 +73,7 @@ WikiDocs 본문 링크 문제는 처음에는 “링크가 이상하다”로 �
 ### 하비가 모든 질문에 답하면 안 되나요?
 
 하비는 메인 창구로 답할 수 있지만, 모든 일을 직접 처리하면 병목이 된다. 근거 수집은 조사형, 문서화는 정리형, 실행 검증은 실행형으로 넘기고 하비는 판단과 통합을 맡는 구조가 안정적이다.
+
+### 압축 실패는 모델 문제인가요, 설정 문제인가요?
+
+둘 다 가능하다. context compaction은 압축 요약을 만들기 위해 별도 모델/API 호출을 할 수 있다. 그래서 일반 대화는 되는데 압축만 실패할 수 있다. 먼저 `summary_model`, `summary_provider`, active profile의 API key 존재 여부를 확인하고, Slack에서 수동 압축을 쓰는 경우에는 `/compress` 또는 `/hermes` slash command가 App Manifest에 등록되어 있는지도 확인한다.

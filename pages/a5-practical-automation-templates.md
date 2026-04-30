@@ -278,6 +278,63 @@
 9. 공개 문서로 바꿀 수 있는 사례는 무엇인가?
 ```
 
+## 9. 긴 스레드 압축 요청 템플릿
+
+```text
+하비야, 이 스레드가 길어졌으니 context compaction 전에 이어받기 좋은 handoff로 정리해줘.
+
+반드시 남길 것:
+1. 현재 목표
+2. 이미 완료한 작업
+3. 아직 남은 작업
+4. 바꾸면 안 되는 결정
+5. 실제 파일/설정/커밋 상태
+6. 압축 후 다시 확인해야 할 원본 기준
+7. API key, token, 고객명처럼 문서에 남기면 안 되는 정보
+
+출력 형식:
+- Active Task:
+- Completed:
+- Key Decisions:
+- Current Config:
+- Remaining Work:
+- Verification:
+- Sensitive Boundary:
+
+주의:
+- 전체 대화 원문을 요약하려고 하지 말고 다음 작업자가 바로 이어받을 기준만 남겨줘.
+- 파일 상태나 설정값은 기억으로 추측하지 말고 실제로 확인한 값만 적어줘.
+```
+
+## 10. 압축 실패 복구 템플릿
+
+```text
+압축 실패 메시지가 나왔어. 이걸 단순 오류 요약이 아니라 복구 체크리스트로 정리해줘.
+
+오류 메시지:
+[Compression summary failed 또는 fallback marker 메시지]
+
+확인할 것:
+1. 압축 요약에 쓰는 summary_model은 무엇인가?
+2. summary_provider는 무엇인가?
+3. 해당 provider를 호출할 API key가 active profile에 있는가?
+4. 일반 대화 모델과 압축 요약 모델이 서로 다른 경로를 쓰고 있지는 않은가?
+5. threshold / target_ratio / protect_last_n 값이 작업 성격에 맞는가?
+6. Slack에서 수동 압축을 쓰려면 slash command가 manifest에 등록되어 있는가?
+
+출력 형식:
+- 증상:
+- 원인 후보:
+- 확인한 설정:
+- API/provider 점검:
+- 권장 수정:
+- 압축 후 재개 handoff:
+
+주의:
+- API key 값은 절대 출력하지 마.
+- “키가 있다/없다”, “어느 provider를 쓰는지”만 말해줘.
+```
+
 ## 이 부록을 쓰는 기준
 
 이 템플릿들은 그대로 외우기 위한 문장이 아니다. 처음에는 복사해서 쓰고, 실제 운영에서 자주 바뀌는 부분은 팀 기준에 맞게 줄이면 된다. 중요한 것은 매번 더 긴 프롬프트를 쓰는 것이 아니라, 반복 업무가 생길 때마다 `기억할 것 / 절차화할 것 / 검증할 것 / 공개할 것`을 나누는 습관이다.
