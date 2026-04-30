@@ -101,3 +101,4 @@
   * [A-2. Hermes Agent 보안 체크리스트](pages/a2-hermes-agent-security-checklist.md)
   * [A-3. 나만의 AI 팀 설계 워크시트](pages/a3-ai-team-design-worksheet.md)
   * [A-4. Hermes Agent 공식 문서 정합성 점검표](pages/a4-official-docs-alignment-checklist.md)
+  * [A-5. 바로 복사해서 쓰는 자동화 템플릿](pages/a5-practical-automation-templates.md)
