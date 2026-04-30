@@ -108,7 +108,7 @@
 2. [11-03. 방울이/뽀동이 handoff](31-bangwooli-ppodongi-content-handoff.md)
 3. [11-04. GitHub/WikiDocs 발행](32-github-wikidocs-content-publishing-workflow.md)
 4. [11-06. SEO/GEO 치트시트 자산화](34-hermes-seo-geo-cheatsheet-content-asset-case.md)
-5. [11-20. 크론 오류를 Skill/메모리 개선으로 바꾸는 운영 케이스](50-cron-error-skill-memory-improvement-case.md)
+5. [11-20. 크론 오류를 Skill/메모리 개선으로 바꾸는 운영 케이스](https://wikidocs.net/346701)
 
 여기서 중요한 것은 Slack 대화를 그대로 복사하지 않는 것이다. Slack은 시작점이고, 공개 문서는 독자가 따라 할 수 있는 절차로 다시 정리해야 한다.
 
