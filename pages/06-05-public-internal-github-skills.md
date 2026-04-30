@@ -6,6 +6,8 @@
 
 공개 GitHub Skill은 일반화된 절차여야 한다. 내부 Skill은 특정 사용자, 팀, 프로젝트, 채널, 계정, 원본 기준에 맞춘 판단 기준을 담을 수 있다. 이 구분은 [memory/profile/session 경계](https://wikidocs.net/346126)와도 이어진다. 두 경계를 섞으면 밖에 나가면 안 되는 정보가 섞이거나, 반대로 내부 운영에 필요한 기준이 너무 추상화되어 쓸모가 약해진다.
 
+[TOC]
+
 ## 공개 Skill과 내부 Skill의 차이
 
 | 구분 | 공개 GitHub Skill | 내부 Skill |

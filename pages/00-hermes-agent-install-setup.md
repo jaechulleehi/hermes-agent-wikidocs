@@ -6,6 +6,8 @@
 
 처음 목표는 모든 기능을 켜는 것이 아니다. `hermes` 명령이 실행되는지, 기본 대화가 되는지, provider/model 설정이 맞는지, 필요한 도구가 제한된 범위에서 동작하는지 순서대로 확인한다. 이 기본선이 잡힌 뒤에 Slack/Telegram/Discord gateway, cron, Skill, MCP 같은 확장 기능을 붙이면 문제 원인을 훨씬 쉽게 좁힐 수 있다.
 
+[TOC]
+
 ## 공식 설치 명령
 
 [공식 설치 문서](https://hermes-agent.nousresearch.com/docs/getting-started/installation)는 아래 명령을 안내한다.

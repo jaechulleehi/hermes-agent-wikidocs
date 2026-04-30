@@ -6,6 +6,8 @@ Hermes Agent 같은 AI 운영 시스템을 오래 쓰면 과거 문서가 자산
 
 그래서 기억 이관은 파일 복사가 아니라 기준 재구성이다. 무엇을 살리고, 무엇을 archive로 두고, 무엇을 현재 Hermes의 memory/shared-memory/Obsidian/profile/skill 구조로 다시 배치할지 판단해야 한다. 이 정리가 끝나야 [OpenViking/RAG](https://wikidocs.net/346131) 같은 회수층도 낡은 기준을 반복하지 않는다.
 
+[TOC]
+
 ## 과거 기억을 그대로 옮기면 왜 위험할까
 
 과거 문서가 위험한 이유는 틀렸기 때문이 아니다. 일부는 여전히 맞고, 일부는 이름만 같고 의미가 달라졌기 때문이다. “memory”라는 이름이 같아도 OpenClaw 시절의 쓰임과 Hermes의 주입 방식은 다를 수 있다.

@@ -4,6 +4,8 @@ AI 팀 운영에서 기억은 “많이 저장하는 것”이 아니다. 어디
 
 이 사례의 핵심은 파일과 노트를 장기 기억으로 남길 때 `memory`, `shared-memory`, `session search`, `Skill`, `Obsidian`, `GitHub 원본`의 역할을 구분하는 것이다.
 
+[TOC]
+
 ## 시작 상황
 
 AI와 일하다 보면 중요한 정보가 여러 곳에 흩어진다.

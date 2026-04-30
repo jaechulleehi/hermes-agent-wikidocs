@@ -6,6 +6,8 @@ Hermes Agent terminal 도구는 가장 강력하지만 가장 조심해야 하�
 
 AI 개인비서가 terminal을 쓰면 파일 검증, 테스트 실행, git 상태 확인, 빌드, 배포 준비가 빨라진다. 반대로 잘못 쓰면 사용자의 로컬 파일, credential, 운영 repo를 직접 건드릴 수 있다. 그래서 terminal 작업은 “명령을 실행할 수 있는가”보다 “어디서 실행해야 안전한가”가 먼저다.
 
+[TOC]
+
 ## terminal backend를 고르는 기준
 
 | backend | 공식 문서 기준 의미 | 좋은 사용처 | 주의점 |

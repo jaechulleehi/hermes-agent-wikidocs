@@ -8,6 +8,8 @@
 
 처음부터 Docker/Gateway를 붙일 필요는 없다. 특히 gateway는 [always-on gateway 확인 기준](https://wikidocs.net/345906)과 [설치 후 기본 검증 순서](https://wikidocs.net/346137)처럼 process, 인증, delivery target, 로그를 함께 봐야 한다. 기본 CLI chat이 안정되고, provider 설정과 tool 권한을 확인한 뒤, 상시 접속이나 메시징 delivery가 필요해질 때 붙이는 편이 안전하다.
 
+[TOC]
+
 ## Docker가 필요한 경우
 
 공식 Docker 문서는 두 가지 사용 방식을 구분한다. 하나는 Hermes Agent 자체를 Docker 안에서 실행하는 방식이고, 다른 하나는 Hermes Agent가 host에서 돌면서 Docker를 terminal backend/sandbox로 쓰는 방식이다.

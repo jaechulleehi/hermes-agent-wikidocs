@@ -4,6 +4,8 @@
 
 처음에는 빈칸을 짧게 채우면 된다. 실제 운영하면서 memory, Skill, toolset, cron, Messaging Gateway, MCP 기준을 조금씩 안정화한다.
 
+[TOC]
+
 ## 1. AI 팀의 목적
 
 ```text

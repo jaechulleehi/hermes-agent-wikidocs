@@ -6,6 +6,8 @@
 
 그래서 운영 FAQ를 만들 때는 질문을 그대로 쌓지 않는다. 질문을 identity/profile/role/tool/runtime/원본 기준/recovery 같은 레이어에 먼저 놓고, 그다음 하비가 직접 답할지, [방울이](https://wikidocs.net/345895)가 근거를 모을지, [뽀동이](https://wikidocs.net/345896)가 문서로 정리할지, 실행형 에이전트가 검증할지 정한다.
 
+[TOC]
+
 ## FAQ가 약해지는 이유
 
 초보자에게 약한 FAQ는 “질문은 많은데 어디부터 봐야 할지 모르는 문서”다. 그래서 Hermes Agent 운영 FAQ는 단순 Q&A보다 첫 분기와 확인 순서를 먼저 보여줘야 한다.

@@ -6,6 +6,8 @@ Hermes Agent 업데이트는 최신 기능을 받는 일인 동시에 운영 중
 
 혼자 CLI로만 쓰는 환경이라면 업데이트가 비교적 단순하다. 하지만 Slack/Telegram/Discord gateway, cron, Skill, MCP, Docker backend, custom provider를 쓰고 있다면 업데이트 전후로 확인할 것이 많아진다. 업데이트는 명령 하나가 아니라 “운영 흐름이 그대로 살아 있는지 검증하는 절차”다.
 
+[TOC]
+
 ## 공식 업데이트 기본 흐름
 
 공식 문서 기준 기본 명령은 아래와 같다.

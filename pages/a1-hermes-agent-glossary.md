@@ -4,6 +4,8 @@
 
 최신 기능명과 설정값은 [Hermes Agent 공식 문서](https://hermes-agent.nousresearch.com/docs/)를 기준으로 확인하고, 이 용어집은 책 전체를 읽는 빠른 지도처럼 사용한다.
 
+[TOC]
+
 ## 먼저 볼 핵심 용어
 
 | 용어 | 한 줄 의미 | 실제로 쓰는 순간 |

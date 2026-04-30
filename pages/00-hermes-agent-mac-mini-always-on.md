@@ -4,6 +4,8 @@
 
 로컬 실습을 넘어 Mac mini/맥미니를 전용 머신처럼 쓰려면 상시 운영 기준이 필요하다. [설치와 세팅 기본 순서](https://wikidocs.net/346137)를 확인한 뒤, gateway가 필요해지는 순간에는 [Docker/Gateway 판단 기준](https://wikidocs.net/346139)과 함께 읽는 편이 좋다.
 
+[TOC]
+
 ## 왜 맥미니가 좋은 선택지가 될까
 
 개인 노트북은 화면을 닫거나 이동하거나 네트워크가 바뀌는 일이 많다. 반면 맥미니는 책상 한쪽에서 계속 켜두기 쉽고, Slack/Telegram/Discord 같은 메시징 gateway나 cron 기반 자동화가 끊기지 않게 운영하기 좋다. 비용과 접근성 면에서도 VPS보다 부담이 낮고, 로컬 파일/Obsidian/GitHub/WikiDocs 작업 환경을 함께 쓰기 쉽다.

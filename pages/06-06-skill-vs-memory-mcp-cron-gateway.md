@@ -6,6 +6,8 @@
 
 Skill은 반복 업무의 실행 절차와 검증 기준이다. [memory](https://wikidocs.net/346126)는 장기 맥락과 선호를 기억한다. MCP는 외부 도구를 대화 흐름에 연결한다. [cron](https://wikidocs.net/345926)은 정해진 시간에 작업을 실행한다. gateway는 Slack, Telegram, Discord 같은 채널에서 Hermes Agent를 부르는 입구다. 도구 연결 기준은 [Hermes Agent MCP 연결](https://wikidocs.net/346231)과 함께 읽으면 차이가 더 선명하다.
 
+[TOC]
+
 ## 한눈에 보는 차이
 
 | 기능 | 핵심 역할 | 대표 질문 |

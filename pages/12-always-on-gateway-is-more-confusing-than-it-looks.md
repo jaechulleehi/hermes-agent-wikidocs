@@ -6,6 +6,8 @@
 
 Hermes Agent에서 gateway는 대화형 업무와 예약 실행을 연결하는 중요한 축이다. 그래서 gateway 문제는 5장 도구 자동화뿐 아니라 [체크리스트/복구 플레이북](https://wikidocs.net/345921)으로도 이어진다. 특히 어느 profile에서 실행되는지 헷갈릴 때는 [session/memory/profile 경계](https://wikidocs.net/346126)를 함께 봐야 한다.
 
+[TOC]
+
 ## 왜 켜져 있는데도 헷갈릴까
 
 | 확인 대상 | 헷갈리는 이유 | 봐야 할 것 |

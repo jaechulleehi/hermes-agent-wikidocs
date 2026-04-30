@@ -6,6 +6,8 @@ Hermes Agent CLI 첫 대화는 설치가 끝났는지 확인하는 절차가 아
 
 CLI는 Hermes Agent의 기본 조종석이다. [공식 CLI 문서](https://hermes-agent.nousresearch.com/docs/user-guide/cli)는 Hermes Agent CLI를 web UI가 아니라 multiline editing, slash-command autocomplete, conversation history, interrupt/redirect, streaming tool output을 갖춘 terminal UI로 설명한다. 그래서 첫 대화에서는 답변 품질보다 실행/중단/세션/명령 흐름을 확인해야 한다.
 
+[TOC]
+
 ## 1단계. 대화가 되는지 확인한다
 
 가장 단순한 확인은 interactive session을 여는 것이다.

@@ -6,6 +6,8 @@ Obsidian LLM Wiki의 가치는 메모를 많이 쌓는 데 있지 않다. [share
 
 따라서 Obsidian은 강의 시스템이나 콘텐츠 제작 도구에만 묶으면 안 된다. HALOX Brain은 누적 지식 베이스, 운영 원장, 연결형 LLM Wiki 역할을 맡는 외부 장기 기억층이다. 이 지식층이 커질수록 [OpenViking/RAG](https://wikidocs.net/346131)처럼 필요한 내용을 회수하는 구조가 중요해진다.
 
+[TOC]
+
 ## Obsidian은 memory보다 크고 shared-memory보다 누적형이다
 
 Hermes Agent의 memory는 항상 주입되는 짧은 장기 기준이다. shared-memory는 공용 작업 원본과 handoff에 가깝다. Obsidian은 시간이 갈수록 쌓이고 연결되는 지식층이다.

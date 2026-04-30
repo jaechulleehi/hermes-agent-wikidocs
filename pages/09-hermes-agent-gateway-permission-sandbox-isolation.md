@@ -6,6 +6,8 @@ Hermes Agent를 CLI로 혼자 쓸 때와 Messaging Gateway로 Slack/Telegram/Dis
 
 [공식 Security 문서](https://hermes-agent.nousresearch.com/docs/user-guide/security)는 gateway user authorization, container isolation, environment variable passthrough, MCP credential handling을 따로 설명한다. 운영에서는 이 네 가지를 따로 보되, 하나의 권한 표로 묶어 관리하는 편이 안전하다.
 
+[TOC]
+
 ## 권한은 세 층으로 나눈다
 
 | 층 | 질문 | 대표 기준 |

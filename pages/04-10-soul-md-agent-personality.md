@@ -6,6 +6,8 @@
 
 공식 Personality/SOUL.md 설명은 실제 운영 관점으로 다시 읽어야 한다. 핵심은 하나다. SOUL.md는 선택 사항이지만, 하비/뽀동이처럼 역할과 개성이 중요한 [역할형 에이전트](https://wikidocs.net/345925)를 운영한다면 반드시 의식적으로 설계해야 한다.
 
+[TOC]
+
 ## 먼저 확인할 것: 기능 설명과 운영 검증은 다르다
 
 SOUL.md 로딩과 성격 변화는 실제 테스트로 확인할 수 있다. 공식 문서 기준으로 SOUL.md는 working directory가 아니라 `HERMES_HOME/SOUL.md`에서 로드되는 전역 personality 파일이다. profile을 나누면 profile별 Hermes home 아래의 SOUL.md가 달라질 수 있지만, 프로젝트 폴더 안의 SOUL.md를 자동으로 찾는 구조는 아니다. 반면 기본 템플릿의 세부 내용, 보안 스캔, `/personality` 지속성처럼 구현에 가까운 부분은 버전별 소스 코드와 현재 설정을 함께 봐야 한다.

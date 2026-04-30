@@ -6,6 +6,8 @@ Hermes Agent의 힘은 답변보다 연결에서 커진다. Google Workspace, No
 
 ![5장 외부 도구 MCP 자동화 운영 구조](../assets/images/chapter-heroes/ch05-tools-mcp-automation-ops-codex.webp)
 
+[TOC]
+
 ## 5장을 읽는 순서
 
 외부 연결은 “MCP부터 붙일까?”로 시작하면 복잡해진다. 먼저 내가 하려는 일이 검색인지, 실행인지, 반복 자동화인지, 메시징 운영인지 구분해야 한다.

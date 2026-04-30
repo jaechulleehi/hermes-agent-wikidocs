@@ -6,6 +6,8 @@ Hermes Agent 복구에서 가장 좋은 상황은 “문제가 생기기 전 상
 
 중요한 점은 checkpoint가 있다고 해서 아무렇게나 실행해도 되는 것은 아니라는 점이다. checkpoint는 실수를 줄이는 장치가 아니라, 실수 후 복구 범위를 좁히는 장치다. 실행 전 승인, 실행 환경 격리, credential 최소화가 먼저이고, rollback은 그다음이다.
 
+[TOC]
+
 ## checkpoint가 필요한 순간
 
 공식 문서 기준 checkpoint는 파일 변경 도구나 destructive terminal command 같은 mutating operation 전에 만들어진다. 운영에서는 아래 상황을 checkpoint 필요 작업으로 본다.
