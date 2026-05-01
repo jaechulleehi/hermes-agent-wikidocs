@@ -75,7 +75,7 @@
   * [09-6. Hermes Agent Messaging Gateway 권한과 실행 격리는 어떻게 나눌까](pages/09-hermes-agent-gateway-permission-sandbox-isolation.md)
   * [09-7. Hermes Agent checkpoint와 rollback은 복구 흐름에서 어떻게 쓸까](pages/09-hermes-agent-checkpoint-rollback-recovery.md)
   * [09-8. OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까](pages/25-why-openclaw-to-hermes-needed-a-migration-checklist.md)
-  * [09-9. Hermes Agent Codex OAuth 토큰 충돌은 어떻게 복구할까](pages/09-09-hermes-agent-codex-oauth-refresh-token-recovery.md)
+  * [09-9. Hermes Agent 에이전트별 Codex auth는 어떻게 설정해야 할까](pages/09-09-hermes-agent-codex-oauth-refresh-token-recovery.md)
 * [10. AI 에이전트 조직 도입과 운영 확장](pages/09-chapter-9.md)
   * [10-1. AI 에이전트 도입은 왜 운영에서 자주 무너질까](pages/27-why-agent-adoption-fails-in-operations.md)
   * [10-2. 비개발자 AI 도입은 왜 혼자 하다 멈출까](pages/52-why-non-developers-stop-ai-adoption-alone.md)

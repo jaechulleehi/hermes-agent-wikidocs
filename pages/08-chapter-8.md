@@ -20,7 +20,7 @@
 | 09-6 | Hermes Agent gateway 권한과 실행 격리는 어떻게 나눌까 | 호출 권한, 실행 권한, credential 권한을 어떻게 분리할까 |
 | 09-7 | Hermes Agent checkpoint와 rollback은 복구 흐름에서 어떻게 쓸까 | 실행 전후 되돌릴 기준점을 어떻게 확보할까 |
 | 09-8 | OpenClaw에서 Hermes로 넘어올 때 무엇을 점검해야 할까 | 전환 과정에서 memory/profile/runtime/원본 기준을 어떻게 잃지 않을까 |
-| 09-9 | Hermes Agent Codex OAuth 토큰 충돌은 어떻게 복구할까 | Slack/gateway 장애처럼 보이는 provider 인증 문제를 어떻게 분리하고 재발을 막을까 |
+| 09-9 | Hermes Agent 에이전트별 Codex auth는 어떻게 설정해야 할까 | Codex CLI와 역할형 에이전트 profile의 credential 경계를 어떻게 나누고 token 충돌을 예방할까 |
 
 ## 복구 장에서 남길 안전망
 
