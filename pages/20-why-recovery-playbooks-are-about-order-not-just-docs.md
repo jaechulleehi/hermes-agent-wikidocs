@@ -26,7 +26,7 @@
 | 6 | 최소 수정 | 한 번에 하나만 바꾼다 |
 | 7 | 검증/기록 | 성공 기준과 남은 일을 남긴다 |
 
-Hermes Agent에는 이 순서를 도와주는 [checkpoint와 `/rollback`](https://wikidocs.net/346262) 기능도 있다. 다만 rollback은 수정 전에 상태를 보존하고 diff를 본 뒤 쓰는 복구 수단이지, 확인 없이 실행해도 된다는 면허가 아니다.
+Hermes Agent에는 이 순서를 도와주는 [checkpoint와 `/rollback`](https://wikidocs.net/346262) 기능도 있다. provider 인증이 문제인데 gateway 장애처럼 보이는 경우에는 [Codex OAuth 토큰 충돌 복구](https://wikidocs.net/347133)처럼 channel, process, provider를 먼저 분리해서 봐야 한다. 다만 rollback은 수정 전에 상태를 보존하고 diff를 본 뒤 쓰는 복구 수단이지, 확인 없이 실행해도 된다는 면허가 아니다.
 
 ## 복구 순서가 필요한 순간
 

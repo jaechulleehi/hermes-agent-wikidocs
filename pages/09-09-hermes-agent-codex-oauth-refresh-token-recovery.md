@@ -1,6 +1,6 @@
 ## Hermes Agent Codex OAuth 토큰 충돌은 어떻게 복구할까
 
-Hermes Agent를 Slack이나 gateway로 운영하다가 갑자기 답변 품질이 달라지거나 다른 provider로 우회되는 일이 생기면, 먼저 “Slack 연결이 끊겼다”고 생각하기 쉽다. 하지만 실제 원인은 messaging gateway가 아니라 메인 모델 provider 인증일 수 있다. 특히 `openai-codex`를 Hermes Agent와 Codex CLI에서 함께 쓰는 운영 환경이라면 Codex OAuth refresh token 충돌을 먼저 확인해야 한다.
+Hermes Agent를 Slack이나 gateway로 운영하다가 갑자기 답변 품질이 달라지거나 다른 provider로 우회되는 일이 생기면, 먼저 “Slack 연결이 끊겼다”고 생각하기 쉽다. 하지만 실제 원인은 messaging gateway가 아니라 메인 모델 provider 인증일 수 있다. 특히 `openai-codex`를 Hermes Agent와 Codex CLI에서 함께 쓰는 운영 환경이라면 Codex OAuth refresh token 충돌을 먼저 확인해야 한다. 이 글은 9장의 [복구 플레이북](https://wikidocs.net/345918)을 provider 인증 문제에 적용한 사례다.
 
 이 문제는 OpenAI 계정 하나를 여러 곳에서 쓰는 것 자체가 문제라는 뜻이 아니다. 문제는 여러 실행 주체가 같은 refresh token을 복사해서 나눠 가졌을 때 생긴다. 각 Hermes profile과 Codex CLI가 서로 다른 device auth credential을 가지고 있으면, 같은 계정이어도 독립 세션으로 운영할 수 있다.
 
