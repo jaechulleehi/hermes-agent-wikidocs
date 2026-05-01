@@ -28,6 +28,7 @@
   * [03-4. 조사형/정리형 에이전트는 왜 다르게 실패할까](pages/19-why-bangwooli-and-ppodongi-fail-differently.md)
   * [03-5. 조사형 에이전트는 왜 자주 결론을 서두를까](pages/16-why-research-agents-rush-to-conclusions.md)
   * [03-6. 정리형 에이전트는 왜 그럴듯하지만 약한 글을 만들까](pages/17-why-writing-agents-produce-polished-but-weak-drafts.md)
+  * [03-7. delegate_task와 실제 에이전트 호출은 어떻게 다를까](pages/03-07-delegate-task-vs-slack-agent-call.md)
 * [04. AI 에이전트 기억 시스템은 어떻게 설계해야 할까](pages/04-chapter-4.md)
   * [04-01. AI 개인비서는 무엇을 기억해야 할까](pages/04-01-what-should-ai-assistant-remember.md)
   * [04-02. session/memory/profile은 어떻게 다를까](pages/04-02-session-memory-profile-boundary.md)
