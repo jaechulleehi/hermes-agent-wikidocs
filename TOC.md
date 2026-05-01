@@ -51,6 +51,7 @@
   * [05-08. Hermes Agent 내장 도구와 toolset은 어떻게 분류할까](pages/05-hermes-agent-built-in-tools-toolsets.md)
   * [05-09. Hermes Agent terminal 도구는 언제 강하고 언제 위험할까](pages/05-hermes-agent-terminal-backend-risk.md)
   * [05-10. Hermes Agent 도구 실행 결과는 어떻게 검증할까](pages/05-hermes-agent-tool-result-verification.md)
+  * [05-11. Hermes Agent Gateway로 Open WebUI 붙이기](pages/05-11-hermes-agent-open-webui-gateway.md)
 * [06. Hermes Agent Skill 운영과 자기 개선형 AI 에이전트](pages/06-skills-chapter.md)
   * [06-1. Hermes Agent Skill은 무엇이고 언제 만들까](pages/10-when-and-how-to-manage-skills-in-hermes.md)
   * [06-2. 반복 업무는 어떻게 Skill이 되는가](pages/06-02-repeat-work-to-skill.md)
