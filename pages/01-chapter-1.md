@@ -27,6 +27,8 @@
 
 그래서 이 책은 [AI를 챗봇 하나로 보지 않고](https://wikidocs.net/345923), **AI 개인비서와 역할형 에이전트가 함께 움직이는 업무 자동화 흐름**으로 본다. AI 팀의 핵심은 에이전트 숫자가 아니라 역할의 경계다.
 
+![챗봇에서 AI 팀 운영 구조로 전환](../assets/images/body-figures/ch01-ai-team-operating-structure-codex-only-v2.png)
+
 ## AI 팀은 많이 붙이는 구조가 아니다
 
 “기존 글을 WikiDocs 책으로 정리해줘”라는 요청 하나에도 여러 일이 섞인다.

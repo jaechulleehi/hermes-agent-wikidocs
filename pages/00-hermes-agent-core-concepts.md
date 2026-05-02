@@ -20,6 +20,10 @@
 
 그래서 이 책은 에르메스 에이전트(Hermes Agent)를 “무엇을 설치하느냐”보다 “어떤 업무 흐름을 안정적으로 굴리느냐”의 관점에서 다룬다.
 
+![Hermes Agent 핵심 운영 루프](../assets/images/body-figures/ch00-core-concepts-operating-loop-codex-only.png)
+
+_질문에서 끝나지 않고, 요청 입구에서 도구 실행과 기록, 재사용까지 이어지는 흐름으로 이해하면 기능 이름이 덜 복잡해진다._
+
 ## 한눈에 보는 핵심 개념
 
 | 개념 | 의미 | 연결되는 장 |
