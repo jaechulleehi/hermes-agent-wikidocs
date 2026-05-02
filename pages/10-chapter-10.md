@@ -49,9 +49,9 @@
 
 읽을 순서:
 
-1. [11-08. 메일 정리와 답장 초안](37-email-triage-reply-draft-agent-workflow.md)
-2. [11-16. Google Workspace와 메일 MCP](46-google-workspace-email-mcp-workflow.md)
-3. [11-17. Slack 고객응대 초안/승인](47-slack-customer-support-draft-approval-workflow.md)
+1. [11-08. 메일 정리와 답장 초안](https://wikidocs.net/346644)
+2. [11-16. Google Workspace와 메일 MCP](https://wikidocs.net/346693)
+3. [11-17. Slack 고객응대 초안/승인](https://wikidocs.net/346698)
 
 따라 할 때의 기준은 단순하다. 자동 발송은 마지막에 두고, 초안 생성/사람 승인/기록 위치를 먼저 정한다.
 
@@ -65,10 +65,10 @@
 
 읽을 순서:
 
-1. [11-01. 하망이와 WikiDocs 이미지 제작](29-hamangi-wikidocs-image-production-case.md)
-2. [11-15. 이미지 생성 요청/검수/재사용](45-image-generation-review-reuse-workflow.md)
-3. [11-18. 블로그/뉴스레터 재가공](48-blog-newsletter-content-repurposing-workflow.md)
-4. [11-07. 반복 문서 제작 자동화](36-repeat-document-production-agent-workflow.md)
+1. [11-01. 하망이와 WikiDocs 이미지 제작](https://wikidocs.net/345991)
+2. [11-15. 이미지 생성 요청/검수/재사용](https://wikidocs.net/346692)
+3. [11-18. 블로그/뉴스레터 재가공](https://wikidocs.net/346699)
+4. [11-07. 반복 문서 제작 자동화](https://wikidocs.net/346634)
 
 상세페이지를 만들 때는 상품 설명을 바로 쓰기보다 `문제 → 해결 흐름 → 이미지/섹션 구성 → CTA → 검수` 순서로 바꾼다.
 
@@ -82,9 +82,9 @@
 
 읽을 순서:
 
-1. [11-09. 자료조사와 결정 메모](38-research-to-comparison-decision-memo-workflow.md)
-2. [11-10. 모닝 브리핑과 주간 리포트](40-daily-briefing-weekly-report-cron-workflow.md)
-3. [11-19. 정기 리서치에서 회의자료](49-recurring-research-to-decision-meeting-workflow.md)
+1. [11-09. 자료조사와 결정 메모](https://wikidocs.net/346645)
+2. [11-10. 모닝 브리핑과 주간 리포트](https://wikidocs.net/346646)
+3. [11-19. 정기 리서치에서 회의자료](https://wikidocs.net/346700)
 
 핵심은 링크 목록을 회의자료로 착각하지 않는 것이다. 회의에서 물어볼 질문과 선택지가 남아야 한다.
 
@@ -98,10 +98,10 @@
 
 읽을 순서:
 
-1. [11-14. 회의록에서 보고서/발표자료](44-meeting-notes-to-report-slide-workflow.md)
-2. [11-21. 회의록과 메일에서 고객사 SDR 파이프라인](51-meeting-email-to-sdr-pipeline-workflow.md)
-3. [11-11. 비벙이 제품 요구사항 정리](41-bibungi-product-requirements-agent-workflow.md)
-4. [11-12. 봉구 실행/배포/검증](42-bonggu-execution-deployment-verification-workflow.md)
+1. [11-14. 회의록에서 보고서/발표자료](https://wikidocs.net/346691)
+2. [11-21. 회의록과 메일에서 고객사 SDR 파이프라인](https://wikidocs.net/346841)
+3. [11-11. 비벙이 제품 요구사항 정리](https://wikidocs.net/346664)
+4. [11-12. 봉구 실행/배포/검증](https://wikidocs.net/346665)
 
 따라 할 때는 “누가 무슨 말을 했나”보다 “무엇이 결정됐고 누가 언제 무엇을 할 것인가”를 먼저 뽑는다.
 
@@ -115,10 +115,10 @@
 
 읽을 순서:
 
-1. [11-02. 크론 조사에서 WikiDocs 발행](30-cron-research-to-agent-content-workflow.md)
-2. [11-03. 방울이/뽀동이 handoff](31-bangwooli-ppodongi-content-handoff.md)
-3. [11-04. GitHub/WikiDocs 발행](32-github-wikidocs-content-publishing-workflow.md)
-4. [11-06. SEO/GEO 치트시트 자산화](34-hermes-seo-geo-cheatsheet-content-asset-case.md)
+1. [11-02. 크론 조사에서 WikiDocs 발행](https://wikidocs.net/345992)
+2. [11-03. 방울이/뽀동이 handoff](https://wikidocs.net/345993)
+3. [11-04. GitHub/WikiDocs 발행](https://wikidocs.net/345994)
+4. [11-06. SEO/GEO 치트시트 자산화](https://wikidocs.net/345996)
 5. [11-20. 크론 오류를 Skill/메모리 개선으로 바꾸는 운영 케이스](https://wikidocs.net/346701)
 
 여기서 중요한 것은 Slack 대화를 그대로 복사하지 않는 것이다. Slack은 시작점이고, 공개 문서는 독자가 따라 할 수 있는 절차로 다시 정리해야 한다.

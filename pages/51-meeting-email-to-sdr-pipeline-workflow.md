@@ -150,4 +150,4 @@ Hermes Agent를 메인 창구로 두면 요청은 짧아도 된다.
 
 ## 다음에 읽을 글
 
-회의록 자체를 보고서나 발표자료로 바꾸는 기본 흐름은 [회의록은 보고서와 발표자료로 어떻게 바꿀까](44-meeting-notes-to-report-slide-workflow.md)에서 먼저 볼 수 있다. Gmail과 Google Workspace 권한 경계는 [Google Workspace와 메일 MCP는 업무 흐름에 어떻게 붙일까](46-google-workspace-email-mcp-workflow.md), 파일과 노트를 장기 기억으로 남기는 기준은 [파일과 노트는 AI 팀의 장기 기억으로 어떻게 남길까](43-files-notes-long-term-memory-workflow.md)와 함께 읽으면 좋다.
+회의록 자체를 보고서나 발표자료로 바꾸는 기본 흐름은 [회의록은 보고서와 발표자료로 어떻게 바꿀까](https://wikidocs.net/346691)에서 먼저 볼 수 있다. Gmail과 Google Workspace 권한 경계는 [Google Workspace와 메일 MCP는 업무 흐름에 어떻게 붙일까](https://wikidocs.net/346693), 파일과 노트를 장기 기억으로 남기는 기준은 [파일과 노트는 AI 팀의 장기 기억으로 어떻게 남길까](https://wikidocs.net/346666)와 함께 읽으면 좋다.

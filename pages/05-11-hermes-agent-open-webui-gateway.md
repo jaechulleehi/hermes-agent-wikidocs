@@ -38,7 +38,7 @@ Hermes Agent
 
 Open WebUI는 Hermes Agent를 OpenAI 호환 API처럼 호출한다. 사용자는 웹 화면에 메시지를 입력하고, Hermes Agent는 기존처럼 도구, 메모리, Skill, 파일, 터미널을 사용할 수 있다. 응답은 다시 Open WebUI의 채팅 화면으로 돌아온다.
 
-이 구조를 이해하면 [always-on gateway](12-always-on-gateway-is-more-confusing-than-it-looks.md)와 [Hermes Agent 도구 실행 결과 검증](05-hermes-agent-tool-result-verification.md)이 왜 중요한지도 보인다. Gateway가 켜졌다는 사실과 사용자가 원하는 화면에서 결과를 받는 것은 별도 검증 대상이다.
+이 구조를 이해하면 [always-on gateway](https://wikidocs.net/345906)와 [Hermes Agent 도구 실행 결과 검증](https://wikidocs.net/346290)이 왜 중요한지도 보인다. Gateway가 켜졌다는 사실과 사용자가 원하는 화면에서 결과를 받는 것은 별도 검증 대상이다.
 
 ## Docker가 꼭 필요할까
 
@@ -57,7 +57,7 @@ Docker가 주로 필요한 곳은 Open WebUI를 빠르게 띄우는 단계다. O
 
 > Hermes Agent는 Docker 없이도 쓸 수 있다. 다만 Open WebUI를 웹 대시보드처럼 빠르게 붙이려면 Docker가 가장 쉽다.
 
-Docker와 Gateway의 더 넓은 운영 기준은 [Hermes Agent Docker/Gateway는 언제 필요할까](00-hermes-agent-docker-gateway.md)에서 이어서 볼 수 있다.
+Docker와 Gateway의 더 넓은 운영 기준은 [Hermes Agent Docker/Gateway는 언제 필요할까](https://wikidocs.net/346139)에서 이어서 볼 수 있다.
 
 ## 빠른 설정 흐름
 
@@ -71,7 +71,7 @@ Docker와 Gateway의 더 넓은 운영 기준은 [Hermes Agent Docker/Gateway는
 hermes --version
 ```
 
-처음 설치하는 경우에는 [Hermes Agent 설치와 세팅](00-hermes-agent-install-setup.md)을 먼저 확인한다.
+처음 설치하는 경우에는 [Hermes Agent 설치와 세팅](https://wikidocs.net/346137)을 먼저 확인한다.
 
 ### 2. API Server 활성화
 
@@ -142,7 +142,7 @@ http://localhost:3000
 | 핵심 인사이트 3줄 | 정리형 에이전트/요약 Skill | 짧은 판단 메모 |
 | 45자 광고 카피 3안 | 작성형 에이전트/카피 Skill | 카피 후보 |
 
-이때 WikiDocs에서는 `writer.skill.toml`, `analyst.skill.toml` 같은 예시를 공식 스킬 포맷처럼 단정하지 않는 편이 안전하다. Hermes Agent의 공식 Skill 운영은 [Hermes Agent Skill은 무엇이고 언제 만들까](10-when-and-how-to-manage-skills-in-hermes.md)와 [역할형 에이전트별 Skill은 어떻게 나눌까](06-03-role-agent-skills.md)에서 설명하는 `SKILL.md` 기반 흐름과 구분해서 다룬다.
+이때 WikiDocs에서는 `writer.skill.toml`, `analyst.skill.toml` 같은 예시를 공식 스킬 포맷처럼 단정하지 않는 편이 안전하다. Hermes Agent의 공식 Skill 운영은 [Hermes Agent Skill은 무엇이고 언제 만들까](https://wikidocs.net/345904)와 [역할형 에이전트별 Skill은 어떻게 나눌까](https://wikidocs.net/346237)에서 설명하는 `SKILL.md` 기반 흐름과 구분해서 다룬다.
 
 ## 이 데모가 보여주는 것
 
@@ -191,6 +191,6 @@ Open WebUI를 붙인다고 역할형 에이전트가 자동으로 생기지는 �
 
 이 글을 이해했다면 다음에는 세 방향으로 이어갈 수 있다.
 
-- 상시 운영을 고민한다면 [always-on gateway는 왜 자주 헷갈릴까](12-always-on-gateway-is-more-confusing-than-it-looks.md)를 본다.
-- 반복 절차를 역할별로 나누고 싶다면 [Hermes Agent Skill 운영](06-skills-chapter.md)으로 넘어간다.
-- Slack/cron까지 붙여 실제 자동화를 만들고 싶다면 [Daily Briefing Bot workflow](05-daily-briefing-bot-workflow.md)와 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](35-four-ways-to-assign-work-in-hermes-agent.md)을 함께 본다.
+- 상시 운영을 고민한다면 [always-on gateway는 왜 자주 헷갈릴까](https://wikidocs.net/345906)를 본다.
+- 반복 절차를 역할별로 나누고 싶다면 [Hermes Agent Skill 운영](https://wikidocs.net/346235)으로 넘어간다.
+- Slack/cron까지 붙여 실제 자동화를 만들고 싶다면 [Daily Briefing Bot workflow](https://wikidocs.net/345926)와 [Hermes Agent에서 일을 나누는 네 가지 실행 방식](https://wikidocs.net/346124)을 함께 본다.

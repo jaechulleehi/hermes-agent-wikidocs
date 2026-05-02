@@ -248,6 +248,6 @@ Hermes Agent를 쓰면 비개발자는 코딩 문법을 먼저 외우지 않아�
 
 ## 다음에 읽을 글
 
-- [10-2. 비개발자 AI 도입은 왜 혼자 하다 멈출까](52-why-non-developers-stop-ai-adoption-alone.md)
-- [A-6. 비개발자를 위한 AI 업무 자동화 워크시트](a6-non-developer-ai-automation-worksheet.md)
-- [06-1. Hermes Agent Skill은 무엇이고 언제 만들까](10-when-and-how-to-manage-skills-in-hermes.md)
+- [10-2. 비개발자 AI 도입은 왜 혼자 하다 멈출까](https://wikidocs.net/346954)
+- [A-6. 비개발자를 위한 AI 업무 자동화 워크시트](https://wikidocs.net/346956)
+- [06-1. Hermes Agent Skill은 무엇이고 언제 만들까](https://wikidocs.net/345904)

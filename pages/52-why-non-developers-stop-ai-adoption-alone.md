@@ -146,6 +146,6 @@ Hermes Agent에서는 이 피드백 루프를 역할로 나눌 수 있다.
 
 ## 다음에 읽을 글
 
-- [11-22. 비개발자는 Hermes Agent로 어떻게 자기 업무 OS를 만들까](53-non-developer-personal-work-os-hermes-agent.md)
-- [A-6. 비개발자를 위한 AI 업무 자동화 워크시트](a6-non-developer-ai-automation-worksheet.md)
-- [03-1. 역할형 에이전트는 어떤 기준으로 나눌까](03-role-based-agent-splitting.md)
+- [11-22. 비개발자는 Hermes Agent로 어떻게 자기 업무 OS를 만들까](https://wikidocs.net/346955)
+- [A-6. 비개발자를 위한 AI 업무 자동화 워크시트](https://wikidocs.net/346956)
+- [03-1. 역할형 에이전트는 어떤 기준으로 나눌까](https://wikidocs.net/345925)
