@@ -4,6 +4,8 @@
 
 로컬 실습을 넘어 Mac mini/맥미니를 전용 머신처럼 쓰려면 상시 운영 기준이 필요하다. [설치와 세팅 기본 순서](https://wikidocs.net/346137)를 확인한 뒤, gateway가 필요해지는 순간에는 [Docker/Gateway 판단 기준](https://wikidocs.net/346139)과 함께 읽는 편이 좋다.
 
+![Mac mini 상시 운영 흐름](../assets/images/body-figures/ch00-mac-mini-always-on-codex-only.webp)
+
 [TOC]
 
 ## 왜 맥미니가 좋은 선택지가 될까

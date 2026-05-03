@@ -2,9 +2,10 @@
 
 에르메스 에이전트(Hermes Agent)는 질문에 답하고 끝나는 AI 챗봇이 아니다. 한국어 검색에서는 `헤르메스 에이전트`라고 찾는 경우도 많지만, 이 책에서는 대표 표기를 `에르메스 에이전트(Hermes Agent)`로 통일한다. 메모리 계층, 프로필, 스킬, cron, MCP, gateway를 묶어 실제 업무 흐름을 운영하게 돕는 오픈소스 AI 에이전트이자 AI 에이전트 프레임워크다. 공식 문서의 표현을 빌리면 경험에서 스킬을 만들고 세션을 넘어 기억하는 `self-improving AI agent`, 즉 `AI agent with memory`에 가깝다. 이 책에서는 에르메스 에이전트(Hermes Agent)를 설치 기능보다 **기억할 것, 반복할 것, 도구로 실행할 것을 나눠 AI 개인비서와 역할형 에이전트로 업무 자동화를 굴리는 운영 시스템**으로 설명한다.
 
-![에르메스 에이전트 핵심 개념 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-1-hermes-core-concepts-codex.webp)
 
 처음 읽는 독자라면 먼저 이것만 잡으면 된다. Hermes Agent의 핵심은 “더 긴 답변을 받는 법”이 아니라, 요청을 받고, 역할을 나누고, 도구를 연결하고, 결과를 기록으로 남기는 흐름을 만드는 데 있다.
+
+![Hermes Agent 핵심 운영 루프](../assets/images/body-figures/ch00-core-concepts-operating-loop-codex-only.webp)
 
 [TOC]
 
@@ -20,9 +21,6 @@
 
 그래서 이 책은 에르메스 에이전트(Hermes Agent)를 “무엇을 설치하느냐”보다 “어떤 업무 흐름을 안정적으로 굴리느냐”의 관점에서 다룬다.
 
-![Hermes Agent 핵심 운영 루프](../assets/images/body-figures/ch00-core-concepts-operating-loop-codex-only.png)
-
-_질문에서 끝나지 않고, 요청 입구에서 도구 실행과 기록, 재사용까지 이어지는 흐름으로 이해하면 기능 이름이 덜 복잡해진다._
 
 ## 한눈에 보는 핵심 개념
 

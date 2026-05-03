@@ -2,9 +2,10 @@
 
 Hermes Agent에서 provider/model/config는 “어떤 모델을 쓸지”만의 문제가 아니다. [공식 configuration 문서](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)는 설정을 `~/.hermes/config.yaml`, secret/token을 `~/.hermes/.env`로 나누고, provider, model, 실행 환경 설정을 함께 다룬다. 이 경계가 흐리면 CLI에서는 되던 일이 gateway나 cron에서는 실패할 수 있다.
 
-![Hermes Agent provider model config 설정 흐름](../assets/images/chapter-heroes/ch00-5-provider-model-config-codex.webp)
 
 provider 설정에서 중요한 것은 전체 목록을 외우는 일이 아니다. 입문자가 봐야 할 것은 “내가 어떤 방식으로 Hermes Agent를 연결하고, 그 선택이 비용/권한/복구에 어떤 영향을 주는가”다. 최신 provider 목록, env var 이름, 세부 설정값은 [Hermes Agent 공식 문서](https://hermes-agent.nousresearch.com/docs/integrations/providers)와 [공식 문서 정합성 점검표](https://wikidocs.net/346587)에서 다시 확인한다.
+
+![Provider Model Config 확인 지도](../assets/images/body-figures/ch00-provider-model-config-codex-only.webp)
 
 [TOC]
 

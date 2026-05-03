@@ -2,9 +2,10 @@
 
 에르메스 에이전트(Hermes Agent) 설치 자체는 길지 않다. `헤르메스 에이전트 설치`, `Hermes Agent 설치`, `Hermes Agent Windows`, `Hermes Agent Docker`를 찾고 들어온 독자라도 먼저 볼 순서는 같다. Linux, macOS, WSL2, Android Termux에서는 one-line installer로 시작할 수 있고, Windows 사용자는 보통 WSL2 경로를 본다. 진짜 기준은 명령어를 많이 외우는 것이 아니라, 설치 후 무엇을 확인해야 다음 단계로 넘어갈 수 있는지 잡는 것이다.
 
-![에르메스 에이전트 설치와 기본 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-3-install-setup-flow-codex.webp)
 
 처음 목표는 모든 기능을 켜는 것이 아니다. `hermes` 명령이 실행되는지, 기본 대화가 되는지, provider/model 설정이 맞는지, 필요한 도구가 제한된 범위에서 동작하는지 순서대로 확인한다. 이 기본선이 잡힌 뒤에 Slack/Telegram/Discord gateway, cron, Skill, MCP 같은 확장 기능을 붙이면 문제 원인을 훨씬 쉽게 좁힐 수 있다.
+
+![Hermes Agent 설치와 세팅 흐름](../assets/images/body-figures/ch00-install-setup-flow-codex-only.webp)
 
 [TOC]
 

@@ -2,13 +2,13 @@
 
 AI 챗봇은 질문에 답한다. AI 개인비서는 요청을 받아 업무 흐름을 만든다. 에르메스 에이전트(Hermes Agent)로 AI 업무 자동화를 시작할 때도 둘의 차이를 먼저 알아야 한다.
 
-![AI 챗봇과 AI 개인비서 차이](../assets/images/chapter-heroes/ch1-1-chatbot-vs-ai-assistant-codex.webp)
 
 챗봇은 “이 내용을 요약해줘”, “문장을 다듬어줘”처럼 한 번의 대화 안에서 끝나는 작업에 강하다. 반면 AI 개인비서는 요청을 해석하고, 필요한 역할을 나누고, 도구를 연결하고, 결과를 다시 쓸 수 있는 기록으로 남기는 쪽에 가깝다.
 
 [에르메스 에이전트(Hermes Agent)](https://wikidocs.net/346055)를 업무에 붙일 때 중요한 차이는 여기에 있다. 좋은 답변을 받는 것에서 끝낼지, 아니면 조사/정리/실행/기록이 이어지는 반복 가능한 업무 흐름을 만들지 먼저 정해야 한다.
 
-![AI 챗봇과 AI 개인비서가 다른 지점](../assets/images/body-figures/ch01-1-chatbot-vs-personal-assistant-body-codex-only.webp)
+
+![AI 챗봇과 AI 개인비서가 다른 지점](../assets/images/body-figures/ch00-ai-chatbot-vs-assistant-decision-flow-codex-only.webp)
 
 [TOC]
 

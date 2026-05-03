@@ -10,9 +10,10 @@ AI에게 일을 시켜봤는데, 매번 처음부터 설명해야 한다.
 
 0장은 기능 소개 장이 아니다. Hermes Agent를 실제 AI 개인비서와 업무 자동화 환경으로 쓰기 전에, 무엇을 먼저 확인하고 어디까지 확장할지 잡는 입문 지도다. 처음에는 [에르메스 에이전트(Hermes Agent)란 무엇인가](https://wikidocs.net/346055)를 먼저 읽고, 설치보다 운영 그림을 먼저 잡는다.
 
-![Hermes Agent 기초 가이드 흐름](../assets/images/chapter-heroes/ch00-hermes-foundation-guide-tool-badges-codex.webp)
 
 이 책은 공식 문서를 대체하지 않는다. 설치 명령, CLI 옵션, 설정값처럼 바뀔 수 있는 내용은 공식 GitHub와 문서를 기준으로 확인한다. 이 책은 그 기능을 실제 업무에 붙일 때의 순서와 판단 기준을 다룬다. memory/shared-memory에는 오래 남길 기준을 두고, session search로 과거 작업을 다시 찾고, 반복 절차는 Skill로 만들고, 정기 작업은 cron으로 시작하고, 외부 업무 시스템은 MCP/gateway로 연결한다. 이 흐름을 잡아야 이후 장의 AI 개인비서, 역할형 에이전트, 기억 시스템, Skill 운영이 하나의 구조로 이어진다.
+
+![Hermes Agent 운영 그림](../assets/images/body-figures/ch00-foundation-operating-map-codex-only.webp)
 
 [TOC]
 
@@ -46,9 +47,6 @@ AI에게 일을 시켜봤는데, 매번 처음부터 설명해야 한다.
 
 핵심은 “어떤 기능을 켤까”가 아니라 “내 업무에서 무엇을 기억하고, 무엇을 반복하고, 무엇을 외부 도구와 연결할까”다. 이 질문이 정리되어야 Hermes Agent가 단순한 대화창이 아니라 AI 업무 자동화 환경으로 작동한다.
 
-![Hermes Agent 운영 그림](../assets/images/body-figures/ch00-foundation-operating-map-codex-only.png)
-
-_처음에는 기능을 많이 켜는 것보다 실행 환경, 모델 설정, 요청 채널, 기억, 반복 자동화의 위치를 먼저 잡는다._
 
 ## 처음 세팅할 때 피해야 할 흐름
 

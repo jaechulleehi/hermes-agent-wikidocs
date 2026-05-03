@@ -4,9 +4,10 @@
 
 여기서 말하는 gateway는 메시징 채널을 연결하는 `Messaging Gateway`다. web search, image generation, TTS, browser automation을 Nous 구독으로 라우팅하는 `Nous Tool Gateway`와는 다른 기능이다.
 
-![Docker와 Gateway 상시 운영 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch00-6-docker-gateway-always-on-codex.webp)
 
 처음부터 Docker/Gateway를 붙일 필요는 없다. 특히 gateway는 [always-on gateway 확인 기준](https://wikidocs.net/345906)과 [설치 후 기본 검증 순서](https://wikidocs.net/346137)처럼 process, 인증, delivery target, 로그를 함께 봐야 한다. 기본 CLI chat이 안정되고, provider 설정과 tool 권한을 확인한 뒤, 상시 접속이나 메시징 delivery가 필요해질 때 붙이는 편이 안전하다.
+
+![Docker와 Gateway 판단 흐름](../assets/images/body-figures/ch00-docker-gateway-always-on-codex-only.webp)
 
 [TOC]
 
