@@ -2,7 +2,7 @@
 
 AI 개인비서가 잘 굴러가려면 직접 처리할 일과 [역할형 에이전트](https://wikidocs.net/345925)에 맡길 일을 구분해야 한다. 메인 창구가 모든 일을 직접 하면 병목이 되고, 반대로 모든 일을 위임하면 사용자는 조각난 결과만 받는다.
 
-![직접 처리와 역할형 에이전트 위임 기준](../assets/how-image-agent-creates-wikidocs-visuals/ch2-2-direct-vs-delegate-codex.webp)
+![직접 처리와 역할형 에이전트 위임 기준](../assets/images/body-figures/ch02-2-direct-vs-delegate-criteria-codex-only.webp)
 
 핵심 기준은 “누가 더 똑똑한가”가 아니라 일의 성격이다. 짧은 판단, 우선순위, 최종 통합은 메인 창구가 직접 처리하는 편이 좋다. 반면 근거 수집, 긴 문서 정리, 파일 수정, 이미지 제작, 반복 검증처럼 깊이가 필요한 일은 방울이/뽀동이/봉구/[하망이](https://wikidocs.net/345989) 같은 역할형 에이전트에게 맡기는 편이 안정적이다.
 

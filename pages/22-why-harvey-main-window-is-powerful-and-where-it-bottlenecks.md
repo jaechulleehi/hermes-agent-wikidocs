@@ -2,7 +2,7 @@
 
 [AI 개인비서 메인 창구](https://wikidocs.net/345892) 구조는 강력하다. 사용자는 하비 같은 메인 창구에 먼저 말하면 되고, 메인 창구가 내부에서 방울이, 뽀동이, 봉구, 하망이 같은 역할형 에이전트로 일을 나눌 수 있기 때문이다.
 
-![메인 창구의 강점과 병목을 기준으로 풀어내는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch2-3-front-door-strength-bottleneck-codex.webp)
+![메인 창구의 강점과 병목을 기준으로 풀어내는 흐름](../assets/images/body-figures/ch02-3-front-door-strength-bottleneck-codex-only.webp)
 
 하지만 같은 이유로 병목도 생긴다. 모든 요청이 메인 창구로 들어오는데 직접 처리 기준, 위임 기준, 보고 기준이 없으면 편한 입구가 아니라 막히는 입구가 된다.
 

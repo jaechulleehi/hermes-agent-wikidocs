@@ -4,6 +4,8 @@
 
 ![2장 AI 개인비서 메인 창구 흐름](../assets/images/chapter-heroes/ch02-ai-assistant-front-door-codex.webp)
 
+![AI 개인비서 메인 창구가 요청을 해석하고 역할형 에이전트로 위임한 뒤 하나의 결과로 통합하는 흐름](../assets/images/body-figures/ch02-overview-main-window-routing-codex-only.webp)
+
 2장은 [AI 개인비서](https://wikidocs.net/345923)를 메인 창구로 세우는 장이다. 메인 창구는 모든 일을 직접 처리하는 만능 에이전트가 아니다. 요청을 먼저 받고, 직접 할 일과 넘길 일을 나누고, 여러 결과를 다시 하나의 답으로 묶는 앞단이다. 이 책에서는 그 예시로 하비를 사용한다.
 
 [TOC]
