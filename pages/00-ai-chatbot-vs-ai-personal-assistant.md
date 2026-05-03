@@ -8,6 +8,8 @@ AI 챗봇은 질문에 답한다. AI 개인비서는 요청을 받아 업무 흐
 
 [에르메스 에이전트(Hermes Agent)](https://wikidocs.net/346055)를 업무에 붙일 때 중요한 차이는 여기에 있다. 좋은 답변을 받는 것에서 끝낼지, 아니면 조사/정리/실행/기록이 이어지는 반복 가능한 업무 흐름을 만들지 먼저 정해야 한다.
 
+![AI 챗봇과 AI 개인비서가 다른 지점](../assets/images/body-figures/ch01-1-chatbot-vs-personal-assistant-body-codex-only.webp)
+
 [TOC]
 
 ## 처음에 착각하기 쉬운 것

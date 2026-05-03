@@ -2,7 +2,7 @@
 
 이 책에는 하비, 방울이, 뽀동이, 봉구, 비벙이, 하망이 같은 이름이 나온다. 처음 보는 독자는 이 이름이 무엇을 뜻하는지부터 궁금할 수 있다. 그래서 먼저 분명히 해두자. 이 이름들은 캐릭터 소개가 아니라 **[Hermes Agent](https://wikidocs.net/346055) 업무 자동화에서 역할형 에이전트를 실제로 운영하기 위해 붙인 호출 이름**이다.
 
-![하비 방울이 뽀동이를 역할형 에이전트로 읽는 법](../assets/how-image-agent-creates-wikidocs-visuals/ch1-3-agent-team-reading-guide-codex.webp)
+![하비 방울이 뽀동이를 역할형 에이전트로 읽는 법](../assets/images/body-figures/ch01-3-agent-team-reading-guide-body-codex-only.webp)
 
 역할 개념으로 먼저 이해하면 쉽다. 하비는 [AI 개인비서 메인 창구](https://wikidocs.net/345892), 방울이는 조사형 에이전트, 뽀동이는 정리형 에이전트에 가깝다. 봉구, 비벙이, 하망이도 각각 실행, 제품/기능 정리, 이미지 제작처럼 특정 운영 역할을 맡는다. 이름은 친근하게 붙였지만, 이 책에서 중요한 것은 이름보다 **어떤 역할을 맡고 어떤 실패를 줄이기 위해 나눴는가**다.
 

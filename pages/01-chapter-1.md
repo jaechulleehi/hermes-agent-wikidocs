@@ -6,7 +6,7 @@
 
 0장에서 Hermes Agent의 설치와 운영 지도를 잡았다면, 1장부터는 “그래서 이걸 어떤 업무 구조로 굴릴 것인가”를 다룬다. `AI 에이전트 만들기`, `AI 에이전트 사용법`, `AI 개인비서 만들기`를 찾는 독자라면 여기서부터 기능보다 운영 구조를 먼저 보게 된다. 에르메스 에이전트(Hermes Agent)로 나만의 AI 팀을 만든다는 말은 챗봇을 여러 개 켜 둔다는 뜻이 아니다. 하나의 AI 개인비서가 요청을 받고, 필요할 때 조사형/정리형/실행형 에이전트로 일을 나누고, 결과를 다시 하나의 업무 흐름으로 묶는다는 뜻이다.
 
-![01. AI 챗봇 말고 나만의 AI 팀 만들기](../assets/images/chapter-heroes/ch01-why-ai-team-codex-only.webp)
+![01. AI 챗봇 말고 나만의 AI 팀 만들기](../assets/images/chapter-heroes/ch01-why-ai-team-codex-only-v2.webp)
 
 챗봇은 질문에 답하는 데 강하다. 하지만 실제 업무는 답변 뒤에 조사, 정리, 실행, 검증, 기록이 이어진다. 이 단계가 붙는 순간 AI는 “좋은 답변을 주는 도구”에서 “반복 업무를 함께 굴리는 운영 구조”로 바뀐다. 1장은 그 전환을 이해하는 장이다.
 
@@ -27,7 +27,7 @@
 
 그래서 이 책은 [AI를 챗봇 하나로 보지 않고](https://wikidocs.net/345923), **AI 개인비서와 역할형 에이전트가 함께 움직이는 업무 자동화 흐름**으로 본다. AI 팀의 핵심은 에이전트 숫자가 아니라 역할의 경계다.
 
-![챗봇에서 AI 팀 운영 구조로 전환](../assets/images/body-figures/ch01-ai-team-operating-structure-codex-only-v2.png)
+![챗봇에서 AI 팀 운영 구조로 전환](../assets/images/body-figures/ch01-ai-team-operating-structure-codex-only-v2.webp)
 
 ## AI 팀은 많이 붙이는 구조가 아니다
 
