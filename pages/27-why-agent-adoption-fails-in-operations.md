@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent) 같은 AI 에이전트 도입이 운영에서 무너지는 이유는 모델 성능이 부족해서만은 아니다. 실제 AI 에이전트 도입 사례를 보면 대부분은 요청 흐름, 권한, 검증, 기록, 책임 경계가 정리되지 않은 상태에서 에이전트를 업무 안에 넣기 때문에 무너진다.
 
-![AI 에이전트 도입이 운영에서 무너지는 이유](../assets/how-image-agent-creates-wikidocs-visuals/ch10-1-agent-adoption-ops-failure-codex.webp)
+![AI 에이전트 도입이 운영에서 무너지는 이유](../assets/images/body-figures/ch10-1-agent-adoption-ops-failure-codex-only.webp)
 
 [Hermes Agent](https://wikidocs.net/346055)를 조직에서 쓰려면 “AI가 대신 일한다”가 아니라 “AI 개인비서와 역할형 에이전트가 어떤 순서로 일하고, 사람이 어디서 판단하고, 결과가 어디에 남는가”를 먼저 설계해야 한다. 데모는 한 번 성공하면 되지만 운영은 같은 품질을 반복해야 한다.
 

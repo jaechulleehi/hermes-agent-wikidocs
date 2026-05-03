@@ -2,6 +2,8 @@
 
 cron 자동화는 “정해진 시간에 실행한다”로 끝나지 않는다. Hermes Agent에서 cron은 새 세션으로 시작되므로, 무엇을 조사하고 어디로 보내고 변화가 없을 때 어떻게 할지까지 prompt 안에 들어 있어야 한다.
 
+![매일 브리핑과 주간 리포트 자동화 흐름](../assets/images/body-figures/ch11-10-daily-briefing-weekly-report-codex-only.webp)
+
 이 사례는 매일 아침 브리핑이나 주간 리포트를 자동화할 때 필요한 운영 기준을 정리한다. 핵심은 더 자주 알림을 보내는 것이 아니라, 판단 가능한 신호만 짧게 전달하는 것이다.
 
 [TOC]

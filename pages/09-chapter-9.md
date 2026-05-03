@@ -2,7 +2,7 @@
 
 9장까지는 개인이 Hermes Agent를 오래 운영하기 위한 기준을 다뤘다. 10장에서는 그 기준을 조직으로 넓힌다. 개인용 AI 개인비서로 쓰는 것과 조직의 업무 자동화 시스템으로 확장하는 것은 다른 문제다. [Hermes Agent](https://wikidocs.net/346055)를 조직에 도입하려면 역할, 권한, 기록, 검증, 책임자가 함께 정리되어야 한다.
 
-![조직 도입과 AI 에이전트 운영 확장 흐름](../assets/images/chapter-heroes/ch10-organization-agent-ops-scale-codex.webp)
+![AI 에이전트 조직 도입과 운영 확장 흐름](../assets/images/body-figures/ch10-overview-organization-adoption-scale-codex-only.webp)
 
 개인 운영에서는 “내가 아는 맥락”이 판단 기준이 될 수 있다. 하지만 조직에서는 그 맥락이 사람마다 다르다. 누군가는 Slack 대화만 보고 판단하고, 누군가는 GitHub 이력을 기준으로 삼고, 누군가는 WikiDocs에 올라온 공유 문서만 본다. 이 기준이 맞지 않으면 AI 에이전트 도입은 모델 성능과 무관하게 흔들린다.
 

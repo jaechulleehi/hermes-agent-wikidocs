@@ -2,6 +2,8 @@
 
 비개발자가 AI로 무언가를 만든다는 말은 꼭 앱을 배포한다는 뜻이 아니다. 흩어진 메모를 다시 꺼내 쓸 수 있는 기억으로 바꾸고, 반복 문서 작업을 Skill로 만들고, Slack 요청을 실행 가능한 업무 흐름으로 정리하고, 결과를 WikiDocs/GitHub에 남기는 것도 충분히 중요한 제작이다.
 
+![비개발자가 Hermes Agent로 업무 OS를 만드는 흐름](../assets/images/body-figures/ch11-22-non-developer-personal-work-os-codex-only.webp)
+
 Hermes Agent를 쓰면 비개발자는 코딩 문법을 먼저 외우지 않아도 된다. 대신 자기 업무를 `입력 → 판단 → 역할 분리 → 실행 → 검증 → 기록`으로 나누고, 그 흐름을 AI 개인비서와 역할형 에이전트가 반복해서 도와주게 만들 수 있다. 이것이 이 책에서 말하는 개인 업무 OS다.
 
 [TOC]

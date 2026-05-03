@@ -2,7 +2,7 @@
 
 에르메스 에이전트(Hermes Agent) 업무 자동화에서 GitHub와 [WikiDocs](https://wikidocs.net/345908)를 나누는 이유는 원본과 공개 배포 채널을 분리하기 위해서다. `GitHub WikiDocs 연동`이나 `WikiDocs 발행 자동화`를 찾는 독자에게 핵심은 연결 자체보다 원본 관리와 공개 검증을 나누는 기준이다. GitHub는 책 원고의 원본 기준이고, WikiDocs는 독자가 보는 공개 화면이다. 뽀동이가 원고를 고치고 검증을 통과시키면, GitHub 변경이 WikiDocs 발행 흐름으로 이어진다.
 
-![GitHub와 WikiDocs 발행 검증 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-4-github-wikidocs-publishing-tool-badges-codex.png)
+![GitHub와 WikiDocs 콘텐츠 발행 검증 흐름](../assets/images/body-figures/ch11-04-github-wikidocs-publishing-codex-only.webp)
 
 이 구조를 쓰는 이유는 단순하다. 공유할 글은 한 번 쓰고 끝나지 않는다. 제목, TOC, 이미지, SEO/GEO, 전자책 규칙, 본문 링크가 계속 바뀐다. 이력과 기준이 남아야 안전하게 고칠 수 있다. 그래서 GitHub/WikiDocs 발행은 7장의 [WikiDocs를 먼저 쓰는 콘텐츠 시스템](https://wikidocs.net/345908)을 운영으로 고정하는 단계다.
 

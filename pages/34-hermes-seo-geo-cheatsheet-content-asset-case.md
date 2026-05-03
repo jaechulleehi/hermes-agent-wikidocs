@@ -2,7 +2,7 @@
 
 카드형 콘텐츠는 이미지 한 장으로 끝나기 쉽다. 하지만 에르메스 에이전트(Hermes Agent)로 콘텐츠 운영을 설계하면 하나의 카드도 메시지 압축, 제작 방식 선택, QA, 피드백, Skill화, 배포 문안, WikiDocs 기록으로 이어지는 자산이 될 수 있다.
 
-![SEO GEO 치트시트가 콘텐츠 자산으로 이어지는 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-6-linkedin-skill-content-asset-codex.png)
+![SEO GEO 치트시트를 콘텐츠 자산으로 재사용하는 흐름](../assets/images/body-figures/ch11-06-seo-geo-cheatsheet-asset-codex-only.webp)
 
 이 글의 예시는 SEO/GEO 치트시트다. 중요한 것은 “예쁜 카드뉴스를 만들었다”가 아니라 반복될 가능성이 있는 제작 기준을 찾아 [Skill](https://wikidocs.net/345904)로 분리하고, 채널별 문안과 공개 기록까지 이어 붙였다는 점이다. 그래서 7장의 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)과 [하망이 이미지 제작 기준](https://wikidocs.net/345989)이 함께 적용된다.
 

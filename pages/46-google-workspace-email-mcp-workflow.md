@@ -2,6 +2,8 @@
 
 Google Workspace와 메일 MCP 연동은 AI 개인비서를 실제 업무 도구 안으로 들여보내는 단계다. Gmail, Calendar, Docs, Sheets 같은 도구를 읽고 쓰기 시작하면 편해지지만, 권한과 승인 기준이 흐리면 위험도 커진다.
 
+![Google Workspace와 메일 MCP 업무 연결 흐름](../assets/images/body-figures/ch11-16-google-workspace-email-mcp-codex-only.webp)
+
 이 사례의 핵심은 “연동부터 끝내기”가 아니다. 어떤 작업은 읽기만 허용하고, 어떤 작업은 초안까지만 만들고, 어떤 작업은 사람 승인 후에만 쓰기 작업을 하게 할지 나누는 것이다.
 
 [TOC]
