@@ -6,6 +6,8 @@ AI 개인비서가 날마다 다르게 느껴지는 이유는 session, memory, p
 
 같은 모델을 쓰더라도 현재 대화 맥락, 장기 기억, 실행 profile이 다르면 결과는 달라진다. 실제로는 기억 문제가 아니라 현재 session이 바뀌었거나, profile의 도구 권한이 다르거나, memory에 넣지 말아야 할 작업 로그를 기대하고 있는 경우가 많다.
 
+![session memory profile 경계 구조](../assets/images/body-figures/ch04-02-session-memory-profile-boundary-codex-only.webp)
+
 [TOC]
 
 ## 세 층의 역할

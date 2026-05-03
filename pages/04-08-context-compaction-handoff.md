@@ -6,6 +6,8 @@
 
 에르메스 에이전트(Hermes Agent)의 context compaction은 긴 대화를 이어가게 도와준다. 하지만 압축은 마법이 아니다. 무엇을 남기고 무엇을 버릴지 기준이 없으면, 압축된 요약도 잘못된 방향을 오래 유지할 수 있다. 이 기준을 실제로 적용하는 주체가 [하비 기억 오케스트레이터](https://wikidocs.net/346133)다.
 
+![context compaction handoff 관리 흐름](../assets/images/body-figures/ch04-08-context-compaction-handoff-flow-codex-only-v2.webp)
+
 [TOC]
 
 ## 컨텍스트가 흐려지는 순간

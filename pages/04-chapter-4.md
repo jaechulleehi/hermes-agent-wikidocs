@@ -6,6 +6,8 @@
 
 에르메스 에이전트(Hermes Agent)의 기억은 하나의 저장소가 아니다. 지금 대화의 session, 장기 선호를 담는 memory, 역할과 권한을 나누는 profile/AGENTS.md, 팀 공통 기준을 담는 shared-memory, 누적 지식 원장인 Obsidian LLM Wiki, 그리고 OpenViking/RAG 같은 외부 회수층이 서로 다른 일을 맡는다.
 
+![AI 에이전트 기억층 운영 지도](../assets/images/body-figures/ch04-overview-memory-layer-map-codex-only.webp)
+
 [TOC]
 
 ## 이 장에서 다루는 문제

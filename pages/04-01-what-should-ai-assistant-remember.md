@@ -6,6 +6,8 @@ AI 개인비서가 기억해야 할 것은 모든 대화가 아니다. 앞 장�
 
 에르메스 에이전트(Hermes Agent)에서 하비가 강해지는 지점도 여기에 있다. 하비는 요청을 처리하는 창구이면서, 새 정보가 들어왔을 때 그것을 memory로 남길지, 현재 session에서만 다룰지, shared-memory나 Obsidian 같은 다른 층으로 보낼지 판단한다. 이 역할은 뒤에서 다루는 [하비 기억 오케스트레이터](https://wikidocs.net/346133)와 이어진다.
 
+![AI 개인비서 기억 승격 기준](../assets/images/body-figures/ch04-01-memory-promotion-criteria-codex-only.webp)
+
 [TOC]
 
 ## 모든 것을 기억하려고 하면 왜 망가질까

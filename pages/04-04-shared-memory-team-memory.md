@@ -6,6 +6,8 @@ Hermes Agent에서 역할형 AI 팀을 운영하면 개인 에이전트 memory�
 
 shared-memory는 단순 폴더가 아니다. 팀 공통 규칙, 원본 기준, handoff, 인덱스, 콘텐츠 패키지, 체크리스트를 담는 공용 기억층이다. 개인 에이전트가 각자 기억하면 어긋날 내용을 한곳에 두는 장치다. 더 오래 누적되는 지식은 [Obsidian LLM Wiki](https://wikidocs.net/346129)로 넘겨 외부 장기 기억으로 관리한다.
 
+![shared-memory 팀 공통 기억 허브](../assets/images/body-figures/ch04-04-shared-memory-team-hub-codex-only.webp)
+
 [TOC]
 
 ## 왜 개인 memory만으로는 부족할까

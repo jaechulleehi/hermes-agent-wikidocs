@@ -6,7 +6,7 @@ AI 에이전트의 기억 관리는 “중요한 것을 전부 저장하는 일�
 
 예를 들어 한 팀이 개인 비서형 에이전트, 조사형 에이전트, 정리형 에이전트를 함께 운영한다고 하자. 내부에서는 하비, 방울이, 뽀동이 같은 이름을 붙일 수 있지만 공개적으로 중요한 것은 이름이 아니라 역할이다. 누가 새 정보를 받아 분류하고, 누가 원자료를 조사하고, 누가 정리된 글로 바꾸며, 어떤 지식이 장기 기억으로 승격되는지를 분명히 나누는 것이 기억 관리 아키텍처의 핵심이다.
 
-![AI 에이전트 기억 관리 전체 구조](../assets/images/04-11-agent-memory-management-architecture/01_overall_memory_architecture.png)
+![AI 에이전트 기억 관리 전체 구조](../assets/images/body-figures/ch04-11-agent-memory-management-architecture-codex-only-v2.webp)
 
 [TOC]
 

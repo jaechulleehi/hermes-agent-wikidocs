@@ -6,6 +6,8 @@
 
 이 역할이 없으면 AI 팀은 많은 정보를 갖고도 매번 다시 묻는다. 누가 무엇을 기억해야 하는지, 어떤 원본을 먼저 봐야 하는지, 어떤 정보는 책이나 팀 문서로 정리해도 되는지 판단되지 않기 때문이다. 기억층이 정리된 다음에는 [외부 도구/MCP/자동화 운영](https://wikidocs.net/345907)이 더 안정적으로 붙는다.
 
+![하비 기억 오케스트레이터 판단 루프](../assets/images/body-figures/ch04-09-harvey-memory-orchestrator-decision-loop-codex-only.webp)
+
 [TOC]
 
 ## 하비가 먼저 나누는 질문

@@ -6,6 +6,8 @@ AI 에이전트의 기억은 사용자 선호만으로 만들어지지 않는다
 
 이 구분이 없으면 에이전트가 “사용자를 기억하는 것”과 “자기 역할을 아는 것”이 섞인다. 하비가 해야 할 판단을 뽀동이가 하거나, 뽀동이가 지켜야 할 글쓰기 기준이 하비의 라우팅 규칙 속에 묻히는 식이다. 개인 역할이 정리된 뒤에는 팀 전체가 함께 보는 [shared-memory](https://wikidocs.net/346128)가 필요해진다.
 
+![AGENTS.md와 USER.md 기억 역할 분리](../assets/images/body-figures/ch04-03-agents-user-md-role-memory-split-codex-only.webp)
+
 [TOC]
 
 ## 역할 기억과 사용자 기억은 다르다

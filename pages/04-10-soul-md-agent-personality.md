@@ -6,6 +6,8 @@
 
 공식 Personality/SOUL.md 설명은 실제 운영 관점으로 다시 읽어야 한다. 핵심은 하나다. SOUL.md는 선택 사항이지만, 하비/뽀동이처럼 역할과 개성이 중요한 [역할형 에이전트](https://wikidocs.net/345925)를 운영한다면 반드시 의식적으로 설계해야 한다.
 
+![SOUL.md 에이전트 성격 코어](../assets/images/body-figures/ch04-10-soul-md-agent-personality-core-codex-only.webp)
+
 [TOC]
 
 ## 먼저 확인할 것: 기능 설명과 운영 검증은 다르다
