@@ -4,6 +4,8 @@
 
 처음에는 빈칸을 짧게 채워도 된다. 중요한 것은 “AI가 알아서 해줘”가 아니라 “어디까지 맡기고 어디서 사람이 확인할지”를 보이게 만드는 것이다.
 
+![비개발자 AI 업무 자동화 워크시트](../assets/images/body-figures/a6-non-developer-automation-worksheet-codex-only.webp)
+
 [TOC]
 
 ## 1. 줄이고 싶은 업무 고르기

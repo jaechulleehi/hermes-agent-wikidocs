@@ -4,6 +4,8 @@
 
 정합성을 볼 때는 “비슷한 뜻인가”보다 “독자가 그대로 따라 했을 때 공식 문서와 충돌하지 않는가”를 기준으로 본다.
 
+![공식 문서 정합성 점검 흐름](../assets/images/body-figures/a4-docs-alignment-check-codex-only.webp)
+
 [TOC]
 
 ## 1. 공식 문서를 먼저 볼 항목
