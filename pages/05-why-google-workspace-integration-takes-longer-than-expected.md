@@ -25,6 +25,8 @@ Hermes Agent에서 MCP는 외부 도구를 대화 흐름에 붙이는 수단이�
 
 예를 들어 “지난달 계약서 찾아서 요약해줘”는 읽기 중심 작업이라 계정과 폴더 범위가 맞으면 바로 진행할 수 있다. 하지만 “Drive에서 오래된 파일 정리해줘”는 다르다. 삭제 후보를 먼저 목록화하고, 소유자/공유 범위/복구 가능성을 확인한 뒤 사람이 승인해야 한다. MCP 연결 여부보다 이 차이를 나누는 기준이 먼저다.
 
+![Google Workspace MCP 권한 경계와 승인 흐름](../assets/images/body-figures/ch05-google-workspace-mcp-permission-boundary-codex-only-v2.webp)
+
 ## MCP는 도구 연결이지 운영 완성이 아니다
 
 MCP를 붙이면 AI 개인비서가 외부 서비스와 대화할 수 있다. 하지만 “무엇을 언제, 어떤 검증 후에, 어디까지 실행할지”는 별도 기준이다. 이 판단은 [외부 도구/MCP/자동화 운영](https://wikidocs.net/345907) 전체의 출발점이다. 특히 [메인 창구 하비](https://wikidocs.net/345891)가 요청을 해석하고 위험도를 나눈 뒤 필요한 도구만 호출해야 한다.

@@ -21,6 +21,8 @@ AI 개인비서가 terminal을 쓰면 파일 검증, 테스트 실행, git 상�
 
 개인 학습이나 단순 검증은 local이 빠르다. 하지만 위험 명령, 낯선 repo, 대량 삭제/이동, 외부 코드를 실행하는 작업은 docker나 remote sandbox를 먼저 검토한다.
 
+![terminal backend 실행 위치와 위험 경계](../assets/images/body-figures/ch05-terminal-backend-risk-boundary-codex-only.webp)
+
 ## terminal이 강한 작업
 
 terminal은 다음 작업에서 특히 강하다.

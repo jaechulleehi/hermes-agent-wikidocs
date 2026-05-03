@@ -40,6 +40,8 @@ Open WebUI는 Hermes Agent를 OpenAI 호환 API처럼 호출한다. 사용자는
 
 이 구조를 이해하면 [always-on gateway](https://wikidocs.net/345906)와 [Hermes Agent 도구 실행 결과 검증](https://wikidocs.net/346290)이 왜 중요한지도 보인다. Gateway가 켜졌다는 사실과 사용자가 원하는 화면에서 결과를 받는 것은 별도 검증 대상이다.
 
+![Open WebUI Gateway API Server 연결 흐름](../assets/images/body-figures/ch05-open-webui-gateway-api-server-flow-codex-only-v3.webp)
+
 ## Docker가 꼭 필요할까
 
 Hermes Agent 자체에는 Docker가 필요하지 않다. 로컬에 Hermes Agent를 설치하고 Gateway/API Server를 실행하면 된다.

@@ -24,6 +24,8 @@ Daily Briefing Bot은 단순한 뉴스 요약 예제가 아니다. Hermes Agent�
 
 콘텐츠 신호가 강하면 뽀동이가 글 구조를 만들고, 하비가 최종 통합하며, 하망이가 이미지 제작 방향을 맡는다. 이 흐름은 [WikiDocs/블로그/강의 콘텐츠 시스템](https://wikidocs.net/345911)과 연결된다. 자동화는 “요약 보내기”에서 끝나는 것이 아니라 다음 역할에게 넘길 수 있어야 한다.
 
+![Daily Briefing Bot cron fresh session 전달 흐름](../assets/images/body-figures/ch05-daily-briefing-cron-fresh-session-flow-codex-only.webp)
+
 ## 검색원을 prompt 안에 적어야 한다
 
 Daily Briefing Bot류 작업에서 “웹에서 찾아줘”만 쓰면 검색 품질이 흔들린다. fresh session은 이전에 우리가 어떤 검색원을 선호했는지 모를 수 있기 때문이다. 그래서 정기 리서치 prompt에는 검색 도구와 출처 기준을 함께 적어야 한다.

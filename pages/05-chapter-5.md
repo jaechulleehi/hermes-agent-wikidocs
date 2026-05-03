@@ -23,6 +23,8 @@ Hermes Agent의 힘은 답변보다 연결에서 커진다. Google Workspace, No
 
 이 순서를 잡으면 “도구를 많이 붙이는 문제”가 아니라 “업무 흐름에 맞는 연결 방식을 고르는 문제”로 바뀐다.
 
+![Hermes Agent 외부 연결 선택과 결과 검증 흐름](../assets/images/body-figures/ch05-overview-tools-connection-map-codex-only-v2.webp)
+
 ## 외부 연결을 고를 때의 기준
 
 공식 Hermes Agent 문서는 MCP, gateway, tools, cron, terminal backend 같은 기능의 기준점이다. 이 책에서는 최신 설정값을 그대로 반복하기보다, 실제 운영에서 어떤 질문을 해야 하는지에 집중한다.

@@ -20,6 +20,8 @@ AI 개인비서는 자연어 요청을 받는다. 외부 도구는 API, CLI, OAu
 
 다만 MCP가 모든 운영 판단을 대신하지는 않는다. 같은 도구 호출이 반복 절차가 되면 [Hermes Agent Skill](https://wikidocs.net/346235)로 검증 기준을 남기고, 실패했을 때는 [복구 플레이북](https://wikidocs.net/345918)의 순서로 process/log/delivery를 좁혀야 한다.
 
+![MCP 외부 도구 권한 브리지와 결과 검증 흐름](../assets/images/body-figures/ch05-mcp-external-tools-permission-bridge-codex-only.webp)
+
 | 질문 | MCP가 해주는 것 | 사람이 정해야 할 것 |
 |---|---|---|
 | 어떤 도구가 있는가 | tool 목록과 schema를 노출한다 | 어떤 업무에 쓸지 정한다 |

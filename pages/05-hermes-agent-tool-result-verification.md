@@ -33,6 +33,8 @@ Hermes Agent 도구 실행의 끝은 “명령이 성공했다”가 아니다. 
 
 예를 들어 WikiDocs 원고를 고칠 때는 실행 전 TOC와 파일 범위를 확인한다. 실행 중에는 patch가 의도한 파일에만 들어갔는지 본다. 실행 후에는 Markdown 검증, GitHub 원본 반영, WikiDocs 공개 page ID 링크까지 확인한다.
 
+![도구 실행 결과 3단계 검증 흐름](../assets/images/body-figures/ch05-tool-result-verification-three-step-codex-only.webp)
+
 ## 좋은 완료 보고의 조건
 
 좋은 완료 보고는 “했습니다”로 끝나지 않는다. 사용자가 다시 확인해야 할 부담을 줄여야 한다.

@@ -19,6 +19,8 @@
 
 이 표에서 중요한 것은 연결 방식이 하나로 고정되지 않는다는 점이다. 어떤 도구는 API가 좋고, 어떤 도구는 MCP가 좋고, 어떤 흐름은 GitHub를 중간 원본 기준로 두는 편이 안전하다.
 
+![Notion Google Workspace WikiDocs 원본 기준 경계](../assets/images/body-figures/ch05-notion-google-wikidocs-source-boundary-codex-only.webp)
+
 ## Notion을 연결할 때
 
 Notion은 페이지보다 DB 구조가 핵심일 때가 많다. 그래서 “Notion에 써줘”라는 요청은 단순해 보여도 실제로는 어떤 database에, 어떤 property로, 어떤 상태값을 넣을지 정해야 한다.

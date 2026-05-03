@@ -18,6 +18,8 @@ GitHub는 원본 기준이 되기 쉽다. [GitHub와 WikiDocs로 콘텐츠를 �
 
 이 셋은 경쟁 관계가 아니다. 같은 운영에서도 함께 쓰일 수 있다. 예를 들어 로컬 repo 검증은 CLI가 빠르고, 이슈/PR 요약은 [MCP 연결](https://wikidocs.net/346231)이 자연스럽고, 대량 통계 수집은 API가 안정적일 수 있다. 반복되는 발행/검증 순서는 [Skill 운영](https://wikidocs.net/346235)으로 남겨야 다음 작업에서 같은 확인을 다시 설명하지 않는다.
 
+![GitHub CLI MCP API 선택 기준과 검증 흐름](../assets/images/body-figures/ch05-github-cli-mcp-api-choice-map-codex-only.webp)
+
 ## GitHub CLI가 좋은 경우
 
 GitHub CLI는 이미 개발자가 쓰는 방식과 가깝다. `git status`, `git diff`, `gh pr view`, `gh issue list` 같은 명령은 로컬 repo 상태와 함께 보기 좋다. 특히 GitHub-linked WikiDocs처럼 원고 repo가 원본 기준일 때는 CLI 검증이 유용하다.

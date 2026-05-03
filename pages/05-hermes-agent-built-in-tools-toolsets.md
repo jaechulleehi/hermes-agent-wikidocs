@@ -23,6 +23,8 @@
 
 이 분류는 기능 설명이 아니라 위험도 분류이기도 하다. Web 검색은 주로 읽기 작업이지만 terminal/file은 수정과 삭제로 이어질 수 있다. send_message는 외부 전달이고, cron은 사람이 없는 fresh session에서 실행된다.
 
+![내장 도구와 toolset 위험도 지도](../assets/images/body-figures/ch05-built-in-tools-toolsets-risk-map-codex-only.webp)
+
 ## toolset은 왜 필요한가
 
 toolset은 에이전트가 사용할 수 있는 도구 범위를 줄이는 장치다. 모든 도구를 항상 열어두면 편해 보이지만, 실제 운영에서는 필요하지 않은 권한까지 함께 열린다.
