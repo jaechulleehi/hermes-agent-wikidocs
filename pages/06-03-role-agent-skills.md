@@ -34,6 +34,8 @@
 
 이 기준이 없으면 이미지는 예뻐도 책의 메시지와 따로 논다. 이미지형 에이전트의 Skill은 “그림을 만드는 방법”보다 “본문 이해를 돕는 시각 자료로 통과시키는 기준”에 가깝다.
 
+![역할형 에이전트별 Skill 경계](../assets/images/body-figures/ch06-03-role-agent-skill-boundaries-codex-only.webp)
+
 ## 공통 Skill과 역할 Skill을 나누는 법
 
 | 구분 | 적합한 내용 | 예시 |

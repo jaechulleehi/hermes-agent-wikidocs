@@ -34,6 +34,8 @@ WikiDocs 발행은 처음엔 단순해 보였다. 글을 고치고, 원격 저�
 
 그래서 이미지형 에이전트 Skill에는 프롬프트 작성법만 남지 않는다. 스타일 기준, vision QA, 파일 포맷, 본문 삽입 전 확인 순서까지 함께 남는다. 이 내용은 [하망이와 WikiDocs 이미지를 만든 실제 운영 케이스](https://wikidocs.net/345991)에서 더 구체적으로 볼 수 있다.
 
+![반복 업무가 Skill 후보로 자라는 생애주기](../assets/images/body-figures/ch06-02-repeat-work-to-skill-lifecycle-codex-only.webp)
+
 ## Skill로 만들기 전 확인할 질문
 
 1. 이 작업은 같은 형태로 다시 올 가능성이 높은가?

@@ -20,6 +20,8 @@ Skill이 많아지면 에이전트가 더 똑똑해질 것처럼 보인다. 하�
 
 이 피드백은 단순히 한 페이지를 고치는 일로 끝나지 않았다. `wikidocs-github-ebook-pipeline` Skill에 “본문 링크는 푸터 링크가 아니라 본문 맥락 링크다”라는 기준이 들어갔다. 이후 WikiDocs 작업에서는 TOC 링크가 맞는지뿐 아니라, 독자가 읽는 흐름 안에서 `Skill`, `MCP`, `memory`, `하비`, `뽀동이`, `하망이` 같은 개념이 자연스럽게 연결되는지까지 본다.
 
+![Skill 생성 여부를 판단하는 기준](../assets/images/body-figures/ch06-01-when-to-create-skill-decision-gate-codex-only.webp)
+
 ## Skill, memory, cron을 나누는 기준
 
 | 구분 | 남길 내용 | 예시 |

@@ -33,6 +33,8 @@ WikiDocs MCP를 연결하면 책, 페이지, 블로그를 만들고 수정하는
 
 이 판단 기준이 Skill이다. MCP는 문을 열어주고, Skill은 그 문으로 들어가 무엇을 어떤 순서로 할지 정한다.
 
+![Skill memory MCP cron gateway 역할 지도](../assets/images/body-figures/ch06-06-skill-memory-mcp-cron-gateway-map-codex-only.webp)
+
 ## 잘못 나누면 생기는 문제
 
 | 착각 | 결과 | 바른 기준 |

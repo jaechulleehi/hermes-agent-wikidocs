@@ -32,6 +32,8 @@
 
 이 구분이 있어야 다른 사람은 이미지형 에이전트 운영법을 배울 수 있고, 팀 내부 작업자는 실제 배포 실수를 줄일 수 있다.
 
+![공개 Skill과 내부 Skill의 분리 기준](../assets/images/body-figures/ch06-05-public-internal-skill-boundary-codex-only.webp)
+
 ## 외부 Skill을 내부 운영에 맞게 바꾸는 순서
 
 공개 Skill은 출발점이지 완성본이 아니다. 특히 다른 에이전트 환경에서 온 Skill은 Hermes Agent의 toolset, profile, memory, approval 규칙에 맞게 번역해야 한다.

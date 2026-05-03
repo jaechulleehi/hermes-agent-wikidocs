@@ -30,6 +30,8 @@ Skill을 memory와 헷갈리면 운영이 쉽게 무너진다. memory는 오래 
 
 예를 들어 WikiDocs 발행 작업에서 중요한 것은 “원격 저장소에 반영한다”는 한 줄이 아니다. H1 사용 여부, 이미지 경로, TOC 링크, 본문 링크, 첫 문단의 독자 질문, 공개 WikiDocs 반영까지 확인해야 한다. 이 반복 검증 흐름이 Skill이 된다.
 
+![Skill 운영 자기 개선 루프](../assets/images/body-figures/ch06-overview-skill-self-improvement-loop-codex-only.webp)
+
 ## 역할별 Skill이 필요한 이유
 
 하비의 Skill은 요청을 나누고 결과를 통합하는 기준에 가깝다. 방울이의 Skill은 근거 수집과 반례 확인에 가깝다. 뽀동이의 Skill은 문서 구조, 문체, 링크, 출간 품질에 가깝다. 하망이의 Skill은 이미지 방향과 vision QA에 가깝고, 봉구의 Skill은 파일 수정과 실행 검증에 가깝다.

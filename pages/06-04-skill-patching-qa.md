@@ -36,6 +36,8 @@ Skill 보강은 “기억을 더 넣는 일”이 아니다. 실패가 발생했
 
 이처럼 Skill 보강은 한 파일만 고치는 일이 아니다. memory, shared-memory, Skill, session_search가 각자 맡을 자리를 나눠야 다음 작업에서 같은 피드백을 반복하지 않는다. 정기 크론이 모델 응답 단계에서 막힌 사례처럼, 실패 원인이 attached Skill의 범위와 표현에 있다면 [크론 오류를 Skill/메모리 개선으로 바꾸는 운영 케이스](https://wikidocs.net/346701)처럼 Skill 구성과 toolset까지 함께 줄여야 한다.
 
+![Skill 패치와 QA 피드백 루프](../assets/images/body-figures/ch06-04-skill-patching-qa-feedback-loop-codex-only.webp)
+
 ## Skill QA 체크리스트
 
 1. 이 Skill은 언제 로드해야 하는지 첫 문단에서 알 수 있는가?
