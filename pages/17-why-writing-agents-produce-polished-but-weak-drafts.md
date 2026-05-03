@@ -6,6 +6,8 @@
 
 [정리형 에이전트](https://wikidocs.net/345896)는 글을 예쁘게 만드는 역할이 아니라, 독자가 이해할 수 있는 흐름을 설계하는 역할이다. 재료가 부족하면 흐름은 만들 수 있어도 내용의 힘은 생기지 않는다.
 
+![그럴듯하지만 약한 초안의 구조](../assets/images/body-figures/ch03-6-polished-but-weak-draft-anatomy-codex-only.webp)
+
 [TOC]
 
 ## 보기 좋은데 힘이 없는 글의 신호

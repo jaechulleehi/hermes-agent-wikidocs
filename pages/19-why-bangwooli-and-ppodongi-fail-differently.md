@@ -6,6 +6,8 @@
 
 이 차이를 구분하지 못하면 [역할형 에이전트 운영](https://wikidocs.net/345925)의 피드백이 흐려진다. “글이 약하다”는 말만으로는 무엇을 고쳐야 하는지 알 수 없다. 근거를 다시 찾아야 하는지, 구조를 다시 잡아야 하는지, 실제 장면을 보강해야 하는지 나눠 봐야 한다.
 
+![조사형과 정리형 실패 차이](../assets/images/body-figures/ch03-4-research-vs-organization-failure-split-codex-only.webp)
+
 [TOC]
 
 ## 조사형은 왜 결론을 서두를까

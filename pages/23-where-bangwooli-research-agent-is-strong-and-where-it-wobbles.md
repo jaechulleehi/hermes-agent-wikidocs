@@ -6,6 +6,8 @@
 
 하지만 조사형 에이전트는 최종 판단자가 아니다. 조사 결과와 해석을 분리하지 않으면 빠른 답은 나오지만 근거가 약해진다. 특히 [Hermes Agent](https://wikidocs.net/346055)처럼 공식 기능, 실제 운영 경험, 콘텐츠 발행 기준이 함께 얽힌 주제에서는 “찾은 것”과 “판단한 것”을 구분해야 한다.
 
+![조사형 에이전트 근거 지도](../assets/images/body-figures/ch03-2-research-agent-evidence-map-codex-only.webp)
+
 [TOC]
 
 ## 조사형 에이전트가 강한 구간

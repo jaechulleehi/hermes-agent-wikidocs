@@ -6,6 +6,8 @@
 
 방울이 같은 조사형 에이전트에게 필요한 태도는 단정이 아니라 구분이다. 사실, 해석, 가설, 미확인 항목을 나눠야 정리형 에이전트가 그 재료를 안전하게 글로 바꿀 수 있다.
 
+![사실 해석 가설 분리 흐름](../assets/images/body-figures/ch03-5-research-fact-interpretation-hypothesis-codex-only.webp)
+
 [TOC]
 
 ## 결론이 먼저 나오면 생기는 문제

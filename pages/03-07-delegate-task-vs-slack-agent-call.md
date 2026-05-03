@@ -4,6 +4,8 @@ Hermes Agent에서 AI 개인비서가 다른 역할형 에이전트에게 일을
 
 하나는 `delegate_task`로 현재 작업 안에서 임시 subagent에게 맡기는 방식이다. 다른 하나는 Slack 같은 메시징 플랫폼에서 실제 역할형 에이전트 profile을 멘션해 호출하는 방식이다. 이 둘을 구분하지 않으면 “진짜 방울이가 한 일인지”, “하비가 내부 조사 작업자를 쓴 것인지”, “왜 봇이 답하지 않았는지”가 헷갈린다.
 
+![내부 위임과 실제 Slack 호출 차이](../assets/images/body-figures/ch03-7-delegate-task-vs-slack-profile-call-codex-only.webp)
+
 [TOC]
 
 ## 먼저 결론: 내부 위임과 실제 호출은 다르다
