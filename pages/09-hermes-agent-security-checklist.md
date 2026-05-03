@@ -2,7 +2,7 @@
 
 Hermes Agent 보안은 “나쁜 명령을 조심하자”에서 끝나지 않는다. [공식 Security 문서](https://hermes-agent.nousresearch.com/docs/user-guide/security)는 사용자 권한, 위험 명령 승인, 컨테이너 격리, MCP credential filtering, context file scanning, cross-session isolation, input sanitization을 함께 본다. 즉 보안은 한 옵션이 아니라 운영 층위 전체의 문제다. 위험 명령은 [승인/YOLO mode 기준](https://wikidocs.net/346260)과 함께 관리해야 한다.
 
-![Hermes Agent 보안 체크리스트 층위](../assets/images/chapter-heroes/ch9-4-security-checklist-codex.webp)
+![Hermes Agent 보안 체크리스트 층위](../assets/images/body-figures/ch09-4-security-layer-checklist-codex-only.webp)
 
 AI 개인비서와 역할형 에이전트를 실제 업무에 붙이면 권한이 빠르게 넓어진다. Slack에서 부르고, 터미널을 열고, GitHub를 고치고, WikiDocs를 발행하고, cron이 혼자 실행된다. 그래서 9장의 보안 체크리스트는 “무엇을 막을까”보다 “누가/어디서/무엇을/어떤 권한으로 실행하는가”를 먼저 묻는다.
 

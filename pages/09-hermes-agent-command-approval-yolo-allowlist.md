@@ -2,7 +2,7 @@
 
 Hermes Agent는 실행형 에이전트가 강력한 만큼 위험 명령 승인 기준이 중요하다. [공식 Security 문서](https://hermes-agent.nousresearch.com/docs/user-guide/security)는 `approvals.mode`를 `manual`, `smart`, `off`로 나누고, 위험 명령은 기본적으로 사람의 승인을 거치게 한다. 이 장에서의 핵심은 “승인을 귀찮게 볼 것인가, 운영 안전장치로 볼 것인가”다. 실행 범위가 넓어질수록 [gateway 권한과 실행 격리](https://wikidocs.net/346261)를 같이 점검해야 한다.
 
-![위험 명령 승인과 YOLO mode 관리](../assets/images/chapter-heroes/ch9-5-command-approval-yolo-allowlist-codex.webp)
+![위험 명령 승인과 YOLO mode 관리](../assets/images/body-figures/ch09-5-command-approval-yolo-boundary-codex-only.webp)
 
 위험 명령 승인은 속도를 늦추기 위한 장치가 아니다. AI가 파일을 고치고, shell을 실행하고, 배포나 삭제에 가까운 일을 할 때 사용자가 마지막 경계를 잡는 장치다. 특히 Slack/gateway처럼 채팅에서 바로 실행되는 환경에서는 승인 기준이 없으면 대화와 실행의 경계가 흐려진다.
 

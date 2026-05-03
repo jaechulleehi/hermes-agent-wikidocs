@@ -6,6 +6,8 @@
 
 Slack에서는 “이거 누가 해야 해?”, “왜 같은 하비인데 다르게 답하지?”, “방울이와 뽀동이를 같이 불러도 되나?”처럼 질문이 섞여 들어온다. 8장은 이런 질문을 identity, profile, role, tool, runtime, 원본 기준, recovery 중 어디에 놓을지 나누는 장이다.
 
+![8장 운영 FAQ와 멀티봇 라우팅](../assets/images/body-figures/ch08-overview-ops-faq-multibot-routing-codex-only.webp)
+
 [TOC]
 
 ## 처음 막혔을 때의 빠른 분기

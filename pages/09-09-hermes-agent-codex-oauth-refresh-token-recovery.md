@@ -4,6 +4,8 @@ Hermes Agent를 여러 profile로 운영하면서 `openai-codex`를 메인 provi
 
 결론은 단순하다. Codex CLI와 Hermes Agent profile들은 같은 OpenAI 계정을 써도 되지만, 같은 refresh token을 공유하면 안 된다. 각 profile은 `auth add openai-codex`를 따로 진행해서 독립 device auth credential을 가져야 한다. 이 글은 문제가 터진 뒤 복구하는 방법보다, 에이전트들의 Codex auth를 처음부터 어떻게 나눠야 하는지를 먼저 다룬다.
 
+![에이전트별 Codex auth와 refresh token 경계](../assets/images/body-figures/ch09-9-codex-auth-profile-token-boundary-codex-only.webp)
+
 [TOC]
 
 ## 왜 이 문제가 생길까
