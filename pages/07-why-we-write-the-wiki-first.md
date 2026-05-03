@@ -6,6 +6,8 @@
 
 블로그를 먼저 쓰면 당장의 메시지는 선명할 수 있다. 하지만 여러 글이 쌓이면 같은 설명이 반복되고, 공식 문서 반영 여부나 실제 운영 케이스가 어디에 있는지 찾기 어려워진다. WikiDocs는 이 문제를 줄이는 콘텐츠 모체다.
 
+![WikiDocs를 콘텐츠 모체로 먼저 쓰는 흐름](../assets/images/body-figures/ch07-1-wikidocs-first-content-mother-flow-codex-only.webp)
+
 [TOC]
 
 ## 왜 강의부터 만들면 남는 게 적을까

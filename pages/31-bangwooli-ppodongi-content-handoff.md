@@ -2,7 +2,7 @@
 
 방울이와 뽀동이의 handoff는 [Hermes Agent](https://wikidocs.net/346055) 역할형 에이전트 운영에서 중요한 연결점이다. 방울이가 근거를 많이 모아도 뽀동이가 독자 문제로 다시 구조화하지 않으면 좋은 WikiDocs 글이 되기 어렵다.
 
-![방울이 확장조사와 뽀동이 글쓰기 handoff 흐름](../assets/how-image-agent-creates-wikidocs-visuals/ch10-3-bangwooli-ppodongi-handoff-tool-badges-codex.png)
+![방울이 조사 결과를 뽀동이 원고 구조로 바꾸는 흐름](../assets/images/body-figures/ch07-2-research-to-writing-conversion-codex-only.webp)
 
 이 케이스의 핵심은 조사 결과를 그대로 넘기지 않는 것이다. [뽀동이](https://wikidocs.net/345896)가 이어받을 수 있도록 핵심 주장, 근거, 반례, 독자 질문, 공유 가능 여부를 함께 넘겨야 한다. 좋은 handoff는 “링크 모음”이 아니라 “글로 바꿀 수 있는 판단 묶음”이다.
 
