@@ -4,7 +4,7 @@ Hermes Agent에서 AI 에이전트의 기억을 강화한다는 말은 모든 �
 
 ![OpenViking과 RAG 기억 강화층](../assets/images/chapter-heroes/ch4-7-openviking-rag-memory-layer-codex.webp)
 
-에르메스 에이전트(Hermes Agent)에서 memory는 항상 주입할 짧은 기준을 맡고, Obsidian LLM Wiki는 누적 지식과 운영 원장을 맡는다. OpenViking/RAG는 이 둘 사이에서 필요한 지식을 검색하고, 관련성이 높은 조각을 다시 모델에게 건네는 기억 강화층으로 볼 수 있다. 다만 회수한 지식도 긴 대화 속에서는 흐려질 수 있으므로 [context compaction과 handoff](https://wikidocs.net/346132) 기준이 함께 필요하다.
+에르메스 에이전트(Hermes Agent)에서 memory는 항상 주입할 짧은 기준을 맡고, Obsidian LLM Wiki는 사람이 읽고 에이전트가 다시 찾는 누적 지식을 맡는다. OpenViking/RAG는 이 둘 사이에서 필요한 지식을 검색하고, 관련성이 높은 조각을 다시 모델에게 건네는 기억 강화층으로 볼 수 있다. 다만 회수한 지식도 긴 대화 속에서는 흐려질 수 있으므로 [context compaction과 handoff](https://wikidocs.net/346132) 기준이 함께 필요하다.
 
 ![OpenViking RAG 기억 회수층](../assets/images/body-figures/ch04-07-openviking-rag-retrieval-layer-codex-only.webp)
 
@@ -18,7 +18,7 @@ memory와 RAG를 같은 것으로 보면 설계가 흔들린다. memory는 적�
 |---|---|---|
 | 목적 | 항상 필요한 장기 기준 주입 | 필요한 지식 검색/회수 |
 | 크기 | 작게 유지 | 크게 확장 가능 |
-| 내용 | 선호, 규칙, 역할 기준 | 문서, 노트, 원장, 지식 조각 |
+| 내용 | 선호, 규칙, 역할 기준 | 문서, 노트, 결정 기록, 지식 조각 |
 | 위험 | 너무 길어지면 판단 흐림 | 잘못 회수하면 근거 왜곡 |
 | 검증 | 기억할 가치 판단 | 검색 적중률/근거 품질 평가 |
 

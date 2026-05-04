@@ -19,7 +19,7 @@ AI 운영에서 가장 흔한 착각은 중요한 것을 모두 memory에 넣으
 | 매번 지켜야 할 말투 선호 | 긴 문서/Slack 로그 | memory / USER.md |
 | 오늘 작업한 파일 목록 | memory | session / GitHub log |
 | 팀 전체가 따라야 할 운영 규칙 | 개인 memory | shared-memory |
-| 누적 조사와 모니터링 원장 | memory | Obsidian LLM Wiki |
+| 누적 조사와 모니터링 기록 | memory | Obsidian LLM Wiki |
 | 반복 실행 절차 | 대화 기록 | Skill / 체크리스트 |
 | 오래된 작업 회상 | 항상 주입 | session_search |
 

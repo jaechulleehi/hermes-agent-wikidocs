@@ -35,7 +35,7 @@ Hermes Agent 같은 AI 운영 시스템을 오래 쓰면 과거 문서가 자산
 | 정체성 | 에이전트의 역할, 톤, 품질 기준 | 현재 로드되지 않는 중복 문서 |
 | 운영 규칙 | 지금도 반복되는 판단 기준 | 예전 runtime에만 맞는 명령 |
 | 사용자 선호 | 장기적으로 반복될 협업 방식 | 특정 날짜의 작업 상태 |
-| 프로젝트 지식 | 누적 지식으로 연결할 원장 | 오래된 임시 메모 |
+| 프로젝트 지식 | 누적 지식으로 연결할 기록 | 오래된 임시 메모 |
 | 복구 경험 | 재발 방지 체크리스트 | 불필요한 세부값 |
 
 ## 기억 이관 체크리스트
@@ -77,7 +77,7 @@ OpenClaw에서 Hermes로 넘어올 때 가장 중요한 일은 “예전 것을 
 ```text
 OpenClaw 유산
   ↓
-정체성 / 사용자 선호 / 팀 규칙 / 프로젝트 원장 / 반복 절차 / 실행 설정으로 분해
+정체성 / 사용자 선호 / 팀 규칙 / 프로젝트 지식 / 반복 절차 / 실행 설정으로 분해
   ↓
 SOUL.md / USER.md / shared-memory / Obsidian / skill / profile config로 재배치
   ↓
@@ -90,7 +90,7 @@ SOUL.md / USER.md / shared-memory / Obsidian / skill / profile config로 재배�
 | 실제 작업 규칙과 검증 기준 | AGENTS.md |
 | 사용자 반복 선호 | USER.md / memory |
 | 팀 공통 운영 원칙 | shared-memory |
-| 누적 지식과 원장 | Obsidian HALOX Brain |
+| 누적 지식과 운영 기록 | Obsidian HALOX Brain |
 | 반복 가능한 실행 절차 | skill |
 | 오래된 실행 흔적 | archive 또는 GitHub/session_search 회수 |
 

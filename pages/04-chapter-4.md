@@ -4,7 +4,7 @@
 
 ![4장 기억 컨텍스트 프로필 경계 구조](../assets/images/chapter-heroes/ch04-memory-context-profile-boundary-codex.webp)
 
-에르메스 에이전트(Hermes Agent)의 기억은 하나의 저장소가 아니다. 지금 대화의 session, 장기 선호를 담는 memory, 역할과 권한을 나누는 profile/AGENTS.md, 팀 공통 기준을 담는 shared-memory, 누적 지식 원장인 Obsidian LLM Wiki, 그리고 OpenViking/RAG 같은 외부 회수층이 서로 다른 일을 맡는다.
+에르메스 에이전트(Hermes Agent)의 기억은 하나의 저장소가 아니다. 지금 대화의 session, 장기 선호를 담는 memory, 역할과 권한을 나누는 profile/AGENTS.md, 팀 공통 기준을 담는 shared-memory, 사람과 에이전트가 함께 관리하는 Obsidian LLM Wiki, 그리고 OpenViking/RAG 같은 외부 회수층이 서로 다른 일을 맡는다.
 
 ![AI 에이전트 기억층 운영 지도](../assets/images/body-figures/ch04-overview-memory-layer-map-codex-only.webp)
 
@@ -18,7 +18,7 @@
 | session/memory/profile은 어떻게 다를까 | 현재 대화와 장기 규칙이 섞임 | 단기 맥락/장기 규칙/실행 주체를 분리 |
 | AGENTS.md와 USER.md는 왜 필요한가 | 에이전트 역할과 사용자 선호가 뒤섞임 | 역할 기억과 사용자 기억을 분리 |
 | shared-memory는 어디에 쓰나 | 팀 공통 기준이 개인 memory에 흩어짐 | 공용 규칙/인덱스/handoff를 한 층으로 관리 |
-| Obsidian은 어디에 놓을까 | 콘텐츠 자료로만 좁게 봄 | 외부 장기 기억/운영 원장/LLM Wiki로 운영 |
+| Obsidian은 어디에 놓을까 | 콘텐츠 자료로만 좁게 봄 | 외부 장기 기억/운영 기록/LLM Wiki로 운영 |
 | OpenViking/RAG는 왜 필요한가 | 모든 지식을 프롬프트에 넣으려 함 | 필요할 때 검색/회수하는 기억 강화층을 둠 |
 | SOUL.md는 어디에 쓰나 | 성격과 작업 규칙을 한 파일에 섞음 | 정체성은 SOUL.md, 운영 규칙은 AGENTS.md로 나눔 |
 | 기억 관리 아키텍처는 어떻게 나눌까 | memory, shared-memory, skills, Obsidian, RAG가 뒤섞임 | 저장소보다 역할 분리와 승격 흐름을 먼저 설계함 |
@@ -31,7 +31,7 @@
 | memory / USER.md | 반복 선호/장기 규칙/사용자 기준 | 작업 로그/긴 원문 |
 | AGENTS.md / SOUL.md / profile | 에이전트 역할/말투/권한/도구 경계 | 프로젝트별 임시 상태 |
 | shared-memory | 팀 공통 규칙/인덱스/handoff/작업 원본 | 개인 취향만 담긴 기록 |
-| Obsidian LLM Wiki | 누적 지식/운영 원장/연결형 지식베이스 | 즉시 실행해야 할 짧은 지시 |
+| Obsidian LLM Wiki | 누적 지식/운영 기록/연결형 지식베이스 | 즉시 실행해야 할 짧은 지시 |
 | OpenViking / RAG | 외부 지식 회수/기억 강화 | 검증되지 않은 원자료 전체 |
 | session_search / GitHub log | 과거 작업 회수/변경 이력 확인 | 항상 주입할 장기 기억 |
 | WikiDocs | 함께 읽을 지식으로 정리한 결과물 | 드러내면 안 되는 세부값과 운영 흔적 |

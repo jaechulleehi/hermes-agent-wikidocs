@@ -19,7 +19,7 @@
 | 앞으로도 반복될 사용자 선호인가? | memory / USER.md |
 | 에이전트 역할이나 도구 경계인가? | AGENTS.md / SOUL.md / profile |
 | 팀 전체가 따라야 할 규칙인가? | shared-memory |
-| 누적 지식이나 운영 원장인가? | Obsidian LLM Wiki |
+| 누적 지식이나 운영 기록인가? | Obsidian LLM Wiki |
 | 반복 실행 절차인가? | skill / 체크리스트 |
 | 현재 작업 상태인가? | session / todo / handoff |
 | 과거 작업을 회수해야 하나? | session_search / GitHub log |
@@ -28,7 +28,7 @@
 
 ## HaloX 글 작업에서 기억을 배치하는 방식
 
-HaloX 글 작업은 하나의 요청처럼 보이지만 실제로는 여러 기억층을 지나간다. 방울이가 조사한 원자료는 Obsidian 원장과 shared-memory 패키지로 이어지고, 뽀동이는 그 자료를 읽기 쉬운 글 구조로 바꾼다. 하망이는 이미지 방향을 잡고, 하비는 최종 통합과 공유 범위를 판단한다.
+HaloX 글 작업은 하나의 요청처럼 보이지만 실제로는 여러 기억층을 지나간다. 방울이가 조사한 원자료는 Obsidian 지식 기록과 shared-memory 패키지로 이어지고, 뽀동이는 그 자료를 읽기 쉬운 글 구조로 바꾼다. 하망이는 이미지 방향을 잡고, 하비는 최종 통합과 공유 범위를 판단한다.
 
 이때 하비가 해야 할 일은 중간 산출물을 그대로 전달하는 것이 아니다. 무엇이 장기 규칙인지, 무엇이 이번 콘텐츠 패키지인지, 무엇이 Obsidian에 남을 누적 지식인지, 무엇이 WikiDocs나 블로그로 공유할 수 있는지 나눠야 한다.
 
@@ -40,7 +40,7 @@ HaloX 글 작업은 하나의 요청처럼 보이지만 실제로는 여러 기�
 |---|---|
 | 작업 로그를 memory에 넣음 | 장기 기억이 지저분해짐 |
 | 공통 규칙을 개인 profile에만 둠 | 에이전트마다 기준이 달라짐 |
-| Obsidian 원장을 생략함 | 나중에 근거를 다시 찾기 어려움 |
+| Obsidian 지식 기록을 생략함 | 나중에 근거를 다시 찾기 어려움 |
 | RAG 대상을 정리 없이 넣음 | 잘못된 회수와 근거 왜곡이 생김 |
 | 공유 글에 불필요한 세부값을 남김 | 보안/신뢰 리스크가 생김 |
 | 위임만 하고 통합하지 않음 | 사용자가 다시 정리해야 함 |
@@ -52,7 +52,7 @@ HaloX 글 작업은 하나의 요청처럼 보이지만 실제로는 여러 기�
 1. 하비는 요청을 받으면 먼저 기억층을 분류한다.
 2. 장기 선호는 memory/USER.md로 압축한다.
 3. 팀 공통 규칙은 shared-memory로 승격한다.
-4. 누적 지식과 원장은 Obsidian LLM Wiki로 보낸다.
+4. 누적 지식과 운영 기록은 Obsidian LLM Wiki로 보낸다.
 5. 반복 절차는 skill로 남길지 판단한다.
 6. 과거 작업은 memory로 추측하지 말고 session_search/GitHub log로 찾는다.
 7. 외부 지식 회수가 필요하면 OpenViking/RAG 대상으로 본다.
@@ -69,7 +69,7 @@ elif 특정 에이전트의 역할 기준이면:
     profile / AGENTS.md
 elif 팀 전체가 같이 볼 작업 원본이면:
     shared-memory
-elif 누적 지식이나 운영 원장이면:
+elif 누적 지식이나 운영 기록이면:
     Obsidian LLM Wiki
 elif 절차가 반복되면:
     skill
@@ -106,7 +106,7 @@ elif 함께 읽을 만한 지식이면:
 |---|---|---|
 | 사람 | 사용자가 다음에도 같은 방식을 원하나 | memory / USER.md |
 | 운영 | 팀 전체가 따라야 하나 | shared-memory |
-| 프로젝트 | 누적 지식과 원장이 필요한가 | Obsidian HALOX Brain |
+| 프로젝트 | 누적 지식과 운영 기록이 필요한가 | Obsidian HALOX Brain |
 | 절차 | 다음에도 같은 순서로 실행할 일인가 | skill / 체크리스트 |
 | 과거 회상 | 이미 지나간 작업을 찾아야 하나 | session_search / GitHub log |
 | 공유 지식 | 독자에게 설명할 가치가 있나 | WikiDocs |

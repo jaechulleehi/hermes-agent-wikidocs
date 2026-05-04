@@ -24,9 +24,9 @@ shared-memory는 단순 폴더가 아니다. 팀 공통 규칙, 원본 기준, h
 
 ## HaloX 기록이 세 층으로 나뉘는 이유
 
-HaloX 운영에서는 memory, shared-memory, HALOX Brain을 나눠 쓴다. memory는 장기 규칙과 선호, shared-memory는 공용 작업 원본과 handoff, HALOX Brain은 누적 지식과 운영 원장을 맡는다.
+HaloX 운영에서는 memory, shared-memory, HALOX Brain을 나눠 쓴다. memory는 장기 규칙과 선호, shared-memory는 공용 작업 원본과 handoff, HALOX Brain은 사람이 읽고 에이전트가 다시 찾는 누적 지식을 맡는다.
 
-예를 들어 방울이가 조사한 내용이 콘텐츠 후보가 되면, 원장은 Obsidian에 남기고 후속 작업 패키지는 shared-memory로 이어진다. 사용자가 “넘겨”라고 판단하면 뽀동이, 하비, 하망이가 그 패키지를 보고 이어받을 수 있어야 한다.
+예를 들어 방울이가 조사한 내용이 콘텐츠 후보가 되면, 정리된 지식 기록은 Obsidian에 남기고 후속 작업 패키지는 shared-memory로 이어진다. 사용자가 “넘겨”라고 판단하면 뽀동이, 하비, 하망이가 그 패키지를 보고 이어받을 수 있어야 한다.
 
 ## shared-memory에 둘 것
 
@@ -46,7 +46,7 @@ HaloX 운영에서는 memory, shared-memory, HALOX Brain을 나눠 쓴다. memor
 - profile별 문서에는 공통 내용을 복붙하지 말고 원본을 참조한다.
 - handoff는 다음 에이전트가 바로 이어받을 수 있는 형태로 쓴다.
 - 오래 지속되는 임시 규칙은 handoff에서 꺼내 공용 문서로 승격한다.
-- Obsidian 원장과 shared-memory 작업 패키지는 서로 추적 가능해야 한다.
+- Obsidian 지식 기록과 shared-memory 작업 패키지는 서로 추적 가능해야 한다.
 - 공유 글로 정리할 때는 내부 경로와 운영 세부값을 제거하고 판단 기준만 남긴다.
 
 ## shared-memory 예시 구조
@@ -81,7 +81,7 @@ shared-memory는 처음부터 예쁘게 설계된 폴더가 아니라, 여러 �
 | 콘텐츠 작업 원본이 Slack/로컬/노트에 흩어짐 | content-system/packages와 인덱스로 작업 패키지를 관리한다 |
 | 조사 결과가 글쓰기까지 이어지지 않음 | research queue와 handoff로 방울이 → 뽀동이 → 하비 흐름을 만든다 |
 | 이미지/디자인 기준이 매번 달라짐 | design-system을 공통 참조 축으로 둔다 |
-| Obsidian 원장과 실행 파일이 끊김 | shared-memory 패키지와 HALOX Brain 노트를 서로 추적 가능하게 둔다 |
+| Obsidian 지식 기록과 실행 파일이 끊김 | shared-memory 패키지와 HALOX Brain 노트를 서로 추적 가능하게 둔다 |
 
 ## shared-memory와 Obsidian을 함께 쓰는 흐름
 
@@ -90,7 +90,7 @@ shared-memory는 처음부터 예쁘게 설계된 폴더가 아니라, 여러 �
   ↓
 강한 신호는 shared-memory research queue나 content package로 구조화
   ↓
-HALOX Brain에는 원장/MOC/관련 노트로 연결
+HALOX Brain에는 MOC/관련 노트/결정 기록으로 연결
   ↓
 뽀동이가 글이나 WikiDocs 구조로 정리
   ↓
@@ -107,4 +107,4 @@ memory는 개인 에이전트나 사용자 선호에 가까운 장기 기준이�
 
 ### shared-memory와 Obsidian은 어떻게 다르나요?
 
-shared-memory는 실행과 handoff에 가깝다. Obsidian은 누적 지식, 원장, 연결형 위키에 가깝다. 둘은 대체 관계가 아니라 연결 관계다.
+shared-memory는 실행과 handoff에 가깝다. Obsidian은 누적 지식과 연결형 위키에 가깝다. 둘은 대체 관계가 아니라 연결 관계다.

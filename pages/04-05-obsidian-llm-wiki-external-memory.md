@@ -4,9 +4,9 @@ Obsidian LLM Wiki의 가치는 메모를 많이 쌓는 데 있지 않다. [share
 
 ![Obsidian LLM Wiki 외부 장기 기억](../assets/images/chapter-heroes/ch4-5-obsidian-llm-wiki-external-memory-codex.webp)
 
-따라서 Obsidian은 강의 시스템이나 콘텐츠 제작 도구에만 묶으면 안 된다. HALOX Brain은 누적 지식 베이스, 운영 원장, 연결형 LLM Wiki 역할을 맡는 외부 장기 기억층이다. 이 지식층이 커질수록 [OpenViking/RAG](https://wikidocs.net/346131)처럼 필요한 내용을 회수하는 구조가 중요해진다.
+따라서 Obsidian은 강의 시스템이나 콘텐츠 제작 도구에만 묶으면 안 된다. HALOX Brain은 사람이 읽고 고치며 Hermes Agent가 다시 찾을 수 있는 누적 지식 베이스이자 연결형 LLM Wiki다. 이 지식층이 커질수록 [OpenViking/RAG](https://wikidocs.net/346131)처럼 필요한 내용을 회수하는 구조가 중요해진다.
 
-![Obsidian LLM Wiki 외부 장기 기억 원장](../assets/images/body-figures/ch04-05-obsidian-llm-wiki-knowledge-ledger-codex-only.webp)
+![Obsidian LLM Wiki 외부 장기 기억 구조](../assets/images/body-figures/ch04-05-obsidian-llm-wiki-knowledge-ledger-codex-only.webp)
 
 [TOC]
 
@@ -18,7 +18,7 @@ Hermes Agent의 memory는 항상 주입되는 짧은 장기 기준이다. shared
 |---|---|---|
 | memory | 짧은 장기 규칙 | 사용자별 반복 선호 |
 | shared-memory | 공용 작업 원본 | 콘텐츠 패키지, handoff, 팀 규칙 |
-| Obsidian LLM Wiki | 누적 지식/운영 원장 | 모니터링 기록, MOC, product signal, 발행 연결 |
+| Obsidian LLM Wiki | 누적 지식/운영 기록 | 모니터링 기록, MOC, product signal, 발행 연결 |
 | WikiDocs | 읽기 쉬운 공유 지식 | 내부 경험을 정리한 책 페이지 |
 
 Obsidian은 사람이 탐색하기에도 좋고, 나중에 RAG나 OpenViking 같은 회수층과 연결하기에도 좋다. 그래서 “기록 저장소”가 아니라 “AI 팀이 다시 쓸 수 있는 지식 구조”로 설계해야 한다.
@@ -27,7 +27,7 @@ Obsidian은 사람이 탐색하기에도 좋고, 나중에 RAG나 OpenViking 같
 
 HaloX 운영에서는 매일 조사/모니터링 결과가 쌓인다. 이 결과를 전부 memory에 넣으면 다음 세션이 무거워지고, 핵심 규칙이 묻힌다. 반대로 Slack에만 두면 나중에 회수하기 어렵다.
 
-그래서 누적 원장은 HALOX Brain에, 작업 패키지와 handoff는 shared-memory에, 반복될 선호와 팀 규칙은 memory/team-rules에 둔다. 예를 들어 방울이의 조사 결과가 콘텐츠 후보가 되면, 원장은 Obsidian에 남기고 후속 작업 패키지는 shared-memory로 이어진다.
+그래서 누적 지식은 HALOX Brain에, 작업 패키지와 handoff는 shared-memory에, 반복될 선호와 팀 규칙은 memory/team-rules에 둔다. 예를 들어 방울이의 조사 결과가 콘텐츠 후보가 되면, 정리된 판단과 연결 정보는 Obsidian에 남기고 후속 작업 패키지는 shared-memory로 이어진다.
 
 ## LLM Wiki로 쓰려면 무엇이 달라져야 할까
 
@@ -47,7 +47,7 @@ HaloX 운영에서는 매일 조사/모니터링 결과가 쌓인다. 이 결과
 ## Obsidian을 기억층으로 쓸 때의 기준
 
 1. 일일 로그와 긴 브리프를 memory에 넣지 않는다.
-2. 누적 지식과 운영 원장은 Obsidian에 둔다.
+2. 누적 지식과 운영 기록은 Obsidian에 둔다.
 3. shared-memory는 작업 원본과 handoff로 쓴다.
 4. Obsidian 노트는 원자료/판단/상태/연결/다음 액션을 갖추게 한다.
 5. RAG/OpenViking 연결을 염두에 두고 제목과 구조를 정리한다.
@@ -67,16 +67,16 @@ HaloX 운영에서는 매일 조사/모니터링 결과가 쌓인다. 이 결과
 
 이 기준을 세우지 않으면 knowledge base가 또 하나의 큰 memory 파일이 된다. 에이전트가 잘 쓰는 외부 기억은 “전부 넣어둔 창고”가 아니라 “질문이 들어왔을 때 어떤 문서를 찾을지 알 수 있는 색인”에 가깝다.
 
-## 운영 원장으로 쓰는 방식
+## 함께 관리하는 지식 기록으로 쓰는 방식
 
-Obsidian을 기억층으로 쓴다는 말은 모든 대화를 노트로 복사한다는 뜻이 아니다. 시간이 지나도 다시 찾을 가치가 있는 지식, 서로 연결되어야 의미가 커지는 지식, 사람과 AI가 함께 읽어야 하는 운영 원장을 남긴다는 뜻이다.
+Obsidian을 기억층으로 쓴다는 말은 모든 대화를 노트로 복사한다는 뜻이 아니다. 시간이 지나도 다시 찾을 가치가 있는 지식, 서로 연결되어야 의미가 커지는 지식, 사람과 Hermes Agent가 함께 읽고 고칠 수 있는 기록을 남긴다는 뜻이다.
 
 ```text
 일일 조사 / 모니터링
   ↓
 강한 신호만 선별
   ↓
-프레임워크 / 기능 아이디어 / 콘텐츠 원장으로 승격
+프레임워크 / 기능 아이디어 / 콘텐츠 기록으로 승격
   ↓
 필요할 때 하비나 전문 에이전트가 다시 회수
 ```
@@ -124,7 +124,7 @@ HALOX Home MOC
 
 | 상황 | Obsidian에 남기는 것 | shared-memory에 남기는 것 |
 |---|---|---|
-| 일일 모니터링 | daily 원장, 강한 신호, MOC 연결 | 후속 조사 큐, 콘텐츠 갭, 작업 패키지 |
+| 일일 모니터링 | daily 기록, 강한 신호, MOC 연결 | 후속 조사 큐, 콘텐츠 갭, 작업 패키지 |
 | 콘텐츠 제작 | brief/draft/published 연결과 관련 개념 | 실제 원고 패키지, 이미지, 메타, 발행 체크 |
 | 제품 신호 | feature idea, backlog, roadmap 연결 | 실행용 handoff와 우선순위 메모 |
 | 운영 규칙 변경 | 열람용 미러와 MOC 연결 | canonical 원본과 팀 공통 규칙 |
@@ -133,7 +133,7 @@ HALOX Home MOC
 
 ### Obsidian과 WikiDocs는 어떻게 나누나요?
 
-Obsidian은 내부 운영 지식과 원장이고, WikiDocs는 읽는 사람에게 설명하는 책이다. 같은 이야기도 독자가 읽을 글로는 다시 써야 한다.
+Obsidian은 사람이 읽고 에이전트가 회수하는 내부 운영 지식이고, WikiDocs는 읽는 사람에게 설명하는 책이다. 같은 이야기도 독자가 읽을 글로는 다시 써야 한다.
 
 ### 모든 대화를 Obsidian에 옮겨야 하나요?
 

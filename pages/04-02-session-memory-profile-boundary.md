@@ -66,7 +66,7 @@ profile = 에이전트가 어떤 주체로 행동할지 정하는 역할 기억
 | 다음 세션에도 반복될 선호인가 | memory / USER.md |
 | 이 에이전트의 역할과 도구 경계인가 | profile / AGENTS.md / SOUL.md |
 | 팀 전체의 원본 기준인가 | shared-memory |
-| 누적 지식이나 운영 원장인가 | Obsidian HALOX Brain |
+| 누적 지식이나 운영 기록인가 | Obsidian HALOX Brain |
 | 과거 작업을 회수해야 하는가 | session_search / GitHub log |
 
 ## 자주 헷갈리는 질문
