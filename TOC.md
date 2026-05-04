@@ -61,7 +61,7 @@
   - [06-5. 공개 GitHub Skill과 내부 Skill은 어떻게 분리할까](pages/06-05-public-internal-github-skills.md)
   - [06-6. Skill과 memory/MCP/cron/gateway는 어떻게 다를까](pages/06-06-skill-vs-memory-mcp-cron-gateway.md)
 - [07. AI 문서화 자동화와 WikiDocs 콘텐츠 시스템](pages/06-chapter-6.md)
-  - [07-1. 왜 WikiDocs를 먼저 쓰고 블로그/강의를 나중에 뽑을까](pages/07-why-we-write-the-wiki-first.md)
+  - [07-1. Obsidian을 먼저 쓰면 WikiDocs도 되고 블로그도 된다](pages/07-why-we-write-the-wiki-first.md)
   - [07-2. 좋은 조사 결과가 바로 좋은 글이 되지 않는 이유](pages/08-why-good-research-does-not-automatically-become-a-good-blog.md)
   - [07-3. 하망이와 WikiDocs 본문 이미지를 만드는 법](pages/28-how-image-agent-creates-wikidocs-visuals.md)
 - [08. Hermes Agent 운영 FAQ와 멀티봇 실패 패턴](pages/07-chapter-7.md)
