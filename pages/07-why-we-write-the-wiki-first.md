@@ -31,7 +31,7 @@
 | 강의 | 순서와 실습 | WikiDocs 기준을 학습 흐름과 실습 과제로 재배열한다 |
 | 카드뉴스/이미지 | 한 메시지 전달 | 본문 핵심을 시각 자산으로 변환한다 |
 
-이 구조에서는 WikiDocs가 원본이 아니라 공개본이다. 원본 지식은 Obsidian에 있고, WikiDocs는 독자가 이해할 수 있는 형태로 편집된 책이다. GitHub는 WikiDocs 원고의 source of truth이고, WikiDocs는 공개 배포 화면이다. 이 발행 검증 흐름은 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서 더 자세히 다룬다.
+이 구조에서는 WikiDocs가 원본이 아니라 독자가 읽는 책이다. 원본 지식은 Obsidian에 있고, WikiDocs는 독자가 이해할 수 있는 형태로 편집된 결과물이다. GitHub는 WikiDocs 원고의 원본 기준이고, WikiDocs는 배포 화면이다. 이 발행 검증 흐름은 [GitHub와 WikiDocs로 콘텐츠를 발행하고 고치는 흐름](https://wikidocs.net/345994)에서 더 자세히 다룬다.
 
 ## 실제 운영 흐름: Obsidian에서 공개 콘텐츠까지
 

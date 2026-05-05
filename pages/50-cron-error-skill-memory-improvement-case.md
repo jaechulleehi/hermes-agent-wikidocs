@@ -88,7 +88,7 @@ The content was flagged for possible cybersecurity risk.
 - attached Skill이 작업 목적보다 넓지 않은가?
 - toolset이 실제 필요한 범위보다 넓지 않은가?
 - 재발 방지 기준을 Skill에 남길지, memory에 남길지 구분했는가?
-- 공개 문서로 옮길 때 내부 job id, 민감한 계정값, 원문 오류 전체를 그대로 노출하지 않았는가?
+- 외부에 공유할 때 내부 job id, 계정값, 원문 오류 전체를 그대로 노출하지 않았는가?
 
 ## FAQ
 

@@ -81,10 +81,10 @@ hermes --version
 
 ```env
 API_SERVER_ENABLED=true
-API_SERVER_KEY=your-secret-key
+API_SERVER_KEY=<example-api-server-key>
 ```
 
-공유 문서나 스크린샷에는 실제 key를 남기지 않는다. 실습 문서에서는 `your-secret-key`처럼 예시값만 사용한다.
+공유 문서나 스크린샷에는 실제 key를 남기지 않는다. 실습 문서에서는 `<example-api-server-key>`처럼 예시값만 사용한다.
 
 ### 3. Gateway 실행
 
@@ -109,7 +109,7 @@ Open WebUI를 Docker로 실행한다.
 ```bash
 docker run -d -p 3000:8080 \
   -e OPENAI_API_BASE_URL=http://host.docker.internal:8642/v1 \
-  -e OPENAI_API_KEY=your-secret-key \
+  -e OPENAI_API_KEY=<example-openwebui-key> \
   --add-host=host.docker.internal:host-gateway \
   -v open-webui:/app/backend/data \
   --name open-webui --restart always \
