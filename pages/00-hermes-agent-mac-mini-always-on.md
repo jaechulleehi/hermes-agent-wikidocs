@@ -115,14 +115,14 @@ Slack에서 AI 개인비서가 갑자기 답하지 않으면 바로 모델 문�
 
 ## 보호해야 할 운영 세부값
 
-맥미니 구축기는 실제성이 강할수록 유용하지만, 그대로 공개하면 안 되는 값도 많다. 아래 항목은 예시 구조만 남기고 실제 값은 공개하지 않는다.
+맥미니 구축기는 실제성이 강할수록 유용하지만, 그대로 드러내면 안 되는 값도 많다. 아래 항목은 예시 구조만 남기고 실제 값은 제거한다.
 
 - 개인 홈 디렉터리의 정확한 경로
 - Slack channel ID, bot token, app token, webhook URL
 - LaunchAgent label 중 개인/조직을 특정할 수 있는 값
 - API key, OAuth token, provider credential
 - 외부 접속 주소, Tailscale 이름, SSH host alias
-- 내부 운영 채널명, 고객/파트너 이름
+- 운영 채널명, 고객/파트너 이름
 
 책이나 팀 문서에는 “어떤 값을 봐야 하는가”와 “왜 그 값이 중요한가”를 남기고, 실제 값은 팀 내부 문서나 secure secret store에 둔다.
 
