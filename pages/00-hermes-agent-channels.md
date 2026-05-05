@@ -50,7 +50,9 @@ Slack은 업무 요청과 결과가 같은 공간에 남는다. 그래서 AI 개
 
 ## 메신저별 차이는 기능보다 대화 방식이다
 
-우리는 현재 Slack을 주 채널로 운영한다. 그래서 이 책의 실제 사례는 Slack 스레드, 하비의 최종 통합, 뽀동이의 짧은 보고, cron 결과 delivery를 중심으로 설명한다. Telegram/Discord/Email/Webhook은 같은 Hermes Agent를 다른 입구로 부르는 확장 선택지로 본다.
+AI 팀의 인터페이스는 별도 대시보드가 아니라 메신저에 가까워야 한다. OpenClaw 사례에서는 Telegram이 이 역할을 했고, Hermes Agent 운영에서는 Slack/Telegram 같은 실제 업무 채널이 그 역할을 한다. 중요한 것은 새 화면을 하나 더 여는 것이 아니라, 사용자가 이미 일하는 대화 공간 안에서 요청, 승인, 피드백, 기록이 이어지는 것이다.
+
+우리는 현재 Slack을 주 채널로 운영한다. 그래서 이 책의 실제 사례는 Slack 스레드, 하비의 최종 통합, 뽀동이의 짧은 보고, cron 결과 delivery를 중심으로 설명한다. Telegram은 모바일 개인비서 감각이 강한 채널로 보고, Discord/Email/Webhook은 같은 Hermes Agent를 다른 입구로 부르는 확장 선택지로 본다.
 
 | 채널 | 잘 맞는 장면 | 먼저 정할 것 |
 |---|---|---|

@@ -18,6 +18,17 @@
 
 최근 보강에는 OpenClaw 커뮤니티 대화 CSV를 참고했다. 이 자료는 특정 개인의 발화를 그대로 옮기기 위한 원천이 아니라, 입문자와 운영자가 반복해서 막히는 질문을 찾는 신호로 사용한다.
 
+## 1-2. 최근 보강 소스: OpenClaw 6-agent Medium 사례
+
+2026년 5월 공유된 `I built a team of 6 OpenClaw agents that run my life 24/7` 사례는 Hermes Agent 책에 그대로 이식할 기능 목록이 아니라, 시장이 어떤 메시지에 반응하는지 보여주는 외부 사례로 사용한다. 핵심 신호는 `AI 팀`, `Telegram/Slack 같은 메신저 인터페이스`, `SOUL.md/personality`, `파일 기반 handoff`, `memory 교정`, `보안 권한 경계`, `정기 실행과 self-healing`, `처음엔 한 명부터 시작`이다.
+
+Hermes 반영 원칙:
+
+- OpenClaw의 Telegram 중심 표현은 Hermes에서는 `Slack/Telegram 같은 메신저 인터페이스`로 바꾼다.
+- OpenClaw의 HEARTBEAT.md는 Hermes 고정 기능처럼 쓰지 않고, cron/status/gateway log/delivery 점검 루틴으로 번역한다.
+- SOUL.md는 Hermes에도 관련 개념이 있으나, 역할 운영은 SOUL.md만이 아니라 profile/AGENTS.md/memory/Skill/toolset/cron 경계로 설명한다.
+- `6명 팀`은 결과 그림으로만 쓰고, 입문 흐름은 `1주차 한 명 → 2주차 기억/Skill → 3주차 두 번째 역할 → 4주차 자동화/안전 점검`으로 설계한다.
+
 | 반복 신호 | 반영할 장 |
 |---|---|
 | 설치 환경, WSL, Mac mini, VPS, 클라우드 선택 | 0장 설치/세팅, 0장 맥미니 상시 운영, 9장 보안/격리 |
